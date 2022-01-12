@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+ComboBox = 0,
+LineEdit = 1,
+SpinBox = 2,
+DoubleSpinBox = 3,
+HexNum = 4,
+HexStr = 5,
+
+item.id = element.attribute("id");
+item.desc = element.attribute("desc");
+item.contentType = ContentType(element.attribute("contentType").toUInt());
+item.initValue = QVariant(element.attribute("initValue"));
+item.minValue = element.attribute("minValue");
+item.maxValue = element.attribute("maxValue");
+item.precision = element.attribute("precision").toInt();
+item.unit = element.attribute("unit");
+item.enumValuesRaw = element.attribute("enumValuesRaw");
+
+-->
+<params>
+	<group name="测试计算机">
+		<field id="ScanRange" precision="0" initValue="0" minValue="-150" maxValue="150" unit="kHz" contentType="3" enumValuesRaw="" name="扫描范围" desc="" />
+		<field id="ScanSpeed" precision="2" initValue="0" minValue="-180000" maxValue="180000" unit="Hz/s" contentType="3" enumValuesRaw="" name="扫描速度" desc=""  />
+	</group>
+</params>

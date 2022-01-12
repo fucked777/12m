@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Configuration>
+    <Group name="4424">
+        <PlatformConfigDir>Platform4424</PlatformConfigDir>
+        <BusinessConfigDir>Resources/4424</BusinessConfigDir>
+        <ShareConfigDir>../../DeviceConfig/4424</ShareConfigDir>
+        <CurProjectID>4424</CurProjectID>
+    </Group>
+    <Group name="4426">
+        <PlatformConfigDir>Platform4426</PlatformConfigDir>
+        <BusinessConfigDir>Resources/4426</BusinessConfigDir>
+        <ShareConfigDir>../../DeviceConfig/4426</ShareConfigDir>
+        <CurProjectID>4426</CurProjectID>
+    </Group>
+</Configuration>

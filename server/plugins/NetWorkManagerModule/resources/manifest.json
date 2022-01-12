@@ -1,0 +1,9 @@
+{
+    "bundle.symbolic_name" : "NetWorkManagerModule",
+    "servicename":"设备网络通讯模块",
+    "bundle.activator" : true,
+    "authors" : [ "wp" ],
+    "bundle.version" : "1.0.0",
+    "bundle.description" : "null",
+    "update_log" :""
+}

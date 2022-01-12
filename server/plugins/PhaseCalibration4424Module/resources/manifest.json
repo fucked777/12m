@@ -1,0 +1,9 @@
+{
+    "bundle.symbolic_name":"PhaseCalibrationModule",
+    "servicename":"校相模块",
+    "bundle.activator" : true,
+    "authors" : [ "wp" ],
+    "bundle.version" : "1.0.0",
+    "bundle.description" : "null",
+    "update_log" :""
+}

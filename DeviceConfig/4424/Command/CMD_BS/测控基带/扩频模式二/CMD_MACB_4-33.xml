@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+require:查询数据包 ,response:响应数据包,result:上报数据包
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+initValue为初始化值,
+length为标识长度
+ExtenType:分机类型
+SelfLoopNumb:自身循环N次
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+cmdID:命令ID  与命令序号关联
+isShow:0表示界面不显示  1表示界面显示
+-->
+<cmd cmdID="33" ExtenType="MACB" ModeType="0x04" desc="AGC曲线装订" flag="1001" >
+    <request MessageType="0x0000F001">
+        <field pid="101" id="EquipComb" desc="设备组合号" dataType="ulong" displayFormat="Hex" initValue="" minValue="" maxValue="FFFFFFFFFFFFFFFF" step="" unit=""/>
+        <field pid="102" id="UplinkFreq" desc="下行频率" dataType="ulong" displayFormat="double" initValue="" minValue="2200" maxValue="2300" step="0.000001" unit="MHz"/>
+        <field pid="103" id="ChanNumb" desc="通道号" dataType="uint8" displayFormat="enum|ChannelNumber2" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="104" id="Chan" desc="通道" dataType="uint8" displayFormat="enum|ChannelS" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="105" id="ReceSelect" desc="接收机选择" dataType="uint8" displayFormat="enum|ReceSelect" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="106" id="PointCurve" desc="曲线表点数" dataType="uint8" displayFormat="UInt8" initValue="" minValue="10" maxValue="100" step="" unit=""/>
+        <recycle id="1" recycleNum="PointCurve" desc="">
+            <field pid="107" id="AGC" desc="AGC" dataType="ushort" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="V"/>
+            <field pid="108" id="S" desc="S/Φ" dataType="ushort" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="dB"/>
+        </recycle>
+    </request>
+    <result MessageType="0x0000F101">
+        <field pid="1" id="EquipComb" desc="设备组合号" dataType="ulong" displayFormat="Hex" initValue="" minValue="" maxValue="FFFFFFFFFFFFFFFF" step="" unit=""/>
+        <field pid="2" id="UplinkFreq" desc="下行频率" dataType="ulong" displayFormat="double" initValue="" minValue="2200" maxValue="2300" step="0.000001" unit="MHz"/>
+        <field pid="3" id="ChanNumb" desc="通道号" dataType="uint8" displayFormat="enum|ChannelNumber2" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="4" id="Chan" desc="通道" dataType="uint8" displayFormat="enum|ChannelS" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="5" id="ReceSelect" desc="接收机选择" dataType="uint8" displayFormat="enum|ReceSelect" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="6" id="PointCurve" desc="曲线表点数" dataType="uint8" displayFormat="UInt8" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <recycle id="1" recycleNum="PointCurve" desc="">
+            <field pid="7" id="AGC" desc="AGC" dataType="ushort" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="V"/>
+            <field pid="8" id="S" desc="S/Φ" dataType="ushort" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="dB"/>
+        </recycle>
+    </result>
+</cmd>

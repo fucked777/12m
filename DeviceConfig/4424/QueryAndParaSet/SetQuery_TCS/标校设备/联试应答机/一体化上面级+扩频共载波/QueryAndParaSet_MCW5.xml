@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="MCW" ModeType="0x05" desc="调制载波单元" flag="1001">
+    <result MessageType="0x0000F104">
+		
+		<field pid="101" id="TotalCarrCtrl" desc="载波总输出控制" dataType="uint8" displayFormat="enum|TotalCarrCtrl" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="102" id="CarrierLevel" desc="载波输出电平" dataType="int8" displayFormat="Int8" initValue="-70" minValue="-70" maxValue="-10" step="" unit="dBm"/>
+		<field pid="103" id="CarrierModu" desc="载波调制方式" dataType="uint8" displayFormat="enum|CarrierModu" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="104" id="OutputIF" desc="输出中频" dataType="uint" displayFormat="double" initValue="70" minValue="68" maxValue="72" step="0.000001" unit="MHz"/>
+		<field pid="105" id="NoiseOutput" desc="噪声源输出" dataType="uint8" displayFormat="enum|NoiseOutput" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="106" id="RangPlusControl" desc="载波输出载噪比" dataType="ushort" displayFormat="double" initValue="30" minValue="30" maxValue="80" step="0.1" unit="dBHz"/>
+		
+    </result>
+</cmd>

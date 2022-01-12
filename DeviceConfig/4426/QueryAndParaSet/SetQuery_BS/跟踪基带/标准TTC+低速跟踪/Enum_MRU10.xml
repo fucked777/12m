@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="MRU" ModeType="0x0A" edition="1.1.1.1">
+	<enum name="CarrierLock" desc="载波锁定指示">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="锁定:G"/>
+		<entry svalue="2" uvalue="2" desc="失锁:R"/>
+	</enum>
+	<enum name="AGUTime" desc="AGC时间常数">
+		<entry svalue="0" uvalue="0" desc="1ms"/>
+		<entry svalue="1" uvalue="1" desc="10ms"/>
+		<!--<entry svalue="2" uvalue="2" desc="50ms" />-->
+		<entry svalue="3" uvalue="3" desc="100ms"/>
+		<!--<entry svalue="4" uvalue="4" desc="250ms" />-->
+		<entry svalue="5" uvalue="5" desc="1000ms"/>
+	</enum>
+	<enum name="CarrierModulation" desc="载波调制方式">
+		<!--
+        <entry svalue="0" uvalue="0" desc="PSK/PM" />
+		<entry svalue="1" uvalue="1" desc="PCM/PM" />
+		-->
+		<entry svalue="2" uvalue="2" desc="BPSK"/>
+		<entry svalue="3" uvalue="3" desc="QPSK"/>
+		<entry svalue="4" uvalue="4" desc="OQPSK"/>
+		<entry svalue="5" uvalue="5" desc="UQPSK"/>
+	</enum>
+	<enum name="LockPhaseRank" desc="锁相环阶数">
+		<entry svalue="0" uvalue="0" desc="2阶环"/>
+		<entry svalue="1" uvalue="1" desc="3阶环"/>
+		<entry svalue="2" uvalue="2" desc="自适应"/>
+	</enum>
+	<enum name="SignalModelChoose" desc="信号模式选择">
+		<entry svalue="0" uvalue="0" desc="I/Q合路"/>
+		<entry svalue="1" uvalue="1" desc="I/Q分路"/>
+		<entry svalue="2" uvalue="2" desc="I独立"/>
+	</enum>
+	<enum name="QGCodeChoose" desc="QPSK调制Gray编码选择">
+		<entry svalue="0" uvalue="255" desc="无Gray编码"/>
+		<entry svalue="1" uvalue="0" desc="Gray0编码"/>
+		<entry svalue="2" uvalue="1" desc="Gray1编码"/>
+		<entry svalue="3" uvalue="2" desc="Gray2编码"/>
+		<entry svalue="4" uvalue="3" desc="Gray3编码"/>
+		<entry svalue="5" uvalue="4" desc="Gray4编码"/>
+		<entry svalue="6" uvalue="5" desc="Gray5编码"/>
+		<entry svalue="7" uvalue="6" desc="Gray6编码"/>
+		<entry svalue="8" uvalue="7" desc="Gray7编码"/>
+	</enum>
+	<enum name="IOPowerSetting" desc="I/Q功率比设置方式">
+		<entry svalue="0" uvalue="0" desc="分贝方式"/>
+		<entry svalue="1" uvalue="1" desc="功率比值方式"/>
+	</enum>
+	<enum name="InputSignal" desc="输入信号接口">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="本板信号输入"/>
+		<entry svalue="2" uvalue="2" desc="板间信号输入"/>
+	</enum>
+	<enum name="SamplingSignal" desc="采样信号选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="光纤输入"/>
+		<entry svalue="2" uvalue="2" desc="A/D输入"/>
+	</enum>
+</enums>

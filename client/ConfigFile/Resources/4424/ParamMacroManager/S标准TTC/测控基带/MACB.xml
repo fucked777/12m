@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device>
+    <unit unitID="1" unitName="公共单元">
+        <field pid="112" id="SendDataWay" desc="基带送数方式" dataType="uint8" displayFormat="enum|BaseBandDelMode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        </unit>
+    <unit unitID="2" unitName="TTC左旋接收">
+        <field pid="102" id="AGCTimeConstant" desc="AGC时间常数" dataType="uint8" displayFormat="enum|AGCTimeConstant" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+        <field pid="103" id="CarrierLoopBandWidth" desc="载波环路带宽" dataType="uint8" displayFormat="enum|CarrierLoopBandWidth" initValue="1" minValue="" maxValue="" step="" unit=""/>
+    </unit>
+    <unit unitID="3" unitName="TTC右旋接收">
+        <field pid="102" id="AGCTimeConstant" desc="AGC时间常数" dataType="uint8" displayFormat="enum|AGCTimeConstant" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+        <field pid="103" id="CarrierLoopBandWidth" desc="载波环路带宽" dataType="uint8" displayFormat="enum|CarrierLoopBandWidth" initValue="1" minValue="" maxValue="" step="" unit=""/>
+    </unit>
+    <unit unitID="4" unitName="中频调制">
+        <field pid="101" GroupId="1" id="CarrierOutput" desc="载波输出" dataType="uint8" displayFormat="enum|CarrierOutput" initValue="2" minValue="" maxValue="" step="" unit=""/>
+        <field pid="102" GroupId="1" id="CarrierLevel" desc="输出电平" dataType="int8" displayFormat="Int8" initValue="-1" minValue="-60" maxValue="0" step="" unit="dBm"/>
+        <field pid="104" GroupId="2" id="RemotePlusControl" desc="遥控加调" dataType="uint8" displayFormat="enum|RemotePlusCtrl" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="105" GroupId="2" id="RangPlusCtrl" desc="测距加调" dataType="uint8" displayFormat="enum|RangPlusCtrl" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="106" GroupId="2" id="VoicePlusCtrl" desc="话音加调" dataType="uint8" displayFormat="UInt8" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+        <field pid="107" GroupId="2" id="RanPlusCtrl" desc="遥测模拟加调" dataType="uint8" displayFormat="enum|RanPlusCtrl" initValue="1" minValue="" maxValue="" step="" unit=""/>
+      
+        <field pid="111" GroupId="3" id="ModDegAna" desc="话音调制度（保留）" dataType="uint8" displayFormat="double" initValue="0.2" minValue="0.2" maxValue="1.5" step="0.01" unit="rad" isShow="0"/>
+        <field pid="112" GroupId="3" id="VoicePlusCont" desc="模拟源调制度" dataType="uint8" displayFormat="double" initValue="0.2" minValue="0.2" maxValue="1.5" step="0.01" unit="rad"/>
+        <field pid="113" GroupId="2" id="BlindSwitch" desc="盲发开关" dataType="uint8" displayFormat="enum|BlindSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="116" GroupId="4" id="NoiseOutput" desc="噪声源输出" dataType="uint8" displayFormat="enum|NoiseSourceOupput" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="117" GroupId="4" id="OutPutRatio" desc="输出载噪比" dataType="uint8" displayFormat="UInt8" initValue="30" minValue="30" maxValue="100" step="1" unit="dBHz"/>
+    </unit>
+    <unit unitID="5" unitName="左旋测距">
+        <field pid="104" id="DistMethodWay" desc="距离预报" dataType="uint8" displayFormat="enum|DistPredMethod" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="105" id="DistPredMethod" desc="距离预报值" dataType="uint" displayFormat="double" initValue="1" minValue="0" maxValue="450000" step="0.001" unit="km"/>
+    </unit>
+    <unit unitID="6" unitName="右旋测距">
+        <field pid="104" id="DistMethodWay" desc="距离预报" dataType="uint8" displayFormat="enum|DistPredMethod" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="105" id="DistPredMethod" desc="距离预报值" dataType="uint" displayFormat="double" initValue="1" minValue="0" maxValue="450000" step="0.001" unit="km"/>
+    </unit>
+    <unit unitID="8" unitName="遥测单元">
+        <field pid="104" GroupId="2" id="TeleDataType" desc="遥测数据类型" dataType="uint8" displayFormat="enum|TeleDataType" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+        <field pid="111" GroupId="2" id="TurboCode" desc="Turbo码率" dataType="uint8" displayFormat="enum|TurboCode" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+        <field pid="112" GroupId="2" id="LDPCCode" desc="LDPC码率" dataType="uint8" displayFormat="enum|LDPCCode" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+        <field pid="117" GroupId="3" id="CRCCheck" desc="CRC校验" dataType="uint8" displayFormat="enum|CRCCheck" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+        <!-- 星地接口无帧同步位置这个参数 -->
+        <field pid="123" GroupId="1" id="FrameCodeLocat" desc="帧同步码组位置" dataType="uint8" displayFormat="enum|FrameCodeLocat" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="131" GroupId="5" id="FramSynFaultBit" desc="帧搜索容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="7" step="" unit="位"/>
+        <field pid="132" GroupId="5" id="FramSynLockBit" desc="帧锁定容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="7" step="" unit="位"/>
+        <field pid="133" GroupId="5" id="FramSynCheckBit" desc="帧校核容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="7" step="" unit="位"/>
+        <field pid="134" GroupId="5" id="FramSynCheckNum" desc="帧校核检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="" unit="帧"/>
+        <field pid="135" GroupId="5" id="FramSynLockNum" desc="帧锁定检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="" unit="帧"/>
+        <field pid="141" GroupId="1" id="DataFrameCode" desc="数据帧标志码" dataType="uint8" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+    </unit>
+</device>

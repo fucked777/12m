@@ -1,0 +1,60 @@
+<GridLayout>
+	<GroupBox row="0" col="0" rowSpan="1" columnSpan="1" text="测控">
+		<GridLayout>
+			<Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="载波锁定"/>
+			<Widget row="0" col="1" rowSpan="1" columnSpan="1" type="ComplexLEDStatusLabel" desc="载波锁定" devids="0x4201;0x4202;0x4203;0x4204">
+				<TargetInfo unitId="1" targetId="0" paramId="SpreadMastTarget" desc="扩频主跟目标" />
+				<ParamInfo unitId="2" paramId="CarrierLockInd" desc="载波锁定" isMulti="true"/>
+				<LedInfo>
+					<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+					<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+				</LedInfo>
+			</Widget>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="跟踪极化"/>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" Align="Center" type="EnumStatusLabel" desc="跟踪极化" unitId="1" targetId="0" paramId="SpecDireOutput" enumId="TrackRoatDirect"/>
+			<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="工作频率(MHz)"/>
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" Align="Center" type="ComplexNumberStatusLabel" desc="工作频率" devids="0x4201;0x4202;0x4203;0x4204">
+				<TargetInfo unitId="1" targetId="0" paramId="SpreadMastTarget" desc="扩频主跟目标" />
+				<ParamInfo unitId="1" paramId="NumberSimul" desc="S下行频率" isMulti="true"/>
+			</Widget>
+			<Widget row="3" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="AGC电压(V)"/>
+			<Widget row="3" col="1" rowSpan="1" columnSpan="1" Align="Center" type="ComplexNumberStatusLabel" desc="AGC电压" devids="0x4201;0x4202;0x4203;0x4204">
+				<TargetInfo unitId="1" targetId="0" paramId="SpreadMastTarget" desc="扩频主跟目标" />
+				<ParamInfo unitId="2" paramId="AGCVoltage" desc="AGC电压" isMulti="true"/>
+			</Widget>
+			<Widget row="4" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="S/Φ(dbHz)"/>
+			<Widget row="4" col="1" rowSpan="1" columnSpan="1" Align="Center" type="ComplexNumberStatusLabel" desc="S/Φ" devids="0x4201;0x4202;0x4203;0x4204">
+				<TargetInfo unitId="1" targetId="0" paramId="SpreadMastTarget" desc="扩频主跟目标" />
+				<ParamInfo unitId="2" paramId="CarrierToNoise" desc="S/Φ" isMulti="true"/>
+			</Widget>
+			<Widget row="5" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="方位电压(V)"/>
+			<Widget row="5" col="1" rowSpan="1" columnSpan="1" Align="Center" type="ComplexNumberStatusLabel" desc="方位电压" devids="0x4201;0x4202;0x4203;0x4204">
+				<TargetInfo unitId="1" targetId="0" paramId="SpreadMastTarget" desc="扩频主跟目标" />
+				<ParamInfo unitId="2" paramId="CarrAzimuthVolt" desc="S/Φ" isMulti="true"/>
+			</Widget>
+			<Widget row="6" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="俯仰电压(V)"/>
+			<Widget row="6" col="1" rowSpan="1" columnSpan="1" Align="Center" type="ComplexNumberStatusLabel" desc="俯仰电压" devids="0x4201;0x4202;0x4203;0x4204">
+				<TargetInfo unitId="1" targetId="0" paramId="SpreadMastTarget" desc="扩频主跟目标" />
+				<ParamInfo unitId="2" paramId="CarrPitchVoltage" desc="S/Φ" isMulti="true"/>
+			</Widget>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="0" col="1" rowSpan="1" columnSpan="1" text="数传">
+		<GridLayout>
+			<!-- 数传少了一个灯，这里设置一个空的控件，最小大小和灯一样大，对齐 -->
+			<Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="" minSize="28,28"/> 
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="跟踪极化"/>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" Align="Center" type="EnumStatusLabel" desc="跟踪极化" unitId="1" targetId="0" paramId="SCSpecDireOutput" enumId="TrackRoatDirect"/>
+			<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="工作频率(MHz)"/>
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="工作频率" unitId="1" targetId="0" paramId="XKaDownFreq"/>
+			<Widget row="3" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="AGC电压(V)"/>
+			<Widget row="3" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="AGC电压" unitId="3" targetId="0" paramId="AGCVoltage"/>
+			<Widget row="4" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="S/Φ(dbHz)"/>
+			<Widget row="4" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="S/Φ" unitId="3" targetId="0" paramId="CarrierToNoise"/>
+			<Widget row="5" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="方位电压(V)"/>
+			<Widget row="5" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="方位电压" unitId="3" targetId="0" paramId="AzimuthVolt"/>
+			<Widget row="6" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="俯仰电压(V)"/>
+			<Widget row="6" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="俯仰电压" unitId="3" targetId="0" paramId="PitchVoltage"/>
+		</GridLayout>
+	</GroupBox>
+</GridLayout>

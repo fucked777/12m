@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+ComboBox = 0,
+LineEdit = 1,
+SpinBox = 2,
+DoubleSpinBox = 3,
+HexNum = 4,
+HexStr = 5,
+
+item.id = element.attribute("id");
+item.desc = element.attribute("desc");
+item.contentType = ContentType(element.attribute("contentType").toUInt());
+item.initValue = QVariant(element.attribute("initValue"));
+item.minValue = element.attribute("minValue");
+item.maxValue = element.attribute("maxValue");
+item.precision = element.attribute("precision").toInt();
+item.unit = element.attribute("unit");
+item.enumValuesRaw = element.attribute("enumValuesRaw");
+
+<field pid="101" GroupId="setting1" id="CarrierOutput" desc="载波输出" dataType="uint8" displayFormat="enum|CarrierOutput" initValue="2" minValue="" maxValue="" step="" unit="" />
+<field pid="102" GroupId="setting1" id="CarrierOutputLevel" desc="输出电平" dataType="int8" displayFormat="Int8" initValue="-1" minValue="-30" maxValue="0" step="" unit="dBm" />
+-->
+<params>
+	<group name="测控基带">
+		<field id="DopplerPresFreq" precision="0" initValue="-1" minValue="-180" maxValue="180" unit="kHz" contentType="3" enumValuesRaw="" name="多普勒预置" desc="" displayFormat="double" />
+		<field id="ScanningRate" precision="3" initValue="-1" minValue="-180" maxValue="180" unit="kHz/s" contentType="3" enumValuesRaw="" name="扫描速率" desc="" displayFormat="double" />
+		<field id="ScanRange" precision="0" initValue="1" minValue="0" maxValue="180" unit="kHz" contentType="3" enumValuesRaw="" name="扫描范围" desc="" displayFormat="Int16" />
+	</group>
+</params>

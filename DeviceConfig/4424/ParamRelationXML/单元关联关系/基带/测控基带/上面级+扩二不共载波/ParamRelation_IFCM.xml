@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x00" modeID="0x13" unitType="IFCM" desc="中频调制">
+	<Triggers>
+		<Trigger id="NoiseOutput" desc="噪声源输出">
+			<TriggerValue value="1" desc="开">
+				<Receiver id="RangPlusControl" desc="输出载噪比" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="关">
+				<Receiver id="RangPlusControl" desc="输出载噪比" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>
+

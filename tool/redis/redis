@@ -1,0 +1,61 @@
+#!/bin/sh
+
+# chkconfig: 2345 10 90
+# description: Start and Stop redis
+PATH=/usr/local/bin:/sbin:/usr/bin:/bin:/DATA/redis/bin
+# 端口
+port=6379
+# 自己的redis-server路径(需要自己更改)
+redis_server="/DATA/redis/bin/redis-server"
+# 自己的redis-cli路径(需要自己更改)
+redis_cli="/DATA/redis/bin/redis-cli"
+# 自己的redis.conf 路径(需要自己更改)
+conf="/DATA/redis/redis.conf"
+auth="123456"
+
+case "$1" in
+start)
+    process=$(netstat -ntl | grep $port | wc -l)
+    if [ $process -eq 0 ]; then
+        $redis_server $conf
+        if [ $? -eq 0 ]; then
+            echo "Starting Redis server sucefully"
+        else
+            echo "Starting Redis server fail,refer to the log information for details"
+        fi
+    else
+        echo "Port $port is exists, process is already running"
+    fi
+    ;;
+stop)
+    process=$(lsof -i:$port -t)
+	echo $process
+    if [[ -n $process ]]; then
+        echo "Stopping ..."
+        #kill -9 $process
+        #$basedir/bin/redis-cli -p $port -a $2  shutdown
+        msg=$($redis_cli -a $auth -p $port shutdown)
+        result=$(echo $msg | grep "Authentication")
+        if [[ "$result" = "" ]]; then
+            while [[ -x /proc/${process} ]]; do
+                echo "Waiting for Redis to shutdown ..."
+                sleep 1
+            done
+            echo "Redis stopped"
+        else
+            echo "Authentication failed,please check redis password"
+            exit -1
+        fi
+    else
+        echo "Process is not running"
+    fi
+    ;;
+restart | force-reload)
+    ${0} stop
+    ${0} start
+    ;;
+*)
+    echo "Usage: /etc/init.d/redis {start|stop|restart|force-reload}" >&2
+    exit 1
+    ;;
+esac

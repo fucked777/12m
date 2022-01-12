@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="setting2setting3setting45";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="setting2setting3setting45",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="DUI" ModeType="0x7" desc="一体化跟踪数传解调单元" flag="1001">
+    <result MessageType="0x0000F104">
+		<field pid="1" id="AGCVoltage" desc="AGC电压" dataType="uint" displayFormat="double" initValue="" minValue="0" maxValue="5" step="0.0001" unit="V" />
+		<field pid="2" id="CarrierToNoise" desc="S/Φ" dataType="ushort" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="dBHz" isShow="0"/>
+		<field pid="3" id="AzimuthVolt" desc="方位电压" dataType="int" displayFormat="double" initValue="0" minValue="-10" maxValue="10" step="0.001" unit="V" />
+		<field pid="4" id="PitchVoltage" desc="俯仰电压" dataType="int" displayFormat="double" initValue="0" minValue="-10" maxValue="10" step="0.001" unit="V" />
+
+		<field pid="101" GroupId="setting0" id="AzimSlope" desc="方位斜率" dataType="int" displayFormat="double" initValue="1" minValue="0.001" maxValue="10" step="0.001" unit="" />
+		<field pid="102" GroupId="setting0" id="PitchSlope" desc="俯仰斜率" dataType="int" displayFormat="double" initValue="1" minValue="0.001" maxValue="10" step="0.001" unit="" />
+		<field pid="103" GroupId="setting0" id="AzTrackValue" desc="方位跟踪移相值" dataType="uint" displayFormat="double" initValue="1" minValue="0" maxValue="359" step="0.1" unit="°" />
+		<field pid="104" GroupId="setting0" id="PitchTrackValue" desc="俯仰跟踪移相值" dataType="uint" displayFormat="double" initValue="1" minValue="0" maxValue="359" step="0.1" unit="°" />
+		<field pid="105" GroupId="setting0" id="BL" desc="保留" dataType="uint8" displayFormat="enum|TrackSel" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		
+    </result>
+</cmd>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x00" modeID="0x21" unitType="RCU" desc="遥控单元">
+	<Triggers>
+		<Trigger id="RemoteType" desc="指令格式">
+			<TriggerValue value="1" desc="格式B">
+				<Receiver id="StartChoiceChooseTY" desc="不足M时填充图样" isEnable="0" values="55" minValue="" maxValue="" />
+				<Receiver id="StartChoiceChooseYXTY" desc="有效数据填充图样" isEnable="0" values="55" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="格式A">
+				<Receiver id="StartChoiceChooseTY" desc="不足M时填充图样" isEnable="0" values="55" minValue="" maxValue="" />
+				<Receiver id="StartChoiceChooseYXTY" desc="有效数据填充图样" isEnable="0" values="55" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

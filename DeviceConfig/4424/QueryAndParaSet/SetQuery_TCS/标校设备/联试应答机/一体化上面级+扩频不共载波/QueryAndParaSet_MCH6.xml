@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="MCH" ModeType="0x06" desc="调制通道单元" flag="1001">
+	<result MessageType="0x0000F104">
+		
+		<field GroupId="1" pid="101" id="ReMeaDoppPresFreq" desc="多普勒预置频率" dataType="short" displayFormat="Int16" initValue="0" minValue="-180" maxValue="180" step="" unit="kHz"/>
+		<field GroupId="1" pid="102" id="ReMeaSpreadCode" desc="扩频码速率" dataType="uint8" displayFormat="enum|CodeSpeed" initValue="0" minValue="" maxValue="" step="" unit="1.023Mc/s"/>
+		<field GroupId="1" pid="103" id="ReMeaChannelCtrl" desc="通道输出控制" dataType="uint8" displayFormat="enum|ChannelCtrl" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field GroupId="1" pid="104" id="ReMeaOutputAtten" desc="输出功率调节" dataType="int8" displayFormat="Int8" initValue="0" minValue="0" maxValue="10" step="" unit="dBm"/>
+		<field GroupId="1" pid="105" id="ReMeaPNCodeAdd" desc="伪码加调" dataType="uint8" displayFormat="enum|PNCodeAdd" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field GroupId="1" pid="106" id="ReMeaDataTuning" desc="数据加调" dataType="uint8" displayFormat="enum|DataTuning" initValue="2" minValue="" maxValue="" step="" unit=""/>
+
+		<field GroupId="2" pid="111" id="MeaDoppPresFreq" desc="多普勒预置频率" dataType="short" displayFormat="Int16" initValue="0" minValue="-180" maxValue="180" step="" unit="kHz"/>
+		<field GroupId="2" pid="112" id="MeaSpreadCode" desc="扩频码速率" dataType="uint8" displayFormat="enum|CodeSpeed" initValue="1" minValue="" maxValue="" step="" unit="1.023Mc/s"/>
+		<field GroupId="2" pid="113" id="MeaChannelCtrl" desc="通道输出控制" dataType="uint8" displayFormat="enum|ChannelCtrl" initValue="2" minValue="" maxValue="" step="" unit=""/>
+		<field GroupId="2" pid="114" id="MeaOutputAtten" desc="输出功率调节" dataType="int8" displayFormat="Int8" initValue="0" minValue="0" maxValue="10" step="" unit="dBm"/>
+		<field GroupId="2" pid="115" id="MeaPNCodeAdd" desc="伪码加调" dataType="uint8" displayFormat="enum|PNCodeAdd" initValue="2" minValue="" maxValue="" step="" unit=""/>
+		<field GroupId="2" pid="116" id="MeaDataTuning" desc="数据加调" dataType="uint8" displayFormat="enum|DataTuning" initValue="2" minValue="" maxValue="" step="" unit=""/>
+		<field GroupId="2" pid="117" id="MeaChannelWork" desc="通道工作方式" dataType="uint8" displayFormat="enum|ChannelWork" initValue="2" minValue="" maxValue="" step="" unit=""/>
+		<field GroupId="2" pid="118" id="MeaSelect" desc="插入位置选择" dataType="uint8" displayFormat="enum|MeasSelect" initValue="2" minValue="" maxValue="" step="" unit=""/>
+
+	</result>
+
+	<layout>
+		<item id="1" desc="(扩频)调制遥测数据" row="0" col = "0" rowspan = "1" colspan = "2"/>
+		<item id="2" desc="(扩频)调制测量数据" row="1" col = "0" rowspan = "1" colspan = "2"/>
+	
+	</layout>
+	
+	<order info="1,2"/>
+
+</cmd>

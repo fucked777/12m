@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<enums>
+	<enumGroup id="2">
+		<enum name="SPolar" desc="S发射极化">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="左旋"/>
+			<entry svalue="2" uvalue="2" desc="右旋"/>
+		</enum>
+		<enum name="SRecPolar" desc="S接收极化">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="左旋"/>
+			<entry svalue="2" uvalue="2" desc="右旋"/>
+			<entry svalue="3" uvalue="3" desc="左右旋同时"/>
+		</enum>
+	</enumGroup>
+	<enumGroup id="3">
+		<enum name="SPolar" desc="S跟踪极化">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="左旋"/>
+			<entry svalue="2" uvalue="2" desc="右旋"/>
+		</enum>
+		<enum name="AngularSamplRate" desc="测角采样率">
+			<entry svalue="1" uvalue="1" desc="1次/秒"/>
+			<entry svalue="2" uvalue="2" desc="4次/秒"/>
+			<entry svalue="3" uvalue="3" desc="10次/秒"/>
+			<entry svalue="4" uvalue="4" desc="20次/秒"/>
+			<entry svalue="5" uvalue="5" desc="0.2次/秒"/>
+			<entry svalue="6" uvalue="6" desc="2次/秒"/>
+		</enum>
+	</enumGroup>
+	<enumGroup id="4">
+		<enum name="ReceChannel" desc="接收通道合成方式">
+			<entry svalue="1" uvalue="1" desc="单收左旋"/>
+			<entry svalue="2" uvalue="2" desc="单收右旋"/>
+			<entry svalue="3" uvalue="3" desc="左右旋同时"/>
+			<entry svalue="4" uvalue="4" desc="最大比合成"/>
+			<entry svalue="5" uvalue="5" desc="全频谱合成（保留不用）"/>
+		</enum>
+		<enum name="LockIndicat" desc="锁定指示">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="锁定:G"/>
+			<entry svalue="2" uvalue="2" desc="失锁:R"/>
+		</enum>
+		<enum name="AGCTimeConst" desc="AGC时间常数">
+			<entry svalue="1" uvalue="1" desc="1ms"/>
+			<entry svalue="2" uvalue="2" desc="10ms"/>
+			<entry svalue="3" uvalue="3" desc="100ms"/>
+			<entry svalue="4" uvalue="4" desc="1000ms"/>
+		</enum>
+		<enum name="CarrLoopBand" desc="载波环路带宽">
+			<entry svalue="1" uvalue="1" desc="100Hz"/>
+			<entry svalue="2" uvalue="2" desc="300Hz"/>
+			<entry svalue="3" uvalue="3" desc="500Hz"/>
+			<entry svalue="4" uvalue="4" desc="1000Hz"/>
+			<entry svalue="5" uvalue="5" desc="3000Hz"/>
+			<entry svalue="6" uvalue="6" desc="自适应"/>
+		</enum>
+		<enum name="DistPredMethod" desc="距离预报方式">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="手动"/>
+			<entry svalue="2" uvalue="2" desc="轨道根数"/>
+			<entry svalue="3" uvalue="3" desc="DTE弹道数据"/>
+		</enum>
+	</enumGroup>
+	<enumGroup id="5">
+		<enum name="SendDataType" desc="当前上行发射数据类型">
+			<entry svalue="1" uvalue="1" desc="时间"/>
+			<entry svalue="2" uvalue="2" desc="遥控"/>
+			<entry svalue="3" uvalue="3" desc="空闲"/>
+			<entry svalue="4" uvalue="4" desc="其他"/>
+		</enum>
+		<enum name="CarrCtrl" desc="载波控制">
+			<entry svalue="1" uvalue="1" desc="加载"/>
+			<entry svalue="2" uvalue="2" desc="去载"/>
+		</enum>
+		<enum name="AddControl" desc="加调控制">
+			<entry svalue="1" uvalue="1" desc="加调"/>
+			<entry svalue="2" uvalue="2" desc="去调"/>
+		</enum>
+		<enum name="ExtendedJumpOutputMode" desc="加调控制">
+			<entry svalue="1" uvalue="1" desc="短码"/>
+			<entry svalue="2" uvalue="2" desc="长码"/>
+			<entry svalue="3" uvalue="3" desc="并行输出"/>
+		</enum>
+	</enumGroup>
+	<enumGroup id="6">
+		<enum name="SelfloopCompResult" desc="自环比对结果">
+			<entry svalue="1" uvalue="1" desc="正常:G"/>
+			<entry svalue="2" uvalue="2" desc="异常:R"/>
+		</enum>
+		<enum name="LockingReceIver" desc="小环接收机锁定指示">
+			<entry svalue="1" uvalue="1" desc="锁定:G"/>
+			<entry svalue="2" uvalue="2" desc="失锁:R"/>
+		</enum>
+		<enum name="SmallResult" desc="小环比对结果">
+			<entry svalue="1" uvalue="1" desc="正确:G"/>
+			<entry svalue="2" uvalue="2" desc="错误:R"/>
+		</enum>
+		<enum name="RemoteType" desc="指令格式">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="格式B"/>
+			<entry svalue="2" uvalue="2" desc="格式A"/>
+			<!--<entry svalue="10" uvalue="10" desc="其他格式"/>-->
+		</enum>
+		<enum name="StartChoiceChoose" desc="每段有效数据位长M">
+			<entry svalue="1" uvalue="96" desc="96"/>
+			<entry svalue="2" uvalue="100" desc="100"/>
+			<!--
+		<entry svalue="3" uvalue="104" desc="104"/>
+		<entry svalue="10" uvalue="10" desc="其他格式"/>
+		-->
+		</enum>
+	</enumGroup>
+	<enumGroup id="7">
+	</enumGroup>
+</enums>

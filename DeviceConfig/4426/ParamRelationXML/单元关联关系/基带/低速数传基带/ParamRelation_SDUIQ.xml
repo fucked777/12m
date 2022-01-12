@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x04" modeID="0x0" unitType="SDUIQ" desc="上行数传单元">
+	<Triggers>
+		<Trigger id="FraSynchLength" desc="帧同步码组长度">
+			<TriggerValue value="16" desc="16位">
+				<Receiver id="FramSynchPatt" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="24位">
+				<Receiver id="FramSynchPatt" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="32位">
+				<Receiver id="FramSynchPatt" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="40" desc="40位">
+				<Receiver id="FramSynchPatt" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="FFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="48" desc="48位">
+				<Receiver id="FramSynchPatt" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="FFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="56" desc="56位">
+				<Receiver id="FramSynchPatt" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="FFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="64" desc="64位">
+				<Receiver id="FramSynchPatt" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="FFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="ScramblingCtrl" desc="加扰控制">
+			<TriggerValue value="1" desc="禁止">
+				<Receiver id="ScrambPolyLength" desc="加扰多项式长度" isEnable="0" values="8:1字节;16:2字节;24:3字节;32:4字节" minValue="" maxValue="" />
+				<Receiver id="ScrambPolynomial" desc="加扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ScrambInitPhase" desc="加扰初相" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="人工">
+				<Receiver id="ScrambPolyLength" desc="加扰多项式长度" isEnable="1" values="8:1字节;16:2字节;24:3字节;32:4字节" minValue="" maxValue="" />
+				<Receiver id="ScrambPolynomial" desc="加扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="ScrambInitPhase" desc="加扰初相" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="自动">
+				<Receiver id="ScrambPolyLength" desc="加扰多项式长度" isEnable="0" values="8:1字节" minValue="" maxValue="" />
+				<Receiver id="ScrambPolynomial" desc="加扰多项式" isEnable="0" values="A9" minValue="" maxValue="" />
+				<Receiver id="ScrambInitPhase" desc="加扰初相" isEnable="0" values="FF" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="ScrambPolyLength" desc="加扰多项式长度">
+			<TriggerValue value="8" desc="1字节">
+				<Receiver id="ScrambPolynomial" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="16" desc="2字节">
+				<Receiver id="ScrambPolynomial" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="3字节">
+				<Receiver id="ScrambPolynomial" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="4字节">
+				<Receiver id="ScrambPolynomial" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="DecodMode" desc="编码方式">
+			<TriggerValue value="1" desc="无编码">
+				<Receiver id="ILDPCCodeRate" desc="LPDC码率" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="6" desc="LDPC编码">
+				<Receiver id="ILDPCCodeRate" desc="LPDC码率" isEnable="1" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

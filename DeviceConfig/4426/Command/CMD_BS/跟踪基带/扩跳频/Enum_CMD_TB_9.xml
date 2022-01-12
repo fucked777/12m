@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+id  枚举ID  -与设备类型关联
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums ExtenType="TB" ModeType="0x09" edition="1.1.1.1">
+	<enum name="ChanSelect" desc="通道选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="左旋"/>
+		<entry svalue="2" uvalue="2" desc="右旋"/>
+		<entry svalue="3" uvalue="3" desc="择优"/>
+	</enum>
+	<enum name="PhaseCtrl" desc="校相控制">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="开始校相"/>
+		<!--<entry svalue="2" uvalue="2" desc="灵敏度调整" />-->
+		<entry svalue="3" uvalue="3" desc="保存结果"/>
+		<entry svalue="4" uvalue="4" desc="停止校相"/>
+	</enum>
+	<enum name="SignalRotat" desc="信号旋向">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="左旋"/>
+		<entry svalue="2" uvalue="2" desc="右旋"/>
+	</enum>
+	<enum name="PhaseStatus" desc="校相状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="正在校相"/>
+		<entry svalue="2" uvalue="2" desc="校相完成"/>
+		<entry svalue="3" uvalue="3" desc="校相失败"/>
+		<!--<entry svalue="4" uvalue="4" desc="灵敏度调整" />-->
+		<entry svalue="5" uvalue="5" desc="保存结果"/>
+	</enum>
+	<enum name="XXStatus" desc="校相状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="正在校相"/>
+		<entry svalue="2" uvalue="2" desc="校相完成"/>
+		<entry svalue="3" uvalue="3" desc="校相失败"/>
+		<entry svalue="4" uvalue="4" desc="校相结束"/>
+		<entry svalue="5" uvalue="5" desc="保存结果"/>
+	</enum>
+	<enum name="FPhaseCtrl" desc="快速校相_校相控制">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="开始校相"/>
+		<entry svalue="2" uvalue="2" desc="停止校相"/>
+	</enum>
+	<enum name="FPhaseStatus" desc="快速校相_校相状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="正在校相"/>
+		<entry svalue="2" uvalue="2" desc="校相完成"/>
+		<entry svalue="3" uvalue="3" desc="校相失败"/>
+	</enum>
+	<enum name="AnteOffset" desc="天线偏移方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="方位偏移"/>
+		<entry svalue="2" uvalue="2" desc="俯仰偏移"/>
+	</enum>
+	<enum name="CarrOutput" desc="载波输出">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="输出"/>
+		<entry svalue="2" uvalue="2" desc="停止输出"/>
+	</enum>
+	<enum name="XXType" desc="校相类型">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="扫频校相"/>
+		<entry svalue="2" uvalue="2" desc="单载波校相"/>
+	</enum>
+	<enum name="XXControl" desc="校相控制">
+		<entry svalue="1" uvalue="1" desc="开始校相"/>
+		<!--<entry svalue="2" uvalue="2" desc="灵敏度调整" />-->
+		<entry svalue="3" uvalue="3" desc="保存结果"/>
+		<entry svalue="4" uvalue="4" desc="结束校相"/>
+	</enum>
+	<enum name="PointFreqNum" desc="点频总数">
+		<entry svalue="1" uvalue="1" desc="1"/>
+		<entry svalue="2" uvalue="5" desc="5"/>
+		<entry svalue="3" uvalue="9" desc="9"/>
+		<entry svalue="4" uvalue="17" desc="17"/>
+	</enum>
+	<enum name="XWPHPointNum" desc="相位平滑点数">
+		<entry svalue="1" uvalue="1" desc="1"/>
+		<entry svalue="2" uvalue="2" desc="2"/>
+		<entry svalue="3" uvalue="4" desc="4"/>
+		<entry svalue="4" uvalue="8" desc="8"/>
+		<entry svalue="5" uvalue="16" desc="16"/>
+		<entry svalue="6" uvalue="32" desc="32"/>
+	</enum>
+	<enum name="TXPXWay" desc="天线偏移方式">
+		<entry svalue="1" uvalue="1" desc="校方位校相"/>
+		<entry svalue="2" uvalue="2" desc="校俯仰校相"/>
+	</enum>
+	<enum name="WorkMode" desc="工作模式">
+		<entry svalue="0" uvalue="0" desc="无此参数" />
+		<entry svalue="1" uvalue="1" desc="标准TTC" />
+		<entry svalue="2" uvalue="2" desc="扩频TTC" />
+		<entry svalue="4" uvalue="4" desc="高速数传跟踪" />
+		<entry svalue="5" uvalue="5" desc="标准+高速跟踪"/>
+		<entry svalue="6" uvalue="6" desc="扩频+高速跟踪"/>
+		<entry svalue="9" uvalue="9" desc="扩跳跟踪"/>
+		<entry svalue="10" uvalue="10" desc="标准+低速跟踪"/>
+		<entry svalue="11" uvalue="11" desc="扩频+低速跟踪"/>
+		<entry svalue="12" uvalue="12" desc="低速数传跟踪"/>
+	</enum>
+	<enum name="WorkWay" desc="工作方式">
+		<entry svalue="1" uvalue="1" desc="任务方式"/>
+		<entry svalue="2" uvalue="2" desc="数字化闭环"/>
+		<entry svalue="3" uvalue="4" desc="中频闭环"/>
+	</enum>
+	<enum name="OnlineSelect" desc="主备选择">
+		<entry svalue="1" uvalue="1" desc="主机"/>
+		<entry svalue="2" uvalue="2" desc="备机"/>
+	</enum>
+	<enum name="TimeSelect" desc="时统选择">
+		<entry svalue="1" uvalue="1" desc="外时统"/>
+		<entry svalue="2" uvalue="2" desc="内时统"/>
+	</enum>
+	<enum name="DeviceChoose" desc="数传信号输出">
+		<entry svalue="0" uvalue="0" desc="无" />
+		<entry svalue="1" uvalue="1" desc="跟踪基带A输出" />
+		<entry svalue="2" uvalue="2" desc="跟踪基带B输出" />
+		<entry svalue="3" uvalue="3" desc="跟踪基带C输出" />
+		<entry svalue="4" uvalue="4" desc="跟踪基带D输出" />
+	</enum>
+	<enum name="ModeBAND" desc="频段设置">
+		<entry svalue="0" uvalue="0" desc="无" />
+		<entry svalue="1" uvalue="1" desc="S频段" />
+		<entry svalue="2" uvalue="2" desc="X频段" />
+		<entry svalue="3" uvalue="3" desc="Ka频段" />
+	</enum>
+	<enum name="ModeChoose" desc="工作模式">
+		<entry svalue="0" uvalue="0" desc="无" />
+		<entry svalue="1" uvalue="1" desc="测控" />
+		<entry svalue="2" uvalue="2" desc="数传" />		
+	</enum>
+</enums>

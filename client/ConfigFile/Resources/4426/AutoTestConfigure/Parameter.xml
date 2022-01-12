@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<params>
+    <group projectCode="4426">
+        <field workFreqBand="S"/>
+        <field workFreqBand="Ka"/>
+	</group>
+	<group projectCode="4426">
+		<field id="1" workMode="S标准TTC"/>
+		<field id="2" workMode="S扩频"/>
+		<field id="3" workMode="Ka扩频"/>
+		<field id="14" workMode="扩跳"/>
+	</group>
+</params>

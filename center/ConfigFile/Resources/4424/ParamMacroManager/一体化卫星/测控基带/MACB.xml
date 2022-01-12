@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device>
+    <unit unitID="1" unitName="公共单元">
+        <field pid="104" GroupId="2" id="SendDataWay" desc="送数方式" dataType="uint8" displayFormat="enum|BaseBandDelMode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+    </unit>
+    <unit unitID="2" unitName="接收机单元">
+        <field pid="101" GroupId="2" id="WX_ReceChannel" desc="接收通道合成方式" dataType="uint8" displayFormat="enum|ReceChannel" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="102" GroupId="2" id="WX_AGCTimeConst" desc="AGC时间常数" dataType="uint8" displayFormat="enum|AGCTimeConst" initValue="4" minValue="" maxValue="" step="" unit="" isShow="0"/>
+        <field pid="103" GroupId="2" id="WX_CarrLoopBand" desc="载波环路带宽" dataType="uint8" displayFormat="enum|CarrLoopBand" initValue="1" minValue="" maxValue="" step="" unit=""/>
+    </unit>
+    <unit unitID="3" unitName="中频调制">
+        <field pid="101" GroupId="1" id="TotalCarrCtrl" desc="载波输出控制" dataType="uint8" displayFormat="enum|TotalCarrCtrl" initValue="2" minValue="" maxValue="" step="" unit=""/>
+        <field pid="102" GroupId="1" id="CarrierLevel" desc="输出电平" dataType="int8" displayFormat="Int8" initValue="-70" minValue="-70" maxValue="-10" step="" unit="dBm"/>
+        <field pid="103" GroupId="1" id="CarrierModu" desc="载波调制方式" dataType="uint8" displayFormat="enum|CarrierModu" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="104" GroupId="1" id="NoiseOutput" desc="噪声源" dataType="uint8" displayFormat="enum|NoiseOupput" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="105" GroupId="1" id="RangPlusControl" desc="输出载噪比" dataType="uint8" displayFormat="UInt8" initValue="30" minValue="30" maxValue="100" step="" unit="dBHz"/>
+        <field pid="114" GroupId="3" id="WX_CL_ChannelCtrl" desc="通道输出控制(一体化测量)" dataType="uint8" displayFormat="enum|ChannelCtrl" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="116" GroupId="3" id="WX_CL_PNCodeAdd" desc="伪码加调(一体化测量)" dataType="uint8" displayFormat="enum|PNCodeAdd" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="117" GroupId="3" id="WX_CL_DataTuning" desc="数据加调(一体化测量)" dataType="uint8" displayFormat="enum|DataTuning" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="124" GroupId="5" id="WX_YK_ChannelCtrl" desc="通道输出控制(一体化遥控)" dataType="uint8" displayFormat="enum|ChannelCtrl" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="126" GroupId="5" id="WX_YK_PNCodeAdd" desc="伪码加调(一体化遥控)" dataType="uint8" displayFormat="enum|PNCodeAdd" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="127" GroupId="5" id="WX_YK_DataTuning" desc="数据加调(一体化遥控)" dataType="uint8" displayFormat="enum|DataTuning" initValue="1" minValue="" maxValue="" step="" unit=""/>
+    </unit>
+    <unit unitID="4" unitName="测距">
+        <field pid="101" GroupId="2" id="WX_TargetType" desc="目标类型" dataType="uint8" displayFormat="enum|TargetType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="102" GroupId="2" id="WX_TargetCode" desc="目标代号" dataType="uint8" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="104" GroupId="2" id="WX_WhetCodeUsed" desc="测站号使用" dataType="uint8" displayFormat="enum|WhetCodeUsed" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="103" GroupId="2" id="WX_StationCode" desc="测站代号" dataType="ushort" displayFormat="Hex" initValue="1" minValue="0" maxValue="3FF" step="" unit="" />
+        <field pid="109" GroupId="2" id="WX_TDistPredMethod" desc="距离预报" dataType="uint8" displayFormat="enum|TDistPredMethod" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="110" GroupId="2" id="WX_TUpMainMod" desc="预报距离值" dataType="uint" displayFormat="double" initValue="1" minValue="0" maxValue="450000" step="0.001" unit="km"/>
+        <field pid="114" GroupId="2" id="WX_TZeroDistTrans" desc="应答机时延差" dataType="uint" displayFormat="double" initValue="1" minValue="0" maxValue="42949672.95" step="0.01" unit="ns"/>
+    </unit>
+    <unit unitID="5" unitName="遥控单元">
+        <field pid="122" GroupId="1" id="WX_StartModeWrok" desc="工作期启动方式" dataType="uint8" displayFormat="enum|StartModeWrok" initValue="1" minValue="" maxValue="" step="" unit=""/>
+    </unit>
+    <unit unitID="6" unitName="遥测单元">
+        <field pid="108" GroupId="3" id="WX_FramSynFaultBit" desc="帧搜索容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="63" step="" unit="位"/>
+        <field pid="109" GroupId="3" id="WX_FramSynLockBit" desc="帧锁定容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="63" step="" unit="位"/>
+        <field pid="110" GroupId="3" id="WX_FramSynCheckBit" desc="帧校核容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="63" step="" unit="位"/>
+        <field pid="111" GroupId="3" id="WX_FramSynCheckNum" desc="帧校核检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="64" step="" unit="帧"/>
+        <field pid="112" GroupId="3" id="WX_FramSynLockNum" desc="帧锁定检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="64" step="" unit="帧"/>
+    </unit>
+    <unit unitID="8" unitName="数传模拟源">
+        <field pid="101" id="WX_CodeType" desc="码型" dataType="uint" displayFormat="enum|CodeMode" initValue="1" minValue="" maxValue="" step="" unit="" />
+        <field pid="102" id="WX_MessageSpeedChoose" desc="信息速率与帧频" dataType="uint" displayFormat="enum|MessageSpeedChoose" initValue="1" minValue="" maxValue="" step="" unit=""  />
+        <field pid="103" id="WX_DecodeType" desc="编码方式" dataType="uint8" displayFormat="enum|CodedMode" initValue="1" minValue="" maxValue="" step="" unit="" />
+        <field pid="104" id="WX_DescrambCtrl" desc="加扰控制" dataType="uint8" displayFormat="enum|ScramblCtrl" initValue="1" minValue="" maxValue="" step="" unit="" />
+        <field pid="105" id="WX_DistPolyLength" desc="加扰多项式长度" dataType="uint8" displayFormat="enum|ScrambPolyLength" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="106" id="WX_ScramPolg" desc="加扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""  />
+        <field pid="107" id="WX_DescramPrim" desc="加扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit="" />
+        <field pid="108" id="WX_DataType" desc="数据类型" dataType="uint8" displayFormat="enum|DataType" initValue="1" minValue="" maxValue="" step="" unit="" />
+        <field pid="109" id="WX_FixNumSet" desc="固定数设置" dataType="uint8" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit="" />
+    </unit>
+</device>

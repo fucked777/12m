@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x04" modeID="0x0" unitType="MU" desc="上行调制器单元">
+	<Triggers>
+		<Trigger id="CarrierModulation" desc="调制体制">
+			<TriggerValue value="1" desc="BPSK">
+				<Receiver id="DataOutWay" desc="I/Q分路合路" isEnable="0" values="1:I独立" minValue="" maxValue="" />
+				<Receiver id="GrayCode" desc="Gray编码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IOPowerDB" desc="I/Q功率比" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="PhaseMapping" desc="相位旋转" isEnable="0" values="2:I-Q" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="QPSK">
+				<Receiver id="DataOutWay" desc="I/Q分路合路" isEnable="1" values="1:I/Q合路;2:I/Q分路" minValue="" maxValue="" />
+				<Receiver id="GrayCode" desc="Gray编码选择" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="IOPowerDB" desc="I/Q功率比" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="PhaseMapping" desc="相位旋转" isEnable="1" values="1:I+Q;2:I-Q" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="UQPSK">
+				<Receiver id="DataOutWay" desc="I/Q分路合路" isEnable="0" values="2:I/Q分路" minValue="" maxValue="" />
+				<Receiver id="GrayCode" desc="Gray编码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IOPowerDB" desc="I/Q功率比" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="PhaseMapping" desc="相位旋转" isEnable="0" values="2:I-Q" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="5" desc="OQPSK">
+				<Receiver id="DataOutWay" desc="I/Q分路合路" isEnable="1" values="1:I/Q合路;2:I/Q分路" minValue="" maxValue="" />
+				<Receiver id="GrayCode" desc="Gray编码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IOPowerDB" desc="I/Q功率比" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="PhaseMapping" desc="相位旋转" isEnable="1" values="1:I+Q;2:I-Q" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		<Trigger id="NoiseOutSwicth" desc="噪声输出开关">
+			<TriggerValue value="1" desc="开">
+				<Receiver id="OutCarrierNoise" desc="输出载噪比" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="关">
+				<Receiver id="OutCarrierNoise" desc="输出载噪比" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/task_process_ctrl.png</file>
+        <file>image/task_process_ctrl_hover.png</file>
+        <file>image/iconfont.ttf</file>
+        <file>image/arrow_above.png</file>
+        <file>image/arrow_back.png</file>
+        <file>image/arrow_bottom.png</file>
+        <file>image/arrow_forward.png</file>
+        <file>image/gray.png</file>
+        <file>image/green.png</file>
+        <file>image/red.png</file>
+        <file>image/antenna_ctrl.png</file>
+        <file>image/antenna_ctrl_hover.png</file>
+        <file>image/gray16.png</file>
+        <file>image/green16.png</file>
+        <file>image/logPhoto.png</file>
+    </qresource>
+</RCC>

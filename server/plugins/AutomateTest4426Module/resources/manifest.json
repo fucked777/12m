@@ -1,0 +1,9 @@
+{
+    "bundle.symbolic_name":"AutomateTest4426Module",
+    "servicename":"自动化测试模块",
+    "bundle.activator" : true,
+    "authors" : [ "wp" ],
+    "bundle.version" : "1.0.0",
+    "bundle.description" : "null",
+    "update_log" :""
+}

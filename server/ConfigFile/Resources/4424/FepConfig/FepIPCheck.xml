@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configure >
+    <item ip="220.1.200.30" desc="这个是要检查的IP">
+        <ip>127.0.0.1</ip>      <!-- 这是附加参数相写啥都行 在使用时直接用节点名索引就行 -->
+        <port>100</port>        <!-- 这是附加参数相写啥都行 在使用时直接用节点名索引就行 -->
+    </item>
+    <item ip="220.1.200.31">
+        <ip>199.0.0.1</ip>
+        <port>200</port>
+    </item>
+    <item ip="220.1.200.32">
+        <ip>198.0.0.1</ip>
+        <port>300</port>
+    </item>
+    <item ip="220.1.200.33">
+        <ip>198.0.0.1</ip>
+        <port>400</port>
+    </item>
+    <item ip="220.1.200.34">
+        <ip>197.0.0.1</ip>
+        <port>500</port>
+    </item>
+</Configure>

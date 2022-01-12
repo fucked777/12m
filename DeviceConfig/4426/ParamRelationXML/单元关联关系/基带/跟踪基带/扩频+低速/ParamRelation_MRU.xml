@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x02" modeID="0xB" unitType="MRU" desc="低速接收载波单元">
+	<Triggers>
+		<Trigger id="CarrierModulation" desc="载波调制方式">
+			<TriggerValue value="2" desc="BPSK">
+				<Receiver id="SignalModelChoose" desc="信号模式选择" isEnable="0" values="2:I路单独" minValue="" maxValue="" />
+				<Receiver id="QGCodeChoose" desc="Gray编码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IOPowerSetting" desc="I/Q功率比" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Association id="IOPowerSetting">
+					<AssociationItem id="2 0" desc="BPSK 分贝方式">
+						<AssociationReceiver id="IPowerFactor" desc="I路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="QpowerFactor" desc="Q路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="IOPowerDB" desc="Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 1" desc="BPSK 功率比值方式">
+						<AssociationReceiver id="IPowerFactor" desc="I路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="QpowerFactor" desc="Q路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="IOPowerDB" desc="Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="3" desc="QPSK">
+				<Receiver id="SignalModelChoose" desc="信号模式选择" isEnable="1" values="0:I/Q合路;1:I/Q分路" minValue="" maxValue="" />
+				<Receiver id="QGCodeChoose" desc="Gray编码" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="IOPowerSetting" desc="I/Q功率比" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Association id="IOPowerSetting">
+					<AssociationItem id="3 0" desc="QPSK 分贝方式">
+						<AssociationReceiver id="IPowerFactor" desc="I路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="QpowerFactor" desc="Q路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="IOPowerDB" desc="Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 1" desc="QPSK 功率比值方式">
+						<AssociationReceiver id="IPowerFactor" desc="I路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="QpowerFactor" desc="Q路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="IOPowerDB" desc="Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="4" desc="OQPSK">
+				<Receiver id="SignalModelChoose" desc="信号模式选择" isEnable="1" values="0:I/Q合路;1:I/Q分路" minValue="" maxValue="" />
+				<Receiver id="QGCodeChoose" desc="Gray编码" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="IOPowerSetting" desc="I/Q功率比" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Association id="IOPowerSetting">
+					<AssociationItem id="4 0" desc="OQPSK 分贝方式">
+						<AssociationReceiver id="IPowerFactor" desc="I路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="QpowerFactor" desc="Q路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="IOPowerDB" desc="Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 1" desc="OQPSK 功率比值方式">
+						<AssociationReceiver id="IPowerFactor" desc="I路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="QpowerFactor" desc="Q路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="IOPowerDB" desc="Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="5" desc="UQPSK">
+				<Receiver id="SignalModelChoose" desc="信号模式选择" isEnable="0" values="1:I/Q分路" minValue="" maxValue="" />
+				<Receiver id="QGCodeChoose" desc="Gray编码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IOPowerSetting" desc="I/Q功率比" isEnable="1" values="" minValue="" maxValue="" />
+				
+				<Association id="IOPowerSetting">
+					<AssociationItem id="5 0" desc="UQPSK 分贝方式">
+						<AssociationReceiver id="IPowerFactor" desc="I路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="QpowerFactor" desc="Q路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="IOPowerDB" desc="Q功率分贝比" isEnable="1" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 1" desc="UQPSK 功率比值方式">
+						<AssociationReceiver id="IPowerFactor" desc="I路功率因子" isEnable="1" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="QpowerFactor" desc="Q路功率因子" isEnable="1" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="IOPowerDB" desc="Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="IOPowerSetting" desc="I/Q功率比">
+			<TriggerValue value="0" desc="分贝方式">
+				<Association id="CarrierModulation">
+					<AssociationItem id="0 2" desc="分贝方式 BPSK">
+						<AssociationReceiver id="IPowerFactor" desc="I路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="QpowerFactor" desc="Q路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="IOPowerDB" desc="Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="0 3" desc="分贝方式 QPSK">
+						<AssociationReceiver id="IPowerFactor" desc="I路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="QpowerFactor" desc="Q路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="IOPowerDB" desc="Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="0 4" desc="分贝方式 OQPSK">
+						<AssociationReceiver id="IPowerFactor" desc="I路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="QpowerFactor" desc="Q路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="IOPowerDB" desc="Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="0 5" desc="分贝方式 UQPSK">
+						<AssociationReceiver id="IPowerFactor" desc="I路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="QpowerFactor" desc="Q路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="IOPowerDB" desc="Q功率分贝比" isEnable="1" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="1" desc="功率比值方式">
+				<Association id="CarrierModulation">
+					<AssociationItem id="1 2" desc="功率比值方式 BPSK">
+						<AssociationReceiver id="IPowerFactor" desc="I路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="QpowerFactor" desc="Q路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="IOPowerDB" desc="Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3" desc="功率比值方式 QPSK">
+						<AssociationReceiver id="IPowerFactor" desc="I路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="QpowerFactor" desc="Q路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="IOPowerDB" desc="Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4" desc="功率比值方式 OQPSK">
+						<AssociationReceiver id="IPowerFactor" desc="I路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="QpowerFactor" desc="Q路功率因子" isEnable="0" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="IOPowerDB" desc="Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5" desc="功率比值方式 UQPSK">
+						<AssociationReceiver id="IPowerFactor" desc="I路功率因子" isEnable="1" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="QpowerFactor" desc="Q路功率因子" isEnable="1" values="" minValue="" maxValue="" />
+						<AssociationReceiver id="IOPowerDB" desc="Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

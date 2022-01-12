@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 这里是框图的创建的配置文件
+绝对不要包含任何的业务逻辑
+此文件只负责创建图形
+ -->
+<Configure>
+	<!-- 全局的配置 -->
+	<Global brush="0xFFD3D3D3 SolidPattern" pen="0xFF000000 SolidLine 1.0" font="false 宋体 常规 10 false false 0xFF000000" Z="0">
+	</Global>
+	<!-- 图元相关 -->
+	<Graph>
+		<Pixmap graphicsID="Antenna" groupID="" image="radar.png" pos="50 520" size="100 100" sourcePointPosition="LeftMiddle"/>
+		<!--<Rectangle graphicsID="KaBandRectSend" groupID="" pos="150 50" size="30 210" sourcePointPosition="LeftUp" text="Ka频段发" textAttr="15 110 V Center true" />-->
+		<Rectangle graphicsID="SBandRectSend" groupID="" pos="150 58" size="30 170" sourcePointPosition="LeftUp" text="S频段发" textAttr="15 57 V Center true"/>
+		<Rectangle graphicsID="SBandRectRecv" groupID="" pos="150 228" size="30 290" sourcePointPosition="LeftUp" text="S频段收" textAttr="15 135 V Center true"/>
+		<Rectangle graphicsID="XBandRectRecv" groupID="" pos="150 518" size="30 290" sourcePointPosition="LeftUp" text="X频段收" textAttr="15 130 V Center true"/>
+		<Rectangle graphicsID="KaBandRectRecv" groupID="" pos="150 750" size="30 350" sourcePointPosition="LeftUp" text="Ka频段收" textAttr="15 190 V Center true"/>
+		<Rectangle graphicsID="SPDFSKGJZ" groupID="" pos="940 50" size="40 155" sourcePointPosition="LeftUp" text="S频段 发射 射频 开关 网络" textAttr="20 75 H Center true"/>
+		<Rectangle graphicsID="SPDJSKGJZ" groupID="" pos="860 220" size="40 300" sourcePointPosition="LeftUp" text="S频段接收开关矩阵" textAttr="20 140 V Center false"/>
+		<!--接测控前端1的三根线-->
+		<Line graphicsID="SRECEIVETOSPZH1" groupID="" pos="900 230" line="0,0 150,0 150,-130 250,-130" arrow="250,-130,10,10,Right,RightMiddle" text="左旋和路" textAttr="80 -10 H Center false"/>
+		<Line graphicsID="SRECEIVETOSPYH1" groupID="" pos="900 250" line="0,0 155,0 155,-130 250,-130" arrow="250,-130,10,10,Right,RightMiddle" text="右旋和路" textAttr="80 -10 H Center false"/>
+		<Line graphicsID="SRECEIVETOSPF21" groupID="" pos="900 270" line="0,0 160,0 160,-130 250,-130" arrow="250,-130,10,10,Right,RightMiddle" text="F2和路" textAttr="80 -10 H Center false"/>
+		<!--接测控前端2的三根线-->
+		<Line graphicsID="SRECEIVETOSPZH2" groupID="" pos="900 300" line="0,0 165,0 165,-100 250,-100" arrow="250,-100,10,10,Right,RightMiddle" text="左旋和路" textAttr="80 -10 H Center false"/>
+		<Line graphicsID="SRECEIVETOSPYH2" groupID="" pos="900 320" line="0,0 170,0 170,-100 250,-100" arrow="250,-100,10,10,Right,RightMiddle" text="右旋和路" textAttr="80 -10 H Center false"/>
+		<Line graphicsID="SRECEIVETOSPF22" groupID="" pos="900 340" line="0,0 175,0 175,-100 250,-100" arrow="250,-100,10,10,Right,RightMiddle" text="F2和路" textAttr="80 -10 H Center false"/>
+		<!--接跟踪前端1的两根线-->
+		<Line graphicsID="SGZHLU1" groupID="" pos="900 370" line="0,0 250,0" arrow="250,0,10,10,Right,RightMiddle" text="S跟踪和路（1x2）" textAttr="110 -10 H Center false"/>
+		<Line graphicsID="SGZCLU1" groupID="" pos="900 390" line="0,0 250,0" arrow="250,0,10,10,Right,RightMiddle" text="S跟踪差路（1x2）" textAttr="110 -10 H Center false"/>
+		<!--接跟踪前端2的两根线-->
+		<Line graphicsID="SGZHLU2" groupID="" pos="900 475" line="0,0 250,0" arrow="250,0,10,10,Right,RightMiddle" text="S跟踪和路（1x2）" textAttr="110 -10 H Center false"/>
+		<Line graphicsID="SGZCLU2" groupID="" pos="900 495" line="0,0 250,0" arrow="250,0,10,10,Right,RightMiddle" text="S跟踪差路（1x2）" textAttr="110 -10 H Center false"/>
+		<Rectangle graphicsID="SPDGPX" groupID="" pos="520 220" size="210 300" sourcePointPosition="LeftUp" text="S频段射频开关网络" textAttr="110 270 H Center true" z="0"/>
+		<Rectangle graphicsID="XPDGPX" groupID="" pos="520 540" size="210 270" sourcePointPosition="LeftUp" text="X频段射频开关网络" textAttr="110 255 H Center true" z="0"/>
+		<Rectangle graphicsID="KaPBSPKGWL" groupID="" pos="520 850" size="210 270" sourcePointPosition="LeftUp" text="Ka频段射频开关网络" textAttr="110 255 H Center true" z="0"/>
+		<!-- S频段发 -->
+		<Line graphicsID="SHPLine1" groupID="" pos="180 110" line="120,0 270,0" arrow="120,0,10,10,Left,RightMiddle"/>
+		<TwoArcCircle graphicsID="SHPTWOAC" groupID="" pos="290 110" radius="10" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="SHPLine2" groupID="" pos="180 110" line="220,0 220,38 760,38" arrow="760,38,10,10,Right,RightMiddle"/>
+		<Line graphicsID="SHPLine3" groupID="" pos="180 73" line="0,0 112,0 112,38" arrow="0,0,10,10,Left,RightMiddle" text="L" textAttr="60 -10 H Center true"/>
+		<Line graphicsID="SHPLine4" groupID="" pos="180 73" line="0,86 112,86 112,48" arrow="0,86,10,10,Left,RightMiddle" text="R" textAttr="60 76 H Center true"/>
+		<Rectangle graphicsID="SHP" groupID="" pos="450 110" size="100 25" sourcePointPosition="LeftMiddle" text="S-HPA 1:1" textAttr="50 0 H Center false"/>
+		<Line graphicsID="SHPLine1_1" groupID="" pos="540 110" line="10,0 400,0" arrow="10,0,10,10,Left,RightMiddle"/>
+		<Line graphicsID="SHPLine1_2" groupID="" pos="610 110" line="0,0 0,9 330,9" arrow="330,9,10,10,Right,RightMiddle"/>
+		<!-- S频段收 -->
+		<Rectangle graphicsID="SLNA1" groupID="" pos="370 250" size="100 20" sourcePointPosition="LeftUp" text="S-LNA1" textAttr="50 10 H Center true"/>
+		<Rectangle graphicsID="SLNA2" groupID="" pos="370 290" size="100 20" sourcePointPosition="LeftUp" text="S-LNA2" textAttr="50 10 H Center true"/>
+		<Line graphicsID="SLNALine1_1" groupID="" pos="180 280" line="0,0 100,0" arrow="100,0,10,10,Right,RightMiddle" text="L 和路" textAttr="50 0 H Center true"/>
+		<TwoArcCircle graphicsID="SLNA12Connector" groupID="" pos="290 280" radius="10" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="SLNALine1_2" groupID="" pos="290 270" line="0,0 0,-10 80,-10" arrow="80,-10,10,10,Right,RightMiddle"/>
+		<Line graphicsID="SLNALine1_3" groupID="" pos="290 290" line="0,0 0,10 80,10" arrow="80,10,10,10,Right,RightMiddle"/>
+		<Line graphicsID="SLNALine1_4" groupID="" pos="300 280" line="0,0 70,0" arrow="0,0,10,10,Left,RightMiddle" text="测试信号" textAttr="75 0 H LeftMiddle false"/>
+		<Line graphicsID="SLNALine1_5" groupID="" pos="470 255" line="0,0 150,0 150,15" arrow="150,15,10,10,Down,RightMiddle" z="1"/>
+		<TwoArcCircle graphicsID="SLNA12Connector2" groupID="" pos="620 280" radius="10" brush="0xFFFFFFFF SolidPattern" z="1" rotation="A -90"/>
+		<Line graphicsID="SLNALine1_6" groupID="" pos="470 305" line="0,0 150,0 150,-15" arrow="150,-15,10,10,Up,RightMiddle" z="1"/>
+		<Line graphicsID="SLNALine1_7" groupID="" pos="630 280" line="0,0 100,0" arrow="100,0,10,10,Right,RightMiddle" z="1"/>
+		<Line graphicsID="SLNALine1_8" groupID="" pos="600 280" line="0,0 10,0" z="1"/>
+		<Rectangle graphicsID="SSwitch2_1" groupID="" pos="580 275" size="20 4" sourcePointPosition="LeftUp" brush="0xFF000000 SolidPattern"/>
+		<Rectangle graphicsID="SLNA3" groupID="" pos="370 330" size="100 20" sourcePointPosition="LeftUp" text="S-LNA3" textAttr="50 10 H Center true"/>
+		<Rectangle graphicsID="SLNA4" groupID="" pos="370 370" size="100 20" sourcePointPosition="LeftUp" text="S-LNA4" textAttr="50 10 H Center true"/>
+		<Line graphicsID="SLNALine2_1" groupID="" pos="180 360" line="0,0 100,0" arrow="100,0,10,10,Right,RightMiddle" text="R 和路" textAttr="50 0 H Center true"/>
+		<TwoArcCircle graphicsID="SLNA34Connector" groupID="" pos="290 360" radius="10" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="SLNALine2_2" groupID="" pos="290 350" line="0,0 0,-10 80,-10" arrow="80,-10,10,10,Right,RightMiddle"/>
+		<Line graphicsID="SLNALine2_3" groupID="" pos="290 370" line="0,0 0,10 80,10" arrow="80,10,10,10,Right,RightMiddle"/>
+		<Line graphicsID="SLNALine2_4" groupID="" pos="300 360" line="0,0 70,0" arrow="0,0,10,10,Left,RightMiddle" text="测试信号" textAttr="75 0 H LeftMiddle false"/>
+		<Line graphicsID="SLNALine2_5" groupID="" pos="470 335" line="0,0 150,0 150,15" arrow="150,15,10,10,Down,RightMiddle" z="1"/>
+		<TwoArcCircle graphicsID="SLNA34Connector2" groupID="" pos="620 360" radius="10" brush="0xFFFFFFFF SolidPattern" z="1" rotation="A -90"/>
+		<Line graphicsID="SLNALine2_6" groupID="" pos="470 385" line="0,0 150,0 150,-15" arrow="150,-15,10,10,Up,RightMiddle" z="1"/>
+		<Line graphicsID="SLNALine2_7" groupID="" pos="630 360" line="0,0 100,0" arrow="100,0,10,10,Right,RightMiddle" z="1"/>
+		<Line graphicsID="SLNALine2_8" groupID="" pos="600 360" line="0,0 10,0" z="1"/>
+		<Rectangle graphicsID="SSwitch2_2" groupID="" pos="580 355" size="20 4" sourcePointPosition="LeftUp" brush="0xFF000000 SolidPattern"/>
+		
+		<Rectangle graphicsID="SLNA5" groupID="" pos="370 410" size="100 20" sourcePointPosition="LeftUp" text="S-LNA5" textAttr="50 10 H Center true"/>
+		<Rectangle graphicsID="SLNA6" groupID="" pos="370 450" size="100 20" sourcePointPosition="LeftUp" text="S-LNA6" textAttr="50 10 H Center true"/>
+		<Line graphicsID="SLNALine3_1" groupID="" pos="180 420" line="0,0 100,0 100,20" arrow="100,0,10,10,Right,RightMiddle" text="L" textAttr="50 0 H DownMiddle true"/>
+		<Text graphicsID="SLNAText1_1" groupID="" pos="230 438" text="差路" textAttr="0 0 H Center true"/>
+		<Line graphicsID="SLNALine3_2" groupID="" pos="180 455" line="0,0 110,0 110,-20" arrow="100,0,10,10,Right,RightMiddle" text="R" textAttr="50 0 H UpMiddle true"/>
+		<ArcCrossCircle graphicsID="SLNA56Connector" groupID="" pos="290 438" radius="10" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="SLNALine3_3" groupID="" pos="290 430" line="0,0 0,-10 80,-10" arrow="80,-10,10,10,Right,RightMiddle"/>
+		<Line graphicsID="SLNALine3_4" groupID="" pos="300 435" line="0,0 0,20 70,20" arrow="70,20,10,10,Right,RightMiddle"/>
+		<Line graphicsID="SLNALine3_5" groupID="" pos="470 420" line="0,0 260,0" arrow="260,0,10,10,Right,RightMiddle" z="1"/>
+		<Line graphicsID="SLNALine3_6" groupID="" pos="470 460" line="0,0 260,0" arrow="260,0,10,10,Right,RightMiddle" z="1"/>
+		<!-- X -->
+		<Rectangle graphicsID="XLNA1" groupID="" pos="370 570" size="100 20" sourcePointPosition="LeftUp" text="X-LNA1" textAttr="50 10 H Center true"/>
+		<Rectangle graphicsID="XLNA2" groupID="" pos="370 610" size="100 20" sourcePointPosition="LeftUp" text="X-LNA2" textAttr="50 10 H Center true"/>
+		<Line graphicsID="XLNALine1_1" groupID="" pos="180 580" line="0,0 100,0 100,20" arrow="100,0,10,10,Right,RightMiddle" text="L" textAttr="50 0 H DownMiddle true"/>
+		<Text graphicsID="XLNAText1_1" groupID="" pos="230 598" text="差路" textAttr="0 0 H Center true"/>
+		<Line graphicsID="XLNALine1_2" groupID="" pos="180 615" line="0,0 110,0 110,-20" arrow="100,0,10,10,Right,RightMiddle" text="R" textAttr="50 0 H UpMiddle true"/>
+		<ArcCrossCircle graphicsID="XLNA12Connector" groupID="" pos="290 598" radius="10" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="XLNALine1_3" groupID="" pos="290 590" line="0,0 0,-10 80,-10" arrow="80,-10,10,10,Right,RightMiddle"/>
+		<Line graphicsID="XLNALine1_4" groupID="" pos="300 595" line="0,0 0,20 70,20" arrow="70,20,10,10,Right,RightMiddle"/>
+		<!--2020/5/11 新增-->
+		<Line graphicsID="XLNALine1_5" groupID="" pos="470 575" line="0,0 100,0 100,15" arrow="100,15,10,10,Down,RightMiddle" z="1"/>
+		<TwoArcCircle graphicsID="XLNA12Connector2" groupID="" pos="570 600" radius="10" brush="0xFFFFFFFF SolidPattern" z="1" rotation="A -90"/>
+		<Line graphicsID="XLNALine1_6" groupID="" pos="470 625" line="0,0 100,0 100,-5" arrow="100,-15,10,10,Up,RightMiddle" z="1"/>
+		<Line graphicsID="XLNALine1_7" groupID="" pos="580 600" line="0,0 30,0 30,-20 60,-20 60,-45 150,-45" arrow="150,-45,10,10,Right,RightMiddle" z="1"/>
+		<Line graphicsID="XLNALine1_8" groupID="" pos="630 580" line="0,0 0,25 100,25" arrow="100,25,10,10,Right,RightMiddle" z="1"/>
+		<Line graphicsID="XLNALine1_9" groupID="" pos="550 600" line="0,0 10,0" z="1"/>
+		<Rectangle graphicsID="XSwitch2_1" groupID="" pos="530 595" size="20 4" sourcePointPosition="LeftUp" brush="0xFF000000 SolidPattern"/>
+		<!--2020/5/11 删除
+        <Line graphicsID="XLNALine1_5" groupID="" pos="470 580" line="0,0 70,0 70,10 120,10 120,-25 260,-25" arrow="260,-25,10,10,Right,RightMiddle" z="1"/>
+        <Line graphicsID="XLNALine1_6" groupID="" pos="470 620" line="0,0 70,0 70,-30 120,-30 120,-16 260,-16" arrow="260,-16,10,10,Right,RightMiddle" z="1"/>
+        -->
+		<Rectangle graphicsID="XLNA3" groupID="" pos="370 650" size="100 20" sourcePointPosition="LeftUp" text="X-LNA3" textAttr="50 10 H Center true"/>
+		<Rectangle graphicsID="XLNA4" groupID="" pos="370 690" size="100 20" sourcePointPosition="LeftUp" text="X-LNA4" textAttr="50 10 H Center true"/>
+		<Line graphicsID="XLNALine2_1" groupID="" pos="180 680" line="0,0 100,0" arrow="100,0,10,10,Right,RightMiddle" text="L 和路" textAttr="50 0 H Center true"/>
+		<TwoArcCircle graphicsID="XLNA34Connector" groupID="" pos="290 680" radius="10" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="XLNALine2_2" groupID="" pos="290 670" line="0,0 0,-10 80,-10" arrow="80,-10,10,10,Right,RightMiddle"/>
+		<Line graphicsID="XLNALine2_3" groupID="" pos="290 690" line="0,0 0,10 80,10" arrow="80,10,10,10,Right,RightMiddle"/>
+		<Line graphicsID="XLNALine2_4" groupID="" pos="300 680" line="0,0 70,0" arrow="0,0,10,10,Left,RightMiddle" text="测试信号" textAttr="75 0 H LeftMiddle false"/>
+		<!--2020/5/11 新增-->
+		<Line graphicsID="XLNALine2_5" groupID="" pos="470 655" line="0,0 100,0 100,5" arrow="100,15,10,10,Down,RightMiddle" z="1"/>
+		<TwoArcCircle graphicsID="XLNA34Connector4" groupID="" pos="570 680" radius="10" brush="0xFFFFFFFF SolidPattern" z="1" rotation="A -90"/>
+		<Line graphicsID="XLNALine2_5_1" groupID="" pos="550 680" line="0,0 10,0" z="1" />
+		<Rectangle graphicsID="XSwitch2_2" groupID="" pos="530 675" size="20 4" sourcePointPosition="LeftUp" brush="0xFF000000 SolidPattern"/>
+		
+		<Line graphicsID="XLNALine2_6" groupID="" pos="470 705" line="0,0 100,0 100,-10" arrow="100,-15,10,10,Up,RightMiddle" z="1"/>
+		<Line graphicsID="XLNALine2_61" groupID="" pos="580 680" line="0,0 25,0 25,-25 80,-25 80,-15" arrow="80,-10,10,10,Down,RightMiddle" z="1" />
+		<TwoArcCircle graphicsID="XLNA34Connector3" groupID="" pos="660 680" radius="10" brush="0xFFFFFFFF SolidPattern" z="1" rotation="A -90"/>
+		<Line graphicsID="XLNALine2_8" groupID="" pos="640 680" line="0,0 10,0" z="1" />
+		<Rectangle graphicsID="XSwitch3_2" groupID="" pos="620 675" size="20 4" sourcePointPosition="LeftUp" brush="0xFF000000 SolidPattern"/>
+		
+		<Line graphicsID="XLNALine2_62" groupID="" pos="670 680" line="0,0 10,0 10,-100 60,-100" arrow="60,-100,10,10,Right,RightMiddle" z="1" />
+		<Line graphicsID="XLNALine2_63" groupID="" pos="680 630" line="0,0 50,0" arrow="50,0,10,10,Right,RightMiddle" z="1"/>
+		<Line graphicsID="XLNALine2_9" groupID="" pos="605 680" line="0,0 0,30 125,30" arrow="125,30,10,10,Right,RightMiddle" z="1"/>
+		<Line graphicsID="XLNALine2_10" groupID="" pos="685 710" line="0,0 0,10" arrow="0,10,10,10,Down,DownMiddle" z="1"/>
+		<TwoArcCircle graphicsID="XLNA34Connector2" groupID="" pos="685 735" radius="10" brush="0xFFFFFFFF SolidPattern" z="1" rotation="A -90"/>
+		<Line graphicsID="XLNALine2_10_1" groupID="" pos="665 735" line="0,0 10,0" z="1"/>
+		<Rectangle graphicsID="XSwitch3_3" groupID="" pos="645 730" size="20 4" sourcePointPosition="LeftUp" brush="0xFF000000 SolidPattern"/>
+		
+		<Line graphicsID="XLNALine2_11" groupID="" pos="695 735" line="0,0 10,0 10,15 25,15" arrow="35,15,10,10,Right,RightMiddle" z="1" />
+		<Rectangle graphicsID="XLNA5" groupID="" pos="370 730" size="100 20" sourcePointPosition="LeftUp" text="X-LNA5" textAttr="50 10 H Center true"/>
+		<Rectangle graphicsID="XLNA6" groupID="" pos="370 770" size="100 20" sourcePointPosition="LeftUp" text="X-LNA6" textAttr="50 10 H Center true"/>
+		<Line graphicsID="XLNALine3_1" groupID="" pos="180 760" line="0,0 100,0" arrow="100,0,10,10,Right,RightMiddle" text="R 和路" textAttr="50 0 H Center true"/>
+		<TwoArcCircle graphicsID="XLNA56Connector" groupID="" pos="290 760" radius="10" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="XLNALine3_2" groupID="" pos="290 750" line="0,0 0,-10 80,-10" arrow="80,-10,10,10,Right,RightMiddle"/>
+		<Line graphicsID="XLNALine3_3" groupID="" pos="290 770" line="0,0 0,10 80,10" arrow="80,10,10,10,Right,RightMiddle"/>
+		<Line graphicsID="XLNALine3_4" groupID="" pos="300 760" line="0,0 70,0" arrow="0,0,10,10,Left,RightMiddle" text="测试信号" textAttr="75 0 H LeftMiddle false"/>
+		<!--2020/5/11 新增-->
+		<Line graphicsID="XLNALine3_5" groupID="" pos="470 740" line="0,0 100,0 100,10" arrow="100,10,10,10,Down,DownMiddle" z="1"/>
+		<TwoArcCircle graphicsID="XLNA56Connector2" groupID="" pos="570 765" radius="10" brush="0xFFFFFFFF SolidPattern" z="1" rotation="A -90"/>
+		<Line graphicsID="XLNALine3_5_1" groupID="" pos="550 765" line="0,0 10,0" z="1" />
+		<Rectangle graphicsID="XSwitch2_3" groupID="" pos="530 760" size="20 4" sourcePointPosition="LeftUp" brush="0xFF000000 SolidPattern"/>
+		<Line graphicsID="XLNALine3_6" groupID="" pos="470 785" line="0,0 100,0" arrow="100,-10,10,10,Up,RightMiddle" z="1" />
+		<Line graphicsID="XLNALine3_7" groupID="" pos="580 765" line="0,0 5,0 5,-30 15,-30 15,-65 80,-65" arrow="80,-75,10,10,Up,RightMiddle" z="1" />
+		<Line graphicsID="XLNALine3_8" groupID="" pos="595 735" line="0,0 0,40 90,40 90,15" arrow="90,15,10,10,Up,UpMiddle" z="1"/>
+		<Line graphicsID="XLNALine3_9" groupID="" pos="635 775" line="0,0 80,0 80,15 95,15" arrow="95,15,10,10,Right,RightMiddle" z="1"/>
+		<!-- Ka -->
+		<Rectangle graphicsID="KaLNA1" groupID="" pos="370 880" size="100 20" sourcePointPosition="LeftUp" text="Ka-LNA1" textAttr="50 10 H Center true"/>
+		<Rectangle graphicsID="KaLNA2" groupID="" pos="370 920" size="100 20" sourcePointPosition="LeftUp" text="Ka-LNA2" textAttr="50 10 H Center true"/>
+		<Line graphicsID="KaLNALine1_1" groupID="" pos="180 890" line="0,0 100,0 100,20" arrow="100,0,10,10,Right,RightMiddle" text="L" textAttr="50 0 H DownMiddle true"/>
+		<Text graphicsID="KaLNAText1_1" groupID="" pos="230 908" text="差路" textAttr="0 0 H Center true"/>
+		<Line graphicsID="KaLNALine1_2" groupID="" pos="180 925" line="0,0 110,0 110,-20" arrow="100,0,10,10,Right,RightMiddle" text="R" textAttr="50 0 H UpMiddle true"/>
+		<ArcCrossCircle graphicsID="KaLNA12Connector" groupID="" pos="290 908" radius="10" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="KaLNALine1_3" groupID="" pos="290 900" line="0,0 0,-10 80,-10" arrow="80,-10,10,10,Right,RightMiddle"/>
+		<Line graphicsID="KaLNALine1_4" groupID="" pos="300 905" line="0,0 0,20 70,20" arrow="70,20,10,10,Right,RightMiddle"/>
+		<!--2020/5/11 新增-->
+		<Line graphicsID="KaLNALine1_5" groupID="" pos="470 885" line="0,0 100,0 100,15" arrow="100,15,10,10,Down,RightMiddle" z="1"/>
+		<TwoArcCircle graphicsID="KaLNA12Connector2" groupID="" pos="570 910" radius="10" brush="0xFFFFFFFF SolidPattern" z="1" rotation="A -90"/>
+		<Line graphicsID="KaLNALine1_6" groupID="" pos="470 935" line="0,0 100,0 100,-5" arrow="100,-15,10,10,Up,RightMiddle" z="1"/>
+		<Line graphicsID="KaLNALine1_7" groupID="" pos="580 910" line="0,0 30,0 30,-20 60,-20 60,-45 150,-45" arrow="150,-45,10,10,Right,RightMiddle" z="1"/>
+		<Line graphicsID="KaLNALine1_8" groupID="" pos="630 890" line="0,0 0,25 110,25" arrow="100,25,10,10,Right,RightMiddle" z="1"/>
+		<Line graphicsID="KaLNALine1_9" groupID="" pos="550 910" line="0,0 10,0" z="1"/>
+		<Rectangle graphicsID="KaSwitch2_1" groupID="" pos="530 905" size="20 4" sourcePointPosition="LeftUp" brush="0xFF000000 SolidPattern"/>
+		<!--
+        <Line graphicsID="KaLNALine1_5" groupID="" pos="470 890" line="0,0 70,0 70,10 120,10 120,-25 260,-25" arrow="260,-25,10,10,Right,RightMiddle" z="1"/>
+        <Line graphicsID="KaLNALine1_6" groupID="" pos="470 930" line="0,0 70,0 70,-30 120,-30 120,-16 260,-16" arrow="260,-16,10,10,Right,RightMiddle" z="1"/>
+		-->
+		<Rectangle graphicsID="KaLNA3" groupID="" pos="370 960" size="100 20" sourcePointPosition="LeftUp" text="Ka-LNA3" textAttr="50 10 H Center true"/>
+		<Rectangle graphicsID="KaLNA4" groupID="" pos="370 1000" size="100 20" sourcePointPosition="LeftUp" text="Ka-LNA4" textAttr="50 10 H Center true"/>
+		<Line graphicsID="KaLNALine2_1" groupID="" pos="180 990" line="0,0 100,0" arrow="100,0,10,10,Right,RightMiddle" text="L 和路" textAttr="50 0 H Center true"/>
+		<TwoArcCircle graphicsID="KaLNA34Connector" groupID="" pos="290 990" radius="10" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="KaLNALine2_2" groupID="" pos="290 980" line="0,0 0,-10 80,-10" arrow="80,-10,10,10,Right,RightMiddle"/>
+		<Line graphicsID="KaLNALine2_3" groupID="" pos="290 1000" line="0,0 0,10 80,10" arrow="80,10,10,10,Right,RightMiddle" />
+		<Line graphicsID="KaLNALine2_4" groupID="" pos="300 990" line="0,0 70,0" arrow="0,0,10,10,Left,RightMiddle" text="测试信号" textAttr="75 0 H LeftMiddle false"/>
+		<!--2020/5/11 新增-->
+		<Line graphicsID="KaLNALine2_5" groupID="" pos="470 965" line="0,0 100,0 100,5" arrow="100,15,10,10,Down,RightMiddle" z="1"/>
+		<TwoArcCircle graphicsID="KaLNA34Connector5" groupID="" pos="570 990" radius="10" brush="0xFFFFFFFF SolidPattern" z="1" rotation="A -90"/>	
+		<Line graphicsID="KaLNALine2_5_1" groupID="" pos="550 990" line="0,0 10,0" z="1"/>
+		<Rectangle graphicsID="KaSwitch2_2" groupID="" pos="530 985" size="20 4" sourcePointPosition="LeftUp" brush="0xFF000000 SolidPattern"/>
+		
+		<Line graphicsID="KaLNALine2_6" groupID="" pos="470 1015" line="0,0 100,0 100,-10" arrow="100,-15,10,10,Up,RightMiddle" z="1"/>
+		<Line graphicsID="KaLNALine2_61" groupID="" pos="580 990" line="0,0 25,0 25,-25 80,-25 80,-15" arrow="80,-10,10,10,Down,RightMiddle" z="1"/>
+		<TwoArcCircle graphicsID="KaLNA34Connector3" groupID="" pos="660 990" radius="10" brush="0xFFFFFFFF SolidPattern" z="1" rotation="A -90"/>
+		<Line graphicsID="KaLNALine2_6_2" groupID="" pos="640 990" line="0,0 10,0" z="1" />
+		<Rectangle graphicsID="KaSwitch3_2" groupID="" pos="620 985" size="20 4" sourcePointPosition="LeftUp" brush="0xFF000000 SolidPattern"/>
+		
+		<Line graphicsID="KaLNALine2_62" groupID="" pos="670 990" line="0,0 10,0 10,-100 50,-100" arrow="60,-100,10,10,Right,RightMiddle" z="1"/>
+		<Line graphicsID="KaLNALine2_63" groupID="" pos="680 940" line="0,0 50,0" arrow="50,0,10,10,Right,RightMiddle" z="1"/>
+		<Line graphicsID="KaLNALine2_9" groupID="" pos="605 990" line="0,0 0,30 125,30" arrow="125,30,10,10,Right,RightMiddle" z="1"/>
+		<Line graphicsID="KaLNALine2_10" groupID="" pos="685 1020" line="0,0 0,10" arrow="0,10,10,10,Down,DownMiddle" z="1"/>
+		<TwoArcCircle graphicsID="KaLNA34Connector2" groupID="" pos="685 1045" radius="10" brush="0xFFFFFFFF SolidPattern" z="1" rotation="A -90"/>
+		<Line graphicsID="KaLNALine2_10_1" groupID="" pos="665 1045" line="0,0 10,0" z="1"/>
+		<Rectangle graphicsID="KaSwitch3_3" groupID="" pos="645 1040" size="20 4" sourcePointPosition="LeftUp" brush="0xFF000000 SolidPattern"/>
+		<Line graphicsID="KaLNALine2_11" groupID="" pos="695 1045" line="0,0 10,0 10,15 25,15" arrow="35,15,10,10,Right,RightMiddle" z="1"/>
+		<!--2020/5/11 删除
+        <Line graphicsID="KaLNALine2_5" groupID="" pos="470 970" line="0,0 90,0 90,20" z="1"/>
+        <Line graphicsID="KaLNALine2_6" groupID="" pos="470 1010" line="0,0 90,0 90,-20" z="1"/>
+		<Line graphicsID="KaLNALine2_61" groupID="" pos="560 980" line="0,0 60,0" arrow="60,0,10,10,Right,RightMiddle" z="1"/>
+		<TwoArcCircle graphicsID="KaLNA34Connector3" groupID="" pos="620 990" radius="10" brush="0xFFFFFFFF SolidPattern" z="1" rotation="A -90"/>
+		<Line graphicsID="KaLNALine2_62" groupID="" pos="620 1000" line="0,0 60,0 60,-110 110,-110" arrow="110,-110,10,10,Right,RightMiddle" z="1"/>
+		<Line graphicsID="KaLNALine2_63" groupID="" pos="680 940" line="0,0 50,0" arrow="50,0,10,10,Right,RightMiddle" z="1"/>
+		<Line graphicsID="KaLNALine2_9" groupID="" pos="560 1000" line="0,0 25,0 25,20 170,20" arrow="170,20,10,10,Right,RightMiddle" z="1"/>
+		<Line graphicsID="KaLNALine2_10" groupID="" pos="585 1020" line="0,0 0,15 60,15" arrow="60,15,10,10,Right,RightMiddle" z="1"/>
+		<TwoArcCircle graphicsID="KaLNA34Connector2" groupID="" pos="645 1045" radius="10" brush="0xFFFFFFFF SolidPattern" z="1" rotation="A -90"/>
+		<Line graphicsID="KaLNALine2_11" groupID="" pos="645 1055" line="0,0 0,5 85,5" arrow="85,5,10,10,Right,RightMiddle" z="1"/>
+		-->
+		<Rectangle graphicsID="KaLNA5" groupID="" pos="370 1040" size="100 20" sourcePointPosition="LeftUp" text="Ka-LNA5" textAttr="50 10 H Center true"/>
+		<Rectangle graphicsID="KaLNA6" groupID="" pos="370 1080" size="100 20" sourcePointPosition="LeftUp" text="Ka-LNA6" textAttr="50 10 H Center true"/>
+		<Line graphicsID="KaLNALine3_1" groupID="" pos="180 1070" line="0,0 100,0" arrow="100,0,10,10,Right,RightMiddle" text="R 和路" textAttr="50 0 H Center true"/>
+		<TwoArcCircle graphicsID="KaLNA56Connector" groupID="" pos="290 1070" radius="10" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="KaLNALine3_2" groupID="" pos="290 1060" line="0,0 0,-10 80,-10" arrow="80,-10,10,10,Right,RightMiddle"/>
+		<Line graphicsID="KaLNALine3_3" groupID="" pos="290 1080" line="0,0 0,10 80,10" arrow="80,10,10,10,Right,RightMiddle"/>
+		<Line graphicsID="KaLNALine3_4" groupID="" pos="300 1070" line="0,0 70,0" arrow="0,0,10,10,Left,RightMiddle" text="测试信号" textAttr="75 0 H LeftMiddle false"/>
+		<!--2020/5/11 新增-->
+		<Line graphicsID="KaLNALine3_5" groupID="" pos="470 1050" line="0,0 100,0 100,10" arrow="100,10,10,10,Down,DownMiddle" z="1"/>
+		<TwoArcCircle graphicsID="KaLNA56Connector2" groupID="" pos="570 1075" radius="10" brush="0xFFFFFFFF SolidPattern" z="1" rotation="A -90"/>
+		<Line graphicsID="KaLNALine3_5_1" groupID="" pos="550 1075" line="0,0 10,0" z="1" />
+		<Rectangle graphicsID="KaSwitch2_3" groupID="" pos="530 1070" size="20 4" sourcePointPosition="LeftUp" brush="0xFF000000 SolidPattern"/>
+		<Line graphicsID="KaLNALine3_6" groupID="" pos="470 1095" line="0,0 100,0" arrow="100,-10,10,10,Up,RightMiddle" z="1"/>
+		<Line graphicsID="KaLNALine3_7" groupID="" pos="580 1075" line="0,0 5,0 5,-30 15,-30 15,-65 80,-65" arrow="80,-75,10,10,Up,RightMiddle" z="1"/>
+		<Line graphicsID="KaLNALine3_8" groupID="" pos="595 1045" line="0,0 0,40 90,40 90,15" arrow="90,15,10,10,Up,UpMiddle" z="1"/>
+		<Line graphicsID="KaLNALine3_9" groupID="" pos="635 1085" line="0,0 80,0 80,15 95,15" arrow="95,15,10,10,Right,RightMiddle" z="1"/>
+		<!--2020/5/11 删除
+        <Line graphicsID="KaLNALine3_5" groupID="" pos="470 1050" line="0,0 80,0 80,20" z="1"/>
+        <Line graphicsID="KaLNALine3_6" groupID="" pos="470 1090" line="0,0 80,0 80,-20" z="1"/>
+		<Line graphicsID="KaLNALine3_7" groupID="" pos="550 1060" line="0,0 45,0 45,-70 60,-70" arrow="60,-70,10,10,Right,RightMiddle" z="1"/>
+		<Line graphicsID="KaLNALine3_8" groupID="" pos="550 1075" line="0,0 60,0 60,-30 85,-30" arrow="85,-30,10,10,Right,RightMiddle" z="1"/>
+		<Line graphicsID="KaLNALine3_9" groupID="" pos="610 1075" line="0,0 80,0 80,25 120,25" arrow="120,25,10,10,Right,RightMiddle" z="1"/>
+		-->
+		<Line graphicsID="Line5_1" groupID="" pos="730 280" line="0,0 130,0" arrow="130,0,10,10,Right,RightMiddle" text="左旋和路" textAttr="40 -2 H LeftDown false"/>
+		<Line graphicsID="Line5_3" groupID="" pos="730 360" line="0,0 130,0" arrow="130,0,10,10,Right,RightMiddle" text="右旋和路" textAttr="40 -2 H LeftDown false"/>
+		<Line graphicsID="Line5_4" groupID="" pos="730 420" line="0,0 130,0" arrow="130,0,10,10,Right,RightMiddle" text="跟踪差路1" textAttr="40 -2 H LeftDown false"/>
+		<Line graphicsID="Line5_5" groupID="" pos="730 460" line="0,0 130,0" arrow="130,0,10,10,Right,RightMiddle" text="跟踪差路2" textAttr="40 -2 H LeftDown false"/>
+		<!--X射频开关网络与X/1.2G相连得四根线-->
+		<Line graphicsID="X12Line1" groupID="" pos="730 555" line="0,0 80,0" arrow="80,0,10,10,Right,RightMiddle" text="X差路" textAttr="25 -2 H LeftDown false"/>
+		<Line graphicsID="X12Line2" groupID="" pos="730 580" line="0,0 80,0" arrow="80,0,10,10,Right,RightMiddle" text="X和路" textAttr="25 -2 H LeftDown false"/>
+		<Line graphicsID="X12Line3" groupID="" pos="730 605" line="0,0 80,0" arrow="80,0,10,10,Right,RightMiddle" text="X差路" textAttr="25 -2 H LeftDown false"/>
+		<Line graphicsID="X12Line4" groupID="" pos="730 630" line="0,0 80,0" arrow="80,0,10,10,Right,RightMiddle" text="X和路" textAttr="25 -2 H LeftDown false"/>
+		<!--X频段射频开关网络与X频段射频开关矩阵的三根线-->
+		<Line graphicsID="X12TOXSPLine1" groupID="" pos="730 710" line="0,0 50,0"/>
+		<DoubleArrow graphicsID="X12TOXSPARROW1" groupID="" pos="780 710 " radius="9" rotation="A -45" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="X12TOXSPLine2" groupID="" pos="789 710" line="0,0 180,0" arrow="180,0,10,10,Right,RightMiddle" text="X左和" textAttr="100 -2 H LeftDown false"/>
+		<Line graphicsID="X12TOXSPLine3" groupID="" pos="730 750" line="0,0 50,0"/>
+		<DoubleArrow graphicsID="X12TOXSPARROW2" groupID="" pos="780 750 " radius="9" rotation="A -45" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="X12TOXSPLine4" groupID="" pos="789 750" line="0,0 180,0" arrow="180,0,10,10,Right,RightMiddle" text="X备份" textAttr="100 -2 H LeftDown false"/>
+		<Line graphicsID="X12TOXSPLine5" groupID="" pos="730 790" line="0,0 50,0"/>
+		<DoubleArrow graphicsID="X12TOXSPARROW3" groupID="" pos="780 790 " radius="9" rotation="A -45" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="X12TOXSPLine6" groupID="" pos="789 790" line="0,0 180,0" arrow="180,0,10,10,Right,RightMiddle" text="X右和" textAttr="100 -2 H LeftDown false"/>
+		<Rectangle graphicsID="XSDC1" groupID="" pos="810 555" size="100 20" sourcePointPosition="LeftMiddle" text="X/1.2G DC1" textAttr="50 0 H Center false"/>
+		<Rectangle graphicsID="XSDC2" groupID="" pos="810 580" size="100 20" sourcePointPosition="LeftMiddle" text="X/1.2G DC2" textAttr="50 0 H Center false"/>
+		<Rectangle graphicsID="XSDC3" groupID="" pos="810 605" size="100 20" sourcePointPosition="LeftMiddle" text="X/1.2G DC3" textAttr="50 0 H Center false"/>
+		<Rectangle graphicsID="XSDC4" groupID="" pos="810 630" size="100 20" sourcePointPosition="LeftMiddle" text="X/1.2G DC4" textAttr="50 0 H Center false"/>
+		<!--X/1.2G与L频段切换网络相连得四根线-->
+		<Line graphicsID="XLLine1" groupID="" pos="910 555" line="0,0 55,0" arrow="55,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="XLLine2" groupID="" pos="910 580" line="0,0 55,0" arrow="55,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="XLLine3" groupID="" pos="910 605" line="0,0 55,0" arrow="55,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="XLLine4" groupID="" pos="910 630" line="0,0 55,0" arrow="55,0,10,10,Right,RightMiddle"/>
+		<Rectangle graphicsID="LPBSPKGWL" groupID="" pos="965 515" size="50 160" sourcePointPosition="LeftUp" text="L频段切换网络" textAttr="25 90 V Center true"/>
+		<!--L频段接跟踪前端1的两根线-->
+		<Line graphicsID="LGZQIANLINE1" groupID="" pos="1015 530" line="0,0 120,0 120,-190 135,-190" arrow="135,-190,10,10,Right,RightMiddle"/>
+		<Line graphicsID="LGZQIANLINE2" groupID="" pos="1015 560" line="0,0 110,0 110,-205 135,-205" arrow="135,-205,10,10,Right,RightMiddle"/>
+		<!--L频段接跟踪前端2的两根线-->
+		<Line graphicsID="LGZQIANLINE3" groupID="" pos="1015 590" line="0,0 100,0 100,-150 135,-150" arrow="135,-150,10,10,Right,RightMiddle"/>
+		<Line graphicsID="LGZQIANLINE4" groupID="" pos="1015 620" line="0,0 90,0 90,-160 135,-160" arrow="135,-160,10,10,Right,RightMiddle"/>
+		<!--Ka频段射频开关网络与Ka/1.2G的四根线-->
+		<Line graphicsID="KA12Line1" groupID="" pos="730 865" line="0,0 80,0" arrow="80,0,10,10,Right,RightMiddle" text="Ka差路" textAttr="25 -2 H LeftDown false"/>
+		<Line graphicsID="KA12Line2" groupID="" pos="730 890" line="0,0 80,0" arrow="80,0,10,10,Right,RightMiddle" text="Ka和路" textAttr="25 -2 H LeftDown false"/>
+		<Line graphicsID="KA12Line3" groupID="" pos="730 915" line="0,0 80,0" arrow="80,0,10,10,Right,RightMiddle" text="Ka差路" textAttr="25 -2 H LeftDown false"/>
+		<Line graphicsID="KA12Line4" groupID="" pos="730 940" line="0,0 80,0" arrow="80,0,10,10,Right,RightMiddle" text="Ka和路" textAttr="25 -2 H LeftDown false"/>
+		<!--Ka频段射频开关网络与X频段射频分路组合的三根线-->
+		<Line graphicsID="KA12TOXSPLine1" groupID="" pos="730 1020" line="0,0 50,0"/>
+		<DoubleArrow graphicsID="KA12TOXSPARROW1" groupID="" pos="780 1020 " radius="9" rotation="A -45" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="KA12TOXSPLine2" groupID="" pos="789 1020" line="0,0 180,0" arrow="180,0,10,10,Right,RightMiddle" text="Ka左和" textAttr="100 -2 H LeftDown false"/>
+		<Line graphicsID="KA12TOXSPLine3" groupID="" pos="730 1060" line="0,0 50,0"/>
+		<DoubleArrow graphicsID="KA12TOXSPARROW2" groupID="" pos="780 1060 " radius="9" rotation="A -45" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="KA12TOXSPLine4" groupID="" pos="789 1060" line="0,0 180,0" arrow="180,0,10,10,Right,RightMiddle" text="Ka备份" textAttr="100 -2 H LeftDown false"/>
+		<Line graphicsID="KA12TOXSPLine5" groupID="" pos="730 1100" line="0,0 50,0"/>
+		<DoubleArrow graphicsID="KA12TOXSPARROW3" groupID="" pos="780 1100 " radius="9" rotation="A -45" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="KA12TOXSPLine6" groupID="" pos="789 1100" line="0,0 180,0" arrow="180,0,10,10,Right,RightMiddle" text="Ka右和" textAttr="100 -2 H LeftDown false"/>
+		<Rectangle graphicsID="KADC1" groupID="" pos="810 865" size="100 20" sourcePointPosition="LeftMiddle" text="Ka/1.2G DC1" textAttr="50 0 H Center false"/>
+		<Rectangle graphicsID="KADC2" groupID="" pos="810 890" size="100 20" sourcePointPosition="LeftMiddle" text="Ka/1.2G DC2" textAttr="50 0 H Center false"/>
+		<Rectangle graphicsID="KADC3" groupID="" pos="810 915" size="100 20" sourcePointPosition="LeftMiddle" text="Ka/1.2G DC3" textAttr="50 0 H Center false"/>
+		<Rectangle graphicsID="KADC4" groupID="" pos="810 940" size="100 20" sourcePointPosition="LeftMiddle" text="Ka/1.2G DC4" textAttr="50 0 H Center false"/>
+		<!--Ka1.2G和L频段切换开关网络的四根线-->
+		<Line graphicsID="KA12LLine1" groupID="" pos="910 865" line="0,0 20,0 20,-248 55,-248" arrow="55,-248,10,10,Right,RightMiddle"/>
+		<Line graphicsID="KA12LLine2" groupID="" pos="910 890" line="0,0 20,0 20,-250 55,-250" arrow="55,-250,10,10,Right,RightMiddle"/>
+		<Line graphicsID="KA12LLine3" groupID="" pos="910 915" line="0,0 20,0 20,-262 55,-262" arrow="55,-262,10,10,Right,RightMiddle"/>
+		<Line graphicsID="KA12LLine4" groupID="" pos="910 940" line="0,0 20,0 20,-274 55,-274" arrow="55,-274,10,10,Right,RightMiddle"/>
+		<Rectangle graphicsID="SSSZHQD1" groupID="" pos="1150 60" size="80 96" sourcePointPosition="LeftUp" text="射频数字 化前端1" textAttr="40 48 H Center true"/>
+		<Rectangle graphicsID="SSSZHQD2" groupID="" pos="1150 170" size="80 96" sourcePointPosition="LeftUp" text="射频数字 化前端2" textAttr="40 48 H Center true"/>
+		<Rectangle graphicsID="SSSZHQD3" groupID="" pos="1150 310" size="80 96" sourcePointPosition="LeftUp" text="跟踪数字 化前端1" textAttr="40 48 H Center true"/>
+		<Rectangle graphicsID="SSSZHQD4" groupID="" pos="1150 420" size="80 96" sourcePointPosition="LeftUp" text="跟踪数字 化前端2" textAttr="40 48 H Center true"/>
+		<Rectangle graphicsID="GGJHJ1" groupID="" pos="1290 50" size="40 99" sourcePointPosition="LeftUp" text="光网交换机" textAttr="20 50 V Center false"/>
+		<Rectangle graphicsID="GGJHJ2" groupID="" pos="1290 160" size="40 99" sourcePointPosition="LeftUp" text="光网交换机" textAttr="20 50 V Center false"/>
+		<!--射频数字化前端12和光网交换机之间的连线-->
+		<Line graphicsID="SSSZHQDLine5_1" groupID="" pos="1230 68" line="0,0 25,0" arrow="0,0,10,10,Left,RightMiddle"/>
+		<DoubleArrow graphicsID="SSSZHQDARROW1" groupID="" pos="1260 68 " radius="9" rotation="A -45" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="SSSZHQDLine5_2" groupID="" pos="1230 68" line="35,0 60,0" arrow="60,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="SSSZHQDLine5_3" groupID="" pos="1230 110" line="0,0 30,50" arrow="0,0,10,10,Right,LeftUp"/>
+		<DoubleArrow graphicsID="SSSZHQDARROW4" groupID="" pos="1258 155 " radius="9" rotation="A 45" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="SSSZHQDLine5_5" groupID="" pos="1270 170" line="-7,-7 20,30" arrow="20,30,10,10,RightDown,RightDown"/>
+		<Line graphicsID="SSSZHQDLine5_6" groupID="" pos="1230 200" line="3,0 30,-50" arrow="3,-8,10,10,LeftDown,LeftDown"/>
+		<Line graphicsID="SSSZHQDLine5_7" groupID="" pos="1270 160" line="-5,-5 20,-50" arrow="22,-50,10,10,RightUp,RightUp"/>
+		<Line graphicsID="SSSZHQDLine5_8" groupID="" pos="1230 240" line="0,0 25,0" arrow="0,0,10,10,Left,RightMiddle"/>
+		<DoubleArrow graphicsID="SSSZHQDARROW9" groupID="" pos="1260 240 " radius="9" rotation="A -45" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="SSSZHQDLine5_10" groupID="" pos="1230 240" line="35,0 60,0" arrow="60,0,10,10,Right,RightMiddle"/>
+		<!--光网交换机和测控基带12之间的连线-->
+		<Line graphicsID="SSSCKJDLine5_1" groupID="" pos="1330 68" line="0,0 25,0" arrow="0,0,10,10,Left,RightMiddle"/>
+		<DoubleArrow graphicsID="SSSCKJDRROW1" groupID="" pos="1360 68 " radius="9" rotation="A -45" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="SSSCKJDLine5_2" groupID="" pos="1330 68" line="35,0 60,0" arrow="60,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="SSSCKJDLine5_3" groupID="" pos="1330 110" line="0,0 30,50" arrow="0,0,10,10,Right,LeftUp"/>
+		<DoubleArrow graphicsID="SSSCKJDARROW4" groupID="" pos="1360 155 " radius="9" rotation="A 45" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="SSSCKJDLine5_5" groupID="" pos="1370 170" line="-7,-7 20,30" arrow="20,30,10,10,RightDown,RightDown"/>
+		<Line graphicsID="SSSCKJDLine5_6" groupID="" pos="1330 200" line="3,0 34,-50" arrow="3,-8,10,10,LeftDown,LeftDown"/>
+		<Line graphicsID="SSSCKJDLine5_7" groupID="" pos="1370 160" line="-5,-5 20,-50" arrow="22,-50,10,10,RightUp,RightUp"/>
+		<Line graphicsID="SSSCKJDLine5_8" groupID="" pos="1330 240" line="0,0 25,0" arrow="0,0,10,10,Left,RightMiddle"/>
+		<DoubleArrow graphicsID="SSSCKJDARROW9" groupID="" pos="1360 240 " radius="9" rotation="A -45" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="SSSCKJDLine5_10" groupID="" pos="1330 240" line="35,0 60,0" arrow="60,0,10,10,Right,RightMiddle"/>
+		<Rectangle graphicsID="CKJD1" groupID="" pos="1390 60" size="80 96" sourcePointPosition="LeftUp" text="综合 测控基带 A" pen="0xFF000000 SolidLine 3.0" textAttr="40 48 H Center true"/>
+		<Rectangle graphicsID="CKJD2" groupID="" pos="1390 170" size="80 96" sourcePointPosition="LeftUp" text="综合 测控基带 B" pen="0xFF000000 SolidLine 3.0" textAttr="40 48 H Center true"/>
+		<Rectangle graphicsID="DSJD1" groupID="" pos="1390 310" size="80 96" sourcePointPosition="LeftUp" text="跟踪基带A" pen="0xFF000000 SolidLine 3.0" textAttr="40 48 H Center true"/>
+		<Rectangle graphicsID="DSJD2" groupID="" pos="1390 420" size="80 96" sourcePointPosition="LeftUp" text="跟踪基带B" pen="0xFF000000 SolidLine 3.0" textAttr="40 48 H Center true"/>
+		<Rectangle graphicsID="SPQHDY" groupID="" pos="1600 370" size="120 96" sourcePointPosition="LeftUp" text="视频切换单元" textAttr="60 48 H Center true"/>
+		<Line graphicsID="SSSZHQDLine1_1" groupID="" pos="980 66" line="0,0 170,0" arrow="0,0,10,10,Left,RightMiddle" text="上行测控" textAttr="65 -2 H RightDown true"/>
+		<Line graphicsID="SSSZHQDLine1_5" groupID="" pos="980 87" line="0,0 170,0" arrow="170,0,10,10,Right,RightMiddle" text="测控小环" textAttr="65 -2 H RightDown true"/>
+		<Line graphicsID="SSSZHQDLine2_1" groupID="" pos="980 172" line="0,0 170,0" arrow="0,0,10,10,Left,RightMiddle" text="上行测控" textAttr="65 -2 H RightDown true"/>
+		<Line graphicsID="SSSZHQDLine2_5" groupID="" pos="980 189" line="0,0 170,0" arrow="170,0,10,10,Right,RightMiddle" text="测控小环" textAttr="65 -2 H RightDown true"/>
+		<Rectangle graphicsID="XGZHKGJZ" groupID="" pos="970 880" size="40 200" sourcePointPosition="LeftDown" text="X频段 射频 开关 矩阵" textAttr="20 -100 H Center true"/>
+		<Rectangle graphicsID="KAGZHKGJZ" groupID="" pos="970 1130" size="40 200" sourcePointPosition="LeftDown" text="Ka频段 射频 分路 组合" textAttr="20 -100 H Center true"/>
+		<!--X频段射频开关矩阵连接X/1.2G的6根线-->
+		<Line graphicsID="XPSPKGJZX12G1" groupID="" pos="1010 690" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="XPSPKGJZX12G2" groupID="" pos="1010 720" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="XPSPKGJZX12G3" groupID="" pos="1010 750" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="XPSPKGJZX12G4" groupID="" pos="1010 780" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="XPSPKGJZX12G5" groupID="" pos="1010 810" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="XPSPKGJZX12G6" groupID="" pos="1010 840" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<!--X/1.2G连接1.G中频开关矩阵的6根线-->
+		<Line graphicsID="X12G12ZPKGJZ1" groupID="" pos="1180 690" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="X12G12ZPKGJZ2" groupID="" pos="1180 720" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="X12G12ZPKGJZ3" groupID="" pos="1180 750" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="X12G12ZPKGJZ4" groupID="" pos="1180 780" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="X12G12ZPKGJZ5" groupID="" pos="1180 810" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="X12G12ZPKGJZ6" groupID="" pos="1180 840" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Rectangle graphicsID="XSDC5" groupID="" pos="1080 690" size="100 20" sourcePointPosition="LeftMiddle" text="X/1.2G DC5" textAttr="50 0 H Center false"/>
+		<Rectangle graphicsID="XSDC6" groupID="" pos="1080 720" size="100 20" sourcePointPosition="LeftMiddle" text="X/1.2G DC6" textAttr="50 0 H Center false"/>
+		<Rectangle graphicsID="XSDC7" groupID="" pos="1080 750" size="100 20" sourcePointPosition="LeftMiddle" text="X/1.2G DC7" textAttr="50 0 H Center false"/>
+		<Rectangle graphicsID="XSDC8" groupID="" pos="1080 780" size="100 20" sourcePointPosition="LeftMiddle" text="X/1.2G DC8" textAttr="50 0 H Center false"/>
+		<Rectangle graphicsID="XSDC9" groupID="" pos="1080 810" size="100 20" sourcePointPosition="LeftMiddle" text="X/1.2G DC9" textAttr="50 0 H Center false"/>
+		<Rectangle graphicsID="XSDC10" groupID="" pos="1080 840" size="100 20" sourcePointPosition="LeftMiddle" text="X/1.2G DC10" textAttr="50 0 H Center false"/>
+		<!--Ka频段射频分路组合连接Ka/1.2G的6根线-->
+		<Line graphicsID="KAPSPKGJZKA12G1" groupID="" pos="1010 940" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="KAPSPKGJZKA12G2" groupID="" pos="1010 970" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="KAPSPKGJZKA12G3" groupID="" pos="1010 1000" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="KAPSPKGJZKA12G4" groupID="" pos="1010 1030" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="KAPSPKGJZKA12G5" groupID="" pos="1010 1060" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="KAPSPKGJZKA12G6" groupID="" pos="1010 1090" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<!--Ka/1.2G连接1.G中频开关矩阵的6根线-->
+		<Line graphicsID="KA12G12ZPKGJZ1" groupID="" pos="1180 940" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="KA12G12ZPKGJZ2" groupID="" pos="1180 970" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="KA12G12ZPKGJZ3" groupID="" pos="1180 1000" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="KA12G12ZPKGJZ4" groupID="" pos="1180 1030" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="KA12G12ZPKGJZ5" groupID="" pos="1180 1060" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="KA12G12ZPKGJZ6" groupID="" pos="1180 1090" line="0,0 70,0" arrow="70,0,10,10,Right,RightMiddle"/>
+		<Rectangle graphicsID="KaSDC5" groupID="" pos="1080 940" size="100 20" sourcePointPosition="LeftMiddle" text="Ka/1.2G DC5" textAttr="50 0 H Center false"/>
+		<Rectangle graphicsID="KaSDC6" groupID="" pos="1080 970" size="100 20" sourcePointPosition="LeftMiddle" text="Ka/1.2G DC6" textAttr="50 0 H Center false"/>
+		<Rectangle graphicsID="KaSDC7" groupID="" pos="1080 1000" size="100 20" sourcePointPosition="LeftMiddle" text="Ka/1.2G DC7" textAttr="50 0 H Center false"/>
+		<Rectangle graphicsID="KaSDC8" groupID="" pos="1080 1030" size="100 20" sourcePointPosition="LeftMiddle" text="Ka/1.2G DC8" textAttr="50 0 H Center false"/>
+		<Rectangle graphicsID="KaSDC9" groupID="" pos="1080 1060" size="100 20" sourcePointPosition="LeftMiddle" text="Ka/1.2G DC9" textAttr="50 0 H Center false"/>
+		<Rectangle graphicsID="KaSDC10" groupID="" pos="1080 1090" size="100 20" sourcePointPosition="LeftMiddle" text="Ka/1.2G DC10" textAttr="50 0 H Center false"/>
+		<Line graphicsID="SCHLUIF1" groupID="" pos="1290 690" line="0,0 75,0" arrow="75,0,10,10,Right,RightMiddle" text="数传和路IF" textAttr="70 -2 H RightDown true"/>
+		<Line graphicsID="SCHLUIF2" groupID="" pos="1290 720" line="0,0 75,0" arrow="75,0,10,10,Right,RightMiddle" text="数传和路IF" textAttr="70 -2 H RightDown true"/>
+		<Line graphicsID="SCHLUIF3" groupID="" pos="1290 870" line="0,0 75,0" arrow="75,0,10,10,Right,RightMiddle" text="数传和路IF" textAttr="70 -2 H RightDown true"/>
+		<Line graphicsID="SCHLUIF4" groupID="" pos="1290 900" line="0,0 75,0" arrow="75,0,10,10,Right,RightMiddle" text="数传和路IF" textAttr="70 -2 H RightDown true"/>
+		<Line graphicsID="SCHLUIF5" groupID="" pos="1290 1070" line="0,0 75,0" arrow="75,0,10,10,Right,RightMiddle" text="数传和路IF" textAttr="70 -2 H RightDown true"/>
+		<Line graphicsID="SCHLUIF6" groupID="" pos="1290 1100" line="0,0 75,0" arrow="75,0,10,10,Right,RightMiddle" text="数传和路IF" textAttr="70 -2 H RightDown true"/>
+		<Rectangle graphicsID="1.2GZHKGJZ" groupID="" pos="1250 1130" size="40 470" sourcePointPosition="LeftDown" text="1.2G 中频 开关 矩阵" textAttr="20 -250 H Center true"/>
+		<Rectangle graphicsID="GSSCJD1" groupID="" pos="1365 730" size="100 46" sourcePointPosition="LeftDown" text="数传基带A" pen="0xFF000000 SolidLine 3.0" textAttr="50 -23 H Center true"/>
+		<Rectangle graphicsID="GSSCJD2" groupID="" pos="1365 910" size="100 46" sourcePointPosition="LeftDown" text="数传基带B" pen="0xFF000000 SolidLine 3.0" textAttr="50 -23 H Center true"/>
+		<Rectangle graphicsID="GSSCJD3" groupID="" pos="1365 1110" size="100 46" sourcePointPosition="LeftDown" text="数传基带C" pen="0xFF000000 SolidLine 3.0" textAttr="50 -23 H Center true"/>
+		<Line graphicsID="GSSCJDSCSJW1" groupID="" pos="1465 690" line="0,0 65,0" arrow="65,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="GSSCJDSCSJW2" groupID="" pos="1465 720" line="0,0 65,0" arrow="65,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="GSSCJDSCSJW3" groupID="" pos="1465 870" line="0,0 65,0" arrow="65,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="GSSCJDSCSJW4" groupID="" pos="1465 900" line="0,0 65,0" arrow="65,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="GSSCJDSCSJW5" groupID="" pos="1465 1070" line="0,0 65,0" arrow="65,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="GSSCJDSCSJW6" groupID="" pos="1465 1100" line="0,0 65,0" arrow="65,0,10,10,Right,RightMiddle"/>
+		<Rectangle graphicsID="CKYDSSCSJWJHJ" groupID="" pos="1530 50" size="40 220" sourcePointPosition="LeftUp" text="测控数据网交换机" textAttr="20 110 V Center false"/>
+		<Rectangle graphicsID="SCSJWJHJ" groupID="" pos="1530 660" size="40 470" sourcePointPosition="LeftUp" text="数传数据网交换机" textAttr="20 230 V Center false"/>
+		<Line graphicsID="SCSJWJHJLine2_3" groupID="" pos="1570 690" line="0,0 50,0" arrow="50,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="SCSJWJHJLine2_4" groupID="" pos="1570 720" line="0,0 50,0" arrow="50,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="SCSJWJHJLine2_5" groupID="" pos="1570 870" line="0,0 50,0" arrow="50,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="SCSJWJHJLine2_6" groupID="" pos="1570 900" line="0,0 50,0" arrow="50,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="SCSJWJHJLine2_7" groupID="" pos="1570 1070" line="0,0 50,0" arrow="50,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="SCSJWJHJLine2_8" groupID="" pos="1570 1100" line="0,0 50,0" arrow="50,0,10,10,Right,RightMiddle"/>
+		<Rectangle graphicsID="TXWJHJ" groupID="" pos="1750 660" size="40 470" sourcePointPosition="LeftUp" text="测站接入交换机" textAttr="20 200 V Center false"/>
+		<!--测控基带12和测控数据网交换机的两条线-->
+		<Line graphicsID="SCSJWJHJLine1_1" groupID="" pos="1470 108" line="0,0 60,0"/>
+		<Line graphicsID="SCSJWJHJLine1_2" groupID="" pos="1470 210" line="0,0 60,0"/>
+		<!--测控数据网交换机与数据交互计算机AB的两条线-->
+		<Line graphicsID="SCSJWJHJLine1_11" groupID="" pos="1570 100" line="0,0 50,0"/>
+		<Line graphicsID="SCSJWJHJLine1_12" groupID="" pos="1570 225" line="0,0 50,0"/>
+		<!--跟踪数字化前端12和跟踪基带12的两条线-->
+		<Line graphicsID="GZFORTOGZJDLine1_1" groupID="" pos="1230 355" line="0,0 80,0"/>
+		<DoubleArrow graphicsID="GZFORTOGZJDARROW1" groupID="" pos="1310 355 " radius="9" rotation="A -45" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="GZFORTOGZJDLine1_2" groupID="" pos="1310 355" line="0,0 80,0" arrow="80,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="GZFORTOGZJDLine2_1" groupID="" pos="1230 465" line="0,0 80,0"/>
+		<DoubleArrow graphicsID="GZFORTOGZJDARROW2" groupID="" pos="1310 465 " radius="9" rotation="A -45" brush="0xFFFFFFFF SolidPattern" z="1"/>
+		<Line graphicsID="GZFORTOGZJDLine2_2" groupID="" pos="1310 465" line="0,0 80,0" arrow="80,0,10,10,Right,RightMiddle"/>
+		<!--跟踪基带12和视频切换单元的两个箭头-->
+		<Line graphicsID="SCSJWJHJLine1_4" groupID="" pos="1470 318" line="0,0 20,0 20,86 130,86" arrow="130,86,10,10,Right,RightMiddle"/>
+		<Line graphicsID="SCSJWJHJLine1_5" groupID="" pos="1470 505" line="0,0 20,0 20,-86 130,-86" arrow="130,-86,10,10,Right,RightMiddle"/>
+		<!--视频切换单元和ACU连接的一条线-->
+		<Line graphicsID="SCTOACULine1" groupID="" pos="1720 415" line="0,0 115,0 115,755 -270,755" arrow="-270,755,10,10,Left,RightMiddle"/>
+		<Rectangle graphicsID="SJJHJSJA" groupID="" pos="1620 100" size="80 80" sourcePointPosition="LeftMiddle" text="数据交互 计算机A" textAttr="40 0 H Center true"/>
+		<Rectangle graphicsID="SJJHJSJB" groupID="" pos="1620 230" size="80 80" sourcePointPosition="LeftMiddle" text="数据交互 计算机B" textAttr="40 0 H Center true"/>
+		<Rectangle graphicsID="TXWJHJ2" groupID="" pos="1750 58" size="40 215" sourcePointPosition="LeftUp" text="测站接入交换机" textAttr="20 110 V Center false"/>
+		<Rectangle graphicsID="SJCCYGLSB1" groupID="" pos="1620 710" size="80 80" sourcePointPosition="LeftMiddle" text="数据存储 与转发A" textAttr="40 0 H Center true"/>
+		<Rectangle graphicsID="SJCCYGLSB2" groupID="" pos="1620 890" size="80 80" sourcePointPosition="LeftMiddle" text="数据存储 与转发B" textAttr="40 0 H Center true"/>
+		<Rectangle graphicsID="SJCCYGLSB3" groupID="" pos="1620 1090" size="80 80" sourcePointPosition="LeftMiddle" text="数据存储 与转发C" textAttr="40 0 H Center true"/>
+		<WideArrow graphicsID="TXWJHJWideArrow1_1" groupID="" pos="1700 100" size="50 12 12" doubleArrow="true" sourcePointPosition="LeftMiddle"/>
+		<WideArrow graphicsID="TXWJHJWideArrow1_2" groupID="" pos="1700 230" size="50 12 12" doubleArrow="true" sourcePointPosition="LeftMiddle"/>
+		<WideArrow graphicsID="TXWJHJWideArrow1_4" groupID="" pos="1700 700" size="50 12 12" doubleArrow="true" sourcePointPosition="LeftMiddle"/>
+		<WideArrow graphicsID="TXWJHJWideArrow1_5" groupID="" pos="1700 720" size="50 12 12" doubleArrow="true" sourcePointPosition="LeftMiddle"/>
+		<WideArrow graphicsID="TXWJHJWideArrow1_6" groupID="" pos="1700 880" size="50 12 12" doubleArrow="true" sourcePointPosition="LeftMiddle"/>
+		<WideArrow graphicsID="TXWJHJWideArrow1_7" groupID="" pos="1700 900" size="50 12 12" doubleArrow="true" sourcePointPosition="LeftMiddle"/>
+		<WideArrow graphicsID="TXWJHJWideArrow1_8" groupID="" pos="1700 1080" size="50 12 12" doubleArrow="true" sourcePointPosition="LeftMiddle"/>
+		<WideArrow graphicsID="TXWJHJWideArrow1_9" groupID="" pos="1700 1100" size="50 12 12" doubleArrow="true" sourcePointPosition="LeftMiddle"/>
+		<Rectangle graphicsID="TXSF" groupID="" pos="150 1140" size="70 60" sourcePointPosition="LeftUp" text="天线伺服" textAttr="35 30 H Center true" brush="0xFFFFFFFF SolidPattern"/>
+		<Line graphicsID="ACULine1_1" groupID="" pos="100 570" line="0,0 0,600 50,600" arrow="50,600,10,10,Right,RightMiddle 0,0,10,10,Up,RightMiddle"/>
+		<Line graphicsID="ACULine1_2" groupID="" pos="220 1155" line="0,0 500,0"/>
+		<Line graphicsID="ACULine1_3" groupID="" pos="220 1185" line="0,0 500,0"/>
+		<Rectangle graphicsID="ADU" groupID="" pos="720 1155" size="50 24" sourcePointPosition="LeftMiddle" text="ADU" textAttr="25 0 H Center true" brush="0xFFFFFFFF SolidPattern"/>
+		<Rectangle graphicsID="ZJBM" groupID="" pos="720 1185" size="50 24" sourcePointPosition="LeftMiddle" text="轴角编码" textAttr="25 0 H Center true" brush="0xFFFFFFFF SolidPattern"/>
+		<Line graphicsID="ACULine1_4" groupID="" pos="770 1155" line="0,0 500,0" arrow="0,0,10,10,Left,RightMiddle"/>
+		<Line graphicsID="ACULine1_5" groupID="" pos="770 1185" line="0,0 500,0" arrow="500,0,10,10,Right,RightMiddle"/>
+		<Rectangle graphicsID="FL" groupID="" pos="1270 1140" size="30 60" sourcePointPosition="LeftUp" text="分路" textAttr="15 30 H Center true" brush="0xFFFFFFFF SolidPattern"/>
+		<Rectangle graphicsID="ACUA" groupID="" pos="1350 1155" size="50 24" sourcePointPosition="LeftMiddle" text="ACUA" textAttr="25 0 H Center true"/>
+		<Rectangle graphicsID="ACUB" groupID="" pos="1350 1185" size="50 24" sourcePointPosition="LeftMiddle" text="ACUB" textAttr="25 0 H Center true"/>
+		<Line graphicsID="ACULine1_6" groupID="" pos="1300 1147" line="0,0 50,0" arrow="50,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="ACULine1_7" groupID="" pos="1300 1163" line="0,0 50,0" arrow="0,0,10,10,Left,RightMiddle"/>
+		<Line graphicsID="ACULine1_8" groupID="" pos="1300 1177" line="0,0 50,0" arrow="50,0,10,10,Right,RightMiddle"/>
+		<Line graphicsID="ACULine1_9" groupID="" pos="1300 1193" line="0,0 50,0" arrow="0,0,10,10,Left,RightMiddle"/>
+		<Line graphicsID="ACULine1_11" groupID="" pos="1400 1155" line="0,0 50,0 50,15" arrow="0,0,10,10,Left,RightMiddle"/>
+		<Line graphicsID="ACULine1_12" groupID="" pos="1400 1185" line="0,0 50,0 50,-15" arrow="0,0,10,10,Left,RightMiddle"/>
+		<!-- 提示的颜色 -->
+		<Rectangle graphicsID="LX" groupID="" pos="50 60" size="15 15" sourcePointPosition="LeftMiddle" text="无数据/离线" textAttr="17 0 H LeftMiddle true" brush="0xFFD3D3D3 SolidPattern"/>
+		<Rectangle graphicsID="QD" groupID="" pos="50 80" size="15 15" sourcePointPosition="LeftMiddle" text="去电" textAttr="17 0 H LeftMiddle true" brush="0xFFDFBA1D SolidPattern"/>
+		<Rectangle graphicsID="YC" groupID="" pos="50 100" size="15 15" sourcePointPosition="LeftMiddle" text="异常" textAttr="17 0 H LeftMiddle true" brush="0xFFFF0000 SolidPattern"/>
+		<Rectangle graphicsID="FC" groupID="" pos="50 120" size="15 15" sourcePointPosition="LeftMiddle" text="分控" textAttr="17 0 H LeftMiddle true" brush="0xFF1D92DF SolidPattern"/>
+		<Rectangle graphicsID="ZC" groupID="" pos="50 140" size="15 15" sourcePointPosition="LeftMiddle" text="正常" textAttr="17 0 H LeftMiddle true" brush="0xFF8CD659 SolidPattern"/>
+		<Rectangle graphicsID="DQLL" groupID="" pos="50 160" size="15 15" sourcePointPosition="LeftMiddle" text="主用" textAttr="17 0 H LeftMiddle true" brush="0xFFAA55FF SolidPattern"/>
+		<!--<Rectangle graphicsID="DQLL" groupID="" pos="50 180" size="15 15" sourcePointPosition="LeftMiddle" text="非前链路" textAttr="17 0 H LeftMiddle true" brush="0xFFFFFF00 SolidPattern"/>-->
+		<!--<Rectangle graphicsID="FXT" groupID="" pos="50 140" size="15 15" sourcePointPosition="LeftMiddle" text="分系统" textAttr="17 0 H LeftMiddle true" brush="0xFFC71585 SolidPattern"/>-->
+	</Graph>
+</Configure>

@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="RCU" ModeType="0x01" edition="1.1.1.1">
+	<enum name="RemoteCtrlCom" desc="发令状态">
+		<entry svalue="0" uvalue="0" desc="无效:Y"/>
+		<entry svalue="1" uvalue="1" desc="正在发令:G"/>
+		<entry svalue="2" uvalue="2" desc="未发令:Y"/>
+	</enum>
+	<enum name="TeleWorkPeriod" desc="遥控工作期">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="开始:G"/>
+		<entry svalue="2" uvalue="2" desc="结束:Y"/>
+	</enum>
+	<enum name="AsynCtrlState" desc="非同步控制状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="初始:Y"/>
+		<entry svalue="2" uvalue="2" desc="等待:Y"/>
+		<entry svalue="3" uvalue="3" desc="运行:G"/>
+	</enum>
+	<enum name="SelfloopCompResult" desc="自环比对结果">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="正常:G"/>
+		<entry svalue="2" uvalue="2" desc="异常:R"/>
+	</enum>
+	<enum name="LockingReceIver" desc="小环接收机锁定指示">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="锁定:G"/>
+		<entry svalue="2" uvalue="2" desc="失锁:R"/>
+	</enum>
+	<enum name="SmallResult" desc="小环比对结果">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="正常:G"/>
+		<entry svalue="2" uvalue="2" desc="异常:R"/>
+	</enum>
+	<enum name="SubModSystemR" desc="调制体制">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="PSK"/>
+		<entry svalue="2" uvalue="2" desc="FSK"/>
+	</enum>
+	<enum name="SettBefafter" desc="码速率控制">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="编码前"/>
+		<entry svalue="2" uvalue="2" desc="编码后"/>
+	</enum>
+	<enum name="CodeType" desc="码型">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="RZ-L"/>
+		<entry svalue="2" uvalue="2" desc="NRZ-L"/>
+		<entry svalue="3" uvalue="3" desc="NRZ-M"/>
+		<entry svalue="4" uvalue="4" desc="NRZ-S"/>
+		<entry svalue="5" uvalue="5" desc="Biφ-L"/>
+		<entry svalue="6" uvalue="6" desc="Biφ-M"/>
+		<entry svalue="7" uvalue="7" desc="Biφ-S"/>
+	</enum>
+	<enum name="SubModSystem" desc="遥控工作模式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="常发"/>
+		<entry svalue="2" uvalue="2" desc="突发"/>
+		<entry svalue="3" uvalue="3" desc="半突发"/>
+	</enum>
+	<enum name="PreSeqSelect" desc="前补序列选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="有"/>
+		<entry svalue="2" uvalue="2" desc="无"/>
+	</enum>
+	<enum name="SubSeqSelect" desc="后补序列选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="有"/>
+		<entry svalue="2" uvalue="2" desc="无"/>
+	</enum>
+	<enum name="StartModeWrok" desc="遥控工作期启动方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="结束"/>
+		<entry svalue="2" uvalue="2" desc="开始"/>
+	</enum>
+	<enum name="ChannelCoding" desc="信道编码">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="不编码"/>
+		<entry svalue="2" uvalue="2" desc="BCH编码"/>
+		<entry svalue="3" uvalue="3" desc="卷积编码"/>
+		<entry svalue="4" uvalue="4" desc="BCH+卷积级联编码"/>
+	</enum>
+	<enum name="BCHInitSeqCtrl" desc="BCH起始序列控制">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="加"/>
+		<entry svalue="2" uvalue="2" desc="不加"/>
+	</enum>
+	<enum name="BCHEndSeqCtrl" desc="BCH结尾序列控制">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="加"/>
+		<entry svalue="2" uvalue="2" desc="不加"/>
+	</enum>
+	<enum name="ScrambCtrl" desc="加扰控制">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="不加扰"/>
+		<entry svalue="2" uvalue="2" desc="加扰"/>
+	</enum>
+	<enum name="ScraPolyLength" desc="加扰多项式长度">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="1字节"/>
+		<entry svalue="2" uvalue="2" desc="2字节"/>
+		<entry svalue="3" uvalue="3" desc="3字节"/>
+		<entry svalue="4" uvalue="4" desc="4字节"/>
+	</enum>
+	<enum name="FillingPostition" desc="填充位置">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="加扰前填充"/>
+		<entry svalue="2" uvalue="2" desc="加扰后填充"/>
+	</enum>
+	<enum name="ConvCodType" desc="卷积编码类型">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="(7,1/2)"/>
+		<entry svalue="2" uvalue="2" desc="(7,3/4)"/>
+	</enum>
+	<enum name="G2PhaseInver" desc="G2相位反转">
+		<entry svalue="1" uvalue="1" desc="正相"/>
+		<entry svalue="2" uvalue="2" desc="反相"/>
+	</enum>
+	<enum name="ExecutCodeLength" desc="执行编码长度">
+		<entry svalue="1" uvalue="8" desc="1字节"/>
+		<entry svalue="2" uvalue="16" desc="2字节"/>
+		<entry svalue="3" uvalue="24" desc="3字节"/>
+		<entry svalue="4" uvalue="32" desc="4字节"/>
+		<entry svalue="5" uvalue="40" desc="5字节"/>
+		<entry svalue="6" uvalue="48" desc="6字节"/>
+		<entry svalue="7" uvalue="56" desc="7字节"/>
+		<entry svalue="8" uvalue="64" desc="8字节"/>
+	</enum>
+	<enum name="BCHInitSeqLength" desc="起始序列长度">
+		<entry svalue="1" uvalue="1" desc="1字节"/>
+		<entry svalue="2" uvalue="2" desc="2字节"/>
+		<entry svalue="3" uvalue="3" desc="3字节"/>
+		<entry svalue="4" uvalue="4" desc="4字节"/>
+		<entry svalue="5" uvalue="5" desc="5字节"/>
+		<entry svalue="6" uvalue="6" desc="6字节"/>
+		<entry svalue="7" uvalue="7" desc="7字节"/>
+		<entry svalue="8" uvalue="8" desc="8字节"/>
+	</enum>
+	<enum name="BCHEndSeqLength" desc="结尾序列长度">
+		<entry svalue="1" uvalue="1" desc="1字节"/>
+		<entry svalue="2" uvalue="2" desc="2字节"/>
+		<entry svalue="3" uvalue="3" desc="3字节"/>
+		<entry svalue="4" uvalue="4" desc="4字节"/>
+		<entry svalue="5" uvalue="5" desc="5字节"/>
+		<entry svalue="6" uvalue="6" desc="6字节"/>
+		<entry svalue="7" uvalue="7" desc="7字节"/>
+		<entry svalue="8" uvalue="8" desc="8字节"/>
+	</enum>
+	<enum name="OrderCategory" desc="发令类别">
+		<entry svalue="0" uvalue="0" desc="0"/>
+		<entry svalue="1" uvalue="2162945" desc="210101(K6R)"/>
+		<entry svalue="2" uvalue="2162946" desc="210102(K6B)"/>
+		<entry svalue="3" uvalue="2162949" desc="210105(K6P)"/>
+		<entry svalue="4" uvalue="2162951" desc="210107(KT1)"/>
+		<entry svalue="5" uvalue="2228738" desc="220202(KT5)"/>
+		<entry svalue="6" uvalue="2228755" desc="220213(KT3)"/>
+		<entry svalue="7" uvalue="2228757" desc="220215(KT2)"/>
+	</enum>
+</enums>

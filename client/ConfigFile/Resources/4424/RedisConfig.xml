@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configure>
+    <host>192.20.1.151</host>
+    <port>6379</port>
+    <auth>123456</auth>
+</configure>

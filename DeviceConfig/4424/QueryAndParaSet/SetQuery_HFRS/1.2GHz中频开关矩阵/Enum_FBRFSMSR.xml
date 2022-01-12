@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="FBRFSMSR" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="ControlMode" desc="监控方式">
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="DeviceSwitch" desc="设备开关电">
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="PortStatus" desc="端口状态">
+		<entry svalue="1" uvalue="1" desc="正常:G"/>
+		<entry svalue="2" uvalue="2" desc="异常:R"/>
+	</enum>
+	<enum name="PowerStatus" desc="电源状态">
+		<entry svalue="1" uvalue="1" desc="正常:G"/>
+		<entry svalue="2" uvalue="2" desc="异常:R"/>
+	</enum>
+	<enum name="DeviceStatus" desc="设备状态">
+		<entry svalue="1" uvalue="1" desc="正常:G"/>
+		<entry svalue="2" uvalue="2" desc="异常:R"/>
+	</enum>
+	<enum name="InputPort" desc="输出端口">
+		<entry svalue="0" uvalue="0" desc="0(表示关断)"/>
+		<entry svalue="1" uvalue="1" desc="X/1.2G DC5"/>
+		<entry svalue="2" uvalue="2" desc="X/1.2G DC6"/>
+		<entry svalue="3" uvalue="3" desc="X/1.2G DC7"/>
+		<entry svalue="4" uvalue="4" desc="X/1.2G DC8"/>
+		<entry svalue="5" uvalue="5" desc="X/1.2G DC9"/>
+		<entry svalue="6" uvalue="6" desc="X/1.2G DC10"/>
+		<entry svalue="7" uvalue="7" desc="Ka/1.2G DC5"/>
+		<entry svalue="8" uvalue="8" desc="Ka/1.2G DC6"/>
+		<entry svalue="9" uvalue="9" desc="Ka/1.2G DC7"/>
+		<entry svalue="10" uvalue="10" desc="Ka/1.2G DC8"/>
+		<entry svalue="11" uvalue="11" desc="Ka/1.2G DC9"/>
+		<entry svalue="12" uvalue="12" desc="Ka/1.2G DC10"/>
+		<entry svalue="13" uvalue="13" desc="数传跟踪中频监测"/>
+		<entry svalue="14" uvalue="14" desc="数传模拟源1"/>
+		<entry svalue="15" uvalue="15" desc="数传模拟源2"/>
+		<entry svalue="16" uvalue="16" desc="数传模拟源3"/>
+		<!--
+		<entry svalue="17" uvalue="17" desc="17(备用)" />
+		<entry svalue="18" uvalue="18" desc="18(备用)" />
+		<entry svalue="19" uvalue="19" desc="19(备用)" />
+		<entry svalue="20" uvalue="20" desc="20(备用)" />
+		<entry svalue="21" uvalue="21" desc="21(备用)" />
+		<entry svalue="22" uvalue="22" desc="22(备用)" />
+		<entry svalue="23" uvalue="23" desc="23(备用)" />
+		<entry svalue="24" uvalue="24" desc="24(备用)" />
+		-->
+	</enum>
+	<enum name="InputPortX" desc="输出端口">
+		<entry svalue="0" uvalue="0" desc="0(表示关断)"/>
+		<entry svalue="1" uvalue="1" desc="X数传左和1"/>
+		<entry svalue="2" uvalue="2" desc="X数传左和2"/>
+		<entry svalue="3" uvalue="3" desc="X数传备份1"/>
+		<entry svalue="4" uvalue="4" desc="X数传备份2"/>
+		<entry svalue="5" uvalue="5" desc="X数传右和1"/>
+		<entry svalue="6" uvalue="6" desc="X数传右和2"/>
+		<entry svalue="7" uvalue="7" desc="Ka数传左和1"/>
+		<entry svalue="8" uvalue="8" desc="Ka数传左和2"/>
+		<entry svalue="9" uvalue="9" desc="Ka数传备份1"/>
+		<entry svalue="10" uvalue="10" desc="Ka数传备份2"/>
+		<entry svalue="11" uvalue="11" desc="Ka数传右和1"/>
+		<entry svalue="12" uvalue="12" desc="Ka数传右和2"/>
+		<entry svalue="13" uvalue="13" desc="输入口13"/>
+		<entry svalue="14" uvalue="14" desc="输入口14"/>
+		<entry svalue="15" uvalue="15" desc="输入口15"/>
+		<entry svalue="16" uvalue="16" desc="输入口16"/>
+		<entry svalue="17" uvalue="17" desc="输入口17"/>
+		<entry svalue="18" uvalue="18" desc="输入口18"/>
+		<entry svalue="19" uvalue="19" desc="输入口19"/>
+		<entry svalue="20" uvalue="20" desc="输入口20"/>
+		<entry svalue="21" uvalue="21" desc="输入口21"/>
+		<entry svalue="22" uvalue="22" desc="输入口22"/>
+		<entry svalue="23" uvalue="23" desc="输入口23"/>
+		<entry svalue="24" uvalue="24" desc="输入口24"/>
+	</enum>
+</enums>

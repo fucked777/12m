@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device>
+	<unit unitID="1" unitName="公共单元">
+		<field pid="101" id="SendSource" desc="发射通道信源" dataType="uint" displayFormat="Hex" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="102" id="ReceSink" desc="接收通道信宿" dataType="uint" displayFormat="Hex" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="103" id="YBRate" desc="样本速率" dataType="uint8" displayFormat="enum|YBRate" fixValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="104" id="MainSubSwitch" desc="主备网络切换" dataType="uint8" displayFormat="enum|MainSubSwitch" fixValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+	</unit>
+	<unit unitID="2" unitName="发射单元">
+		<field pid="101" GroupId="status1" id="SendSwitch_1" desc="发射开关(任务)" dataType="uint8" displayFormat="enum|SendSwitch" fixValue="2" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="102" GroupId="status1" id="SendSource_1" desc="发射来源(任务)" dataType="uint8" displayFormat="enum|SendSource" fixValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="103" GroupId="status1" id="SendPower_1" desc="发射功率(任务)" dataType="short" displayFormat="double" fixValue="-30" minValue="-70" maxValue="10" step="0.1" unit="dBm" isShow="0"/>
+		<field pid="105" GroupId="status2" id="SendSwitch_2" desc="发射开关(模拟源)" dataType="uint8" displayFormat="enum|SendSwitch" fixValue="2" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="106" GroupId="status2" id="SendSource_2" desc="发射来源(模拟源)" dataType="uint8" displayFormat="enum|SendSource" fixValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="107" GroupId="status2" id="SendPower_2" desc="发射功率(模拟源)" dataType="short" displayFormat="double" fixValue="-30" minValue="-70" maxValue="10" step="0.1" unit="dBm" isShow="0"/>
+	</unit>
+	<unit unitID="3" unitName="接收单元">
+		<field pid="101" GroupId="status1" id="TimeConstant_1" desc="AGC时间常数(S1左旋)" dataType="uint8" displayFormat="enum|TimeConstant" initValue="4" minValue="" maxValue="" step="" unit=""/>
+		<field pid="102" GroupId="status1" id="AGCSwitch_1" desc="AGC开关(S1左旋)" dataType="uint8" displayFormat="enum|AGCSwitch" fixValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="104" GroupId="status2" id="TimeConstant_2" desc="AGC时间常数(S1右旋)" dataType="uint8" displayFormat="enum|TimeConstant" initValue="4" minValue="" maxValue="" step="" unit=""/>
+		<field pid="105" GroupId="status2" id="AGCSwitch_2" desc="AGC开关(S1右旋)" dataType="uint8" displayFormat="enum|AGCSwitch" fixValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="107" GroupId="status3" id="TimeConstant_3" desc="AGC时间常数(小环)" dataType="uint8" displayFormat="enum|TimeConstant" initValue="4" minValue="" maxValue="" step="" unit=""/>
+		<field pid="108" GroupId="status3" id="AGCSwitch_3" desc="AGC开关(小环)" dataType="uint8" displayFormat="enum|AGCSwitch" fixValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="110" GroupId="status4" id="TimeConstant_4" desc="AGC时间常数(S2左旋)" dataType="uint8" displayFormat="enum|TimeConstant" initValue="4" minValue="" maxValue="" step="" unit=""/>
+		<field pid="111" GroupId="status4" id="AGCSwitch_4" desc="AGC开关(S2左旋)" dataType="uint8" displayFormat="enum|AGCSwitch" fixValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+	</unit>
+</device>

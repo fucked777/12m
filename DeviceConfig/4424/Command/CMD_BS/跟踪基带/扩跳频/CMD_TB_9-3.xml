@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+require:查询数据包 ,response:响应数据包,result:上报数据包
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+initValue为初始化值,
+length为标识长度
+ExtenType:分机类型
+SelfLoopNumb:自身循环N次
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+cmdID:命令ID  与命令序号关联
+isShow:0表示界面不显示  1表示界面显示
+-->
+<cmd cmdID="3" ExtenType="TB" ModeType="0x09" desc="基带校相结果查询" flag="1001">
+    <request MessageType="0x0000F001">
+        <field pid="101" id="TaskIdent" desc="任务标识" dataType="uint" displayFormat="Hex" initValue="" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+        <field pid="102" id="EquipComb" desc="设备组合号" dataType="ulong" displayFormat="Hex" initValue="" minValue="" maxValue="FFFFFFFFFFFFFFFF" step="" unit=""/>
+        <field pid="103" id="DownFreq" desc="下行频率" dataType="ulong" displayFormat="double" initValue="2200" minValue="2200" maxValue="2300" step="0.000001" unit="MHz" isShow="0"/>
+        <field pid="104" id="AddIDent1" desc="点频总数" dataType="uint" displayFormat="enum|PointFreqNum" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+        <field pid="105" id="AddIDent2" desc="附加标识2" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+    </request>
+    <result MessageType="0x0000F101">
+        <field pid="1" id="TaskIdent" desc="任务标识" dataType="uint" displayFormat="Hex" initValue="" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+        <field pid="2" id="EquipComb" desc="设备组合号" dataType="ulong" displayFormat="Hex" initValue="" minValue="" maxValue="FFFFFFFFFFFFFFFF" step="" unit=""/>
+        <field pid="3" id="DownFreq" desc="下行频率" dataType="ulong" displayFormat="double" initValue="" minValue="" maxValue="" step="0.000001" unit="MHz" isShow="0"/>
+        <field pid="4" id="AddIDent1" desc="点频总数" dataType="uint" displayFormat="enum|PointFreqNum" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="5" id="AddIDent2" desc="附加标识2" dataType="uint" displayFormat="Hex" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+        <field pid="6" id="AzimSlope" desc="方位斜率" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit=""/>
+        <field pid="7" id="PitchSlope" desc="俯仰斜率" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit=""/>
+        <field pid="8" id="AzimPhase1" desc="方位移相值1" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="9" id="PitchPhase1" desc="俯仰移相值1" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="10" id="AzimPhase2" desc="方位移相值2" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="11" id="PitchPhase2" desc="俯仰移相值2" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="12" id="AzimPhase3" desc="方位移相值3" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="13" id="PitchPhase3" desc="俯仰移相值3" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="14" id="AzimPhase4" desc="方位移相值4" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="15" id="PitchPhase4" desc="俯仰移相值4" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="16" id="AzimPhase5" desc="方位移相值5" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="17" id="PitchPhase5" desc="俯仰移相值5" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="18" id="AzimPhase6" desc="方位移相值6" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="19" id="PitchPhase6" desc="俯仰移相值6" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="20" id="AzimPhase7" desc="方位移相值7" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="21" id="PitchPhase7" desc="俯仰移相值7" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="22" id="AzimPhase8" desc="方位移相值8" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="23" id="PitchPhase8" desc="俯仰移相值8" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="24" id="AzimPhase9" desc="方位移相值9" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="25" id="PitchPhase9" desc="俯仰移相值9" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="26" id="AzimPhase10" desc="方位移相值10" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="27" id="PitchPhase10" desc="俯仰移相值10" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="28" id="AzimPhase11" desc="方位移相值11" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="29" id="PitchPhase11" desc="俯仰移相值11" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="30" id="AzimPhase12" desc="方位移相值12" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="31" id="PitchPhase12" desc="俯仰移相值12" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="32" id="AzimPhase13" desc="方位移相值13" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="33" id="PitchPhase13" desc="俯仰移相值13" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="34" id="AzimPhase14" desc="方位移相值14" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="35" id="PitchPhase14" desc="俯仰移相值14" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="36" id="AzimPhase15" desc="方位移相值15" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="37" id="PitchPhase15" desc="俯仰移相值15" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="38" id="AzimPhase16" desc="方位移相值16" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="39" id="PitchPhase16" desc="俯仰移相值16" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="40" id="AzimPhase17" desc="方位移相值17" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+        <field pid="41" id="PitchPhase17" desc="俯仰移相值17" dataType="uint" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="°"/>
+    </result>
+</cmd>

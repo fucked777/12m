@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<enums>
+	<enum name="SendSwitch" desc="发射开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="禁止"/>
+		<entry svalue="2" uvalue="2" desc="输出"/>
+	</enum>
+	<enum name="SendSource" desc="发射来源">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="基带"/>
+		<entry svalue="2" uvalue="2" desc="前端"/>
+	</enum>
+	<enum name="ConnectStatus" desc="连接状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="已连接:G"/>
+		<entry svalue="2" uvalue="2" desc="未连接:R"/>
+		<entry svalue="3" uvalue="3" desc="故障:R"/>
+	</enum>
+	<enum name="TimeConstant" desc="AGC时间常数">
+		<entry svalue="1" uvalue="1" desc="1ms"/>
+		<entry svalue="2" uvalue="2" desc="10ms"/>
+		<entry svalue="3" uvalue="3" desc="100ms"/>
+		<entry svalue="4" uvalue="4" desc="1000ms"/>
+	</enum>
+	<enum name="AGCSwitch" desc=" AGC开关">
+		<entry svalue="1" uvalue="1" desc="闭环"/>
+		<entry svalue="2" uvalue="2" desc="开环"/>
+	</enum>
+	<enum name="ConnectStatus" desc="连接状态">
+		<entry svalue="1" uvalue="1" desc="已连接:G"/>
+		<entry svalue="2" uvalue="2" desc="未连接:R"/>
+		<entry svalue="3" uvalue="3" desc="故障:R"/>
+	</enum>
+	<enum name="ControlMode" desc="监控方式">
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="FaultStatus" desc="故障状态">
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="ConnectStatus" desc="连接状态">
+		<entry svalue="1" uvalue="1" desc="已连接:G"/>
+		<entry svalue="2" uvalue="2" desc="未连接:R"/>
+		<entry svalue="3" uvalue="3" desc="故障:R"/>
+	</enum>
+	<enum name="YBRate" desc="样本速率">
+		<entry svalue="1" uvalue="1" desc="30Msps"/>
+		<entry svalue="2" uvalue="2" desc="60Msps"/>
+		<entry svalue="3" uvalue="3" desc="120Msps"/>
+	</enum>
+	<enum name="MainSubSwitch" desc="主备网络切换">
+		<entry svalue="1" uvalue="1" desc="优先主用"/>
+		<entry svalue="2" uvalue="2" desc="优先备用"/>
+	</enum>
+</enums>

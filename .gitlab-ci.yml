@@ -1,0 +1,54 @@
+stages:
+    - static_analyze
+    - build
+    - archive
+
+job static_cppcheck_on_windwos:
+    stage: static_analyze
+    only:
+        - dev
+    tags:
+        - windows10
+    script:
+        - cd CI/windows10
+        - call "dev_static_analyze.bat"
+
+job cppcheck_sonarqube_on_windwos:
+    stage: static_analyze
+    except:
+        - stable   
+    tags:   
+        - windows10   
+    script: 
+        - cd CI/windows10 
+        - call "main_static_analyze.bat"
+
+job build_client_on_windwos:
+    stage: build
+    only: 
+        - dev 
+    tags:
+        - windows10     
+    cache:
+        untracked: true
+        paths:
+            - build-client/
+            - build-server/
+    script:
+        - cd CI/windows10
+        - call "build_client.bat"
+        
+job build_server_on_windwos:
+    stage: build
+    only: 
+        - dev     
+    tags:
+        - windows10             
+    cache:
+        untracked: true
+        paths:
+            - build-client/
+            - build-server/
+    script:
+        - cd CI/windows10
+        - call "build_server.bat"

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x08" deviceID="0x01" modeID="0x0" cmdID="6" desc="卫星参数配置">
+	<Triggers>
+		<Trigger id="ISynchroHeadLength" desc="I同步头长度">
+			<TriggerValue value="1" desc="1">
+				<Receiver id="ISynchroHead" desc="I路同步头" isEnable="" values="" minValue="1" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="2">
+				<Receiver id="ISynchroHead" desc="I路同步头" isEnable="" values="" minValue="1" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="4">
+				<Receiver id="ISynchroHead" desc="I路同步头" isEnable="" values="" minValue="1" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="8" desc="8">
+				<Receiver id="ISynchroHead" desc="I路同步头" isEnable="" values="" minValue="1" maxValue="FFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="QSynchroHeadLength" desc="Q同步头长度">
+			<TriggerValue value="1" desc="1">
+				<Receiver id="QSynchroHead" desc="Q路同步头" isEnable="" values="" minValue="1" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="2">
+				<Receiver id="QSynchroHead" desc="Q路同步头" isEnable="" values="" minValue="1" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="4">
+				<Receiver id="QSynchroHead" desc="Q路同步头" isEnable="" values="" minValue="1" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="8" desc="8">
+				<Receiver id="QSynchroHead" desc="Q路同步头" isEnable="" values="" minValue="1" maxValue="FFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+控件布局配置 暂时只用到各个控件里面的nameLabel控件 
+currentProjectID：当前项目的标识号
+NameControl：名字控件
+-->
+<DeviceControl>
+	<currentProjectID ID="4426">
+		<NameControl Alignment="0x01" />  <!--AlignLeft  0x01 AlignRight 0x02   暂时只用到这两种-->
+	</currentProjectID>
+</DeviceControl>

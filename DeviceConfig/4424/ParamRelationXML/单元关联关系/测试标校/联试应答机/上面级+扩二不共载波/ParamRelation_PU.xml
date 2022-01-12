@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x06" deviceID="0x00" modeID="0x06" unitType="PU" desc="公共单元">
+	<Triggers>
+		<Trigger id="WorkWay" desc="工作方式">
+			<TriggerValue value="1" desc="动态仿真">
+				<Receiver id="FileSimulat" desc="仿真循环回放" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="EmulationName" desc="仿真文件名称" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="文件仿真">
+				<Receiver id="FileSimulat" desc="仿真循环回放" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="EmulationName" desc="仿真文件名称" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		<Trigger id="WorkWay_1" desc="工作方式">
+			<TriggerValue value="1" desc="动态仿真">
+				<Receiver id="FileSimulat_1" desc="仿真循环回放" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="EmulationName_1" desc="仿真文件名称" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="文件仿真">
+				<Receiver id="FileSimulat_1" desc="仿真循环回放" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="EmulationName_1" desc="仿真文件名称" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

@@ -1,0 +1,74 @@
+<Mode name="标准TTC">
+	<if condition="" desc="不写条件为公共命令，始终都要发送">>
+		<Command deviceId="0x6011" modeId="0xFFFF" unitId="1" deviceName="联试应答机信道 联试信号输出">
+			<Param id="LocalOsciTestSignChoose" value="1" name="信号输出源选择 S信号输出"/>
+		</Command>
+		<Command deviceId="0x6011" modeId="0xFFFF" unitId="2" deviceName="联试应答机信道 联试信号衰减">
+			<Param id="DownlSignAtte" value="20" name="接收输入衰减 20dB"/>
+			<Param id="UpSignAtte" value="30" name="发射输出衰减 30dB"/>
+		</Command>
+		<Command deviceId="0x6303" modeId="0xFFFF" cmdId="31" deviceName="前端测试开关网络 前端测试开关网络去电关机">
+			<Param id="PowerControl" value="1" name="供电开关控制 去电"/>
+		</Command>
+		<Command deviceId="0x6301" modeId="0xFFFF" unitId="1" deviceName="测试高频箱 测试高频箱去电关机">
+			<Param id="EquipPlusCtrl" value="1" name="供电开关控制 去电"/>
+		</Command>
+	</if>
+	<!-- 测控基带 链路模式为标准TTC -->
+	<if condition="LinkWorkMode:1|CKJD1:1" desc="主用基带为基带A">
+		<Command deviceId="0x4001" modeId="0x1" cmdId="102" deviceName="测控基带A 工作方式设置">
+			<Param id="WorkWay" value="2" name="工作方式 联试应答机闭环"/>
+		</Command>
+	</if>
+	<if condition="LinkWorkMode:1|CKJD1:2" desc="主用基带为基带B">
+		<Command deviceId="0x4003" modeId="0x1" cmdId="102" deviceName="测控基带B 工作方式设置">
+			<Param id="WorkWay" value="2" name="工作方式 联试应答机闭环"/>
+		</Command>
+	</if>
+	<!-- 测控基带 链路模式为S扩二 -->
+	<if condition="LinkWorkMode:2|CKJD1:1" desc="主用基带为基带A">
+		<Command deviceId="0x4001" modeId="0x4" cmdId="102" deviceName="测控基带A 工作方式设置">
+			<Param id="WorkWay" value="2" name="工作方式 联试应答机闭环"/>
+		</Command>
+	</if>
+	<if condition="LinkWorkMode:2|CKJD1:2" desc="主用基带为基带B">
+		<Command deviceId="0x4003" modeId="0x4" cmdId="102" deviceName="测控基带B工作方式设置">
+			<Param id="WorkWay" value="2" name="工作方式 联试应答机闭环"/>
+		</Command>
+	</if>
+	<!-- 测控数字化前端 -->
+	<if condition="CKQD1:1">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_1" value="19" name="测控前端1:测控(数传)左旋 S应答机下行"/>
+			<Param id="ChooseConnect_2" value="19" name="测控前端1:测控(数传)右旋 S应答机下行"/>
+			<Param id="ChooseConnect_28" value="18" name="S应答机上行 联试应答/射频源"/>
+		</Command>
+		<Command deviceId="0x2501" modeId="0xFFFF" unitId="1" deviceName="S射频发射矩阵 S射频发射矩阵">
+			<Param id="ChooseConnect_11" value="1" name="应答机/模拟源 测控前端1"/>
+		</Command>
+	</if>
+	<if condition="CKQD1:2">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_3" value="19" name="测控前端2:测控(数传)左旋 S应答机下行"/>
+			<Param id="ChooseConnect_4" value="19" name="测控前端2:测控(数传)右旋 S应答机下行"/>
+			<Param id="ChooseConnect_28" value="18" name="S应答机上行 联试应答/射频源"/>
+		</Command>
+		<Command deviceId="0x2501" modeId="0xFFFF" unitId="1" deviceName="S射频发射矩阵 S射频发射矩阵">
+			<Param id="ChooseConnect_11" value="3" name="应答机/模拟源 测控前端2"/>
+		</Command>
+	</if>
+	<if condition="CKQD2:1">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_1" value="19" name="测控前端1:测控(数传)左旋 S应答机下行"/>
+			<Param id="ChooseConnect_2" value="19" name="测控前端1:测控(数传)右旋 S应答机下行"/>
+			<Param id="ChooseConnect_28" value="18" name="S应答机上行 联试应答/射频源"/>
+		</Command>
+	</if>
+	<if condition="CKQD2:2">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_3" value="19" name="测控前端2:测控(数传)左旋 S应答机下行"/>
+			<Param id="ChooseConnect_4" value="19" name="测控前端2:测控(数传)右旋 S应答机下行"/>
+			<Param id="ChooseConnect_28" value="18" name="S应答机上行 联试应答/射频源"/>
+		</Command>
+	</if>
+</Mode>

@@ -1,0 +1,131 @@
+<Cmd name="S遥控开">
+	<!--
+    功放加电
+    基带遥控加调
+    上行载波输出
+    -->
+	<!-- STTC 功放开 -->
+	<if condition="LinkWorkMode:1|STTC_SHPA:1">
+		<Command deviceId="0x2001" modeId="0xFFFF" unitId="1" deviceName="S高功放A 功放">
+			<Param id="ElectricControlor" value="2" name="S高功放A 加电"/>
+		</Command>
+		<Command deviceId="0x2101" modeId="0xFFFF" unitId="1" deviceName="S功放切换开关 S功放切换开关">
+			<Param id="RFSwitch" value="1" name="S功放切换开关 射频输出"/>
+			<Param id="SwitcherSet" value="1" name="S功放切换开关 功放开关设置"/>
+		</Command>
+	</if>
+	<if condition="LinkWorkMode:1|STTC_SHPA:2">
+		<Command deviceId="0x2002" modeId="0xFFFF" unitId="1" deviceName="S高功放B 功放">
+			<Param id="ElectricControlor" value="2" name="S高功放B 加电"/>
+		</Command>
+		<Command deviceId="0x2101" modeId="0xFFFF" unitId="1" deviceName="S功放切换开关 S功放切换开关">
+			<Param id="RFSwitch" value="1" name="S功放切换开关 射频输出"/>
+			<Param id="SwitcherSet" value="2" name="S功放切换开关 功放开关设置"/>
+		</Command>
+	</if>
+
+	<!-- S扩2 功放开 -->
+	<if condition="LinkWorkMode:2|STTC_SHPA:1">
+		<Command deviceId="0x2001" modeId="0xFFFF" unitId="1" deviceName="S高功放A 功放">
+			<Param id="ElectricControlor" value="2" name="S高功放A 加电"/>
+		</Command>
+		<Command deviceId="0x2101" modeId="0xFFFF" unitId="1" deviceName="S功放切换开关 S功放切换开关">
+			<Param id="RFSwitch" value="1" name="S功放切换开关 射频输出"/>
+			<Param id="SwitcherSet" value="1" name="S功放切换开关 功放开关设置"/>
+		</Command>
+	</if>
+	<if condition="LinkWorkMode:2|STTC_SHPA:2">
+		<Command deviceId="0x2002" modeId="0xFFFF" unitId="1" deviceName="S高功放B 功放">
+			<Param id="ElectricControlor" value="2" name="S高功放B 加电"/>
+		</Command>
+		<Command deviceId="0x2101" modeId="0xFFFF" unitId="1" deviceName="S功放切换开关 S功放切换开关">
+			<Param id="RFSwitch" value="1" name="S功放切换开关 射频输出"/>
+			<Param id="SwitcherSet" value="2" name="S功放切换开关 功放开关设置"/>
+		</Command>
+	</if>
+
+	<!-- STTC 基带遥测 测量加调 -->
+	<if condition="LinkWorkMode:1|CKJD1:1">
+		<Command deviceId="0x4001" modeId="0x01" cmdId="11" deviceName="测控基带A">
+			<Param id="RemCtrlPlus" value="1" name="测控基带遥控加调"/>
+		</Command>
+		<Command deviceId="0x4001" modeId="0x01" cmdId="5" deviceName="测控基带A">
+			<Param id="CarrOutput" value="1" name="测控基带上行载波输出"/>
+		</Command>
+		<Command deviceId="0x4001" modeId="0x01" cmdId="7" deviceName="测控基带A">
+			<Param id="CaptMode" value="1" name="系统捕获方式 自动"/>
+		</Command>
+	</if>
+	<if condition="LinkWorkMode:1|CKJD1:3">
+		<Command deviceId="0x4003" modeId="0x01" cmdId="11" deviceName="测控基带B">
+			<Param id="RemCtrlPlus" value="1" name="测控基带遥控加调"/>
+		</Command>
+		<Command deviceId="0x4003" modeId="0x01" cmdId="5" deviceName="测控基带B">
+			<Param id="CarrOutput" value="1" name="测控基带上行载波输出"/>
+		</Command>
+		<Command deviceId="0x4003" modeId="0x01" cmdId="7" deviceName="测控基带B">
+			<Param id="CaptMode" value="1" name="系统捕获方式 自动"/>
+		</Command>
+	</if>
+
+	<!-- S扩2 基带遥测 测量加调 -->
+	<if condition="LinkWorkMode:2|CKJD1:1">
+		<Command deviceId="0x4001" modeId="0x04" cmdId="6" deviceName="测控基带A">
+			<Param id="ChanSelect" value="10" name="遥控通道"/>
+			<Param id="PNCodeAdd" value="1" name="伪码加调"/>
+			<Param id="DataCodeAdd" value="1" name="数据加调"/>
+		</Command>
+		<Command deviceId="0x4001" modeId="0x04" cmdId="5" deviceName="测控基带A">
+			<Param id="CarrOutput" value="1" name="测控基带上行载波输出"/>
+			<Param id="ChanSelect" value="10" name="测控基带全部遥控通道载波输出"/>
+		</Command>
+	</if>
+	<if condition="LinkWorkMode:2|CKJD1:3">
+		<Command deviceId="0x4003" modeId="0x04" cmdId="6" deviceName="测控基带B">
+			<Param id="ChanSelect" value="10" name="遥控通道"/>
+			<Param id="PNCodeAdd" value="1" name="伪码加调"/>
+			<Param id="DataCodeAdd" value="1" name="数据加调"/>
+		</Command>
+		<Command deviceId="0x4003" modeId="0x04" cmdId="5" deviceName="测控基带B">
+			<Param id="CarrOutput" value="1" name="测控基带上行载波输出"/>
+			<Param id="ChanSelect" value="10" name="测控基带全部遥控通道载波输出"/>
+		</Command>
+	</if>
+
+	<if condition="LinkWorkMode:1|CKQD1:1">
+		<Command deviceId="0x7001" modeId="0xFFFF" unitId="1" deviceName="测控前端1">
+			<Param id="YBRate" value="1" name="工作模式"/>
+			<Param id="MainSubSwitch" value="1" name="主备网络切换"/>
+		</Command>
+	</if>
+	<if condition="LinkWorkMode:1|CKQD1:2">
+		<Command deviceId="0x7002" modeId="0xFFFF" unitId="1" deviceName="测控前端2">
+			<Param id="YBRate" value="1" name="工作模式"/>
+			<Param id="MainSubSwitch" value="1" name="主备网络切换"/>
+		</Command>
+	</if>
+	<if condition="LinkWorkMode:2|CKQD1:1|DoubleMode:1">
+		<Command deviceId="0x7001" modeId="0xFFFF" unitId="1" deviceName="测控前端1">
+			<Param id="YBRate" value="4" name="工作模式"/>
+			<Param id="MainSubSwitch" value="1" name="主备网络切换"/>
+		</Command>
+	</if>
+	<if condition="LinkWorkMode:2|CKQD1:2|DoubleMode:1">
+		<Command deviceId="0x7002" modeId="0xFFFF" unitId="1" deviceName="测控前端2">
+			<Param id="YBRate" value="4" name="工作模式"/>
+			<Param id="MainSubSwitch" value="1" name="主备网络切换"/>
+		</Command>
+	</if>
+	<if condition="LinkWorkMode:2|CKQD1:1|DoubleMode:0">
+		<Command deviceId="0x7001" modeId="0xFFFF" unitId="1" deviceName="测控前端1">
+			<Param id="YBRate" value="1" name="工作模式"/>
+			<Param id="MainSubSwitch" value="1" name="主备网络切换"/>
+		</Command>
+	</if>
+	<if condition="LinkWorkMode:2|CKQD1:2|DoubleMode:0">
+		<Command deviceId="0x7002" modeId="0xFFFF" unitId="1" deviceName="测控前端2">
+			<Param id="YBRate" value="1" name="工作模式"/>
+			<Param id="MainSubSwitch" value="1" name="主备网络切换"/>
+		</Command>
+	</if>
+</Cmd>

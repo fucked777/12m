@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+	configInfo = SysName_SysID_DevID_ExtID_(模式,命令,枚举的映射)
+	mapping ModeID与工作模式的映射 如果没有则不映射
+	CmdID是是十进制 其他是16进制 
+	filed 里面的id是唯一ID 显示顺序就是xml的顺序
+	
+	工作模式枚举写死的
+	value   枚举				描述		
+	  0     None			/* 无模式 */
+	  1  	SSTTC 			/* 标准ttc */   
+	  2  	SK2   			/* S扩2 */        
+	  3  	KaK2  			/* Ka扩2 */       
+	  4  	XLD   			/* X低速数传 */   
+	  5  	KaLD  			/* Ka低速数传 */  
+	  6  	KaHD  			/* Ka高速数传 */
+
+	  (模式,命令,枚举的映射)
+	  此处的ModeID是查找xml时使用的
+	  工作模式的枚举值-ModeID-CmdID|工作模式的枚举值-ModeID-CmdID
+
+	  特殊值 此种情况只有一组数据
+	  0x0-cmdID
+
+noneMode
+kaHD	
+kaK2	
+kaLD	
+sK2		
+sSTTC	
+xLD		
+-->
+<config>
+	<params name="系统自动化测试">
+		<filed type="1" name="G/T值测试" id="1_GT" sSTTC="GT_S_Ka" sK2="GT_S_Ka" kaK2="GT_S_Ka" 				bind="1" />
+		<filed type="2" name="EIRP值测试" id="2_EIRP" sSTTC="EIRP_S_Ka" sK2="EIRP_S_Ka" kaK2="EIRP_S_Ka"  	bind="1" />
+		<filed type="3" name="系统捕获时间测试" id="3_SCTT" sSTTC="SCTT_S_Ka" sK2="SCTT_S_Ka" kaK2="SCTT_S_Ka"  	bind="0" />
+		<filed type="4" name="测距随机误差测试" id="4_RMRET" sSTTC="RMRET_S_Ka" sK2="RMRET_S_Ka" kaK2="RMRET_S_Ka"  bind="0" />
+		<filed type="5" name="测速随机误差测试" id="5_SRET" sSTTC="SRET_S_Ka" sK2="SRET_S_Ka" kaK2="SRET_S_Ka"  bind="0" />
+		<filed type="6" name="测距系统误差测试" id="6_RMSET" sSTTC="RMSET_S_Ka" sK2="RMSET_S_Ka" kaK2="RMSET_S_Ka" />
+		<filed type="7" name="系统遥测误码率测试" id="7_STERT" sSTTC="STERT_S_Ka" sK2="STERT_S_Ka" kaK2="STERT_S_Ka" />
+		<!-- <filed type="8" name="高速数传误码率测试" id="8_HSNPERT" configInfo="BS_0X04_0x01_0x01|0x02_0x0-8"/>
+		<filed type="9" name="低速数传误码率测试" id="9_LSNPERT" configInfo="TC_0x06_0x02_0x01_0x0-2"/>
+		<filed type="10" name="遥控小环检测正确率" id="10_RCRDCR" configInfo="TC_0x06_0x02_0x01_0x0-2"/> -->
+	</params>
+	<params name="天伺馈分系统自动化测试">
+		<filed type="11" name="伺服带宽测试" id="11_SBT" configInfo="AC_0x01_0x00_0x00_0x0-22"/>
+		<filed type="12" name="动态特性测试" id="12_DFT" configInfo="AC_0x01_0x00_0x00_0x0-23"/>
+		<filed type="13" name="收敛特性测试" id="13_CCT" configInfo="AC_0x01_0x00_0x00_0x0-24"/>
+	</params>
+	<params name="发射分系统自动化测试">
+		<!-- <filed type="14" name="发射功率测试" id="14_TBT" configInfo="TC_0x06_0x02_0x01_0x0-2"/> -->
+		<filed type="15" name="功率稳定性测试" id="15_PST" sSTTC="PST_S" sK2="PST_S" kaK2="PST_Ka" />
+		<filed type="16" name="相位噪声测试" id="16_LPNT" sSTTC="LPNT_S" sK2="LPNT_S" kaK2="LPNT_Ka" />
+		<filed type="17" name="杂散及二次谐波测试" id="17_SASHT" sSTTC="SASHT_S" sK2="SASHT_S" kaK2="SASHT_Ka" />
+		<!-- <filed type="18" name="增益平坦度测试" id="18_GFT" configInfo="TC_0x06_0x02_0x01_0x0-2"/> -->
+	</params>
+	<params name="接收分系统自动化测试">
+		<filed type="19" name="相位噪声测试" id="19_RPNT" xLD="RPNT_X" kaK2="RPNT_Kak2" kaHD="RPNT_Kags" kaLD="RPNT_Kads" />
+		<filed type="20" name="杂散测试" id="20_STT" xLD="STT_X" kaK2="STT_Kak2" kaHD="STT_Kags" kaLD="STT_Kads" />
+		<filed type="21" name="频率响应测试" id="21_FRT" sSTTC="FRT_S" sK2="FRT_S" xLD="FRT_X" kaK2="FRT_Kak2" kaHD="FRT_Kags" kaLD="FRT_Kads" />
+	</params>
+	<params name="射频数字化前端自动化测试">
+		<filed type="22" name="AGC控制范围、精度测试" id="22_AGCCRAT" sSTTC="AGCCRAT_S_Ka" sK2="AGCCRAT_S_Ka" kaK2="AGCCRAT_S_Ka" bind="0"  />
+		<filed type="23" name="AGC时常测试" id="23_TFTT" sSTTC="TFTT_S_Ka" sK2="TFTT_S_Ka" kaK2="TFTT_S_Ka"  bind="0" />
+	</params>
+	<params name="测控基带自动化测试">
+		<!-- <filed type="24" name="动态范围测试" id="24_DRT" sSTTC="DRT_S_Ka" sK2="DRT_Sk2_Kak2" kaK2="DRT_Sk2_Kak2"  bind="1" /> -->
+		<filed type="25" name="调制度测试" id="25_TST" sSTTC="TST_Sttc"/>
+		<!-- <filed type="26" name="扫描特性测试" id="26_SCT" sSTTC="SCT_Sttc"/> -->
+		<filed type="27" name="环路带宽测试" id="27_LBT" sSTTC="LBT_S_Ka" sK2="LBT_S_Ka" kaK2="LBT_S_Ka" />
+		<filed type="28" name="遥测解调时延测试" id="28_TDDT" sSTTC="TDDT_S_Ka" sK2="TDDT_S_Ka" kaK2="TDDT_S_Ka" />
+	</params>
+</config>

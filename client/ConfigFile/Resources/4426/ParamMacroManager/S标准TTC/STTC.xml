@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mode>
+ <frequency>
+        <unit groupName="发射与接收分系统" deviceID="4001_1/4002_1/4003_1/4004_1/4001_2/4002_2/4003_2/4004_2/AAAA_1" enumGroup="2" desc="配置文件需要配置 AAAA_1 表示该组内的参数是通用的">
+            <field pid="106" id="WorkRate" desc="上行频率" dataType="ulong" displayFormat="double" initValue="2025" minValue="2025" maxValue="2120" step="0.000001" unit="MHz"/>
+            <field pid="107" id="SBandDownFreq" desc="下行频率" dataType="ulong" displayFormat="double" initValue="2200" minValue="2200" maxValue="2300" step="0.000001" unit="MHz"/>
+            <field pid="105" GroupId="setting3" id="SEmissPolar" desc="发射极化" dataType="uint8" displayFormat="enum|SPolar" initValue="" minValue="" maxValue="" step="" unit=""/>
+            <field pid="106" GroupId="setting3" id="SReceivPolar" desc="接收极化" dataType="uint8" displayFormat="enum|SRecPolar" initValue="" minValue="" maxValue="" step="" unit=""/>
+        </unit>
+        <unit groupName="天伺馈分系统" deviceID="4001_1/4002_1/4003_1/4004_1/1011_1/1012_1/AAAA_1" enumGroup="3">
+            <field pid="107" GroupId="setting3" id="STrackPolar" desc="跟踪极化" dataType="uint8" displayFormat="enum|SPolar" initValue="" minValue="" maxValue="" step="" unit=""/>
+            <field pid="2" id="KaXPolarHorn" desc="极化角" desc2="" dataType="int" displayFormat="double" initValue="0" minValue="-180" maxValue="180" step="0.1" unit="°" isShow="0"/>
+            <field pid="111" id="AngularSamplRate" desc="测角采样率" dataType="uint8" displayFormat="enum|AngularSamplRate" initValue="" minValue="" maxValue="" step="" unit=""/>
+        </unit>
+        <unit groupName="中频调制单元" deviceID="4001_1/4002_1/4003_1/4004_1/4001_4/4002_4/4003_4/4004_4/AAAA_1/6001_2/6001_3" enumGroup="5" desc="配置文件需要配置 AAAA_1 表示该组内的参数是通用的">
+            <field pid="115" GroupId="4" id="ScanRange" desc="扫描范围" dataType="uint" displayFormat="UInt32" initValue="80" minValue="0" maxValue="180" step="5" unit="kHz"/>
+			<field pid="114" GroupId="4" id="ScanningRate" desc="扫描速率" dataType="int" displayFormat="double" initValue="20" minValue="-180" maxValue="180" step="0.001" unit="kHz/s"/>
+            <field pid="103" GroupId="1" id="DopplerPresFreq" desc="多普勒预置" dataType="short" displayFormat="Int16" initValue="0" minValue="-180" maxValue="180" step="" unit="kHz"/>
+            <field pid="108" GroupId="3" id="UpLinkRangMod" desc="主音调制度" dataType="uint8" displayFormat="double" initValue="0.2" minValue="0.2" maxValue="1.5" step="0.01" unit="rad"/>
+            <field pid="109" GroupId="3" id="UpLinkInfMod" desc="次音调制度" dataType="uint8" displayFormat="double" initValue="0.2" minValue="0.2" maxValue="1.5" step="0.01" unit="rad"/>
+            <field pid="110" GroupId="3" id="RemoteCont" desc="遥控调制度" dataType="uint8" displayFormat="double" initValue="0.2" minValue="0.2" maxValue="1.5" step="0.01" unit="rad"/>
+        </unit>
+        <unit groupName="遥控单元" deviceID="4001_7/4002_7/4003_7/4004_7" enumGroup="7">
+            <field pid="101" GroupId="1" id="SubModSystemR" desc="调制体制" dataType="uint8" displayFormat="enum|SubModSystemR" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <!--星地接口有一个单独的副载波频率的设置、这里缺少一个参数-->
+            <field pid="105" GroupId="1" id="RemoteSubFreq" desc="副载波0频(f0)" dataType="uint" displayFormat="UInt32" initValue="2000" minValue="2000" maxValue="100000" step="" unit="Hz"/>
+            <field pid="106" GroupId="1" id="SubFreqFrequer" desc="副载频f1" dataType="uint" displayFormat="UInt32" initValue="2000" minValue="2000" maxValue="100000" step="" unit="Hz"/>
+            <field pid="107" GroupId="1" id="SubcarFillFreq" desc="副载频f填充" dataType="uint" displayFormat="UInt32" initValue="2000" minValue="2000" maxValue="100000" step="" unit="Hz"/>
+            <field pid="108" GroupId="1" id="SubcarFreqExecu" desc="副载频f执行" dataType="uint" displayFormat="UInt32" initValue="2000" minValue="2000" maxValue="100000" step="" unit="Hz"/>
+            <field pid="102" GroupId="1" id="CodeType" desc="码型" dataType="uint8" displayFormat="enum|CodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="103" GroupId="1" id="SettBefafter" desc="码速率控制" dataType="uint8" displayFormat="enum|SettBefafter" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="109" GroupId="1" id="SubModSystem" desc="遥控工作模式" dataType="uint8" displayFormat="enum|SubModSystem" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="126" GroupId="2" id="InstProtcleara" desc="指令保护间隙" dataType="ushort" displayFormat="UInt16" initValue="1000" minValue="100" maxValue="10000" step="100" unit="ms"/>
+            <field pid="125" GroupId="2" id="InternalSpacing" desc="C8内部间隔" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="127" step="" unit="字"/>
+            <field pid="110" GroupId="2" id="PreCompSequesamp" desc="前补序列码样" dataType="uint8" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="111" GroupId="2" id="PreCompSequeLength" desc="前补序列长度" dataType="ushort" displayFormat="UInt16" initValue="1" minValue="0" maxValue="8192" step="" unit="字"/>
+            <field pid="112" GroupId="2" id="PostSequeCodes" desc="后补序列码样" dataType="uint8" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="113" GroupId="2" id="LengthCompSeque" desc="后补序列长度" dataType="ushort" displayFormat="UInt16" initValue="1" minValue="0" maxValue="8192" step="" unit="字"/>
+            <field pid="114" GroupId="3" id="A1PreCompSeque" desc="A1(K6B)前补" dataType="uint8" displayFormat="enum|PreSeqSelect" initValue="2" minValue="" maxValue="" step="" unit=""/>
+            <field pid="115" GroupId="3" id="A1SubseSequeSelect" desc="A1(K6B)后补" dataType="uint8" displayFormat="enum|SubSeqSelect" initValue="2" minValue="" maxValue="" step="" unit=""/>
+            <field pid="116" GroupId="3" id="C7PreCompSeque" desc="C7(K6B)前补" dataType="uint8" displayFormat="enum|PreSeqSelect" initValue="2" minValue="" maxValue="" step="" unit=""/>
+            <field pid="117" GroupId="3" id="C7SubseSequeSelect" desc="C7(K6B)后补" dataType="uint8" displayFormat="enum|SubSeqSelect" initValue="2" minValue="" maxValue="" step="" unit=""/>
+            <field pid="118" GroupId="3" id="C8PreSequeSelect" desc="C8前补" dataType="uint8" displayFormat="enum|PreSeqSelect" initValue="2" minValue="" maxValue="" step="" unit=""/>
+            <field pid="119" GroupId="3" id="C8SubseSequeSelect" desc="C8后补" dataType="uint8" displayFormat="enum|SubSeqSelect" initValue="2" minValue="" maxValue="" step="" unit=""/>
+            <field pid="120" GroupId="3" id="C9PreCompSeqSelect" desc="C9(KT1)前补" dataType="uint8" displayFormat="enum|PreSeqSelect" initValue="2" minValue="" maxValue="" step="" unit=""/>
+            <field pid="121" GroupId="3" id="C9SubSeqSelect" desc="C9(KT1)后补" dataType="uint8" displayFormat="enum|PreSeqSelect" initValue="2" minValue="" maxValue="" step="" unit=""/>
+            <field pid="124" GroupId="2" id="FreeSequeCodeSamp" desc="空闲序列码样" dataType="uint8" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="122" GroupId="2" id="ExecutCodeSamp" desc="执行编码码样" dataType="ulong" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="123" GroupId="2" id="ExecutCodeLength" desc="执行编码长度" dataType="uint8" displayFormat="enum|ExecutCodeLength" initValue="8" minValue="" maxValue="" step="" unit=""/>
+            <field pid="127" GroupId="1" id="StartModeWrok" desc="遥控工作期方式" dataType="uint8" displayFormat="enum|StartModeWrok" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="128" GroupId="1" id="ChannelCoding" desc="信道编码" dataType="uint8" displayFormat="enum|ChannelCoding" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="129" GroupId="4" id="BCHInitSeqCtrl" desc="起始序列控制" dataType="uint8" displayFormat="enum|BCHInitSeqCtrl" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="131" GroupId="4" id="BCHInitSeqLength" desc="起始序列图样长度" dataType="uint8" displayFormat="enum|BCHInitSeqLength" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="130" GroupId="4" id="BCHInitSeqPatt" desc="起始序列图样" dataType="ulong" displayFormat="Hex" initValue="1" minValue="1" maxValue="" step="" unit=""/>
+            <field pid="132" GroupId="4" id="BCHEndSeqCtrl" desc="结尾序列控制" dataType="uint8" displayFormat="enum|BCHEndSeqCtrl" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="134" GroupId="4" id="BCHEndSeqLength" desc="结尾序列图样长度" dataType="uint8" displayFormat="enum|BCHEndSeqLength" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="133" GroupId="4" id="BCHEndSeqPatt" desc="结尾序列图样" dataType="ulong" displayFormat="Hex" initValue="1" minValue="1" maxValue="" step="" unit=""/>
+            <field pid="135" GroupId="4" id="BCHNumbEndPatt" desc="结尾序列图样个数" dataType="uint8" displayFormat="Uint8" initValue="1" minValue="1" maxValue="20" step="" unit="个"/>
+            <field pid="136" GroupId="4" id="ScramblingCtrl" desc="加扰控制" dataType="uint8" displayFormat="enum|ScrambCtrl" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="138" GroupId="4" id="ScrambPolynomial" desc="加扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+            <field pid="137" GroupId="4" id="ScrambPolyLength" desc="加扰多项式长度" dataType="uint8" displayFormat="enum|ScraPolyLength" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+            <field pid="139" GroupId="4" id="ScrambInitPhase" desc="加扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+            <field pid="140" GroupId="4" id="FillingPostition" desc="填充位置" dataType="uint8" displayFormat="enum|FillingPostition" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="141" GroupId="1" id="ConvCodType" desc="卷积编码类型" dataType="uint8" displayFormat="enum|ConvCodType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="142" GroupId="1" id="G2PhaseInver" desc="G2相位反转" dataType="uint8" displayFormat="enum|G2PhaseInver" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        </unit>
+        <unit groupName="遥测单元" deviceID="4001_8/4002_8/4003_8/4004_8/4001_12/4002_12/4003_12/4004_12/6001_4" enumGroup="8">
+            <field pid="102" GroupId="2" id="CodeType" desc="码型" dataType="uint" displayFormat="enum|CodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <!-- 可变参数 -->
+            <!-- <field pid="103" GroupId="2" id="CodeRate" desc="码速率" dataType="uint" displayFormat="UInt32" initValue="100" minValue="100" maxValue="64000" step="" unit="bps"/> -->
+            <!--  -->
+            <field pid="101" GroupId="2" id="SubModSystem" desc="副载波频率" dataType="uint" displayFormat="double" initValue="50" minValue="50" maxValue="512" step="0.001" unit="kHz"/>
+            <field pid="118" GroupId="3" id="WordLength" desc="字长" dataType="uint8" displayFormat="UInt8" initValue="4" minValue="4" maxValue="16" step="" unit="位"/>
+            <field pid="119" GroupId="3" id="FrameLength" desc="帧长" dataType="ushort" displayFormat="UInt16" initValue="4" minValue="4" maxValue="2048" step="" unit="字"/>
+            <field pid="122" GroupId="3" id="FrameSynchPatter" desc="帧同步码组图样" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="121" GroupId="3" id="FrameSynCodeLength" desc="帧同步码组长度" dataType="uint8" displayFormat="enum|FrameSynCodeLength" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="124" GroupId="4" id="SubframeSynch" desc="副帧同步方式" dataType="uint8" displayFormat="enum|SubframeSynch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="120" GroupId="3" id="FormatLength" desc="格式(副帧)长" dataType="ushort" displayFormat="UInt16" initValue="4" minValue="4" maxValue="256" step="" unit="帧"/>
+            <field pid="127" GroupId="4" id="IDCountDirect" desc="ID计数方向" dataType="uint8" displayFormat="enum|IDCountDirect" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="125" GroupId="4" id="IDCountPosit" desc="ID计数位置" dataType="ushort" displayFormat="UInt16" initValue="1" minValue="1" maxValue="1024" step="" unit="字"/>
+            <field pid="126" GroupId="4" id="IDCountValue" desc="ID计数基值" dataType="uint8" displayFormat="enum|IDCountValue" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="128" GroupId="4" id="SubfraCodeLocat" desc="循环副帧码组位置" dataType="ushort" displayFormat="UInt16" initValue="1" minValue="1" maxValue="2048" step="" unit="字"/>
+            <field pid="130" GroupId="4" id="SubSynGroup" desc="循环副帧同步码组" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="129" GroupId="4" id="SubCodeLength" desc="循环副帧码组长度" dataType="uint8" displayFormat="enum|SubCodeLength" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="136" GroupId="6" id="SubDigitSubFrame" desc="循环副帧搜索容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="7" step="" unit="位"/>
+            <field pid="137" GroupId="6" id="SubSynFaultTolBit" desc="循环副帧校核容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="7" step="" unit="位"/>
+            <field pid="138" GroupId="6" id="SubSynLockTolBit" desc="循环副帧锁定容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="7" step="" unit="位"/>
+            <field pid="139" GroupId="6" id="SubCheckNum" desc="循环副帧校核帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="" unit="副帧"/>
+            <field pid="140" GroupId="6" id="NumSubLock" desc="循环副帧锁定帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="" unit="副帧"/>
+            <field pid="105" GroupId="2" id="DecodMode" desc="译码方式" dataType="uint8" displayFormat="enum|DecodMode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="113" GroupId="3" id="DescrambCtrl" desc="解扰控制" dataType="uint8" displayFormat="enum|DescrambCtrl" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="114" GroupId="3" id="DistPolyLength" desc="解扰多项式长度" dataType="uint8" displayFormat="enum|DistPolyLength" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="115" GroupId="3" id="ScramPolg" desc="解扰多项式" dataType="uint" displayFormat="Hex" initValue="A9" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+            <field pid="116" GroupId="3" id="DescramPrim" desc="解扰初相" dataType="uint" displayFormat="Hex" initValue="FF" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+            <field pid="106" GroupId="2" id="ConCodeType" desc="卷积码类型" dataType="uint8" displayFormat="enum|ConCodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="107" GroupId="2" id="ViterbiDecodG2Phase" desc="Viterbi-G2相位" dataType="uint8" displayFormat="enum|ViterbiDecodG2Phase" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="108" GroupId="2" id="RSCodeType" desc="R-S码类型" dataType="uint8" displayFormat="enum|RSCodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="109" GroupId="2" id="InterlDepth" desc="交错深度" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="5" step="" unit=""/>
+            <field pid="110" GroupId="2" id="RSDecodCoorBase" desc="R-S译码坐标基" dataType="uint8" displayFormat="enum|RSDecodCoorBase" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        </unit>
+        <unit groupName="测距测速单元" deviceID="4001_1/4002_1/4003_1/4004_1/4001_5/4002_5/4003_5/4004_5/4001_6/4002_6/4003_6/4004_6" enumGroup="6">
+            <field pid="111" id="RangSamRate" desc="测距采样率" dataType="uint8" displayFormat="enum|RangSamRate" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="109" id="PerCentageSimul" desc="测速采样率" dataType="uint8" displayFormat="enum|SpeedMeaSamPer" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="101" id="MinSideSelect" desc="最低侧音" dataType="uint8" displayFormat="enum|MinSideSelect" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="102" id="SideToneWaitDel" desc="侧音等待时延" dataType="uint" displayFormat="UInt32" initValue="1" minValue="0" maxValue="5000" step="" unit="ms"/>
+            <field pid="103" id="SoftAmbResol" desc="解模糊" dataType="uint8" displayFormat="enum|SoftAmbResol" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="106" id="ZeroDistTran" desc="应答机零值" dataType="uint" displayFormat="double" initValue="1" minValue="0" maxValue="100000" step="0.001" unit="m"/>
+        </unit>
+		<change groupName="码速率(遥控)" deviceID="4001_07/4002_07/4003_07/4004_07" dynamicGroupId="YK_CodeRate">
+            <field pid="102" GroupId="1" id="CodeRate" desc="码速率" dataType="uint" displayFormat="UInt32" initValue="100" minValue="100" maxValue="8000" step="" unit="bps"/>
+        </change>
+		<change groupName="码速率(遥测)" deviceID="4001_08/4002_08/4003_08/4004_08/4001_12/4002_12/4003_12/4004_12" dynamicGroupId="YC_CodeRate">
+            <field pid="102" GroupId="1" id="CodeRate" desc="码速率" dataType="uint" displayFormat="UInt32" initValue="100" minValue="100" maxValue="64000" step="" unit="bps"/>
+        </change>
+    </frequency>
+	<devices>
+		<device name="S高功放" station="0x264226" deviceID="0x2001/0x2002" xmlPath="S标准TTC/高功放/SHPA.xml"/>
+		<device name="S频段射频开关网络" station="0x264226" deviceID="0x3201" xmlPath="S标准TTC/S频段射频开关网络/SBRFSN.xml"/>
+		<device name="测控数字化前端" station="0x264226" deviceID="0x7001/0x7002/0x7003/0x7004/0xAAAA" xmlPath="S标准TTC/测控数字化前端/DFOMAC.xml"/>
+		<device name="跟踪数字化前端" station="0x264226" deviceID="0x7101/0x7102/0x7103/0x7104/0xAAAA" xmlPath="S标准TTC/跟踪数字化前端/TDFE.xml"/>
+		<device name="测控基带" station="0x264226" deviceID="0x4001/0x4002/0x4003/0x4004" xmlPath="S标准TTC/测控基带/MACB.xml"/>
+		<device name="测角分系统" station="0x264226" deviceID="0x1011/0x1012" xmlPath="S标准TTC/测角分系统/TFS.xml"/>
+	</devices>
+</Mode>

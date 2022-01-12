@@ -1,0 +1,80 @@
+<Cmd name="S遥控关">
+	<!--
+	功放去电          
+	基带遥测,测量去调     
+	上行载波输出禁止    
+    -->
+	<!-- STTC 功放开 -->
+	<if condition="LinkWorkMode:1|STTC_SHPA:1">
+		<Command deviceId="0x2001" modeId="0xFFFF" unitId="1" deviceName="S高功放A 功放">
+			<Param id="ElectricControlor" value="1" name="S高功放A 去电"/>
+		</Command>
+	</if>
+	<if condition="LinkWorkMode:1|STTC_SHPA:2">
+		<Command deviceId="0x2002" modeId="0xFFFF" unitId="1" deviceName="S高功放B 功放">
+			<Param id="ElectricControlor" value="1" name="S高功放B 去电"/>
+		</Command>
+	</if>
+
+	<!-- S扩2 功放开 -->
+	<if condition="LinkWorkMode:2|STTC_SHPA:1">
+		<Command deviceId="0x2001" modeId="0xFFFF" unitId="1" deviceName="S高功放A 功放">
+			<Param id="ElectricControlor" value="1" name="S高功放A 去电"/>
+		</Command>
+	</if>
+	<if condition="LinkWorkMode:2|STTC_SHPA:2">
+		<Command deviceId="0x2002" modeId="0xFFFF" unitId="1" deviceName="S高功放B 功放">
+			<Param id="ElectricControlor" value="1" name="S高功放B 去电"/>
+		</Command>
+	</if>
+
+	<!-- STTC 基带遥测 测量加调 -->
+	<if condition="LinkWorkMode:1|CKJD1:1">
+		<Command deviceId="0x4001" modeId="0x01" cmdId="10" deviceName="测控基带A">
+			<Param id="RangAndAdjus" value="2" name="测控基带测距去调 去调"/>
+		</Command>
+		<Command deviceId="0x4001" modeId="0x01" cmdId="11" deviceName="测控基带A">
+			<Param id="RemCtrlPlus" value="2" name="测控基带遥控去调 去调"/>
+		</Command>
+		<Command deviceId="0x4001" modeId="0x01" cmdId="5" deviceName="测控基带A">
+			<Param id="CarrOutput" value="2" name="测控基带上行载波禁止 禁止"/>
+		</Command>
+	</if>
+	<if condition="LinkWorkMode:1|CKJD1:3">
+		<Command deviceId="0x4003" modeId="0x01" cmdId="10" deviceName="测控基带B">
+			<Param id="RangAndAdjus" value="2" name="测控基带测距去调 去调"/>
+		</Command>
+		<Command deviceId="0x4003" modeId="0x01" cmdId="11" deviceName="测控基带B">
+			<Param id="RemCtrlPlus" value="2" name="测控基带遥控去调 去调"/>
+		</Command>
+		<Command deviceId="0x4003" modeId="0x01" cmdId="5" deviceName="测控基带B">
+			<Param id="CarrOutput" value="2" name="测控基带上行载波禁止 禁止"/>
+		</Command>
+	</if>
+
+	<!-- S扩2 基带遥测 测量加调 -->
+	<if condition="LinkWorkMode:2|CKJD1:1">
+		<Command deviceId="0x4001" modeId="0x04" cmdId="6" deviceName="测控基带A">
+			<Param id="ChanSelect" value="10" name="遥控通道"/>
+			<Param id="PNCodeAdd" value="2" name="伪码去调"/>
+			<Param id="DataCodeAdd" value="2" name="数据去调"/>
+		</Command>
+		<Command deviceId="0x4001" modeId="0x04" cmdId="5" deviceName="测控基带A">
+			<Param id="OutputLev" value="-10" name="测控基带输出电平"/>
+			<Param id="CarrOutput" value="2" name="测控基带上行载波禁止"/>
+			<Param id="ChanSelect" value="9" name="测控基带全部遥控通道载波禁止"/>
+		</Command>
+	</if>
+	<if condition="LinkWorkMode:2|CKJD1:3">
+		<Command deviceId="0x4003" modeId="0x04" cmdId="6" deviceName="测控基带B">
+			<Param id="ChanSelect" value="10" name="遥控通道"/>
+			<Param id="PNCodeAdd" value="2" name="伪码去调"/>
+			<Param id="DataCodeAdd" value="2" name="数据去调"/>
+		</Command>
+		<Command deviceId="0x4003" modeId="0x04" cmdId="5" deviceName="测控基带B">
+			<Param id="OutputLev" value="-10" name="测控基带输出电平"/>
+			<Param id="CarrOutput" value="2" name="测控基带上行载波禁止"/>
+			<Param id="ChanSelect" value="9" name="测控基带全部遥控通道载波禁止"/>
+		</Command>
+	</if>
+</Cmd>

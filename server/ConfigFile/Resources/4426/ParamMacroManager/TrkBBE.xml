@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<Trk>
+	<Mode modeId="0x01" desc="标准TTC">
+		<field desc="S任务标识" dstInfo="1:0:STaskIdentifier" srcInfo="CK:1:0:TaskIdent"/>
+		<field desc="S任务代号" dstInfo="1:0:STaskCode" srcInfo="CK:1:0:TaskCode"/>
+		<field desc="S下行频率" dstInfo="1:0:NumberSimul" srcInfo="CK:1:0:SBandDownFreq"/>
+		<field desc="载波环路带宽" dstInfo="2:0:CarrLoopBand" srcInfo="CK:2:0:CarrierLoopBandWidth" rule="CK_ZBHLDK"/>
+	</Mode>
+	<Mode modeId="0x02" desc="s扩频">
+		<field desc="S/Ka任务标识" dstInfo="1:1:STaskIdentifier" srcInfo="CK:1:1:K2_TaskIdent"/>
+		<field desc="S/Ka任务代号" dstInfo="1:1:STaskCode" srcInfo="CK:1:1:K2_TaskCode"/>
+		<field desc="S/Ka下行频率" dstInfo="1:1:NumberSimul" srcInfo="CK:1:1:K2_SBandDownFreq"/>
+		<field desc="遥测支路捕获门限" dstInfo="2:1:CaptureThres" srcInfo="CK:2:1:YC_CaptureThres"/>
+		<field desc="测量支路捕获门限" dstInfo="2:1:MeaCaptureThres" srcInfo="CK:2:1:CL_CaptureThres"/>
+		<field desc="遥测支路扩频码速率" dstInfo="2:1:CarrSpreadCodeRate" srcInfo="CK:2:1:YC_SpreadCode"/>
+		<field desc="测量支路扩频码速率" dstInfo="2:1:MeaSprCodeRate" srcInfo="CK:2:1:CL_SpreadCode"/>
+		<field desc="遥测支路码环带宽" dstInfo="2:1:CarrBandwidth" srcInfo="CK:2:1:YC_PseCodeBand"/>
+		<field desc="测量支路码环带宽" dstInfo="2:1:MeaBandwidth" srcInfo="CK:2:1:CL_PseCodeBand"/>
+		<field desc="遥测下行伪码多项式1" dstInfo="2:1:CarrPsePolyno1" srcInfo="CK:9:1:K2_DOWN_YC_PNCodeMulti1"/>
+		<field desc="遥测下行伪码多项式2" dstInfo="2:1:CarrPsePolyno2" srcInfo="CK:9:1:K2_DOWN_YC_PNCodeMulti2"/>
+		<field desc="遥测下行伪码初相1" dstInfo="2:1:CarrPseCode1" srcInfo="CK:9:1:K2_DOWN_YC_PNCodePhase1"/>
+		<field desc="遥测下行伪码初相2" dstInfo="2:1:CarrPseCode2" srcInfo="CK:9:1:K2_DOWN_YC_PNCodePhase2"/>
+		<field desc="测量下行伪码多项式1" dstInfo="2:1:MeaPsePolyno1" srcInfo="CK:9:1:K2_DOWN_CL_PNCodeMulti1"/>
+		<field desc="测量下行伪码多项式2" dstInfo="2:1:MeaPsePolyno2" srcInfo="CK:9:1:K2_DOWN_CL_PNCodeMulti2"/>
+		<field desc="测量下行伪码初相1" dstInfo="2:1:MeaPseCode1" srcInfo="CK:9:1:K2_DOWN_CL_PNCodePhase1"/>
+		<field desc="测量下行伪码初相2" dstInfo="2:1:MeaPseCode2" srcInfo="CK:9:1:K2_DOWN_CL_PNCodePhase2"/>
+		<field desc="扩频目标数" dstInfo="1:0:NumbSpreadTarget" srcInfo="CK:1:0:TargetNum"/>
+		<field desc="扩频主跟目标" dstInfo="1:0:SpreadMastTarget" srcInfo="CK:1:0:TrackTarget"/>
+		<field desc="扩频主跟通道" dstInfo="1:0:SpreadChannel" srcInfo="CK:1:0:MainBranType"/>
+		<field desc="载波环路带宽" dstInfo="2:1:CarrLoopBand" srcInfo="CK:2:1:YC_CarrLoopBand"/>
+		<field desc="码型" dstInfo="2:1:CodeType" srcInfo="CK:6:1:K2_CodeType"/>
+		<field desc="码速率" dstInfo="2:1:InformatRate" srcInfo="CK:6:1:K2_CodeRate"/>
+		<field desc="译码类型" dstInfo="2:1:DecodType" srcInfo="CK:6:1:K2_ConCodeType" />
+		<field desc="Viterbi译码" dstInfo="2:1:ViterbiDecod" srcInfo="CK:6:1:K2_DecodMode" rule="SKUO2_VTBYM"/>
+	</Mode>
+	<Mode modeId="0x09" desc="扩跳">
+		<field desc="S任务标识" dstInfo="1:0:STaskIdentifier" srcInfo="CK:1:0:TaskIdent" />
+		<field desc="S任务代号" dstInfo="1:0:STaskCode" srcInfo="CK:1:0:TaskCode"/>
+		<field desc="短码码号" dstInfo="2:0:ShortCode" srcInfo="CK:2:0:ShortCode"/>
+		<field desc="长码码号" dstInfo="2:0:LongCode" srcInfo="CK:2:0:LongCode"/>
+	</Mode>
+	<Mode modeId="0x04" desc="高速">
+		<field desc="Ka任务标识" dstInfo="1:0:XKaTaskIdentifier" srcInfo="GS:1:0:KaTaskIdent2"/>
+		<field desc="Ka任务代号" dstInfo="1:0:XKaTaskCode" srcInfo="GS:1:0:KaTaskCode2"/>
+		<field desc="ka下行频率" dstInfo="1:0:XKaDownFreq" srcInfo="GS:1:0:SBandDownFreq"/>
+	</Mode>
+	<Mode modeId="0x0C" desc="低速">
+		<field desc="Ka任务标识" dstInfo="1:0:XKaTaskIdentifier" srcInfo="DS:1:0:KaTaskIdent"/>
+		<field desc="Ka任务代号" dstInfo="1:0:XKaTaskCode" srcInfo="DS:1:0:KaTaskCode"/>
+		<field desc="Ka下行频率" dstInfo="1:0:XKaDownFreq" srcInfo="DS:1:0:KaSBandDownFreq"/>
+		<field desc="载波调制方式" dstInfo="4:0:CarrierModulation" srcInfo="DS:2:0:CarrierModulation" rule="DS_ZBTZFS"/>
+		<field desc="双边环路带宽" dstInfo="4:0:BilateralWidth" srcInfo="DS:2:0:CarrLoopBand_L" rule="DS_SBHLDK"/>
+		<field desc="信号模式选择" dstInfo="4:0:SignalModelChoose" srcInfo="DS:2:0:DataOutWay"/>
+		<field desc="I/Q功率分贝比" dstInfo="4:0:IOPowerDB" srcInfo="DS:2:0:IOPowerDB"/>
+		<field desc="I路译码方式" dstInfo="5:0:CodeWay" srcInfo="DS:4:0:CodeWay"/>
+		<field desc="I路码速率" dstInfo="5:0:CodeSpeed" srcInfo="DS:4:0:CodeSpeed"/>
+		<field desc="I路码型" dstInfo="5:0:CodeType" srcInfo="DS:4:0:CodeType" rule="DS_MX"/>
+		<field desc="I路Viterbi译码" dstInfo="5:0:ViterbiDecoding" srcInfo="DS:4:0:ViterbiDecoding" rule="DS_VTVYM"/>
+		<field desc="I路Viterbi-G2相位" dstInfo="5:0:G2PhaseReversal" srcInfo="DS:4:0:G2PhaseReversal" rule="DS_VTVXW"/>
+		<field desc="I路R-S译码" dstInfo="5:0:RSDecoding" srcInfo="DS:4:0:RSDecoding"/>
+		<field desc="I路双基选择" dstInfo="5:0:DoubleBaseChange" srcInfo="DS:4:0:DoubleBaseChange" rule="DS_SJXZ"/>
+		<field desc="I路交错深度" dstInfo="5:0:InterlaceDeep" srcInfo="DS:4:0:InterlaceDeep"/>
+		<field desc="I路Turbo译码" dstInfo="5:0:TurboDecoding" srcInfo="DS:4:0:CodeWay" rule="DS_TURBOYM"/>
+		<field desc="I路Turbo码率" dstInfo="5:0:TurboCodeRate" srcInfo="DS:4:0:TurboCodeRate" rule="DS_TURBOML"/>
+		<field desc="I路LDPC译码" dstInfo="5:0:LDPCDecoding" srcInfo="DS:4:0:CodeWay" rule="DS_LDPC"/>
+		<field desc="I路LDPC码率" dstInfo="5:0:LDPCCodeRate" srcInfo="DS:4:0:LDPCCodeRate" rule="DS_LDPCML"/>
+		<field desc="Q路译码方式" dstInfo="6:0:CodeWay" srcInfo="DS:5:0:CodeWay"/>
+		<field desc="Q路码速率" dstInfo="6:0:CodeSpeed" srcInfo="DS:5:0:CodeSpeed"/>
+		<field desc="Q路码型" dstInfo="6:0:CodeType" srcInfo="DS:5:0:CodeType" rule="DS_MX"/>
+		<field desc="Q路Viterbi译码" dstInfo="6:0:ViterbiDecoding" srcInfo="DS:5:0:ViterbiDecoding" rule="DS_VTVYM"/>
+		<field desc="Q路Viterbi-G2相位" dstInfo="6:0:G2PhaseReversal" srcInfo="DS:5:0:G2PhaseReversal" rule="DS_VTVXW"/>
+		<field desc="Q路R-S译码" dstInfo="6:0:RSDecoding" srcInfo="DS:5:0:RSDecoding"/>
+		<field desc="Q路双基选择" dstInfo="6:0:DoubleBaseChange" srcInfo="DS:5:0:DoubleBaseChange" rule="DS_SJXZ"/>
+		<field desc="Q路交错深度" dstInfo="6:0:InterlaceDeep" srcInfo="DS:5:0:InterlaceDeep"/>
+		<field desc="Q路Turbo译码" dstInfo="6:0:TurboDecoding" srcInfo="DS:5:0:CodeWay" rule="DS_TURBOYM"/>
+		<field desc="Q路Turbo码率" dstInfo="6:0:TurboCodeRate" srcInfo="DS:5:0:TurboCodeRate" rule="DS_TURBOML"/>
+		<field desc="Q路LDPC译码" dstInfo="6:0:LDPCDecoding" srcInfo="DS:5:0:CodeWay" rule="DS_LDPC"/>
+		<field desc="Q路LDPC码率" dstInfo="6:0:LDPCCodeRate" srcInfo="DS:5:0:LDPCCodeRate" rule="DS_LDPCML"/>
+	</Mode>
+	<Mode modeId="0x05" desc="标准+高速">
+		<field desc="S下行频率" dstInfo="1:0:NumberSimul" srcInfo="CK:1:0:SBandDownFreq"/>
+		<field desc="ka下行频率" dstInfo="1:0:XKaDownFreq" srcInfo="GS:1:0:SBandDownFreq"/>
+		<field desc="载波环路带宽" dstInfo="2:0:CarrLoopBand" srcInfo="CK:2:0:CarrierLoopBandWidth" rule="CK_ZBHLDK"/>
+		<field desc="S任务标识" dstInfo="1:0:STaskIdentifier" srcInfo="CK:1:0:TaskIdent"/>
+		<field desc="S任务代号" dstInfo="1:0:STaskCode" srcInfo="CK:1:0:TaskCode"/>
+		<field desc="Ka任务标识" dstInfo="1:0:XKaTaskIdentifier" srcInfo="GS:1:0:KaTaskIdent2"/>
+		<field desc="Ka任务代号" dstInfo="1:0:XKaTaskCode" srcInfo="GS:1:0:KaTaskCode2"/>
+	</Mode>
+	<Mode modeId="0x06" desc="扩频+高速">
+		<field desc="S/Ka任务标识" dstInfo="1:1:STaskIdentifier" srcInfo="CK:1:1:K2_TaskIdent"/>
+		<field desc="S/Ka任务代号" dstInfo="1:1:STaskCode" srcInfo="CK:1:1:K2_TaskCode"/>
+		<field desc="S/Ka下行频率" dstInfo="1:1:NumberSimul" srcInfo="CK:1:1:K2_SBandDownFreq"/>
+		<field desc="遥测支路捕获门限" dstInfo="2:1:CaptureThres" srcInfo="CK:2:1:YC_CaptureThres"/>
+		<field desc="测量支路捕获门限" dstInfo="2:1:MeaCaptureThres" srcInfo="CK:2:1:CL_CaptureThres"/>
+		<field desc="遥测支路扩频码速率" dstInfo="2:1:CarrSpreadCodeRate" srcInfo="CK:2:1:YC_SpreadCode"/>
+		<field desc="测量支路扩频码速率" dstInfo="2:1:MeaSprCodeRate" srcInfo="CK:2:1:CL_SpreadCode"/>
+		<field desc="遥测支路码环带宽" dstInfo="2:1:CarrBandwidth" srcInfo="CK:2:1:YC_PseCodeBand"/>
+		<field desc="测量支路码环带宽" dstInfo="2:1:MeaBandwidth" srcInfo="CK:2:1:CL_PseCodeBand"/>
+		<field desc="遥测下行伪码多项式1" dstInfo="2:1:CarrPsePolyno1" srcInfo="CK:9:1:K2_DOWN_YC_PNCodeMulti1"/>
+		<field desc="遥测下行伪码多项式2" dstInfo="2:1:CarrPsePolyno2" srcInfo="CK:9:1:K2_DOWN_YC_PNCodeMulti2"/>
+		<field desc="遥测下行伪码初相1" dstInfo="2:1:CarrPseCode1" srcInfo="CK:9:1:K2_DOWN_YC_PNCodePhase1"/>
+		<field desc="遥测下行伪码初相2" dstInfo="2:1:CarrPseCode2" srcInfo="CK:9:1:K2_DOWN_YC_PNCodePhase2"/>
+		<field desc="测量下行伪码多项式1" dstInfo="2:1:MeaPsePolyno1" srcInfo="CK:9:1:K2_DOWN_CL_PNCodeMulti1"/>
+		<field desc="测量下行伪码多项式2" dstInfo="2:1:MeaPsePolyno2" srcInfo="CK:9:1:K2_DOWN_CL_PNCodeMulti2"/>
+		<field desc="测量下行伪码初相1" dstInfo="2:1:MeaPseCode1" srcInfo="CK:9:1:K2_DOWN_CL_PNCodePhase1"/>
+		<field desc="测量下行伪码初相2" dstInfo="2:1:MeaPseCode2" srcInfo="CK:9:1:K2_DOWN_CL_PNCodePhase2"/>
+		<field desc="载波环路带宽" dstInfo="2:1:CarrLoopBand" srcInfo="CK:2:1:YC_CarrLoopBand"/>
+		<field desc="码型" dstInfo="2:1:CodeType" srcInfo="CK:6:1:K2_CodeType"/>
+		<field desc="码速率" dstInfo="2:1:InformatRate" srcInfo="CK:6:1:K2_CodeRate"/>
+		<field desc="译码类型" dstInfo="2:1:DecodType" srcInfo="CK:6:1:K2_ConCodeType" />
+		<field desc="Viterbi译码" dstInfo="2:1:ViterbiDecod" srcInfo="CK:6:1:K2_DecodMode" rule="SKUO2_VTBYM"/>
+		<field desc="Ka任务标识" dstInfo="1:0:XKaTaskIdentifier" srcInfo="GS:1:0:KaTaskIdent2"/>
+		<field desc="Ka任务代号" dstInfo="1:0:XKaTaskCode" srcInfo="GS:1:0:KaTaskCode2"/>
+		<field desc="ka下行频率" dstInfo="1:0:XKaDownFreq" srcInfo="GS:1:0:SBandDownFreq"/>
+		<field desc="扩频目标数" dstInfo="1:0:NumbSpreadTarget" srcInfo="CK:1:0:TargetNum"/>
+		<field desc="扩频主跟目标" dstInfo="1:0:SpreadMastTarget" srcInfo="CK:1:0:CurrTrackTarget"/>
+		<field desc="扩频主跟通道" dstInfo="1:0:SpreadChannel" srcInfo="CK:1:0:MainBranType"/>
+	</Mode>
+	<Mode modeId="0x0A" desc="标准+低速">
+		<!--
+		<field desc="KA/S下行频率" dstInfo="1:0:RangingSamplingRate" srcInfo="DS:1:0:XSBandDownFreq/KaSBandDownFreq"/>
+		-->
+		<field desc="载波环路带宽" dstInfo="2:0:CarrLoopBand" srcInfo="CK:2:0:CarrierLoopBandWidth" rule="CK_ZBHLDK"/>
+		<field desc="S任务标识" dstInfo="1:0:STaskIdentifier" srcInfo="CK:1:0:TaskIdent"/>
+		<field desc="S任务代号" dstInfo="1:0:STaskCode" srcInfo="CK:1:0:TaskCode"/>
+		<field desc="S下行频率" dstInfo="1:0:NumberSimul" srcInfo="CK:1:0:SBandDownFreq"/>
+		<field desc="Ka任务标识" dstInfo="1:0:XKaTaskIdentifier" srcInfo="DS:1:0:KaTaskIdent"/>
+		<field desc="Ka任务代号" dstInfo="1:0:XKaTaskCode" srcInfo="DS:1:0:KaTaskCode"/>
+		<field desc="Ka下行频率" dstInfo="1:0:XKaDownFreq" srcInfo="DS:1:0:KaSBandDownFreq"/>
+		<field desc="载波调制方式" dstInfo="4:0:CarrierModulation" srcInfo="DS:2:0:CarrierModulation" rule="DS_ZBTZFS"/>
+		<field desc="双边环路带宽" dstInfo="4:0:BilateralWidth" srcInfo="DS:2:0:CarrLoopBand_L" rule="DS_SBHLDK"/>
+		<field desc="信号模式选择" dstInfo="4:0:SignalModelChoose" srcInfo="DS:2:0:DataOutWay"/>
+		<field desc="I/Q功率分贝比" dstInfo="4:0:IOPowerDB" srcInfo="DS:2:0:IOPowerDB"/>
+		<field desc="I路译码方式" dstInfo="5:0:CodeWay" srcInfo="DS:4:0:CodeWay"/>
+		<field desc="I路码速率" dstInfo="5:0:CodeSpeed" srcInfo="DS:4:0:CodeSpeed"/>
+		<field desc="I路码型" dstInfo="5:0:CodeType" srcInfo="DS:4:0:CodeType" rule="DS_MX"/>
+		<field desc="I路Viterbi译码" dstInfo="5:0:ViterbiDecoding" srcInfo="DS:4:0:ViterbiDecoding" rule="DS_VTVYM"/>
+		<field desc="I路Viterbi-G2相位" dstInfo="5:0:G2PhaseReversal" srcInfo="DS:4:0:G2PhaseReversal" rule="DS_VTVXW"/>
+		<field desc="I路R-S译码" dstInfo="5:0:RSDecoding" srcInfo="DS:4:0:RSDecoding"/>
+		<field desc="I路双基选择" dstInfo="5:0:DoubleBaseChange" srcInfo="DS:4:0:DoubleBaseChange" rule="DS_SJXZ"/>
+		<field desc="I路交错深度" dstInfo="5:0:InterlaceDeep" srcInfo="DS:4:0:InterlaceDeep"/>
+		<field desc="I路Turbo译码" dstInfo="5:0:TurboDecoding" srcInfo="DS:4:0:CodeWay" rule="DS_TURBOYM"/>
+		<field desc="I路Turbo码率" dstInfo="5:0:TurboCodeRate" srcInfo="DS:4:0:TurboCodeRate" rule="DS_TURBOML"/>
+		<field desc="I路LDPC译码" dstInfo="5:0:LDPCDecoding" srcInfo="DS:4:0:CodeWay" rule="DS_LDPC"/>
+		<field desc="I路LDPC码率" dstInfo="5:0:LDPCCodeRate" srcInfo="DS:4:0:LDPCCodeRate" rule="DS_LDPCML"/>
+		<field desc="Q路译码方式" dstInfo="6:0:CodeWay" srcInfo="DS:5:0:CodeWay"/>
+		<field desc="Q路码速率" dstInfo="6:0:CodeSpeed" srcInfo="DS:5:0:CodeSpeed"/>
+		<field desc="Q路码型" dstInfo="6:0:CodeType" srcInfo="DS:5:0:CodeType" rule="DS_MX"/>
+		<field desc="Q路Viterbi译码" dstInfo="6:0:ViterbiDecoding" srcInfo="DS:5:0:ViterbiDecoding" rule="DS_VTVYM"/>
+		<field desc="Q路Viterbi-G2相位" dstInfo="6:0:G2PhaseReversal" srcInfo="DS:5:0:G2PhaseReversal" rule="DS_VTVXW"/>
+		<field desc="Q路R-S译码" dstInfo="6:0:RSDecoding" srcInfo="DS:5:0:RSDecoding"/>
+		<field desc="Q路双基选择" dstInfo="6:0:DoubleBaseChange" srcInfo="DS:5:0:DoubleBaseChange" rule="DS_SJXZ"/>
+		<field desc="Q路交错深度" dstInfo="6:0:InterlaceDeep" srcInfo="DS:5:0:InterlaceDeep"/>
+		<field desc="Q路Turbo译码" dstInfo="6:0:TurboDecoding" srcInfo="DS:5:0:CodeWay" rule="DS_TURBOYM"/>
+		<field desc="Q路Turbo码率" dstInfo="6:0:TurboCodeRate" srcInfo="DS:5:0:TurboCodeRate" rule="DS_TURBOML"/>
+		<field desc="Q路LDPC译码" dstInfo="6:0:LDPCDecoding" srcInfo="DS:5:0:CodeWay" rule="DS_LDPC"/>
+		<field desc="Q路LDPC码率" dstInfo="6:0:LDPCCodeRate" srcInfo="DS:5:0:LDPCCodeRate" rule="DS_LDPCML"/>
+	</Mode>
+	<Mode modeId="0x0B" desc="扩频+低速">
+		<field desc="Ka任务标识" dstInfo="1:0:XKaTaskIdentifier" srcInfo="DS:1:0:KaTaskIdent"/>
+		<field desc="Ka任务代号" dstInfo="1:0:XKaTaskCode" srcInfo="DS:1:0:KaTaskCode"/>
+		<field desc="Ka下行频率" dstInfo="1:0:XKANumberSimul" srcInfo="DS:1:0:KaSBandDownFreq"/>
+		<field desc="扩频目标数" dstInfo="1:0:NumbSpreadTarget" srcInfo="CK:1:0:TargetNum"/>
+		<field desc="扩频主跟目标" dstInfo="1:0:SpreadMastTarget" srcInfo="CK:1:0:TrackTarget"/>
+		<field desc="扩频主跟通道" dstInfo="1:0:TrackRoatDirect" srcInfo="CK:1:0:MainBranType"/>
+		<field desc="S/Ka任务标识" dstInfo="1:1:STaskIdentifier" srcInfo="CK:1:1:K2_TaskIdent"/>
+		<field desc="S/Ka任务代号" dstInfo="1:1:STaskCode" srcInfo="CK:1:1:K2_TaskCode"/>
+		<field desc="S/Ka下行频率" dstInfo="1:1:NumberSimul" srcInfo="CK:1:1:K2_SBandDownFreq"/>
+		<field desc="捕获门限" dstInfo="2:1:CaptureThres" srcInfo="CK:2:1:YC_CaptureThres"/>
+		<field desc="码环带宽" dstInfo="2:1:CarrBandwidth" srcInfo="CK:2:1:YC_PseCodeBand"/>
+		<field desc="扩频码速率" dstInfo="2:1:CarrSpreadCodeRate" srcInfo="CK:2:1:YC_SpreadCode"/>
+		<field desc="捕获门限" dstInfo="2:1:MeaCaptureThres" srcInfo="CK:2:1:CL_CaptureThres"/>
+		<field desc="码环带宽" dstInfo="2:1:MeaBandwidth" srcInfo="CK:2:1:CL_PseCodeBand"/>
+		<field desc="扩频码速率" dstInfo="2:1:MeaSprCodeRate" srcInfo="CK:2:1:CL_SpreadCode"/>
+		<field desc="本原多项式1" dstInfo="2:1:CarrPsePolyno1" srcInfo="CK:9:1:K2_DOWN_YC_PNCodeMulti1"/>
+		<field desc="伪码初相1" dstInfo="2:1:CarrPseCode1" srcInfo="CK:9:1:K2_DOWN_YC_PNCodePhase1"/>
+		<field desc="本原多项式2" dstInfo="2:1:CarrPsePolyno2" srcInfo="CK:9:1:K2_DOWN_YC_PNCodeMulti2"/>
+		<field desc="伪码初相2" dstInfo="2:1:CarrPseCode2" srcInfo="CK:9:1:K2_DOWN_YC_PNCodePhase2"/>
+		<field desc="本原多项式1" dstInfo="2:1:MeaPsePolyno1" srcInfo="CK:9:1:K2_DOWN_CL_PNCodeMulti1"/>
+		<field desc="伪码初相1" dstInfo="2:1:MeaPseCode1" srcInfo="CK:9:1:K2_DOWN_CL_PNCodePhase1"/>
+		<field desc="本原多项式2" dstInfo="2:1:MeaPsePolyno2" srcInfo="CK:9:1:K2_DOWN_CL_PNCodeMulti2"/>
+		<field desc="伪码初相2" dstInfo="2:1:MeaPseCode2" srcInfo="CK:9:1:K2_DOWN_CL_PNCodePhase2"/>
+		<field desc="载波环路带宽" dstInfo="2:1:CarrLoopBand" srcInfo="CK:2:1:YC_CarrLoopBand"/>
+		<field desc="码型" dstInfo="2:1:CodeType" srcInfo="CK:6:1:K2_CodeType"/>
+		<field desc="码速率" dstInfo="2:1:InformatRate" srcInfo="CK:6:1:K2_CodeRate"/>
+		<field desc="译码类型" dstInfo="2:1:DecodType" srcInfo="CK:6:1:K2_ConCodeType" />
+		<field desc="Viterbi译码" dstInfo="2:1:ViterbiDecod" srcInfo="CK:6:1:K2_DecodMode" rule="SKUO2_VTBYM"/>
+		
+		<field desc="载波调制方式" dstInfo="4:0:CarrierModulation" srcInfo="DS:2:0:CarrierModulation" rule="DS_ZBTZFS"/>
+		<field desc="双边环路带宽" dstInfo="4:0:BilateralWidth" srcInfo="DS:2:0:CarrLoopBand_L" rule="DS_SBHLDK"/>
+		<field desc="信号模式选择" dstInfo="4:0:SignalModelChoose" srcInfo="DS:2:0:DataOutWay"/>
+		<field desc="I/Q功率分贝比" dstInfo="4:0:IOPowerDB" srcInfo="DS:2:0:IOPowerDB"/>
+		<field desc="I路译码方式" dstInfo="5:0:CodeWay" srcInfo="DS:4:0:CodeWay"/>
+		<field desc="I路码速率" dstInfo="5:0:CodeSpeed" srcInfo="DS:4:0:CodeSpeed"/>
+		<field desc="I路码型" dstInfo="5:0:CodeType" srcInfo="DS:4:0:CodeType" rule="DS_MX"/>
+		<field desc="I路Viterbi译码" dstInfo="5:0:ViterbiDecoding" srcInfo="DS:4:0:ViterbiDecoding" rule="DS_VTVYM"/>
+		<field desc="I路Viterbi-G2相位" dstInfo="5:0:G2PhaseReversal" srcInfo="DS:4:0:G2PhaseReversal" rule="DS_VTVXW"/>
+		<field desc="I路R-S译码" dstInfo="5:0:RSDecoding" srcInfo="DS:4:0:RSDecoding"/>
+		<field desc="I路双基选择" dstInfo="5:0:DoubleBaseChange" srcInfo="DS:4:0:DoubleBaseChange" rule="DS_SJXZ"/>
+		<field desc="I路交错深度" dstInfo="5:0:InterlaceDeep" srcInfo="DS:4:0:InterlaceDeep"/>
+		<field desc="I路Turbo译码" dstInfo="5:0:TurboDecoding" srcInfo="DS:4:0:CodeWay" rule="DS_TURBOYM"/>
+		<field desc="I路Turbo码率" dstInfo="5:0:TurboCodeRate" srcInfo="DS:4:0:TurboCodeRate" rule="DS_TURBOML"/>
+		<field desc="I路LDPC译码" dstInfo="5:0:LDPCDecoding" srcInfo="DS:4:0:CodeWay" rule="DS_LDPC"/>
+		<field desc="I路LDPC码率" dstInfo="5:0:LDPCCodeRate" srcInfo="DS:4:0:LDPCCodeRate" rule="DS_LDPCML"/>
+		<field desc="I路译码方式" dstInfo="6:0:CodeWay" srcInfo="DS:5:0:CodeWay"/>
+		<field desc="Q路码速率" dstInfo="6:0:CodeSpeed" srcInfo="DS:5:0:CodeSpeed"/>
+		<field desc="Q路码型" dstInfo="6:0:CodeType" srcInfo="DS:5:0:CodeType" rule="DS_MX"/>
+		<field desc="Q路Viterbi译码" dstInfo="6:0:ViterbiDecoding" srcInfo="DS:5:0:ViterbiDecoding" rule="DS_VTVYM"/>
+		<field desc="Q路Viterbi-G2相位" dstInfo="6:0:G2PhaseReversal" srcInfo="DS:5:0:G2PhaseReversal" rule="DS_VTVXW"/>
+		<field desc="Q路R-S译码" dstInfo="6:0:RSDecoding" srcInfo="DS:5:0:RSDecoding"/>
+		<field desc="Q路双基选择" dstInfo="6:0:DoubleBaseChange" srcInfo="DS:5:0:DoubleBaseChange" rule="DS_SJXZ"/>
+		<field desc="Q路交错深度" dstInfo="6:0:InterlaceDeep" srcInfo="DS:5:0:InterlaceDeep"/>
+		<field desc="Q路Turbo译码" dstInfo="6:0:TurboDecoding" srcInfo="DS:5:0:CodeWay" rule="DS_TURBOYM"/>
+		<field desc="Q路Turbo码率" dstInfo="6:0:TurboCodeRate" srcInfo="DS:5:0:TurboCodeRate" rule="DS_TURBOML"/>
+		<field desc="Q路LDPC译码" dstInfo="6:0:LDPCDecoding" srcInfo="DS:5:0:CodeWay" rule="DS_LDPC"/>
+		<field desc="Q路LDPC码率" dstInfo="6:0:LDPCCodeRate" srcInfo="DS:5:0:LDPCCodeRate" rule="DS_LDPCML"/>
+	</Mode>
+</Trk>

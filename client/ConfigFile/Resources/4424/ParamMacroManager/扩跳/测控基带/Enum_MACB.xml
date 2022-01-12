@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<enums>
+    <!-- 公共单元 -->
+    <enum name="BaseBandDelMode" desc="基带送数方式">
+        <entry svalue="0" uvalue="0" desc="无此参数"/>
+        <entry svalue="1" uvalue="1" desc="常送"/>
+        <entry svalue="2" uvalue="2" desc="人工"/>
+    </enum>
+    <!-- 接收机单元 -->
+    <enum name="ReceChannel" desc="接收通道合成方式">
+        <entry svalue="1" uvalue="1" desc="单收左旋"/>
+        <entry svalue="2" uvalue="2" desc="单收右旋"/>
+        <entry svalue="3" uvalue="3" desc="左右旋同时"/>
+        <entry svalue="4" uvalue="4" desc="最大比合成"/>
+        <entry svalue="5" uvalue="5" desc="全频谱合成(保留不用)"/>
+    </enum>
+    <enum name="LockIndicat" desc="锁定指示">
+        <entry svalue="0" uvalue="0" desc="无此参数"/>
+        <entry svalue="1" uvalue="1" desc="锁定:G"/>
+        <entry svalue="2" uvalue="2" desc="失锁:R"/>
+    </enum>
+    <enum name="AGCTimeConst" desc="AGC时间常数">
+        <entry svalue="1" uvalue="1" desc="1ms"/>
+        <entry svalue="2" uvalue="2" desc="10ms"/>
+        <entry svalue="3" uvalue="3" desc="100ms"/>
+        <entry svalue="4" uvalue="4" desc="1000ms"/>
+    </enum>
+    <enum name="CarrLoopBand" desc="载波环路带宽">
+        <entry svalue="1" uvalue="1" desc="100Hz"/>
+        <entry svalue="2" uvalue="2" desc="300Hz"/>
+        <entry svalue="3" uvalue="3" desc="500Hz"/>
+        <entry svalue="4" uvalue="4" desc="1000Hz"/>
+        <entry svalue="5" uvalue="5" desc="3000Hz"/>
+        <entry svalue="6" uvalue="6" desc="自适应"/>
+    </enum>
+    <enum name="DistPredMethod" desc="距离预报方式">
+        <entry svalue="0" uvalue="0" desc="无此参数"/>
+        <entry svalue="1" uvalue="1" desc="手动"/>
+        <entry svalue="2" uvalue="2" desc="轨道根数"/>
+        <entry svalue="3" uvalue="3" desc="DTE弹道数据"/>
+    </enum>
+    <!-- 中频调制 -->
+    <enum name="SendDataType" desc="当前上行发射数据类型">
+        <entry svalue="1" uvalue="1" desc="时间"/>
+        <entry svalue="2" uvalue="2" desc="遥控"/>
+        <entry svalue="3" uvalue="3" desc="空闲"/>
+        <entry svalue="4" uvalue="4" desc="其他"/>
+    </enum>
+    <enum name="CarrCtrl" desc="载波控制">
+        <entry svalue="1" uvalue="1" desc="加载"/>
+        <entry svalue="2" uvalue="2" desc="去载"/>
+    </enum>
+    <enum name="AddControl" desc="加调控制">
+        <entry svalue="1" uvalue="1" desc="加调"/>
+        <entry svalue="2" uvalue="2" desc="去调"/>
+    </enum>
+    <enum name="ExtendedJumpOutputMode" desc="加调控制">
+        <entry svalue="1" uvalue="1" desc="短码"/>
+        <entry svalue="2" uvalue="2" desc="长码"/>
+        <entry svalue="3" uvalue="3" desc="并行输出"/>
+    </enum>
+    <!-- 模拟源 -->
+    <enum name="DataSource" desc="数据源选择">
+        <entry svalue="1" uvalue="1" desc="内部"/>
+        <!--
+	<entry svalue="2" uvalue="2" desc="文件(含外部文件)"/>
+	-->
+    </enum>
+    <enum name="DataType" desc="数据类型">
+        <entry svalue="0" uvalue="0" desc="无此参数"/>
+        <entry svalue="1" uvalue="1" desc="固定数"/>
+        <entry svalue="2" uvalue="2" desc="随机数"/>
+        <entry svalue="3" uvalue="3" desc="顺序数(由0~255循环)"/>
+        <!--
+	<entry svalue="4" uvalue="4" desc="自定义"/>
+	-->
+    </enum>
+</enums>

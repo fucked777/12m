@@ -1,0 +1,278 @@
+<Mode name="Ka扩二">
+	<if condition="">
+		<Command deviceId="0x6303" modeId="0xFFFF" cmdId="31" deviceName="前端测试开关网络 前端测试开关网络加电开机">
+			<Param id="PowerControl" value="2" name="供电开关控制 开电"/>
+		</Command>
+		<Command deviceId="0x6301" modeId="0xFFFF" unitId="1" deviceName="测试高频箱 测试高频箱">
+			<Param id="EquipPlusCtrl" value="2" name="供电开关控制 开电"/>
+			<Param id="SignalOutput" value="3" name="信号源输出 Ka测控/低速"/>
+		</Command>
+		<Command deviceId="0x6901" modeId="0xFFFF" unitId="1" deviceName="S频段校零信标一体机 S频段校零信标一体机">
+			<Param id="WorkModel" value="1" name="工作模式 校零模式"/>
+			<Param id="AddRemElecCon" value="1" name="加去电控制 关电"/>
+		</Command>
+		<Command deviceId="0x6902" modeId="0xFFFF" unitId="1" deviceName="Ka频段校零信标一体机 Ka频段校零信标一体机">
+			<Param id="WorkModel" value="1" name="工作模式 校零模式"/>
+			<Param id="AddRemElecCon" value="1" name="加去电控制 关电"/>
+		</Command>
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_27" value="18" name="X和Ka模拟源 联试应答/射频源"/>
+		</Command>
+		<Command deviceId="0x6303" modeId="0xFFFF" unitId="1" deviceName="前端测试开关网络 前端测试开关网络">
+			<Param id="SFreqSwitch" value="1" name="S频段输入选择 S射频模拟源"/>
+			<Param id="XFreqSwitch" value="2" name="X频段输入选择 前端信号源输入"/>
+			<Param id="KaFreqSwitch" value="1" name="Ka频段输入选择 Ka模拟源1入(低速)"/>
+			<Param id="SDiffCouplingL" value="2" name="去S差耦合L 关闭"/>
+			<Param id="SDiffCouplingR" value="2" name="去S差耦合R 关闭"/>
+			<Param id="SSumCoupingL" value="2" name="去S和耦合L 关闭"/>
+			<Param id="SSumCoupingR" value="2" name="去S和耦合R 关闭"/>
+			<Param id="XCalibAntenna" value="2" name="去X标校天线 关闭"/>
+			<Param id="XSumSwitchL" value="2" name="去X和开关L 关闭"/>
+			<Param id="XSumSwitchR" value="2" name="去X和开关R 关闭"/>
+			<Param id="KaOffsetFeedCalibAntenna" value="1" name="去Ka标校天线 打开"/>
+			<Param id="KaDiffSwitchL" value="1" name="去Ka差开关L 打开"/>
+			<Param id="KaDiffSwitchR" value="1" name="去Ka差开关R 打开"/>
+			<Param id="KaSumSwitchL" value="1" name="去Ka和开关L 打开"/>
+			<Param id="KaSumSwitchR" value="1" name="去Ka和开关R 打开"/>
+			<Param id="SFreqDataContWeak" value="20" name="S频段衰减 20db"/>
+			<Param id="XFreqDataContWeak" value="20" name="X频段衰减 20db"/>
+			<Param id="KaFreqDataContWeak" value="20" name="Ka频段衰减 20db"/>	
+		</Command>
+	</if>
+	<!-- 测控数字化前端 -->
+	<if condition="CKQD1:1">
+		<Command deviceId="0x7001" modeId="0xFFFF" cmdId="1" deviceName="测控数字化前端 工作方式">
+			<Param id="TaskWorkMode" value="1" name="工作方式 任务方式"/>
+		</Command>
+		<Command deviceId="0x2501" modeId="0xFFFF" unitId="1" deviceName="S射频发射矩阵 S射频发射矩阵">
+			<Param id="ChooseConnect_11" value="2" name="联试应答/射频源 测控前端1模拟源"/>
+		</Command>
+	</if>
+	<if condition="CKQD1:2">
+		<Command deviceId="0x7002" modeId="0xFFFF" cmdId="1" deviceName="测控数字化前端 工作方式">
+			<Param id="TaskWorkMode" value="1" name="工作方式 任务方式"/>
+		</Command>
+		<Command deviceId="0x2501" modeId="0xFFFF" unitId="1" deviceName="S射频发射矩阵 S射频发射矩阵">
+			<Param id="ChooseConnect_11" value="4" name="联试应答/射频源 测控前端1模拟源"/>
+		</Command>
+	</if>
+	<!-- 测控基带 -->
+	<if condition="CKJD1:2" desc="主用基带为基带A">
+		<!-- 注意这个设备ID是一个坑 -->
+		<Command deviceId="0x4002" modeId="0x5" cmdId="102" deviceName="测控基带A 工作方式设置">
+			<Param id="WorkWay" value="7" name="工作方式 射频模拟源闭环"/>
+		</Command>
+		<!--注：上次和李总聊过这个命令和第5个命令效果重复了  把这个命令隐藏掉，24和26的测控基带就标准TTC 扩频模式来看是一模一样的，故26也隐掉
+		<Command deviceId="0x4002" modeId="0x5" cmdId="21" deviceName="测控基带A 模拟源载波输出控制">
+			<Param id="OutputCtrl" value="1" name="输出控制 载波输出"/>
+		</Command>
+		-->
+		<!-- 注意这个设备ID是一个坑 -->
+		<Command deviceId="0x4002" modeId="0x5" cmdId="5" deviceName="测控基带A 上行载波输出">
+			<Param id="CarrOutput" value="1" name="输出控制 载波输出"/>
+			<Param id="ChanSelect" value="9" name="通道 全部"/>
+		</Command>
+	</if>
+	<if condition="CKJD1:4" desc="主用基带为基带B">
+		<!-- 注意这个设备ID是一个坑 -->
+		<Command deviceId="0x4004" modeId="0x5" cmdId="102" deviceName="测控基带A 工作方式设置">
+			<Param id="WorkWay" value="7" name="工作方式 射频模拟源闭环"/>
+		</Command>
+		<!--注：上次和李总聊过这个命令和第5个命令效果重复了  把这个命令隐藏掉，24和26的测控基带就标准TTC 扩频模式来看是一模一样的，故26也隐掉
+		<Command deviceId="0x4004" modeId="0x5" cmdId="21" deviceName="测控基带A 模拟源载波输出控制">
+			<Param id="OutputCtrl" value="1" name="输出控制 载波输出"/>
+		</Command>
+		-->
+		<!-- 注意这个设备ID是一个坑 -->
+		<Command deviceId="0x4004" modeId="0x5" cmdId="5" deviceName="测控基带A 上行载波输出">
+			<Param id="CarrOutput" value="1" name="输出控制 载波输出"/>
+			<Param id="ChanSelect" value="9" name="通道 全部"/>
+		</Command>
+	</if>
+	<!-- 和路左旋场放选中 -->
+	<if condition="KA_LAN_L_SUM:1">
+		<Command deviceId="0x3001" modeId="0xFFFF" unitId="7" deviceName="驱动控制 Ka左旋和路">
+			<Param id="LowNoiseSwitch" value="2" name="Ka左和低噪放 Ka-LNA2"/>
+		</Command>
+		<Command deviceId="0x3202" modeId="0xFFFF" unitId="1" deviceName="Ka频段射频开关网络 输入选择开关">
+			<Param id="SignalSum_Left" value="1" name="Ka左旋和路 Ka-LNA1"/>
+		</Command>
+	</if>
+	<if condition="KA_LAN_L_SUM:2">
+		<Command deviceId="0x3001" modeId="0xFFFF" unitId="7" deviceName="驱动控制 Ka左旋和路">
+			<Param id="LowNoiseSwitch" value="1" name="Ka左和低噪放 Ka-LNA1"/>
+		</Command>
+		<Command deviceId="0x3202" modeId="0xFFFF" unitId="1" deviceName="Ka频段射频开关网络 输入选择开关">
+			<Param id="SignalSum_Left" value="2" name="Ka左旋和路 Ka-LNA2"/>
+		</Command>
+	</if>
+	<!-- 和路右旋场放选中 -->
+	<if condition="KA_LAN_R_SUM:1">
+		<Command deviceId="0x3001" modeId="0xFFFF" unitId="8" deviceName="驱动控制 Ka左旋和路">
+			<Param id="LowNoiseSwitch" value="2" name="Ka右和低噪放 Ka-LNA4"/>
+		</Command>
+		<Command deviceId="0x3202" modeId="0xFFFF" unitId="1" deviceName="Ka频段射频开关网络 输入选择开关">
+			<Param id="SignalSum_Right" value="1" name="Ka右旋和路 Ka-LNA3"/>
+		</Command>
+	</if>
+	<if condition="KA_LAN_R_SUM:2">
+		<Command deviceId="0x3001" modeId="0xFFFF" unitId="8" deviceName="驱动控制 Ka左旋和路">
+			<Param id="LowNoiseSwitch" value="1" name="Ka右和低噪放 Ka-LNA3"/>
+		</Command>
+		<Command deviceId="0x3202" modeId="0xFFFF" unitId="1" deviceName="Ka频段射频开关网络 输入选择开关">
+			<Param id="SignalSum_Right" value="2" name="Ka右旋和路 Ka-LNA4"/>
+		</Command>
+	</if>
+	<!-- 主跟目标接收极化为左旋 -->
+	<if condition="MasterReceivePolar:1">
+		<Command deviceId="0x3202" modeId="0xFFFF" unitId="4" deviceName="Ka频段射频开关网络 2x4矩阵2">
+			<Param id="ChooseConnect_3" value="1" name="测控1 左旋和路"/>
+			<Param id="ChooseConnect_4" value="1" name="测控2 左旋和路"/>
+		</Command>
+	</if>
+	<!-- 主跟目标接收极化为右旋 -->
+	<if condition="MasterReceivePolar:2">
+		<Command deviceId="0x3202" modeId="0xFFFF" unitId="4" deviceName="Ka频段射频开关网络 2x4矩阵2">
+			<Param id="ChooseConnect_3" value="2" name="测控1 右旋和路"/>
+			<Param id="ChooseConnect_4" value="2" name="测控2 右旋和路"/>
+		</Command>
+	</if>
+	<!-- 主跟目标接收极化为左右旋同时 -->
+	<if condition="MasterReceivePolar:3">
+		<Command deviceId="0x3202" modeId="0xFFFF" unitId="4" deviceName="Ka频段射频开关网络 2x4矩阵2">
+			<Param id="ChooseConnect_3" value="1" name="测控1 左旋和路"/>
+			<Param id="ChooseConnect_4" value="2" name="测控2 右旋和路"/>
+		</Command>
+	</if>
+	<!-- 左旋差路场放选中 -->
+	<if condition="KA_LAN_L_DIFF:1">
+		<Command deviceId="0x3001" modeId="0xFFFF" unitId="9" deviceName="驱动控制 Ka左旋差路">
+			<Param id="LowNoiseSwitch" value="2" name="Ka左差低噪放 Ka-LNA6"/>
+		</Command>
+		<Command deviceId="0x3202" modeId="0xFFFF" unitId="1" deviceName="Ka频段射频开关网络 输入选择开关">
+			<Param id="SignalDiff_Left" value="1" name="Ka左旋差路 Ka-LNA5"/>
+		</Command>
+	</if>
+	<if condition="KA_LAN_L_DIFF:2">
+		<Command deviceId="0x3001" modeId="0xFFFF" unitId="9" deviceName="驱动控制 Ka左旋差路">
+			<Param id="LowNoiseSwitch" value="1" name="Ka左差低噪放 Ka-LNA5"/>
+		</Command>
+		<Command deviceId="0x3202" modeId="0xFFFF" unitId="1" deviceName="Ka频段射频开关网络 输入选择开关">
+			<Param id="SignalDiff_Left" value="2" name="Ka左旋差路 Ka-LNA6"/>
+		</Command>
+	</if>
+	<!-- 右旋差路场放选中 -->
+	<if condition="KA_LAN_R_DIFF:1">
+		<Command deviceId="0x3001" modeId="0xFFFF" unitId="10" deviceName="驱动控制 Ka右旋差路">
+			<Param id="LowNoiseSwitch" value="2" name="Ka右差低噪放 Ka-LNA8"/>
+		</Command>
+		<Command deviceId="0x3202" modeId="0xFFFF" unitId="1" deviceName="Ka频段射频开关网络 输入选择开关">
+			<Param id="SignalDiff_Right" value="1" name="Ka右旋差路 Ka-LNA7"/>
+		</Command>
+	</if>
+	<if condition="KA_LAN_R_DIFF:2">
+		<Command deviceId="0x3001" modeId="0xFFFF" unitId="10" deviceName="驱动控制 Ka右旋差路">
+			<Param id="LowNoiseSwitch" value="1" name="Ka右差低噪放 Ka-LNA7"/>
+		</Command>
+		<Command deviceId="0x3202" modeId="0xFFFF" unitId="1" deviceName="Ka频段射频开关网络 输入选择开关">
+			<Param id="SignalDiff_Right" value="2" name="Ka右旋差路 Ka-LNA8"/>
+		</Command>
+	</if>
+	<!-- 主跟目标跟踪极化为左旋 -->
+	<if condition="MasterTrackPolar:1">
+		<Command deviceId="0x3202" modeId="0xFFFF" unitId="5" deviceName="Ka频段射频开关网络 4x8矩阵">
+			<Param id="ChooseConnect_1" value="1" name="测控跟踪和路1 左旋和路"/>
+			<Param id="ChooseConnect_2" value="1" name="测控跟踪差路1 左旋差路"/>
+			<Param id="ChooseConnect_3" value="1" name="测控跟踪和路2 左旋和路"/>
+			<Param id="ChooseConnect_4" value="1" name="测控跟踪差路2 左旋差路"/>
+		</Command>
+	</if>
+	<!-- 主跟目标跟踪极化为右旋 -->
+	<if condition="MasterTrackPolar:2">
+		<Command deviceId="0x3202" modeId="0xFFFF" unitId="5" deviceName="Ka频段射频开关网络 4x8矩阵">
+			<Param id="ChooseConnect_1" value="2" name="测控跟踪和路1 右旋和路"/>
+			<Param id="ChooseConnect_2" value="2" name="测控跟踪差路1 右旋差路"/>
+			<Param id="ChooseConnect_3" value="2" name="测控跟踪和路2 右旋和路"/>
+			<Param id="ChooseConnect_4" value="2" name="测控跟踪差路2 右旋差路"/>
+		</Command>
+	</if>
+	
+	<!-- 测控数字化前端 主跟目标接收极化为左旋  -->
+	<if condition="MasterReceivePolar:1|CKQD1:1">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_1" value="6" name="测控(数传)左旋 S左和"/>
+			<Param id="ChooseConnect_2" value="6" name="测控(数传)右旋 S左和"/>
+		</Command>
+	</if>
+	<if condition="MasterReceivePolar:1|CKQD1:2">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_3" value="6" name="测控(数传)左旋 S左和"/>
+			<Param id="ChooseConnect_4" value="6" name="测控(数传)右旋 S左和"/>
+		</Command>
+	</if>
+	<!-- 测控数字化前端 主跟目标接收极化为右旋 -->
+	<if condition="MasterReceivePolar:2|CKQD1:1">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_1" value="7" name="测控(数传)左旋 S右和"/>
+			<Param id="ChooseConnect_2" value="7" name="测控(数传)右旋 S右和"/>
+		</Command>
+	</if>
+	<if condition="MasterReceivePolar:2|CKQD1:2">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_3" value="7" name="测控(数传)左旋 S右和"/>
+			<Param id="ChooseConnect_4" value="7" name="测控(数传)右旋 S右和"/>
+		</Command>
+	</if>
+	<!-- 测控数字化前端 主跟目标接收极化为左右旋同时 -->
+	<if condition="MasterReceivePolar:3|CKQD1:1">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_1" value="6" name="测控(数传)左旋 S左和"/>
+			<Param id="ChooseConnect_2" value="7" name="测控(数传)右旋 S右和"/>
+		</Command>
+	</if>
+	<if condition="MasterReceivePolar:3|CKQD1:2">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_3" value="6" name="测控(数传)左旋 S左和"/>
+			<Param id="ChooseConnect_4" value="7" name="测控(数传)右旋 S右和"/>
+		</Command>
+	</if>
+	<!-- 测控数字化前端 主跟目标接收极化为左旋  -->
+	<if condition="MasterReceivePolar:1|CKQD2:1">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_1" value="6" name="测控(数传)左旋 S左和"/>
+			<Param id="ChooseConnect_2" value="6" name="测控(数传)右旋 S左和"/>
+		</Command>
+	</if>
+	<if condition="MasterReceivePolar:1|CKQD2:2">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_3" value="6" name="测控(数传)左旋 S左和"/>
+			<Param id="ChooseConnect_4" value="6" name="测控(数传)右旋 S左和"/>
+		</Command>
+	</if>
+	<!-- 测控数字化前端 主跟目标接收极化为右旋 -->
+	<if condition="MasterReceivePolar:2|CKQD2:1">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_1" value="7" name="测控(数传)左旋 S右和"/>
+			<Param id="ChooseConnect_2" value="7" name="测控(数传)右旋 S右和"/>
+		</Command>
+	</if>
+	<if condition="MasterReceivePolar:2|CKQD2:2">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_3" value="7" name="测控(数传)左旋 S右和"/>
+			<Param id="ChooseConnect_4" value="7" name="测控(数传)右旋 S右和"/>
+		</Command>
+	</if>
+	<!-- 测控数字化前端 主跟目标接收极化为左右旋同时 -->
+	<if condition="MasterReceivePolar:3|CKQD2:1">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_1" value="6" name="测控(数传)左旋 S左和"/>
+			<Param id="ChooseConnect_2" value="7" name="测控(数传)右旋 S右和"/>
+		</Command>
+	</if>
+	<if condition="MasterReceivePolar:3|CKQD2:2">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_3" value="6" name="测控(数传)左旋 S左和"/>
+			<Param id="ChooseConnect_4" value="7" name="测控(数传)右旋 S右和"/>
+		</Command>
+	</if>
+</Mode>

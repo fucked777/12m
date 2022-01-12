@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmd UnitType="ADU" ModeType="0xFFFF" desc="天线驱动单元" flag="1001" isModifySetBtn="0">
+    <result MessageType="0x0000F104">
+
+        <field pid="1" GroupId="status1" id="AZMonitMode" desc="方位驱动监控" dataType="uint8" displayFormat="enum|AZMonitMode" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="2" GroupId="status1" id="AZDirvState" desc="方位驱动状态" dataType="uint8" displayFormat="LED|AZDirvState" initValue="" minValue="" maxValue="" step="" unit=""   />
+
+        <field pid="3" GroupId="status2" id="AZDirvPower1" desc="方位驱动器1加电" dataType="uint8" displayFormat="enum|AZDirvPower" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="4" GroupId="status2" id="AZDirvPower2" desc="方位驱动器2加电" dataType="uint8" displayFormat="enum|AZDirvPower" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="5" GroupId="status2" id="AZDirvPower3" desc="方位驱动器3加电" dataType="uint8" displayFormat="enum|AZDirvPower" initValue="" minValue="" maxValue="" step="" unit=""   isShow="0" />
+        <field pid="6" GroupId="status2" id="AZDirvPower4" desc="方位驱动器4加电" dataType="uint8" displayFormat="enum|AZDirvPower" initValue="" minValue="" maxValue="" step="" unit=""   isShow="0" />
+
+        <field pid="7" GroupId="status3" id="STrackAzinVol" desc="方位电机1电流" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.01" unit="A"   />
+        <field pid="8" GroupId="status3" id="STrackPithVol" desc="方位电机2电流" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.01" unit="A"   />
+        <field pid="9" GroupId="status3" id="STrackAGCVol" desc="方位电机3电流" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.01" unit="A"   isShow="0" />
+        <field pid="10" GroupId="status3" id="STrackLockInst" desc="方位电机4电流" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.01" unit="A"   isShow="0" />
+
+        <field pid="11" GroupId="status4" id="AZunLockPlace" desc="方位插锁到位" dataType="uint8" displayFormat="enum|AZunLockPlace" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="12" GroupId="status4" id="AZunUnlockPlace" desc="方位拔锁到位" dataType="uint8" displayFormat="enum|AZunLockPlace" initValue="" minValue="" maxValue="" step="" unit=""  />
+
+        <field pid="13" GroupId="status5" id="AZSoftLimit" desc="方位顺软限位" dataType="uint8" displayFormat="enum|AZSoftLimit" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="14" GroupId="status5" id="AZInveSoftLimit" desc="方位逆软限位" dataType="uint8" displayFormat="enum|AZSoftLimit" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="15" GroupId="status5" id="AZAdvanceLimit" desc="方位顺预限位" dataType="uint8" displayFormat="enum|AZSoftLimit" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="16" GroupId="status5" id="AZInverLimit" desc="方位逆预限位" dataType="uint8" displayFormat="enum|AZSoftLimit" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="17" GroupId="status5" id="AZEndToLimit" desc="方位顺终限位" dataType="uint8" displayFormat="enum|AZSoftLimit" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="18" GroupId="status5" id="AZInverseTerLimit" desc="方位逆终限位" dataType="uint8" displayFormat="enum|AZSoftLimit" initValue="" minValue="" maxValue="" step="" unit=""   />
+
+        <field pid="19" GroupId="status1" id="ZeroCrossAzim" desc="方位正过零" dataType="uint8" displayFormat="enum|ZeroCrossAzim" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="20" GroupId="status1" id="AZInveZeroCros" desc="方位逆过零" dataType="uint8" displayFormat="enum|ZeroCrossAzim" initValue="" minValue="" maxValue="" step="" unit=""    />
+
+        <field pid="21" GroupId="status7" id="AZBrakeState1" desc="方位制动器1状态" dataType="uint8" displayFormat="LED|AZBrakeState" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="22" GroupId="status7" id="AZBrakeState2" desc="方位制动器2状态" dataType="uint8" displayFormat="LED|AZBrakeState" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="23" GroupId="status7" id="AZBrakeState3" desc="方位制动器3状态" dataType="uint8" displayFormat="LED|AZBrakeState" initValue="" minValue="" maxValue="" step="" unit=""   isShow="0"/>
+        <field pid="24" GroupId="status7" id="AZBrakeState4" desc="方位制动器4状态" dataType="uint8" displayFormat="LED|AZBrakeState" initValue="" minValue="" maxValue="" step="" unit=""   isShow="0"/>
+
+        <field pid="25" GroupId="status8" id="AZDirverState1" desc="方位驱动器1状态" dataType="uint8" displayFormat="LED|AZDirverState" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="26" GroupId="status8" id="AZDirverState2" desc="方位驱动器2状态" dataType="uint8" displayFormat="LED|AZDirverState" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="27" GroupId="status8" id="AZDirverState3" desc="方位驱动器3状态" dataType="uint8" displayFormat="LED|AZDirverState" initValue="" minValue="" maxValue="" step="" unit=""   isShow="0"/>
+        <field pid="28" GroupId="status8" id="AZDirverState4" desc="方位驱动器4状态" dataType="uint8" displayFormat="LED|AZDirverState" initValue="" minValue="" maxValue="" step="" unit=""   isShow="0"/>
+
+        <field pid="29" GroupId="status1" id="LightnProtConn" desc="避雷电缆接通" dataType="uint8" displayFormat="LED|LightnProtConn" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"  />
+
+        <field pid="30" GroupId="status1" id="PitchDriveMonit" desc="俯仰驱动监控" dataType="uint8" displayFormat="enum|PitchDriveMonit" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="31" GroupId="status1" id="PitchDrivState" desc="俯仰驱动状态" dataType="uint8" displayFormat="LED|PitchDrivState" initValue="" minValue="" maxValue="" step="" unit=""   />
+
+        <field pid="32" GroupId="status2" id="ElectPitchDirver1" desc="俯仰驱动器1加电" dataType="uint8" displayFormat="enum|ElectPitchDirver" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="33" GroupId="status2" id="ElectPitchDirver2" desc="俯仰驱动器2加电" dataType="uint8" displayFormat="enum|ElectPitchDirver" initValue="" minValue="" maxValue="" step="" unit=""   />
+
+        <field pid="34" GroupId="status3" id="PitchMotorCurr1" desc="俯仰电机1电流" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.01" unit="A"   />
+        <field pid="35" GroupId="status3" id="PitchMotorCurr2" desc="俯仰电机2电流" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.01" unit="A"   />
+
+        <field pid="36" GroupId="status4" id="PitchLatchPlace" desc="俯仰插锁到位" dataType="uint8" displayFormat="enum|PitchLatchPlace" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="37" GroupId="status4" id="PitchUnlockPlace" desc="俯仰拔锁到位" dataType="uint8" displayFormat="enum|PitchLatchPlace" initValue="" minValue="" maxValue="" step="" unit=""   />
+
+        <field pid="38" GroupId="status5" id="UpperPitchLimit" desc="俯仰上软限位" dataType="uint8" displayFormat="enum|UpperPitchLimit" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="39" GroupId="status5" id="SoftLimitunderPit" desc="俯仰下软限位" dataType="uint8" displayFormat="enum|UpperPitchLimit" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="40" GroupId="status5" id="PrelPitchLimit" desc="俯仰上预限位" dataType="uint8" displayFormat="enum|UpperPitchLimit" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="41" GroupId="status5" id="PitchDownPrel" desc="俯仰下预限位" dataType="uint8" displayFormat="enum|UpperPitchLimit" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="42" GroupId="status5" id="UpperFinalPitch" desc="俯仰上终限位" dataType="uint8" displayFormat="enum|UpperPitchLimit" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="43" GroupId="status5" id="LowerPitchLimit" desc="俯仰下终限位" dataType="uint8" displayFormat="enum|UpperPitchLimit" initValue="" minValue="" maxValue="" step="" unit=""   />
+
+        <field pid="44" GroupId="status7" id="PitchBrackeState1" desc="俯仰制动器1状态" dataType="uint8" displayFormat="LED|PitchBrackeState" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="45" GroupId="status7" id="PitchBrackeState2" desc="俯仰制动器2状态" dataType="uint8" displayFormat="LED|PitchBrackeState" initValue="" minValue="" maxValue="" step="" unit=""   />
+
+        <field pid="46" GroupId="status8" id="PitchDirverImp1" desc="俯仰驱动器1状态" dataType="uint8" displayFormat="LED|PitchDirverImp" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="47" GroupId="status8" id="PitchDirverImp2" desc="俯仰驱动器2状态" dataType="uint8" displayFormat="LED|PitchDirverImp" initValue="" minValue="" maxValue="" step="" unit=""   />
+
+        <field pid="48" GroupId="status1" id="ConScanMotor" desc="圆锥扫描电机" dataType="uint8" displayFormat="LED|ConScanMotor" initValue="" minValue="" maxValue="" step="" unit=""   isShow="0" />
+
+        <field pid="49" GroupId="status1" id="AxisDriveMonit" desc="第三轴驱动监控" dataType="uint8" displayFormat="enum|AxisDriveMonit" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="50" GroupId="status1" id="AxisDrivState" desc="第三轴驱动状态" dataType="uint8" displayFormat="LED|AxisDrivState" initValue="" minValue="" maxValue="" step="" unit=""   />
+
+        <field pid="51" GroupId="status2" id="AxisPowerOn1" desc="第三轴驱动器1" dataType="uint8" displayFormat="enum|AxisPowerOn" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="52" GroupId="status2" id="AxisPowerOn2" desc="第三轴驱动器2" dataType="uint8" displayFormat="enum|AxisPowerOn" initValue="" minValue="" maxValue="" step="" unit=""  />
+
+        <field pid="53" GroupId="status3" id="ThirdAxisCurr1" desc="第三轴电机1电流" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.01" unit="A"   />
+        <field pid="54" GroupId="status3" id="ThirdAxisCurr2" desc="第三轴电机2电流" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.01" unit="A"   />
+
+        <field pid="55" GroupId="status4" id="LockAxisPlace" desc="第三轴插锁到位" dataType="uint8" displayFormat="enum|LockAxisPlace" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="56" GroupId="status4" id="UnlockAxisPlace" desc="第三轴拔锁到位" dataType="uint8" displayFormat="enum|LockAxisPlace" initValue="" minValue="" maxValue="" step="" unit=""   />
+
+        <field pid="57" GroupId="status5" id="AxisSoftLimit" desc="第三轴顺软限位" dataType="uint8" displayFormat="enum|AxisSoftLimit" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="58" GroupId="status5" id="AxisInvSoftLimit" desc="第三轴逆软限位" dataType="uint8" displayFormat="enum|AxisSoftLimit" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="59" GroupId="status5" id="PrelimLimitAxis" desc="第三轴顺预限位" dataType="uint8" displayFormat="enum|AxisSoftLimit" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="60" GroupId="status5" id="AxisInvePrelLimit" desc="第三轴逆预限位" dataType="uint8" displayFormat="enum|AxisSoftLimit" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="61" GroupId="status5" id="AxisEndLimitat" desc="第三轴顺终限位" dataType="uint8" displayFormat="enum|AxisSoftLimit" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="62" GroupId="status5" id="AxisInveTermLim" desc="第三轴逆终限位" dataType="uint8" displayFormat="enum|AxisSoftLimit" initValue="" minValue="" maxValue="" step="" unit=""   />
+
+        <field pid="63" GroupId="status1" id="AxisPositZero" desc="第三轴正过零" dataType="uint8" displayFormat="enum|AxisPositZero" initValue="" minValue="" maxValue="" step="" unit=""    />
+        <field pid="64" GroupId="status1" id="AxisInvZeroCros" desc="第三轴逆过零" dataType="uint8" displayFormat="enum|AxisPositZero" initValue="" minValue="" maxValue="" step="" unit=""   />
+
+        <field pid="65" GroupId="status7" id="AxleBrakeState1" desc="第三轴制动器1" dataType="uint8" displayFormat="LED|AxleBrakeState" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="66" GroupId="status7" id="AxleBrakeState2" desc="第三轴制动器2" dataType="uint8" displayFormat="LED|AxleBrakeState" initValue="" minValue="" maxValue="" step="" unit=""   />
+
+        <field pid="67" GroupId="status8" id="ThirdAxisDriver1" desc="第三轴驱动器1" dataType="uint8" displayFormat="LED|ThirdAxisDriver" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="68" GroupId="status8" id="ThirdAxisDriver2" desc="第三轴驱动器2" dataType="uint8" displayFormat="LED|ThirdAxisDriver" initValue="" minValue="" maxValue="" step="" unit=""   />
+
+        <field pid="69" GroupId="status1" id="ThirdAxisPosit" desc="第三轴位置" dataType="uint8" displayFormat="enum|ThirdAxisPosit" initValue="" minValue="" maxValue="" step="" unit=""   isShow="0"/>
+        <field pid="70" GroupId="status1" id="AntennaCollStatus" desc="天线收藏状态" dataType="uint8" displayFormat="enum|AntennaCollStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+    </result>
+
+	<layout>
+		<item id="status1" desc="综合状态" row="0" col = "0" rowspan = "1" colspan = "2"/>
+		<item id="status2" desc="驱动器加去电" row="1" col = "0" rowspan = "1" colspan = "1"/>
+		<item id="status3" desc="电机电流" row="1" col = "1" rowspan = "1" colspan = "1"/>
+        <item id="status7" desc="制动器状态" row="2" col = "0" rowspan = "1" colspan = "1"/>
+		<item id="status8" desc="驱动器状态" row="3" col = "0" rowspan = "1" colspan = "1"/>
+		<item id="status4" desc="插拔锁到位" row="4" col = "0" rowspan = "1" colspan = "1"/>
+		<item id="status5" desc="限位" row="2" col = "1" rowspan = "3" colspan = "1"/>
+
+	</layout>
+</cmd>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 24模式
+S标准TTC					STTC
+S扩二						Skuo2
+一体化上面级				SYTHSMJ
+一体化卫星					SYTHWX
+一体化高码率				SYTHGML
+一体化上面级+扩二共载波		SYTHSMJK2GZB
+一体化上面级+扩二不共载波	SYTHSMJK2BGZB
+一体化卫星+扩二				SYTHWXSK2
+一体化高码率+扩二			SYTHGMLSK2
+ 扩跳						SKT
+X高速						XGS
+Ka高速						KaGS 
+
+26 模式
+
+S标准TTC					STTC
+S扩2						Skuo2
+Ka扩2						KaKuo2
+X低速						XDS
+Ka低速						KaDS
+Ka高速						KaGS
+-->
+<config>
+    <params name="系统自动化测试">
+        <filed id="1_GT" 	name="G/T值测试" 			mode="STTC=GT|Skuo2=GT|SYTHSMJ=GT|SYTHWX=GT|SYTHGML=GT|SYTHSMJK2BGZB=GT|SYTHSMJK2GZB=GT|SYTHWXSK2=GT|SYTHGMLSK2=GT|SKT=GT" 							bind="GTBind"  	/>
+        <filed id="2_EIRP"  name="EIRP值测试" 			mode="STTC=EIRP|Skuo2=EIRP|SYTHSMJ=EIRP|SYTHWX=EIRP|SYTHGML=EIRP|SYTHSMJK2BGZB=EIRP|SYTHSMJK2GZB=EIRP|SYTHWXSK2=EIRP|SYTHGMLSK2=EIRP|SKT=EIRP"   	bind="EIRPBind" 	/>
+        <filed id="3_SCTT"  name="系统捕获时间测试"  	 mode="STTC=SCTT|Skuo2=SCTT_Single|SYTHSMJ=SCTT_Single|SYTHWX=SCTT_Single|SYTHGML=SCTT_Single|SYTHSMJK2BGZB=SCTT_Single|SYTHSMJK2GZB=SCTT_Single|SYTHWXSK2=SCTT_Single|SYTHGMLSK2=SCTT_Single|SKT=SCTT"/>
+        <filed id="4_RMRET" name="测距随机误差测试"   	mode="STTC=RMRET|Skuo2=RMRET|SYTHSMJ=RMRET|SYTHWX=RMRET|SYTHGML=RMRET|SYTHSMJK2BGZB=RMRET|SYTHSMJK2GZB=RMRET|SYTHWXSK2=RMRET|SYTHGMLSK2=RMRET|SKT=RMRET"/>
+        <filed id="5_SRET"  name="测速随机误差测试"  	mode="STTC=SRET|Skuo2=SRET|SYTHSMJ=SRET|SYTHWX=SRET|SYTHGML=SRET|SYTHSMJK2BGZB=SRET|SYTHSMJK2GZB=SRET|SYTHWXSK2=SRET|SYTHGMLSK2=SRET|SKT=SRET"/>
+        <filed id="6_RMSET" name="测距系统误差测试"   	mode="STTC=RMSET|Skuo2=RMSET|SYTHSMJ=RMSET|SYTHWX=RMSET|SYTHGML=RMSET|SYTHSMJK2BGZB=RMSET|SYTHSMJK2GZB=RMSET|SYTHWXSK2=RMSET|SYTHGMLSK2=RMSET|SKT=RMSET"/>
+        <filed id="7_STERT" name="系统遥测误码率测试" 	mode="STTC=STERT|Skuo2=STERT|SYTHSMJ=STERT|SYTHWX=STERT|SYTHGML=STERT|SYTHSMJK2BGZB=STERT|SYTHSMJK2GZB=STERT|SYTHWXSK2=STERT|SYTHGMLSK2=STERT|SKT=STERT"  				/>
+        <!-- <filed type="8" name="高速数传误码率测试" id="8_HSNPERT" configInfo="BS_0X04_0x01_0x01|0x02_0x0-8"/>
+		<filed type="9" name="低速数传误码率测试" id="9_LSNPERT" configInfo="TC_0x06_0x02_0x01_0x0-2"/>
+		<filed type="10" name="遥控小环检测正确率" id="10_RCRDCR" configInfo="TC_0x06_0x02_0x01_0x0-2"/> -->
+    </params>
+    <params name="天伺馈分系统自动化测试">
+        <filed id="11_SBT" name="伺服带宽测试"  mode="STTC=SBT|Skuo2=SBT|KaGS=SBT" />
+        <filed id="12_DFT" name="动态特性测试"  mode="STTC=DFT|Skuo2=DFT|KaGS=DFT" />
+        <filed id="13_CCT" name="收敛特性测试"  mode="STTC=CCT|Skuo2=CCT|KaGS=CCT" />
+    </params>
+    <params name="发射分系统自动化测试">
+        <!-- <filed type="14" name="发射功率测试" id="14_TBT" configInfo="TC_0x06_0x02_0x01_0x0-2"/> -->
+        <filed id="15_PST"   name="功率稳定性测试" 		mode="STTC=PST_S|Skuo2=PST_S"  				/>
+        <filed id="16_LPNT"  name="相位噪声测试"  		mode="STTC=LPNT_S|Skuo2=LPNT_S"  				/>
+        <filed id="17_SASHT" name="杂散及二次谐波测试" 	mode="STTC=SASHT_S|Skuo2=SASHT_S"  				/>
+        <!-- <filed type="18" name="增益平坦度测试" id="18_GFT" configInfo="TC_0x06_0x02_0x01_0x0-2"/> -->
+    </params>
+    <params name="接收分系统自动化测试">
+        <filed id="19_RPNT" name="相位噪声测试" 	mode="XGS=RPNT_X|KaGS=RPNT_Ka" />
+        <filed id="20_STT"  name="杂散测试" 		mode="XGS=STT_X|KaGS=STT_Ka"/>
+        <filed id="21_FRT"  name="频率响应测试" 	mode="STTC=FRT_S|Skuo2=FRT_S|SYTHSMJ=FRT_S|SYTHWX=FRT_S|SYTHGML=FRT_S|SYTHSMJK2BGZB=FRT_S|SYTHSMJK2GZB=FRT_S|SYTHWXSK2=FRT_S|SYTHGMLSK2=FRT_S|SKT=FRT_S|XGS=FRT_X|KaGS=FRT_Ka" />
+    </params>
+    <params name="射频数字化前端自动化测试">
+        <filed id="22_AGCCRAT" name="AGC控制范围、精度测试"  mode="STTC=AGCCRAT|Skuo2=AGCCRAT" />
+        <filed id="23_TFTT"    name="AGC时常测试"            mode="STTC=TFTT|Skuo2=TFTT" />
+    </params>
+    <params name="测控基带自动化测试">
+        <!-- <filed type="24" name="动态范围测试" id="24_DRT" sSTTC="DRT_S_Ka" sK2="DRT_Sk2_Kak2" kaK2="DRT_Sk2_Kak2"  /> -->
+        <filed id="25_TST" name="调制度测试"  mode="STTC=TST" />
+        <!-- <filed type="26" name="扫描特性测试" id="26_SCT" sSTTC="SCT_Sttc"/> -->
+        <filed id="27_LBT"  name="环路带宽测试"  mode="STTC=LBT|Skuo2=LBT|SYTHSMJ=LBT|SYTHWX=LBT|SYTHGML=LBT|SYTHSMJK2BGZB=LBT|SYTHSMJK2GZB=LBT|SYTHWXSK2=LBT|SYTHGMLSK2=LBT|SKT=LBT" />
+        <filed id="28_TDDT" name="遥测解调时延测试" mode="STTC=TDDT|Skuo2=TDDT|SYTHSMJ=TDDT|SYTHWX=TDDT|SYTHGML=TDDT|SYTHSMJK2BGZB=TDDT|SYTHSMJK2GZB=TDDT|SYTHWXSK2=TDDT|SYTHGMLSK2=TDDT|SKT=TDDT"  />
+    </params>
+</config>

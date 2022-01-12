@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBInfo>
+    <IP>132.29.1.240</IP>
+    <Port>2003</Port>
+    <DBName>DB</DBName>
+    <UserName>SYSDBA</UserName>
+    <Password>szoscar55</Password>
+    <Options>SQL_ATTR_LOGIN_TIMEOUT=3;SQL_ATTR_CONNECTION_TIMEOUT=1</Options>
+</DBInfo>

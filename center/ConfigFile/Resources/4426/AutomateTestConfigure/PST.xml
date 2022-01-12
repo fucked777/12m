@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+注意:此xml只负责对界面的元素种类进行控制,元素的布局根据界面不同是是写死的
+type:
+	Enum				下拉列表
+	TextLine			单行文本
+	TextMultiple		多行文本
+	Integer  			整数
+	Double				浮点
+	Hex					16进制
+	IP 					IP地址
+-->
+<test name="功率稳定性测试">
+	<parameter><!-- 测试参数 -->
+		<group name="变时间测试">
+			<item id="TestNumber" name="测试次数" type="Integer" min="1" max="50" />
+			<item id="TimeInter" name="测试时间间隔(分)" type="Integer" min="1" max="1440" />
+		</group>
+	</parameter>
+    <result><!-- 结果参数 -->
+    </result>
+    <bind><!-- 装订参数 -->
+    </bind>
+</test>

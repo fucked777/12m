@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+id  枚举ID  -与设备类型关联
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums ExtenType="TC" ModeType = "0xFFFF" edition="1.1.1.1">
+	<enum name="TestCtrl" desc="测试控制">
+		<entry svalue="1" uvalue="1" desc="开始测试" />
+		<entry svalue="2" uvalue="2" desc="终止测试" />
+	</enum>
+	<enum name="SignalSelect" desc="信号源选择">
+		<entry svalue="1" uvalue="1" desc="后端" />
+		<entry svalue="2" uvalue="2" desc="前端" />
+	</enum>
+	<enum name="SpectSelect" desc="频谱仪选择">
+		<entry svalue="1" uvalue="1" desc="后端" />
+		<entry svalue="2" uvalue="2" desc="前端" />
+	</enum>
+	<enum name="SignalAverage" desc="信号Average">
+		<entry svalue="0" uvalue="0" desc="on" />
+		<entry svalue="1" uvalue="1" desc="off" />
+	</enum>
+	<enum name="MRKNoise" desc="噪声MRKNoise">
+		<entry svalue="0" uvalue="0" desc="on" />
+		<entry svalue="1" uvalue="1" desc="off" />
+	</enum>
+	<enum name="SpectAverage" desc="频谱仪Average">
+		<entry svalue="0" uvalue="0" desc="on" />
+		<entry svalue="1" uvalue="1" desc="off" />
+	</enum>
+	<enum name="SpectNoiseMarkerNoise" desc="频谱仪NoiseMarkerNoise">
+		<entry svalue="0" uvalue="0" desc="on" />
+		<entry svalue="1" uvalue="1" desc="off" />
+	</enum>
+
+	<enum name="TestControl" desc="测试控制">
+		<entry svalue="1" uvalue="1" desc="开始测试" />
+		<entry svalue="2" uvalue="2" desc="终止测试" />
+	</enum>
+
+	<enum name="OutputSwitch" desc="射频前端输出切换">
+		<entry svalue="0" uvalue="0" desc="on" />
+		<entry svalue="1" uvalue="1" desc="off" />
+	</enum>
+	<enum name="SpectMaxhold" desc="频谱仪Maxhold">
+		<entry svalue="0" uvalue="0" desc="on" />
+		<entry svalue="1" uvalue="1" desc="off" />
+	</enum>
+
+	<enum name="SpectMarkerNoise" desc="频谱仪MarkerNoise">
+		<entry svalue="0" uvalue="0" desc="on" />
+		<entry svalue="1" uvalue="1" desc="off" />
+	</enum>
+	<enum name="SpectDeltaMarker" desc="频谱仪DeltaMarker">
+		<entry svalue="0" uvalue="0" desc="on" />
+		<entry svalue="1" uvalue="1" desc="off" />
+	</enum>
+	<enum name="SpectPhaseNoise" desc="频谱仪PhaseNoise">
+		<entry svalue="0" uvalue="0" desc="on" />
+		<entry svalue="1" uvalue="1" desc="off" />
+	</enum>
+	
+	<enum name="OutputRF" desc="射频输出">
+		<entry svalue="0" uvalue="0" desc="on" />
+		<entry svalue="1" uvalue="1" desc="off" />
+	</enum>
+	<enum name="Scann" desc="扫描">
+		<entry svalue="0" uvalue="0" desc="on" />
+		<entry svalue="1" uvalue="1" desc="off" />
+	</enum>	
+	<enum name="Choose" desc="选择">
+		<entry svalue="1" uvalue="1" desc="后端" />
+		<entry svalue="2" uvalue="2" desc="前端" />
+	</enum>	
+	<enum name="ModulType" desc="调制度类型">
+		<entry svalue="1" uvalue="1" desc="遥控" />
+		<entry svalue="2" uvalue="2" desc="测距主音" />
+		<entry svalue="3" uvalue="3" desc="测距次音" />
+		<entry svalue="4" uvalue="4" desc="话音" />
+		<entry svalue="5" uvalue="5" desc="遥测模拟源" />
+	</enum>	
+</enums>

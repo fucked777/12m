@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x00" modeID="0x21" unitType="TIRU" desc="接收机及测量单元">
+	<Triggers>
+		<Trigger id="DistMethodWay" desc="距离预报">
+			<TriggerValue value="1" desc="手动">
+				<Receiver id="DistPredMethod" desc="预报距离值" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="轨道根数">
+				<Receiver id="DistPredMethod" desc="预报距离值" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="DTE弹道数据">
+				<Receiver id="DistPredMethod" desc="预报距离值" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

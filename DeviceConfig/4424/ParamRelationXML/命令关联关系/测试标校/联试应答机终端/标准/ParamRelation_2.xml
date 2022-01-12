@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x06" deviceID="0x00" modeID="0x1" cmdID="2" desc="工作方式设置">
+	<Triggers>
+		<Trigger id="WorkWay" desc="工作方式">
+			<TriggerValue value="1" desc="动态仿真">
+				<Receiver id="FileLoop" desc="文件循环" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="FileName" desc="文件名称" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="文件仿真">
+				<Receiver id="FileLoop" desc="文件循环" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="FileName" desc="文件名称" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

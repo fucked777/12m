@@ -1,0 +1,43 @@
+<Links>
+	<Link id="1" name="任务方式">
+		<Mode id="1" name="标准TTC" path="./任务方式/标准TTC.xml"/>
+		<Mode id="2" name="S扩二" path="./任务方式/标准TTC.xml"/>
+		<Mode id="3" name="Ka扩二" path="./任务方式/Ka扩二.xml"/>
+		<Mode id="4" name="X低速" path="./任务方式/X低速.xml"/>
+		<Mode id="5" name="Ka低速" path="./任务方式/Ka低速.xml"/>
+		<Mode id="6" name="Ka高速" path="./任务方式/Ka高速.xml"/>
+		<Mode id="14" name="扩跳" path="./任务方式/标准TTC.xml"/>
+	</Link>
+	<Link id="2" name="联试应答机有线闭环">
+		<Mode id="1" name="标准TTC" path="./联试应答机有线闭环/标准TTC.xml"/>
+		<Mode id="2" name="S扩二" path="./联试应答机有线闭环/标准TTC.xml"/>
+		<Mode id="3" name="Ka扩二" path="./联试应答机有线闭环/Ka扩二.xml"/>
+		<Mode id="14" name="扩跳" path="./联试应答机有线闭环/扩跳.xml"/>
+	</Link>
+	<Link id="3" name="偏馈校零变频器闭环">
+		<Mode id="1" name="标准TTC" path="./偏馈校零变频器闭环/标准TTC.xml"/>
+		<Mode id="2" name="S扩二" path="./偏馈校零变频器闭环/标准TTC.xml"/>
+		<Mode id="3" name="Ka扩二" path="./偏馈校零变频器闭环/Ka扩二.xml"/>
+		<Mode id="14" name="扩跳" path="./偏馈校零变频器闭环/标准TTC.xml"/>
+	</Link>
+	<Link id="5" name="射频模拟源有线闭环">
+		<Mode id="1" name="标准TTC" path="./射频模拟源有线闭环/标准TTC.xml"/>
+		<Mode id="2" name="S扩二" path="./射频模拟源有线闭环/标准TTC.xml"/>
+		<Mode id="3" name="Ka扩二" path="./射频模拟源有线闭环/Ka扩二.xml"/>
+		<Mode id="4" name="X低速" path="./射频模拟源有线闭环/X低速.xml"/>
+		<Mode id="5" name="Ka低速" path="./射频模拟源有线闭环/Ka低速.xml"/>
+		<Mode id="6" name="Ka高速" path="./射频模拟源有线闭环/Ka高速.xml"/>
+		<Mode id="14" name="扩跳" path="./射频模拟源有线闭环/标准TTC.xml"/>
+	</Link>
+	<Link id="6" name="中频闭环">
+		<Mode id="4" name="X低速" path="./中频闭环/X低速.xml"/>
+		<Mode id="5" name="Ka低速" path="./中频闭环/X低速.xml"/>
+		<Mode id="6" name="Ka高速" path="./中频闭环/Ka高速.xml"/>
+	</Link>
+
+	<!-- 链路重置 测试使用 -->
+	<Link id="8" name="链路重置">
+		<Mode id="1" name="链路重置1" path="./链路重置/链路重置1.xml"/>
+		<Mode id="2" name="链路重置2" path="./链路重置/链路重置2.xml"/>
+	</Link>
+</Links>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="LDUI" ModeType="0x0C" desc="解调单元I路" flag="1001">
+	<result MessageType="0x0000F104">
+		<field pid="1" GroupId="statuss1" id="TeleCarrSysnLock" desc="遥测副载波同步" dataType="uint8" displayFormat="LED|TeleCarrSysnLock" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="2" GroupId="statuss1" id="CarrStatusCapTimeI" desc="I路位同步" dataType="uint8" displayFormat="LED|CarrStatusCapTimeI" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="3" GroupId="statuss1" id="FrameSysncLockI" desc="I路帧同步" dataType="uint8" displayFormat="LED|Carenum|FrameSyncLockI" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="4" GroupId="statuss1" id="DepuFramSysncLockI" desc="I路副帧同步" dataType="uint8" displayFormat="LED|DepuFramSysncLockI" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="145" GroupId="status1" id="CodeWay" desc="译码方式" dataType="uint8" displayFormat="enum|CodeWay" initValue="1" minValue="" maxValue="" step="" unit="" />
+		<field pid="101" GroupId="status1" id="CodeSpeed" desc="码速率" dataType="uint" displayFormat="double" initValue="1000" minValue="83" maxValue="30000000" step="0.1" unit="bps"/>
+		<field pid="102" GroupId="status1" id="CodeType" desc="码型" dataType="uint8" displayFormat="enum|CodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="103" GroupId="status1" id="CodeElemLoopBand" desc="码元环路带宽" dataType="uint8" displayFormat="enum|CodeElemLoopBand" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="104" GroupId="status3" id="ViterbiDecoding" desc="Viterbi译码" dataType="uint8" displayFormat="enum|ViterbiDecoding" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="105" GroupId="status3" id="G2PhaseReversal" desc="Viterbi-G2相位" dataType="uint8" displayFormat="enum|G2PhaseReversal" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="106" GroupId="status9" id="Descramble" desc="解扰" dataType="uint8" displayFormat="enum|Descramble" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="107" GroupId="status9" id="DescPolyLenght" desc="解扰多项式长度" dataType="uint8" displayFormat="enum|DescPolyLenght" initValue="8" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="108" GroupId="status9" id="DescSequeChoose" desc="解扰顺序选择" dataType="uint8" displayFormat="enum|DescSequeChoose" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="109" GroupId="status9" id="DescPolynomial" desc="解扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="110" GroupId="status9" id="DescInitPhase" desc="解扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit="" isShow="0"/>
+		<field pid="111" GroupId="status4" id="RSDecoding" desc="R-S译码" dataType="uint8" displayFormat="enum|RSDecoding" initValue="0" minValue="" maxValue="" step="" unit=""/>
+		<field pid="112" GroupId="status4" id="VirtualFill" desc="虚拟填充" dataType="uint8" displayFormat="enum|VirtualFill" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="113" GroupId="status4" id="DoubleBaseChange" desc="双基选择" dataType="uint8" displayFormat="enum|DoubleBaseChange" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="114" GroupId="status4" id="InterlaceDeep" desc="交错深度" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="5" step="" unit=""/>
+		<field pid="115" GroupId="status5" id="TurboDecoding" desc="Turbo译码" dataType="uint8" displayFormat="enum|TurboDecoding" initValue="0" minValue="" maxValue="" step="" unit=""/>
+		<field pid="116" GroupId="status5" id="TurboCodeLength" desc="Turbo码长度" dataType="uint8" displayFormat="enum|TurboCodeLength" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="117" GroupId="status5" id="TurboCodeRate" desc="Turbo码率" dataType="uint8" displayFormat="enum|TurboCodeRate" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="118" GroupId="status6" id="LDPCDecoding" desc="LDPC译码" dataType="uint8" displayFormat="enum|LDPCDecoding" initValue="0" minValue="" maxValue="" step="" unit=""/>
+		<field pid="119" GroupId="status6" id="LDPCCodeRate" desc="LDPC码率" dataType="uint8" displayFormat="enum|LDPCCodeRate" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="120" GroupId="status6" id="LDPCCodeLength" desc="LDPC码长度" dataType="uint8" displayFormat="enum|LDPCCodeLength" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="121" GroupId="status2" id="FontLength" desc="字长" dataType="uint8" displayFormat="UInt8" initValue="4" minValue="4" maxValue="16" step="" unit="位" isShow="0"/>
+		<field pid="122" GroupId="status2" id="FrameLenght" desc="帧长" dataType="ushort" displayFormat="UInt16" initValue="4" minValue="4" maxValue="2048" step="" unit="字" isShow="0"/>
+		<field pid="123" GroupId="status9" id="SubFrameLenght" desc="格式(副帧)长" dataType="ushort" displayFormat="UInt16" initValue="4" minValue="4" maxValue="256" step="" unit="帧" isShow="0"/>
+		<field pid="124" GroupId="status2" id="FraSynCodGroLen" desc="帧同步码组长度" dataType="uint8" displayFormat="UInt8" initValue="16" minValue="16" maxValue="192" step="" unit="位" isShow="0"/>
+		<field pid="125" GroupId="status2" id="FraSynCodGroPic" desc="帧同步码组图样" dataType="char|24" displayFormat="HexString" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="126" GroupId="status2" id="FraCodGroPos" desc="帧码组位置" dataType="uint8" displayFormat="enum|FraCodGroPos" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="127" GroupId="status9" id="SubFraSynWay" desc="副帧同步方式" dataType="uint8" displayFormat="enum|SubFraSynWay" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="128" GroupId="status9" id="IDCountPos" desc="ID计数位置" dataType="ushort" displayFormat="UInt16" initValue="1" minValue="0" maxValue="1024" step="" unit="字" isShow="0"/>
+		<field pid="129" GroupId="status9" id="IDCountBaseValue" desc="ID计数基值" dataType="uint8" displayFormat="enum|IDCountBaseValue" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="130" GroupId="status9" id="IDCountDirect" desc="ID计数方向" dataType="uint8" displayFormat="enum|IDCountDirect" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="131" GroupId="status9" id="SubFraCodGroPos" desc="副帧码组位置" dataType="ushort" displayFormat="UInt16" initValue="1" minValue="" maxValue="" step="" unit="字" isShow="0"/>
+		<field pid="132" GroupId="status9" id="SubFraSynCodGroLen" desc="副帧码组长度" dataType="uint8" displayFormat="enum|SubFraSynCodGroLen" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="133" GroupId="status9" id="SubFraSynCodGro" desc="副帧同步码组" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="134" GroupId="status7" id="FrameSyncSearch" desc="搜索容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="192" step="" unit="位" isShow="0"/>
+		<field pid="135" GroupId="status7" id="FrameSynLock" desc="锁定容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="192" step="" unit="位" isShow="0"/>
+		<field pid="136" GroupId="status7" id="FrameSynCheckErr" desc="校核容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="192" step="" unit="位" isShow="0"/>
+		<field pid="137" GroupId="status8" id="FrameSynCheckTest" desc="校核检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="1" unit="帧" isShow="0"/>
+		<field pid="138" GroupId="status8" id="FrameSynLockTest" desc="锁定检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="1" unit="帧" isShow="0"/>
+		<field pid="139" GroupId="status9" id="SubFrameSynSearch" desc="副帧同步容错搜索容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="7" step="1" unit="位" isShow="0"/>
+		<field pid="140" GroupId="status9" id="SubFrameSynCheck" desc="副帧同步容错校核容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="7" step="1" unit="位" isShow="0"/>
+		<field pid="141" GroupId="status9" id="SubFrameSynLock" desc="副帧同步容错锁定容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="7" step="1" unit="位" isShow="0"/>
+		<field pid="142" GroupId="status9" id="SubCheckFrameNum" desc="副帧校核帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="1" unit="副帧" isShow="0"/>
+		<field pid="143" GroupId="status9" id="SubLockFrameNum" desc="副帧锁定帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="1" unit="副帧" isShow="0"/>
+		<!-- 增加下面四个  颜总  6-18-->
+		<field pid="144" GroupId="status9" id="UnbindFormat" desc="解扰格式" dataType="uint8" displayFormat="enum|UnbindFormat" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="146" GroupId="status9" id="Save2" desc="保留" dataType="uint8" displayFormat="UInt8" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="147" GroupId="status9" id="Save3" desc="保留" dataType="uint8" displayFormat="UInt8" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+	</result>
+	<layout>
+		<item id="statuss1" desc="锁定状态" row="0" col="0" rowspan="1" colspan="2"/>
+		<item id="status1" desc="码同步参数" row="0" col="0" rowspan="1" colspan="1"/>
+		<item id="status2" desc="帧同步参数" row="0" col="1" rowspan="1" colspan="1"/>
+		<item id="status3" desc="Viterbi译码" row="1" col="0" rowspan="1" colspan="1"/>
+		<item id="status4" desc="RS译码" row="2" col="0" rowspan="1" colspan="1"/>
+		<item id="status5" desc="Turbo译码" row="3" col="0" rowspan="1" colspan="1"/>
+		<item id="status6" desc="LDPC译码" row="4" col="0" rowspan="1" colspan="1"/>
+		<item id="status7" desc="容错位数" row="1" col="1" rowspan="1" colspan="1"/>
+		<item id="status8" desc="三态逻辑" row="2" col="1" rowspan="1" colspan="1"/>
+		<item id="status9" desc="解扰" row="3" col="1" rowspan="1" colspan="1"/>
+	</layout>
+</cmd>

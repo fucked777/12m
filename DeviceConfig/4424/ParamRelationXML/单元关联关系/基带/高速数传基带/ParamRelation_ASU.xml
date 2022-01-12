@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x01" modeID="0x0" unitType="ASU" desc="模拟源单元">
+	<Triggers>
+		<Trigger id="MNXY_AnalDopSwitch" desc="多普勒开关">
+			<TriggerValue value="1" desc="开">
+				<Receiver id="MNXY_AnalDoppRange" desc="多普勒范围" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_AnalVarRate" desc="多普勒变化率" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="关">
+				<Receiver id="MNXY_AnalDoppRange" desc="多普勒范围" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_AnalVarRate" desc="多普勒变化率" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="MNXY_NoiseSwitch" desc="噪声输出开关">
+			<TriggerValue value="1" desc="开">
+				<Receiver id="MNXY_NoiseDensAtten" desc="噪声衰减" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="关">
+				<Receiver id="MNXY_NoiseDensAtten" desc="噪声衰减" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="MNXY_IWayGroupLen" desc="Q路帧同步码组长度">
+			<TriggerValue value="8" desc="8位">
+				<Receiver id="MNXY_IWayBlockPatt" desc="I路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="16" desc="16位">
+				<Receiver id="MNXY_IWayBlockPatt" desc="I路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="24位">
+				<Receiver id="MNXY_IWayBlockPatt" desc="I路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="32位">
+				<Receiver id="MNXY_IWayBlockPatt" desc="I路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="40" desc="40位">
+				<Receiver id="MNXY_IWayBlockPatt" desc="I路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="48" desc="48位">
+				<Receiver id="MNXY_IWayBlockPatt" desc="I路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="56" desc="56位">
+				<Receiver id="MNXY_IWayBlockPatt" desc="I路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="64" desc="64位">
+				<Receiver id="MNXY_IWayBlockPatt" desc="I路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="MNXY_QWayGroupLen" desc="Q路帧同步码组长度">
+			<TriggerValue value="8" desc="8位">
+				<Receiver id="MNXY_QBlockPatt" desc="Q路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="16" desc="16位">
+				<Receiver id="MNXY_QBlockPatt" desc="Q路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="24位">
+				<Receiver id="MNXY_QBlockPatt" desc="Q路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="32位">
+				<Receiver id="MNXY_QBlockPatt" desc="Q路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="40" desc="40位">
+				<Receiver id="MNXY_QBlockPatt" desc="Q路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="48" desc="48位">
+				<Receiver id="MNXY_QBlockPatt" desc="Q路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="56" desc="56位">
+				<Receiver id="MNXY_QBlockPatt" desc="Q路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="64" desc="64位">
+				<Receiver id="MNXY_QBlockPatt" desc="Q路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="MNXY_ICodingMode" desc="I路编码方式">
+			<TriggerValue value="1" desc="关">
+				<Receiver id="MNXY_IRSCodeType" desc="RS码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IRSCodeBase" desc="RS码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IRSInterDepth" desc="RS交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ILDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ITurboCodetype" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IConvolCode" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ViterbiI" desc="卷积输出相位" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="Viterbi">
+				<Receiver id="MNXY_IRSCodeType" desc="RS码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IRSCodeBase" desc="RS码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IRSInterDepth" desc="RS交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ILDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ITurboCodetype" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IConvolCode" desc="卷积码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ViterbiI" desc="卷积输出相位" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="R-S">
+				<Receiver id="MNXY_IRSCodeType" desc="RS码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IRSCodeBase" desc="RS码坐标基" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IRSInterDepth" desc="RS交织深度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ILDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ITurboCodetype" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IConvolCode" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ViterbiI" desc="卷积输出相位" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="R-S+Viterbi">
+				<Receiver id="MNXY_IRSCodeType" desc="RS码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IRSCodeBase" desc="RS码坐标基" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IRSInterDepth" desc="RS交织深度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ILDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ITurboCodetype" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IConvolCode" desc="卷积码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ViterbiI" desc="卷积输出相位" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="5" desc="Turbo">
+				<Receiver id="MNXY_IRSCodeType" desc="RS码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IRSCodeBase" desc="RS码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IRSInterDepth" desc="RS交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ILDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ITurboCodetype" desc="Turbo码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IConvolCode" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ViterbiI" desc="卷积输出相位" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="6" desc="LDPC">
+				<Receiver id="MNXY_IRSCodeType" desc="RS码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IRSCodeBase" desc="RS码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IRSInterDepth" desc="RS交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ILDPCType" desc="LDPC类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ITurboCodetype" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IConvolCode" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ViterbiI" desc="卷积输出相位" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="MNXY_QCodingMode" desc="Q路编码方式">
+			<TriggerValue value="1" desc="关">
+				<Receiver id="MNXY_QRSCodeType" desc="RS码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QRSCodeBase" desc="RS码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QRSInterlDepth" desc="RS交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QLDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QTurboCodetype" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QConvolCode" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ViterbiQ" desc="卷积输出相位" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="Viterbi">
+				<Receiver id="MNXY_QRSCodeType" desc="RS码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QRSCodeBase" desc="RS码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QRSInterlDepth" desc="RS交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QLDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QTurboCodetype" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QConvolCode" desc="卷积码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ViterbiQ" desc="卷积输出相位" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="R-S">
+				<Receiver id="MNXY_QRSCodeType" desc="RS码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QRSCodeBase" desc="RS码坐标基" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QRSInterlDepth" desc="RS交织深度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QLDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QTurboCodetype" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QConvolCode" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ViterbiQ" desc="卷积输出相位" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="R-S+Viterbi">
+				<Receiver id="MNXY_QRSCodeType" desc="RS码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QRSCodeBase" desc="RS码坐标基" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QRSInterlDepth" desc="RS交织深度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QLDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QTurboCodetype" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QConvolCode" desc="卷积码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ViterbiQ" desc="卷积输出相位" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="5" desc="Turbo">
+				<Receiver id="MNXY_QRSCodeType" desc="RS码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QRSCodeBase" desc="RS码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QRSInterlDepth" desc="RS交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QLDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QTurboCodetype" desc="Turbo码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QConvolCode" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ViterbiQ" desc="卷积输出相位" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="6" desc="LDPC">
+				<Receiver id="MNXY_QRSCodeType" desc="RS码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QRSCodeBase" desc="RS码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QRSInterlDepth" desc="RS交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QLDPCType" desc="LDPC类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QTurboCodetype" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QConvolCode" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ViterbiQ" desc="卷积输出相位" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="MNXY_CRCCheckSwI" desc="I路CRC校验">
+			<TriggerValue value="1" desc="关">
+				<Receiver id="MNXY_CRCPloyI" desc="CRC多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_CRCPhaseI" desc="CRC初相" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_CRCCheckI" desc="CRC校验区" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="CCITT">
+				<Receiver id="MNXY_CRCPloyI" desc="CRC多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_CRCPhaseI" desc="CRC初相" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_CRCCheckI" desc="CRC校验区" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="CRC16">
+				<Receiver id="MNXY_CRCPloyI" desc="CRC多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_CRCPhaseI" desc="CRC初相" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_CRCCheckI" desc="CRC校验区" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="MNXY_CRCCheckSwQ" desc="I路CRC校验">
+			<TriggerValue value="1" desc="关">
+				<Receiver id="MNXY_CRCPloyQ" desc="CRC多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_CRCPhaseQ" desc="CRC初相" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_CRCCheckQ" desc="CRC校验区" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="CCITT">
+				<Receiver id="MNXY_CRCPloyQ" desc="CRC多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_CRCPhaseQ" desc="CRC初相" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_CRCCheckQ" desc="CRC校验区" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="CRC16">
+				<Receiver id="MNXY_CRCPloyQ" desc="CRC多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_CRCPhaseQ" desc="CRC初相" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_CRCCheckQ" desc="CRC校验区" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="MNXY_IScrambSwitchR" desc="I路编码前加扰开关">
+			<TriggerValue value="1" desc="不加扰">
+				<Receiver id="MNXY_IScramPolyCode" desc="加扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IInitTermCode" desc="加扰初项" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IScrambOutputPosit" desc="加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="自动加扰">
+				<Receiver id="MNXY_IScramPolyCode" desc="加扰多项式" isEnable="0" values="1A9" minValue="" maxValue="" />
+				<Receiver id="MNXY_IInitTermCode" desc="加扰初项" isEnable="0" values="FFFFFFFF" minValue="" maxValue="" />
+				<Receiver id="MNXY_IScrambOutputPosit" desc="加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="人工设置">
+				<Receiver id="MNXY_IScramPolyCode" desc="加扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IInitTermCode" desc="加扰初项" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IScrambOutputPosit" desc="加扰输出位置" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="MNXY_IScrambSwitch" desc="Q路编码前加扰开关">
+			<TriggerValue value="1" desc="不加扰">
+				<Receiver id="MNXY_IScramAfterCode" desc="加扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IInitAfterCode" desc="加扰初项" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IAfterOutputPosit" desc="加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="自动加扰">
+				<Receiver id="MNXY_IScramAfterCode" desc="加扰多项式" isEnable="0" values="1A9" minValue="" maxValue="" />
+				<Receiver id="MNXY_IInitAfterCode" desc="加扰初项" isEnable="0" values="FFFFFFFF" minValue="" maxValue="" />
+				<Receiver id="MNXY_IAfterOutputPosit" desc="加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="人工设置">
+				<Receiver id="MNXY_IScramAfterCode" desc="加扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IInitAfterCode" desc="加扰初项" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IAfterOutputPosit" desc="加扰输出位置" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="MNXY_QFrontbSwitch" desc="I路编码后加扰开关">
+			<TriggerValue value="1" desc="不加扰">
+				<Receiver id="MNXY_QScranChanCode" desc="加扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QPreChanCode" desc="加扰初项" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QFrontOutputPosit" desc="加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="自动加扰">
+				<Receiver id="MNXY_QScranChanCode" desc="加扰多项式" isEnable="0" values="1A9" minValue="" maxValue="" />
+				<Receiver id="MNXY_QPreChanCode" desc="加扰初项" isEnable="0" values="FFFFFFFF" minValue="" maxValue="" />
+				<Receiver id="MNXY_QFrontOutputPosit" desc="加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="人工设置">
+				<Receiver id="MNXY_QScranChanCode" desc="加扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QPreChanCode" desc="加扰初项" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QFrontOutputPosit" desc="加扰输出位置" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="MNXY_QAfterSwitch" desc="Q路编码后加扰开关">
+			<TriggerValue value="1" desc="不加扰">
+				<Receiver id="MNXY_QAfterChanCode" desc="加扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QAfterInitCode" desc="加扰初项" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QAfterOutPosit" desc="加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="自动加扰">
+				<Receiver id="MNXY_QAfterChanCode" desc="加扰多项式" isEnable="0" values="1A9" minValue="" maxValue="" />
+				<Receiver id="MNXY_QAfterInitCode" desc="加扰初项" isEnable="0" values="FFFFFFFF" minValue="" maxValue="" />
+				<Receiver id="MNXY_QAfterOutPosit" desc="加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="人工设置">
+				<Receiver id="MNXY_QAfterChanCode" desc="加扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QAfterInitCode" desc="加扰初项" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QAfterOutPosit" desc="加扰输出位置" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="MNXY_ModulSystem" desc="调制体制">
+			<TriggerValue value="1" desc="BPSK">
+				<Receiver id="MNXY_IQPowerRatio" desc="IQ路功率比" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ConstMapp" desc="星座映射" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_FrameSynch" desc="帧同步方式" isEnable="0" values="1:合路" minValue="" maxValue="" />
+				<Receiver id="MNXY_GrayCodSelect" desc="Gray编码选择" isEnable="0" values="9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="MNXY_PhaseRotation" desc="相位旋转" isEnable="0" values="1:CCSDS(逆时针)" minValue="" maxValue="" />
+				<Receiver id="MNXY_IChannRate" desc="码速率" isEnable="0" values="" minValue="10" maxValue="500" />
+				<Receiver id="MNXY_QChanRate" desc="码速率" isEnable="0" values="" minValue="10" maxValue="500" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="QPSK">
+				<Receiver id="MNXY_IQPowerRatio" desc="IQ路功率比" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ConstMapp" desc="星座映射" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_FrameSynch" desc="帧同步方式" isEnable="1" values="1:合路;2:分路" minValue="" maxValue="" />
+				<Receiver id="MNXY_GrayCodSelect" desc="Gray编码选择" isEnable="1" values="1:Gray0;2:Gray1;3:Gray2;4:Gray3;5:Gray4;6:Gray5;7:Gray6;8:Gray7;9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="MNXY_PhaseRotation" desc="相位旋转" isEnable="1" values="1:CCSDS(逆时针);2:Inverted(顺时针)" minValue="" maxValue="" />
+				<Receiver id="MNXY_IChannRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="1000" />
+				<Receiver id="MNXY_QChanRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="1000" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="UQPSK">
+				<Receiver id="MNXY_IQPowerRatio" desc="IQ路功率比" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ConstMapp" desc="星座映射" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_FrameSynch" desc="帧同步方式" isEnable="0" values="2:分路" minValue="" maxValue="" />
+				<Receiver id="MNXY_GrayCodSelect" desc="Gray编码选择" isEnable="0" values="9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="MNXY_PhaseRotation" desc="相位旋转" isEnable="1" values="1:CCSDS(逆时针);2:Inverted(顺时针)" minValue="" maxValue="" />
+				<Receiver id="MNXY_IChannRate" desc="码速率" isEnable="1" values="" minValue="5" maxValue="1000" />
+				<Receiver id="MNXY_QChanRate" desc="码速率" isEnable="1" values="" minValue="5" maxValue="1000" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="SQPSK">
+				<Receiver id="MNXY_IQPowerRatio" desc="IQ路功率比" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ConstMapp" desc="星座映射" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_FrameSynch" desc="帧同步方式" isEnable="1" values="1:合路;2:分路" minValue="" maxValue="" />
+				<Receiver id="MNXY_GrayCodSelect" desc="Gray编码选择" isEnable="0" values="9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="MNXY_PhaseRotation" desc="相位旋转" isEnable="1" values="1:CCSDS(逆时针);2:Inverted(顺时针)" minValue="" maxValue="" />
+				<Receiver id="MNXY_IChannRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="1000" />
+				<Receiver id="MNXY_QChanRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="1000" />
+			</TriggerValue>
+			<TriggerValue value="5" desc="8PSK">
+				<Receiver id="MNXY_IQPowerRatio" desc="IQ路功率比" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ConstMapp" desc="星座映射" isEnable="1" values="1:Gray1;2:Gray2;3:Gray3;4:Gray4;5:Gray5;6:Gray6;7:Natural;8:Natura2" minValue="" maxValue="" />
+				<Receiver id="MNXY_FrameSynch" desc="帧同步方式" isEnable="1" values="1:合路;2:分路" minValue="" maxValue="" />
+				<Receiver id="MNXY_GrayCodSelect" desc="Gray编码选择" isEnable="0" values="9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="MNXY_PhaseRotation" desc="相位旋转" isEnable="1" values="1:CCSDS(逆时针);2:Inverted(顺时针)" minValue="" maxValue="" />
+				<Receiver id="MNXY_IChannRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="1500" />
+				<Receiver id="MNXY_QChanRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="1500" />
+			</TriggerValue>
+			<TriggerValue value="6" desc="16QAM">
+				<Receiver id="MNXY_IQPowerRatio" desc="IQ路功率比" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_ConstMapp" desc="星座映射" isEnable="1" values="9:Map1;10:Map2;11:Map3" minValue="" maxValue="" />
+				<Receiver id="MNXY_FrameSynch" desc="帧同步方式" isEnable="0" values="1:合路" minValue="" maxValue="" />
+				<Receiver id="MNXY_GrayCodSelect" desc="Gray编码选择" isEnable="0" values="9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="MNXY_PhaseRotation" desc="相位旋转" isEnable="0" values="1:CCSDS(逆时针)" minValue="" maxValue="" />
+				<Receiver id="MNXY_IChannRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="2000" />
+				<Receiver id="MNXY_QChanRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="2000" />
+			</TriggerValue>
+			<TriggerValue value="7" desc="16APSK">
+				<Receiver id="MNXY_FrameSynch" desc="帧同步方式" isEnable="0" values="1:合路" minValue="" maxValue="" />
+				<Receiver id="MNXY_ConstMapp" desc="星座映射" isEnable="1" values="9:Map1;10:Map2" minValue="" maxValue="" />
+				<Receiver id="MNXY_IChannRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="2000" />
+				<Receiver id="MNXY_QChanRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="2000" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="MNXY_IAnalogDataType" desc="I路模拟数据类型">
+			<TriggerValue value="1" desc="PN码">
+				<Receiver id="MNXY_IPNCodeSelect" desc="PN码选择" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IFixedSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="可编辑固定数">
+				<Receiver id="MNXY_IPNCodeSelect" desc="PN码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IFixedSet" desc="固定数设置" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="顺序数（由0~255循环）">
+				<Receiver id="MNXY_IPNCodeSelect" desc="PN码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IFixedSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="本地文件回放">
+				<Receiver id="MNXY_IPNCodeSelect" desc="PN码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IFixedSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="5" desc="网络回放">
+				<Receiver id="MNXY_IPNCodeSelect" desc="PN码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_IFixedSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="MNXY_QAnalogDataType" desc="Q路模拟数据类型">
+			<TriggerValue value="1" desc="PN码">
+				<Receiver id="MNXY_QPNCodeSelect" desc="PN码选择" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QFixedSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="可编辑固定数">
+				<Receiver id="MNXY_QPNCodeSelect" desc="PN码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QFixedSet" desc="固定数设置" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="顺序数（由0~255循环）">
+				<Receiver id="MNXY_QPNCodeSelect" desc="PN码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QFixedSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="本地文件回放">
+				<Receiver id="MNXY_QPNCodeSelect" desc="PN码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QFixedSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="5" desc="网络回放">
+				<Receiver id="MNXY_QPNCodeSelect" desc="PN码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_QFixedSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="MNXY_LevelCtrlMode" desc="Q路模拟数据类型">
+			<TriggerValue value="1" desc="固定值">
+				<Receiver id="MNXY_LevelScannRate" desc="电平扫描速率" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_LevelScannRange" desc="电平扫描范围" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="扫描（三角）">
+				<Receiver id="MNXY_LevelScannRate" desc="电平扫描速率" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="MNXY_LevelScannRange" desc="电平扫描范围" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

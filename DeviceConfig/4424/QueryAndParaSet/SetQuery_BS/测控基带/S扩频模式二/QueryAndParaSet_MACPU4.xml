@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="MACPU" ModeType="0x04" desc="公共单元" flag="1001" kpValid="TargetNum">
+	<result MessageType="0x0000F104">
+		<field pid="1" id="ControlMode" desc="监控方式" dataType="uint8" displayFormat="enum|ControlMode" initValue="" minValue="" maxValue="" step="" unit="" BitDivision="1"/>
+		<field pid="2" id="BaseEquipInteStatus" desc="设备状态" dataType="uint8" displayFormat="LED|BaseInteStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="3" id="OnLineMachine" desc="在线状态" dataType="uint8" displayFormat="enum|OnLineMachine" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="4" id="ExternalState" desc="外时码" dataType="uint8" displayFormat="LED|ExternalState" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="5" id="ExterFreqState" desc="外频标" dataType="uint8" displayFormat="LED|ExternFreqState" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="6" id="WorkingMode" desc="工作模式" dataType="ulong" displayFormat="enum|WorkMode" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="7" id="WorkWay" desc="工作方式" dataType="uint8" displayFormat="enum|WorkWay" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="8" id="CurrTrackTarget" desc="当前跟踪目标" dataType="uint8" displayFormat="enum|CurrTrackTarget" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="9" id="CurrTrackChannel" desc="当前跟踪通道" dataType="uint8" displayFormat="enum|CurrTrackChannel" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<!-- <field pid="10" id="CurrAntIdent" desc="当前天线标识" dataType="uint" displayFormat="Hex" initValue="" minValue="" maxValue="" step="" unit=""  />
+		<field pid="11" id="FPGALocking" desc="FPGA频综锁定状态" dataType="uint8" displayFormat="enum|Locking" initValue="" minValue="" maxValue="" step="" unit=""  /> -->
+		<field pid="12" id="UACAddress" desc="UAC地址" dataType="uint" displayFormat="Hex" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="13" id="ACULogo" desc="ACU标识" dataType="uint8" displayFormat="Hex" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="101" GroupId="1" id="TargetNum" desc="目标数" dataType="uint8" displayFormat="UInt8" initValue="4" minValue="1" maxValue="4" step="" unit=""/>
+		<field pid="102" GroupId="1" id="WorkRotation" desc="工作旋向" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="103" GroupId="1" id="EquipNumb" desc="设备组合号" dataType="ulong" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFFFFFFFFFF" step="" unit=""/>
+		<field pid="104" GroupId="1" id="SendDataWay" desc="送数方式" dataType="uint8" displayFormat="enum|BaseBandDelMode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="105" GroupId="1" id="TrackChanSel" desc="跟踪通道" dataType="uint8" displayFormat="enum|TrackChanSel" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="106" GroupId="1" id="TargetSelect" desc="跟踪目标方式" dataType="uint8" displayFormat="enum|TargetSelect" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="107" GroupId="1" id="TrackTarget" desc="跟踪目标" dataType="uint8" displayFormat="enum|TrackTarSelect" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="108" GroupId="1" id="MainBranType" desc="主跟踪支路" dataType="uint8" displayFormat="enum|MainBranType" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="109" GroupId="1" id="NetworkFormat" desc="数据网数据格式" dataType="uint8" displayFormat="enum|NetworkFormat" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="110" GroupId="1" id="TrackRotation" desc="跟踪旋向" dataType="uint8" displayFormat="enum|TrackRotation" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<recycle id="1" recycleNum="4" desc="">
+			<field pid="1" id="K2_TelemCarrLock" desc="遥测载波" dataType="uint8" displayFormat="LED|Locking" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="2" id="K2_TelemPNLock" desc="遥测伪码" dataType="uint8" displayFormat="LED|Locking" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="3" id="K2_MeaCarrLock" desc="测量载波" dataType="uint8" displayFormat="LED|Locking" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="4" id="K2_MeaPseLock" desc="测量伪码" dataType="uint8" displayFormat="LED|Locking" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="5" id="K2_SateTelemInst" desc="卫星遥测" dataType="uint8" displayFormat="LED|LockIndicat" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="6" id="K2_LockIndMeas" desc="星锁状态" dataType="uint8" displayFormat="LED|LockIndicat" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="7" id="K2_CurrTrackChan" desc="当前跟踪通道" dataType="uint8" displayFormat="enum|CurrTrackChan" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="8" id="K2_PredDopp" desc="预报多普勒" dataType="int" displayFormat="Int32" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="9" id="K2_PackNumb" desc="收中心指令包" dataType="ushort" displayFormat="UInt16" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="10" id="K2_RemoteNumb" desc="遥控发令数" dataType="ushort" displayFormat="UInt16" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="11" id="K2_SmallNumb" desc="误指令数" dataType="ushort" displayFormat="UInt16" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="12" id="K2_BarsNumb" desc="环回中心数" dataType="ushort" displayFormat="UInt16" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="13" id="K2_VelMeaTran" desc="测速发送" dataType="uint8" displayFormat="LED|SendStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="14" id="K2_DataTranStat" desc="测距发送" dataType="uint8" displayFormat="LED|SendStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="15" id="K2_TeleDataStat" desc="遥测发送" dataType="uint8" displayFormat="LED|SendStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="16" id="K2_SaveState" desc="存盘状态" dataType="uint8" displayFormat="LED|SaveState" initValue="2" minValue="" maxValue="" step="" unit=""/>
+			<field pid="101" id="K2_TaskIdent" desc="任务标识" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="FFFFFFFF" step="" unit=""/>
+			<field pid="102" id="K2_TaskCode" desc="任务代号" dataType="char|6" displayFormat="String" initValue="1" minValue="0" maxValue="" step="" unit=""/>
+			<field pid="103" id="K2_WorkRate" desc="上行频率" dataType="ulong" displayFormat="double" initValue="2025" minValue="2025" maxValue="2120" step="0.000001" unit="MHz"/>
+			<field pid="104" id="K2_SBandDownFreq" desc="下行频率" dataType="ulong" displayFormat="double" initValue="2200" minValue="2200" maxValue="2300" step="0.000001" unit="MHz"/>
+			<field pid="105" id="K2_SpeedMeaPer" desc="测速采样率" dataType="uint8" displayFormat="enum|SpeedSampPer" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="106" id="K2_VelInteTime" desc="测速积分时间" dataType="uint8" displayFormat="enum|VelInteTime" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="107" id="K2_RangSampRate" desc="测距采样率" dataType="uint8" displayFormat="enum|RangSampRate" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="108" id="K2_RangDataCode" desc="测距处理标志码" dataType="uint8" displayFormat="UInt8" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="109" id="K2_SpeedMarkCode" desc="测速处理标志码" dataType="uint8" displayFormat="UInt8" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="110" id="K2_TelemProceCode" desc="遥测处理标志码" dataType="uint8" displayFormat="UInt8" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		</recycle>
+	</result>
+	<layout>
+		<item id="1" desc="公共参数" row="0" col="0" rowspan="1" colspan="2"/>
+	</layout>
+</cmd>

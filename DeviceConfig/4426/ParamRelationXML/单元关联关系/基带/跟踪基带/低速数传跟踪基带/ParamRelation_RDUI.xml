@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x02" modeID="0xC" unitType="RDUI" desc="解调单元Q路">
+	<Triggers>		
+		<Trigger id="LDPCCodeRate" desc="LDPC码率">
+			<TriggerValue value="0" desc="1/2">
+				<Receiver id="LDPCCodeLength" desc="LDPC码长度" isEnable="" values="0:1024;1:4096" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="1" desc="2/3">
+				<Receiver id="LDPCCodeLength" desc="LDPC码长度" isEnable="" values="0:1024;1:4096" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="4/5">
+				<Receiver id="LDPCCodeLength" desc="LDPC码长度" isEnable="" values="0:1024;1:4096" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="7/8">
+				<Receiver id="LDPCCodeLength" desc="LDPC码长度" isEnable="" values="2:7136" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	
+		<Trigger id="CodeWay" desc="译码方式">
+			<TriggerValue value="1" desc="关">
+				<Receiver id="RSDecoding" desc="R-S译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="VirtualFill" desc="虚拟填充" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="DoubleBaseChange" desc="双基变换" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="InterlaceDeep" desc="交错深度" isEnable="0" values="" minValue="" maxValue="" />
+
+				<Receiver id="TurboDecoding" desc="Turbo译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="TurboCodeLength" desc="Turbo码长度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="TurboCodeRate" desc="Turbo码率" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="LDPCDecoding" desc="LDPC译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="LDPCCodeRate" desc="LDPC码率" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="LDPCCodeLength" desc="LDPC码长度" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="ViterbiDecoding" desc="Viterbi译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="G2PhaseReversal" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="Viterbi译码">
+				<Receiver id="RSDecoding" desc="R-S译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="VirtualFill" desc="虚拟填充" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="DoubleBaseChange" desc="双基变换" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="InterlaceDeep" desc="交错深度" isEnable="0" values="" minValue="" maxValue="" />
+
+				<Receiver id="TurboDecoding" desc="Turbo译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="TurboCodeLength" desc="Turbo码长度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="TurboCodeRate" desc="Turbo码率" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="LDPCDecoding" desc="LDPC译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="LDPCCodeRate" desc="LDPC码率" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="LDPCCodeLength" desc="LDPC码长度" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="ViterbiDecoding" desc="Viterbi译码" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="G2PhaseReversal" desc="G2相位反转" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="R-S译码">
+				<Receiver id="RSDecoding" desc="R-S译码" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="VirtualFill" desc="虚拟填充" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="DoubleBaseChange" desc="双基变换" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="InterlaceDeep" desc="交错深度" isEnable="1" values="" minValue="" maxValue="" />
+
+				<Receiver id="TurboDecoding" desc="Turbo译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="TurboCodeLength" desc="Turbo码长度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="TurboCodeRate" desc="Turbo码率" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="LDPCDecoding" desc="LDPC译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="LDPCCodeRate" desc="LDPC码率" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="LDPCCodeLength" desc="LDPC码长度" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="ViterbiDecoding" desc="Viterbi译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="G2PhaseReversal" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="R-S译码和Viterbi级联译码">
+				<Receiver id="RSDecoding" desc="R-S译码" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="VirtualFill" desc="虚拟填充" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="DoubleBaseChange" desc="双基变换" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="InterlaceDeep" desc="交错深度" isEnable="1" values="" minValue="" maxValue="" />
+
+				<Receiver id="TurboDecoding" desc="Turbo译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="TurboCodeLength" desc="Turbo码长度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="TurboCodeRate" desc="Turbo码率" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="LDPCDecoding" desc="LDPC译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="LDPCCodeRate" desc="LDPC码率" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="LDPCCodeLength" desc="LDPC码长度" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="ViterbiDecoding" desc="Viterbi译码" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="G2PhaseReversal" desc="G2相位反转" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="5" desc="LDPC">
+				<Receiver id="RSDecoding" desc="R-S译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="VirtualFill" desc="虚拟填充" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="DoubleBaseChange" desc="双基变换" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="InterlaceDeep" desc="交错深度" isEnable="0" values="" minValue="" maxValue="" />
+
+				<Receiver id="TurboDecoding" desc="Turbo译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="TurboCodeLength" desc="Turbo码长度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="TurboCodeRate" desc="Turbo码率" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="LDPCDecoding" desc="LDPC译码" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="LDPCCodeRate" desc="LDPC码率" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="LDPCCodeLength" desc="LDPC码长度" isEnable="1" values="" minValue="" maxValue="" />
+				
+				<Receiver id="ViterbiDecoding" desc="Viterbi译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="G2PhaseReversal" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="6" desc="Turbo">
+				<Receiver id="RSDecoding" desc="R-S译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="VirtualFill" desc="虚拟填充" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="DoubleBaseChange" desc="双基变换" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="InterlaceDeep" desc="交错深度" isEnable="0" values="" minValue="" maxValue="" />
+
+				<Receiver id="TurboDecoding" desc="Turbo译码" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="TurboCodeLength" desc="Turbo码长度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="TurboCodeRate" desc="Turbo码率" isEnable="1" values="" minValue="" maxValue="" />
+				
+				<Receiver id="LDPCDecoding" desc="LDPC译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="LDPCCodeRate" desc="LDPC码率" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="LDPCCodeLength" desc="LDPC码长度" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="ViterbiDecoding" desc="Viterbi译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="G2PhaseReversal" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="Descramble" desc="解扰">
+			<TriggerValue value="0" desc="否">
+				<Receiver id="DescPolyLenght" desc="解扰多项式长度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="DescSequeChoose" desc="解扰顺序选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="DescPolynomial" desc="解扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="DescInitPhase" desc="解扰初相" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="UnbindFormat" desc="解扰格式" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="1" desc="是">
+				<Receiver id="DescPolyLenght" desc="解扰多项式长度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="DescSequeChoose" desc="解扰顺序选择" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="DescPolynomial" desc="解扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="DescInitPhase" desc="解扰初相" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="UnbindFormat" desc="解扰格式" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="DescPolyLenght" desc="解扰多项式长度">
+			<TriggerValue value="8" desc="1字节">
+				<Receiver id="DescPolynomial" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="16" desc="2字节">
+				<Receiver id="DescPolynomial" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="3字节">
+				<Receiver id="DescPolynomial" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="4字节">
+				<Receiver id="DescPolynomial" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="FraSynCodGroLen" desc="帧同步码组长度">
+			<TriggerValue value="16" desc="16位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="4" />
+			</TriggerValue>
+			<TriggerValue value="20" desc="20位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="5" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="24位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="6" />
+			</TriggerValue>
+			<TriggerValue value="28" desc="28位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="7" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="32位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="8" />
+			</TriggerValue>
+			<TriggerValue value="36" desc="36位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="9" />
+			</TriggerValue>
+			<TriggerValue value="40" desc="40位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="10" />
+			</TriggerValue>
+			<TriggerValue value="44" desc="44位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="11" />
+			</TriggerValue>
+			<TriggerValue value="48" desc="48位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="12" />
+			</TriggerValue>
+			<TriggerValue value="52" desc="52位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="13" />
+			</TriggerValue>
+			<TriggerValue value="56" desc="56位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="14" />
+			</TriggerValue>
+			<TriggerValue value="60" desc="60位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="15" />
+			</TriggerValue>
+			<TriggerValue value="64" desc="64位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="16" />
+			</TriggerValue>
+			<TriggerValue value="68" desc="68位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="17" />
+			</TriggerValue>
+			<TriggerValue value="72" desc="72位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="18" />
+			</TriggerValue>
+			<TriggerValue value="76" desc="76位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="19" />
+			</TriggerValue>
+			<TriggerValue value="80" desc="80位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="20" />
+			</TriggerValue>
+			<TriggerValue value="84" desc="84位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="21" />
+			</TriggerValue>
+			<TriggerValue value="88" desc="88位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="22" />
+			</TriggerValue>
+			<TriggerValue value="92" desc="92位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="23" />
+			</TriggerValue>
+			<TriggerValue value="96" desc="96位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="24" />
+			</TriggerValue>
+			<TriggerValue value="100" desc="100位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="25" />
+			</TriggerValue>
+			<TriggerValue value="104" desc="104位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="26" />
+			</TriggerValue>
+			<TriggerValue value="108" desc="108位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="27" />
+			</TriggerValue>
+			<TriggerValue value="112" desc="112位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="28" />
+			</TriggerValue>
+			<TriggerValue value="116" desc="116位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="29" />
+			</TriggerValue>
+			<TriggerValue value="120" desc="120位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="30" />
+			</TriggerValue>
+			<TriggerValue value="124" desc="124位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="31" />
+			</TriggerValue>
+			<TriggerValue value="128" desc="128位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="32" />
+			</TriggerValue>
+			<TriggerValue value="132" desc="132位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="33" />
+			</TriggerValue>
+			<TriggerValue value="136" desc="136位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="34" />
+			</TriggerValue>
+			<TriggerValue value="140" desc="140位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="35" />
+			</TriggerValue>
+			<TriggerValue value="144" desc="144位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="36" />
+			</TriggerValue>
+			<TriggerValue value="148" desc="148位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="37" />
+			</TriggerValue>
+			<TriggerValue value="152" desc="152位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="38" />
+			</TriggerValue>
+			<TriggerValue value="156" desc="156位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="39" />
+			</TriggerValue>
+			<TriggerValue value="160" desc="160位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="40" />
+			</TriggerValue>
+			<TriggerValue value="164" desc="164位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="41" />
+			</TriggerValue>
+			<TriggerValue value="168" desc="168位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="42" />
+			</TriggerValue>
+			<TriggerValue value="172" desc="172位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="43" />
+			</TriggerValue>
+			<TriggerValue value="176" desc="176位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="44" />
+			</TriggerValue>
+			<TriggerValue value="180" desc="180位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="45" />
+			</TriggerValue>
+			<TriggerValue value="184" desc="184位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="46" />
+			</TriggerValue>
+			<TriggerValue value="188" desc="188位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="47" />
+			</TriggerValue>
+			<TriggerValue value="192" desc="192位">
+				<Receiver id="FraSynCodGroPic" desc="帧同步码组图样" isEnable="" values="" minValue="" maxValue="48" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

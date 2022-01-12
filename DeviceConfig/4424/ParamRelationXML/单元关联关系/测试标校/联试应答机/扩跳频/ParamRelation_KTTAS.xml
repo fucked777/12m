@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x6" deviceID="0x00" modeID="0x9" unitType="KTTAS" desc="遥测模拟源">
+	<Triggers>
+		<Trigger id="MoniyuanSource" desc="模拟源选择">
+			<TriggerValue value="1" desc="遥测模拟源">
+				<Receiver id="DataSource" desc="数据源选择" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="DataType" desc="数据类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="FixNumSet" desc="固定码数据" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="遥控模拟源">
+				<Receiver id="DataSource" desc="数据源选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="DataType" desc="数据类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="FixNumSet" desc="固定码数据" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		<Trigger id="DataSource" desc="数据源选择">
+			<TriggerValue value="1" desc="内">
+				<Receiver id="DataType" desc="数据类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="FixNumSet" desc="固定码数据" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="外">
+				<Receiver id="DataType" desc="数据类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="FixNumSet" desc="固定码数据" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		<Trigger id="DataType" desc="数据类型">
+			<TriggerValue value="1" desc="固定数">
+				<Receiver id="FixNumSet" desc="固定码数据" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="随机数">
+				<Receiver id="FixNumSet" desc="固定码数据" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="顺序数">
+				<Receiver id="FixedData" desc="固定码数据" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

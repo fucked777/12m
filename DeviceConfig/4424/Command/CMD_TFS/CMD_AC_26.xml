@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+require:查询数据包 ,response:响应数据包,result:上报数据包
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+initValue为初始化值,
+length为标识长度
+ExtenType:分机类型
+SelfLoopNumb:自身循环N次
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+cmdID:命令ID  与命令序号关联
+isShow:0表示界面不显示  1表示界面显示
+-->
+<cmd cmdID="26" ExtenType="AC" ModeType="0xFFFF" desc="轨道预报" flag="1001">
+    <request MessageType="0x0000F001">
+        <field pid="101" id="TaskIdent" desc="任务标识" dataType="uint" displayFormat="Hex" initValue="" minValue="" maxValue="FFFFFFFF" step="" unit=""/>
+        <field pid="102" id="PredMethod" desc="预报方法" dataType="uint8" displayFormat="enum|PredMethod" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="103" id="DesStartDate" desc="指定开始日期" dataType="uint" displayFormat="BCDDate" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="104" id="DesStartTime" desc="指定开始时间" dataType="uint" displayFormat="BCDTime" initValue="" minValue="" maxValue="" step="0.1" unit="ms"/>
+        <field pid="105" id="DesEndDate" desc="指定结束日期" dataType="uint" displayFormat="BCDDate" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="106" id="DesEndTime" desc="指定结束时间" dataType="uint" displayFormat="BCDTime" initValue="" minValue="" maxValue="" step="0.1" unit="ms"/>
+    </request>
+    <result MessageType="0x0000F101">
+        <field pid="1" id="StateCalResul" desc="计算结果状态" dataType="uint8" displayFormat="enum|StateCalResul" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="2" id="DateArrival" desc="进站日期" dataType="uint" displayFormat="BCDDate" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="3" id="ArrivalTime" desc="进站时间" dataType="uint" displayFormat="BCDTime" initValue="" minValue="" maxValue="" step="0.1" unit="ms"/>
+        <field pid="4" id="ApprPosit" desc="进站方位" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+        <field pid="5" id="PitchPitch" desc="进站俯仰" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+        <field pid="6" id="DateDepart" desc="出站日期" dataType="uint" displayFormat="BCDDate" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="7" id="OutBTime" desc="出站时间" dataType="uint" displayFormat="BCDTime" initValue="" minValue="" maxValue="" step="0.1" unit="ms"/>
+        <field pid="8" id="OutBDirect" desc="出站方位" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+        <field pid="9" id="OutBPitch" desc="出站俯仰" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+        <field pid="10" id="OverDate" desc="过顶日期" dataType="uint" displayFormat="BCDDate" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="11" id="OvershTime" desc="过顶时间" dataType="uint" displayFormat="BCDTime" initValue="" minValue="" maxValue="" step="0.1" unit="ms"/>
+        <field pid="12" id="OvershAzim" desc="过顶方位" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+        <field pid="13" id="OvershPitch" desc="过顶俯仰" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+        <field pid="14" id="MaxAzimVel" desc="最大方位角速度" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.01" unit="°/s"/>
+        <field pid="15" id="MaxPitchVel" desc="最大俯仰角速度" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.01" unit="°/s"/>
+        <field pid="16" id="AzimWaitPoint" desc="等待点方位" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+        <field pid="17" id="PitchWaitPoint" desc="等待点俯仰" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+    </result>
+</cmd>

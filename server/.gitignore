@@ -1,0 +1,17 @@
+Framework/bin/App
+Framework/bin/*
+/**/App.exe
+/**/*.ilk
+/**/*pdb
+/**/plugins/*.so
+/**/plugins/*.so.*
+/**/plugins/res.zip
+/**/Framework.pro.user
+/**/Framework.pro.user.*
+/**/lib/*.exp
+/**/Framework/plugins/*/resources/res.zip
+
+
+# 忽略编译中间文件
+**build-**Debug
+**build-**Release

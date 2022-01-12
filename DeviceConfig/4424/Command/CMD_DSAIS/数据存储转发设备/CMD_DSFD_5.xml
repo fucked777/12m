@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+require:查询数据包 ,response:响应数据包,result:上报数据包
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+initValue为初始化值,
+length为标识长度
+ExtenType:分机类型
+SelfLoopNumb:自身循环N次
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+cmdID:命令ID  与命令序号关联
+isShow:0表示界面不显示  1表示界面显示
+-->
+<cmd cmdID="5" ExtenType="DSFD" ModeType="0xFFFF" desc="中心参数配置" flag="1001">
+	<request MessageType="0x0000F001">
+		<field pid="101" GroupId="1" id="CenterName" desc="中心名称" dataType="char|20" displayFormat="String" initValue="0" minValue="" maxValue="" step="" unit=""/>
+		<field pid="102" GroupId="1" id="CenterSignalDest" desc="中心信宿" dataType="uint" displayFormat="Hex" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="103" GroupId="1" id="FepPack" desc="Fep包大小" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="104" GroupId="1" id="PdxpPack" desc="PDXP包大小" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="105" GroupId="1" id="CenterIP" desc="中心IP地址" dataType="char|50" displayFormat="StrIP" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="106" GroupId="1" id="CenterPlaintextPort" desc="中心明文端口" dataType="ushort" displayFormat="UInt16" initValue="0" minValue="0" maxValue="65535" step="" unit="" isShow="0"/>
+		<field pid="107" GroupId="1" id="CenterCiphertextPort" desc="中心密文端口" dataType="ushort" displayFormat="UInt16" initValue="0" minValue="0" maxValue="65535" step="" unit="" isShow="0"/>
+		<field pid="108" GroupId="1" id="CenterMulticast" desc="中心组播地址" dataType="char|50" displayFormat="StrIP" initValue="224.0.0.1" minValue="224.0.0.1" maxValue="255.255.255.255" step="" unit=""/>
+		<field pid="109" GroupId="2" id="PDXPPlainDestPort" desc="PDXP明文目的端口" dataType="ushort" displayFormat="UInt16" initValue="" minValue="0" maxValue="65535" step="" unit=""/>
+		<field pid="110" GroupId="2" id="PDXPCipherDestPort" desc="PDXP密文目的端口" dataType="ushort" displayFormat="UInt16" initValue="" minValue="0" maxValue="65535" step="" unit=""/>
+		<field pid="111" GroupId="1" id="FEPPlainDestPort" desc="FEP明文宿端口" dataType="ushort" displayFormat="UInt16" initValue="" minValue="0" maxValue="65535" step="" unit=""/>
+		<field pid="112" GroupId="1" id="FEPCipherDestPort" desc="FEP密文宿端口" dataType="ushort" displayFormat="UInt16" initValue="" minValue="0" maxValue="65535" step="" unit=""/>
+		<field pid="113" GroupId="1" id="FEPRECPPlainDestPort" desc="FEP/RECP明宿口" dataType="ushort" displayFormat="UInt16" initValue="" minValue="0" maxValue="65535" step="" unit=""/>
+		<field pid="114" GroupId="1" id="FEPRECCipherDestPort" desc="FEP/RECP密宿口" dataType="ushort" displayFormat="UInt16" initValue="" minValue="0" maxValue="65535" step="" unit=""/>
+		<field pid="115" GroupId="2" id="PDXPPlainSourcePort" desc="PDXP明文源端口" dataType="ushort" displayFormat="UInt16" initValue="" minValue="0" maxValue="65535" step="" unit=""/>
+		<field pid="116" GroupId="2" id="PDXPCipherSourcePort" desc="PDXP密文源端口" dataType="ushort" displayFormat="UInt16" initValue="" minValue="0" maxValue="65535" step="" unit=""/>
+		<field pid="117" GroupId="1" id="FEPPlainSourcePort" desc="FEP明文源端口" dataType="ushort" displayFormat="UInt16" initValue="" minValue="0" maxValue="65535" step="" unit=""/>
+		<field pid="118" GroupId="1" id="FEPCipherSourcePort" desc="FEP密文源端口" dataType="ushort" displayFormat="UInt16" initValue="" minValue="0" maxValue="65535" step="" unit=""/>
+		<field pid="119" GroupId="1" id="FEPRECEPPlainSourcePort" desc="FEP/RECP明源口" dataType="ushort" displayFormat="UInt16" initValue="" minValue="0" maxValue="65535" step="" unit=""/>
+		<field pid="120" GroupId="1" id="FEPRECEPCipherSourcePort" desc="FEP/RECP密源口" dataType="ushort" displayFormat="UInt16" initValue="" minValue="0" maxValue="65535" step="" unit=""/>
+		<field pid="121" GroupId="1" id="HDRPlainSourcePort" desc="HDR明文源端口" dataType="ushort" displayFormat="UInt16" initValue="0" minValue="0" maxValue="65535" step="" unit="" isShow="0"/>
+		<field pid="122" GroupId="1" id="HDRPlainDestPort" desc="HDR明文目的端口" dataType="ushort" displayFormat="UInt16" initValue="0" minValue="0" maxValue="65535" step="" unit="" isShow="0"/>
+		<field pid="123" GroupId="1" id="HDRCipherSourcePort" desc="HDR密文源端口" dataType="ushort" displayFormat="UInt16" initValue="0" minValue="0" maxValue="65535" step="" unit="" isShow="0"/>
+		<field pid="124" GroupId="1" id="HDRCipherDestPort" desc="HDR密文目的端口" dataType="ushort" displayFormat="UInt16" initValue="0" minValue="0" maxValue="65535" step="" unit="" isShow="0"/>
+		<field pid="125" GroupId="3" id="PDXPPlainDestPort2" desc="PDXP明文目的端口" dataType="ushort" displayFormat="UInt16" initValue="" minValue="0" maxValue="65535" step="" unit=""/>
+		<field pid="126" GroupId="3" id="PDXPCipherDestPort2" desc="PDXP密文目的端口" dataType="ushort" displayFormat="UInt16" initValue="" minValue="0" maxValue="65535" step="" unit=""/>
+		<field pid="127" GroupId="3" id="PDXPPlainSourcePort2" desc="PDXP明文源端口" dataType="ushort" displayFormat="UInt16" initValue="" minValue="0" maxValue="65535" step="" unit=""/>
+		<field pid="128" GroupId="3" id="PDXPCipherSourcePort2" desc="PDXP密文源端口" dataType="ushort" displayFormat="UInt16" initValue="" minValue="0" maxValue="65535" step="" unit=""/>
+		<field pid="129" GroupId="1" id="PDXPPlainDestPort3" desc="通道三明文目的端口" dataType="ushort" displayFormat="UInt16" initValue="0" minValue="0" maxValue="65535" step="" unit="" isShow="0"/>
+		<field pid="130" GroupId="1" id="PDXPPlainSourcePort3" desc="通道三明文源端口" dataType="ushort" displayFormat="UInt16" initValue="0" minValue="0" maxValue="65535" step="" unit="" isShow="0"/>
+		<field pid="131" GroupId="1" id="PDXPPlainDestPort4" desc="通道四明文目的端口" dataType="ushort" displayFormat="UInt16" initValue="0" minValue="0" maxValue="65535" step="" unit="" isShow="0"/>
+		<field pid="132" GroupId="1" id="PDXPPlainSourcePort4" desc="通道四明文源端口" dataType="ushort" displayFormat="UInt16" initValue="0" minValue="0" maxValue="65535" step="" unit="" isShow="0"/>
+		<field pid="133" GroupId="1" id="CenterControlIP" desc="中心控制IP" dataType="char|50" displayFormat="StrIP" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="134" GroupId="1" id="CenterControlPort" desc="中心控制端口" dataType="ushort" displayFormat="UInt16" initValue="0" minValue="0" maxValue="65535" step="" unit=""/>
+		<field pid="135" GroupId="1" id="CenterControlUdpIP" desc="中心控制udp_IP" dataType="char|50" displayFormat="StrIP" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="136" GroupId="1" id="CenterControlUdpPort" desc="中心控制udp端口" dataType="ushort" displayFormat="UInt16" initValue="0" minValue="0" maxValue="65535" step="" unit=""/>
+		<field pid="137" GroupId="1" id="CenterMulticastPort" desc="中心组播端口" dataType="ushort" displayFormat="UInt16" initValue="0" minValue="0" maxValue="65535" step="" unit=""/>
+		<field pid="138" GroupId="1" id="ForwardingProtocol" desc="转发协议" dataType="uint8" displayFormat="enum|ForwardingProtocol" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="139" GroupId="1" id="SourceIdentification" desc="信源标识" dataType="char|11" displayFormat="String" initValue="" minValue="" maxValue="" step="" unit=""/>
+	</request>
+	<result MessageType="0x0000F101">
+	</result>
+	<layout>
+		<item id="1" desc="中心参数" row="0" col="0" rowspan="1" colspan="2"/>
+		<item id="2" desc="通道一" row="1" col="0" rowspan="1" colspan="1"/>
+		<item id="3" desc="通道二" row="1" col="1" rowspan="1" colspan="1"/>
+	</layout>
+</cmd>

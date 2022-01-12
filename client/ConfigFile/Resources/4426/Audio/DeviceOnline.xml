@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configure>
+    <AudioPath>resources/audio</AudioPath>
+    <Title>设备在线状态</Title>
+    <Interval>300</Interval>
+    <Column>4</Column>
+    <Audio>
+        <Item interval="300" map="天线控制A离线|TK4426 天线控制A离线" enable="true" desc="天线控制A离线"/>
+        <Item interval="300" map="天线控制B离线|TK4426 天线控制B离线" enable="true" desc="天线控制B离线"/>
+        <Item interval="300" map="S功放A离线|TK4426 S功放A离线" enable="true" desc="S功放A离线"/>
+        <Item interval="300" map="S功放B离线|TK4426 S功放B离线" enable="true" desc="S功放B离线"/>
+        <Item interval="300" map="K a300W测控功放离线|TK4426 K a300W测控功放离线" enable="true" desc="Ka300W测控功放离线"/>
+        <Item interval="300" map="K a30W测控功放离线|TK4426 K a30W测控功放离线" enable="true" desc="Ka30W测控功放离线"/>
+        <Item interval="300" map="K a300W数传功放离线|TK4426 K a300W数传功放离线" enable="true" desc="Ka300W数传功放离线"/>
+        <Item interval="300" map="K a30W数传功放离线|TK4426 K a30W数传功放离线" enable="true" desc="Ka30W数传功放离线"/>
+        <Item interval="300" map="S功放切换开关离线|TK4426 S功放切换开关离线" enable="true" desc="S功放切换开关离线"/>
+        <Item interval="300" map="K a低速数传发射高频箱离线|TK4426 K a低速数传发射高频箱离线" enable="true" desc="Ka低速数传发射高频箱离线"/>
+        <Item interval="300" map="K a测控发射高频箱离线|TK4426 K a测控发射高频箱离线" enable="true" desc="Ka测控发射高频箱离线"/>
+        <Item interval="300" map="S频段发射开关矩阵离线|TK4426 S频段发射开关矩阵离线" enable="true" desc="S频段发射开关矩阵离线"/>
+        <Item interval="300" map="驱动控制离线|TK4426 驱动控制离线" enable="true" desc="驱动控制离线"/>
+        <Item interval="300" map="K a测控及跟踪高频箱离线|TK4426 K a测控及跟踪高频箱离线" enable="true" desc="Ka测控及跟踪高频箱离线"/>
+        <Item interval="300" map="K a低速数传及跟踪高频箱离线|TK4426 K a低速数传及跟踪高频箱离线" enable="true" desc="Ka低速数传及跟踪高频箱离线"/>
+        <Item interval="300" map="K a高速数传高频箱离线|TK4426 K a高速数传高频箱离线" enable="true" desc="Ka高速数传高频箱离线"/>
+        <Item interval="300" map="X频段高频箱离线|TK4426 X频段高频箱离线" enable="true" desc="X频段高频箱离线"/>
+        <Item interval="300" map="S频段射频开关网络离线|TK4426 S频段射频开关网络离线" enable="true" desc="S频段射频开关网络离线"/>
+        <Item interval="300" map="K a射频开关网络离线|TK4426 K a射频开关网络离线" enable="true" desc="Ka射频开关网络离线"/>
+        <Item interval="300" map="L数传中频矩阵离线|TK4426 L数传中频矩阵离线" enable="true" desc="L数传中频矩阵离线"/>
+        <Item interval="300" map="中心体光端机1离线|TK4426 中心体光端机1离线" enable="true" desc="中心体光端机1离线"/>
+        <Item interval="300" map="中心体光端机2离线|TK4426 中心体光端机2离线" enable="true" desc="中心体光端机2离线"/>
+        <Item interval="300" map="中心机房光端机1离线|TK4426 中心机房光端机1离线" enable="true" desc="中心机房光端机1离线"/>
+        <Item interval="300" map="中心机房光端机2离线|TK4426 中心机房光端机2离线" enable="true" desc="中心机房光端机2离线"/>
+        <Item interval="300" map="塔基机房光端机1离线|TK4426 塔基机房光端机1离线" enable="true" desc="塔基机房光端机1离线"/>
+        <Item interval="300" map="塔基机房光端机2离线|TK4426 塔基机房光端机2离线" enable="true" desc="塔基机房光端机2离线"/>
+        <Item interval="300" map="S频段接收开关矩阵离线|TK4426 S频段接收开关矩阵离线" enable="true" desc="S频段接收开关矩阵离线"/>
+        <Item interval="300" map="1.2GHz中频均衡放大器离线|TK4426 1.2GHz中频均衡放大器离线" enable="true" desc="1.2GHz中频均衡放大器离线"/>
+        <Item interval="300" map="测控基带A-1离线|TK4426 测控基带A-1离线" enable="true" desc="测控基带A-1离线"/>
+        <Item interval="300" map="测控基带A-2离线|TK4426 测控基带A-2离线" enable="true" desc="测控基带A-2离线"/>
+        <Item interval="300" map="测控基带B-1离线|TK4426 测控基带B-1离线" enable="true" desc="测控基带B-1离线"/>
+        <Item interval="300" map="测控基带B-2离线|TK4426 测控基带B-2离线" enable="true" desc="测控基带B-2离线"/>
+        <Item interval="300" map="高速基带A离线|TK4426 高速基带A离线" enable="true" desc="高速基带A离线"/>
+        <Item interval="300" map="高速基带B离线|TK4426 高速基带B离线" enable="true" desc="高速基带B离线"/>
+        <Item interval="300" map="跟踪基带A离线|TK4426 跟踪基带A离线" enable="true" desc="跟踪基带A离线"/>
+        <Item interval="300" map="跟踪基带B离线|TK4426 跟踪基带B离线" enable="true" desc="跟踪基带B离线"/>
+        <Item interval="300" map="跟踪基带C离线|TK4426 跟踪基带C离线" enable="true" desc="跟踪基带C离线"/>
+        <Item interval="300" map="跟踪基带D离线|TK4426 跟踪基带D离线" enable="true" desc="跟踪基带D离线"/>
+        <Item interval="300" map="角跟踪切换离线|TK4426 角跟踪切换离线" enable="true" desc="角跟踪切换离线"/>
+        <Item interval="300" map="低速基带A离线|TK4426 低速基带A离线" enable="true" desc="低速基带A离线"/>
+        <Item interval="300" map="低速基带B离线|TK4426 低速基带B离线" enable="true" desc="低速基带B离线"/>
+        <Item interval="300" map="伪码服务器A离线|TK4426 伪码服务器A离线" enable="true" desc="伪码服务器A离线"/>
+        <Item interval="300" map="伪码服务器B离线|TK4426 伪码服务器B离线" enable="true" desc="伪码服务器B离线"/>
+        <Item interval="300" map="时频终端1离线|TK4426 时频终端1离线" enable="true" desc="时频终端1离线"/>
+        <Item interval="300" map="时频终端2离线|TK4426 时频终端2离线" enable="true" desc="时频终端2离线"/>
+        <Item interval="300" map="锁相频标1离线|TK4426 锁相频标1离线" enable="true" desc="锁相频标1离线"/>
+        <Item interval="300" map="锁相频标2离线|TK4426 锁相频标2离线" enable="true" desc="锁相频标2离线"/>
+        <Item interval="300" map="时码分路1离线|TK4426 时码分路1离线" enable="true" desc="时码分路1离线"/>
+        <Item interval="300" map="时码分路2离线|TK4426 时码分路2离线" enable="true" desc="时码分路2离线"/>
+        <Item interval="300" map="频标分配器离线|TK4426 频标分配器离线" enable="true" desc="频标分配器离线"/>
+        <Item interval="300" map="联试应答机终端离线|TK4426 联试应答机终端离线" enable="true" desc="联试应答机终端离线"/>
+        <Item interval="300" map="联试应答机终端(扩跳)离线|TK4426 联试应答机终端(扩跳)离线" enable="true" desc="联试应答机终端(扩跳)离线"/>
+        <Item interval="300" map="联试应答机信道离线|TK4426 联试应答机信道离线" enable="true" desc="联试应答机信道离线"/>
+        <Item interval="300" map="测试计算机离线|TK4426 测试计算机离线" enable="true" desc="测试计算机离线"/>
+        <Item interval="300" map="测试高频箱离线|TK4426 测试高频箱离线" enable="true" desc="测试高频箱离线"/>
+        <Item interval="300" map="后端测试信号选择开关离线|TK4426 后端测试信号选择开关离线" enable="true" desc="后端测试信号选择开关离线"/>
+        <Item interval="300" map="前端测试开关网络离线|TK4426 前端测试开关网络离线" enable="true" desc="前端测试开关网络离线"/>
+        <Item interval="300" map="测试信号选择开关离线|TK4426 测试信号选择开关离线" enable="true" desc="测试信号选择开关离线"/>
+        <Item interval="300" map="S频段校零信标一体机离线|TK4426 S频段校零信标一体机离线" enable="true" desc="S频段校零信标一体机离线"/>
+        <Item interval="300" map="K a频段校零信标一体机离线|TK4426 K a频段校零信标一体机离线" enable="true" desc="Ka频段校零信标一体机离线"/>
+        <Item interval="300" map="测控数字化前端1离线|TK4426 测控数字化前端1离线" enable="true" desc="测控数字化前端1离线"/>
+        <Item interval="300" map="测控数字化前端2离线|TK4426 测控数字化前端2离线" enable="true" desc="测控数字化前端2离线"/>
+        <Item interval="300" map="测控数字化前端3离线|TK4426 测控数字化前端3离线" enable="true" desc="测控数字化前端3离线"/>
+        <Item interval="300" map="测控数字化前端4离线|TK4426 测控数字化前端4离线" enable="true" desc="测控数字化前端4离线"/>
+        <Item interval="300" map="跟踪数字化前端1离线|TK4426 跟踪数字化前端1离线" enable="true" desc="跟踪数字化前端1离线"/>
+        <Item interval="300" map="跟踪数字化前端2离线|TK4426 跟踪数字化前端2离线" enable="true" desc="跟踪数字化前端2离线"/>
+        <Item interval="300" map="跟踪数字化前端3离线|TK4426 跟踪数字化前端3离线" enable="true" desc="跟踪数字化前端3离线"/>
+        <Item interval="300" map="跟踪数字化前端4离线|TK4426 跟踪数字化前端4离线" enable="true" desc="跟踪数字化前端4离线"/>
+        <Item interval="300" map="数据交互计算机离线|TK4426 数据交互计算机离线" enable="true" desc="数据交互计算机离线"/>
+        <Item interval="300" map="数据存储转发设备A离线|TK4426 数据存储转发设备A离线" enable="true" desc="数据存储转发设备A离线"/>
+        <Item interval="300" map="数据存储转发设备B离线|TK4426 数据存储转发设备B离线" enable="true" desc="数据存储转发设备B离线"/>
+    </Audio>
+</Configure>

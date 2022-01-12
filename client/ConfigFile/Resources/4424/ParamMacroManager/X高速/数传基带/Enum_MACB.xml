@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<enums>
+	<enum name="CarrLoopBand" desc="载波环路带宽">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="5000Hz"/>
+		<entry svalue="2" uvalue="2" desc="10000Hz"/>
+		<entry svalue="3" uvalue="3" desc="20000Hz"/>
+		<entry svalue="4" uvalue="4" desc="50000Hz"/>
+		<entry svalue="100" uvalue="100" desc="自适应"/>
+	</enum>
+	<enum name="CodeRateSett" desc="码速率设置方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="编码前"/>
+		<entry svalue="2" uvalue="2" desc="编码后"/>
+	</enum>
+</enums>

@@ -1,0 +1,349 @@
+<Mode id="1" name="标准TTC">
+	<!-- 射频数字化前端选中-->
+	<if condition="STTC_CKQD:1">
+		<Command deviceId="0x3101" modeId="0xFFFF" unitId="1" deviceName="S频段射频开关矩阵 S频段射频开关矩阵">
+			<Param id="OutputPort1" value="6" name="左旋和路 射频模拟源1"/>
+			<Param id="OutputPort2" value="6" name="右旋和路 射频模拟源1"/>
+			<Param id="OutputPort3" value="6" name="F2和路 射频模拟源1"/>
+			<Param id="OutputPort4" value="0" name="左旋和路 关"/>
+			<Param id="OutputPort5" value="0" name="右旋和路 关"/>
+			<Param id="OutputPort6" value="0" name="F2和路 关"/>
+		</Command>
+		<Command deviceId="0x7001" modeId="0xFFFF" cmdId="1" deviceName="测控前端 任务工作模式">
+			<Param id="TaskWorkMode" value="2" name="工作模式 自检"/>
+		</Command>
+	</if>
+	<if condition="STTC_CKQD:2">
+		<Command deviceId="0x3101" modeId="0xFFFF" unitId="1" deviceName="S频段射频开关矩阵 S频段射频开关矩阵">
+			<Param id="OutputPort1" value="0" name="左旋和路 关"/>
+			<Param id="OutputPort2" value="0" name="右旋和路 关"/>
+			<Param id="OutputPort3" value="0" name="F2和路 关"/>
+			<Param id="OutputPort4" value="6" name="左旋和路 射频模拟源1"/>
+			<Param id="OutputPort5" value="6" name="右旋和路 射频模拟源1"/>
+			<Param id="OutputPort6" value="6" name="F2和路 射频模拟源1"/>
+		</Command>
+		<Command deviceId="0x7002" modeId="0xFFFF" cmdId="1" deviceName="测控前端 任务工作模式">
+			<Param id="TaskWorkMode" value="2" name="工作模式 自检"/>
+		</Command>
+	</if>
+	<!-- 链路模式为标准TTC -->
+	<if condition="LinkWorkMode:1" desc="链路模式为标准TTC">
+		<if condition="CKJD1:1" desc="主用基带为基带A">
+			<Command deviceId="0x4001" modeId="0x1" cmdId="102" deviceName="测控基带A 工作方式设置">
+				<Param id="WorkWay" value="7" name="工作方式 射频模拟源闭环"/>
+			</Command>
+			<Command deviceId="0x4001" modeId="0x1" cmdId="5" deviceName="测控基带A 上行载波输出">
+				<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+			</Command>
+		</if>
+		<if condition="CKJD1:2" desc="主用基带为基带B">
+			<Command deviceId="0x4002" modeId="0x1" cmdId="102" deviceName="测控基带B 工作方式设置">
+				<Param id="WorkWay" value="7" name="工作方式 射频模拟源闭环"/>
+			</Command>
+			<Command deviceId="0x4002" modeId="0x1" cmdId="5" deviceName="测控基带B 上行载波输出">
+				<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+			</Command>
+		</if>
+	</if>
+	<!-- 链路模式为S扩二 -->
+	<if condition="LinkWorkMode:2" desc="链路模式为S扩二">
+		<if condition="CKJD1:1" desc="主用基带为基带A">
+			<Command deviceId="0x4001" modeId="0x4" cmdId="102" deviceName="测控基带A 工作方式设置">
+				<Param id="WorkWay" value="7" name="工作方式 射频模拟源闭环"/>
+			</Command>
+			<Command deviceId="0x4001" modeId="0x4" cmdId="5" deviceName="测控基带A 上行载波输出">
+				<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+				<Param id="OutputLev" value="-70" name="输出电平"/>
+				<Param id="ChanSelect" value="9" name="通道选择 全部通道"/>
+			</Command>
+		</if>
+		<if condition="CKJD1:2" desc="主用基带为基带B">
+			<Command deviceId="0x4002" modeId="0x4" cmdId="102" deviceName="测控基带B 工作方式设置">
+				<Param id="WorkWay" value="7" name="工作方式 射频模拟源闭环"/>
+			</Command>
+			<Command deviceId="0x4002" modeId="0x4" cmdId="5" deviceName="测控基带A 上行载波输出">
+				<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+				<Param id="OutputLev" value="-70" name="输出电平"/>
+				<Param id="ChanSelect" value="9" name="通道选择 全部通道"/>
+			</Command>
+		</if>
+	</if>
+	<!-- 链路模式为一体化上面级 -->
+	<if condition="LinkWorkMode:7" desc="链路模式为一体化上面级">
+		<if condition="CKJD1:1" desc="主用基带为基带A">
+			<Command deviceId="0x4001" modeId="0x10" cmdId="102" deviceName="测控基带A 工作方式设置">
+				<Param id="WorkWay" value="16" name="工作方式 数传射频模拟源有线闭环"/>
+			</Command>
+			<Command deviceId="0x4001" modeId="0x10" cmdId="5" deviceName="测控基带A 上行载波输出">
+				<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+				<Param id="OutputLev" value="-70" name="输出电平"/>
+				<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+			</Command>
+		</if>
+		<if condition="CKJD1:2" desc="主用基带为基带B">
+			<Command deviceId="0x4002" modeId="0x10" cmdId="102" deviceName="测控基带B 工作方式设置">
+				<Param id="WorkWay" value="16" name="工作方式 数传射频模拟源有线闭环"/>
+			</Command>
+			<Command deviceId="0x4002" modeId="0x10" cmdId="5" deviceName="测控基带B 上行载波输出">
+				<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+				<Param id="OutputLev" value="-70" name="输出电平"/>
+				<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+			</Command>
+		</if>
+	</if>
+	<!-- 链路模式为一体化卫星 -->
+	<if condition="LinkWorkMode:8" desc="链路模式为一体化卫星">
+		<if condition="CKJD1:1" desc="主用基带为基带A">
+			<Command deviceId="0x4001" modeId="0x11" cmdId="102" deviceName="测控基带A 工作方式设置">
+				<Param id="WorkWay" value="16" name="工作方式 数传射频模拟源有线闭环"/>
+			</Command>
+			<Command deviceId="0x4001" modeId="0x11" cmdId="5" deviceName="测控基带A 上行载波输出">
+				<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+				<Param id="OutputLev" value="-70" name="输出电平"/>
+				<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+			</Command>
+		</if>
+		<if condition="CKJD1:2" desc="主用基带为基带B">
+			<Command deviceId="0x4002" modeId="0x11" cmdId="102" deviceName="测控基带B 工作方式设置">
+				<Param id="WorkWay" value="16" name="工作方式 数传射频模拟源有线闭环"/>
+			</Command>
+			<Command deviceId="0x4002" modeId="0x11" cmdId="5" deviceName="测控基带B 上行载波输出">
+				<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+				<Param id="OutputLev" value="-70" name="输出电平"/>
+				<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+			</Command>
+		</if>
+	</if>
+	<!-- 链路模式为一体化高码率 -->
+	<if condition="LinkWorkMode:9" desc="链路模式为一体化高码率">
+		<if condition="CKJD1:1" desc="主用基带为基带A">
+			<Command deviceId="0x4001" modeId="0x12" cmdId="102" deviceName="测控基带A 工作方式设置">
+				<Param id="WorkWay" value="16" name="工作方式 数传射频模拟源有线闭环"/>
+			</Command>
+			<Command deviceId="0x4001" modeId="0x12" cmdId="5" deviceName="测控基带A 上行载波输出">
+				<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+				<Param id="OutputLev" value="-70" name="输出电平"/>
+				<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+			</Command>
+		</if>
+		<if condition="CKJD1:2" desc="主用基带为基带B">
+			<Command deviceId="0x4002" modeId="0x12" cmdId="102" deviceName="测控基带B 工作方式设置">
+				<Param id="WorkWay" value="16" name="工作方式 数传射频模拟源有线闭环"/>
+			</Command>
+			<Command deviceId="0x4002" modeId="0x12" cmdId="5" deviceName="测控基带B 上行载波输出">
+				<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+				<Param id="OutputLev" value="-70" name="输出电平"/>
+				<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+			</Command>
+		</if>
+	</if>
+	<!-- 链路模式为一体化上面级+扩二共载波 -->
+	<if condition="LinkWorkMode:10" desc="链路模式为一体化上面级+扩二共载波">
+		<if condition="MasterType:1" desc="主用类型为数传">
+			<if condition="CKJD1:1" desc="主用基带为基带A">
+				<Command deviceId="0x4001" modeId="0x13" cmdId="102" deviceName="测控基带A 工作方式设置">
+					<Param id="WorkWay" value="16" name="工作方式 数传射频模拟源有线闭环"/>
+				</Command>
+				<Command deviceId="0x4001" modeId="0x13" cmdId="5" deviceName="测控基带A 上行载波输出">
+					<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+					<Param id="OutputLev" value="-70" name="输出电平"/>
+					<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+				</Command>
+			</if>
+			<if condition="CKJD1:2" desc="主用基带为基带B">
+				<Command deviceId="0x4002" modeId="0x13" cmdId="102" deviceName="测控基带B 工作方式设置">
+					<Param id="WorkWay" value="16" name="工作方式 数传射频模拟源有线闭环"/>
+				</Command>
+				<Command deviceId="0x4002" modeId="0x13" cmdId="5" deviceName="测控基带B 上行载波输出">
+					<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+					<Param id="OutputLev" value="-70" name="输出电平"/>
+					<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+				</Command>
+			</if>
+		</if>
+		<if condition="MasterType:2" desc="主用类型为扩频">
+			<if condition="CKJD1:1" desc="主用基带为基带A">
+				<Command deviceId="0x4001" modeId="0x13" cmdId="102" deviceName="测控基带A 工作方式设置">
+					<Param id="WorkWay" value="7" name="工作方式 扩频射频模拟源有线闭环"/>
+				</Command>
+				<Command deviceId="0x4001" modeId="0x13" cmdId="5" deviceName="测控基带A 上行载波输出">
+					<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+					<Param id="OutputLev" value="-70" name="输出电平"/>
+					<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+				</Command>
+			</if>
+			<if condition="CKJD1:2" desc="主用基带为基带B">
+				<Command deviceId="0x4002" modeId="0x13" cmdId="102" deviceName="测控基带B 工作方式设置">
+					<Param id="WorkWay" value="7" name="工作方式 扩频射频模拟源有线闭环"/>
+				</Command>
+				<Command deviceId="0x4002" modeId="0x13" cmdId="5" deviceName="测控基带B 上行载波输出">
+					<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+					<Param id="OutputLev" value="-70" name="输出电平"/>
+					<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+				</Command>
+			</if>
+		</if>
+	</if>
+	<!-- 链路模式为一体化上面级+不扩二共载波 -->
+	<if condition="LinkWorkMode:11" desc="链路模式为一体化上面级+不扩二共载波">
+		<if condition="MasterType:1" desc="主用类型为数传">
+			<if condition="CKJD1:1" desc="主用基带为基带A">
+				<Command deviceId="0x4001" modeId="0x15" cmdId="102" deviceName="测控基带A 工作方式设置">
+					<Param id="WorkWay" value="16" name="工作方式 数传射频模拟源有线闭环"/>
+				</Command>
+				<Command deviceId="0x4001" modeId="0x15" cmdId="5" deviceName="测控基带A 上行载波输出">
+					<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+					<Param id="OutputLev" value="-70" name="输出电平"/>
+					<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+				</Command>
+			</if>
+			<if condition="CKJD1:2" desc="主用基带为基带B">
+				<Command deviceId="0x4002" modeId="0x15" cmdId="102" deviceName="测控基带B 工作方式设置">
+					<Param id="WorkWay" value="16" name="工作方式 数传射频模拟源有线闭环"/>
+				</Command>
+				<Command deviceId="0x4002" modeId="0x15" cmdId="5" deviceName="测控基带B 上行载波输出">
+					<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+					<Param id="OutputLev" value="-70" name="输出电平"/>
+					<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+				</Command>
+			</if>
+		</if>
+		<if condition="MasterType:2" desc="主用类型为扩频">
+			<if condition="CKJD1:1" desc="主用基带为基带A">
+				<Command deviceId="0x4001" modeId="0x15" cmdId="102" deviceName="测控基带A 工作方式设置">
+					<Param id="WorkWay" value="7" name="工作方式 扩频射频模拟源有线闭环"/>
+				</Command>
+				<Command deviceId="0x4001" modeId="0x15" cmdId="5" deviceName="测控基带A 上行载波输出">
+					<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+					<Param id="OutputLev" value="-70" name="输出电平"/>
+					<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+				</Command>
+			</if>
+			<if condition="CKJD1:2" desc="主用基带为基带B">
+				<Command deviceId="0x4002" modeId="0x15" cmdId="102" deviceName="测控基带B 工作方式设置">
+					<Param id="WorkWay" value="7" name="工作方式 扩频射频模拟源有线闭环"/>
+				</Command>
+				<Command deviceId="0x4002" modeId="0x15" cmdId="5" deviceName="测控基带B 上行载波输出">
+					<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+					<Param id="OutputLev" value="-70" name="输出电平"/>
+					<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+				</Command>
+			</if>
+		</if>
+	</if>
+	<!-- 链路模式为一体化卫星+扩二 -->
+	<if condition="LinkWorkMode:12" desc="链路模式为一体化卫星+扩二">
+		<if condition="MasterType:1" desc="主用类型为数传">
+			<if condition="CKJD1:1" desc="主用基带为基带A">
+				<Command deviceId="0x4001" modeId="0x17" cmdId="102" deviceName="测控基带A 工作方式设置">
+					<Param id="WorkWay" value="16" name="工作方式 数传射频模拟源有线闭环"/>
+				</Command>
+				<Command deviceId="0x4001" modeId="0x17" cmdId="5" deviceName="测控基带A 上行载波输出">
+					<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+					<Param id="OutputLev" value="-70" name="输出电平"/>
+					<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+				</Command>
+			</if>
+			<if condition="CKJD1:2" desc="主用基带为基带B">
+				<Command deviceId="0x4002" modeId="0x17" cmdId="102" deviceName="测控基带B 工作方式设置">
+					<Param id="WorkWay" value="16" name="工作方式 数传射频模拟源有线闭环"/>
+				</Command>
+				<Command deviceId="0x4002" modeId="0x17" cmdId="5" deviceName="测控基带B 上行载波输出">
+					<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+					<Param id="OutputLev" value="-70" name="输出电平"/>
+					<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+				</Command>
+			</if>
+		</if>
+		<if condition="MasterType:2" desc="主用类型为扩频">
+			<if condition="CKJD1:1" desc="主用基带为基带A">
+				<Command deviceId="0x4001" modeId="0x17" cmdId="102" deviceName="测控基带A 工作方式设置">
+					<Param id="WorkWay" value="7" name="工作方式 扩频射频模拟源有线闭环"/>
+				</Command>
+				<Command deviceId="0x4001" modeId="0x17" cmdId="5" deviceName="测控基带A 上行载波输出">
+					<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+					<Param id="OutputLev" value="-70" name="输出电平"/>
+					<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+				</Command>
+			</if>
+			<if condition="CKJD1:2" desc="主用基带为基带B">
+				<Command deviceId="0x4002" modeId="0x17" cmdId="102" deviceName="测控基带B 工作方式设置">
+					<Param id="WorkWay" value="7" name="工作方式 扩频射频模拟源有线闭环"/>
+				</Command>
+				<Command deviceId="0x4002" modeId="0x17" cmdId="5" deviceName="测控基带B 上行载波输出">
+					<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+					<Param id="OutputLev" value="-70" name="输出电平"/>
+					<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+				</Command>
+			</if>
+		</if>
+	</if>
+	<!-- 链路模式为一体化高码率+扩二 -->
+	<if condition="LinkWorkMode:13" desc="链路模式为一体化高码率+扩二">
+		<if condition="MasterType:1" desc="主用类型为数传">
+			<if condition="CKJD1:1" desc="主用基带为基带A">
+				<Command deviceId="0x4001" modeId="0x19" cmdId="102" deviceName="测控基带A 工作方式设置">
+					<Param id="WorkWay" value="16" name="工作方式 数传射频模拟源有线闭环"/>
+				</Command>
+				<Command deviceId="0x4001" modeId="0x19" cmdId="5" deviceName="测控基带A 上行载波输出">
+					<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+					<Param id="OutputLev" value="-70" name="输出电平"/>
+					<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+				</Command>
+			</if>
+			<if condition="CKJD1:2" desc="主用基带为基带B">
+				<Command deviceId="0x4002" modeId="0x19" cmdId="102" deviceName="测控基带B 工作方式设置">
+					<Param id="WorkWay" value="16" name="工作方式 数传射频模拟源有线闭环"/>
+				</Command>
+				<Command deviceId="0x4002" modeId="0x19" cmdId="5" deviceName="测控基带B 上行载波输出">
+					<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+					<Param id="OutputLev" value="-70" name="输出电平"/>
+					<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+				</Command>
+			</if>
+		</if>
+		<if condition="MasterType:2" desc="主用类型为扩频">
+			<if condition="CKJD1:1" desc="主用基带为基带A">
+				<Command deviceId="0x4001" modeId="0x19" cmdId="102" deviceName="测控基带A 工作方式设置">
+					<Param id="WorkWay" value="7" name="工作方式 扩频射频模拟源有线闭环"/>
+				</Command>
+				<Command deviceId="0x4001" modeId="0x19" cmdId="5" deviceName="测控基带A 上行载波输出">
+					<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+					<Param id="OutputLev" value="-70" name="输出电平"/>
+					<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+				</Command>
+			</if>
+			<if condition="CKJD1:2" desc="主用基带为基带B">
+				<Command deviceId="0x4002" modeId="0x19" cmdId="102" deviceName="测控基带B 工作方式设置">
+					<Param id="WorkWay" value="7" name="工作方式 扩频射频模拟源有线闭环"/>
+				</Command>
+				<Command deviceId="0x4002" modeId="0x19" cmdId="5" deviceName="测控基带B 上行载波输出">
+					<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+					<Param id="OutputLev" value="-70" name="输出电平"/>
+					<Param id="ChanSelect" value="4" name="通道选择 全部通道"/>
+				</Command>
+			</if>
+		</if>
+	</if>
+	<!-- 链路模式为扩跳 -->
+	<if condition="LinkWorkMode:14" desc="链路模式为扩跳">
+		<if condition="CKJD1:1" desc="主用基带为基带A">
+			<Command deviceId="0x4001" modeId="0x21" cmdId="102" deviceName="测控基带A 工作方式设置">
+				<Param id="WorkWay" value="7" name="工作方式 射频模拟源有线闭环"/>
+			</Command>
+			<Command deviceId="0x4001" modeId="0x21" cmdId="5" deviceName="测控基带A 上行载波输出">
+				<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+				<Param id="OutputLev" value="-70" name="输出电平"/>
+			</Command>
+		</if>
+		<if condition="CKJD1:2" desc="主用基带为基带B">
+			<Command deviceId="0x4002" modeId="0x21" cmdId="102" deviceName="测控基带B 工作方式设置">
+				<Param id="WorkWay" value="7" name="工作方式 射频模拟源有线闭环"/>
+			</Command>
+			<Command deviceId="0x4002" modeId="0x21" cmdId="5" deviceName="测控基带B 上行载波输出">
+				<Param id="CarrOutput" value="1" name="载波输出 输出"/>
+				<Param id="OutputLev" value="-70" name="输出电平"/>
+			</Command>
+		</if>
+	</if>
+</Mode>

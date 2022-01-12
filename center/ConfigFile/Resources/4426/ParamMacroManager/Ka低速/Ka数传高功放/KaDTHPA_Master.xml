@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device>
+	<unit unitID="1" unitName="公共单元">
+		<field pid="102" id="TransmPower" desc="发射功率" dataType="short" displayFormat="ConverterWdBm" initValue="30" minValue="30" maxValue="55.5" step="0.1" unit="dBm"/>
+		<field pid="103" id="Attenuation" desc="衰减" dataType="short" displayFormat="double" initValue="" minValue="0" maxValue="31.5" step="0.1" unit="dB"/>
+	</unit>
+</device>

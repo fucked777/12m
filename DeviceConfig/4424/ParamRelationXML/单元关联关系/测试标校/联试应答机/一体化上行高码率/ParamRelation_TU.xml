@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x06" deviceID="0x00" modeID="0x08" unitType="TU" desc="数传解调单元">
+	<Triggers>
+		<Trigger id="DescrambCtrl" desc="解扰控制">
+			<TriggerValue value="1" desc="不解扰">
+				<Receiver id="DistPolyLength" desc="解扰多项式长度" isEnable="0" values="1:1字节;2:2字节;3:3字节;4:4字节" minValue="" maxValue="" />
+				<Receiver id="ScramPolg" desc="解扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="DescramPrim" desc="解扰初相" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="解扰">
+				<Receiver id="DistPolyLength" desc="解扰多项式长度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="ScramPolg" desc="解扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="DescramPrim" desc="解扰初相" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>	
+		<Trigger id="DistPolyLength" desc="解扰多项式长度">
+			<TriggerValue value="1" desc="1字节">
+				<Receiver id="ScramPolg" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FF" />
+				<Receiver id="DescramPrim" desc="解扰初相" isEnable="" values="" minValue="" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="2字节">
+				<Receiver id="ScramPolg" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+				<Receiver id="DescramPrim" desc="解扰初相" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="3字节">
+				<Receiver id="ScramPolg" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+				<Receiver id="DescramPrim" desc="解扰初相" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="4字节">
+				<Receiver id="ScramPolg" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+				<Receiver id="DescramPrim" desc="解扰初相" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+		
+	
+	</Triggers>
+</Relation>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x02" modeID="0x8" cmdID="2" desc="送数控制">
+	<Triggers>
+		<Trigger id="TrackTarget" desc="跟踪目标">
+			<TriggerValue value="1" desc="一体化目标">
+				<Receiver id="TrackChan" desc="扩频跟踪通道" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="扩频目标">
+				<Receiver id="TrackChan" desc="扩频跟踪通道" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

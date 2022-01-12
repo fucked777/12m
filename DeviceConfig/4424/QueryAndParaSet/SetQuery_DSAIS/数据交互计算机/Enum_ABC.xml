@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="ABC" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="CtrlMode" desc="控制模式">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="DeviceStatus" desc="系统诊断信息">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="完全正常"/>
+		<entry svalue="2" uvalue="2" desc="有错误,影响工作"/>
+		<entry svalue="3" uvalue="3" desc="有错误,不影响工作"/>
+	</enum>
+	<enum name="Mission1Center1SendDataStatus" desc="中心在任务中送数状态">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="未送"/>
+		<entry svalue="2" uvalue="2" desc="送数"/>
+	</enum>
+	<enum name="MissionSegment" desc="任务弧段">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="上升段"/>
+		<entry svalue="2" uvalue="2" desc="运行段"/>
+		<entry svalue="3" uvalue="3" desc="返回段"/>
+	</enum>
+	<enum name="MissionRunStatus" desc="任务运行状态">
+		<entry svalue="1" uvalue="1" desc="任务准备"/>
+		<entry svalue="2" uvalue="2" desc="准备就绪"/>
+		<entry svalue="3" uvalue="3" desc="正在跟踪"/>
+		<entry svalue="4" uvalue="4" desc="跟踪结束"/>
+		<entry svalue="5" uvalue="5" desc="任务结束"/>
+	</enum>
+	<enum name="MissionGuideMode" desc="任务引导模式">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="理论引导"/>
+		<entry svalue="2" uvalue="2" desc="瞬根引导"/>
+		<entry svalue="3" uvalue="3" desc="本站实测数据引导"/>
+		<entry svalue="4" uvalue="4" desc="中心弹道数据引导"/>
+		<entry svalue="5" uvalue="5" desc="复合引导"/>
+	</enum>
+	<enum name="MissionGuideSendStatus" desc="任务引导数据送数控制状态">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="不送"/>
+		<entry svalue="2" uvalue="2" desc="送数"/>
+	</enum>
+	<enum name="CommStatusItemDir" desc="数据收发方向">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="接收"/>
+		<entry svalue="2" uvalue="2" desc="发送"/>
+	</enum>
+	<enum name="SoftUnitItemStatus" desc="软件单元运行状态">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="正常"/>
+		<entry svalue="2" uvalue="2" desc="有异常不影响使用"/>
+		<entry svalue="3" uvalue="3" desc="有异常,状态不可用"/>
+		<entry svalue="4" uvalue="4" desc="软件单元没有启用或检测不到状态"/>
+	</enum>
+	<enum name="SoftUnitItem1DetailItem1Status" desc="软件单元1在主机1上运行状态">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="正常"/>
+		<entry svalue="2" uvalue="2" desc="异常"/>
+	</enum>
+	<enum name="HostStatus" desc="主机在线状态">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="在线"/>
+		<entry svalue="2" uvalue="2" desc="不在线"/>
+	</enum>
+	<enum name="NetCardItemType" desc="网卡类型">
+		<entry svalue="0" uvalue="0" desc="监控网"/>
+		<entry svalue="1" uvalue="1" desc="数据网"/>
+		<entry svalue="2" uvalue="2" desc="第一路由"/>
+		<entry svalue="3" uvalue="3" desc="第二路由"/>
+	</enum>
+	<enum name="NetCardItemStatus" desc="网卡状态">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="正常"/>
+		<entry svalue="2" uvalue="2" desc="异常"/>
+	</enum>
+	<enum name="TcpStatusItemStatus" desc="连接状态">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="连接"/>
+		<entry svalue="2" uvalue="2" desc="未连接或异常"/>
+	</enum>
+	<enum name="CenterDataControlItemIsUsing" desc="是否启用">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="未启用"/>
+		<entry svalue="2" uvalue="2" desc="启用"/>
+	</enum>
+	<enum name="CenterDataControlItemIsSendTtcFirstRouter" desc="第一路由是否发送测控数据">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="不发送"/>
+		<entry svalue="2" uvalue="2" desc="发送"/>
+	</enum>
+	<enum name="CenterDataControlItemIsSendLinkFirstRouter" desc="第一路由是否发送链路监视数据">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="不发送"/>
+		<entry svalue="2" uvalue="2" desc="发送"/>
+	</enum>
+	<enum name="CenterDataControlItemIsSendTtcSecondRouter" desc="第二路由是否发送测控数据">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="不发送"/>
+		<entry svalue="2" uvalue="2" desc="发送"/>
+	</enum>
+	<enum name="CenterDataControlItemIsSendLinkFirstRouter" desc="第二路由是否发送链路监视数据">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="不发送"/>
+		<entry svalue="2" uvalue="2" desc="发送"/>
+	</enum>
+</enums>

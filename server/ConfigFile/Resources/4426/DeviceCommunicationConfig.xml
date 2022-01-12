@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommunicationInfo ChannelNum="3">
+	<Group IP="132.29.1.121" RecvDataDesModule="ServerDeviceProcessService" desc="正常的设备的通讯参数">
+		<DevItem ID="0x1011" DesAddress="225.29.1.41" RecvPort="11241" SendPort="11041" ChannelNo="1" Type="UDPGB" Desc="天线控制A" />
+		<DevItem ID="0x1012" DesAddress="225.29.1.42" RecvPort="11242" SendPort="11042" ChannelNo="1" Type="UDPGB" Desc="天线控制B" />
+
+
+		<DevItem ID="0x2001" DesAddress="132.29.1.111" RecvPort="41311" SendPort="41111" ChannelNo="1" Type="UDPP2P" Desc="S高功放A" />
+		<DevItem ID="0x2002" DesAddress="132.29.1.111" RecvPort="41312" SendPort="41112" ChannelNo="1" Type="UDPP2P" Desc="S高功放B" />
+		<DevItem ID="0x2101" DesAddress="132.29.1.111" RecvPort="41313" SendPort="41113" ChannelNo="1" Type="UDPP2P" Desc="功放开关矩阵" />
+		<DevItem ID="0x2003" DesAddress="225.29.1.114" RecvPort="41314" SendPort="41114" ChannelNo="1" Type="UDPGB" Desc="Ka测控高功放A" />
+		<DevItem ID="0x2004" DesAddress="225.29.1.115" RecvPort="41315" SendPort="41115" ChannelNo="1" Type="UDPGB" Desc="Ka测控高功放B" />
+		<DevItem ID="0x2005" DesAddress="225.29.1.116" RecvPort="41316" SendPort="41116" ChannelNo="1" Type="UDPGB" Desc="Ka数传高功放A" />
+		<DevItem ID="0x2006" DesAddress="225.29.1.117" RecvPort="41317" SendPort="41117" ChannelNo="1" Type="UDPGB" Desc="Ka数传高功放B" />
+		<DevItem ID="0x2401" DesAddress="225.29.1.118" RecvPort="41318" SendPort="41118" ChannelNo="1" Type="UDPGB" Desc="发射高频箱  Ka频段低速数传发射高频箱" />
+		<DevItem ID="0x2402" DesAddress="225.29.1.119" RecvPort="41319" SendPort="41119" ChannelNo="1" Type="UDPGB" Desc="发射高频箱  Ka频段测控发射高频箱" />
+		<DevItem ID="0x2501" DesAddress="225.29.1.120" RecvPort="41320" SendPort="41120" ChannelNo="1" Type="UDPGB" Desc="S频段发射射频开关矩阵" />
+
+
+		<DevItem ID="0x3001" DesAddress="225.29.1.141" RecvPort="61341" SendPort="61141" ChannelNo="1" Type="UDPGB" Desc="驱动控制" />
+		<DevItem ID="0x3101" DesAddress="225.29.1.142" RecvPort="61342" SendPort="61142" ChannelNo="1" Type="UDPGB" Desc="Ka频段测控及跟踪高频箱" />
+		<DevItem ID="0x3102" DesAddress="225.29.1.143" RecvPort="61343" SendPort="61143" ChannelNo="1" Type="UDPGB" Desc="Ka频段低速数传及跟踪高频箱" />
+		<DevItem ID="0x3103" DesAddress="225.29.1.144" RecvPort="61344" SendPort="61144" ChannelNo="1" Type="UDPGB" Desc="Ka频段高速数传高频箱" />
+		<DevItem ID="0x3104" DesAddress="225.29.1.145" RecvPort="61345" SendPort="61145" ChannelNo="1" Type="UDPGB" Desc="X高频箱" />
+		<DevItem ID="0x3201" DesAddress="225.29.1.146" RecvPort="61346" SendPort="61146" ChannelNo="1" Type="UDPGB" Desc="S频段射频开关网络" />
+		<DevItem ID="0x3202" DesAddress="225.29.1.147" RecvPort="61347" SendPort="61147" ChannelNo="1" Type="UDPGB" Desc="Ka频段射频开关网络" />
+		<DevItem ID="0x3301" DesAddress="225.29.1.148" RecvPort="61348" SendPort="61148" ChannelNo="1" Type="UDPGB" Desc="L频段数传中频矩阵" />
+		<DevItem ID="0x3501" DesAddress="225.29.1.149" RecvPort="61349" SendPort="61149" ChannelNo="1" Type="UDPGB" Desc="光端机   中心体光端机1"/>
+		<DevItem ID="0x3502" DesAddress="225.29.1.155" RecvPort="61355" SendPort="61155" ChannelNo="1" Type="UDPGB" Desc="光端机   中心体光端机2"/>
+		<DevItem ID="0x3503" DesAddress="225.29.1.150" RecvPort="61350" SendPort="61150" ChannelNo="1" Type="UDPGB" Desc="光端机   中心机房光端机1"/>
+		<DevItem ID="0x3504" DesAddress="225.29.1.156" RecvPort="61356" SendPort="61156" ChannelNo="1" Type="UDPGB" Desc="光端机   中心机房光端机2"/>
+		<DevItem ID="0x3505" DesAddress="225.29.1.151" RecvPort="61351" SendPort="61151" ChannelNo="1" Type="UDPGB" Desc="光端机   塔基机房光端机1"/>
+		<DevItem ID="0x3506" DesAddress="225.29.1.157" RecvPort="61357" SendPort="61157" ChannelNo="1" Type="UDPGB" Desc="光端机   塔基机房光端机2"/> 
+		<DevItem ID="0x3601" DesAddress="225.29.1.152" RecvPort="61352" SendPort="61152" ChannelNo="1" Type="UDPGB" Desc="S频段射频开关矩阵" />
+		<DevItem ID="0x3701" DesAddress="225.29.1.153" RecvPort="61353" SendPort="61153" ChannelNo="1" Type="UDPGB" Desc="L频段切换网络" />
+		<DevItem ID="0x3A01" DesAddress="225.29.1.154" RecvPort="61354" SendPort="61154" ChannelNo="1" Type="UDPGB" Desc="1.2GHz中频均衡放大器" />
+
+
+
+		<DevItem ID="0x4001" DesAddress="225.29.1.51" RecvPort="61251" SendPort="61051" ChannelNo="2" Type="UDPGB" Desc="测控基带  测控基带A-1" />
+		<DevItem ID="0x4002" DesAddress="225.29.1.53" RecvPort="61253" SendPort="61053" ChannelNo="2" Type="UDPGB" Desc="测控基带  测控基带A-2" />
+		<DevItem ID="0x4003" DesAddress="225.29.1.52" RecvPort="61252" SendPort="61052" ChannelNo="2" Type="UDPGB" Desc="测控基带  测控基带B-1" />
+		<DevItem ID="0x4004" DesAddress="225.29.1.54" RecvPort="61254" SendPort="61054" ChannelNo="2" Type="UDPGB" Desc="测控基带  测控基带B-2" />
+
+		<DevItem ID="0x4101" DesAddress="225.29.1.71" RecvPort="61271" SendPort="61071" ChannelNo="2" Type="UDPGB" Desc="高速数传基带数传基带A" />
+		<DevItem ID="0x4102" DesAddress="225.29.1.72" RecvPort="61272" SendPort="61072" ChannelNo="2" Type="UDPGB" Desc="高速数传基带数传基带B" />
+		<DevItem ID="0x4201" DesAddress="225.29.1.91" RecvPort="61291" SendPort="61091" ChannelNo="2" Type="UDPGB" Desc="跟踪基带  跟踪基带A" />
+		<DevItem ID="0x4202" DesAddress="225.29.1.92" RecvPort="61292" SendPort="61092" ChannelNo="2" Type="UDPGB" Desc="跟踪基带  跟踪基带B" />
+		<DevItem ID="0x4203" DesAddress="225.29.1.93" RecvPort="61293" SendPort="61093" ChannelNo="2" Type="UDPGB" Desc="跟踪基带  跟踪基带C" />
+		<DevItem ID="0x4204" DesAddress="225.29.1.94" RecvPort="61294" SendPort="61094" ChannelNo="2" Type="UDPGB" Desc="跟踪基带  跟踪基带D" />
+		<DevItem ID="0x4301" DesAddress="225.29.1.95" RecvPort="6295" SendPort="6095" ChannelNo="2" Type="UDPGB" Desc="跟踪基带  跟踪基带切换" />
+		<DevItem ID="0x4401" DesAddress="225.29.1.75" RecvPort="61275" SendPort="61075" ChannelNo="2" Type="UDPGB" Desc="低速数传基带  数传基带Ａ" />
+		<DevItem ID="0x4402" DesAddress="225.29.1.76" RecvPort="61276" SendPort="61076" ChannelNo="2" Type="UDPGB" Desc="低速数传基带  数传基带B" />
+		<DevItem ID="0x4501" DesAddress="225.29.1.53" RecvPort="61453" SendPort="61253" ChannelNo="2" Type="UDPGB" Desc="伪码服务器A" />
+		<DevItem ID="0x4502" DesAddress="225.29.1.54" RecvPort="61454" SendPort="61254" ChannelNo="2" Type="UDPGB" Desc="伪码服务器B" />
+
+		
+
+
+		<DevItem ID="0x6002" DesAddress="225.29.1.21" RecvPort="61221" SendPort="61021" ChannelNo="3" Type="UDPGB" Desc="联试应答机  联试应答机终端 扩跳" />
+		<DevItem ID="0x6001" DesAddress="225.29.1.22" RecvPort="61222" SendPort="61022" ChannelNo="3" Type="UDPGB" Desc="联试应答机  联试应答机终端" />
+		<DevItem ID="0x6011" DesAddress="225.29.1.23" RecvPort="61223" SendPort="61023" ChannelNo="3" Type="UDPGB" Desc="联试应答机  联试应答机信道" />
+		<DevItem ID="0x6101" DesAddress="225.29.1.24" RecvPort="61224" SendPort="61024" ChannelNo="3" Type="UDPGB" Desc="仪器输入切换开关" />
+		<DevItem ID="0x6201" DesAddress="225.29.1.25" RecvPort="61225" SendPort="61025" ChannelNo="3" Type="UDPGB" Desc="测试计算机" />
+		<DevItem ID="0x6301" DesAddress="225.29.1.26" RecvPort="61226" SendPort="61026" ChannelNo="3" Type="UDPGB" Desc="测试高频箱" />
+		<DevItem ID="0x6302" DesAddress="225.29.1.27" RecvPort="61227" SendPort="61027" ChannelNo="3" Type="UDPGB" Desc="后端测试开关网络" />
+		<DevItem ID="0x6303" DesAddress="225.29.1.28" RecvPort="61228" SendPort="61028" ChannelNo="3" Type="UDPGB" Desc="前端测试开关网络" />
+		<DevItem ID="0x6304" DesAddress="225.29.1.29" RecvPort="61229" SendPort="61029" ChannelNo="3" Type="UDPGB" Desc="测试信号选择开关" />
+		<DevItem ID="0x6401" DesAddress="225.29.1.30" RecvPort="61230" SendPort="61030" ChannelNo="3" Type="UDPGB" Desc="测试高频箱  频谱仪(前端)" />
+		<DevItem ID="0x6901" DesAddress="225.29.1.35" RecvPort="61235" SendPort="61035" ChannelNo="2" Type="UDPGB" Desc="S频段校零变频一体机" />
+		<DevItem ID="0x6902" DesAddress="225.29.1.36" RecvPort="61236" SendPort="61036" ChannelNo="2" Type="UDPGB" Desc="Ka频段校零变频一体机" />
+
+		<DevItem ID="0x5001" DesAddress="225.29.1.201" RecvPort="6401" SendPort="6201" ChannelNo="2" Type="UDPGB" Desc="时频终端  时频终端1" />
+		<DevItem ID="0x5002" DesAddress="225.29.1.202" RecvPort="6402" SendPort="6202" ChannelNo="2" Type="UDPGB" Desc="时频终端  时频终端2" />
+		<DevItem ID="0x5101" DesAddress="225.29.1.203" RecvPort="6403" SendPort="6203" ChannelNo="2" Type="UDPGB" Desc="锁相频标  锁相频标1" />
+		<DevItem ID="0x5102" DesAddress="225.29.1.204" RecvPort="6404" SendPort="6204" ChannelNo="2" Type="UDPGB" Desc="锁相频标  锁相频标2" />
+		<DevItem ID="0x5201" DesAddress="225.29.1.205" RecvPort="6405" SendPort="6205" ChannelNo="2" Type="UDPGB" Desc="时码分路  时码分路1" />
+		<DevItem ID="0x5202" DesAddress="225.29.1.206" RecvPort="6406" SendPort="6206" ChannelNo="2" Type="UDPGB" Desc="时码分路  时码分路2" />
+		<DevItem ID="0x5302" DesAddress="225.29.1.207" RecvPort="6407" SendPort="6207" ChannelNo="2" Type="UDPGB" Desc="频标分配器 ip" />
+
+		
+		<DevItem ID="0x7001" DesAddress="225.29.1.101" RecvPort="61301" SendPort="61101" ChannelNo="3" Type="UDPGB" Desc="测控数字化前端1" />
+		<DevItem ID="0x7002" DesAddress="225.29.1.102" RecvPort="61302" SendPort="61102" ChannelNo="3" Type="UDPGB" Desc="测控数字化前端2" />
+		<DevItem ID="0x7003" DesAddress="225.29.1.103" RecvPort="61303" SendPort="61103" ChannelNo="3" Type="UDPGB" Desc="测控数字化前端3" />
+		<DevItem ID="0x7004" DesAddress="225.29.1.104" RecvPort="61304" SendPort="61104" ChannelNo="3" Type="UDPGB" Desc="测控数字化前端4" />
+		<DevItem ID="0x7101" DesAddress="225.29.1.105" RecvPort="61305" SendPort="61105" ChannelNo="3" Type="UDPGB" Desc="跟踪数字化前端1" />
+		<DevItem ID="0x7102" DesAddress="225.29.1.106" RecvPort="61306" SendPort="61106" ChannelNo="3" Type="UDPGB" Desc="跟踪数字化前端2" />
+		<DevItem ID="0x7103" DesAddress="225.29.1.107" RecvPort="61307" SendPort="61107" ChannelNo="3" Type="UDPGB" Desc="跟踪数字化前端3" />
+		<DevItem ID="0x7104" DesAddress="225.29.1.108" RecvPort="61308" SendPort="61108" ChannelNo="3" Type="UDPGB" Desc="跟踪数字化前端4" />
+
+
+		<DevItem ID="0x8001" DesAddress="225.29.1.5" RecvPort="61205" SendPort="61005" ChannelNo="3" Type="UDPGB" Desc="数据交互计算机  数据交互计算机" />
+		<DevItem ID="0x8101" DesAddress="225.29.1.81" RecvPort="61281" SendPort="61081" ChannelNo="3" Type="UDPGB" Desc="数据存储转发设备  数据存储转发设备A" />
+		<DevItem ID="0x8102" DesAddress="225.29.1.82" RecvPort="61282" SendPort="61082" ChannelNo="3" Type="UDPGB" Desc="数据存储转发设备  数据存储转发设备B" />
+		<!-- 
+		<DevItem ID="0x6402" DesAddress="225.29.1.211" RecvPort="6619" SendPort="6618" ChannelNo="3" Type="UDPGB" Desc="测试仪器  信号源(前端)" />
+		<DevItem ID="0x6403" DesAddress="225.29.1.212" RecvPort="6621" SendPort="6620" ChannelNo="3" Type="UDPGB" Desc="测试仪器  频谱仪(后端)" />
+		<DevItem ID="0x6404" DesAddress="225.29.1.213" RecvPort="6623" SendPort="6622" ChannelNo="3" Type="UDPGB" Desc="测试仪器  信号源(后端)" />
+		<DevItem ID="0x6405" DesAddress="225.29.1.214" RecvPort="6625" SendPort="6624" ChannelNo="3" Type="UDPGB" Desc="测试仪器  示波器" /> 
+		-->
+
+
+	</Group>
+	<Group IP="132.29.1.121" desc="高轨的通讯参数" RecvDataDesModule="ServerAutoRunTask4426Service">
+		<DevItem ID="0xFE01" DesAddress="225.0.1.27" RecvPort="33128" SendPort="33127" Type="UDPGB" DevProtocolCheck="false" Desc="服务器发送数据模块(中心)" />
+	</Group>
+	<!-- 本机的通讯ID -->
+	<LocalCommunicationAddr>
+		<BaseID>0x26</BaseID>
+		<StationID>0x42</StationID>
+		<DeviceID>0x26</DeviceID>
+		<ExtenName>0x00</ExtenName>
+		<ExtenNumb>0x01</ExtenNumb>
+	</LocalCommunicationAddr>
+</CommunicationInfo>

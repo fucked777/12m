@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="ADU" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="AZMonitMode" desc="方位驱动监控方式">
+		<entry svalue="1" uvalue="1" desc="ACU控" />
+		<entry svalue="2" uvalue="2" desc="驱动柜控" />
+	</enum>
+
+	<enum name="AZDirvState" desc="方位驱动状态">
+		<entry svalue="1" uvalue="1" desc="正常:G" />
+		<entry svalue="2" uvalue="2" desc="告警:R" />
+	</enum>
+
+	<enum name="AZDirvPower" desc="方位驱动器加电">
+		<entry svalue="1" uvalue="1" desc="加电" />
+		<entry svalue="2" uvalue="2" desc="去电" />
+	</enum>
+
+	<enum name="AZunLockPlace" desc="方位拔锁到位">
+		<entry svalue="1" uvalue="1" desc="到位" />
+		<entry svalue="2" uvalue="2" desc="不到位" />
+	</enum>
+
+	<enum name="AZSoftLimit" desc="方位顺软限位">
+		<entry svalue="1" uvalue="1" desc="限位" />
+		<entry svalue="2" uvalue="2" desc="未限位" />
+	</enum>   
+
+	<enum name="ZeroCrossAzim" desc="方位正过零">
+		<entry svalue="1" uvalue="1" desc="发生" />
+		<entry svalue="2" uvalue="2" desc="未发生" />
+	</enum>  
+
+	<enum name="AZBrakeState" desc="方位制动器状态">
+		<entry svalue="1" uvalue="1" desc="制动:G" />
+		<entry svalue="2" uvalue="2" desc="未制动:Y" />
+	</enum>  
+
+	<enum name="AZDirverState" desc="方位驱动器状态">
+		<entry svalue="1" uvalue="1" desc="故障:R" />
+		<entry svalue="2" uvalue="2" desc="正常:G" />
+	</enum>  
+
+	<enum name="LightnProtConn" desc="避雷电缆接通">
+		<entry svalue="1" uvalue="1" desc="接通:G" />
+		<entry svalue="2" uvalue="2" desc="未接通:Y" />
+	</enum>  
+
+	<enum name="PitchDriveMonit" desc="俯仰驱动监控方式">
+		<entry svalue="1" uvalue="1" desc="ACU控" />
+		<entry svalue="2" uvalue="2" desc="驱动柜控" />
+	</enum>
+
+	<enum name="PitchDrivState" desc="俯仰驱动状态">
+		<entry svalue="1" uvalue="1" desc="正常:G" />
+		<entry svalue="2" uvalue="2" desc="告警:R" />
+	</enum> 
+
+	<enum name="ElectPitchDirver" desc="俯仰驱动器加电">
+		<entry svalue="1" uvalue="1" desc="加电" />
+		<entry svalue="2" uvalue="2" desc="去电" />
+	</enum> 
+	<enum name="PitchLatchPlace" desc="俯仰插锁到位">
+		<entry svalue="1" uvalue="1" desc="到位" />
+		<entry svalue="2" uvalue="2" desc="不到位" />
+	</enum> 
+
+	<enum name="UpperPitchLimit" desc="俯仰上软限位">
+		<entry svalue="1" uvalue="1" desc="限位" />
+		<entry svalue="2" uvalue="2" desc="未限位" />
+	</enum> 
+
+	<enum name="PitchBrackeState" desc="俯仰制动器状态">
+		<entry svalue="1" uvalue="1" desc="制动:G" />
+		<entry svalue="2" uvalue="2" desc="未制动:Y" />
+	</enum> 
+
+	<enum name="PitchDirverImp" desc="俯仰驱动器状态">
+		<entry svalue="1" uvalue="1" desc="故障:R" />
+		<entry svalue="2" uvalue="2" desc="正常:G" />
+	</enum> 
+
+	<enum name="ConScanMotor" desc="圆锥扫描电机状态">
+		<entry svalue="1" uvalue="1" desc="启动:G" />
+		<entry svalue="2" uvalue="2" desc="停止:Y" />
+	</enum> 
+
+	<enum name="AxisDriveMonit" desc="第三轴驱动监控方式">
+		<entry svalue="1" uvalue="1" desc="ACU控" />
+		<entry svalue="2" uvalue="2" desc="驱动柜控" />
+	</enum>
+
+	<enum name="AxisDrivState" desc="第三轴驱动状态">
+		<entry svalue="1" uvalue="1" desc="正常:G" />
+		<entry svalue="2" uvalue="2" desc="告警:R" />
+	</enum>
+
+	<enum name="AxisPowerOn" desc="第三轴驱动器加电">
+		<entry svalue="1" uvalue="1" desc="加电" />
+		<entry svalue="2" uvalue="2" desc="去电" />
+	</enum>
+
+	<enum name="LockAxisPlace" desc="第三轴插锁到位">
+		<entry svalue="1" uvalue="1" desc="到位" />
+		<entry svalue="2" uvalue="2" desc="不到位" />
+	</enum>
+
+	<enum name="AxisSoftLimit" desc="第三轴顺软限位">
+		<entry svalue="1" uvalue="1" desc="限位" />
+		<entry svalue="2" uvalue="2" desc="未限位" />
+	</enum>
+
+	<enum name="AxisPositZero" desc="第三轴正过零">
+		<entry svalue="1" uvalue="1" desc="发生" />
+		<entry svalue="2" uvalue="2" desc="未发生" />
+	</enum>
+
+	<enum name="AxleBrakeState" desc="第三轴制动器状态">
+		<entry svalue="1" uvalue="1" desc="制动:G" />
+		<entry svalue="2" uvalue="2" desc="未制动:Y" />
+	</enum>
+
+	<enum name="ThirdAxisDriver" desc="第三轴驱动器状态">
+		<entry svalue="1" uvalue="1" desc="故障:R" />
+		<entry svalue="2" uvalue="2" desc="正常:G" />
+	</enum> 
+
+	<enum name="ThirdAxisPosit" desc="第三轴位置">
+		<entry svalue="1" uvalue="1" desc="正倾(97°)" />
+		<entry svalue="2" uvalue="2" desc="负倾(83°)" />
+		<entry svalue="3" uvalue="3" desc="垂直(90°)" />
+		<entry svalue="4" uvalue="4" desc="放倒(收藏)" />
+	</enum>
+
+	<enum name="AntennaCollStatus" desc="天线收藏状态">
+		<entry svalue="1" uvalue="1" desc="收藏" />
+		<entry svalue="2" uvalue="2" desc="未收藏" />
+	</enum>
+
+	<!--
+	<enum name="ACUSimulMode" desc="ACU仿真方式">
+		<entry svalue="1" uvalue="1" desc="实际工作" />
+		<entry svalue="2" uvalue="2" desc="仿真" />
+	</enum> 
+	-->
+</enums>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x00" modeID="0x4" cmdID="24" desc="送数控制">
+	<Triggers>
+		<Trigger id="DelivMode" desc="送数方式">
+			<TriggerValue value="1" desc="常送">
+				<Receiver id="DelivCtrl" desc="送数控制" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="TaskIdent" desc="目标号" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="DelCategory" desc="类别" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="人工">
+				<Receiver id="DelivCtrl" desc="送数控制" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="TaskIdent" desc="目标号" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="DelCategory" desc="类别" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

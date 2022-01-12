@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+deviceID:系统号+设备号+分机号
+modelID:工作模式
+graphicsId：系统框图中需要监控的设备id 
+statusID:状态ID  ||
+				||  这两个ID共同决定界面的显示状态 statusID必须不为空   单元号|命令Key
+controlID:控制ID ||
+showType:显示的类型 1：状态；2:开关 3:分系统
+colorType：配置方案0:无配色；1：GGR；2：GRG  3 GR 1绿 2灰 开关此值是无效的默认为0
+desc：参数描述
+
+对于颜色显示
+控制类型:
+分控 ==>  黄色  255,255,0
+本控 |
+	 ==> 离线/为获取到数据 lightgray  211,211,211
+	 ==> 故障			   red		 255,0,0
+	 ==> 正常			   green	 0,255,0
+
+
+本分控
+无此参数,0;分控,1;本控,2 
+
+GGR 
+0 lightgray 1 green 2 red
+GRG
+0 lightgray 1 red 2 green
+-->
+
+<Group> 		  
+	<Command defaultDeviceId="#" defaultModeId="#" defaultTargetId="0">
+		<ProcessCtrl  name="switchMaster" cmdId="103" staticParams="OnlineSelect|1" desc="切换为主机"/>
+		<ProcessCtrl  name="switchSlave" cmdId="103" staticParams="OnlineSelect|2" desc="切换为备机"/>
+		<!--标准-->
+		<ProcessCtrl  name="ttc_doubleCatchStart" cmdId="9" desc="双捕开始"/>
+		<ProcessCtrl  name="ttc_openAndSweep" cmdId="6" staticParams="ScanCtrl|1" desc="启扫"/>
+		<ProcessCtrl  name="ttc_backToZero" cmdId="6" staticParams="ScanCtrl|3" desc="回零"/>
+		<ProcessCtrl  name="ttc_rangeCapture" cmdId="8" desc="距捕"/>
+		<ProcessCtrl  name="ttc_controlStart" cmdId="5" staticParams="CarrOutput|1" desc="测控开始"/>
+		<ProcessCtrl  name="ttc_controlEnd" cmdId="5" staticParams="CarrOutput|2" desc="测控结束"/>
+		<ProcessCtrl  name="ttc_AFStart" cmdId="57" staticParams="TeleworkPer|1" desc="AF开始"/>
+		<ProcessCtrl  name="ttc_AFEnd" cmdId="57" staticParams="TeleworkPer|2" desc="AF结束"/>
+		<ProcessCtrl  name="captureControl" cmdId="7" dynamicParams="CaptMode|#" desc="捕获方式">
+			<RadioButton paramId="CaptMode">
+				<Item name="captureModeAuto" value="1" desc="手动"/>
+				<Item name="captureModeManual" value="2" desc="自动"/>
+			</RadioButton>
+		</ProcessCtrl>
+		<UnitParam name="blindControl" unitId="4" dynamicParams="BlindSwitch|#" desc="盲发控制">
+			<RadioButton paramId="BlindSwitch">
+				<Item name="blindControlOn" value="1" desc="开"/>
+				<Item name="blindControlOff" value="2" desc="关"/>
+			</RadioButton>
+		</UnitParam>
+		<ProcessCtrl  name="sttc_carrier" cmdId="5" dynamicParams="CarrOutput|#" desc="载波输出">
+			<RadioButton paramId="CarrOutput">
+				<Item name="sttc_carrier_on" value="1" desc="允许"/>
+				<Item name="sttc_carrier_off" value="2" desc="禁止"/>
+			</RadioButton>
+		</ProcessCtrl>
+		
+		<!--扩二-->
+		<ProcessCtrl  name="k2_dopplerPresets" cmdId="32" dynamicParams="ChanNumb|# ReceUnit|# PresFreq|# CaptRange|#" desc="多普勒预置">
+			<PopWindow name="DopplerPreset"/>
+		</ProcessCtrl>
+		<ProcessCtrl  name="k2_controlStart" cmdId="5" staticParams="CarrOutput|1 ChanSelect|9" dynamicParams="OutputLev|*" desc="测控开始">
+			<Unit paramId="OutputLev" unitParamId="CarrierLevel" unitId="3" targetId="0"/>
+		</ProcessCtrl>
+		<ProcessCtrl  name="k2_controlEnd" cmdId="5" staticParams="CarrOutput|2 ChanSelect|9" dynamicParams="OutputLev|*" desc="测控结束">
+			<Unit paramId="OutputLev" unitParamId="CarrierLevel" unitId="3" targetId="0"/>
+		</ProcessCtrl>
+		<UnitParam name="k2_remoConWorkPeriod" unitId="5" dynamicParams="BlindSwitch|#" desc="遥控工作期">
+			<PopWindow name="RemoteWorkPeriod"/>
+		</UnitParam>
+		<ProcessCtrl  name="k2_carrier" cmdId="5" staticParams="ChanSelect|9" dynamicParams="OutputLev|* CarrOutput|#" desc="载波输出">
+			<RadioButton paramId="CarrOutput">
+				<Item name="k2_carrier_on" value="1" desc="加载"/>
+				<Item name="k2_carrier_off" value="2" desc="去载"/>
+			</RadioButton>
+			<Unit paramId="OutputLev" unitParamId="CarrierLevel" unitId="3" targetId="0"/>
+		</ProcessCtrl>
+		<UnitParam  name="k2_adjunct" unitId="3" validIdent="2" staticParams="" dynamicParams="CarrierModu|#" desc="去调控制">
+			<RadioButton paramId="CarrierModu">
+				<Item name="k2_adjunct_off" value="1" desc="去调"/>
+				<Item name="k2_adjunct_on" value="2" desc="加调"/>
+			</RadioButton>
+		</UnitParam>
+		<UnitParam name="target1_r_on" unitId="3" validIdent="5" dynamicParams="YC_ChannelCtrl|#" desc="目标1遥控输出">
+			<RadioButton paramId="YC_ChannelCtrl" targetId="1" >
+				<Item name="target1_r_on" value="1" desc="输出"/>
+			</RadioButton>
+		</UnitParam>
+		
+		<UnitParam name="target1_r_off" unitId="3" validIdent="5" dynamicParams="YC_ChannelCtrl|#" desc="目标1遥控关闭">
+			<RadioButton paramId="YC_ChannelCtrl" targetId="1">
+				<Item name="target1_r_off" value="2" desc="关闭"/>
+			</RadioButton>
+		</UnitParam>
+		<UnitParam name="target2_r_on" unitId="3" validIdent="5" dynamicParams="YC_ChannelCtrl|#" desc="目标2遥控输出">
+			<RadioButton paramId="YC_ChannelCtrl" targetId="2">
+				<Item name="target2_r_on" value="1" desc="输出"/>
+			</RadioButton>
+		</UnitParam>
+		<UnitParam name="target2_r_off" unitId="3" validIdent="5" dynamicParams="YC_ChannelCtrl|#" desc="目标2遥控关闭">
+			<RadioButton paramId="YC_ChannelCtrl" targetId="2">
+				<Item name="target2_r_off" value="2" desc="关闭"/>
+			</RadioButton>
+		</UnitParam>
+		<UnitParam name="target3_r_on" unitId="3" validIdent="5" dynamicParams="YC_ChannelCtrl|#" desc="目标3遥控输出">
+			<RadioButton paramId="YC_ChannelCtrl" targetId="3">
+				<Item name="target3_r_on" value="1" desc="输出"/>
+			</RadioButton>
+		</UnitParam>
+		<UnitParam name="target3_r_off" unitId="3" validIdent="5" dynamicParams="YC_ChannelCtrl|#" desc="目标3遥控关闭">
+			<RadioButton paramId="YC_ChannelCtrl" targetId="3">
+				<Item name="target3_r_off" value="2" desc="关闭"/>
+			</RadioButton>
+		</UnitParam>
+		<UnitParam name="target4_r_on" unitId="3" validIdent="5" dynamicParams="YC_ChannelCtrl|#" desc="目标4遥控输出">
+			<RadioButton paramId="YC_ChannelCtrl" targetId="4">
+				<Item name="target4_r_on" value="1" desc="输出"/>
+			</RadioButton>
+		</UnitParam>
+		<UnitParam name="target4_r_off" unitId="3" validIdent="5" dynamicParams="YC_ChannelCtrl|#" desc="目标4遥控关闭">
+			<RadioButton paramId="YC_ChannelCtrl" targetId="4">
+				<Item name="target4_r_off" value="2" desc="关闭"/>
+			</RadioButton>
+		</UnitParam>
+		
+		
+		<UnitParam name="target1_m_on" unitId="3" validIdent="5" dynamicParams="CL_ChannelCtrl|#" desc="目标1测量输出">
+			<RadioButton paramId="CL_ChannelCtrl" targetId="1">
+				<Item name="target1_m_on" value="1" desc="输出"/>
+			</RadioButton>
+		</UnitParam>
+		<UnitParam name="target1_m_off" unitId="3" validIdent="5" dynamicParams="CL_ChannelCtrl|#" desc="目标1测量关闭">
+			<RadioButton paramId="CL_ChannelCtrl" targetId="1">
+				<Item name="target1_m_off" value="2" desc="关闭"/>
+			</RadioButton>
+		</UnitParam>
+		<UnitParam name="target2_m_on" unitId="3" validIdent="5" dynamicParams="CL_ChannelCtrl|#" desc="目标2测量输出">
+			<RadioButton paramId="CL_ChannelCtrl" targetId="2">
+				<Item name="target2_m_on" value="1" desc="输出"/>
+			</RadioButton>
+		</UnitParam>
+		<UnitParam name="target2_m_off" unitId="3" validIdent="5" dynamicParams="CL_ChannelCtrl|#" desc="目标2测量关闭">
+			<RadioButton paramId="CL_ChannelCtrl" targetId="2">
+				<Item name="target2_m_off" value="2" desc="关闭"/>
+			</RadioButton>
+		</UnitParam>
+		<UnitParam name="target3_m_on" unitId="3" validIdent="5" dynamicParams="CL_ChannelCtrl|#" desc="目标3测量输出">
+			<RadioButton paramId="CL_ChannelCtrl" targetId="3">
+				<Item name="target3_m_on" value="1" desc="输出"/>
+			</RadioButton>
+		</UnitParam>
+		<UnitParam name="target3_m_off" unitId="3" validIdent="5" dynamicParams="CL_ChannelCtrl|#" desc="目标3测量关闭">
+			<RadioButton paramId="CL_ChannelCtrl" targetId="3">
+				<Item name="target3_m_off" value="2" desc="关闭"/>
+			</RadioButton>
+		</UnitParam>
+		<UnitParam name="target4_m_on" unitId="3" validIdent="5" dynamicParams="CL_ChannelCtrl|#" desc="目标4测量输出">
+			<RadioButton paramId="CL_ChannelCtrl" targetId="4">
+				<Item name="target4_m_on" value="1" desc="输出"/>
+			</RadioButton>
+		</UnitParam>
+		<UnitParam name="target4_m_off" unitId="3" validIdent="5" dynamicParams="CL_ChannelCtrl|#" desc="目标4测量关闭">
+			<RadioButton paramId="CL_ChannelCtrl" targetId="4">
+				<Item name="target4_m_off" value="2" desc="关闭"/>
+			</RadioButton>
+		</UnitParam>
+		<!--一体化-->
+		<ProcessCtrl  name="syth_doubleCatchStart" cmdId="5" staticParams="CarrOutput|1 ChanSelect|9" dynamicParams="OutputLev|*" desc="双捕开始">
+			<Unit paramId="OutputLev" unitParamId="CarrierLevel" unitId="3" targetId="0"/>
+		</ProcessCtrl>
+		<ProcessCtrl  name="syth_controlEnd" cmdId="5" staticParams="CarrOutput|2 ChanSelect|9" dynamicParams="OutputLev|*" desc="测控结束">
+			<Unit paramId="OutputLev" unitParamId="CarrierLevel" unitId="3" targetId="0"/>
+		</ProcessCtrl>
+		<!--扩跳-->
+		<ProcessCtrl  name="skt_doubleCatchStart" cmdId="5" staticParams="CarrOutput|1" dynamicParams="OutputLev|*" desc="双捕开始">
+			<Unit paramId="OutputLev" unitParamId="OutputPower" unitId="3" targetId="0"/>
+		</ProcessCtrl>
+		<ProcessCtrl  name="skt_controlEnd" cmdId="5" staticParams="CarrOutput|2" dynamicParams="OutputLev|*" desc="测控结束">
+			<Unit paramId="OutputLev" unitParamId="OutputPower" unitId="3" targetId="0"/>
+		</ProcessCtrl>
+	</Command>
+</Group>

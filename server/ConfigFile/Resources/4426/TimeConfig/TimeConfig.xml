@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!-- 使用的时间类型： 1：B码时间 2：NTP时间 3：系统时间 -->
+	<UsedTimeType type="1"/>
+	<!-- 主备用NTP服务器地址 -->
+	<NTPMasterServerAddr ip="132.29.1.201"/>
+	<NTPSlaveServerAddr ip="132.29.1.202"/>
+	<!-- 时间跳跃最大间隔，单位秒 NTP服务器当前上报的时间和上一次上报的时间间隔超过此值，切换到另一台NTP服务器-->
+	<MaxJumpInterval value="3" />
+	<!-- NTP的时间长时间未改变，可能NTP服务器没了，切换到另一台NTP服务器-->
+	<LongTimeNotUpdated value="3" />
+</root>

@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="SDUIQ" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="LockStatus" desc="锁定状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="锁定:G"/>
+		<entry svalue="2" uvalue="2" desc="失锁:R"/>
+	</enum>
+	<enum name="ICircleResult" desc="比对结果">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="正确:G"/>
+		<entry svalue="2" uvalue="2" desc="错误:R"/>
+	</enum>
+	<enum name="CodeType" desc="码型">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<!-- entry svalue="1" uvalue="1" desc="RZ" /-->
+		<entry svalue="1" uvalue="1" desc="NRZ-L"/>
+		<entry svalue="2" uvalue="2" desc="NRZ-M"/>
+		<entry svalue="3" uvalue="3" desc="NRZ-S"/>
+		<entry svalue="4" uvalue="4" desc="Biφ-L"/>
+		<entry svalue="5" uvalue="5" desc="Biφ-M"/>
+		<entry svalue="6" uvalue="6" desc="Biφ-S"/>
+	</enum>
+	<enum name="ConvolCodeType" desc="卷积码类型">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="(7,1/2)"/>
+		<entry svalue="2" uvalue="2" desc="(7,2/3)"/>
+		<entry svalue="3" uvalue="3" desc="(7,3/4)"/>
+		<entry svalue="4" uvalue="4" desc="(7,5/6)"/>
+		<entry svalue="5" uvalue="5" desc="(7,7/8)"/>
+	</enum>
+	<enum name="RSCodeType" desc="R-S码类型">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="(255,223)"/>
+		<entry svalue="2" uvalue="2" desc="(255,239)"/>
+	</enum>
+	<enum name="RSDecodBase" desc="R-S译码坐标基">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="常规基"/>
+		<entry svalue="2" uvalue="2" desc="坐标基"/>
+	</enum>
+	<enum name="LDPCFraSynchLength" desc="LDPC编码同步码长度">
+		<entry svalue="1" uvalue="32" desc="32位"/>
+		<entry svalue="2" uvalue="40" desc="40位"/>
+		<entry svalue="3" uvalue="48" desc="48位"/>
+		<entry svalue="4" uvalue="56" desc="56位"/>
+		<entry svalue="5" uvalue="64" desc="64位"/>
+	</enum>
+	<enum name="LDPCCodeWay" desc="LDPC类型">
+		<!--<entry svalue="0" uvalue="0" desc="无此参数" />
+		<entry svalue="1" uvalue="1" desc="1/2,(2048,1024)" />
+		<entry svalue="2" uvalue="2" desc="1/2,(8192,4096)" />
+		<entry svalue="3" uvalue="3" desc="2/3,(1536,1024)" />
+		<entry svalue="4" uvalue="4" desc="2/3,(6144,4096)" />
+		<entry svalue="5" uvalue="5" desc="4/5,(1280,1024)" />
+		<entry svalue="6" uvalue="6" desc="4/5,(5120,4096)" />-->
+		<entry svalue="7" uvalue="7" desc="7/8,(8160,7136)"/>
+		<!--<entry svalue="8" uvalue="8" desc="7/8,(8176,7154)" />-->
+	</enum>
+	<enum name="Checkout" desc="CRC校验区">
+		<entry svalue="1" uvalue="1" desc="关"/>
+		<entry svalue="2" uvalue="2" desc="开"/>
+	</enum>
+	<enum name="FraSynchLength" desc="帧同步码组长度">
+		<entry svalue="2" uvalue="16" desc="16位"/>
+		<entry svalue="3" uvalue="24" desc="24位"/>
+		<entry svalue="4" uvalue="32" desc="32位"/>
+		<entry svalue="5" uvalue="40" desc="40位"/>
+		<entry svalue="6" uvalue="48" desc="48位"/>
+		<entry svalue="7" uvalue="56" desc="56位"/>
+		<entry svalue="8" uvalue="64" desc="64位"/>
+	</enum>
+	<enum name="DecodMode" desc="译码方式">
+		<entry svalue="1" uvalue="1" desc="无编码"/>
+		<!--<entry svalue="2" uvalue="2" desc="卷积编码" />-->
+		<!--<entry svalue="3" uvalue="3" desc="R-S" />-->
+		<!--<entry svalue="4" uvalue="4" desc="级联编码" />-->
+		<!--<entry svalue="5" uvalue="5" desc="BCH编码" />-->
+		<entry svalue="6" uvalue="6" desc="LDPC编码"/>
+		<!--<entry svalue="7" uvalue="7" desc="BCH+卷积" />-->
+	</enum>
+	<enum name="BCHInitSeqCtrl" desc="BCH起始序列控制">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="不使用"/>
+		<entry svalue="2" uvalue="2" desc="使用"/>
+	</enum>
+	<enum name="BCHInitSeqLength" desc="起始序列长度">
+		<entry svalue="1" uvalue="8" desc="8位"/>
+		<entry svalue="2" uvalue="16" desc="16位"/>
+		<entry svalue="3" uvalue="24" desc="24位"/>
+		<entry svalue="4" uvalue="32" desc="32位"/>
+		<entry svalue="5" uvalue="40" desc="40位"/>
+		<entry svalue="6" uvalue="48" desc="48位"/>
+		<entry svalue="7" uvalue="56" desc="56位"/>
+		<entry svalue="8" uvalue="64" desc="64位"/>
+	</enum>
+	<enum name="BCHEndSeqCtrl" desc="BCH结尾序列控制">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="不使用"/>
+		<entry svalue="2" uvalue="2" desc="使用"/>
+	</enum>
+	<enum name="BCHEndSeqLength" desc="结尾序列图样长度">
+		<entry svalue="1" uvalue="8" desc="8位"/>
+		<entry svalue="2" uvalue="16" desc="16位"/>
+		<entry svalue="3" uvalue="24" desc="24位"/>
+		<entry svalue="4" uvalue="32" desc="32位"/>
+		<entry svalue="5" uvalue="40" desc="40位"/>
+		<entry svalue="6" uvalue="48" desc="48位"/>
+		<entry svalue="7" uvalue="56" desc="56位"/>
+		<entry svalue="8" uvalue="64" desc="64位"/>
+	</enum>
+	<enum name="ScrambCtrl" desc="加扰控制">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="禁止"/>
+		<entry svalue="2" uvalue="2" desc="人工"/>
+		<entry svalue="3" uvalue="3" desc="自动"/>
+	</enum>
+	<enum name="FillingPostition" desc="填充位置">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="编码后加扰"/>
+		<entry svalue="2" uvalue="2" desc="编码前加扰"/>
+	</enum>
+	<enum name="ScraPolyLength" desc="加扰多项式长度">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="8" desc="1字节"/>
+		<entry svalue="2" uvalue="16" desc="2字节"/>
+		<entry svalue="3" uvalue="24" desc="3字节"/>
+		<entry svalue="4" uvalue="32" desc="4字节"/>
+	</enum>
+	<enum name="CRCFraSynchLength" desc="CRC校验多项式长度">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="8" desc="1字节"/>
+		<entry svalue="2" uvalue="16" desc="2字节"/>
+		<entry svalue="3" uvalue="24" desc="3字节"/>
+		<entry svalue="4" uvalue="32" desc="4字节"/>
+	</enum>
+	<enum name="ViterDecodPhase" desc="卷积输出相位">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="正相"/>
+		<entry svalue="2" uvalue="2" desc="反相"/>
+	</enum>
+	<enum name="CodeRateChoose" desc="编码速率选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="编码前"/>
+		<entry svalue="2" uvalue="2" desc="编码后"/>
+	</enum>
+	<enum name="DataType" desc="数据类型">
+		<entry svalue="1" uvalue="1" desc="固定数"/>
+		<entry svalue="2" uvalue="2" desc="随机数"/>
+		<entry svalue="3" uvalue="3" desc="顺序数"/>
+	</enum>
+</enums>

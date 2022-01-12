@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x00" modeID="0x1" unitType="RTRU" desc="右旋测距">
+	<Triggers>
+		<Trigger id="SoftAmbResol" desc="解模糊">
+			<TriggerValue value="1" desc="基带解">
+				<Receiver id="DistMethodWay" desc="距离预报" isEnable="1" values="" minValue="" maxValue="" />
+				<Association id="DistMethodWay">
+					<AssociationItem id="1 1" desc="基带解 手动">
+						<AssociationReceiver id="DistPredMethod" desc="距离预报值" isEnable="1" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2" desc="基带解 轨道根数">
+						<AssociationReceiver id="DistPredMethod" desc="距离预报值" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3" desc="基带解 DTE弹道数据">
+						<AssociationReceiver id="DistPredMethod" desc="距离预报值" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="2" desc="基带不解">
+				<Receiver id="DistMethodWay" desc="距离预报" isEnable="0" values="" minValue="" maxValue="" />
+				<Association id="DistMethodWay">
+					<AssociationItem id="2 1" desc="基带不解 手动">
+						<AssociationReceiver id="DistPredMethod" desc="距离预报值" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2" desc="基带不解 轨道根数">
+						<AssociationReceiver id="DistPredMethod" desc="距离预报值" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3" desc="基带不解 DTE弹道数据">
+						<AssociationReceiver id="DistPredMethod" desc="距离预报值" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="DistMethodWay" desc="距离预报">
+			<TriggerValue value="1" desc="手动">
+				<Association id="DistMethodWay">
+					<AssociationItem id="1 1" desc="手动 基带解">
+						<AssociationReceiver id="DistPredMethod" desc="距离预报值" isEnable="1" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2" desc="手动 基带不解">
+						<AssociationReceiver id="DistPredMethod" desc="距离预报值" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="2" desc="轨道根数">
+				<Receiver id="DistPredMethod" desc="距离预报值" isEnable="0" values="" minValue="" maxValue="" />
+				<Association id="DistMethodWay">
+					<AssociationItem id="2 1" desc="轨道根数 基带解">
+						<AssociationReceiver id="DistPredMethod" desc="距离预报值" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2" desc="轨道根数 基带不解">
+						<AssociationReceiver id="DistPredMethod" desc="距离预报值" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="3" desc="DTE弹道数据">
+				<Receiver id="DistPredMethod" desc="距离预报值" isEnable="0" values="" minValue="" maxValue="" />
+				<Association id="DistMethodWay">
+					<AssociationItem id="3 1" desc="DTE弹道数据 基带解">
+						<AssociationReceiver id="DistPredMethod" desc="距离预报值" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 2" desc="DTE弹道数据 基带不解">
+						<AssociationReceiver id="DistPredMethod" desc="距离预报值" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>
+

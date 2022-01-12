@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+-->
+<SalliteMode>
+    <StationBZ value="4426"/>
+    <MaxWorkMode value="10"/>
+    <Worksystem id="1" desc="S标准TTC" xmlPath="STTC.xml"/>
+    <Worksystem id="2" desc="S扩二" xmlPath="Skuo2.xml"/>
+    <Worksystem id="3" desc="Ka扩二" xmlPath="KaKuo2.xml"/>
+    <Worksystem id="4" desc="X低速" xmlPath="XDS.xml"/>
+    <Worksystem id="5" desc="Ka低速" xmlPath="KaDS.xml"/>
+    <Worksystem id="6" desc="Ka高速" xmlPath="KaGS.xml"/>
+    <Worksystem id="14" desc="扩跳模式" xmlPath="SKT.xml"/>
+</SalliteMode>

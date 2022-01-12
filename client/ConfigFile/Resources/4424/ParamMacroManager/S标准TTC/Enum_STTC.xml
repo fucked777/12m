@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<enums>
+	<enumGroup id="2">
+		<enum name="SPolar" desc="S发射极化">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="左旋"/>
+			<entry svalue="2" uvalue="2" desc="右旋"/>
+		</enum>
+		<enum name="SRecPolar" desc="S接收极化">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="左旋"/>
+			<entry svalue="2" uvalue="2" desc="右旋"/>
+			<entry svalue="3" uvalue="3" desc="左右旋同时"/>
+		</enum>
+	</enumGroup>
+	<enumGroup id="3">
+		<enum name="SPolar" desc="跟踪极化">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="左旋"/>
+			<entry svalue="2" uvalue="2" desc="右旋"/>
+		</enum>
+		<enum name="AngularSamplRate" desc="测角采样率">
+			<entry svalue="1" uvalue="1" desc="1次/秒"/>
+			<entry svalue="2" uvalue="2" desc="4次/秒"/>
+			<entry svalue="3" uvalue="3" desc="10次/秒"/>
+			<entry svalue="4" uvalue="4" desc="20次/秒"/>
+			<entry svalue="5" uvalue="5" desc="0.2次/秒"/>
+			<entry svalue="6" uvalue="6" desc="2次/秒"/>
+		</enum>
+	</enumGroup>
+	<enumGroup id="4">
+		<enum name="CarrierLockInd" desc="载波锁定">
+			<entry svalue="0" uvalue="0" desc="无效"/>
+			<entry svalue="1" uvalue="1" desc="锁定:G"/>
+			<entry svalue="2" uvalue="2" desc="失锁:R"/>
+		</enum>
+		<enum name="FollowUpInst" desc="随扫指示">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="未随扫:Y"/>
+			<entry svalue="2" uvalue="2" desc="随扫:G"/>
+		</enum>
+		<enum name="ReceivingChannel" desc="接收通道">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="左旋"/>
+			<entry svalue="2" uvalue="2" desc="右旋"/>
+			<entry svalue="3" uvalue="3" desc="同时(仅对遥测有效)"/>
+		</enum>
+		<enum name="AGCTimeConstant" desc="AGC时间常数">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="1 ms"/>
+			<entry svalue="2" uvalue="2" desc="10 ms"/>
+			<entry svalue="3" uvalue="3" desc="100 ms"/>
+			<entry svalue="4" uvalue="4" desc="1000 ms"/>
+		</enum>
+		<enum name="CarrierLoopBandWidth" desc="载波环路带宽">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="5 Hz"/>
+			<entry svalue="2" uvalue="2" desc="10 Hz"/>
+			<entry svalue="3" uvalue="3" desc="100 Hz"/>
+			<entry svalue="4" uvalue="4" desc="500 Hz"/>
+			<entry svalue="5" uvalue="5" desc="1000 Hz"/>
+			<entry svalue="6" uvalue="6" desc="2000 Hz"/>
+		</enum>
+	</enumGroup>
+	<enumGroup id="5">
+		<enum name="CarrierReturnToZero" desc="载波回零">
+			<entry svalue="1" uvalue="1" desc="未回零:Y"/>
+			<entry svalue="2" uvalue="2" desc="回零:G"/>
+		</enum>
+		<enum name="CarrierOutput" desc="载波输出">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="允许输出"/>
+			<entry svalue="2" uvalue="2" desc="禁止输出"/>
+		</enum>
+		<enum name="RemotePlusCtrl" desc="遥控加调">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="加调"/>
+			<entry svalue="2" uvalue="2" desc="去调"/>
+		</enum>
+		<enum name="RangPlusCtrl" desc="测距加调">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="加调"/>
+			<entry svalue="2" uvalue="2" desc="去调"/>
+		</enum>
+		<enum name="RanPlusCtrl" desc="遥测模拟加调">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="加调"/>
+			<entry svalue="2" uvalue="2" desc="去调"/>
+		</enum>
+		<enum name="BlindSwitch" desc="盲发开关">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="开"/>
+			<entry svalue="2" uvalue="2" desc="关"/>
+		</enum>
+		<enum name="NoiseSourceOupput" desc="噪声源输出">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="开"/>
+			<entry svalue="2" uvalue="2" desc="关"/>
+		</enum>
+	</enumGroup>
+	<enumGroup id="6">
+		<enum name="SpeedMeaSamPer" desc="测速采样率">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="20次/秒"/>
+			<entry svalue="2" uvalue="2" desc="10次/秒"/>
+			<entry svalue="3" uvalue="3" desc="1次/秒"/>
+			<entry svalue="4" uvalue="4" desc="(1/3次)/秒"/>
+			<entry svalue="5" uvalue="5" desc="(1/10次)/秒"/>
+		</enum>
+		<enum name="VelInteTime" desc="测速积分时间">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="0.04s"/>
+			<entry svalue="2" uvalue="2" desc="0.05s"/>
+			<entry svalue="3" uvalue="3" desc="0.08s"/>
+			<entry svalue="4" uvalue="4" desc="0.1s"/>
+			<entry svalue="5" uvalue="5" desc="0.4s"/>
+			<entry svalue="6" uvalue="6" desc="0.8s"/>
+			<entry svalue="7" uvalue="7" desc="1s"/>
+			<entry svalue="8" uvalue="8" desc="2s"/>
+			<entry svalue="9" uvalue="9" desc="3s"/>
+			<entry svalue="10" uvalue="10" desc="10s"/>
+		</enum>
+		<enum name="RangSamRate" desc="测距采样率">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="1次/秒"/>
+			<entry svalue="2" uvalue="2" desc="2次/秒"/>
+			<entry svalue="3" uvalue="3" desc="4次/秒"/>
+			<entry svalue="4" uvalue="4" desc="10次/秒"/>
+			<entry svalue="5" uvalue="5" desc="20次/秒"/>
+			<entry svalue="6" uvalue="6" desc="0.2次/秒"/>
+		</enum>
+		<enum name="TrappState" desc="距捕">
+			<entry svalue="0" uvalue="0" desc="无效"/>
+			<entry svalue="1" uvalue="1" desc="锁定"/>
+			<entry svalue="2" uvalue="2" desc="失锁"/>
+		</enum>
+		<enum name="HostLockInd" desc="主音">
+			<entry svalue="1" uvalue="1" desc="锁定"/>
+			<entry svalue="2" uvalue="2" desc="失锁"/>
+		</enum>
+		<enum name="CurrentlySendInf" desc="当前发送次音">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="未发送次音"/>
+			<entry svalue="2" uvalue="2" desc="20kHz"/>
+			<entry svalue="3" uvalue="3" desc="16kHz"/>
+			<entry svalue="4" uvalue="4" desc="16.8kHz"/>
+			<entry svalue="5" uvalue="5" desc="16.16kHz"/>
+			<entry svalue="6" uvalue="6" desc="16.04kHz"/>
+			<entry svalue="7" uvalue="7" desc="16.032kHz"/>
+			<entry svalue="8" uvalue="8" desc="16.010kHz"/>
+			<entry svalue="9" uvalue="9" desc="16.008kHz"/>
+			<entry svalue="10" uvalue="10" desc="16.002kHz"/>
+			<entry svalue="11" uvalue="11" desc="16.0005kHz"/>
+		</enum>
+		<enum name="MinSideSelect" desc="最低侧音">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="0.5Hz"/>
+			<entry svalue="2" uvalue="2" desc="2Hz"/>
+			<entry svalue="3" uvalue="3" desc="8Hz"/>
+			<entry svalue="4" uvalue="4" desc="10Hz"/>
+			<entry svalue="5" uvalue="5" desc="32Hz"/>
+			<entry svalue="6" uvalue="6" desc="40Hz"/>
+		</enum>
+		<enum name="SoftAmbResol" desc="解模糊">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="基带解"/>
+			<entry svalue="2" uvalue="2" desc="基带不解"/>
+		</enum>
+		<enum name="DistPredMethod" desc="距离预报">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="手动"/>
+			<entry svalue="2" uvalue="2" desc="轨道根数"/>
+			<entry svalue="3" uvalue="3" desc="DTE弹道数据"/>
+		</enum>
+	</enumGroup>
+	<enumGroup id="7">
+		<enum name="RemoteCtrlCom" desc="发令状态">
+			<entry svalue="0" uvalue="0" desc="无效:Y"/>
+			<entry svalue="1" uvalue="1" desc="正在发令:G"/>
+			<entry svalue="2" uvalue="2" desc="未发令:Y"/>
+		</enum>
+		<enum name="TeleWorkPeriod" desc="遥控工作期">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="开始:G"/>
+			<entry svalue="2" uvalue="2" desc="结束:Y"/>
+		</enum>
+		<enum name="AsynCtrlState" desc="非同步控制状态">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="初始:Y"/>
+			<entry svalue="2" uvalue="2" desc="等待:Y"/>
+			<entry svalue="3" uvalue="3" desc="运行:G"/>
+		</enum>
+		<enum name="SelfloopCompResult" desc="自环比对结果">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="正常:G"/>
+			<entry svalue="2" uvalue="2" desc="异常:R"/>
+		</enum>
+		<enum name="LockingReceIver" desc="小环接收机锁定指示">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="锁定:G"/>
+			<entry svalue="2" uvalue="2" desc="失锁:R"/>
+		</enum>
+		<enum name="SmallResult" desc="小环比对结果">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="正常:G"/>
+			<entry svalue="2" uvalue="2" desc="异常:R"/>
+		</enum>
+		<enum name="SubModSystemR" desc="调制体制">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="PSK"/>
+			<entry svalue="2" uvalue="2" desc="FSK"/>
+		</enum>
+		<enum name="SettBefafter" desc="码速率控制">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="编码前"/>
+			<entry svalue="2" uvalue="2" desc="编码后"/>
+		</enum>
+		<enum name="CodeType" desc="码型">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="RZ-L"/>
+			<entry svalue="2" uvalue="2" desc="NRZ-L"/>
+			<entry svalue="3" uvalue="3" desc="NRZ-M"/>
+			<entry svalue="4" uvalue="4" desc="NRZ-S"/>
+			<entry svalue="5" uvalue="5" desc="Biφ-L"/>
+			<entry svalue="6" uvalue="6" desc="Biφ-M"/>
+			<entry svalue="7" uvalue="7" desc="Biφ-S"/>
+		</enum>
+		<enum name="SubModSystem" desc="遥控工作模式">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="常发"/>
+			<entry svalue="2" uvalue="2" desc="突发"/>
+			<entry svalue="3" uvalue="3" desc="半突发"/>
+		</enum>
+		<enum name="PreSeqSelect" desc="前补序列选择">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="有"/>
+			<entry svalue="2" uvalue="2" desc="无"/>
+		</enum>
+		<enum name="SubSeqSelect" desc="后补序列选择">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="有"/>
+			<entry svalue="2" uvalue="2" desc="无"/>
+		</enum>
+		<enum name="StartModeWrok" desc="遥控工作期启动方式">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="结束"/>
+			<entry svalue="2" uvalue="2" desc="开始"/>
+		</enum>
+		<enum name="ChannelCoding" desc="信道编码">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="不编码"/>
+			<entry svalue="2" uvalue="2" desc="BCH编码"/>
+			<entry svalue="3" uvalue="3" desc="卷积编码"/>
+			<entry svalue="4" uvalue="4" desc="BCH+卷积级联编码"/>
+		</enum>
+		<enum name="BCHInitSeqCtrl" desc="BCH起始序列控制">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="加"/>
+			<entry svalue="2" uvalue="2" desc="不加"/>
+		</enum>
+		<enum name="BCHEndSeqCtrl" desc="BCH结尾序列控制">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="加"/>
+			<entry svalue="2" uvalue="2" desc="不加"/>
+		</enum>
+		<enum name="ScrambCtrl" desc="加扰控制">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="不加扰"/>
+			<entry svalue="2" uvalue="2" desc="加扰"/>
+		</enum>
+		<enum name="ScraPolyLength" desc="加扰多项式长度">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="1字节"/>
+			<entry svalue="2" uvalue="2" desc="2字节"/>
+			<entry svalue="3" uvalue="3" desc="3字节"/>
+			<entry svalue="4" uvalue="4" desc="4字节"/>
+		</enum>
+		<enum name="FillingPostition" desc="填充位置">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="加扰前填充"/>
+			<entry svalue="2" uvalue="2" desc="加扰后填充"/>
+		</enum>
+		<enum name="ConvCodType" desc="卷积编码类型">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="(7,1/2)"/>
+			<entry svalue="2" uvalue="2" desc="(7,3/4)"/>
+		</enum>
+		<enum name="G2PhaseInver" desc="G2相位反转">
+			<entry svalue="1" uvalue="1" desc="正相"/>
+			<entry svalue="2" uvalue="2" desc="反相"/>
+		</enum>
+		<enum name="ExecutCodeLength" desc="执行编码长度">
+			<entry svalue="1" uvalue="8" desc="1字节"/>
+			<entry svalue="2" uvalue="16" desc="2字节"/>
+			<entry svalue="3" uvalue="24" desc="3字节"/>
+			<entry svalue="4" uvalue="32" desc="4字节"/>
+			<entry svalue="5" uvalue="40" desc="5字节"/>
+			<entry svalue="6" uvalue="48" desc="6字节"/>
+			<entry svalue="7" uvalue="56" desc="7字节"/>
+			<entry svalue="8" uvalue="64" desc="8字节"/>
+		</enum>
+		<enum name="BCHInitSeqLength" desc="起始序列长度">
+			<entry svalue="1" uvalue="1" desc="1字节"/>
+			<entry svalue="2" uvalue="2" desc="2字节"/>
+			<entry svalue="3" uvalue="3" desc="3字节"/>
+			<entry svalue="4" uvalue="4" desc="4字节"/>
+			<entry svalue="5" uvalue="5" desc="5字节"/>
+			<entry svalue="6" uvalue="6" desc="6字节"/>
+			<entry svalue="7" uvalue="7" desc="7字节"/>
+			<entry svalue="8" uvalue="8" desc="8字节"/>
+		</enum>
+		<enum name="BCHEndSeqLength" desc="结尾序列长度">
+			<entry svalue="1" uvalue="1" desc="1字节"/>
+			<entry svalue="2" uvalue="2" desc="2字节"/>
+			<entry svalue="3" uvalue="3" desc="3字节"/>
+			<entry svalue="4" uvalue="4" desc="4字节"/>
+			<entry svalue="5" uvalue="5" desc="5字节"/>
+			<entry svalue="6" uvalue="6" desc="6字节"/>
+			<entry svalue="7" uvalue="7" desc="7字节"/>
+			<entry svalue="8" uvalue="8" desc="8字节"/>
+		</enum>
+		<enum name="OrderCategory" desc="发令类别">
+			<entry svalue="0" uvalue="0" desc="0"/>
+			<entry svalue="1" uvalue="2162945" desc="210101(K6R)"/>
+			<entry svalue="2" uvalue="2162946" desc="210102(K6B)"/>
+			<entry svalue="3" uvalue="2162949" desc="210105(K6P)"/>
+			<entry svalue="4" uvalue="2162951" desc="210107(KT1)"/>
+			<entry svalue="5" uvalue="2228738" desc="220202(KT5)"/>
+			<entry svalue="6" uvalue="2228755" desc="220213(KT3)"/>
+			<entry svalue="7" uvalue="2228757" desc="220215(KT2)"/>
+		</enum>
+	</enumGroup>
+	<enumGroup id="8">
+		<enum name="TeleSubLockInd" desc="副载波锁定">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="锁定:G"/>
+			<entry svalue="2" uvalue="2" desc="失锁:R"/>
+		</enum>
+		<enum name="PositLockIns" desc="同步锁定指示">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="锁定:G"/>
+			<entry svalue="2" uvalue="2" desc="失锁:R"/>
+		</enum>
+		<enum name="VirtualFill" desc="虚拟填充">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="无填充"/>
+			<entry svalue="2" uvalue="2" desc="有填充"/>
+		</enum>
+		<enum name="CodeType" desc="码型">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="NRZ-L"/>
+			<entry svalue="2" uvalue="2" desc="NRZ-M"/>
+			<entry svalue="3" uvalue="3" desc="NRZ-S"/>
+			<entry svalue="4" uvalue="4" desc="Biφ-L"/>
+			<entry svalue="5" uvalue="5" desc="Biφ-M"/>
+			<entry svalue="6" uvalue="6" desc="Biφ-S"/>
+		</enum>
+		<enum name="TeleDataType" desc="遥测数据类型">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="帧格式"/>
+			<entry svalue="2" uvalue="2" desc="位流"/>
+		</enum>
+		<enum name="DecodMode" desc="译码方式">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="关"/>
+			<entry svalue="2" uvalue="2" desc="Viterbi译码"/>
+			<entry svalue="3" uvalue="3" desc="R-S译码"/>
+			<entry svalue="4" uvalue="4" desc="R-S和Viterbi级联译码"/>
+		</enum>
+		<enum name="ConCodeType" desc="卷积码类型">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="（7，1/2）"/>
+			<entry svalue="2" uvalue="2" desc="（7，3/4）"/>
+		</enum>
+		<enum name="ViterbiDecodG2Phase" desc="Viterbi译码G2输出相位">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="正相"/>
+			<entry svalue="2" uvalue="2" desc="反相"/>
+		</enum>
+		<enum name="RSCodeType" desc="R-S码类型">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="（255，223）"/>
+			<entry svalue="2" uvalue="2" desc="（255，239）"/>
+		</enum>
+		<enum name="TurboCode" desc="Turbo码率">
+			<entry svalue="1" uvalue="1" desc="1/2"/>
+			<entry svalue="2" uvalue="2" desc="1/3"/>
+			<entry svalue="3" uvalue="3" desc="1/4"/>
+			<entry svalue="4" uvalue="4" desc="1/6"/>
+		</enum>
+		<enum name="LDPCCode" desc="LDPC码率">
+			<entry svalue="1" uvalue="1" desc="1/2"/>
+			<entry svalue="2" uvalue="2" desc="2/3"/>
+			<entry svalue="3" uvalue="3" desc="4/5"/>
+			<entry svalue="4" uvalue="4" desc="7/8"/>
+		</enum>
+		<enum name="RSDecodCoorBase" desc="R-S译码坐标基">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="对偶基"/>
+			<entry svalue="2" uvalue="2" desc="常规基"/>
+		</enum>
+		<enum name="DescrambCtrl" desc="解扰控制">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="不解扰"/>
+			<entry svalue="2" uvalue="2" desc="自动解扰"/>
+			<entry svalue="3" uvalue="3" desc="人工设置"/>
+		</enum>
+		<enum name="DistPolyLength" desc="解扰多项式长度">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="1字节"/>
+			<entry svalue="2" uvalue="2" desc="2字节"/>
+			<entry svalue="3" uvalue="3" desc="3字节"/>
+			<entry svalue="4" uvalue="4" desc="4字节"/>
+		</enum>
+		<enum name="FrameSynCodeLength" desc="帧同步码组长度">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="16位"/>
+			<entry svalue="2" uvalue="2" desc="24位"/>
+			<entry svalue="3" uvalue="3" desc="32位"/>
+		</enum>
+		<enum name="FrameCodeLocat" desc="帧码组位置">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="帧头"/>
+			<entry svalue="2" uvalue="2" desc="帧尾"/>
+		</enum>
+		<enum name="CRCCheck" desc="CRC校验">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="开"/>
+			<entry svalue="2" uvalue="2" desc="关"/>
+		</enum>
+		<enum name="SubframeSynch" desc="副帧同步方式">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="无副帧"/>
+			<entry svalue="2" uvalue="2" desc="ID副帧"/>
+			<entry svalue="3" uvalue="3" desc="循环副帧"/>
+			<entry svalue="4" uvalue="4" desc="反码副帧"/>
+		</enum>
+		<enum name="IDCountValue" desc="ID计数基值">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="1"/>
+			<entry svalue="2" uvalue="2" desc="0"/>
+		</enum>
+		<enum name="IDCountDirect" desc="ID计数方向">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="加计数"/>
+			<entry svalue="2" uvalue="2" desc="减计数"/>
+		</enum>
+		<enum name="SubCodeLength" desc="副帧码组长度">
+			<entry svalue="0" uvalue="0" desc="无此参数"/>
+			<entry svalue="1" uvalue="1" desc="8位"/>
+			<entry svalue="2" uvalue="2" desc="16位"/>
+			<entry svalue="3" uvalue="3" desc="24位"/>
+			<entry svalue="4" uvalue="4" desc="32位"/>
+		</enum>
+	</enumGroup>
+</enums>

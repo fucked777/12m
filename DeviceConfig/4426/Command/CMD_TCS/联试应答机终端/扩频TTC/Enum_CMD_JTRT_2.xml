@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+id  枚举ID  -与设备类型关联
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums ExtenType="JTRT" ModeType="0x02" edition="1.1.1.1">
+	<enum name="WorkMode" desc="工作模式">
+		<entry svalue="1" uvalue="1" desc="标准TTC"/>
+		<entry svalue="2" uvalue="2" desc="扩频TTC"/>
+	</enum>
+	<enum name="TargetSelect" desc="目标选择">
+		<entry svalue="1" uvalue="1" desc="目标1遥测"/>
+		<entry svalue="2" uvalue="2" desc="目标2遥测"/>
+		<entry svalue="3" uvalue="3" desc="目标3遥测"/>
+		<entry svalue="4" uvalue="4" desc="目标4遥测"/>
+		<entry svalue="5" uvalue="5" desc="全部遥测通道"/>
+	</enum>
+	<enum name="WorkWay" desc="工作方式">
+		<entry svalue="1" uvalue="1" desc="动态仿真"/>
+		<entry svalue="2" uvalue="2" desc="文件仿真"/>
+	</enum>
+	<enum name="FileLoop" desc="文件循环">
+		<entry svalue="1" uvalue="1" desc="单次回放"/>
+		<entry svalue="2" uvalue="2" desc="循环回放"/>
+	</enum>
+	<enum name="CarrierOutput" desc="载波输出">
+		<entry svalue="1" uvalue="1" desc="输出"/>
+		<entry svalue="2" uvalue="2" desc="停止输出"/>
+	</enum>
+	<enum name="RangAdjust" desc="测距加调">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="加调"/>
+		<entry svalue="2" uvalue="2" desc="去调"/>
+	</enum>
+	<enum name="ModulCtrl" desc="加调控制">
+		<entry svalue="1" uvalue="1" desc="输出"/>
+		<entry svalue="2" uvalue="2" desc="停止输出"/>
+	</enum>
+	<enum name="ChannelSelect" desc="通道选择">
+		<entry svalue="1" uvalue="1" desc="遥测通道1"/>
+		<entry svalue="2" uvalue="2" desc="遥测通道2"/>
+		<entry svalue="3" uvalue="3" desc="遥测通道3"/>
+		<entry svalue="4" uvalue="4" desc="遥测通道4"/>
+		<entry svalue="5" uvalue="5" desc="测量通道1"/>
+		<entry svalue="6" uvalue="6" desc="测量通道2"/>
+		<entry svalue="7" uvalue="7" desc="测量通道3"/>
+		<entry svalue="8" uvalue="8" desc="测量通道4 "/>
+		<entry svalue="9" uvalue="9" desc="全部通道"/>
+		<entry svalue="10" uvalue="10" desc="全部遥测通道"/>
+		<entry svalue="11" uvalue="11" desc="全部测量通道"/>
+	</enum>
+	<enum name="PNCodeAdd" desc="伪码加调">
+		<entry svalue="1" uvalue="1" desc="加调"/>
+		<entry svalue="2" uvalue="2" desc="去调"/>
+	</enum>
+	<enum name="DataAdd" desc="数据加调">
+		<entry svalue="1" uvalue="1" desc="加调"/>
+		<entry svalue="2" uvalue="2" desc="去调"/>
+	</enum>
+	<enum name="SimulCtrl" desc="仿真控制">
+		<entry svalue="1" uvalue="1" desc="开始"/>
+		<entry svalue="2" uvalue="2" desc="停止"/>
+	</enum>
+</enums>

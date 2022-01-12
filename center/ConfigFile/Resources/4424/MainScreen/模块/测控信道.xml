@@ -1,0 +1,20 @@
+<GridLayout>
+	<Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="激励通断"/>
+	<Widget row="0" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="激励通断" deviceId="0x2301" modeId="0xFFFF" unitId="1" targetId="0" paramId="RFSwitcher">
+		<Item value="1" desc="打开" ledColor="green" toolTip="打开"/>
+		<Item value="2" desc="关闭" ledColor="yellow" toolTip="关闭"/>
+	</Widget>
+	<Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="校零变频器通断"/>
+	<Widget row="0" col="3" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="校零变频器通断" deviceId="0x3001" modeId="0xFFFF" unitId="2" targetId="0" paramId="XLBeconSwitch">
+		<Item value="1" desc="校零输出" ledColor="green" toolTip="校零输出"/>
+		<Item value="2" desc="信标输出" ledColor="yellow" toolTip="信标输出"/>
+	</Widget>
+	<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="发射极化"/>
+	<Widget row="1" col="1" rowSpan="1" columnSpan="1" Align="Center" type="EnumStatusLabel" deviceId="0x3001" modeId="0xFFFF" unitId="3" targetId="0" paramId="SSendSwitch" enumId="Switch"/>
+	<Widget row="1" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="S输出功率(dBm)"/>
+	<Widget row="1" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" deviceId="0x2001" modeId="0xFFFF" unitId="1" targetId="0" paramId="OutputPower"/>
+	<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="接收极化"/>
+	<Widget row="2" col="1" rowSpan="1" columnSpan="1" Align="Center" type="EnumStatusLabel" deviceId="0x3001" modeId="0xFFFF" unitId="3" targetId="0" paramId="SBadSwitch" enumId="Switch"/>
+	<Widget row="2" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="接收频率(MHz)"/>
+	<Widget row="2" col="3" rowSpan="1" columnSpan="1" Align="Center" type="DynamicStatusLabel" dealType="24_Main_MACB_DnFreq"/>
+</GridLayout>

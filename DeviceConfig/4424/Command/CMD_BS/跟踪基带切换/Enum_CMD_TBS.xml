@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+id  枚举ID  -与设备类型关联
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums ExtenType="TBS" ModeType = "0xFFFF" edition="1.1.1.1">
+    <enum name="BandAngleOutput" desc="频段角误差选择输出">
+                	<entry svalue="1" uvalue="1" desc="跟踪基带A" />
+                	<entry svalue="2" uvalue="2" desc="跟踪基带B" />
+	</enum>
+        <enum name="TestSignalOutput" desc="测试信号选择输出">
+                <entry svalue="1" uvalue="1" desc="测控基带A" />
+                <entry svalue="2" uvalue="2" desc="测控基带B" />
+        </enum>
+
+</enums>

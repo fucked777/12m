@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+isManualControl: 值为1，表示该项只有在主界面任务流程中的手动控制中从显示，在参数宏界面不显示
+Item下新增字段标识设备组合号
+startBit：开始的位标识
+endBit：结束的位标识
+offset：当前值进行偏移，正/负
+linkType：区分上下行链路的设备组合号，OnlyDownLink,DownAndUpLink
+ -->
+<WorkModes>
+	<StationName name="TK4426"/>
+	<WorkMode id="1" desc="S标准TTC">
+		<Item id="STTC_LAN_L_SUM" desc="和路左旋场放" startBit="10" endBit="11" offset="-1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="S-LNA1"/>
+			<Enum value="2" desc="S-LNA2"/>
+		</Item>
+		<Item id="STTC_LAN_R_SUM" desc="和路右旋场放" startBit="10" endBit="11" offset="1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="S-LNA3"/>
+			<Enum value="2" desc="S-LNA4"/>
+		</Item>
+		<Item id="STTC_LAN_DIFF" desc="差路场放" startBit="12" endBit="12" offset="-1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="S-LNA5"/>
+			<Enum value="2" desc="S-LNA6"/>
+		</Item>
+		<Item id="CKQD1" desc="测控数字化前端">
+			<Enum value="1" desc="测控数字化前端1" deviceId="0x7001"/>
+			<Enum value="2" desc="测控数字化前端2" deviceId="0x7002"/>
+		</Item>
+		<Item id="GZQD1" desc="跟踪数字化前端">
+			<Enum value="1" desc="跟踪数字化前端1" deviceId="0x7101"/>
+			<Enum value="2" desc="跟踪数字化前端2" deviceId="0x7102"/>
+			<Enum value="3" desc="跟踪数字化前端3" deviceId="0x7103"/>
+			<Enum value="4" desc="跟踪数字化前端4" deviceId="0x7104"/>
+		</Item>
+		<Item id="STTC_SHPA" desc="S功放" startBit="27" endBit="28" offset="0" linkType="OnlyDownLink">
+			<Enum value="1" desc="S功放A" deviceId="0x2001"/>
+			<Enum value="2" desc="S功放B" deviceId="0x2002"/>
+		</Item>
+		<Item id="CKJD1" isManualControl="1" desc="测控基带主">
+			<Enum value="1" desc="测控基带A" deviceId="0x4001"/>
+			<Enum value="2" desc="测控基带B" deviceId="0x4003"/>
+		</Item>
+		<Item id="CKJD2" isManualControl="1" desc="测控基带备">
+			<Enum value="1" desc="测控基带A" deviceId="0x4001"/>
+			<Enum value="2" desc="测控基带B" deviceId="0x4003"/>
+		</Item>
+	</WorkMode>
+	<WorkMode id="2" desc="S扩二">
+		<Item id="STTC_LAN_L_SUM" desc="和路左旋场放" startBit="10" endBit="11" offset="-1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="S-LNA1"/>
+			<Enum value="2" desc="S-LNA2"/>
+		</Item>
+		<Item id="STTC_LAN_R_SUM" desc="和路右旋场放" startBit="10" endBit="11" offset="1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="S-LNA3"/>
+			<Enum value="2" desc="S-LNA4"/>
+		</Item>
+		<Item id="STTC_LAN_DIFF" desc="差路场放" startBit="12" endBit="12" offset="-1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="S-LNA5"/>
+			<Enum value="2" desc="S-LNA6"/>
+		</Item>
+		<Item id="CKQD1" desc="测控数字化前端">
+			<Enum value="1" desc="测控数字化前端1" deviceId="0x7001"/>
+			<Enum value="2" desc="测控数字化前端2" deviceId="0x7002"/>
+		</Item>
+		<Item id="GZQD1" desc="跟踪数字化前端">
+			<Enum value="1" desc="跟踪数字化前端1" deviceId="0x7101"/>
+			<Enum value="2" desc="跟踪数字化前端2" deviceId="0x7102"/>
+			<Enum value="3" desc="跟踪数字化前端3" deviceId="0x7103"/>
+			<Enum value="4" desc="跟踪数字化前端4" deviceId="0x7104"/>
+		</Item>
+		<Item id="STTC_SHPA" desc="S功放" startBit="27" endBit="28" offset="0" linkType="OnlyDownLink">
+			<Enum value="1" desc="S功放A" deviceId="0x2001"/>
+			<Enum value="2" desc="S功放B" deviceId="0x2002"/>
+		</Item>
+		<Item id="CKJD1" isManualControl="1" desc="测控基带主">
+			<Enum value="1" desc="测控基带A" deviceId="0x4001"/>
+			<Enum value="2" desc="测控基带B" deviceId="0x4003"/>
+		</Item>
+		<Item id="CKJD2" isManualControl="1" desc="测控基带备">
+			<Enum value="1" desc="测控基带A" deviceId="0x4001"/>
+			<Enum value="2" desc="测控基带B" deviceId="0x4003"/>
+		</Item>
+	</WorkMode>
+	<WorkMode id="3" desc="Ka扩二">
+		<Item id="KA_LAN_L_SUM" desc="和路左旋场放" startBit="10" endBit="11" offset="-1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka-LNA1"/>
+			<Enum value="2" desc="Ka-LNA2"/>
+		</Item>
+		<Item id="KA_LAN_R_SUM" desc="和路右旋场放" startBit="10" endBit="11" offset="1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka-LNA3"/>
+			<Enum value="2" desc="Ka-LNA4"/>
+		</Item>
+		<Item id="KA_LAN_L_DIFF" desc="差路左旋场放" startBit="12" endBit="12" offset="-1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka-LNA5"/>
+			<Enum value="2" desc="Ka-LNA6"/>
+		</Item>
+		<Item id="KA_LAN_R_DIFF" desc="差路右旋场放" startBit="12" endBit="12" offset="-1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka-LNA7"/>
+			<Enum value="2" desc="Ka-LNA8"/>
+		</Item>
+		<Item id="KAK2_CKDC" desc="和路下变频器">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka测控-DC1"/>
+			<Enum value="2" desc="Ka测控-DC2"/>
+		</Item>
+		<Item id="KAK2_SUM_GZDC" desc="和路跟踪下变频器">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka测控跟踪-DC3"/>
+			<Enum value="2" desc="Ka测控跟踪-DC4"/>
+		</Item>
+		<Item id="KAK2_DIFF_GZDC" desc="差路跟踪下变频器">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka测控跟踪-DC5"/>
+			<Enum value="2" desc="Ka测控跟踪-DC6"/>
+		</Item>
+		<Item id="CKQD1" desc="测控数字化前端">
+			<Enum value="1" desc="测控数字化前端1" deviceId="0x7001"/>
+			<Enum value="2" desc="测控数字化前端2" deviceId="0x7002"/>
+		</Item>
+		<Item id="GZQD1" desc="跟踪数字化前端">
+			<Enum value="1" desc="跟踪数字化前端1" deviceId="0x7101"/>
+			<Enum value="2" desc="跟踪数字化前端2" deviceId="0x7102"/>
+			<Enum value="3" desc="跟踪数字化前端3" deviceId="0x7103"/>
+			<Enum value="4" desc="跟踪数字化前端4" deviceId="0x7104"/>
+		</Item>
+		<Item id="KAK2_UC_Device" desc="Ka测控上变频器" startBit="26" endBit="26" offset="-1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka测控UC_1"/>
+			<Enum value="2" desc="Ka测控UC_2"/>
+		</Item>
+		<Item id="KAK2_KAHPA" desc="Ka功放" startBit="27" endBit="28" offset="0" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka测控功放A" deviceId="0x2003"/>
+			<Enum value="2" desc="Ka测控功放B" deviceId="0x2004"/>
+		</Item>
+		<Item id="CKJD1" isManualControl="1" desc="测控基带主">
+			<Enum value="1" desc="测控基带A" deviceId="0x4001"/>
+			<Enum value="2" desc="测控基带B" deviceId="0x4003"/>
+		</Item>
+		<Item id="CKJD2" isManualControl="1" desc="测控基带备">
+			<Enum value="1" desc="测控基带A" deviceId="0x4001"/>
+			<Enum value="2" desc="测控基带B" deviceId="0x4003"/>
+		</Item>
+	</WorkMode>
+	<WorkMode id="4" desc="X低速数传">
+		<Item id="XDS_LAN_L_SUM" desc="和路左旋场放" startBit="8" endBit="9" offset="-1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="X-LNA1"/>
+			<Enum value="2" desc="X-LNA2"/>
+		</Item>
+		<Item id="XDS_LAN_R_SUM" desc="和路右旋场放" startBit="8" endBit="9" offset="1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="X-LNA3"/>
+			<Enum value="2" desc="X-LNA4"/>
+		</Item>
+		<Item id="XDS_DC" desc="和路下变频器">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="X数传-DC1"/>
+			<Enum value="2" desc="X数传-DC2"/>
+		</Item>
+		<Item id="CKQD1" desc="测控数字化前端">
+			<Enum value="3" desc="测控数字化前端3" deviceId="0x7003"/>
+			<Enum value="4" desc="测控数字化前端4" deviceId="0x7004"/>
+		</Item>
+		<Item id="DSJD1" isManualControl="1" desc="低速基带主">
+			<Enum value="1" desc="低速基带A" deviceId="0x4401"/>
+			<Enum value="2" desc="低速基带B" deviceId="0x4402"/>
+		</Item>
+		<Item id="DSJD2" isManualControl="1" desc="低速基带备">
+			<Enum value="1" desc="低速基带A" deviceId="0x4401"/>
+			<Enum value="2" desc="低速基带B" deviceId="0x4402"/>
+		</Item>
+	</WorkMode>
+	<WorkMode id="5" desc="Ka低速数传">
+		<Item id="KA_LAN_L_SUM" desc="和路左旋场放" startBit="8" endBit="9" offset="-1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka-LNA1"/>
+			<Enum value="2" desc="Ka-LNA2"/>
+		</Item>
+		<Item id="KA_LAN_R_SUM" desc="和路右旋场放" startBit="8" endBit="9" offset="1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka-LNA3"/>
+			<Enum value="2" desc="Ka-LNA4"/>
+		</Item>
+		<Item id="KA_LAN_L_DIFF" desc="差路左旋场放" startBit="10" endBit="10" offset="-1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka-LNA5"/>
+			<Enum value="2" desc="Ka-LNA6"/>
+		</Item>
+		<Item id="KA_LAN_R_DIFF" desc="差路右旋场放" startBit="10" endBit="10" offset="-1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka-LNA7"/>
+			<Enum value="2" desc="Ka-LNA8"/>
+		</Item>
+		<Item id="KADS_DTDC" desc="和路下变频器">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka数传-DC1"/>
+			<Enum value="2" desc="Ka数传-DC2"/>
+		</Item>
+		<Item id="KADS_SUM_GZDC" desc="和路跟踪下变频器" startBit="11" endBit="13" offset="-1" linkType="OnlyDownLink">
+			<Enum value="1" desc="Ka和路数传跟踪-DC3"/>
+			<Enum value="2" desc="Ka和路数传跟踪-DC4"/>
+		</Item>
+		<Item id="KADS_DIFF_GZDC" desc="差路跟踪下变频器" startBit="14" endBit="15" offset="-1" linkType="OnlyDownLink">
+			<Enum value="1" desc="Ka差路数传跟踪-DC5"/>
+			<Enum value="2" desc="Ka差路数传跟踪-DC6"/>
+		</Item>
+		<Item id="CKQD1" desc="测控数字化前端">
+			<Enum value="3" desc="测控数字化前端3" deviceId="0x7003"/>
+			<Enum value="4" desc="测控数字化前端4" deviceId="0x7004"/>
+		</Item>
+		<Item id="GZQD1" desc="跟踪数字化前端">
+			<Enum value="3" desc="跟踪数字化前端3" deviceId="0x7103"/>
+			<Enum value="4" desc="跟踪数字化前端4" deviceId="0x7104"/>
+		</Item>
+		<Item id="KADS_UC_Device" desc="Ka数传上变频器">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka数传UC_1"/>
+			<Enum value="2" desc="Ka数传UC_2"/>
+		</Item>
+		<Item id="KADS_KADTHPA" desc="Ka数传功放">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka数传功放A"/>
+			<Enum value="2" desc="Ka数传功放B"/>
+		</Item>
+		<Item id="DSJD1" isManualControl="1" desc="低速基带主">
+			<Enum value="1" desc="低速基带A" deviceId="0x4401"/>
+			<Enum value="2" desc="低速基带B" deviceId="0x4402"/>
+		</Item>
+		<Item id="DSJD2" isManualControl="1" desc="低速基带备">
+			<Enum value="1" desc="低速基带A" deviceId="0x4401"/>
+			<Enum value="2" desc="低速基带B" deviceId="0x4402"/>
+		</Item>
+	</WorkMode>
+	<WorkMode id="6" desc="Ka高速数传">
+		<Item id="KA_LAN_L_SUM" desc="和路左旋场放" startBit="8" endBit="9" offset="-1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka-LNA1"/>
+			<Enum value="2" desc="Ka-LNA2"/>
+		</Item>
+		<Item id="KA_LAN_R_SUM" desc="和路右旋场放" startBit="8" endBit="9" offset="1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka-LNA3"/>
+			<Enum value="2" desc="Ka-LNA4"/>
+		</Item>
+		<Item id="KA_LAN_L_DIFF" desc="差路左旋场放" startBit="10" endBit="10" offset="-1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka-LNA5"/>
+			<Enum value="2" desc="Ka-LNA6"/>
+		</Item>
+		<Item id="KA_LAN_R_DIFF" desc="差路右旋场放" startBit="10" endBit="10" offset="-1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka-LNA7"/>
+			<Enum value="2" desc="Ka-LNA8"/>
+		</Item>
+		<Item id="KAGS_DC1" desc="和路下变频器1">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka高速数传-DC1" deviceId="0x3103"/>
+			<Enum value="2" desc="Ka高速数传-DC2" deviceId="0x3103"/>
+			<Enum value="3" desc="Ka高速数传-DC3" deviceId="0x3103"/>
+			<Enum value="4" desc="Ka高速数传-DC4" deviceId="0x3103"/>
+		</Item>
+		<Item id="KAGS_DC2" desc="和路下变频器2">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka高速数传-DC1" deviceId="0x3103"/>
+			<Enum value="2" desc="Ka高速数传-DC2" deviceId="0x3103"/>
+			<Enum value="3" desc="Ka高速数传-DC3" deviceId="0x3103"/>
+			<Enum value="4" desc="Ka高速数传-DC4" deviceId="0x3103"/>
+		</Item>
+		<Item id="KADS_SUM_GZDC" desc="和路跟踪下变频器" startBit="11" endBit="13" offset="-1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka数传跟踪-DC3"/>
+			<Enum value="2" desc="Ka数传跟踪-DC4"/>
+		</Item>
+		<Item id="KADS_DIFF_GZDC" desc="差路跟踪下变频器" startBit="14" endBit="15" offset="-1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="Ka数传跟踪-DC5"/>
+			<Enum value="2" desc="Ka数传跟踪-DC6"/>
+		</Item>
+		<Item id="GZQD1" desc="跟踪数字化前端">
+			<Enum value="1" desc="跟踪数字化前端1" deviceId="0x7101"/>
+			<Enum value="2" desc="跟踪数字化前端2" deviceId="0x7102"/>
+		</Item>
+		<Item id="GSJD1" isManualControl="1" desc="高速基带主">
+			<Enum value="1" desc="高速基带A" deviceId="0x4101"/>
+			<Enum value="2" desc="高速基带B" deviceId="0x4102"/>
+		</Item>
+		<Item id="GSJD2" isManualControl="1" desc="高速基带备">
+			<Enum value="1" desc="高速基带A" deviceId="0x4101"/>
+			<Enum value="2" desc="高速基带B" deviceId="0x4102"/>
+		</Item>
+	</WorkMode>
+	<WorkMode id="14" desc="扩跳">
+		<Item id="STTC_LAN_L_SUM" desc="和路左旋场放" startBit="10" endBit="11" offset="-1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="S-LNA1"/>
+			<Enum value="2" desc="S-LNA2"/>
+		</Item>
+		<Item id="STTC_LAN_R_SUM" desc="和路右旋场放" startBit="10" endBit="11" offset="1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="S-LNA3"/>
+			<Enum value="2" desc="S-LNA4"/>
+		</Item>
+		<Item id="STTC_LAN_DIFF" desc="差路场放" startBit="12" endBit="12" offset="-1" linkType="OnlyDownLink">
+			<Enum value="0" desc="无"/>
+			<Enum value="1" desc="S-LNA5"/>
+			<Enum value="2" desc="S-LNA6"/>
+		</Item>
+		<Item id="CKQD1" desc="测控数字化前端">
+			<Enum value="1" desc="测控数字化前端1" deviceId="0x7001"/>
+			<Enum value="2" desc="测控数字化前端2" deviceId="0x7002"/>
+		</Item>
+		<Item id="GZQD1" desc="跟踪数字化前端">
+			<Enum value="1" desc="跟踪数字化前端1" deviceId="0x7101"/>
+			<Enum value="2" desc="跟踪数字化前端2" deviceId="0x7102"/>
+			<Enum value="3" desc="跟踪数字化前端3" deviceId="0x7103"/>
+			<Enum value="4" desc="跟踪数字化前端4" deviceId="0x7104"/>
+		</Item>
+		<Item id="STTC_SHPA" desc="S功放" startBit="27" endBit="28" offset="0" linkType="OnlyDownLink">
+			<Enum value="1" desc="S功放A" deviceId="0x2001"/>
+			<Enum value="2" desc="S功放B" deviceId="0x2002"/>
+		</Item>
+		<Item id="CKJD1" isManualControl="1" desc="测控基带主">
+			<Enum value="1" desc="测控基带A" deviceId="0x4001"/>
+			<Enum value="2" desc="测控基带B" deviceId="0x4003"/>
+		</Item>
+		<Item id="CKJD2" isManualControl="1" desc="测控基带备">
+			<Enum value="1" desc="测控基带A" deviceId="0x4001"/>
+			<Enum value="2" desc="测控基带B" deviceId="0x4003"/>
+		</Item>
+	</WorkMode>
+</WorkModes>

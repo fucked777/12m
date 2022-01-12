@@ -1,0 +1,9 @@
+{
+    "bundle.symbolic_name":"DeviceCommunicationConfigModule",
+    "servicename":"设备的通讯信息",
+    "bundle.activator" : true,
+    "authors" : [ "wp" ],
+    "bundle.version" : "1.0.0",
+    "bundle.description" : "null",
+    "update_log" :""
+}

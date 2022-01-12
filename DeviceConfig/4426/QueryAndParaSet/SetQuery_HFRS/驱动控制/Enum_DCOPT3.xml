@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="DCOPT3" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="ControlMode" desc="监控方式">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="DevStatus" desc="设备状态">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="LowNoiseSwitch" desc="低噪放开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="S-LNA5(差路)"/>
+		<entry svalue="2" uvalue="2" desc="S-LNA6(差路)"/>
+	</enum>
+	<enum name="SendSwitch" desc="发射开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="左旋"/>
+		<entry svalue="2" uvalue="2" desc="右旋"/>
+	</enum>
+	<enum name="DifferSwitch" desc="差路开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="差路左旋低噪放A,右旋低噪放B"/>
+		<entry svalue="2" uvalue="2" desc="差路左旋低噪放B,右旋低噪放A"/>
+	</enum>
+	<enum name="LeftSwitch" desc="和路左旋开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="和路左旋低噪放A"/>
+		<entry svalue="2" uvalue="2" desc="和路左旋低噪放B"/>
+	</enum>
+	<enum name="RightSwitch" desc="和路右旋开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="和路右旋低噪放A"/>
+		<entry svalue="2" uvalue="2" desc="和路右旋低噪放B"/>
+	</enum>
+	<enum name="PowerCtrl" desc="加去电控制">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="关电"/>
+		<entry svalue="2" uvalue="2" desc="开电"/>
+	</enum>
+</enums>

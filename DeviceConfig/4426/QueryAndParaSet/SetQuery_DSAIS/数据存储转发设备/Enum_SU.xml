@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="SU" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="StorageState" desc="存储状态">
+		<entry svalue="1" uvalue="1" desc="空闲"/>
+		<entry svalue="2" uvalue="2" desc="正在存储"/>
+		<entry svalue="3" uvalue="3" desc="存储错误"/>
+	</enum>
+	<enum name="ReceStatus" desc="接收状态">
+		<entry svalue="1" uvalue="1" desc="未接收"/>
+		<entry svalue="2" uvalue="2" desc="正在接收"/>
+		<entry svalue="3" uvalue="3" desc="接收错误"/>
+	</enum>
+	<enum name="BaseChan" desc="基带通道号">
+		<entry svalue="1" uvalue="1" desc="通道1"/>
+		<entry svalue="2" uvalue="2" desc="通道2"/>
+		<entry svalue="3" uvalue="3" desc="通道3"/>
+		<entry svalue="4" uvalue="4" desc="通道4"/>
+	</enum>
+	<enum name="InformCat" desc="信息类别">
+		<entry svalue="1" uvalue="1" desc="单流"/>
+		<entry svalue="2" uvalue="2" desc="多流"/>
+	</enum>
+	<enum name="InformCat" desc="信息类别">
+		<entry svalue="1" uvalue="1" desc="单流"/>
+		<entry svalue="2" uvalue="2" desc="多流"/>
+	</enum>
+	<enum name="XuanXiang" desc="旋向">
+		<entry svalue="1" uvalue="1" desc="LHCP"/>
+		<entry svalue="2" uvalue="2" desc="RHCP"/>
+		<!--<entry svalue="3" uvalue="3" desc="HLP"/>
+		<entry svalue="4" uvalue="4" desc="VLP"/>-->
+	</enum>
+	<enum name="IQOutPut" desc="IQ输出方式">
+		<entry svalue="1" uvalue="1" desc="合路"/>
+		<entry svalue="2" uvalue="2" desc="分路"/>
+	</enum>
+	<enum name="PattIdent" desc="模式标识">
+		<entry svalue="1" uvalue="TS" desc="TS"/>
+		<entry svalue="2" uvalue="OP" desc="OP"/>
+	</enum>
+	<enum name="DateFormat" desc="日期类型">
+		<entry svalue="1" uvalue="U" desc="UTC时间"/>
+		<entry svalue="2" uvalue="B" desc="北京时间"/>
+	</enum>
+</enums>

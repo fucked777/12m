@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="MCH" ModeType="0x05" edition="1.1.1.1">
+	<enum name="ChannelCtrl" desc="通道输出控制">
+		<entry svalue="1" uvalue="1" desc="允许"/>
+		<entry svalue="2" uvalue="2" desc="禁止"/>
+	</enum>
+	<enum name="PNCodeAdd" desc="伪码加调">
+		<entry svalue="1" uvalue="1" desc="加调"/>
+		<entry svalue="2" uvalue="2" desc="去调"/>
+	</enum>
+	<enum name="DataTuning" desc="数据加调">
+		<entry svalue="1" uvalue="1" desc="加调"/>
+		<entry svalue="2" uvalue="2" desc="去调"/>
+	</enum>
+	<enum name="ChannelWork" desc="通道工作方式">
+		<entry svalue="1" uvalue="1" desc="1通道方式"/>
+		<entry svalue="2" uvalue="2" desc="2通道方式"/>
+		<entry svalue="3" uvalue="3" desc="3通道方式"/>
+		<entry svalue="4" uvalue="4" desc="4通道方式"/>
+	</enum>
+	<enum name="MeasSelect" desc="测量插入位置选择">
+		<entry svalue="1" uvalue="1" desc="第一道"/>
+		<entry svalue="2" uvalue="2" desc="第二道"/>
+		<entry svalue="3" uvalue="3" desc="第三道"/>
+		<entry svalue="4" uvalue="4" desc="第四道"/>
+	</enum>
+	<enum name="CodeSpeed" desc="扩频码速率">
+		<entry svalue="1" uvalue="1" desc="1*1.023Mcps"/>
+		<entry svalue="2" uvalue="2" desc="2*1.023Mcps"/>
+		<entry svalue="3" uvalue="3" desc="3*1.023Mcps"/>
+		<entry svalue="4" uvalue="4" desc="4*1.023Mcps"/>
+		<entry svalue="5" uvalue="5" desc="5*1.023Mcps"/>
+		<entry svalue="6" uvalue="6" desc="6*1.023Mcps"/>
+		<entry svalue="7" uvalue="7" desc="7*1.023Mcps"/>
+		<entry svalue="8" uvalue="8" desc="8*1.023Mcps"/>
+		<entry svalue="9" uvalue="9" desc="9*1.023Mcps"/>
+		<entry svalue="10" uvalue="10" desc="10*1.023Mcps"/>
+	</enum>
+</enums>

@@ -1,0 +1,34 @@
+<!--
+
+
+
+-->
+<Mode name="Ka高速">
+	<!-- 高数基带A接模拟源1 -->
+	<if condition="(GSJD1:1)
+					OR(GSJD2:1)
+					OR(GSJD3:1)">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵  1.2GHz中频开关矩阵 ">
+			<Param id="OutputPort1" value="14" name="高速基带1通道1 数传模拟源1"/>
+			<Param id="OutputPort2" value="14" name="高速基带1通道2 数传模拟源1"/>
+		</Command>
+	</if>
+	<!-- 高数基带B接模拟源2 -->
+	<if condition="(GSJD1:2)
+					OR(GSJD2:2)
+					OR(GSJD3:2)">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵  1.2GHz中频开关矩阵 ">
+			<Param id="OutputPort3" value="15" name="高速基带2通道1 数传模拟源2"/>
+			<Param id="OutputPort4" value="15" name="高速基带2通道2 数传模拟源2"/>
+		</Command>
+	</if>
+	<!-- 高数基带C接模拟源3 -->
+	<if condition="(GSJD1:3)
+					OR(GSJD2:3)
+					OR(GSJD3:3)">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵  1.2GHz中频开关矩阵 ">
+			<Param id="OutputPort5" value="16" name="高速基带3通道1 数传模拟源3"/>
+			<Param id="OutputPort6" value="16" name="高速基带3通道2 数传模拟源3"/>
+		</Command>
+	</if>
+</Mode>

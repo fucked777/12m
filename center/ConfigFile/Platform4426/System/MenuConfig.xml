@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MenuConfig defaultLoad="">
+	<config1>
+		<!--<Menu name="微服务管理" moduleName="MicroServiceManager" type="dialog"/>-->
+		<Menu name="设备监控" moduleName="">
+			<Menu name="天伺馈" moduleName="DeviceMonitorModule" subWidgetName="TCK" icon="天伺馈-1.png" type="dialog"/>
+			<Menu name="发射" moduleName="DeviceMonitorModule" subWidgetName="FS" icon="发射-1.png" type="dialog"/>
+			<Menu name="高频接收" moduleName="DeviceMonitorModule" subWidgetName="GPJS" icon="高频接收-1.png" type="dialog"/>
+			<Menu name="基带" moduleName="DeviceMonitorModule" subWidgetName="JD" icon="基带-1.png" type="dialog"/>
+			<Menu name="时频" moduleName="DeviceMonitorModule" subWidgetName="SP" icon="时频-1.png" type="dialog"/>
+			<Menu name="测试标校" moduleName="DeviceMonitorModule" subWidgetName="CSBX" icon="测试标校-1.png" type="dialog"/>
+			<Menu name="数字化前端" moduleName="DeviceMonitorModule" subWidgetName="QD" icon="数字化前端-1.png" type="dialog"/>
+			<Menu name="数据存储与交互" moduleName="DeviceMonitorModule" subWidgetName="SJJH" icon="数据存储与交互-1.png" type="dialog"/>
+		</Menu>
+		<Menu name="中心体空调控制" moduleName="">
+			<Menu name="中心体空调控制" moduleName="CenterAirConditionerModule" icon="数据存储与交互-1.png" type="dialog" size="1000, 600"/>
+		</Menu>
+		<Menu name="用户管理" moduleName="">
+			<Menu name="用户登录" moduleName="UserManagerModule" subWidgetName="UserLogin" icon="用户登录-1.png" type="dialog" size="400, 200"/>
+			<Menu name="用户注册" moduleName="UserManagerModule" subWidgetName="UserRegister" icon="用户注册-1.png" type="dialog" size="400, 200"/>
+			<Menu name="用户列表" moduleName="UserManagerModule" subWidgetName="UserList" icon="用户列表-1.png" type="dialog" size="600, 800"/>
+		</Menu>
+	</config1>
+	<config2>
+		<Menu name="一级菜单" moduleName="">
+			<Menu name="二级菜单" moduleName="">
+				<Menu name="微服务管理" moduleName="MicroServiceManager" type="dialog"/>
+				<Menu name="测试界面" moduleName="TestWidget" type="dialog"/>
+			</Menu>
+		</Menu>
+	</config2>
+</MenuConfig>

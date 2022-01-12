@@ -1,0 +1,98 @@
+<GridLayout>
+        <GroupBox row="0" col="0" rowSpan="4" columnSpan="1" text="高速解调单元1">
+		<GridLayout verticalSpacing="1">
+                        <Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="AGC(V)"/>
+                        <Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="AGC"  modeId="0xFFFF" unitId="2" targetId="0" paramId="AGCVoltage"/>
+                        <Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="电平(dBm)"/>
+                        <Widget row="1" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="电平"  modeId="0xFFFF" unitId="2" targetId="0" paramId="SignalLevel"/>
+                        <Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="EB/N0(dB)"/>
+                        <Widget row="2" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="EB/N0"  modeId="0xFFFF" unitId="2" targetId="0" paramId="EbNo"/>
+			<Widget row="3" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="中频频率(MHz)"/>
+			<Widget row="3" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="中频频率"  modeId="0xFFFF" unitId="2" targetId="0" paramId="IntermFreq"/>	
+			<Widget row="4" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="调制体制"/>
+			<Widget row="4" col="1" rowSpan="1" columnSpan="1" Align="Center" type="EnumStatusLabel" desc="调制体制"  modeId="0xFFFF" unitId="2" targetId="0" paramId="ModulatSystem"/>		
+			<Widget row="5" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="码速率(Mbps)"/>
+			<Widget row="5" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="码速率"  modeId="0xFFFF" unitId="2" targetId="0" paramId="CodeRate"/>		
+		</GridLayout>
+	</GroupBox>
+        <GroupBox row="0" col="1" rowSpan="4" columnSpan="1" text="星座图1">
+		<Widget row="0" col="0" rowSpan="1" columnSpan="1" type="StarMap" desc="星座图" channel="1"/>
+	</GroupBox>
+        <GroupBox row="4" col="0" rowSpan="1" columnSpan="2" text="">
+            <GridLayout>
+                <Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="载波"/>
+                <Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="载波"  modeId="0xFFFF" unitId="2" targetId="0" paramId="CarrierLockInd">
+                        <Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+                        <Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+                </Widget>
+                <Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="     码锁定(I/Q)"/>
+                <Widget row="0" col="3" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="I位"  modeId="0xFFFF" unitId="2" targetId="0" paramId="ISynchLock">
+                        <Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+                        <Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+                </Widget>
+                <Widget row="0" col="4" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="/"/>
+                <Widget row="0" col="5" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Q位"  modeId="0xFFFF" unitId="2" targetId="0" paramId="QSynchLock">
+                        <Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+                        <Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+                </Widget>
+                <Widget row="0" col="6" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="     帧锁定(I/Q)"/>
+                <Widget row="0" col="7" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Q位"  modeId="0xFFFF" unitId="3" targetId="0" paramId="FrameSynchLock">
+                        <Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+                        <Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+                </Widget>
+                <Widget row="0" col="8" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="/"/>
+                <Widget row="0" col="9" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Q位"  modeId="0xFFFF" unitId="4" targetId="0" paramId="FrameSynchLock">
+                        <Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+                        <Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+                </Widget>
+            </GridLayout>
+        </GroupBox>
+        <GroupBox row="5" col="0" rowSpan="4" columnSpan="1" text="高速解调单元2">
+		<GridLayout>
+                        <Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="AGC(V)"/>
+                        <Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="AGC"  modeId="0xFFFF" unitId="6" targetId="0" paramId="AGCVoltage"/>
+                        <Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="电平(dBm)"/>
+                        <Widget row="1" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="电平"  modeId="0xFFFF" unitId="6" targetId="0" paramId="SignalLevel"/>
+                        <Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="EB/N0(dB)"/>
+                        <Widget row="2" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="EB/N0"  modeId="0xFFFF" unitId="6" targetId="0" paramId="EbNo"/>
+			<Widget row="3" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="中频频率(MHz)"/>
+			<Widget row="3" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="中频频率"  modeId="0xFFFF" unitId="6" targetId="0" paramId="IntermFreq"/>	
+			<Widget row="4" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="调制体制"/>
+			<Widget row="4" col="1" rowSpan="1" columnSpan="1" Align="Center" type="EnumStatusLabel" desc="调制体制"  modeId="0xFFFF" unitId="6" targetId="0" paramId="ModulatSystem"/>		
+			<Widget row="5" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="码速率(Mbps)"/>
+			<Widget row="5" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="码速率"  modeId="0xFFFF" unitId="6" targetId="0" paramId="CodeRate"/>
+		</GridLayout>
+	</GroupBox>
+        <GroupBox row="5" col="1" rowSpan="4" columnSpan="1" text="星座图2">
+		<Widget row="0" col="0" rowSpan="1" columnSpan="1" type="StarMap" desc="星座图" channel="2"/>
+	</GroupBox>
+        <GroupBox row="9" col="0" rowSpan="1" columnSpan="2" text="">
+            <GridLayout>
+                <Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="载波"/>
+                <Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="载波"  modeId="0xFFFF" unitId="6" targetId="0" paramId="CarrierLockInd">
+                        <Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+                        <Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+                </Widget>
+                <Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="     码锁定(I/Q)"/>
+                <Widget row="0" col="3" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="I位"  modeId="0xFFFF" unitId="6" targetId="0" paramId="ISynchLock">
+                        <Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+                        <Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+                </Widget>
+                <Widget row="0" col="4" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="/"/>
+                <Widget row="0" col="5" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Q位"  modeId="0xFFFF" unitId="6" targetId="0" paramId="QSynchLock">
+                        <Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+                        <Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+                </Widget>
+                <Widget row="0" col="6" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="     帧锁定(I/Q)"/>
+                <Widget row="0" col="7" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Q位"  modeId="0xFFFF" unitId="7" targetId="0" paramId="FrameSynchLock">
+                        <Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+                        <Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+                </Widget>
+                <Widget row="0" col="8" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="/"/>
+                <Widget row="0" col="9" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Q位"  modeId="0xFFFF" unitId="8" targetId="0" paramId="FrameSynchLock">
+                        <Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+                        <Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+                </Widget>
+            </GridLayout>
+        </GroupBox>
+</GridLayout>

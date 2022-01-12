@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="TAS" ModeType="0x02" edition="1.1.1.1">
+	<enum name="WorkSwitch" desc="工作开关">
+		<entry svalue="1" uvalue="1" desc="停止工作"/>
+		<entry svalue="2" uvalue="2" desc="动态模拟"/>
+	</enum>
+	<enum name="AnalogData" desc="数据类型">
+		<entry svalue="1" uvalue="1" desc="固定数"/>
+		<entry svalue="2" uvalue="2" desc="随机数"/>
+	</enum>
+	<enum name="CodeType" desc="码型">
+		<entry svalue="1" uvalue="1" desc="NRZ-L"/>
+		<entry svalue="2" uvalue="2" desc="NRZ-M"/>
+		<entry svalue="3" uvalue="3" desc="NRZ-S"/>
+	</enum>
+	<enum name="DecodMode" desc="译码方式">
+		<entry svalue="1" uvalue="1" desc="关"/>
+		<entry svalue="2" uvalue="2" desc="卷积编码"/>
+		<entry svalue="3" uvalue="3" desc="R-S编码"/>
+		<entry svalue="4" uvalue="4" desc="R-S和卷积级联编码"/>
+	</enum>
+	<enum name="ConCodeType" desc="卷积码类型">
+		<entry svalue="1" uvalue="1" desc="(7,1/2)"/>
+		<entry svalue="2" uvalue="2" desc="(7,3/4)"/>
+	</enum>
+	<enum name="ViterbiDecodG2Phase" desc="Viterbi译码G2输出相位">
+		<entry svalue="1" uvalue="1" desc="正相"/>
+		<entry svalue="2" uvalue="2" desc="反相"/>
+	</enum>
+	<enum name="RSCodeType" desc="R-S码类型">
+		<entry svalue="1" uvalue="1" desc="(255,223)"/>
+		<entry svalue="2" uvalue="2" desc="(255,239)"/>
+	</enum>
+	<enum name="InterlDepth" desc="交错深度">
+		<entry svalue="1" uvalue="1" desc="1"/>
+		<entry svalue="2" uvalue="2" desc="2"/>
+		<entry svalue="3" uvalue="3" desc="3"/>
+		<entry svalue="4" uvalue="4" desc="4"/>
+		<entry svalue="5" uvalue="5" desc="5"/>
+	</enum>
+	<enum name="RSDecodCoorBase" desc="R-S译码坐标基">
+		<entry svalue="1" uvalue="1" desc="常规基"/>
+		<entry svalue="2" uvalue="2" desc="对偶基"/>
+	</enum>
+	<enum name="DescrambCtrl" desc="加扰控制">
+		<entry svalue="1" uvalue="1" desc="不加扰"/>
+		<entry svalue="2" uvalue="2" desc="自动加扰"/>
+		<entry svalue="3" uvalue="3" desc="人工设置"/>
+	</enum>
+	<enum name="DistPolyLength" desc="加扰多项式长度">
+		<entry svalue="1" uvalue="1" desc="1字节"/>
+		<entry svalue="2" uvalue="2" desc="2字节"/>
+		<entry svalue="3" uvalue="3" desc="3字节"/>
+		<entry svalue="4" uvalue="4" desc="4字节"/>
+	</enum>
+	<enum name="FrameSynCodeLength" desc="帧同步码组长度">
+		<entry svalue="1" uvalue="1" desc="16位"/>
+		<entry svalue="2" uvalue="2" desc="24位"/>
+		<entry svalue="3" uvalue="3" desc="32位"/>
+	</enum>
+	<enum name="FrameCodeLocat" desc="帧同步码组位置">
+		<entry svalue="1" uvalue="1" desc="帧头"/>
+		<entry svalue="2" uvalue="2" desc="帧尾"/>
+	</enum>
+	<enum name="SubframeSynch" desc="副帧同步方式">
+		<entry svalue="1" uvalue="1" desc="无副帧"/>
+		<entry svalue="2" uvalue="2" desc="ID副帧"/>
+		<entry svalue="3" uvalue="3" desc="循环副帧"/>
+		<entry svalue="4" uvalue="4" desc="反码副帧"/>
+	</enum>
+	<enum name="IDCountValue" desc="ID计数基值">
+		<entry svalue="1" uvalue="1" desc="0"/>
+		<entry svalue="2" uvalue="2" desc="1"/>
+	</enum>
+	<enum name="IDCountDirect" desc="ID计数方向">
+		<entry svalue="1" uvalue="1" desc="加计数"/>
+		<entry svalue="2" uvalue="2" desc="减计数"/>
+	</enum>
+	<enum name="SubCodeLength" desc="副帧码组长度">
+		<entry svalue="1" uvalue="1" desc="8位"/>
+		<entry svalue="2" uvalue="2" desc="16位"/>
+		<entry svalue="3" uvalue="3" desc="24位"/>
+		<entry svalue="4" uvalue="4" desc="32位"/>
+	</enum>
+</enums>

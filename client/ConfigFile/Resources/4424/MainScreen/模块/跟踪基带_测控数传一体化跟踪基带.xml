@@ -1,0 +1,19 @@
+<GridLayout>
+	<GroupBox row="0" col="0" rowSpan="1" columnSpan="1" text="测控">
+		<GridLayout>
+			<Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="载波锁定" />
+			<Widget row="0" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="载波锁定" unitId="2" targetId="0" paramId="CarrierLockInd">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="跟踪旋向"/>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" Align="Center" type="EnumStatusLabel" desc="跟踪旋向"  unitId="1" targetId="0" paramId="SpecDireOutput" enumId="SpecDirecOutput"/>
+			<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="AGC电压(V)"/>
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="AGC电压" unitId="2" targetId="0" paramId="AGCVoltage"/>
+			<Widget row="3" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="方位电压(V)"/>
+			<Widget row="3" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="方位电压" unitId="2" targetId="0" paramId="AzimuthVolt"/>
+			<Widget row="4" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="俯仰电压(V)"/>
+			<Widget row="4" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="俯仰电压" unitId="2" targetId="0" paramId="PitchVoltage"/>
+		</GridLayout>
+	</GroupBox>
+</GridLayout>

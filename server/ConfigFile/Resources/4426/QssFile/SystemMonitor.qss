@@ -1,0 +1,22 @@
+QListView,QTableView,QTabWidget{
+	font:11pt;
+}
+
+QListView::item:selected {
+	background-color: rgb(85, 170, 255);
+}
+
+QTableView QHeaderView::section {
+	background-color: rgb(85, 170, 255);
+	color: white;
+}
+
+
+/*TextColor:#386487*/
+/*PanelColor:#EAF7FF*/
+/*BorderColor:#C0DCF2*/
+/*NormalColorStart:#DEF0FE */
+/*NormalColorEnd:#C0DEF6*/
+/*DarkColorStart:#F2F9FF */
+/*DarkColorEnd:#DAEFFF*/
+/*HighColor:#00BB9E*/

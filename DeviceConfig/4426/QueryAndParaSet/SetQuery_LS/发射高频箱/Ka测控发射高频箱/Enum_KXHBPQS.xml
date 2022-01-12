@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="KXHBPQS" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="ControlMode" desc="监控方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="LockStatus" desc="锁定状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="锁定:G"/>
+		<entry svalue="2" uvalue="2" desc="失锁:R"/>
+	</enum>
+	<enum name="MachineStatus" desc="设备状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="InterExterReference" desc="内外参考">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="内参考"/>
+		<entry svalue="2" uvalue="2" desc="外参考"/>
+	</enum>
+</enums>

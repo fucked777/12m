@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="setting2setting3setting45";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="setting2setting3setting45",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="TU" ModeType="0x12" desc="下行数传单元" flag="1001" isModifySetBtn="0">
+	<result MessageType="0x0000F104">
+		<recycle id="1" recycleNum="1" desc="一体化">
+			<!--目标1(一体化)下行数传单元数据元素-->
+			<field pid="1" id="TeleStatPositLockIns" desc="位同步锁定指示" dataType="uint8" displayFormat="LED|PositLockIns" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="2" id="TeleFramPositLockIns" desc="帧同步锁定指示" dataType="uint8" displayFormat="LED|PositLockIns" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="3" id="EbNo" desc="Eb/N0" dataType="short" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="dB"/>
+			<field pid="101" GroupId="1" id="GML_CodeType" desc="码型" dataType="uint" displayFormat="enum|CodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="102" GroupId="1" id="GML_MessageSpeedChoose" desc="信息速率与帧频" dataType="uint" displayFormat="enum|MessageSpeedChoose" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="103" GroupId="1" id="GML_DecodeType" desc="译码方式" dataType="uint8" displayFormat="enum|DecodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="104" GroupId="1" id="GML_DescrambCtrl" desc="解扰控制" dataType="uint8" displayFormat="enum|DescrambCtrl" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="105" GroupId="1" id="GML_DistPolyLength" desc="解扰多项式长度" dataType="uint8" displayFormat="enum|DistPolyLength" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="106" GroupId="1" id="GML_ScramPolg" desc="解扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="107" GroupId="1" id="GML_DescramPrim" desc="解扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="108" GroupId="2" id="GML_FramSynFaultBit" desc="帧搜索容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="63" step="" unit="位"/>
+			<field pid="109" GroupId="2" id="GML_FramSynLockBit" desc="帧锁定容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="63" step="" unit="位"/>
+			<field pid="110" GroupId="2" id="GML_FramSynCheckBit" desc="帧校核容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="63" step="" unit="位"/>
+			<field pid="111" GroupId="2" id="GML_FramSynCheckNum" desc="帧校核检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="64" step="" unit="帧"/>
+			<field pid="112" GroupId="2" id="GML_FramSynLockNum" desc="帧锁定检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="64" step="" unit="帧"/>
+			<field pid="113" GroupId="2" id="GML_DataFrameCode" desc="数据帧发送格式" dataType="uint8" displayFormat="enum|DataFrameCode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="114" GroupId="2" id="GML_PerFramePacket" desc="每包发送数据帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="60" step="" unit=""/>
+		</recycle>
+	</result>
+	<layout>
+		<item id="1" desc="" row="0" col="0" rowspan="1" colspan="2"/>
+		<item id="2" desc="" row="1" col="0" rowspan="1" colspan="2"/>
+	</layout>
+</cmd>

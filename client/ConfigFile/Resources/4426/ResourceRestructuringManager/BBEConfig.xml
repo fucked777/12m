@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BBEConfigs>
+	<BBEConfig id="1" desc="标准TTC">
+		<DevicesType id="1" desc="测控基带">
+			<DeviceType id="1" desc="测控基带">
+				<Dev id="0x0100" desc="测控基带主">
+					<Enum deviceId="0x4001" desc="测控基带A"/>
+					<Enum deviceId="0x4003" desc="测控基带B"/>
+				</Dev>
+				<Dev id="0x0110" desc="测控基带备">
+					<Enum deviceId="0x4001" desc="测控基带A"/>
+					<Enum deviceId="0x4003" desc="测控基带B"/>
+				</Dev>
+			</DeviceType>
+		</DevicesType>
+	</BBEConfig>
+	<BBEConfig id="2" desc="S扩二">
+		<DevicesType id="1" desc="测控基带">
+			<DeviceType id="1" desc="测控基带">
+				<Dev id="0x0100" desc="测控基带主">
+					<Enum deviceId="0x4001" desc="测控基带A"/>
+					<Enum deviceId="0x4003" desc="测控基带B"/>
+				</Dev>
+				<Dev id="0x0110" desc="测控基带备">
+					<Enum deviceId="0x4001" desc="测控基带A"/>
+					<Enum deviceId="0x4003" desc="测控基带B"/>
+				</Dev>
+			</DeviceType>
+		</DevicesType>
+	</BBEConfig>
+	<BBEConfig id="3" desc="Ka扩二">
+		<DevicesType id="1" desc="测控基带">
+			<DeviceType id="1" desc="测控基带">
+				<Dev id="0x0100" desc="测控基带主">
+					<Enum deviceId="0x4002" desc="测控基带A"/>
+					<Enum deviceId="0x4004" desc="测控基带B"/>
+				</Dev>
+				<Dev id="0x0110" desc="测控基带备">
+					<Enum deviceId="0x4002" desc="测控基带A"/>
+					<Enum deviceId="0x4004" desc="测控基带B"/>
+				</Dev>
+			</DeviceType>
+		</DevicesType>
+	</BBEConfig>
+	<BBEConfig id="4" desc="X低速">
+		<DevicesType id="1" desc="低速数传基带">
+			<DeviceType id="1" desc="低速数传基带">
+				<Dev id="0x0400" desc="低速数传基带主">
+					<Enum deviceId="0x4401" desc="低速数传基带A"/>
+					<Enum deviceId="0x4402" desc="低速数传基带B"/>
+				</Dev>
+				<Dev id="0x0410" desc="低速数传基带备">
+					<Enum deviceId="0x4401" desc="低速数传基带A"/>
+					<Enum deviceId="0x4402" desc="低速数传基带B"/>
+				</Dev>
+			</DeviceType>
+			<DeviceType id="2" desc="存储转发">
+				<Dev id="0x0500" desc="存储转发主">
+					<Enum deviceId="0x8101" desc="存储转发A"/>
+					<Enum deviceId="0x8102" desc="存储转发B"/>
+					<!--<Enum deviceId="0x8103" desc="存储转发C"/>-->
+				</Dev>
+				<Dev id="0x0510" desc="存储转发备">
+					<Enum deviceId="0x8101" desc="存储转发A"/>
+					<Enum deviceId="0x8102" desc="存储转发B"/>
+					<!--<Enum deviceId="0x8103" desc="存储转发C"/>-->
+				</Dev>
+			</DeviceType>
+		</DevicesType>
+	</BBEConfig>
+	<BBEConfig id="5" desc="Ka低速">
+		<DevicesType id="1" desc="低速数传基带">
+			<DeviceType id="1" desc="低速数传基带">
+				<Dev id="0x0400" desc="低速数传基带主">
+					<Enum deviceId="0x4401" desc="低速数传基带A"/>
+					<Enum deviceId="0x4402" desc="低速数传基带B"/>
+				</Dev>
+				<Dev id="0x0410" desc="低速数传基带备">
+					<Enum deviceId="0x4401" desc="低速数传基带A"/>
+					<Enum deviceId="0x4402" desc="低速数传基带B"/>
+				</Dev>
+			</DeviceType>
+			<DeviceType id="2" desc="存储转发">
+				<Dev id="0x0500" desc="存储转发主">
+					<Enum deviceId="0x8101" desc="存储转发A"/>
+					<Enum deviceId="0x8102" desc="存储转发B"/>
+					<!--<Enum deviceId="0x8103" desc="存储转发C"/>-->
+				</Dev>
+				<Dev id="0x0510" desc="存储转发备">
+					<Enum deviceId="0x8101" desc="存储转发A"/>
+					<Enum deviceId="0x8102" desc="存储转发B"/>
+					<!--<Enum deviceId="0x8103" desc="存储转发C"/>-->
+				</Dev>
+			</DeviceType>
+		</DevicesType>
+	</BBEConfig>
+	<BBEConfig id="6" desc="Ka高速数传">
+		<DevicesType id="1" desc="数传基带">
+			<DeviceType id="1" desc="高速基带">
+				<Dev id="0x0200" desc="高速基带主">
+					<Enum deviceId="0x4101" desc="高速基带A"/>
+					<Enum deviceId="0x4102" desc="高速基带B"/>
+				</Dev>
+				<Dev id="0x0210" desc="高速基带备">
+					<Enum deviceId="0x4101" desc="高速基带A"/>
+					<Enum deviceId="0x4102" desc="高速基带B"/>
+				</Dev>
+			</DeviceType>
+			<DeviceType id="2" desc="存储转发">
+				<Dev id="0x0500" desc="存储转发主">
+					<Enum deviceId="0x8101" desc="存储转发A"/>
+					<Enum deviceId="0x8102" desc="存储转发B"/>
+					<!--<Enum deviceId="0x8103" desc="存储转发C"/>-->
+				</Dev>
+				<Dev id="0x0510" desc="存储转发备">
+					<Enum deviceId="0x8101" desc="存储转发A"/>
+					<Enum deviceId="0x8102" desc="存储转发B"/>
+					<!--<Enum deviceId="0x8103" desc="存储转发C"/>-->
+				</Dev>
+			</DeviceType>
+		</DevicesType>
+	</BBEConfig>
+
+	<BBEConfig id="14" desc="扩跳">
+		<DevicesType id="1" desc="测控基带">
+			<DeviceType id="1" desc="测控基带">
+				<Dev id="0x0100" desc="测控基带主">
+					<Enum deviceId="0x4001" desc="测控基带A"/>
+					<Enum deviceId="0x4003" desc="测控基带B"/>
+				</Dev>
+				<Dev id="0x0110" desc="测控基带备">
+					<Enum deviceId="0x4001" desc="测控基带A"/>
+					<Enum deviceId="0x4003" desc="测控基带B"/>
+				</Dev>
+			</DeviceType>
+		</DevicesType>
+	</BBEConfig>
+</BBEConfigs>

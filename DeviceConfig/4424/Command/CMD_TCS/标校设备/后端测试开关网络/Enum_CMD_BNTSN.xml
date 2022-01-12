@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+id  枚举ID  -与设备类型关联
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums ExtenType="BNTSN" ModeType = "0xFFFF" edition="1.1.1.1">
+	<enum name="Power" desc="电源管理">
+		<entry svalue="1" uvalue="0" desc="无此参数" />
+		<entry svalue="2" uvalue="1" desc="关电" />
+		<entry svalue="3" uvalue="2" desc="开电" />
+	</enum>
+	<enum name="SwitchOneInFour" desc="四选一开关">
+		<entry svalue="1" uvalue="0" desc="无此参数" />
+		<entry svalue="2" uvalue="1" desc="Ka频段模拟信号源" />
+		<entry svalue="3" uvalue="2" desc="X频段模拟信号源" />
+		<entry svalue="2" uvalue="3" desc="信号源" />
+		<entry svalue="3" uvalue="4" desc="备份" />
+	</enum>
+	<enum name="SwitchBroadband" desc="宽带选择开关">
+		<entry svalue="1" uvalue="0" desc="无此参数" />
+		<entry svalue="2" uvalue="1" desc="Ka频段接收测试1" />
+		<entry svalue="3" uvalue="2" desc="Ka频段接收测试2" />
+		<entry svalue="1" uvalue="3" desc="Ka频段接收测试3" />
+		<entry svalue="2" uvalue="4" desc="1.2GHz中频测试" />
+		<entry svalue="3" uvalue="5" desc="10MHz频率参考" />
+	</enum>
+</enums>

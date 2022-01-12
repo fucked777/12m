@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Param >
+    <unit groupName="分组1" deviceID="0x2642244002" unitID="1">
+        <field pid="101" id="YaoC" desc="遥测" dataType="uint" displayFormat="enum|taskType" initValue="2" minValue="0" maxValue="3" step="" unit="" />
+        <field pid="102" id="CGui" desc="测轨" dataType="uint" displayFormat="enum|taskType" initValue="2" minValue="0" maxValue="3" step="" unit="" />
+        <field pid="103" id="YaoK" desc="遥控" dataType="uint" displayFormat="enum|taskType" initValue="2" minValue="0" maxValue="3" step="" unit="" />
+        <field pid="104" id="SC" desc="数传" dataType="uint" displayFormat="enum|taskType" initValue="2" minValue="0" maxValue="3" step="" unit="" />
+    </unit>
+    <unit groupName="分组2" deviceID="0x2642244002" unitID="2">
+        <field pid="101" id="SEmissPolar" desc="发射极化" dataType="uint" displayFormat="enum|Xuanxiang" initValue="1" minValue="100" maxValue="2000" step="" unit="" />
+        <field pid="102" id="SReceivPolar" desc="接收极化" dataType="uint" displayFormat="enum|ReceiveXuanxiang" initValue="1" minValue="100" maxValue="2000" step="" unit="" />
+        <field pid="103" id="STrackPolar" desc="跟踪极化" dataType="uint" displayFormat="enum|Xuanxiang" initValue="1" minValue="100" maxValue="2000" step="" unit="" />
+        <field pid="112" id="TNumbSingleOper" desc="下行通道号(测距)" dataType="uint8" displayFormat="enum|CodeRateType" initValue="1" minValue="1" maxValue="1" step="" unit=""/>
+        <field pid="101" id="UP_MessageSpeedChoose" desc="信息速率与帧频(上行)" dataType="uint" displayFormat="enum|MessageSpeedChoose" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="101" id="DOWN_MessageSpeedChoose" desc="信息速率与帧频(下行)" dataType="uint" displayFormat="enum|MessageSpeedChoose" initValue="1" minValue="" maxValue="" step="" unit=""/>
+    </unit>
+</Param>

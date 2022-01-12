@@ -1,0 +1,9 @@
+{
+    "bundle.symbolic_name":"AGCCurveCalibrationModule",
+    "servicename":"AGC曲线标定模块",
+    "bundle.activator" : true,
+    "authors" : [ "wp" ],
+    "bundle.version" : "1.0.0",
+    "bundle.description" : "null",
+    "update_log" :""
+}

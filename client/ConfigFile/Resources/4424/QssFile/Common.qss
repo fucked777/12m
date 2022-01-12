@@ -1,0 +1,44 @@
+.QGroupBox,.MyGroupBox{
+	font: 12pt;
+	font-weight:bold;
+	font-family:'方正宋体_YS';
+	border:1px solid #C0DCF2;
+	border-radius:3px;
+	margin-top:10px;
+	margin-left:5px;
+}
+.QGroupBox::title,.MyGroupBox::title{
+	subcontrol-origin:margin;
+	subcontrol-position :top left;
+	position:-6 10px;
+	font-size:18pt;
+	left:10px;
+}
+
+QLabel,QLineEdit,QTextEdit,QComboBox,QRadioButton,QSpinBox,QDoubleSpinBox ,QDateTimeEdit,QCheckBox{
+    font: 11pt;
+    padding: 2px;
+}
+
+QListView,QTableView,QTabWidget{
+	font:12pt;
+}
+
+QListView::item:selected {
+	background-color: rgb(85, 170, 255);
+}
+
+QTableView QHeaderView::section {
+	background-color: rgb(85, 170, 255);
+	color: white;
+}
+
+
+/*TextColor:#386487*/
+/*PanelColor:#EAF7FF*/
+/*BorderColor:#C0DCF2*/
+/*NormalColorStart:#DEF0FE */
+/*NormalColorEnd:#C0DEF6*/
+/*DarkColorStart:#F2F9FF */
+/*DarkColorEnd:#DAEFFF*/
+/*HighColor:#00BB9E*/

@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+项目设备配置 
+
+order:序号
+id:单元ID   与单元属性文件夹关联
+Extension:分机编号
+name:描述
+UnitType:单元类型 与设置状态文件夹关联
+UnitCode:单元编码
+HaveMode:有无模式 0表示无 1表示有
+ModeAddress :解析模式的位置
+ModeLength:模式位置字段的长度
+-->
+<Systems>
+	<System name="TFS" ID="0x1" desc="天伺馈分系统">
+		<Device name="AC" ID="0x0" desc="天线控制">
+			<Extension extenType="AC" HaveMode="0" typeID="0x00" ID="0x11" desc="天线控制A">
+				<Unit UnitType="SPU" UnitCode="1" name="公共单元"/>
+				<Unit UnitType="ACU" UnitCode="2" name="天线控制"/>
+				<Unit UnitType="ADU" UnitCode="3" name="天线驱动"/>
+				<Unit UnitType="PDU" UnitCode="4" name="位置显示"/>
+				<Unit UnitType="ICU" UnitCode="5" name="综合调理"/>
+				<Unit UnitType="PCU" UnitCode="6" name="极化控制"/>
+			</Extension>
+			<Extension extenType="AC" HaveMode="0" typeID ="0x00" ID="0x12" desc="天线控制B">
+				<Unit UnitType="SPU" UnitCode="1" name="公共单元"/>
+				<Unit UnitType="ACU" UnitCode="2" name="天线控制"/>
+				<Unit UnitType="ADU" UnitCode="3" name="天线驱动"/>
+				<Unit UnitType="PDU" UnitCode="4" name="位置显示"/>
+				<Unit UnitType="ICU" UnitCode="5" name="综合调理"/>
+				<Unit UnitType="PCU" UnitCode="6" name="极化控制"/>
+			</Extension>
+		</Device>
+	</System>
+	<System name="LS" ID="0x2" desc="发射分系统">
+		<Device name="HPA" ID="0x0" desc="高功放">
+			<Extension extenType="SHPA" HaveMode="0" typeID="0x00" ID="0x01" desc="S功放A">
+				<Unit UnitType="SHPA" UnitCode="1" name="功放"/>
+			</Extension>
+			<Extension extenType="SHPA" HaveMode="0" typeID="0x00" ID="0x02" desc="S功放B">
+				<Unit UnitType="SHPA" UnitCode="1" name="功放"/>
+			</Extension>
+			<Extension extenType="HPA" HaveMode="0" typeID="0x00" ID="0x03" desc="Ka300W测控功放">
+				<Unit UnitType="HPA" UnitCode="1" name="测控功放"/>
+			</Extension>
+			<Extension extenType="HPB" HaveMode="0" typeID="0x00" ID="0x04" desc="Ka30W测控功放">
+				<Unit UnitType="HPB" UnitCode="1" name="测控功放"/>
+			</Extension>
+			<Extension extenType="SCHPA" HaveMode="0" typeID="0x00" ID="0x05" desc="Ka300W数传功放">
+				<Unit UnitType="SCHPA" UnitCode="1" name="数传功放"/>
+			</Extension>
+			<Extension extenType="SCHPB" HaveMode="0" typeID="0x00" ID="0x06" desc="Ka30W数传功放">
+				<Unit UnitType="SCHPB" UnitCode="1" name="数传功放"/>
+			</Extension>
+			<!--
+			<Extension extenType="HPA" HaveMode="0" ID= "0x02" desc="高功放B机">
+				<Unit  UnitType="HPA" UnitCode="1" name="高功放机单元"/>
+			</Extension>
+			-->
+		</Device>
+		<Device name="PASM" ID="0x1" desc="S功放切换开关">
+			<Extension extenType="PAS" HaveMode="0" typeID="0x01" ID="0x01" desc="S功放切换开关">
+				<Unit UnitType="PAS" UnitCode="1" name="S功放切换开关"/>
+			</Extension>
+		</Device>
+		<!--Device name="UC" ID="0x2" desc="上变频器">
+		</Device-->
+		<!--Device name="URSM" ID="0x3" desc="上行射频切换模块">
+			<Extension extenType="SRFSN" HaveMode="0" ID= "0x01" desc="发射射频开关网络">
+				<Unit  UnitType="SRFSNU" UnitCode="1" name="发射射频开关网络单元"/>
+			</Extension>
+		</Device-->
+		<Device name="LHFB" ID="0x4" desc="发射高频箱">
+			<Extension extenType="KFCLSDT" HaveMode="0" typeID="0x02" ID="0x01" desc="Ka低速数传发射高频箱">
+				<Unit UnitType="KLRFSN" UnitCode="1" name="射频开关网络"/>
+				<Unit UnitType="KDTU" UnitCode="2" name="Ka低速上变频器1"/>
+				<Unit UnitType="KDTU2" UnitCode="3" name="Ka低速上变频器2"/>
+				<Unit UnitType="KXHBPQ" UnitCode="4" name="Ka低速小环变频器"/>
+			</Extension>
+			<Extension extenType="KFCT" HaveMode="0" typeID="0x03" ID="0x02" desc="Ka测控发射高频箱">
+				<Unit UnitType="KLRFSNS" UnitCode="1" name="射频开关网络"/>
+				<Unit UnitType="KDTUS" UnitCode="2" name="Ka测控上变频器1"/>
+				<Unit UnitType="KDTUS2" UnitCode="3" name="Ka测控上变频器2"/>
+				<Unit UnitType="KXHBPQS" UnitCode="4" name="Ka测控小环变频器"/>
+			</Extension>
+		</Device>
+		<Device name="SFCLRFSM" ID="0x5" desc="S频段发射开关矩阵">
+			<Extension extenType="SFCLRFM" HaveMode="0" typeID="0x04" ID="0x01" desc="S频段发射开关矩阵">
+				<Unit UnitType="SFCLRFM" UnitCode="1" name="S频段发射开关矩阵"/>
+			</Extension>
+		</Device>
+	</System>
+	<System name="HFRS" ID="0x03" desc="高频接收分系统">
+		<Device name="DC" ID="0x0" desc="驱动控制">
+			<Extension extenType="DC" HaveMode="0" typeID="0x00" ID="0x01" desc="驱动控制">
+				<Unit UnitType="DCOPT" UnitCode="1" name="S左旋和路"/>
+				<Unit UnitType="DCOPT2" UnitCode="2" name="S右旋和路"/>
+				<Unit UnitType="DCOPT3" UnitCode="3" name="S差路"/>
+				<Unit UnitType="DCOPT4" UnitCode="4" name="X左旋和路"/>
+				<Unit UnitType="DCOPT5" UnitCode="5" name="X右旋和路"/>
+				<!--				
+				<Unit  UnitType="DCOPT" UnitCode="6" name="X频段差路"/>
+				-->
+				<Unit UnitType="DCOPT6" UnitCode="7" name="Ka左旋和路"/>
+				<Unit UnitType="DCOPT7" UnitCode="8" name="Ka右旋和路"/>
+				<Unit UnitType="DCOPT8" UnitCode="9" name="Ka左旋差路"/>
+				<Unit UnitType="DCOPT9" UnitCode="10" name="Ka右旋差路"/>
+			</Extension>
+		</Device>
+		<Device name="HFB" ID="0x1" desc="高频箱">
+			<Extension extenType="KaMCATHFB" HaveMode="0" typeID="0x01" ID="0x01" desc="Ka测控及跟踪高频箱">
+				<!--<Unit UnitType="KRFSMA" UnitCode="1" name="测控信号矩阵"/> -->
+				<!-- 无硬件 -->
+				<!--<Unit UnitType="KRFSMB" UnitCode="2" name="测控跟踪和矩阵"/>-->
+				<!-- 无硬件 -->
+				<!--<Unit UnitType="KRFSMC" UnitCode="3" name="测控跟踪差矩阵"/>-->
+				<!-- 无硬件 -->
+				<Unit UnitType="KaMCSCOS" UnitCode="4" name="本振检测信号"/>
+				<Unit UnitType="KSDC" UnitCode="5" name="Ka测控下变频1"/>
+				<Unit UnitType="KSDC" UnitCode="6" name="Ka测控下变频2"/>
+				<Unit UnitType="KSDC" UnitCode="7" name="Ka测控下变频3"/>
+				<Unit UnitType="KSDC" UnitCode="8" name="Ka测控下变频4"/>
+				<Unit UnitType="KSDC" UnitCode="9" name="Ka测控下变频5"/>
+				<Unit UnitType="KSDC" UnitCode="10" name="Ka测控下变频6"/>
+			</Extension>
+			<Extension extenType="KaLSATHB" HaveMode="0" typeID="0x02" ID="0x02" desc="Ka低速数传及跟踪高频箱">
+				<!--<Unit UnitType="KRFSMLA" UnitCode="1" name="低速数传矩阵"/>-->
+				<!-- 无硬件 -->
+				<!--<Unit UnitType="KRFSMB" UnitCode="2" name="低速跟踪和矩阵"/>-->
+				<!-- 无硬件 -->
+				<!--<Unit UnitType="KRFSMC" UnitCode="3" name="低速跟踪差矩阵"/>-->
+				<!-- 无硬件 -->
+				<Unit UnitType="KaLDTSCOS" UnitCode="4" name="本振检测信号"/>-->
+				<Unit UnitType="KSDC" UnitCode="5" name="Ka低速下变频1"/>
+				<Unit UnitType="KSDC" UnitCode="6" name="Ka低速下变频2"/>
+				<Unit UnitType="KSDC" UnitCode="7" name="Ka低速下变频3"/>
+				<Unit UnitType="KSDC" UnitCode="8" name="Ka低速下变频4"/>
+				<Unit UnitType="KSDC" UnitCode="9" name="Ka低速下变频5"/>
+				<Unit UnitType="KSDC" UnitCode="10" name="Ka低速下变频6"/>
+			</Extension>
+			<Extension extenType="KaHSATHB" HaveMode="0" typeID="0x03" ID="0x03" desc="Ka高速数传高频箱">
+				<!--<Unit UnitType="KRFSMH" UnitCode="1" name="高速信号矩阵"/>-->
+				<!--名称由 Ka射频开关矩阵 改为 控制逻辑  KRFSM 改为 KRFSMH by chenhd 2020-03-19-->
+				<Unit UnitType="KaHDTSCOS" UnitCode="2" name="本振检测信号"/>
+				<Unit UnitType="KSDCKK" UnitCode="3" name="Ka高速下变频1"/>
+				<Unit UnitType="KSDCKK" UnitCode="4" name="Ka高速下变频2"/>
+				<Unit UnitType="KSDCKK" UnitCode="5" name="Ka高速下变频3"/>
+				<Unit UnitType="KSDCKK" UnitCode="6" name="Ka高速下变频4"/>
+				<!--Unit UnitType="KSDC" UnitCode="7" name="Ka/1.2G高速数传下变频E"/-->
+				<!--Unit UnitType="KSDC" UnitCode="8" name="Ka/1.2G高速数传下变频F"/-->
+			</Extension>
+			<Extension extenType="XHFB" HaveMode="0" typeID="0x04" ID="0x04" desc="X频段高频箱">
+				<!--Unit UnitType="XRFSN" UnitCode="1" name="控制逻辑"/-->
+				<!--名称由 X射频开关网络1 改为 控制逻辑 by chenhd 2020-03-19-->
+				<!--Unit UnitType="XRFSN" UnitCode="2" name="X射频开关网络2"/-->
+				<Unit UnitType="XRFSN" UnitCode="2" name="X频段射频开关矩阵"/>
+				<!--Unit UnitType="XRFSM" UnitCode="2" name="X射频开关矩阵"/-->
+				<!--显示变为屏蔽by chenhd 2020-03-19-->
+				<Unit UnitType="XSCOSL" UnitCode="3" name="X左旋和路选择开关"/>
+				<!--显示变为屏蔽by chenhd 2020-03-19-->
+				<Unit UnitType="XSCOSR" UnitCode="4" name="X右旋和路选择开关"/>
+				<!--显示变为屏蔽by chenhd 2020-03-19-->
+				<Unit UnitType="XSCOSMS" UnitCode="5" name="监测信号输出开关选择"/>
+				<!--显示变为屏蔽by chenhd 2020-03-19-->
+				<Unit UnitType="KSDCS" UnitCode="6" name="X和路变频器1"/>
+				<Unit UnitType="KSDCS" UnitCode="7" name="X和路变频器2"/>
+			</Extension>
+		</Device>
+		<Device name="SPKGWL" ID="0x2" desc="射频开关网络">
+			<Extension extenType="SSPKGWL" HaveMode="0" typeID="0x05" ID="0x01" desc="S频段射频开关网络">
+				<Unit UnitType="SBRFSN" UnitCode="1" name="S频段射频开关网络"/>
+				<Unit UnitType="SLFSCOS" UnitCode="2" name="本振信号输出"/>
+			</Extension>
+			<Extension extenType="KaSPKGWL" HaveMode="0" typeID="0x06" ID="0x02" desc="Ka射频开关网络">
+				<Unit UnitType="KRFSN" UnitCode="1" name="输入选择开关"/>
+				<Unit UnitType="KaLF2X4First" UnitCode="3" name="高速数传输出矩阵"/>
+				<Unit UnitType="KaLF2X4Second" UnitCode="4" name="低速和测控输出矩阵"/>
+				<Unit UnitType="KaLF4X8" UnitCode="5" name="测控跟踪和数传跟踪输出矩阵"/>
+			</Extension>
+		</Device>
+		<Device name="DIFSM" ID="0x3" desc="L频段数传中频矩阵">
+			<Extension extenType="DIFSM" HaveMode="0" typeID="0x07" ID="0x01" desc="L数传中频矩阵">
+				<Unit UnitType="LSFBRFSMJ" UnitCode="1" name="L数传中频矩阵"/>
+				<!--unitType由 LSFBRFSM 改为 LSFBRFSMJ by chenhd 2020-03-19-->
+			</Extension>
+		</Device>
+		
+		<Device name="OT" ID="0x5" desc="光端机">
+			<Extension extenType="CSOT" HaveMode="0" typeID = "0x08" ID="0x1" desc="中心体光端机1">
+				<Unit UnitType="CSOT" UnitCode="1" name="中心体光端机"/>
+			</Extension>
+			<Extension extenType="CSOT2" HaveMode="0" typeID = "0x08" ID="0x2" desc="中心体光端机2">
+				<Unit UnitType="CSOT2" UnitCode="1" name="中心体光端机"/>
+			</Extension>
+			<Extension extenType="CSHOT" HaveMode="0" typeID = "0x09" ID="0x3" desc="中心机房光端机1">
+				<Unit UnitType="CSHOT" UnitCode="1" name="中心机房光端机"/>
+			</Extension>
+			<Extension extenType="CSHOT2" HaveMode="0" typeID = "0x09" ID="0x4" desc="中心机房光端机2">
+				<Unit UnitType="CSHOT2" UnitCode="1" name="中心机房光端机"/>
+			</Extension>
+			<Extension extenType="PBHOT" HaveMode="0" typeID = "0x0A" ID="0x5" desc="塔基机房光端机1">
+				<Unit UnitType="PBHOT" UnitCode="1" name="塔基机房光端机"/>
+			</Extension>
+			<Extension extenType="PBHOT2" HaveMode="0" typeID = "0x0A" ID="0x6" desc="塔基机房光端机2">
+				<Unit UnitType="PBHOT2" UnitCode="1" name="塔基机房光端机"/>
+			</Extension>
+		</Device>
+		
+		<Device name="RFSM" ID="0x6" desc="S频段接收开关矩阵">
+			<Extension extenType="RFSM" HaveMode="0" typeID="0x0B" ID="0x1" desc="S频段接收开关矩阵">
+				<Unit UnitType="LSFBRFSMSR" UnitCode="1" name="S频段接收开关矩阵"/>
+				<!--unitType由 LSFBRFSM 改为 LSFBRFSMSR by chenhd 2020-03-19-->
+			</Extension>
+		</Device>
+		<!--26没有L切换网络
+		<Device name="LBHN" ID="0x7" desc="L频段切换网络">
+			<Extension extenType="LBHN" HaveMode="0" typeID="0x0C" ID="0x1" desc="L频段切换网络">
+				<Unit UnitType="LSFBRFSM" UnitCode="1" name="L频段(1.2G)切换网络"/>
+			</Extension>
+		</Device>
+		-->
+		<!--Device name="PB" ID="0x8" desc="电源箱">	
+			<Extension extenType="PB" HaveMode="0" typeID = "0x0C" ID="0x1" desc="电源箱">
+				<Unit UnitType="PBU" UnitCode="1" name="电源箱单元"/>
+			</Extension>
+		</Device-->
+		<Device name="MFEDEN" ID="0xA" desc="1.2GHz中频均衡放大器">
+			<Extension extenType="MFEDEN" HaveMode="0" typeID="0x01" ID="0x01" desc="1.2GHz中频均衡放大器">
+				<Unit UnitType="MFEDEN" UnitCode="1" name="1.2GHz中频均衡放大器"/>
+			</Extension>
+		</Device>
+	</System>
+	<System name="BS" ID="0x04" desc="基带分系统">
+		<Device name="MACB" ID="0x0" desc="测控基带">
+			<Extension extenType="MACB" HaveMode="1" typeID="0x00" ID="0x1" desc="测控基带A-1" ModeAddress="6" ModeLength="8" relationDevice="CKA">
+				<Mode ID="0x01" desc="标准TTC">
+					<Unit UnitType="MACPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="TTCLHR" UnitCode="2" name="TTC左旋接收"/>
+					<Unit UnitType="TTCRHR" UnitCode="3" name="TTC右旋接收"/>
+					<Unit UnitType="IFCM" UnitCode="4" name="中频调制"/>
+					<Unit UnitType="LTRU" UnitCode="5" name="左旋测距"/>
+					<Unit UnitType="RTRU" UnitCode="6" name="右旋测距"/>
+					<Unit UnitType="RCU" UnitCode="7" name="遥控单元"/>
+					<Unit UnitType="TU" UnitCode="8" name="遥测解调"/>
+					<!--Unit UnitType="LMTU" UnitCode="9" name="左旋主跟踪单元"/-->
+					<!--Unit UnitType="DMTU" UnitCode="10" name="右旋主跟踪单元"/-->
+					<!--Unit UnitType="VU" UnitCode="11" name="话音单元"/-->
+					<Unit UnitType="TAS" UnitCode="12" name="遥测模拟源"/>
+					<!--Unit UnitType="BR" UnitCode="13" name="引导接收机"/-->
+					<!--Unit UnitType="GATU" UnitCode="14" name="引导跟踪单元"/-->
+					<!--Unit UnitType="DR" UnitCode="15" name="数传接收机"/-->
+					<!--Unit UnitType="DWD" UnitCode="16" name="数传I路解调器"/-->
+					<!--Unit UnitType="QDFDT" UnitCode="17" name="数传Q路解调器"/-->
+				</Mode>
+				<Mode ID="0x04" desc="S扩频模式二">
+					<Unit UnitType="MACPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="TIRU" UnitCode="2" name="接收单元"/>
+					<!--<Unit UnitType="MIRU" UnitCode="3" name="测量接收"/>-->
+					<Unit UnitType="IFCM" UnitCode="3" name="中频调制"/>
+					<Unit UnitType="RU" UnitCode="4" name="测距单元"/>
+					<!--Unit UnitType="RTRU" UnitCode="6" name="右旋测距单元"/-->
+					<Unit UnitType="RCU" UnitCode="5" name="遥控单元"/>
+					<Unit UnitType="TU" UnitCode="6" name="遥测解调"/>
+					<!--Unit UnitType="LMTU" UnitCode="9" name="左旋主跟踪单元"/-->
+					<!--Unit UnitType="RMTU" UnitCode="10" name="右旋主跟踪单元"/-->
+					<Unit UnitType="TAS" UnitCode="8" name="遥测模拟源"/>
+					<Unit UnitType="SSCU" UnitCode="9" name="扩频伪码"/>
+					<!--Unit UnitType="BR" UnitCode="13" name="引导接收机"/-->
+					<!--Unit UnitType="GATU" UnitCode="14" name="引导跟踪单元"/-->
+				</Mode>
+				<Mode ID="0x05" desc="Ka扩频模式二">
+					<Unit UnitType="MACPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="TIRU" UnitCode="2" name="接收单元"/>
+					<!--<Unit UnitType="MIRU" UnitCode="3" name="测量接收"/>-->
+					<Unit UnitType="IFCM" UnitCode="3" name="中频调制"/>
+					<Unit UnitType="RU" UnitCode="4" name="测距单元"/>
+					<!--Unit UnitType="RTRU" UnitCode="6" name="右旋测距单元"/-->
+					<Unit UnitType="RCU" UnitCode="5" name="遥控单元"/>
+					<Unit UnitType="TU" UnitCode="6" name="遥测解调"/>
+					<!--Unit UnitType="LMTU" UnitCode="9" name="左旋主跟踪单元"/-->
+					<!--Unit UnitType="RMTU" UnitCode="10" name="右旋主跟踪单元"/-->
+					<Unit UnitType="TAS" UnitCode="8" name="遥测模拟源"/>
+					<Unit UnitType="SSCU" UnitCode="9" name="扩频伪码"/>
+					<!--Unit UnitType="BR" UnitCode="13" name="引导接收机"/-->
+					<!--Unit UnitType="GATU" UnitCode="14" name="引导跟踪单元"/-->
+				</Mode>
+				<Mode ID="0x21" desc="扩跳频模式">
+					<Unit UnitType="MACPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="TIRU" UnitCode="2" name="接收机及测量单元"/>
+					<Unit UnitType="IFCM" UnitCode="3" name="调制器单元"/>
+					<Unit UnitType="RCU" UnitCode="4" name="遥控单元"/>
+					<Unit UnitType="TU" UnitCode="5" name="遥测单元"/>
+					<Unit UnitType="TAS" UnitCode="6" name="遥测模拟源"/>
+				</Mode>
+			</Extension>
+			<Extension extenType="MACB" HaveMode="1" typeID="0x00" ID="0x2" desc="测控基带A-2" ModeAddress="6" ModeLength="8" isShow="0" relationDevice="CKA">
+				<Mode ID="0x01" desc="标准TTC">
+					<Unit UnitType="MACPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="TTCLHR" UnitCode="2" name="TTC左旋接收"/>
+					<Unit UnitType="TTCRHR" UnitCode="3" name="TTC右旋接收"/>
+					<Unit UnitType="IFCM" UnitCode="4" name="中频调制"/>
+					<Unit UnitType="LTRU" UnitCode="5" name="左旋测距"/>
+					<Unit UnitType="RTRU" UnitCode="6" name="右旋测距"/>
+					<Unit UnitType="RCU" UnitCode="7" name="遥控单元"/>
+					<Unit UnitType="TU" UnitCode="8" name="遥测解调"/>
+					<!--Unit UnitType="LMTU" UnitCode="9" name="左旋主跟踪单元"/-->
+					<!--Unit UnitType="DMTU" UnitCode="10" name="右旋主跟踪单元"/-->
+					<!--Unit UnitType="VU" UnitCode="11" name="话音单元"/-->
+					<Unit UnitType="TAS" UnitCode="12" name="遥测模拟源"/>
+					<!--Unit UnitType="BR" UnitCode="13" name="引导接收机"/-->
+					<!--Unit UnitType="GATU" UnitCode="14" name="引导跟踪单元"/-->
+					<!--Unit UnitType="DR" UnitCode="15" name="数传接收机"/-->
+					<!--Unit UnitType="DWD" UnitCode="16" name="数传I路解调器"/-->
+					<!--Unit UnitType="QDFDT" UnitCode="17" name="数传Q路解调器"/-->
+				</Mode>
+				<Mode ID="0x04" desc="S扩频模式二">
+					<Unit UnitType="MACPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="TIRU" UnitCode="2" name="接收单元"/>
+					<!--<Unit UnitType="MIRU" UnitCode="3" name="测量接收"/>-->
+					<Unit UnitType="IFCM" UnitCode="3" name="中频调制"/>
+					<Unit UnitType="RU" UnitCode="4" name="测距单元"/>
+					<!--Unit UnitType="RTRU" UnitCode="6" name="右旋测距单元"/-->
+					<Unit UnitType="RCU" UnitCode="5" name="遥控单元"/>
+					<Unit UnitType="TU" UnitCode="6" name="遥测解调"/>
+					<!--Unit UnitType="LMTU" UnitCode="9" name="左旋主跟踪单元"/-->
+					<!--Unit UnitType="RMTU" UnitCode="10" name="右旋主跟踪单元"/-->
+					<Unit UnitType="TAS" UnitCode="8" name="遥测模拟源"/>
+					<Unit UnitType="SSCU" UnitCode="9" name="扩频伪码"/>
+					<!--Unit UnitType="BR" UnitCode="13" name="引导接收机"/-->
+					<!--Unit UnitType="GATU" UnitCode="14" name="引导跟踪单元"/-->
+				</Mode>
+				<Mode ID="0x05" desc="Ka扩频模式二">
+					<Unit UnitType="MACPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="TIRU" UnitCode="2" name="接收单元"/>
+					<!--<Unit UnitType="MIRU" UnitCode="3" name="测量接收"/>-->
+					<Unit UnitType="IFCM" UnitCode="3" name="中频调制"/>
+					<Unit UnitType="RU" UnitCode="4" name="测距单元"/>
+					<!--Unit UnitType="RTRU" UnitCode="6" name="右旋测距单元"/-->
+					<Unit UnitType="RCU" UnitCode="5" name="遥控单元"/>
+					<Unit UnitType="TU" UnitCode="6" name="遥测解调"/>
+					<!--Unit UnitType="LMTU" UnitCode="9" name="左旋主跟踪单元"/-->
+					<!--Unit UnitType="RMTU" UnitCode="10" name="右旋主跟踪单元"/-->
+					<Unit UnitType="TAS" UnitCode="8" name="遥测模拟源"/>
+					<Unit UnitType="SSCU" UnitCode="9" name="扩频伪码"/>
+					<!--Unit UnitType="BR" UnitCode="13" name="引导接收机"/-->
+					<!--Unit UnitType="GATU" UnitCode="14" name="引导跟踪单元"/-->
+				</Mode>
+				<Mode ID="0x21" desc="扩跳频模式">
+					<Unit UnitType="MACPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="TIRU" UnitCode="2" name="接收机及测量单元"/>
+					<Unit UnitType="IFCM" UnitCode="3" name="调制器单元"/>
+					<Unit UnitType="RCU" UnitCode="4" name="遥控单元"/>
+					<Unit UnitType="TU" UnitCode="5" name="遥测单元"/>
+					<Unit UnitType="TAS" UnitCode="6" name="遥测模拟源"/>
+				</Mode>
+			</Extension>
+			<Extension extenType="MACB" HaveMode="1" typeID="0x00" ID="0x3" desc="测控基带B-1" ModeAddress="6" ModeLength="8" relationDevice="CKB">
+				<Mode ID="0x01" desc="标准TTC">
+					<Unit UnitType="MACPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="TTCLHR" UnitCode="2" name="TTC左旋接收"/>
+					<Unit UnitType="TTCRHR" UnitCode="3" name="TTC右旋接收"/>
+					<Unit UnitType="IFCM" UnitCode="4" name="中频调制"/>
+					<Unit UnitType="LTRU" UnitCode="5" name="左旋测距"/>
+					<Unit UnitType="RTRU" UnitCode="6" name="右旋测距"/>
+					<Unit UnitType="RCU" UnitCode="7" name="遥控单元"/>
+					<Unit UnitType="TU" UnitCode="8" name="遥测解调"/>
+					<!--Unit UnitType="LMTU" UnitCode="9" name="左旋主跟踪单元"/-->
+					<!--Unit UnitType="DMTU" UnitCode="10" name="右旋主跟踪单元"/-->
+					<!--Unit UnitType="VU" UnitCode="11" name="话音单元"/-->
+					<Unit UnitType="TAS" UnitCode="12" name="遥测模拟源"/>
+					<!--Unit UnitType="BR" UnitCode="13" name="引导接收机"/-->
+					<!--Unit UnitType="GATU" UnitCode="14" name="引导跟踪单元"/-->
+					<!--Unit UnitType="DR" UnitCode="15" name="数传接收机"/-->
+					<!--Unit UnitType="DWD" UnitCode="16" name="数传I路解调器"/-->
+					<!--Unit UnitType="QDFDT" UnitCode="17" name="数传Q路解调器"/-->
+				</Mode>
+				<Mode ID="0x04" desc="S扩频模式二">
+					<Unit UnitType="MACPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="TIRU" UnitCode="2" name="接收单元"/>
+					<!--<Unit UnitType="MIRU" UnitCode="3" name="测量接收"/>-->
+					<Unit UnitType="IFCM" UnitCode="3" name="中频调制"/>
+					<Unit UnitType="RU" UnitCode="4" name="测距单元"/>
+					<!--Unit UnitType="RTRU" UnitCode="6" name="右旋测距单元"/-->
+					<Unit UnitType="RCU" UnitCode="5" name="遥控单元"/>
+					<Unit UnitType="TU" UnitCode="6" name="遥测解调"/>
+					<!--Unit UnitType="LMTU" UnitCode="9" name="左旋主跟踪单元"/-->
+					<!--Unit UnitType="RMTU" UnitCode="10" name="右旋主跟踪单元"/-->
+					<Unit UnitType="TAS" UnitCode="8" name="遥测模拟源"/>
+					<Unit UnitType="SSCU" UnitCode="9" name="扩频伪码"/>
+					<!--Unit UnitType="BR" UnitCode="13" name="引导接收机"/-->
+					<!--Unit UnitType="GATU" UnitCode="14" name="引导跟踪单元"/-->
+				</Mode>
+				<Mode ID="0x05" desc="Ka扩频模式二">
+					<Unit UnitType="MACPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="TIRU" UnitCode="2" name="接收单元"/>
+					<!--<Unit UnitType="MIRU" UnitCode="3" name="测量接收"/>-->
+					<Unit UnitType="IFCM" UnitCode="3" name="中频调制"/>
+					<Unit UnitType="RU" UnitCode="4" name="测距单元"/>
+					<!--Unit UnitType="RTRU" UnitCode="6" name="右旋测距单元"/-->
+					<Unit UnitType="RCU" UnitCode="5" name="遥控单元"/>
+					<Unit UnitType="TU" UnitCode="6" name="遥测解调"/>
+					<!--Unit UnitType="LMTU" UnitCode="9" name="左旋主跟踪单元"/-->
+					<!--Unit UnitType="RMTU" UnitCode="10" name="右旋主跟踪单元"/-->
+					<Unit UnitType="TAS" UnitCode="8" name="遥测模拟源"/>
+					<Unit UnitType="SSCU" UnitCode="9" name="扩频伪码"/>
+					<!--Unit UnitType="BR" UnitCode="13" name="引导接收机"/-->
+					<!--Unit UnitType="GATU" UnitCode="14" name="引导跟踪单元"/-->
+				</Mode>
+				<Mode ID="0x21" desc="扩跳频模式">
+					<Unit UnitType="MACPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="TIRU" UnitCode="2" name="接收机及测量单元"/>
+					<Unit UnitType="IFCM" UnitCode="3" name="调制器单元"/>
+					<Unit UnitType="RCU" UnitCode="4" name="遥控单元"/>
+					<Unit UnitType="TU" UnitCode="5" name="遥测单元"/>
+					<Unit UnitType="TAS" UnitCode="6" name="遥测模拟源"/>
+				</Mode>
+			</Extension>
+			<Extension extenType="MACB" HaveMode="1" typeID="0x00" ID="0x4" desc="测控基带B-2" ModeAddress="6" ModeLength="8" isShow="0" relationDevice="CKB">
+				<Mode ID="0x01" desc="标准TTC">
+					<Unit UnitType="MACPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="TTCLHR" UnitCode="2" name="TTC左旋接收"/>
+					<Unit UnitType="TTCRHR" UnitCode="3" name="TTC右旋接收"/>
+					<Unit UnitType="IFCM" UnitCode="4" name="中频调制"/>
+					<Unit UnitType="LTRU" UnitCode="5" name="左旋测距"/>
+					<Unit UnitType="RTRU" UnitCode="6" name="右旋测距"/>
+					<Unit UnitType="RCU" UnitCode="7" name="遥控单元"/>
+					<Unit UnitType="TU" UnitCode="8" name="遥测解调"/>
+					<!--Unit UnitType="LMTU" UnitCode="9" name="左旋主跟踪单元"/-->
+					<!--Unit UnitType="DMTU" UnitCode="10" name="右旋主跟踪单元"/-->
+					<!--Unit UnitType="VU" UnitCode="11" name="话音单元"/-->
+					<Unit UnitType="TAS" UnitCode="12" name="遥测模拟源"/>
+					<!--Unit UnitType="BR" UnitCode="13" name="引导接收机"/-->
+					<!--Unit UnitType="GATU" UnitCode="14" name="引导跟踪单元"/-->
+					<!--Unit UnitType="DR" UnitCode="15" name="数传接收机"/-->
+					<!--Unit UnitType="DWD" UnitCode="16" name="数传I路解调器"/-->
+					<!--Unit UnitType="QDFDT" UnitCode="17" name="数传Q路解调器"/-->
+				</Mode>
+				<Mode ID="0x04" desc="S扩频模式二">
+					<Unit UnitType="MACPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="TIRU" UnitCode="2" name="接收单元"/>
+					<!--<Unit UnitType="MIRU" UnitCode="3" name="测量接收"/>-->
+					<Unit UnitType="IFCM" UnitCode="3" name="中频调制"/>
+					<Unit UnitType="RU" UnitCode="4" name="测距单元"/>
+					<!--Unit UnitType="RTRU" UnitCode="6" name="右旋测距单元"/-->
+					<Unit UnitType="RCU" UnitCode="5" name="遥控单元"/>
+					<Unit UnitType="TU" UnitCode="6" name="遥测解调"/>
+					<!--Unit UnitType="LMTU" UnitCode="9" name="左旋主跟踪单元"/-->
+					<!--Unit UnitType="RMTU" UnitCode="10" name="右旋主跟踪单元"/-->
+					<Unit UnitType="TAS" UnitCode="8" name="遥测模拟源"/>
+					<Unit UnitType="SSCU" UnitCode="9" name="扩频伪码"/>
+					<!--Unit UnitType="BR" UnitCode="13" name="引导接收机"/-->
+					<!--Unit UnitType="GATU" UnitCode="14" name="引导跟踪单元"/-->
+				</Mode>
+				<Mode ID="0x05" desc="Ka扩频模式二">
+					<Unit UnitType="MACPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="TIRU" UnitCode="2" name="接收单元"/>
+					<!--<Unit UnitType="MIRU" UnitCode="3" name="测量接收"/>-->
+					<Unit UnitType="IFCM" UnitCode="3" name="中频调制"/>
+					<Unit UnitType="RU" UnitCode="4" name="测距单元"/>
+					<!--Unit UnitType="RTRU" UnitCode="6" name="右旋测距单元"/-->
+					<Unit UnitType="RCU" UnitCode="5" name="遥控单元"/>
+					<Unit UnitType="TU" UnitCode="6" name="遥测解调"/>
+					<!--Unit UnitType="LMTU" UnitCode="9" name="左旋主跟踪单元"/-->
+					<!--Unit UnitType="RMTU" UnitCode="10" name="右旋主跟踪单元"/-->
+					<Unit UnitType="TAS" UnitCode="8" name="遥测模拟源"/>
+					<Unit UnitType="SSCU" UnitCode="9" name="扩频伪码"/>
+					<!--Unit UnitType="BR" UnitCode="13" name="引导接收机"/-->
+					<!--Unit UnitType="GATU" UnitCode="14" name="引导跟踪单元"/-->
+				</Mode>
+				<Mode ID="0x21" desc="扩跳频模式">
+					<Unit UnitType="MACPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="TIRU" UnitCode="2" name="接收机及测量单元"/>
+					<Unit UnitType="IFCM" UnitCode="3" name="调制器单元"/>
+					<Unit UnitType="RCU" UnitCode="4" name="遥控单元"/>
+					<Unit UnitType="TU" UnitCode="5" name="遥测单元"/>
+					<Unit UnitType="TAS" UnitCode="6" name="遥测模拟源"/>
+				</Mode>
+			</Extension>
+		</Device>
+		<Device name="DBB" ID="0x1" desc="高速基带">
+			<Extension extenType="DBB" HaveMode="0" typeID="0x01" ID="0x1" desc="高速基带A">
+				<Unit UnitType="DBBPU" UnitCode="1" name="公共单元"/>
+				<Unit UnitType="DU" UnitCode="2" name="解调单元1"/>
+				<Unit UnitType="RDU" UnitCode="3" name="I路译码单元1"/>
+				<Unit UnitType="RDU" UnitCode="4" name="Q路译码单元1"/>
+				<Unit UnitType="SAFU" UnitCode="5" name="存储转发单元1"/>
+				<Unit UnitType="DU" UnitCode="6" name="解调单元2"/>
+				<Unit UnitType="RDU" UnitCode="7" name="I路译码单元2"/>
+				<Unit UnitType="RDU" UnitCode="8" name="Q路译码单元2"/>
+				<Unit UnitType="SAFU" UnitCode="9" name="存储转发单元2"/>
+				<Unit UnitType="ASU" UnitCode="10" name="模拟源单元"/>
+				<!-- 设备代码中模拟源单元只有一个，单元编号是10，与文档中描述的不一致-->
+			</Extension>
+			<Extension extenType="DBB" HaveMode="0" typeID="0x01" ID="0x2" desc="高速基带B">
+				<Unit UnitType="DBBPU" UnitCode="1" name="公共单元"/>
+				<Unit UnitType="DU" UnitCode="2" name="解调单元1"/>
+				<Unit UnitType="RDU" UnitCode="3" name="I路译码单元1"/>
+				<Unit UnitType="RDU" UnitCode="4" name="Q路译码单元1"/>
+				<Unit UnitType="SAFU" UnitCode="5" name="存储转发单元1"/>
+				<Unit UnitType="DU" UnitCode="6" name="解调单元2"/>
+				<Unit UnitType="RDU" UnitCode="7" name="I路译码单元2"/>
+				<Unit UnitType="RDU" UnitCode="8" name="Q路译码单元2"/>
+				<Unit UnitType="SAFU" UnitCode="9" name="存储转发单元2"/>
+				<Unit UnitType="ASU" UnitCode="10" name="模拟源单元"/>
+				<!-- 设备代码中模拟源单元只有一个，单元编号是10，与文档中描述的不一致-->
+			</Extension>
+		</Device>
+		<Device name="TB" ID="0x2" desc="跟踪基带">
+			<Extension extenType="TB" HaveMode="1" typeID="0x02" ID="0x1" desc="跟踪基带A" ModeAddress="7" ModeLength="1">
+				<Mode ID="0x01" desc="标准TTC">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="STRU" UnitCode="2" name="标准跟踪接收单元"/>
+				</Mode>
+				<Mode ID="0x02" desc="扩频TTC">
+					<Unit UnitType="SK2TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="SK2SSTRU" UnitCode="2" name="扩频跟踪接收单元"/>
+				</Mode>
+				<Mode ID="0x04" desc="高速数传跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="DTRU" UnitCode="2" name="数传跟踪接收单元（高速）"/>
+				</Mode>
+				<Mode ID="0x05" desc="标准TTC+高速数传跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="STRU" UnitCode="2" name="标准接收单元"/>
+					<Unit UnitType="DTRU" UnitCode="3" name="高速接收单元"/>
+					<!--Unit UnitType="SMU" UnitCode="4" name="标准调制单元"/-->
+				</Mode>
+				<Mode ID="0x06" desc="扩频TTC+高速跟踪">
+					<Unit UnitType="SK2TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="SK2SSTRU" UnitCode="2" name="扩频接收单元"/>
+					<Unit UnitType="SK2DTRU" UnitCode="3" name="高速接收单元"/>
+					<!--Unit UnitType="SMU" UnitCode="4" name="标准调制单元"/-->
+				</Mode>
+				<Mode ID="0x09" desc="扩跳频跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="KTSSTRU" UnitCode="2" name="扩跳频跟踪接收单元"/>
+				</Mode>
+				<Mode ID="0x0A" desc="标准TTC+低速跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="STRU" UnitCode="2" name="标准接收单元"/>
+					<Unit UnitType="DTRU" UnitCode="3" name="低速接收单元"/>
+					<!--Unit UnitType="SMU" UnitCode="4" name="标准调制单元"/-->
+					<Unit UnitType="MRU" UnitCode="4" name="低速接收载波单元"/>
+					<Unit UnitType="LDUI" UnitCode="5" name="低速解调器1"/>
+					<Unit UnitType="RDUI" UnitCode="6" name="低速解调器2"/>
+				</Mode>
+				<Mode ID="0x0B" desc="扩频TTC+低速跟踪">
+					<Unit UnitType="SK2TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="SK2SSTRU" UnitCode="2" name="扩频接收单元"/>
+					<Unit UnitType="SK2DTRU" UnitCode="3" name="低速跟踪接收单元"/>
+					<!--Unit UnitType="SMU" UnitCode="4" name="扩频调制单元"/-->
+					<!--Unit UnitType="SMU" UnitCode="5" name="遥测单元"/-->
+					<Unit UnitType="MRU" UnitCode="4" name="低速接收载波单元"/>
+					<Unit UnitType="LDUI" UnitCode="5" name="低速解调单元1"/>
+					<Unit UnitType="RDUI" UnitCode="6" name="低速解调单元2"/>
+				</Mode>
+				<Mode ID="0x0C" desc="低速数传跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="DTRU" UnitCode="3" name="数传跟踪接收单元（低速）"/>
+					<Unit UnitType="MRU" UnitCode="4" name="低速接收载波单元"/>
+					<Unit UnitType="LDUI" UnitCode="5" name="低速解调器1"/>
+					<Unit UnitType="RDUI" UnitCode="6" name="低速解调器2"/>
+				</Mode>
+			</Extension>
+			<Extension extenType="TB" HaveMode="1" typeID="0x02" ID="0x02" desc="跟踪基带B" ModeAddress="7" ModeLength="1">
+				<Mode ID="0x01" desc="标准TTC">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="STRU" UnitCode="2" name="标准跟踪接收单元"/>
+				</Mode>
+				<Mode ID="0x02" desc="扩频TTC">
+					<Unit UnitType="SK2TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="SK2SSTRU" UnitCode="2" name="扩频跟踪接收单元"/>
+				</Mode>
+				<Mode ID="0x04" desc="数传跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="DTRU" UnitCode="2" name="数传跟踪接收单元（高速）"/>
+				</Mode>
+				<Mode ID="0x05" desc="标准TTC+高速数传跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="STRU" UnitCode="2" name="标准接收单元"/>
+					<Unit UnitType="DTRU" UnitCode="3" name="高速接收单元"/>
+					<!--Unit UnitType="SMU" UnitCode="4" name="标准调制单元"/-->
+				</Mode>
+				<Mode ID="0x06" desc="扩频TTC+高速跟踪">
+					<Unit UnitType="SK2TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="SK2SSTRU" UnitCode="2" name="扩频接收单元"/>
+					<Unit UnitType="SK2DTRU" UnitCode="3" name="高速接收单元"/>
+					<!--Unit UnitType="SMU" UnitCode="4" name="标准调制单元"/-->
+				</Mode>
+				<Mode ID="0x09" desc="扩跳频跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="KTSSTRU" UnitCode="2" name="扩跳频跟踪接收单元"/>
+				</Mode>
+				<Mode ID="0x0A" desc="标准TTC+低速跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="STRU" UnitCode="2" name="标准接收单元"/>
+					<Unit UnitType="DTRU" UnitCode="3" name="低速接收单元"/>
+					<!--Unit UnitType="SMU" UnitCode="4" name="标准调制单元"/-->
+					<Unit UnitType="MRU" UnitCode="4" name="低速接收载波单元"/>
+					<Unit UnitType="LDUI" UnitCode="5" name="低速解调器1"/>
+					<Unit UnitType="RDUI" UnitCode="6" name="低速解调器2"/>
+				</Mode>
+				<Mode ID="0x0B" desc="扩频TTC+低速跟踪">
+					<Unit UnitType="SK2TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="SK2SSTRU" UnitCode="2" name="扩频接收单元"/>
+					<Unit UnitType="SK2DTRU" UnitCode="3" name="低速跟踪接收单元"/>
+					<!--Unit UnitType="SMU" UnitCode="4" name="扩频调制单元"/-->
+					<!--Unit UnitType="SMU" UnitCode="5" name="遥测单元"/-->
+					<Unit UnitType="MRU" UnitCode="4" name="低速接收载波单元"/>
+					<Unit UnitType="LDUI" UnitCode="5" name="低速解调单元1"/>
+					<Unit UnitType="RDUI" UnitCode="6" name="低速解调单元2"/>
+				</Mode>
+				<Mode ID="0x0C" desc="低速数传跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="DTRU" UnitCode="3" name="数传跟踪接收单元（低速）"/>
+					<Unit UnitType="MRU" UnitCode="4" name="低速接收载波单元"/>
+					<Unit UnitType="LDUI" UnitCode="5" name="低速解调器1"/>
+					<Unit UnitType="RDUI" UnitCode="6" name="低速解调器2"/>
+				</Mode>
+			</Extension>
+			<Extension extenType="TB" HaveMode="1" typeID="0x02" ID="0x03" desc="跟踪基带C" ModeAddress="7" ModeLength="1">
+				<Mode ID="0x01" desc="标准TTC">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="STRU" UnitCode="2" name="标准跟踪接收单元"/>
+				</Mode>
+				<Mode ID="0x02" desc="扩频TTC">
+					<Unit UnitType="SK2TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="SK2SSTRU" UnitCode="2" name="扩频跟踪接收单元"/>
+				</Mode>
+				<Mode ID="0x04" desc="高速数传跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="DTRU" UnitCode="2" name="数传跟踪接收单元（高速）"/>
+				</Mode>
+				<Mode ID="0x05" desc="标准TTC+高速数传跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="STRU" UnitCode="2" name="标准接收单元"/>
+					<Unit UnitType="DTRU" UnitCode="3" name="高速接收单元"/>
+					<!--Unit UnitType="SMU" UnitCode="4" name="标准调制单元"/-->
+				</Mode>
+				<Mode ID="0x06" desc="扩频TTC+高速跟踪">
+					<Unit UnitType="SK2TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="SK2SSTRU" UnitCode="2" name="扩频接收单元"/>
+					<Unit UnitType="SK2DTRU" UnitCode="3" name="高速接收单元"/>
+					<!--Unit UnitType="SMU" UnitCode="4" name="标准调制单元"/-->
+				</Mode>
+				<Mode ID="0x09" desc="扩跳频跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="KTSSTRU" UnitCode="2" name="扩跳频跟踪接收单元"/>
+				</Mode>
+				<Mode ID="0x0A" desc="标准TTC+低速跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="STRU" UnitCode="2" name="标准接收单元"/>
+					<Unit UnitType="DTRU" UnitCode="3" name="低速接收单元"/>
+					<!--Unit UnitType="SMU" UnitCode="4" name="标准调制单元"/-->
+					<Unit UnitType="MRU" UnitCode="4" name="低速接收载波单元"/>
+					<Unit UnitType="LDUI" UnitCode="5" name="低速解调器1"/>
+					<Unit UnitType="RDUI" UnitCode="6" name="低速解调器2"/>
+				</Mode>
+				<Mode ID="0x0B" desc="扩频TTC+低速跟踪">
+					<Unit UnitType="SK2TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="SK2SSTRU" UnitCode="2" name="扩频接收单元"/>
+					<Unit UnitType="SK2DTRU" UnitCode="3" name="低速跟踪接收单元"/>
+					<!--Unit UnitType="SMU" UnitCode="4" name="扩频调制单元"/-->
+					<!--Unit UnitType="SMU" UnitCode="5" name="遥测单元"/-->
+					<Unit UnitType="MRU" UnitCode="4" name="低速接收载波单元"/>
+					<Unit UnitType="LDUI" UnitCode="5" name="低速解调单元1"/>
+					<Unit UnitType="RDUI" UnitCode="6" name="低速解调单元2"/>
+				</Mode>
+				<Mode ID="0x0C" desc="低速数传跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="DTRU" UnitCode="3" name="数传跟踪接收单元（低速）"/>
+					<Unit UnitType="MRU" UnitCode="4" name="低速接收载波单元"/>
+					<Unit UnitType="LDUI" UnitCode="5" name="低速解调器1"/>
+					<Unit UnitType="RDUI" UnitCode="6" name="低速解调器2"/>
+				</Mode>
+			</Extension>
+			<Extension extenType="TB" HaveMode="1" typeID="0x02" ID="0x04" desc="跟踪基带D" ModeAddress="7" ModeLength="1">
+				<Mode ID="0x01" desc="标准TTC">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="STRU" UnitCode="2" name="标准跟踪接收单元"/>
+				</Mode>
+				<Mode ID="0x02" desc="扩频TTC">
+					<Unit UnitType="SK2TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="SK2SSTRU" UnitCode="2" name="扩频跟踪接收单元"/>
+				</Mode>
+				<Mode ID="0x04" desc="数传跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="DTRU" UnitCode="2" name="数传跟踪接收单元（高速）"/>
+				</Mode>
+				<Mode ID="0x05" desc="标准TTC+高速数传跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="STRU" UnitCode="2" name="标准接收单元"/>
+					<Unit UnitType="DTRU" UnitCode="3" name="高速接收单元"/>
+					<!--Unit UnitType="SMU" UnitCode="4" name="标准调制单元"/-->
+				</Mode>
+				<Mode ID="0x06" desc="扩频TTC+高速跟踪">
+					<Unit UnitType="SK2TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="SK2SSTRU" UnitCode="2" name="扩频接收单元"/>
+					<Unit UnitType="SK2DTRU" UnitCode="3" name="高速接收单元"/>
+					<!--Unit UnitType="SMU" UnitCode="4" name="标准调制单元"/-->
+				</Mode>
+				<Mode ID="0x09" desc="扩跳频跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="KTSSTRU" UnitCode="2" name="扩跳频跟踪接收单元"/>
+				</Mode>
+				<Mode ID="0x0A" desc="标准TTC+低速跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="STRU" UnitCode="2" name="标准接收单元"/>
+					<Unit UnitType="DTRU" UnitCode="3" name="低速接收单元"/>
+					<!--Unit UnitType="SMU" UnitCode="4" name="标准调制单元"/-->
+					<Unit UnitType="MRU" UnitCode="4" name="低速接收载波单元"/>
+					<Unit UnitType="LDUI" UnitCode="5" name="低速解调器1"/>
+					<Unit UnitType="RDUI" UnitCode="6" name="低速解调器2"/>
+				</Mode>
+				<Mode ID="0x0B" desc="扩频TTC+低速跟踪">
+					<Unit UnitType="SK2TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="SK2SSTRU" UnitCode="2" name="扩频接收单元"/>
+					<Unit UnitType="SK2DTRU" UnitCode="3" name="低速跟踪接收单元"/>
+					<!--Unit UnitType="SMU" UnitCode="4" name="扩频调制单元"/-->
+					<!--Unit UnitType="SMU" UnitCode="5" name="遥测单元"/-->
+					<Unit UnitType="MRU" UnitCode="4" name="低速接收载波单元"/>
+					<Unit UnitType="LDUI" UnitCode="5" name="低速解调单元1"/>
+					<Unit UnitType="RDUI" UnitCode="6" name="低速解调单元2"/>
+				</Mode>
+				<Mode ID="0x0C" desc="低速数传跟踪">
+					<Unit UnitType="TBPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="DTRU" UnitCode="3" name="数传跟踪接收单元（低速）"/>
+					<Unit UnitType="MRU" UnitCode="4" name="低速接收载波单元"/>
+					<Unit UnitType="LDUI" UnitCode="5" name="低速解调器1"/>
+					<Unit UnitType="RDUI" UnitCode="6" name="低速解调器2"/>
+				</Mode>
+			</Extension>
+		</Device>
+		<Device name="TBS" ID="0x3" desc="跟踪基带切换">
+			<Extension extenType="TBS" HaveMode="0" typeID="0x03" ID="0x1" desc="角跟踪切换">
+				<Unit UnitType="VSU" UnitCode="1" name="数字化角跟踪切换"/>
+				<Unit UnitType="MSU" UnitCode="2" name="模拟化角跟踪切换" />
+			</Extension>
+		</Device>
+		<Device name="LMOD" ID="0x4" desc="低速基带">
+			<Extension extenType="LMOD" HaveMode="0" typeID="0x04" ID="0x1" desc="低速基带A">
+				<Unit UnitType="LMODPU" UnitCode="1" name="公共单元"/>
+				<Unit UnitType="MRU" UnitCode="2" name="Ka数传中频接收机单元"/>
+				<Unit UnitType="MRU" UnitCode="3" name="X数传中频接收机单元"/>
+				<Unit UnitType="DUIQ" UnitCode="4" name="Ka数传I路解调单元"/>
+				<Unit UnitType="DUIQ" UnitCode="5" name="Ka数传Q路解调单元"/>
+				<Unit UnitType="DUIQ" UnitCode="6" name="X数传I路解调单元"/>
+				<Unit UnitType="DUIQ" UnitCode="7" name="X数传Q路解调单元"/>
+				<!-- <Unit UnitType="LRCU" UnitCode="5" name="数传存储转发单元"/> -->
+				<Unit UnitType="SSU" UnitCode="8" name="Ka数传模拟源单元"/>
+				<Unit UnitType="SSU" UnitCode="9" name="X数传模拟源单元"/>
+				<Unit UnitType="MU" UnitCode="10" name="上行调制器单元"/>
+				<Unit UnitType="SDUIQ" UnitCode="11" name="上行数传单元"/>
+				<!--<Unit UnitType="SDUIQ" UnitCode="9" name="上行数传Q路单元"/>-->
+			</Extension>
+			<Extension extenType="LMOD" HaveMode="0" typeID="0x04" ID="0x2" desc="低速基带B">
+				<Unit UnitType="LMODPU" UnitCode="1" name="公共单元"/>
+				<Unit UnitType="MRU" UnitCode="2" name="Ka数传中频接收机单元"/>
+				<Unit UnitType="MRU" UnitCode="3" name="X数传中频接收机单元"/>
+				<Unit UnitType="DUIQ" UnitCode="4" name="Ka数传I路解调单元"/>
+				<Unit UnitType="DUIQ" UnitCode="5" name="Ka数传Q路解调单元"/>
+				<Unit UnitType="DUIQ" UnitCode="6" name="X数传I路解调单元"/>
+				<Unit UnitType="DUIQ" UnitCode="7" name="X数传Q路解调单元"/>
+				<!-- <Unit UnitType="LRCU" UnitCode="5" name="数传存储转发单元"/> -->
+				<Unit UnitType="SSU" UnitCode="8" name="Ka数传模拟源单元"/>
+				<Unit UnitType="SSU" UnitCode="9" name="X数传模拟源单元"/>
+				<Unit UnitType="MU" UnitCode="10" name="上行调制器单元"/>
+				<Unit UnitType="SDUIQ" UnitCode="11" name="上行数传单元"/>
+				<!--<Unit UnitType="SDUIQ" UnitCode="9" name="上行数传Q路单元"/>-->
+			</Extension>
+		</Device>
+		<Device name="WMBS" ID="0x5" desc="伪码服务器">
+			<Extension extenType="WMBS" HaveMode="0" typeID="0x03" ID="0x1" desc="伪码服务器A">
+				<Unit UnitType="WMMACPU" UnitCode="1" name="公共单元"/>
+			</Extension>
+			<Extension extenType="WMBS" HaveMode="0" typeID="0x03" ID="0x2" desc="伪码服务器B">
+				<Unit UnitType="WMMACPU" UnitCode="1" name="公共单元"/>
+			</Extension>
+		</Device>
+	</System>
+	<System name="TFDS" ID="0x05" desc="时频分系统">
+		<Device name="TFT" ID="0x0" desc="时频终端">
+			<Extension extenType="TFT" HaveMode="0" ID="0x1" desc="时频终端1">
+				<Unit UnitType="TFTU" UnitCode="1" name="时频终端单元"/>
+			</Extension>
+			<Extension extenType="TFT" HaveMode="0" ID="0x2" desc="时频终端2">
+				<Unit UnitType="TFTU" UnitCode="1" name="时频终端单元"/>
+			</Extension>
+		</Device>
+		<Device name="PLFS" ID="0x1" desc="锁相频标">
+			<Extension extenType="PLFS" HaveMode="0" ID="0x1" desc="锁相频标1">
+				<Unit UnitType="PLFSD" UnitCode="1" name="锁相频标单元"/>
+			</Extension>
+			<Extension extenType="PLFS" HaveMode="0" ID="0x2" desc="锁相频标2">
+				<Unit UnitType="PLFSD" UnitCode="1" name="锁相频标单元"/>
+			</Extension>
+		</Device>
+		<Device name="TCS" ID="0x2" desc="时码分路">
+			<Extension extenType="TCS" HaveMode="0" ID="0x1" desc="时码分路1">
+				<Unit UnitType="TCSU" UnitCode="1" name="时码分路单元"/>
+			</Extension>
+			<Extension extenType="TCS" HaveMode="0" ID="0x2" desc="时码分路2">
+				<Unit UnitType="TCSU" UnitCode="1" name="时码分路单元"/>
+			</Extension>
+		</Device>
+		<Device name="FSD" ID="0x3" desc="频标分路">
+			<Extension extenType="FSD" HaveMode="0" ID="0x2" desc="频标分配器">
+				<Unit UnitType="FSDU" UnitCode="1" name="频标分路单元"/>
+			</Extension>
+		</Device>
+	</System>
+	<System name="TCS" ID="0x06" desc="测试标校分系统">
+		<Device name="JTR" ID="0x0" desc="联试应答机">
+			<Extension extenType="JTRT" HaveMode="1" ID="0x1" desc="联试应答机终端" ModeAddress="6" ModeLength="1">
+				<Mode ID="0x01" desc="标准TTC">
+					<Unit UnitType="PU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="TTCR" UnitCode="2" name="TTC接收机"/>
+					<Unit UnitType="TTCM" UnitCode="3" name="TTC调制器"/>
+					<Unit UnitType="TAS" UnitCode="4" name="遥测模拟源"/>
+				</Mode>
+				<Mode ID="0x02" desc="扩频TTC">
+					<Unit UnitType="PU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="TTCRC" UnitCode="2" name="TTC接收载波"/>
+					<Unit UnitType="TTCRCH" UnitCode="3" name="TTC接收通道"/>
+					<Unit UnitType="MCW" UnitCode="4" name="调制载波"/>
+					<Unit UnitType="MCH" UnitCode="5" name="调制通道"/>
+					<Unit UnitType="TAS" UnitCode="6" name="遥测模拟源"/>
+					<Unit UnitType="SSCU" UnitCode="7" name="扩频码单元"/>
+				</Mode>
+			</Extension>
+			<Extension extenType="JTRT" HaveMode="1" ID="0x2" desc="联试应答机终端(扩跳)" ModeAddress="6" ModeLength="1">
+				<Mode ID="0x9" desc="扩跳频模式">
+					<Unit UnitType="KTPU" UnitCode="1" name="公共单元"/>
+					<Unit UnitType="KTTTCR" UnitCode="2" name="接收机单元"/>
+					<Unit UnitType="KTTTCM" UnitCode="3" name="上行数据解调单元（遥控）"/>
+					<Unit UnitType="KTTTCMD" UnitCode="4" name="下行调制器单元"/>
+					<Unit UnitType="KTTAS" UnitCode="5" name="遥测模拟源"/>
+				</Mode>
+			</Extension>
+			<Extension extenType="JTTC" HaveMode="0" ID="0x11" desc="联试应答机信道">
+				<Unit UnitType="IISSSCOS" UnitCode="1" name="联试信号输出"/>
+				<Unit UnitType="JTTC" UnitCode="2" name="S频段信道"/>
+				<Unit UnitType="KAJTTC" UnitCode="3" name="Ka频段信道"/>
+			</Extension>
+		</Device>
+		<!--4426没有
+		<Device name="IISS" ID="0x1" desc="仪器输入切换开关">
+			<Extension extenType="IISS" HaveMode="0" ID="0x1" desc="仪器输入切换开关">				
+				<Unit UnitType="IISSU" UnitCode="1" name="仪器输入切换开关单元"/>
+			</Extension>
+		</Device>
+		-->
+		<Device name="TC" ID="0x2" desc="测试计算机">
+			<Extension extenType="TC" HaveMode="0" ID="0x1" desc="测试计算机">
+				<Unit UnitType="TCU" UnitCode="1" name="公共单元"/>
+				<Unit UnitType="TCUA" UnitCode="2" name="频谱仪1"/>
+				<Unit UnitType="TCUB" UnitCode="3" name="频谱仪2"/>
+				<Unit UnitType="TCUC" UnitCode="4" name="信号源1"/>
+				<Unit UnitType="TCUD" UnitCode="5" name="信号源2"/>
+			</Extension>
+		</Device>
+		<Device name="THFB" ID="0x3" desc="测试高频箱">
+			<Extension extenType="THFB" HaveMode="0" ID="0x1" desc="测试高频箱">
+				<Unit UnitType="THFBU" UnitCode="1" name="测试高频箱单元"/>
+			</Extension>
+			<Extension extenType="BTHSN" HaveMode="0" ID="0x2" desc="后端测试信号选择开关">
+				<Unit UnitType="BNTSN" UnitCode="1" name="后端测试信号选择开关"/>
+			</Extension>
+			<Extension extenType="FNTSN" HaveMode="0" ID="0x3" desc="前端测试开关网络">
+				<Unit UnitType="FNTSN" UnitCode="1" name="前端测试开关网络"/>
+			</Extension>
+			<Extension extenType="TSCS" HaveMode="0" ID="0x4" desc="测试信号选择开关">
+				<Unit UnitType="TSCS" UnitCode="1" name="测试信号选择开关"/>
+			</Extension>
+		</Device>
+		<Device name="CCFM" ID="0x9" desc="校零信标一体机">
+			<Extension extenType="CCFMA" HaveMode="0" typeID="0x0D" ID="0x1" desc="S频段校零信标一体机">
+				<Unit UnitType="CCFM" UnitCode="1" name="S频段校零信标一体机"/>
+			</Extension>
+			<Extension extenType="CCFMB" HaveMode="0" typeID="0x0E" ID="0x2" desc="Ka频段校零信标一体机">
+				<Unit UnitType="CCFMKA" UnitCode="1" name="Ka频段校零信标一体机"/>
+			</Extension>
+		</Device>
+		<!--
+		<Device name="TI" ID="0x4" desc="测试仪器">
+			<Extension extenType="TISAF" HaveMode="0" ID="0x1" desc="频谱仪(前端)">
+				<Unit UnitType="SA" UnitCode="1" name="频谱仪(前端)"/>
+			</Extension>
+			<Extension extenType="TISSF" HaveMode="0" ID="0x2" desc="信号源(前端)">
+				<Unit UnitType="SS" UnitCode="2" name="信号源(前端)"/>
+			</Extension>
+			<Extension extenType="TISAH" HaveMode="0" ID="0x3" desc="频谱仪(后端)">
+				<Unit UnitType="SA" UnitCode="3" name="频谱仪(后端)"/>
+			</Extension>
+			<Extension extenType="TISSH" HaveMode="0" ID="0x4" desc="信号源(后端)">
+				<Unit UnitType="SS" UnitCode="4" name="信号源(后端)"/>
+			</Extension>
+			<Extension extenType="TIOS" HaveMode="0" ID="0x5" desc="示波器">
+				<Unit UnitType="OS" UnitCode="5" name="示波器"/>
+			</Extension>
+		</Device>
+		-->
+	</System>
+	<System name="DFS" ID="0x07" desc="数字化前端分系统">
+		<Device name="DFOMAC" ID="0x0" desc="测控数字化前端">
+			<Extension extenType="DFOMAC" HaveMode="0" ID="0x1" desc="测控数字化前端1">
+				<Unit UnitType="CUOMACDFE" UnitCode="1" name="公共单元"/>
+				<Unit UnitType="MACDFELU" UnitCode="2" name="发射单元"/>
+				<Unit UnitType="DFERUFTC" UnitCode="3" name="接收单元"/>
+			</Extension>
+			<Extension extenType="DFOMAC" HaveMode="0" ID="0x2" desc="测控数字化前端2">
+				<Unit UnitType="CUOMACDFE" UnitCode="1" name="公共单元"/>
+				<Unit UnitType="MACDFELU" UnitCode="2" name="发射单元"/>
+				<Unit UnitType="DFERUFTC" UnitCode="3" name="接收单元"/>
+			</Extension>
+			<Extension extenType="DFOMAC" HaveMode="0" ID="0x3" desc="测控数字化前端3">
+				<Unit UnitType="CUOMACDFE" UnitCode="1" name="公共单元"/>
+				<Unit UnitType="MACDFELU" UnitCode="2" name="发射单元"/>
+				<Unit UnitType="DFERUFTC2" UnitCode="3" name="接收单元"/>
+			</Extension>
+			<Extension extenType="DFOMAC" HaveMode="0" ID="0x4" desc="测控数字化前端4">
+				<Unit UnitType="CUOMACDFE" UnitCode="1" name="公共单元"/>
+				<Unit UnitType="MACDFELU" UnitCode="2" name="发射单元"/>
+				<Unit UnitType="DFERUFTC2" UnitCode="3" name="接收单元"/>
+			</Extension>
+		</Device>
+		<Device name="TDFE" ID="0x1" desc="跟踪数字化前端">
+			<Extension extenType="TDFE" HaveMode="0" ID="0x1" desc="跟踪数字化前端1">
+				<Unit UnitType="TDFECU" UnitCode="1" name="公共单元"/>
+				<Unit UnitType="TDFERU" UnitCode="2" name="接收单元"/>
+			</Extension>
+			<Extension extenType="TDFE" HaveMode="0" ID="0x2" desc="跟踪数字化前端2">
+				<Unit UnitType="TDFECU" UnitCode="1" name="公共单元"/>
+				<Unit UnitType="TDFERU" UnitCode="2" name="接收单元"/>
+			</Extension>
+			<Extension extenType="TDFE" HaveMode="0" ID="0x3" desc="跟踪数字化前端3">
+				<Unit UnitType="TDFECU" UnitCode="1" name="公共单元"/>
+				<Unit UnitType="TDFERU" UnitCode="2" name="接收单元"/>
+			</Extension>
+			<Extension extenType="TDFE" HaveMode="0" ID="0x4" desc="跟踪数字化前端4">
+				<Unit UnitType="TDFECU" UnitCode="1" name="公共单元"/>
+				<Unit UnitType="TDFERU" UnitCode="2" name="接收单元"/>
+			</Extension>
+		</Device>
+		<!--		
+		<Device name="GNS" ID="0x3" desc="万兆网交换机">
+			<Extension extenType="GNS" HaveMode="0" ID="0x1" desc="万兆网交换机1">
+				<Unit UnitType="GNSU" UnitCode="1" name="换机A"/>
+			</Extension>
+			<Extension extenType="GNS" HaveMode="0" ID="0x2" desc="万兆网交换机2">
+				<Unit UnitType="GNSU" UnitCode="1" name="换机B"/>
+			</Extension>
+		</Device>
+		-->
+	</System>
+	<System name="DSAIS" ID="0x08" desc="数据存储与交互分系统">
+		<Device name="DIC" ID="0x0" desc="数据交互计算机">
+			<Extension extenType="DIC" HaveMode="0" ID="0x1" desc="数据交互计算机">
+				<Unit UnitType="ABC" UnitCode="1" name="公共单元"/>
+			</Extension>
+			<!--
+			<Extension extenType="DIC" HaveMode="0" ID="0x2" desc="数据交互计算机B">
+				<Unit UnitType="ABC" UnitCode="1" name="公共单元"/>
+			</Extension>
+			-->
+		</Device>
+		<Device name="DSFD" ID="0x1" desc="数据存储转发设备">
+			<Extension extenType="DSFD" HaveMode="0" ID="0x1" desc="数据存储转发设备A">
+				<Unit UnitType="SCU" UnitCode="1" name="分系统公共单元"/>
+				<Unit UnitType="SU" UnitCode="2" name="存储单元1"/>
+				<Unit UnitType="SU" UnitCode="3" name="存储单元2"/>
+				<Unit UnitType="SU" UnitCode="4" name="存储单元3"/>
+				<Unit UnitType="SU" UnitCode="5" name="存储单元4"/>
+				<Unit UnitType="FU" UnitCode="6" name="转发单元1"/>
+				<Unit UnitType="FU" UnitCode="7" name="转发单元2"/>
+				<Unit UnitType="FU" UnitCode="8" name="转发单元3"/>
+				<Unit UnitType="FU" UnitCode="9" name="转发单元4"/>
+			</Extension>
+			<Extension extenType="DSFD" HaveMode="0" ID="0x2" desc="数据存储转发设备B">
+				<Unit UnitType="SCU" UnitCode="1" name="分系统公共单元"/>
+				<Unit UnitType="SU" UnitCode="2" name="存储单元1"/>
+				<Unit UnitType="SU" UnitCode="3" name="存储单元2"/>
+				<Unit UnitType="SU" UnitCode="4" name="存储单元3"/>
+				<Unit UnitType="SU" UnitCode="5" name="存储单元4"/>
+				<Unit UnitType="FU" UnitCode="6" name="转发单元1"/>
+				<Unit UnitType="FU" UnitCode="7" name="转发单元2"/>
+				<Unit UnitType="FU" UnitCode="8" name="转发单元3"/>
+				<Unit UnitType="FU" UnitCode="9" name="转发单元4"/>
+			</Extension>
+		</Device>
+	</System>
+	<!--
+		<System name="CPPS"  ID="0x7B"  desc="机柜加去电系统">
+		<Device name="CPP" ID="0x7B" desc="机柜加去电">
+			<Extension extenType="CPP" HaveMode="0" ID= "0x01" desc="机柜加去电1">
+				<Unit UnitType="CPPU" UnitCode="1" name="机柜加去电单元"/>
+			</Extension>
+			<Extension extenType="CPP" HaveMode="0" ID= "0x02" desc="机柜加去电2">
+				<Unit UnitType="CPPU" UnitCode="1" name="机柜加去电单元"/>
+			</Extension>
+			<Extension extenType="CPP" HaveMode="0" ID= "0x03" desc="机柜加去电3">
+				<Unit UnitType="CPPU" UnitCode="1" name="机柜加去电单元"/>
+			</Extension>
+			<Extension extenType="CPP" HaveMode="0" ID= "0x04" desc="机柜加去电4">
+				<Unit UnitType="CPPU" UnitCode="1" name="机柜加去电单元"/>
+			</Extension>
+			<Extension extenType="CPP" HaveMode="0" ID= "0x05" desc="机柜加去电5">
+				<Unit UnitType="CPPU" UnitCode="1" name="机柜加去电单元"/>
+			</Extension>
+			<Extension extenType="CPP" HaveMode="0" ID= "0x06" desc="机柜加去电6">
+				<Unit UnitType="CPPU" UnitCode="1" name="机柜加去电单元"/>
+			</Extension>
+			<Extension extenType="CPP" HaveMode="0" ID= "0x07" desc="机柜加去电7">
+				<Unit UnitType="CPPU" UnitCode="1" name="机柜加去电单元"/>
+			</Extension>
+		</Device>
+        </System>-->
+</Systems>

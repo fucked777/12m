@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x00" modeID="0x4" unitType="RCU" desc="遥控单元">
+	<Triggers>
+		<!--
+		<Trigger id="K2_SubModSystemR" desc="调制体制">
+			<TriggerValue value="1" desc="PSK">
+				<Receiver id="K2_CodeType" desc="码型" isEnable="1" values="2:NRZ-L;3:NRZ-M;4:NRZ-S;5:Biφ-L;6:Biφ-M;7:Biφ-S" minValue="" maxValue="" />
+				<Receiver id="K2_SubFreqFrequer" desc="副载频1频(f1)" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubcarFillFreq" desc="副载频填充频(f填充)" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubcarFreqExecu" desc="副载频执行频(f执行)" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_PreCompSequesamp" desc="前补序列码样" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_PostSequeCodes" desc="后补序列码样" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_ExecutCodeSamp" desc="执行编码码样" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_FreeSequeCodeSamp" desc="空闲序列码样" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_PreCompSequeLength" desc="前补序列长度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_LengthCompSeque" desc="后补序列长度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_ExecutCodeLength" desc="执行编码长度" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="FSK">
+				<Receiver id="K2_CodeType" desc="码型" isEnable="1" values="1:RZ-L;2:NRZ-L;3:NRZ-M;4:NRZ-S;5:Biφ-L;6:Biφ-M;7:Biφ-S" minValue="" maxValue="" />
+				<Receiver id="K2_SubFreqFrequer" desc="副载频1频(f1)" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubcarFillFreq" desc="副载频填充频(f填充)" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubcarFreqExecu" desc="副载频执行频(f执行)" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_PreCompSequesamp" desc="前补序列码样" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_PostSequeCodes" desc="后补序列码样" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_ExecutCodeSamp" desc="执行编码码样" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_FreeSequeCodeSamp" desc="空闲序列码样" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_PreCompSequeLength" desc="前补序列长度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_LengthCompSeque" desc="后补序列长度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_ExecutCodeLength" desc="执行编码长度" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		-->
+		<Trigger id="K2_RemoteMode" desc="遥控工作模式">
+			<TriggerValue value="1" desc="常发">
+				<Receiver id="K2_StartModeWrok" desc="遥控工作期方式" isEnable="1" values="1:结束;2:开始" minValue="" maxValue="" />
+				<Receiver id="K2_FreeSequeCodeSamp" desc="空闲序列码样" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="突发">
+				<Receiver id="K2_StartModeWrok" desc="遥控工作期方式" isEnable="0" values="1:结束" minValue="" maxValue="" />
+				<Receiver id="K2_FreeSequeCodeSamp" desc="空闲序列码样" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="半突发">
+				<Receiver id="K2_StartModeWrok" desc="遥控工作期方式" isEnable="0" values="1:结束" minValue="" maxValue="" />
+				<Receiver id="K2_FreeSequeCodeSamp" desc="空闲序列码样" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		<Trigger id="K2_ChannelCoding" desc="信道编码">
+			<TriggerValue value="1" desc="不编码">
+				<Receiver id="K2_CodeSelect" desc="编码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_ConvCodType" desc="卷积编码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_BCHInitSeqCtrl" desc="起始序列控制" isEnable="1" values="1:加;2:不加" minValue="" maxValue="" />
+				<Receiver id="K2_BCHEndSeqCtrl" desc="结尾序列控制" isEnable="1" values="1:加;2:不加" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="BCH编码">
+				<Receiver id="K2_CodeSelect" desc="编码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_ConvCodType" desc="卷积编码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_BCHInitSeqCtrl" desc="起始序列控制" isEnable="0" values="1:加" minValue="" maxValue="" />
+				<Receiver id="K2_BCHEndSeqCtrl" desc="结尾序列控制" isEnable="0" values="1:加" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="卷积编码">
+				<Receiver id="K2_CodeSelect" desc="编码选择" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_ConvCodType" desc="卷积编码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_BCHInitSeqCtrl" desc="起始序列控制" isEnable="1" values="1:加;2:不加" minValue="" maxValue="" />
+				<Receiver id="K2_BCHEndSeqCtrl" desc="结尾序列控制" isEnable="1" values="1:加;2:不加" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="BCH+卷积级联编码">
+				<Receiver id="K2_CodeSelect" desc="编码选择" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_ConvCodType" desc="卷积编码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_BCHInitSeqCtrl" desc="起始序列控制" isEnable="0" values="1:加" minValue="" maxValue="" />
+				<Receiver id="K2_BCHEndSeqCtrl" desc="结尾序列控制" isEnable="0" values="1:加" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger> 		
+		<Trigger id="K2_ConvCodType" desc="卷积编码类型">
+			<TriggerValue value="1" desc="(7,1/2)">
+				<Receiver id="K2_OutputPhase" desc="输出相位" isEnable="0" values="2:反相" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="(7,3/4)">
+				<Receiver id="K2_OutputPhase" desc="输出相位" isEnable="0" values="1:正相" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		<Trigger id="K2_ScramblingCtrl" desc="加扰控制">
+			<TriggerValue value="1" desc="不加扰">
+				<Receiver id="K2_FillingPostition" desc="填充位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="加扰">
+				<Receiver id="K2_FillingPostition" desc="填充位置" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		<Trigger id="K2_BCHInitSeqCtrl" desc="起始序列控制">
+			<TriggerValue value="1" desc="加">
+				<Receiver id="K2_BCHInitSeqPatt" desc="起始序列图样" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_BCHInitSeqLength" desc="起始序列长度" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="不加">
+				<Receiver id="K2_BCHInitSeqPatt" desc="起始序列图样" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_BCHInitSeqLength" desc="起始序列长度" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>		
+		<Trigger id="K2_BCHInitSeqLength" desc="起始序列长度">
+			<TriggerValue value="1" desc="1字节">
+				<Receiver id="K2_BCHInitSeqPatt" desc="起始序列图样" isEnable="" values="" minValue="" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="2字节">
+				<Receiver id="K2_BCHInitSeqPatt" desc="起始序列图样" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="3字节">
+				<Receiver id="K2_BCHInitSeqPatt" desc="起始序列图样" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="4字节">
+				<Receiver id="K2_BCHInitSeqPatt" desc="起始序列图样" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="5" desc="5字节">
+				<Receiver id="K2_BCHInitSeqPatt" desc="起始序列图样" isEnable="" values="" minValue="" maxValue="FFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="6" desc="6字节">
+				<Receiver id="K2_BCHInitSeqPatt" desc="起始序列图样" isEnable="" values="" minValue="" maxValue="FFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="7" desc="7字节">
+				<Receiver id="K2_BCHInitSeqPatt" desc="起始序列图样" isEnable="" values="" minValue="" maxValue="FFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="8" desc="8字节">
+				<Receiver id="K2_BCHInitSeqPatt" desc="起始序列图样" isEnable="" values="" minValue="" maxValue="FFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+		<Trigger id="K2_BCHEndSeqCtrl" desc="结尾序列控制">
+			<TriggerValue value="1" desc="加">
+				<Receiver id="K2_BCHEndSeqPatt" desc="结尾序列图样" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_BCHEndSeqLength" desc="结尾序列图样长度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_BCHNumbEndPatt" desc="结尾序列图样" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="不加">
+				<Receiver id="K2_BCHEndSeqPatt" desc="结尾序列图样" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_BCHEndSeqLength" desc="结尾序列图样长度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_BCHNumbEndPatt" desc="结尾序列图样" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>	
+		<Trigger id="K2_BCHEndSeqLength" desc="结尾序列图样长度">
+			<TriggerValue value="1" desc="1字节">
+				<Receiver id="K2_BCHEndSeqPatt" desc="结尾序列图样" isEnable="" values="" minValue="" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="2字节">
+				<Receiver id="K2_BCHEndSeqPatt" desc="结尾序列图样" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="3字节">
+				<Receiver id="K2_BCHEndSeqPatt" desc="结尾序列图样" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="4字节">
+				<Receiver id="K2_BCHEndSeqPatt" desc="结尾序列图样" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="5" desc="5字节">
+				<Receiver id="K2_BCHEndSeqPatt" desc="结尾序列图样" isEnable="" values="" minValue="" maxValue="FFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="6" desc="6字节">
+				<Receiver id="K2_BCHEndSeqPatt" desc="结尾序列图样" isEnable="" values="" minValue="" maxValue="FFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="7" desc="7字节">
+				<Receiver id="K2_BCHEndSeqPatt" desc="结尾序列图样" isEnable="" values="" minValue="" maxValue="FFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="8" desc="8字节">
+				<Receiver id="K2_BCHEndSeqPatt" desc="结尾序列图样" isEnable="" values="" minValue="" maxValue="FFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+		</Trigger>		
+		<Trigger id="K2_ExecutCodeLength" desc="执行编码长度">
+			<TriggerValue value="8" desc="1字节">
+				<Receiver id="K2_ExecutCodeSamp" desc="执行编码码样" isEnable="" values="" minValue="" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="16" desc="2字节">
+				<Receiver id="K2_ExecutCodeSamp" desc="执行编码码样" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="3字节">
+				<Receiver id="K2_ExecutCodeSamp" desc="执行编码码样" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="4字节">
+				<Receiver id="K2_ExecutCodeSamp" desc="执行编码码样" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="40" desc="5字节">
+				<Receiver id="K2_ExecutCodeSamp" desc="执行编码码样" isEnable="" values="" minValue="" maxValue="FFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="48" desc="6字节">
+				<Receiver id="K2_ExecutCodeSamp" desc="执行编码码样" isEnable="" values="" minValue="" maxValue="FFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="56" desc="7字节">
+				<Receiver id="K2_ExecutCodeSamp" desc="执行编码码样" isEnable="" values="" minValue="" maxValue="FFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="64" desc="8字节">
+				<Receiver id="K2_ExecutCodeSamp" desc="执行编码码样" isEnable="" values="" minValue="" maxValue="FFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

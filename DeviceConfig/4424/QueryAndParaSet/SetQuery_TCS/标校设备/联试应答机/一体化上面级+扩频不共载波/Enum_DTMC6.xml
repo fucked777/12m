@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="DTMC" ModeType="0x06" edition="1.1.1.1">
+	<enum name="TotalCarrCtrl" desc="载波总输出控制">
+		<entry svalue="1" uvalue="1" desc="允许输出"/>
+		<entry svalue="2" uvalue="2" desc="禁止输出"/>
+	</enum>
+	<enum name="CarrierModu" desc="载波调制方式">
+		<entry svalue="1" uvalue="1" desc="去调"/>
+		<entry svalue="2" uvalue="2" desc="加调"/>
+	</enum>
+	<enum name="NoiseOutput" desc="噪声源输出">
+		<entry svalue="1" uvalue="1" desc="关"/>
+		<entry svalue="2" uvalue="2" desc="开"/>
+	</enum>
+	<enum name="DoppSwitch" desc="多普勒动态模拟开关">
+		<entry svalue="1" uvalue="1" desc="关"/>
+		<entry svalue="2" uvalue="2" desc="开"/>
+	</enum>
+</enums>

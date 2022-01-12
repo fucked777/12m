@@ -1,0 +1,2439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x01" modeID="0x0" unitType="ASU" desc="模拟源单元">
+	<Triggers>
+		<Trigger id="AnalDopSwitch" desc="多普勒开关">
+			<TriggerValue value="1" desc="开">
+				<Receiver id="AnalDoppRange" desc="多普勒范围" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="AnalVarRate" desc="多普勒变化率" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="关">
+				<Receiver id="AnalDoppRange" desc="多普勒范围" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="AnalVarRate" desc="多普勒变化率" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="NoiseSwitch" desc="噪声输出开关">
+			<TriggerValue value="1" desc="开">
+				<Receiver id="NoiseDensAtten" desc="噪声衰减" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="关">
+				<Receiver id="NoiseDensAtten" desc="噪声衰减" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="I_FraSynchLength" desc="I路帧同步码组长度">
+			<TriggerValue value="8" desc="8位">
+				<Receiver id="I_FramSynchPatt" desc="I路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="16" desc="16位">
+				<Receiver id="I_FramSynchPatt" desc="I路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="24位">
+				<Receiver id="I_FramSynchPatt" desc="I路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="32位">
+				<Receiver id="I_FramSynchPatt" desc="I路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="40" desc="40位">
+				<Receiver id="I_FramSynchPatt" desc="I路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="48" desc="48位">
+				<Receiver id="I_FramSynchPatt" desc="I路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="56" desc="56位">
+				<Receiver id="I_FramSynchPatt" desc="I路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="64" desc="64位">
+				<Receiver id="I_FramSynchPatt" desc="I路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="Q_FraSynchLength" desc="Q路帧同步码组长度">
+			<TriggerValue value="8" desc="8位">
+				<Receiver id="Q_FramSynchPatt" desc="Q路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="16" desc="16位">
+				<Receiver id="Q_FramSynchPatt" desc="Q路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="24位">
+				<Receiver id="Q_FramSynchPatt" desc="Q路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="32位">
+				<Receiver id="Q_FramSynchPatt" desc="Q路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="40" desc="40位">
+				<Receiver id="Q_FramSynchPatt" desc="Q路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="48" desc="48位">
+				<Receiver id="Q_FramSynchPatt" desc="Q路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="56" desc="56位">
+				<Receiver id="Q_FramSynchPatt" desc="Q路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="64" desc="64位">
+				<Receiver id="Q_FramSynchPatt" desc="Q路帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="I_DecodMode" desc="I路编码方式">
+			<TriggerValue value="1" desc="关">
+				<Receiver id="I_RSCodeType" desc="RS码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_RSDecodBase" desc="RS码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_RSInterDecod" desc="RS交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_LDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_TurboCodeType" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_ConvolCodeType" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_ViterDecodPhase" desc="卷积输出相位" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="Viterbi">
+				<Receiver id="I_RSCodeType" desc="RS码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_RSDecodBase" desc="RS码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_RSInterDecod" desc="RS交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_LDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_TurboCodeType" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_ConvolCodeType" desc="卷积码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_ViterDecodPhase" desc="卷积输出相位" isEnable="1" values="" minValue="" maxValue="" />
+				<Association id="ModulatSystem FrameSynch">
+					<AssociationItem id="2 1 1" desc="Viterbi BPSK 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2 1" desc="Viterbi BPSK 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4 1" desc="Viterbi BPSK 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5 1" desc="Viterbi BPSK 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 6 1" desc="Viterbi BPSK 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 7 1" desc="Viterbi BPSK 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="2 1 2" desc="Viterbi BPSK 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2 2" desc="Viterbi BPSK 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4 2" desc="Viterbi BPSK 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5 2" desc="Viterbi BPSK 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 6 2" desc="Viterbi BPSK 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 7 2" desc="Viterbi BPSK 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="3" desc="R-S">
+				<Receiver id="I_RSCodeType" desc="RS码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_RSDecodBase" desc="RS码坐标基" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_RSInterDecod" desc="RS交织深度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_LDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_TurboCodeType" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_ConvolCodeType" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_ViterDecodPhase" desc="卷积输出相位" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="R-S+Viterbi">
+				<Receiver id="I_RSCodeType" desc="RS码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_RSDecodBase" desc="RS码坐标基" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_RSInterDecod" desc="RS交织深度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_LDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_TurboCodeType" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_ConvolCodeType" desc="卷积码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_ViterDecodPhase" desc="卷积输出相位" isEnable="1" values="" minValue="" maxValue="" />
+				<Association id="ModulatSystem FrameSynch">
+					<AssociationItem id="4 1 1" desc="R-S+Viterbi BPSK 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 2 1" desc="R-S+Viterbi QPSK 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 4 1" desc="R-S+Viterbi SQPSK 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 5 1" desc="R-S+Viterbi 8PSK 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 6 1" desc="R-S+Viterbi 16QAM 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 7 1" desc="R-S+Viterbi 16APSK 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="4 1 2" desc="R-S+Viterbi BPSK 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 2 2" desc="R-S+Viterbi QPSK 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 4 2" desc="R-S+Viterbi SQPSK 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 5 2" desc="R-S+Viterbi 8PSK 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 6 2" desc="R-S+Viterbi 16QAM 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 7 2" desc="R-S+Viterbi 16APSK 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="5" desc="Turbo">
+				<Receiver id="I_RSCodeType" desc="RS码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_RSDecodBase" desc="RS码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_RSInterDecod" desc="RS交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_LDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_TurboCodeType" desc="Turbo码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_ConvolCodeType" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_ViterDecodPhase" desc="卷积输出相位" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="6" desc="LDPC">
+				<Receiver id="I_RSCodeType" desc="RS码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_RSDecodBase" desc="RS码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_RSInterDecod" desc="RS交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_LDPCType" desc="LDPC类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_TurboCodeType" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_ConvolCodeType" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_ViterDecodPhase" desc="卷积输出相位" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="Q_DecodMode" desc="Q路编码方式">
+			<TriggerValue value="1" desc="关">
+				<Receiver id="Q_RSCodeType" desc="RS码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_RSDecodBase" desc="RS码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_RSInterDecod" desc="RS交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_LDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_TurboCodeType" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_ConvolCodeType" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_ViterDecodPhase" desc="卷积输出相位" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="Viterbi">
+				<Receiver id="Q_RSCodeType" desc="RS码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_RSDecodBase" desc="RS码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_RSInterDecod" desc="RS交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_LDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_TurboCodeType" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_ConvolCodeType" desc="卷积码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_ViterDecodPhase" desc="卷积输出相位" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="R-S">
+				<Receiver id="Q_RSCodeType" desc="RS码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_RSDecodBase" desc="RS码坐标基" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_RSInterDecod" desc="RS交织深度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_LDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_TurboCodeType" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_ConvolCodeType" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_ViterDecodPhase" desc="卷积输出相位" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="R-S+Viterbi">
+				<Receiver id="Q_RSCodeType" desc="RS码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_RSDecodBase" desc="RS码坐标基" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_RSInterDecod" desc="RS交织深度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_LDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_TurboCodeType" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_ConvolCodeType" desc="卷积码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_ViterDecodPhase" desc="卷积输出相位" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="5" desc="Turbo">
+				<Receiver id="Q_RSCodeType" desc="RS码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_RSDecodBase" desc="RS码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_RSInterDecod" desc="RS交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_LDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_TurboCodeType" desc="Turbo码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_ConvolCodeType" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_ViterDecodPhase" desc="卷积输出相位" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="6" desc="LDPC">
+				<Receiver id="Q_RSCodeType" desc="RS码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_RSDecodBase" desc="RS码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_RSInterDecod" desc="RS交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_LDPCType" desc="LDPC类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_TurboCodeType" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_ConvolCodeType" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_ViterDecodPhase" desc="卷积输出相位" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="I_CRCCheckSWitch" desc="I路CRC校验">
+			<TriggerValue value="1" desc="关">
+				<Receiver id="I_CRCPolynomial" desc="CRC多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_CRCInitPhase" desc="CRC初相" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_CRCCheckArea" desc="CRC校验区" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="CCITT">
+				<Receiver id="I_CRCPolynomial" desc="CRC多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_CRCInitPhase" desc="CRC初相" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_CRCCheckArea" desc="CRC校验区" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="CRC16">
+				<Receiver id="I_CRCPolynomial" desc="CRC多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_CRCInitPhase" desc="CRC初相" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_CRCCheckArea" desc="CRC校验区" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="Q_CRCCheckSWitch" desc="I路CRC校验">
+			<TriggerValue value="1" desc="关">
+				<Receiver id="Q_CRCPolynomial" desc="CRC多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_CRCInitPhase" desc="CRC初相" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_CRCCheckArea" desc="CRC校验区" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="CCITT">
+				<Receiver id="Q_CRCPolynomial" desc="CRC多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_CRCInitPhase" desc="CRC初相" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_CRCCheckArea" desc="CRC校验区" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="CRC16">
+				<Receiver id="Q_CRCPolynomial" desc="CRC多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_CRCInitPhase" desc="CRC初相" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_CRCCheckArea" desc="CRC校验区" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="I_PreDecodDesSwitch" desc="I路编码前加扰开关">
+			<TriggerValue value="1" desc="不加扰">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_PreScrambPolyLength" desc="加扰多项式长度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_PreDecodInitTerm" desc="加扰初项" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_DecodOutPosit" desc="加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="自动加扰">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="0" values="1A9" minValue="" maxValue="" />
+				<Receiver id="I_PreScrambPolyLength" desc="加扰多项式长度" isEnable="0" values="16" minValue="" maxValue="" />
+				<Receiver id="I_PreDecodInitTerm" desc="加扰初项" isEnable="0" values="FFFFFFFF" minValue="" maxValue="" />
+				<Receiver id="I_DecodOutPosit" desc="加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="人工设置">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_PreScrambPolyLength" desc="加扰多项式长度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_PreDecodInitTerm" desc="加扰初项" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_DecodOutPosit" desc="加扰输出位置" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="I_PreScrambPolyLength" desc="加扰多项式长度">
+			<TriggerValue value="8" desc="8位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="9" desc="9位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="10" desc="10位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="11" desc="11位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="12" desc="12位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="13" desc="13位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="14" desc="14位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="15" desc="15位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="16" desc="16位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="17" desc="17位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="18" desc="18位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="19" desc="19位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="20" desc="20位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="21" desc="21位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="22" desc="22位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="23" desc="23位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="24位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="25" desc="25位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="26" desc="26位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="27" desc="27位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="28" desc="28位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="29" desc="29位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="30" desc="30位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="31" desc="31位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="32位">
+				<Receiver id="I_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="Q_PreDecodDesSwitch" desc="Q路编码前加扰开关">
+			<TriggerValue value="1" desc="不加扰">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_PreScrambPolyLength" desc="加扰多项式长度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_PreDecodInitTerm" desc="加扰初项" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_DecodOutPosit" desc="加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="自动加扰">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="0" values="1A9" minValue="" maxValue="" />
+				<Receiver id="Q_PreScrambPolyLength" desc="加扰多项式长度" isEnable="0" values="16" minValue="" maxValue="" />
+				<Receiver id="Q_PreDecodInitTerm" desc="加扰初项" isEnable="0" values="FFFFFFFF" minValue="" maxValue="" />
+				<Receiver id="Q_DecodOutPosit" desc="加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="人工设置">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_PreScrambPolyLength" desc="加扰多项式长度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_PreDecodInitTerm" desc="加扰初项" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_DecodOutPosit" desc="加扰输出位置" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="Q_PreScrambPolyLength" desc="加扰多项式长度">
+			<TriggerValue value="8" desc="8位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="9" desc="9位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="10" desc="10位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="11" desc="11位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="12" desc="12位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="13" desc="13位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="14" desc="14位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="15" desc="15位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="16" desc="16位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="17" desc="17位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="18" desc="18位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="19" desc="19位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="20" desc="20位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="21" desc="21位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="22" desc="22位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="23" desc="23位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="24位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="25" desc="25位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="26" desc="26位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="27" desc="27位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="28" desc="28位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="29" desc="29位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="30" desc="30位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="31" desc="31位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="32位">
+				<Receiver id="Q_PreDecodScraPoly" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="I_DecodPostSwitch" desc="I路编码后加扰开关">
+			<TriggerValue value="1" desc="不加扰">
+				<Receiver id="I_DecodPostPolyn" desc="加扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_DecodScrambPolyLength" desc="加扰多项式长度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_DecodInitTerm" desc="加扰初项" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_DecodOutputPosit" desc="加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="自动加扰">
+				<Receiver id="I_DecodPostPolyn" desc="加扰多项式" isEnable="0" values="1A9" minValue="" maxValue="" />
+				<Receiver id="I_DecodScrambPolyLength" desc="加扰多项式长度" isEnable="0" values="16" minValue="" maxValue="" />
+				<Receiver id="I_DecodInitTerm" desc="加扰初项" isEnable="0" values="FFFFFFFF" minValue="" maxValue="" />
+				<Receiver id="I_DecodOutputPosit" desc="加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="人工设置">
+				<Receiver id="I_DecodPostPolyn" desc="加扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_DecodScrambPolyLength" desc="加扰多项式长度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_DecodInitTerm" desc="加扰初项" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_DecodOutputPosit" desc="加扰输出位置" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="I_DecodScrambPolyLength" desc="解扰多项式长度">
+			<TriggerValue value="8" desc="8位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="9" desc="9位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="10" desc="10位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="11" desc="11位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="12" desc="12位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="13" desc="13位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="14" desc="14位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="15" desc="15位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="16" desc="16位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="17" desc="17位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="18" desc="18位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="19" desc="19位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="20" desc="20位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="21" desc="21位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="22" desc="22位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="23" desc="23位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="24位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="25" desc="25位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="26" desc="26位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="27" desc="27位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="28" desc="28位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="29" desc="29位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="30" desc="30位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="31" desc="31位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="32位">
+				<Receiver id="I_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="Q_DecodPostSwitch" desc="Q路编码后加扰开关">
+			<TriggerValue value="1" desc="不加扰">
+				<Receiver id="Q_DecodPostPolyn" desc="加扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_DecodScrambPolyLength" desc="加扰多项式长度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_DecodInitTerm" desc="加扰初项" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_DecodOutputPosit" desc="加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="自动加扰">
+				<Receiver id="Q_DecodPostPolyn" desc="加扰多项式" isEnable="0" values="1A9" minValue="" maxValue="" />
+				<Receiver id="Q_DecodScrambPolyLength" desc="加扰多项式长度" isEnable="0" values="16" minValue="" maxValue="" />
+				<Receiver id="Q_DecodInitTerm" desc="加扰初项" isEnable="0" values="FFFFFFFF" minValue="" maxValue="" />
+				<Receiver id="Q_DecodOutputPosit" desc="加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="人工设置">
+				<Receiver id="Q_DecodPostPolyn" desc="加扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_DecodScrambPolyLength" desc="加扰多项式长度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_DecodInitTerm" desc="加扰初项" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_DecodOutputPosit" desc="加扰输出位置" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="Q_DecodScrambPolyLength" desc="解扰多项式长度">
+			<TriggerValue value="8" desc="8位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="9" desc="9位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="10" desc="10位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="11" desc="11位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="12" desc="12位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="13" desc="13位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="14" desc="14位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="15" desc="15位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="16" desc="16位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="17" desc="17位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="18" desc="18位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="19" desc="19位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="20" desc="20位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="21" desc="21位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="22" desc="22位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="23" desc="23位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="24位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="25" desc="25位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="26" desc="26位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="27" desc="27位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="28" desc="28位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="29" desc="29位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="30" desc="30位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="31" desc="31位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="32位">
+				<Receiver id="Q_DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="ModulatSystem" desc="调制体制">
+			<TriggerValue value="1" desc="BPSK">
+				<Receiver id="IQPowerRatio" desc="IQ路功率比" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ConstMapp" desc="星座映射" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="FrameSynch" desc="帧同步方式" isEnable="0" values="1:合路" minValue="" maxValue="" />
+				<Receiver id="GrayCodSelect" desc="Gray编码选择" isEnable="0" values="9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="PhaseMapp" desc="相位旋转" isEnable="0" values="1:CCSDS(逆时针)" minValue="" maxValue="" />
+				<Receiver id="ICodeRate" desc="码速率" isEnable="0" values="" minValue="10" maxValue="500" />
+				<Receiver id="QCodeRate" desc="码速率" isEnable="0" values="" minValue="10" maxValue="500" />
+				<Association id="I_DecodMode FrameSynch">
+					<AssociationItem id="1 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="1 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="1 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="1 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="1 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id=" 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="1 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="1 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="1 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="1 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="1 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="1 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="1 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="2" desc="QPSK">
+				<Receiver id="IQPowerRatio" desc="IQ路功率比" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ConstMapp" desc="星座映射" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="FrameSynch" desc="帧同步方式" isEnable="1" values="1:合路;2:分路" minValue="" maxValue="" />
+				<Receiver id="GrayCodSelect" desc="Gray编码选择" isEnable="1" values="1:Gray0;2:Gray1;3:Gray2;4:Gray3;5:Gray4;6:Gray5;7:Gray6;8:Gray7;9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="PhaseMapp" desc="相位旋转" isEnable="1" values="1:CCSDS(逆时针);2:Inverted(顺时针)" minValue="" maxValue="" />
+				<Receiver id="ICodeRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="1000" />
+				<Receiver id="QCodeRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="1000" />
+				<Association id="I_DecodMode FrameSynch">
+					<AssociationItem id="2 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="2 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="2 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<Receiver id="Vit2rbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="2 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="2 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="2 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="2 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="2 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="2 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="2 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="2 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="2 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="3" desc="UQPSK">
+				<Receiver id="IQPowerRatio" desc="IQ路功率比" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="ConstMapp" desc="星座映射" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="FrameSynch" desc="帧同步方式" isEnable="0" values="2:分路" minValue="" maxValue="" />
+				<Receiver id="GrayCodSelect" desc="Gray编码选择" isEnable="0" values="9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="PhaseMapp" desc="相位旋转" isEnable="1" values="1:CCSDS(逆时针);2:Inverted(顺时针)" minValue="" maxValue="" />
+				<Receiver id="ICodeRate" desc="码速率" isEnable="1" values="" minValue="5" maxValue="1000" />
+				<Receiver id="QCodeRate" desc="码速率" isEnable="1" values="" minValue="5" maxValue="1000" />
+				<Receiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="SQPSK">
+				<Receiver id="IQPowerRatio" desc="IQ路功率比" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ConstMapp" desc="星座映射" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="FrameSynch" desc="帧同步方式" isEnable="1" values="1:合路;2:分路" minValue="" maxValue="" />
+				<Receiver id="GrayCodSelect" desc="Gray编码选择" isEnable="0" values="9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="PhaseMapp" desc="相位旋转" isEnable="1" values="1:CCSDS(逆时针);2:Inverted(顺时针)" minValue="" maxValue="" />
+				<Receiver id="ICodeRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="1000" />
+				<Receiver id="QCodeRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="1000" />
+				<Association id="I_DecodMode FrameSynch">
+					<AssociationItem id="4 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="4 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="4 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="4 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="4 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="4 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="4 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="4 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="4 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="4 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="4 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="4 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="5" desc="8PSK">
+				<Receiver id="IQPowerRatio" desc="IQ路功率比" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ConstMapp" desc="星座映射" isEnable="1" values="1:Gray1;2:Gray2;3:Gray3;4:Gray4;5:Gray5;6:Gray6;7:Natural;8:Natura2" minValue="" maxValue="" />
+				<Receiver id="FrameSynch" desc="帧同步方式" isEnable="1" values="1:合路;2:分路" minValue="" maxValue="" />
+				<Receiver id="GrayCodSelect" desc="Gray编码选择" isEnable="0" values="9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="PhaseMapp" desc="相位旋转" isEnable="1" values="1:CCSDS(逆时针);2:Inverted(顺时针)" minValue="" maxValue="" />
+				<Receiver id="ICodeRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="1500" />
+				<Receiver id="QCodeRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="1500" />
+				<Association id="I_DecodMode FrameSynch">
+					<AssociationItem id="5 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="5 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="5 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="5 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="5 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="5 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="5 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="5 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="5 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="5 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="5 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="5 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="6" desc="16QAM">
+				<Receiver id="IQPowerRatio" desc="IQ路功率比" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ConstMapp" desc="星座映射" isEnable="1" values="9:Map1;10:Map2;11:Map3" minValue="" maxValue="" />
+				<Receiver id="FrameSynch" desc="帧同步方式" isEnable="0" values="1:合路" minValue="" maxValue="" />
+				<Receiver id="GrayCodSelect" desc="Gray编码选择" isEnable="0" values="9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="PhaseMapp" desc="相位旋转" isEnable="0" values="1:CCSDS(逆时针)" minValue="" maxValue="" />
+				<Receiver id="ICodeRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="2000" />
+				<Receiver id="QCodeRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="2000" />
+				<Association id="I_DecodMode FrameSynch">
+					<AssociationItem id="6 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="6 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="6 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="6 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="6 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="6 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="6 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="6 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="6 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="6 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="6 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="6 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="7" desc="16APSK">
+				<Receiver id="FrameSynch" desc="帧同步方式" isEnable="0" values="1:合路" minValue="" maxValue="" />
+				<Receiver id="ConstMapp" desc="星座映射" isEnable="1" values="9:Map1;10:Map2" minValue="" maxValue="" />
+				<Receiver id="ICodeRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="2000" />
+				<Receiver id="QCodeRate" desc="码速率" isEnable="0" values="" minValue="20" maxValue="2000" />
+				<Association id="I_DecodMode FrameSynch">
+					<AssociationItem id="7 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 1 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="7 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 1 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="7 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 2 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="7 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 2 2" desc="16QAM  Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+				
+					<AssociationItem id="7 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 3 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="7 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 3 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+				
+					<AssociationItem id="7 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 4 1" desc="16QAM  RS+Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="7 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 4 2" desc="16QAM  RS+Viterbi 帧同步方式分路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="7 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 5 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+				
+					<AssociationItem id="7 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 5 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="7 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 6 1" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="7 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="7 6 2" desc="16QAM  Viterbi 帧同步方式合路">
+						<AssociationReceiver  id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="FrameSynch" desc="帧同步方式">
+			<TriggerValue value="1" desc="合路">
+				<Association id="I_DecodMode ModulatSystem">
+					<AssociationItem id="1 1 1" desc="帧同步方式合路 关 BPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 1 2" desc="帧同步方式合路 关 QPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 1 4" desc="帧同步方式合路 关 SQPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 1 5" desc="帧同步方式合路 关 8PSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 1 6" desc="帧同步方式合路 关 16QAM">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 1 7" desc="帧同步方式合路 关 16APSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="1 2 1" desc="帧同步方式合路 Viterbi BPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2 2" desc="帧同步方式合路 Viterbi QPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2 4" desc="帧同步方式合路 Viterbi SQPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2 5" desc="帧同步方式合路 Viterbi 8PSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2 6" desc="帧同步方式合路 Viterbi 16QAM">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2 7" desc="帧同步方式合路 Viterbi 16APSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="1 3 1" desc="帧同步方式合路 R-S BPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3 2" desc="帧同步方式合路 R-S QPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3 4" desc="帧同步方式合路 R-S SQPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3 5" desc="帧同步方式合路 R-S 8PSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3 6" desc="帧同步方式合路 R-S 16QAM">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3 7" desc="帧同步方式合路 R-S 16APSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="1 4 1" desc="帧同步方式合路 RS+Viterbi BPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4 2" desc="帧同步方式合路 RS+Viterbi QPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4 4" desc="帧同步方式合路 RS+Viterbi SQPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4 5" desc="帧同步方式合路 RS+Viterbi 8PSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4 6" desc="帧同步方式合路 RS+Viterbi 16QAM">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4 7" desc="帧同步方式合路 RS+Viterbi 16APSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="1" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="1 5 1" desc="帧同步方式合路 Turbo BPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5 2" desc="帧同步方式合路 Turbo QPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5 4" desc="帧同步方式合路 Turbo SQPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5 5" desc="帧同步方式合路 Turbo 8PSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5 6" desc="帧同步方式合路 Turbo 16QAM">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5 7" desc="帧同步方式合路 Turbo 16APSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="1 6 1" desc="帧同步方式合路 LDPC BPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 6 2" desc="帧同步方式合路 LDPC QPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 6 4" desc="帧同步方式合路 LDPC SQPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 6 5" desc="帧同步方式合路 LDPC 8PSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 6 6" desc="帧同步方式合路 LDPC 16QAM">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 6 7" desc="帧同步方式合路 LDPC 16APSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="1:合路卷积;2:分路卷积;3:关" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="2" desc="分路">
+				<Association id="I_DecodMode ModulatSystem">
+					<AssociationItem id="2 1 1" desc="帧同步方式合路 关 BPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 1 2" desc="帧同步方式合路 关 QPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 1 4" desc="帧同步方式合路 关 SQPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 1 5" desc="帧同步方式合路 关 8PSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 1 6" desc="帧同步方式合路 关 16QAM">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 1 7" desc="帧同步方式合路 关 16APSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="2 2 1" desc="帧同步方式合路 Viterbi BPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2 2" desc="帧同步方式合路 Viterbi QPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2 4" desc="帧同步方式合路 Viterbi SQPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2 5" desc="帧同步方式合路 Viterbi 8PSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2 6" desc="帧同步方式合路 Viterbi 16QAM">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2 7" desc="帧同步方式合路 Viterbi 16APSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="2 3 1" desc="帧同步方式合路 R-S BPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3 2" desc="帧同步方式合路 R-S QPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3 4" desc="帧同步方式合路 R-S SQPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3 5" desc="帧同步方式合路 R-S 8PSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3 6" desc="帧同步方式合路 R-S 16QAM">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3 7" desc="帧同步方式合路 R-S 16APSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="2 4 1" desc="帧同步方式合路 RS+Viterbi BPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4 2" desc="帧同步方式合路 RS+Viterbi QPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4 4" desc="帧同步方式合路 RS+Viterbi SQPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4 5" desc="帧同步方式合路 RS+Viterbi 8PSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4 6" desc="帧同步方式合路 RS+Viterbi 16QAM">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4 7" desc="帧同步方式合路 RS+Viterbi 16APSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="2 5 1" desc="帧同步方式合路 Turbo BPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5 2" desc="帧同步方式合路 Turbo QPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5 4" desc="帧同步方式合路 Turbo SQPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5 5" desc="帧同步方式合路 Turbo 8PSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5 6" desc="帧同步方式合路 Turbo 16QAM">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5 7" desc="帧同步方式合路 Turbo 16APSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					
+					<AssociationItem id="2 6 1" desc="帧同步方式合路 LDPC BPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 6 2" desc="帧同步方式合路 LDPC QPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 6 4" desc="帧同步方式合路 LDPC SQPSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 6 5" desc="帧同步方式合路 LDPC 8PSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 6 6" desc="帧同步方式合路 LDPC 16QAM">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 6 7" desc="帧同步方式合路 LDPC 16APSK">
+						<AssociationReceiver id="ViterbiDecod" desc="卷积方式" isEnable="0" values="2:分路卷积" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="I_AnalogDataType" desc="I路模拟数据类型">
+			<TriggerValue value="1" desc="PN码">
+				<Receiver id="I_PNCodeSelect" desc="PN码选择" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="I_FixedSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="可编辑固定数">
+				<Receiver id="I_PNCodeSelect" desc="PN码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_FixedSet" desc="固定数设置" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="顺序数（由0~255循环）">
+				<Receiver id="I_PNCodeSelect" desc="PN码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_FixedSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="本地文件回放">
+				<Receiver id="I_PNCodeSelect" desc="PN码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_FixedSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="5" desc="网络回放">
+				<Receiver id="I_PNCodeSelect" desc="PN码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="I_FixedSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="Q_AnalogDataType" desc="Q路模拟数据类型">
+			<TriggerValue value="1" desc="PN码">
+				<Receiver id="Q_PNCodeSelect" desc="PN码选择" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="Q_FixedSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="可编辑固定数">
+				<Receiver id="Q_PNCodeSelect" desc="PN码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_FixedSet" desc="固定数设置" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="顺序数（由0~255循环）">
+				<Receiver id="Q_PNCodeSelect" desc="PN码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_FixedSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="本地文件回放">
+				<Receiver id="Q_PNCodeSelect" desc="PN码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_FixedSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="5" desc="网络回放">
+				<Receiver id="Q_PNCodeSelect" desc="PN码选择" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="Q_FixedSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="LevelCtrlMode" desc="输出电平控制">
+			<TriggerValue value="1" desc="固定值">
+				<Receiver id="LevelScannRate" desc="电平扫描速率" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="LevelScannRange" desc="电平扫描范围" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="扫描（三角）">
+				<Receiver id="LevelScannRate" desc="电平扫描速率" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="LevelScannRange" desc="电平扫描范围" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

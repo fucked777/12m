@@ -1,0 +1,265 @@
+<!--
+
+
+
+-->
+<Mode name="X高速">
+	<if condition="">
+		<Command deviceId="0x3A01" modeId="0xFFFF" cmdId="1" deviceName="L频段切换开关网络 L频段切换选择">
+			<Param id="qhkg" value="1" name="切换开关 X频段"/>
+		</Command>
+		<Command deviceId="0x3A01" modeId="0xFFFF" unitId="1" deviceName="L频段切换开关网络 L频段切换选择">
+			<Param id="HeWayOutChoose1" value="1" name="和路出1选择输入 X和路1输入"/>
+			<Param id="BadWayOutChoose1" value="1" name="差路出1选择输入 X差路1输入"/>
+			<Param id="HeWayOutChoose2" value="1" name="和路出2选择输入 X和路2输入"/>
+			<Param id="BadWayOutChoose2" value="1" name="差路出2选择输入 X差路2输入"/>
+			<Param id="CheckOutChoose" value="1" name="监测输出选择输入 X和路1输入"/>
+		</Command>
+		<!-- 固定1 3 5口接X左和 2 4 6口接X右和 监测信号接左(无用)，备用接右(无用) -->
+		<Command deviceId="0x3501" modeId="0xFFFF" unitId="1" deviceName="X频段8×8射频开关矩阵 X频段8×8射频开关矩阵">
+			<Param id="OutputPort1" value="1" name="X/1.2G DC5 X左和"/>
+			<Param id="OutputPort2" value="2" name="X/1.2G DC6 X右和"/>
+			<Param id="OutputPort3" value="1" name="X/1.2G DC7 X左和"/>
+			<Param id="OutputPort4" value="2" name="X/1.2G DC8 X右和"/>
+			<Param id="OutputPort5" value="1" name="X/1.2G DC9 X左和"/>
+			<Param id="OutputPort6" value="2" name="X/1.2G DC10 X右和"/>
+			<Param id="OutputPort7" value="1" name="X监测信号"/>
+			<Param id="OutputPort8" value="2" name="备用"/>
+		</Command>
+	</if>
+	<!-- 和路左旋场放选中 -->
+	<if condition="XGS_LAN_L_SUM:1">
+		<Command deviceId="0x3201" modeId="0xFFFF" unitId="1" deviceName="x频段射频开关网络 x频段射频开关网络">
+			<Param id="LeftHe" value="1" name="左和输入选择开关 X和路入L1"/>
+			<Param id="WaveSwitchXLBadControl" value="1" name="波导开关X-L控制 左旋"/>
+		</Command>
+	</if>
+	<if condition="XGS_LAN_L_SUM:2">
+		<Command deviceId="0x3201" modeId="0xFFFF" unitId="1" deviceName="x频段射频开关网络 x频段射频开关网络">
+			<Param id="LeftHe" value="2" name="左和输入选择开关 X和路入L2"/>
+			<Param id="WaveSwitchXLBadControl" value="2" name="波导开关X-L控制 右旋"/>
+		</Command>
+	</if>
+	<!-- 和路右旋场放选中 -->
+	<if condition="XGS_LAN_R_SUM:1">
+		<Command deviceId="0x3201" modeId="0xFFFF" unitId="1" deviceName="x频段射频开关网络 x频段射频开关网络">
+			<Param id="RightHe" value="1" name="右和输入选择开关 X和路入L1"/>
+			<Param id="WaveSwitchXRBadControl" value="1" name="波导开关X-R控制 左旋"/>
+		</Command>
+	</if>
+	<if condition="XGS_LAN_R_SUM:2">
+		<Command deviceId="0x3201" modeId="0xFFFF" unitId="1" deviceName="x频段射频开关网络 x频段射频开关网络">
+			<Param id="RightHe" value="2" name="右和输入选择开关 X和路入L2"/>
+			<Param id="WaveSwitchXRBadControl" value="2" name="波导开关X-R控制 右旋"/>
+		</Command>
+	</if>
+	<!--  差路场放选中 -->
+	<if condition="XGS_LAN_DIFF:1">
+		<Command deviceId="0x3201" modeId="0xFFFF" unitId="1" deviceName="x频段射频开关网络 x频段射频开关网络">
+			<Param id="Bad1AndBad2" value="1" name="差路输入选择开关 X-LNA1"/>
+		</Command>
+	</if>
+	<if condition="XGS_LAN_DIFF:2">
+		<Command deviceId="0x3201" modeId="0xFFFF" unitId="1" deviceName="x频段射频开关网络 x频段射频开关网络">
+			<Param id="Bad1AndBad2" value="2" name="差路输入选择开关 X-LNA2"/>
+		</Command>
+	</if>
+	<!-- 接收极化为左旋  或者 接收极化为左右旋同时-->
+	<if condition="(ReceivePolar1:1)
+					OR(ReceivePolar1:3)">
+		<Command deviceId="0x3201" modeId="0xFFFF" unitId="1" deviceName="x频段射频开关网络 x频段射频开关网络">
+			<Param id="BackupInput" value="1" name="备份输出 备份选择左和"/>
+		</Command>
+	</if>
+	<!-- 接收极化为右旋 -->
+	<if condition="ReceivePolar1:2">
+		<Command deviceId="0x3201" modeId="0xFFFF" unitId="1" deviceName="x频段射频开关网络 x频段射频开关网络">
+			<Param id="BackupInput" value="2" name="备份输出 备份选择右和"/>
+		</Command>
+	</if>
+	<!-- 点频数为单点频 -->
+	<if condition="PointFreqNum:1">
+		<!-- 接收极化为左旋 -->
+		<if condition="ReceivePolar1:1">
+			<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+				<Param id="OutputPort1" value="1" name="高速基带1通道1 X/1.2G DC5"/>
+				<Param id="OutputPort2" value="1" name="高速基带1通道2 X/1.2G DC5"/>
+				<Param id="OutputPort3" value="1" name="高速基带2通道1 X/1.2G DC5"/>
+				<Param id="OutputPort4" value="1" name="高速基带2通道2 X/1.2G DC5"/>
+				<Param id="OutputPort5" value="1" name="高速基带3通道1 X/1.2G DC5"/>
+				<Param id="OutputPort6" value="1" name="高速基带3通道2 X/1.2G DC5"/>
+			</Command>
+		</if>
+		<!-- 接收极化为右旋 -->
+		<if condition="ReceivePolar1:2">
+			<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+				<Param id="OutputPort1" value="2" name="高速基带1通道1 X/1.2G DC6"/>
+				<Param id="OutputPort2" value="2" name="高速基带1通道2 X/1.2G DC6"/>
+				<Param id="OutputPort3" value="2" name="高速基带2通道1 X/1.2G DC6"/>
+				<Param id="OutputPort4" value="2" name="高速基带2通道2 X/1.2G DC6"/>
+				<Param id="OutputPort5" value="2" name="高速基带3通道1 X/1.2G DC6"/>
+				<Param id="OutputPort6" value="2" name="高速基带3通道2 X/1.2G DC6"/>
+			</Command>
+		</if>
+		<!-- 接收极化为左右旋同时 -->
+		<if condition="ReceivePolar1:3">
+			<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+				<Param id="OutputPort1" value="1" name="高速基带1通道1 X/1.2G DC5"/>
+				<Param id="OutputPort2" value="2" name="高速基带1通道2 X/1.2G DC6"/>
+				<Param id="OutputPort3" value="1" name="高速基带2通道1 X/1.2G DC5"/>
+				<Param id="OutputPort4" value="2" name="高速基带2通道2 X/1.2G DC6"/>
+				<Param id="OutputPort5" value="1" name="高速基带3通道1 X/1.2G DC5"/>
+				<Param id="OutputPort6" value="2" name="高速基带3通道2 X/1.2G DC6"/>
+			</Command>
+		</if>
+	</if>
+	<!-- 点频数为双点频  点频1接收极化为左旋 根据选择的主用的第一台高速基带进行接 备用基带也使用点频1的旋向进行判断 -->
+	<if condition="(PointFreqNum:2|ReceivePolar1:1|GSJD1:1)
+					OR(PointFreqNum:2|ReceivePolar1:1|GSJD3:1)">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+			<Param id="OutputPort1" value="1" name="高速基带1通道1 X/1.2G DC5"/>
+			<Param id="OutputPort2" value="1" name="高速基带1通道2 X/1.2G DC5"/>
+		</Command>
+	</if>
+	<if condition="(PointFreqNum:2|ReceivePolar1:1|GSJD1:2)
+					OR(PointFreqNum:2|ReceivePolar1:1|GSJD3:2)">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+			<Param id="OutputPort3" value="1" name="高速基带2通道1 X/1.2G DC5"/>
+			<Param id="OutputPort4" value="1" name="高速基带2通道2 X/1.2G DC5"/>
+		</Command>
+	</if>
+	<if condition="(PointFreqNum:2|ReceivePolar1:1|GSJD1:3)
+					OR(PointFreqNum:2|ReceivePolar1:1|GSJD3:3)">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+			<Param id="OutputPort5" value="1" name="高速基带3通道1 X/1.2G DC5"/>
+			<Param id="OutputPort6" value="1" name="高速基带3通道2 X/1.2G DC5"/>
+		</Command>
+	</if>
+	<!-- 点频数为双点频  点频1接收极化为右旋 根据选择的主用的第一台高速基带进行接  备用基带也使用点频1的旋向进行判断 -->
+	<if condition="(PointFreqNum:2|ReceivePolar1:2|GSJD1:1)
+					OR(PointFreqNum:2|ReceivePolar1:2|GSJD3:1)">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+			<Param id="OutputPort1" value="2" name="高速基带1通道1 X/1.2G DC6"/>
+			<Param id="OutputPort2" value="2" name="高速基带1通道2 X/1.2G DC6"/>
+		</Command>
+	</if>
+	<if condition="(PointFreqNum:2|ReceivePolar1:2|GSJD1:2)
+					OR(PointFreqNum:2|ReceivePolar1:2|GSJD3:2)">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+			<Param id="OutputPort3" value="2" name="高速基带2通道1 X/1.2G DC6"/>
+			<Param id="OutputPort4" value="2" name="高速基带2通道2 X/1.2G DC6"/>
+		</Command>
+	</if>
+	<if condition="(PointFreqNum:2|ReceivePolar1:2|GSJD1:3)
+					OR(PointFreqNum:2|ReceivePolar1:2|GSJD3:3)">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+			<Param id="OutputPort5" value="2" name="高速基带3通道1 X/1.2G DC6"/>
+			<Param id="OutputPort6" value="2" name="高速基带3通道2 X/1.2G DC6"/>
+		</Command>
+	</if>
+	<!-- 点频数为双点频  点频1接收极化为左右旋同时 根据选择的主用的第一台高速基带进行接  备用基带也使用点频1的旋向进行判断 -->
+	<if condition="(PointFreqNum:2|ReceivePolar1:3|GSJD1:1)
+					OR(PointFreqNum:2|ReceivePolar1:3|GSJD3:1)">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+			<Param id="OutputPort1" value="1" name="高速基带1通道1 X/1.2G DC5"/>
+			<Param id="OutputPort2" value="2" name="高速基带1通道2 X/1.2G DC6"/>
+		</Command>
+	</if>
+	<if condition="(PointFreqNum:2|ReceivePolar1:3|GSJD1:2)
+					OR(PointFreqNum:2|ReceivePolar1:3|GSJD3:2)">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+			<Param id="OutputPort3" value="1" name="高速基带2通道1 X/1.2G DC5"/>
+			<Param id="OutputPort4" value="2" name="高速基带2通道2 X/1.2G DC6"/>
+		</Command>
+	</if>
+	<if condition="(PointFreqNum:2|ReceivePolar1:3|GSJD1:3)
+					OR(PointFreqNum:2|ReceivePolar1:3|GSJD3:3)">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+			<Param id="OutputPort5" value="1" name="高速基带3通道1 X/1.2G DC5"/>
+			<Param id="OutputPort6" value="2" name="高速基带3通道2 X/1.2G DC6"/>
+		</Command>
+	</if>
+	<!-- 点频数为双点频  点频2接收极化为左旋 根据选择的主用的第二台高速基带进行接 -->
+	<if condition="PointFreqNum:2|ReceivePolar2:1|GSJD2:1">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+			<Param id="OutputPort1" value="3" name="高速基带1通道1 X/1.2G DC7"/>
+			<Param id="OutputPort2" value="3" name="高速基带1通道2 X/1.2G DC7"/>
+		</Command>
+	</if>
+	<if condition="PointFreqNum:2|ReceivePolar2:1|GSJD2:2">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+			<Param id="OutputPort3" value="3" name="高速基带2通道1 X/1.2G DC7"/>
+			<Param id="OutputPort4" value="3" name="高速基带2通道2 X/1.2G DC7"/>
+		</Command>
+	</if>
+	<if condition="PointFreqNum:2|ReceivePolar2:1|GSJD2:3">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+			<Param id="OutputPort5" value="3" name="高速基带3通道1 X/1.2G DC7"/>
+			<Param id="OutputPort6" value="3" name="高速基带3通道2 X/1.2G DC7"/>
+		</Command>
+	</if>
+	<!-- 点频数为双点频  点频2接收极化为右旋 根据选择的主用的第二台高速基带进行接 -->
+	<if condition="PointFreqNum:2|ReceivePolar2:2|GSJD2:1">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+			<Param id="OutputPort1" value="4" name="高速基带1通道1 X/1.2G DC8"/>
+			<Param id="OutputPort2" value="4" name="高速基带1通道2 X/1.2G DC8"/>
+		</Command>
+	</if>
+	<if condition="PointFreqNum:2|ReceivePolar2:2|GSJD2:2">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+			<Param id="OutputPort3" value="4" name="高速基带2通道1 X/1.2G DC8"/>
+			<Param id="OutputPort4" value="4" name="高速基带2通道2 X/1.2G DC8"/>
+		</Command>
+	</if>
+	<if condition="PointFreqNum:2|ReceivePolar2:2|GSJD2:3">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+			<Param id="OutputPort5" value="4" name="高速基带3通道1 X/1.2G DC8"/>
+			<Param id="OutputPort6" value="4" name="高速基带3通道2 X/1.2G DC8"/>
+		</Command>
+	</if>
+	<!-- 点频数为双点频  点频2接收极化为左右旋同时 根据选择的主用的第二台高速基带进行接 -->
+	<if condition="PointFreqNum:2|ReceivePolar2:3|GSJD2:1">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+			<Param id="OutputPort1" value="3" name="高速基带1通道1 X/1.2G DC7"/>
+			<Param id="OutputPort2" value="4" name="高速基带1通道2 X/1.2G DC8"/>
+		</Command>
+	</if>
+	<if condition="PointFreqNum:2|ReceivePolar2:3|GSJD2:2">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+			<Param id="OutputPort3" value="3" name="高速基带2通道1 X/1.2G DC7"/>
+			<Param id="OutputPort4" value="4" name="高速基带2通道2 X/1.2G DC8"/>
+		</Command>
+	</if>
+	<if condition="PointFreqNum:2|ReceivePolar2:3|GSJD2:3">
+		<Command deviceId="0x3C01" modeId="0xFFFF" unitId="1" deviceName="1.2GHz中频开关矩阵 1.2GHz中频开关矩阵">
+			<Param id="OutputPort5" value="3" name="高速基带3通道1 X/1.2G DC7"/>
+			<Param id="OutputPort6" value="4" name="高速基带3通道2 X/1.2G DC8"/>
+		</Command>
+	</if>
+	<!-- 跟踪极化为左旋 -->
+	<if condition="TrackPolar1:1">
+		<Command deviceId="0x3201" modeId="0xFFFF" unitId="1" deviceName="x频段射频开关网络 x频段射频开关网络">
+			<Param id="HeOutSwitch" value="1" name="和路输出选择开关 X和路选择左和"/>
+		</Command>
+	</if>
+	<!-- 跟踪极化为右旋 -->
+	<if condition="TrackPolar1:2">
+		<Command deviceId="0x3201" modeId="0xFFFF" unitId="1" deviceName="x频段射频开关网络 x频段射频开关网络">
+			<Param id="HeOutSwitch" value="2" name="和路输出选择开关 X和路选择右和"/>
+		</Command>
+	</if>
+	<!--  差路场放为LNA1并且跟踪极化为左旋  或者  差路场放为LNA2(交叉输入)并且跟踪极化为右旋-->
+	<if condition="(XGS_LAN_DIFF:1|TrackPolar1:1)
+					OR(XGS_LAN_DIFF:2|TrackPolar1:2)">
+		<Command deviceId="0x3201" modeId="0xFFFF" unitId="1" deviceName="x频段射频开关网络 x频段射频开关网络">
+			<Param id="WaveSwitchXBadControl" value="1" name="波导开关X差控制 左旋"/>
+		</Command>
+	</if>
+	<!--  差路场放为LNA2(交叉输入)并且跟踪极化为左旋  或者  差路场放为LNA1 并且 跟踪极化为右旋 -->
+	<if condition="(XGS_LAN_DIFF:2|TrackPolar1:1)
+					OR(XGS_LAN_DIFF:1|TrackPolar1:2)">
+		<Command deviceId="0x3201" modeId="0xFFFF" unitId="1" deviceName="x频段射频开关网络 x频段射频开关网络">
+			<Param id="WaveSwitchXBadControl" value="2" name="波导开关X差控制 右旋"/>
+		</Command>
+	</if>
+</Mode>

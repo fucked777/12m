@@ -1,0 +1,9 @@
+{
+  "bundle.symbolic_name":"%{ProjectName}",
+  "servicename":"XXXX模块",
+  "bundle.activator" : true,
+  "authors" : [ "null" ],
+  "bundle.version" : "1.0.0",
+  "bundle.description" : "null",
+  "update_log" :""
+}

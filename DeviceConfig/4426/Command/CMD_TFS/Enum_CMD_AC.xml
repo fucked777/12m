@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+id  枚举ID  -与设备类型关联
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums ExtenType="AC" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="WrokMechNumb" desc="工作机号">
+		<entry svalue="1" uvalue="1" desc="A主B备"/>
+		<entry svalue="2" uvalue="2" desc="B主A备"/>
+	</enum>
+	<enum name="DirectMode" desc="指向方式">
+		<entry svalue="1" uvalue="1" desc="对塔"/>
+		<entry svalue="2" uvalue="2" desc="转等待点"/>
+		<entry svalue="3" uvalue="3" desc="按指定角度"/>
+	</enum>
+	<enum name="PointState" desc="指向状态">
+		<entry svalue="1" uvalue="1" desc="指向到位"/>
+		<entry svalue="2" uvalue="2" desc="指向未到位"/>
+	</enum>
+	<enum name="NumbLeadState" desc="数引状态">
+		<entry svalue="1" uvalue="1" desc="进入数引状态"/>
+		<entry svalue="2" uvalue="2" desc="引导数据终止"/>
+	</enum>
+	<enum name="SupCentCorr" desc="叠加中心修正">
+		<entry svalue="1" uvalue="1" desc="未修正"/>
+		<entry svalue="2" uvalue="2" desc="时间偏置"/>
+		<entry svalue="3" uvalue="3" desc="角度偏置"/>
+		<entry svalue="4" uvalue="4" desc="时间和角度偏置"/>
+	</enum>
+	<enum name="ChengYinState" desc="程引状态">
+		<entry svalue="1" uvalue="1" desc="进入程引状态"/>
+		<entry svalue="2" uvalue="2" desc="引导数据终止"/>
+		<entry svalue="3" uvalue="3" desc="异常退出"/>
+	</enum>
+	<enum name="KaXTrackStatus" desc="Ka跟踪状态">
+		<entry svalue="1" uvalue="1" desc="Ka自跟踪"/>
+		<entry svalue="2" uvalue="2" desc="失锁,未跟踪"/>
+		<entry svalue="3" uvalue="3" desc="AGC电压不够"/>
+		<entry svalue="4" uvalue="4" desc="误差电压超限"/>
+	</enum>
+	<enum name="STrackStatus" desc="S跟踪状态">
+		<entry svalue="1" uvalue="1" desc="Ka自跟踪"/>
+		<entry svalue="2" uvalue="2" desc="失锁,未跟踪"/>
+		<entry svalue="3" uvalue="3" desc="AGC电压不够"/>
+		<entry svalue="4" uvalue="4" desc="误差电压超限"/>
+	</enum>
+	<enum name="STrackStatus" desc="S跟踪状态">
+		<entry svalue="1" uvalue="1" desc="进入S自跟踪"/>
+		<entry svalue="2" uvalue="2" desc="失锁,未跟踪"/>
+		<entry svalue="3" uvalue="3" desc="AGC电压不够"/>
+		<entry svalue="4" uvalue="4" desc="误差电压超限"/>
+	</enum>
+	<enum name="LockInPlaceNot" desc="到位是否插锁">
+		<entry svalue="1" uvalue="1" desc="插锁"/>
+		<entry svalue="2" uvalue="2" desc="不插锁"/>
+	</enum>
+	<enum name="CollectStatus" desc="收藏状态">
+		<entry svalue="1" uvalue="1" desc="转收藏"/>
+		<entry svalue="2" uvalue="2" desc="转收藏位置到位"/>
+		<entry svalue="3" uvalue="3" desc="开始插锁"/>
+		<entry svalue="4" uvalue="4" desc="插锁到位"/>
+		<entry svalue="5" uvalue="5" desc="插锁故障"/>
+	</enum>
+	<enum name="UnLockState" desc="拔锁状态">
+		<entry svalue="1" uvalue="1" desc="开始拔锁"/>
+		<entry svalue="2" uvalue="2" desc="拔锁完成"/>
+		<entry svalue="3" uvalue="3" desc="拔锁故障"/>
+	</enum>
+	<enum name="ScanCtrl" desc="扫描控制">
+		<entry svalue="1" uvalue="1" desc="开始扫描"/>
+		<entry svalue="2" uvalue="2" desc="停止扫描"/>
+	</enum>
+	<enum name="ScanMode" desc="扫描方式">
+		<entry svalue="1" uvalue="1" desc="方位"/>
+		<entry svalue="2" uvalue="2" desc="俯仰"/>
+		<entry svalue="3" uvalue="3" desc="联合扫描"/>
+	</enum>
+	<enum name="ScanRange" desc="扫描范围">
+		<entry svalue="1" uvalue="1" desc="0.3125°"/>
+		<entry svalue="2" uvalue="2" desc="0.625°"/>
+		<entry svalue="3" uvalue="3" desc="1.25°"/>
+		<entry svalue="4" uvalue="4" desc="2.5°"/>
+		<entry svalue="5" uvalue="5" desc="5°"/>
+		<entry svalue="6" uvalue="6" desc="10°"/>
+	</enum>
+	<enum name="ScanRate" desc="扫描速率">
+		<entry svalue="1" uvalue="1" desc="0.125°/s"/>
+		<entry svalue="2" uvalue="2" desc="0.25°/s"/>
+		<entry svalue="3" uvalue="3" desc="0.5°/s"/>
+		<entry svalue="4" uvalue="4" desc="1°/s"/>
+		<entry svalue="5" uvalue="5" desc="2°/s"/>
+	</enum>
+	<enum name="ScannState" desc="扫描状态">
+		<entry svalue="1" uvalue="1" desc="扫描"/>
+		<entry svalue="2" uvalue="2" desc="未扫描"/>
+	</enum>
+	<enum name="TaskStatus" desc="任务状态">
+		<entry svalue="1" uvalue="1" desc="开始执行任务"/>
+		<entry svalue="2" uvalue="2" desc="开始转等待点"/>
+		<entry svalue="3" uvalue="3" desc="转等待点到位"/>
+		<entry svalue="4" uvalue="4" desc="保留"/>
+		<entry svalue="5" uvalue="5" desc="等待点自捕开启"/>
+		<entry svalue="6" uvalue="6" desc="等待点自捕完成"/>
+		<entry svalue="7" uvalue="7" desc="等待点自捕失败"/>
+		<entry svalue="8" uvalue="8" desc="程引捕获开始"/>
+		<entry svalue="9" uvalue="9" desc="程引自捕开启"/>
+		<entry svalue="10" uvalue="10" desc="程引自捕完成 "/>
+		<entry svalue="11" uvalue="11" desc="程引自捕失败"/>
+		<entry svalue="12" uvalue="12" desc="数引捕获开始"/>
+		<entry svalue="13" uvalue="13" desc="数引自捕开启"/>
+		<entry svalue="14" uvalue="14" desc="数引自捕完成"/>
+		<entry svalue="15" uvalue="15" desc="数引自捕失败"/>
+	</enum>
+	<enum name="OverTopState" desc="过顶状态">
+		<entry svalue="1" uvalue="1" desc="无程序过顶"/>
+		<entry svalue="2" uvalue="2" desc="有程序过顶"/>
+	</enum>
+	<enum name="InclDirect" desc="倾斜方向">
+		<entry svalue="1" uvalue="1" desc="东倾"/>
+		<entry svalue="2" uvalue="2" desc="西倾"/>
+	</enum>
+	<enum name="ScanControl" desc="扫描控制">
+		<entry svalue="1" uvalue="1" desc="启动"/>
+		<entry svalue="2" uvalue="2" desc="停止"/>
+	</enum>
+	<enum name="ReportCtrl" desc="上报控制">
+		<entry svalue="1" uvalue="1" desc="开始发送"/>
+		<entry svalue="2" uvalue="2" desc="停止发送"/>
+	</enum>
+	<enum name="SendDataMode" desc="送数方式">
+		<entry svalue="1" uvalue="1" desc="常送"/>
+		<entry svalue="2" uvalue="2" desc="人工"/>
+		<entry svalue="3" uvalue="3" desc="选送"/>
+	</enum>
+	<enum name="SelfEffect" desc="自跟踪有效">
+		<entry svalue="1" uvalue="1" desc="跟踪"/>
+		<entry svalue="2" uvalue="2" desc="非跟踪"/>
+	</enum>
+	<enum name="Effective" desc="有效">
+		<entry svalue="1" uvalue="1" desc="有效"/>
+		<entry svalue="2" uvalue="2" desc="无效"/>
+	</enum>
+	<enum name="DelivMode" desc="送数方式">
+		<entry svalue="1" uvalue="1" desc="常送"/>
+		<entry svalue="2" uvalue="2" desc="人工"/>
+		<entry svalue="3" uvalue="3" desc="选送"/>
+	</enum>
+	<enum name="TranCtrl" desc="发送控制">
+		<entry svalue="1" uvalue="1" desc="开始发送"/>
+		<entry svalue="2" uvalue="2" desc="停止发送"/>
+	</enum>
+	<enum name="DelivState" desc="送数状态">
+		<entry svalue="1" uvalue="1" desc="开始发送"/>
+		<entry svalue="2" uvalue="2" desc="停止发送"/>
+	</enum>
+	<enum name="ReceSelect" desc="接收机选择">
+		<entry svalue="1" uvalue="1" desc="Ka遥测" />
+		<entry svalue="2" uvalue="2" desc="S" />
+		<entry svalue="3" uvalue="3" desc="Ka数传" />
+	</enum>
+	<enum name="SelectResult" desc="选择结果">
+		<entry svalue="1" uvalue="1" desc="找到曲线"/>
+		<!-- 组合号和频率均匹配 -->
+		<entry svalue="2" uvalue="2" desc="频率不匹配"/>
+		<!-- 找到曲线,组合号匹配,频率不匹配 -->
+		<entry svalue="3" uvalue="3" desc="未找到曲线"/>
+		<!-- 组合号不匹配,未找到曲线 -->
+		<entry svalue="4" uvalue="4" desc="其他原因失败"/>
+		<!-- 组合号不匹配,未找到曲线 -->
+	</enum>
+	<enum name="TestCtrl" desc="测试控制">
+		<entry svalue="1" uvalue="1" desc="开始测试"/>
+		<entry svalue="2" uvalue="2" desc="停止测试"/>
+	</enum>
+	<enum name="TestFreq" desc="测试频段">
+		<entry svalue="1" uvalue="1" desc="S频段"/>
+		<!--<entry svalue="2" uvalue="2" desc="X频段" />-->
+		<entry svalue="3" uvalue="3" desc="Ka频段"/>
+	</enum>
+	<enum name="TestAxis" desc="测试轴">
+		<entry svalue="1" uvalue="1" desc="方位"/>
+		<entry svalue="2" uvalue="2" desc="俯仰"/>
+	</enum>
+	<enum name="TestStatus" desc="测试状态">
+		<entry svalue="1" uvalue="1" desc="开始测试"/>
+		<entry svalue="2" uvalue="2" desc="正在测试"/>
+		<entry svalue="3" uvalue="3" desc="测试完成"/>
+		<entry svalue="4" uvalue="4" desc="结束测试"/>
+		<entry svalue="5" uvalue="5" desc="异常终止"/>
+		<entry svalue="6" uvalue="6" desc="不具备状态"/>
+	</enum>
+	<enum name="PredMethod" desc="预报方法">
+		<entry svalue="1" uvalue="1" desc="历元时间预报"/>
+		<entry svalue="2" uvalue="2" desc="指定时间段预报"/>
+	</enum>
+	<enum name="StateCalResul" desc="计算结果状态">
+		<entry svalue="1" uvalue="1" desc="开始计算"/>
+		<entry svalue="2" uvalue="2" desc="正在计算"/>
+		<entry svalue="3" uvalue="3" desc="目标可见"/>
+		<entry svalue="4" uvalue="4" desc="目标不可见"/>
+		<entry svalue="5" uvalue="5" desc="未找到根数"/>
+		<entry svalue="6" uvalue="6" desc="异常终止"/>
+	</enum>
+	<enum name="EmissPolar" desc="发射极化">
+		<entry svalue="1" uvalue="1" desc="左旋"/>
+		<entry svalue="2" uvalue="2" desc="右旋"/>
+	</enum>
+	<enum name="PhaseCtrl" desc="校相控制">
+		<entry svalue="1" uvalue="1" desc="开始自动校相"/>
+		<entry svalue="2" uvalue="2" desc="结束校相"/>
+	</enum>
+	<enum name="AutoPhaseState" desc="自动校相执行状态">
+		<entry svalue="1" uvalue="1" desc="开始自动校相"/>
+		<entry svalue="2" uvalue="2" desc="结束校相"/>
+	</enum>
+	<enum name="ChangeState" desc="找零状态">
+		<entry svalue="1" uvalue="1" desc="正在转对塔"/>
+		<entry svalue="2" uvalue="2" desc="找零完成"/>
+		<entry svalue="3" uvalue="3" desc="找零异常终止"/>
+	</enum>
+	<enum name="SkewState" desc="拉偏状态">
+		<entry svalue="1" uvalue="1" desc="正在拉偏"/>
+		<entry svalue="2" uvalue="2" desc="完成拉偏"/>
+		<entry svalue="3" uvalue="3" desc="异常终止"/>
+	</enum>
+	<enum name="CheckState" desc="检查状态">
+		<entry svalue="1" uvalue="1" desc="正在检查"/>
+		<entry svalue="2" uvalue="2" desc="完成检查"/>
+		<entry svalue="3" uvalue="3" desc="AGC异常"/>
+		<entry svalue="4" uvalue="4" desc="误差电压超限"/>
+		<entry svalue="5" uvalue="5" desc="其他原因失败"/>
+	</enum>
+	<enum name="SelfTrackResult" desc="自跟踪检查结果">
+		<entry svalue="1" uvalue="1" desc="极性正常"/>
+		<entry svalue="2" uvalue="2" desc="方位极性反"/>
+		<entry svalue="3" uvalue="3" desc="俯仰极性反"/>
+		<entry svalue="4" uvalue="4" desc="Az/El极性均反"/>
+		<entry svalue="5" uvalue="5" desc="检查时失锁"/>
+		<entry svalue="6" uvalue="6" desc="AGC异常"/>
+		<entry svalue="7" uvalue="7" desc="方位随机差异常"/>
+		<entry svalue="8" uvalue="8" desc="俯仰随机差异常"/>
+		<entry svalue="9" uvalue="9" desc="未做检查"/>
+	</enum>
+	<enum name="ExamResult" desc="检查结果">
+		<entry svalue="1" uvalue="1" desc="通过"/>
+		<entry svalue="2" uvalue="2" desc="未通过"/>
+	</enum>
+	<enum name="FreqBand" desc="频段">
+		<entry svalue="1" uvalue="1" desc="S"/>
+		<entry svalue="2" uvalue="2" desc="Ka遥测"/>
+		<entry svalue="3" uvalue="3" desc="Ka数传"/>
+		<entry svalue="4" uvalue="4" desc="S+Ka遥测"/>
+		<entry svalue="5" uvalue="5" desc="S+Ka数传"/>
+		<entry svalue="6" uvalue="6" desc="S+Ka遥测+Ka数传"/>
+	</enum>
+	<enum name="EmissPolar" desc="接收极化">
+		<entry svalue="1" uvalue="1" desc="左旋"/>
+		<entry svalue="2" uvalue="2" desc="右旋"/>
+	</enum>
+	<enum name="PhaseCorrMeth" desc="校相方式">
+		<entry svalue="1" uvalue="1" desc="对塔"/>
+		<entry svalue="2" uvalue="2" desc="当前位置"/>
+		<entry svalue="3" uvalue="3" desc="对星(动态)"/>
+	</enum>
+	<enum name="FollowCheck" desc="是否进行跟踪检查">
+		<entry svalue="1" uvalue="1" desc="检查"/>
+		<entry svalue="2" uvalue="2" desc="不检查"/>
+	</enum>
+	<enum name="CalibPhase" desc="校相状态">
+		<entry svalue="1" uvalue="1" desc="开始校相"/>
+		<entry svalue="2" uvalue="2" desc="校相正常完成"/>
+		<entry svalue="3" uvalue="3" desc="结束校相"/>
+		<entry svalue="4" uvalue="4" desc="未找到轨道数据"/>
+		<!--未找到轨道数据,校相终止 -->
+		<entry svalue="5" uvalue="5" desc="基带查询超时"/>
+		<!--基带查询响应超时,校相终止 -->
+		<entry svalue="6" uvalue="6" desc="基带校相超时"/>
+		<!-- 基带开始校相命令响应超时,校相终止 -->
+		<entry svalue="7" uvalue="7" desc="基带装订超时"/>
+		<!--基带参数装订命令响应超时,校相终止 -->
+		<entry svalue="8" uvalue="8" desc="基带拒收校相"/>
+		<!--基带拒收开始校相命令,校相终止 -->
+		<entry svalue="9" uvalue="9" desc="基带拒收装订"/>
+		<!-- 基带拒收参数装订命令,校相终止 -->
+		<entry svalue="10" uvalue="10" desc="接收机失锁"/>
+		<!-- 校相过程中接收机失锁,校相终止 -->
+		<entry svalue="11" uvalue="11" desc="开始自跟踪检查"/>
+		<entry svalue="12" uvalue="12" desc="完成自跟踪检查"/>
+		<entry svalue="13" uvalue="13" desc="开始定向灵敏度和交叉耦合检查"/>
+		<!-- 开始定向灵敏度和交叉耦合检查 -->
+		<entry svalue="14" uvalue="14" desc="完成定向灵敏度和交叉耦合检查"/>
+		<!-- 完成定向灵敏度和交叉耦合检查 -->
+		<entry svalue="15" uvalue="15" desc="AGC异常"/>
+		<entry svalue="16" uvalue="16" desc="误差电压超限"/>
+		<entry svalue="17" uvalue="17" desc="基带装订失败"/>
+	</enum>
+	<enum name="OperatMode" desc="运行方式">
+		<entry svalue="1" uvalue="1" desc="人工操作"/>
+		<entry svalue="2" uvalue="2" desc="自动运行"/>
+	</enum>
+	<enum name="RefCoordSys" desc="参考坐标系">
+		<entry svalue="1" uvalue="1" desc="DX1"/>
+		<entry svalue="2" uvalue="2" desc="DX2"/>
+		<entry svalue="3" uvalue="3" desc="C2000"/>
+		<entry svalue="4" uvalue="4" desc="WGS-84"/>
+		<entry svalue="5" uvalue="5" desc="未知"/>
+	</enum>
+	<enum name="QueryResult" desc="查询结果">
+		<entry svalue="1" uvalue="1" desc="正常"/>
+		<entry svalue="2" uvalue="2" desc="未找到计算结果"/>
+	</enum>
+	<enum name="TrackFreqBand" desc="跟踪频段">
+		<entry svalue="1" uvalue="1" desc="Ka频段"/>
+		<entry svalue="2" uvalue="2" desc="S频段"/>
+	</enum>
+	<enum name="Frequency" desc="频率">
+		<entry svalue="1" uvalue="1" desc="S频段"/>
+		<!--<entry svalue="2" uvalue="2" desc="X频段" />-->
+		<entry svalue="3" uvalue="3" desc="Ka频段"/>
+	</enum>
+</enums>

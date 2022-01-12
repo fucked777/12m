@@ -1,0 +1,72 @@
+<DeviceWidget text="测控数字化前端">
+	<GridLayout>
+		<GroupBox row="0" col="0" rowSpan="1" columnSpan="2" text="公共单元">
+			<GridLayout>
+				<Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="监控方式"/>
+				<Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="设备综合状态"/>
+				<Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="外时码状态"/>
+				<Widget row="0" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="外频标状态"/>
+				<Widget row="0" col="4" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="数据网络1状态"/>
+				<Widget row="0" col="5" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="数据网络2状态"/>
+				<Widget row="1" col="0" rowSpan="1" columnSpan="1" type="ComboBoxStatusLabel" desc="监控方式" deviceId="0x7001" modeId="0xFFFF" unitId="1" targetId="0" paramId="ControlMode">
+					<Item value="1" text="本控"/>
+					<Item value="2" text="分控"/>
+				</Widget>
+				<Widget row="1" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="设备综合状态" deviceId="0x7001" modeId="0xFFFF" unitId="1" targetId="0" paramId="DevSynStatus">
+					<Item value="1" desc="故障" ledColor="red"/>
+					<Item value="2" desc="正常" ledColor="green"/>
+				</Widget>
+				<Widget row="1" col="2" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="外时码状态" deviceId="0x7001" modeId="0xFFFF" unitId="1" targetId="0" paramId="CodeStatus">
+					<Item value="1" desc="故障" ledColor="red"/>
+					<Item value="2" desc="正常" ledColor="green"/>
+				</Widget>
+				<Widget row="1" col="3" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="外频标状态" deviceId="0x7001" modeId="0xFFFF" unitId="1" targetId="0" paramId="MarkerStatus">
+					<Item value="1" desc="故障" ledColor="red"/>
+					<Item value="2" desc="正常" ledColor="green"/>
+				</Widget>
+				<Widget row="1" col="4" rowSpan="1" columnSpan="1" Align="Center" type="ComboBoxStatusLabel" desc="数据网络1状态" deviceId="0x7001" modeId="0xFFFF" unitId="1" targetId="0" paramId="DateStatus1">
+					<Item value="1" text="已连接"/>
+					<Item value="2" text="未连接"/>
+					<Item value="3" text="故障"/>
+				</Widget>
+				<Widget row="1" col="5" rowSpan="1" columnSpan="1" Align="Center" type="ComboBoxStatusLabel" desc="数据网络2状态" deviceId="0x7001" modeId="0xFFFF" unitId="1" targetId="0" paramId="DateStatus2">
+					<Item value="1" text="已连接"/>
+					<Item value="2" text="未连接"/>
+					<Item value="3" text="故障"/>
+				</Widget>
+			</GridLayout>
+		</GroupBox>
+		<GroupBox row="1" col="0" rowSpan="1" columnSpan="2" text="发射单元">
+			<GridLayout>
+				<GroupBox row="0" col="0" rowSpan="1" columnSpan="1" text="发射1(任务)">
+					<Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="发射功率"/>
+					<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="发射功率" deviceId="7001" modeId="FFFF" unitId="2" targetId="0" paramId="SendPower_1"/>
+					<Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="发射频率"/>
+					<Widget row="1" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="发射频率" deviceId="7001" modeId="FFFF" unitId="2" targetId="0" paramId="SendFreq_1"/>
+				</GroupBox>
+				<GroupBox row="0" col="1" rowSpan="1" columnSpan="1" text="发射2(模拟源)">
+					<Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="发射功率"/>
+					<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="发射功率" deviceId="7001" modeId="FFFF" unitId="2" targetId="0" paramId="SendPower_2"/>
+					<Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="发射频率"/>
+					<Widget row="1" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="发射频率" deviceId="7001" modeId="FFFF" unitId="2" targetId="0" paramId="SendFreq_2"/>
+				</GroupBox>
+			</GridLayout>
+		</GroupBox>
+		<GroupBox row="0" col="2" rowSpan="2" columnSpan="2" text="测距测速">
+			<GridLayout>
+				<Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="启扫"/>
+				<Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="回零"/>
+				<Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="双捕"/>
+				<Widget row="0" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="距捕"/>
+				<Widget row="1" col="0" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="启扫"/>
+				<Widget row="1" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="回零"/>
+				<Widget row="1" col="2" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="双捕"/>
+				<Widget row="1" col="3" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="距捕"/>
+				<Widget row="2" col="0" rowSpan="1" columnSpan="2" Align="Center" type="NameLabel" text="距离(km)"/>
+				<Widget row="2" col="2" rowSpan="1" columnSpan="2" Align="Center" type="NameLabel" text="速度(m/s)"/>
+				<Widget row="3" col="0" rowSpan="1" columnSpan="2" Align="Center" type="NumberStatusLabel" text="距离(km)"/>
+				<Widget row="3" col="2" rowSpan="1" columnSpan="2" Align="Center" type="NumberStatusLabel" text="速度(m/s)"/>
+			</GridLayout>
+		</GroupBox>
+	</GridLayout>
+</DeviceWidget>

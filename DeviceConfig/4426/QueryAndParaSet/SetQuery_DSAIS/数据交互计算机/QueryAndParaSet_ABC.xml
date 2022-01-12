@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="ABC" ModeType="0xFFFF" desc="未取名" flag="1001">
+	<result MessageType="0x0000F104">
+		<field pid="1" id="ControlMode" desc="控制模式" dataType="uint" displayFormat="enum|ControlMode" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="2" id="DeviceStatus" desc="系统诊断信息" dataType="uint" displayFormat="enum|DeviceStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="3" id="MissionNum" desc="任务数量" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="个"/>
+		<field pid="4" id="CommStatusItemNum" desc="通信状态项目" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="个"/>
+		<field pid="5" id="SoftUnitItemNum" desc="软件单元项目" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="个"/>
+		<field pid="6" id="HostNum" desc="主机数量" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="个"/>
+		<field pid="7" id="NetCardItemNum" desc="网卡项目" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="个"/>
+		<field pid="8" id="TcpStatusItemNum" desc="TCP连接项目" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="个"/>
+		<field pid="9" id="CenterDataControlItemNum" desc="中心数据发送状态" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="个"/>
+		<field pid="10" id="ReserveSize" desc="保留字长度" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="11" id="Reserve" desc="保留字" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<recycle id="1" recycleNum="MissionNum" desc="">
+			<field pid="1" id="MissionID" desc="任务标识" dataType="uint" displayFormat="Hex" initValue="" minValue="" maxValue="FFFFFFFF" step="" unit=""/>
+			<field pid="2" id="MissionUAC" desc="天线" dataType="uint" displayFormat="Hex" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="3" id="Mission1CenterNum" desc="任务参试中心数量" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="10" id="MissionSegment" desc="弧段" dataType="uint" displayFormat="enum|MissionSegment" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="11" id="MissionStarTrackingJD" desc="任务任务跟踪开始时间积日" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="12" id="MissionStarTrackingJS" desc="任务任务跟踪开始时间积秒" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="13" id="MissionMissionStopJD" desc="任务任务结束时间积日" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="14" id="MissionMissionStopJS" desc="任务任务结束时间积秒" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="15" id="MissionRunStatus" desc="运行状态" dataType="uint" displayFormat="enum|MissionRunStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="16" id="MissionGuideMode" desc="引导模式" dataType="uint" displayFormat="enum|MissionGuideMode" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="17" id="MissionGuideSendStatus" desc="引导数据送数控制状态" dataType="uint" displayFormat="enum|MissionGuideSendStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="18" id="MissionGuideCenter" desc="任务引导中心" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="19" id="MissionT0" desc="上升段T0" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="20" id="Mission1BbeNum" desc="任务参试基带数量" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		</recycle>
+		<recycle id="2" recycleNum="CommStatusItemNum" desc="">
+			<field pid="1" id="CommStatusItemPortID" desc="端口标识" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="2" id="CommStatusItemPortCode" desc="端口名称" dataType="char|20" displayFormat="String" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="3" id="CommStatusItemBid" desc="数据类型标识" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="4" id="CommStatusItemDataCode" desc="数据类型名称" dataType="char|20" displayFormat="String" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="5" id="CommStatusItemMid" desc="任务标识" dataType="uint" displayFormat="Hex" initValue="" minValue="" maxValue="FFFFFFFF" step="" unit=""/>
+			<field pid="6" id="CommStatusItemUAC" desc="数据天线标识" dataType="uint" displayFormat="Hex" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="7" id="CommStatusItemFramesNum" desc="该秒接收的该类型数据帧数量" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="8" id="CommStatusItemDir" desc="数据收发方向" dataType="uint" displayFormat="enum|CommStatusItemDir" initValue="" minValue="" maxValue="" step="" unit=""/>
+		</recycle>
+		<recycle id="3" recycleNum="SoftUnitItemNum" desc="">
+			<field pid="1" id="SoftUnitItemID" desc="标识" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="2" id="SoftUnitItemCode" desc="代号" dataType="char|20" displayFormat="String" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="3" id="SoftUnitItemStatus" desc="运行状态" dataType="uint" displayFormat="enum|SoftUnitItemStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="4" id="SoftUnitItem1DetailItemNum" desc="软件单元详细信息项目数量" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		</recycle>
+		<recycle id="4" recycleNum="HostNum" desc="">
+			<field pid="1" id="HostID" desc="主机编号" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="2" id="HostName" desc="主机名称" dataType="char|20" displayFormat="String" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="3" id="HostStatus" desc="主机在线状态" dataType="uint" displayFormat="enum|HostStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+		</recycle>
+		<recycle id="5" recycleNum="NetCardItemNum" desc="">
+			<field pid="1" id="NetCardItemIP" desc="IP地址" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="2" id="NetCardItemHostId" desc="网卡所在主机标识" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="3" id="NetCardItemType" desc="网卡类型" dataType="uint" displayFormat="enum|NetCardItemType" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="4" id="NetCardItemStatus" desc="网卡状态" dataType="uint" displayFormat="enum|NetCardItemStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+		</recycle>
+		<recycle id="6" recycleNum="TcpStatusItemNum" desc="">
+			<field pid="1" id="TcpStatusItemHostID" desc="客户端主机标识" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="2" id="TcpStatusItemBbeIndex" desc="基带序号" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="3" id="TcpStatusItemStatus" desc="连接状态" dataType="uint" displayFormat="enum|TcpStatusItemStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+		</recycle>
+		<recycle id="7" recycleNum="CenterDataControlItemNum" desc="">
+			<field pid="1" id="CenterDataControlItemId" desc="中心标识" dataType="uint" displayFormat="Hex" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="2" id="CenterDataControlItemCode" desc="中心名称" dataType="char|20" displayFormat="String" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="3" id="CenterDataControlItemIsUsing" desc="是否启用" dataType="uint" displayFormat="enum|CenterDataControlItemIsUsing" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="4" id="CenterDataControlItemIsSendTtcFirstRouter" desc="第一路由是否发送测控数据" dataType="uint" displayFormat="enum|CenterDataControlItemIsSendTtcFirstRouter" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="5" id="CenterDataControlItemIsSendLinkFirstRouter" desc="第一路由是否发送链路监视数据" dataType="uint" displayFormat="enum|CenterDataControlItemIsSendLinkFirstRouter" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="6" id="CenterDataControlItemIsSendTtcSecondRouter" desc="第二路由是否发送测控数据" dataType="uint" displayFormat="enum|CenterDataControlItemIsSendTtcSecondRouter" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="7" id="CenterDataControlItemIsSendLinkSecondRouter" desc="第二路由是否发送链路监视数据" dataType="uint" displayFormat="enum|CenterDataControlItemIsSendLinkFirstRouter" initValue="" minValue="" maxValue="" step="" unit=""/>
+		</recycle>
+		<recycle id="8" recycleNum="Mission1CenterNum" desc="任务参试中心送数状态">
+			<field pid="4" id="Mission1Center1" desc="参试中心标识" dataType="uint" displayFormat="Hex" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="5" id="Mission1Center1SendDataStatus" desc="中心在任务中送数状态" dataType="uint" displayFormat="enum|Mission1Center1SendDataStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+		</recycle>
+		<recycle id="9" recycleNum="Mission1BbeNum" desc="任务参试基带标识">
+			<field pid="21" id="Mission1Bbe1" desc="任务参试基带标识" dataType="uint" displayFormat="Hex" initValue="" minValue="" maxValue="" step="" unit=""/>
+		</recycle>
+		<recycle id="10" recycleNum="SoftUnitItem1DetailItemNum" desc="软件单元项目主机信息">
+			<field pid="5" id="SoftUnitItem1DetailItem1HostID" desc="运行主机编号" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="6" id="SoftUnitItem1DetailItem1Status" desc="软件单元在主机上运行状态" dataType="uint" displayFormat="enum|SoftUnitItem1DetailItem1Status" initValue="" minValue="" maxValue="" step="" unit=""/>
+		</recycle>
+	</result>
+</cmd>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+id  枚举ID  -与设备类型关联
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums ExtenType="DFOMAC" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="ChanSendNumb" desc="发射通道号">
+		<entry svalue="1" uvalue="1" desc="发射1(任务)"/>
+		<entry svalue="2" uvalue="2" desc="发射2(模拟源)"/>
+	</enum>
+	<enum name="ChannelType" desc="通道类型">
+		<entry svalue="1" uvalue="1" desc="测控接收"/>
+	</enum>
+	<enum name="ChanReceNumb" desc="接收通道号">
+		<entry svalue="1" uvalue="1" desc="接收1(S1左旋)"/>
+		<entry svalue="2" uvalue="2" desc="接收2(S1右旋)"/>
+		<entry svalue="3" uvalue="3" desc="接收5(小环)"/>
+		<!--
+		<entry svalue="4" uvalue="4" desc="接收3(S2左旋)"/>
+		-->
+	</enum>
+	<enum name="TimeConst" desc="时间常数">
+		<entry svalue="1" uvalue="1" desc="1ms"/>
+		<entry svalue="2" uvalue="2" desc="10ms"/>
+		<entry svalue="3" uvalue="3" desc="100ms"/>
+		<entry svalue="4" uvalue="4" desc="1000ms"/>
+	</enum>
+	<enum name="AGCCtrl" desc="AGC控制">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="自动"/>
+		<entry svalue="2" uvalue="2" desc="手动"/>
+	</enum>
+	<enum name="SignalSource" desc="信号来源">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="基带"/>
+		<entry svalue="2" uvalue="2" desc="前端"/>
+	</enum>
+	<enum name="ChannelSwitch" desc="通道开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="禁止"/>
+		<entry svalue="2" uvalue="2" desc="输出"/>
+	</enum>
+	<enum name="TestCtrl" desc="测试控制">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="开始测试"/>
+		<entry svalue="2" uvalue="2" desc="终止测试"/>
+	</enum>
+	<enum name="TestState" desc="测试状态">
+		<entry svalue="0" uvalue="0" desc="未启动"/>
+		<entry svalue="1" uvalue="1" desc="正在测试"/>
+		<entry svalue="2" uvalue="2" desc="测试完成"/>
+		<entry svalue="3" uvalue="3" desc="终止测试"/>
+	</enum>
+	<enum name="ChanNumb" desc="通道号">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="发射1(任务)"/>
+		<entry svalue="2" uvalue="2" desc="发射2(模拟源)"/>
+	</enum>
+	<enum name="TaskWorkMode" desc="工作方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="任务方式"/>
+		<entry svalue="2" uvalue="2" desc="自检方式"/>
+		<entry svalue="3" uvalue="3" desc="数字化闭环"/>
+		<!--<entry svalue="4" uvalue="4" desc="接收5回放"/>-->
+	</enum>
+	<enum name="WorkModeSet" desc="工作模式设置">
+		<entry svalue="1" uvalue="1" desc="常规测控"/>
+		<!-- <entry svalue="2" uvalue="2" desc="保留"/> -->
+		<entry svalue="3" uvalue="3" desc="扩跳频测控"/>
+		<entry svalue="4" uvalue="4" desc="S+Ka组合测控"/>
+	</enum>
+</enums>

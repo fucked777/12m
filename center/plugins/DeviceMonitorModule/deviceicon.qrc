@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icon/测试标校-1.png</file>
+        <file>icon/发射-1.png</file>
+        <file>icon/高频接收-1.png</file>
+        <file>icon/基带-1.png</file>
+        <file>icon/时频-1.png</file>
+        <file>icon/数据存储与交互-1.png</file>
+        <file>icon/数字化前端-1.png</file>
+        <file>icon/天伺馈-1.png</file>
+        <file>icon/skylidar.ico</file>
+    </qresource>
+</RCC>

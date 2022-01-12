@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configure name="自动化运行策略装订">
+  <!-- <item id="RDW" name="资源调度方式" type="Enum" enumValue="测站方式=3"/>
+  <item id="RRW" name="资源重组方式" type="Enum" enumValue="预先重组=1" /> -->
+  <item id="DP" name="设备计划是否调整" type="Enum" enumValue="不调整=1|调整=2"/>
+  <item name="工作计划补齐时间" >
+    <item id="WRT" name="任务准备时间(秒)" type="Integer" min="0" max="65535" desc="计划准备开始时间的修正，正负代表在时间的基础上进行修正"/>
+    <item id="WST" name="任务开始时间(秒)" type="Integer" min="0" max="65535" desc="计划开始时间的修正，正负代表在时间的基础上进行修正"/>
+    <item id="WET" name="任务结束时间(秒)" type="Integer" min="0" max="65535" desc="计划结束开始时间的修正，正负代表在时间的基础上进行修正"/>
+  </item >
+</Configure>

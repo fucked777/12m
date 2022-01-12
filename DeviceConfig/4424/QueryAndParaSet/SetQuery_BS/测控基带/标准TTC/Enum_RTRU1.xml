@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="RTRU" ModeType="0x01" edition="1.1.1.1">
+	<enum name="TrappState" desc="距捕">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="锁定"/>
+		<entry svalue="2" uvalue="2" desc="失锁"/>
+	</enum>
+	<enum name="HostLockInd" desc="主音">
+		<entry svalue="1" uvalue="1" desc="锁定"/>
+		<entry svalue="2" uvalue="2" desc="失锁"/>
+	</enum>
+	<enum name="CurrentlySendInf" desc="当前发送次音">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="未发送次音"/>
+		<entry svalue="2" uvalue="2" desc="20kHz"/>
+		<entry svalue="3" uvalue="3" desc="16kHz"/>
+		<entry svalue="4" uvalue="4" desc="16.8kHz"/>
+		<entry svalue="5" uvalue="5" desc="16.16kHz"/>
+		<entry svalue="6" uvalue="6" desc="16.04kHz"/>
+		<entry svalue="7" uvalue="7" desc="16.032kHz"/>
+		<entry svalue="8" uvalue="8" desc="16.010kHz"/>
+		<entry svalue="9" uvalue="9" desc="16.008kHz"/>
+		<entry svalue="10" uvalue="10" desc="16.002kHz"/>
+		<entry svalue="11" uvalue="11" desc="16.0005kHz"/>
+	</enum>
+	<enum name="MinSideSelect" desc="最低侧音">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="0.5Hz"/>
+		<entry svalue="2" uvalue="2" desc="2Hz"/>
+		<entry svalue="3" uvalue="3" desc="8Hz"/>
+		<entry svalue="4" uvalue="4" desc="10Hz"/>
+		<entry svalue="5" uvalue="5" desc="32Hz"/>
+		<entry svalue="6" uvalue="6" desc="40Hz"/>
+	</enum>
+	<enum name="SoftAmbResol" desc="解模糊">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="基带解"/>
+		<entry svalue="2" uvalue="2" desc="基带不解"/>
+	</enum>
+	<enum name="DistPredMethod" desc="距离预报">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="手动"/>
+		<entry svalue="2" uvalue="2" desc="轨道根数"/>
+		<entry svalue="3" uvalue="3" desc="DTE弹道数据"/>
+	</enum>
+</enums>

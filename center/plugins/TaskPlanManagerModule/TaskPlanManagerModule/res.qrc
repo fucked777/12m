@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/goup_gray.png</file>
+        <file>image/goup_green.png</file>
+        <file>image/goup_red.png</file>
+        <file>image/phase_correction_green.png</file>
+        <file>image/phase_correction_red.png</file>
+        <file>image/task_end_gray.png</file>
+        <file>image/task_end_green.png</file>
+        <file>image/task_end_red.png</file>
+        <file>image/turn_to_waiting_point_green.png</file>
+        <file>image/turn_to_waiting_point_red.png</file>
+        <file>image/zero_correction_green.png</file>
+        <file>image/zero_correction_red.png</file>
+        <file>image/capture_track_gray.png</file>
+        <file>image/capture_track_green.png</file>
+        <file>image/capture_track_red.png</file>
+        <file>image/phase_correction_gray.png</file>
+        <file>image/turn_to_waiting_point_gray.png</file>
+        <file>image/zero_correction_gray.png</file>
+        <file>image/task_preparation_gray.png</file>
+        <file>image/task_preparation_green.png</file>
+        <file>image/task_preparation_red.png</file>
+    </qresource>
+</RCC>

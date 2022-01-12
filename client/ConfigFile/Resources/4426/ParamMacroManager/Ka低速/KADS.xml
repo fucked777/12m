@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mode>
+	<frequency>
+		<unit groupName="发射与接收分系统" deviceID="4401_1/4402_1/AAAA_1" enumGroup="2" desc="配置文件需要配置 AAAA_1 表示该组内的参数是通用的">
+			<field pid="109" id="WorkRate" desc="数传上行频率" dataType="ulong" displayFormat="double" initValue="" minValue="22550" maxValue="23150" step="0.000001" unit="MHz"/>
+			<field pid="108" id="KaSBandDownFreq" desc="数传下行频率" dataType="ulong" displayFormat="double" initValue="" minValue="18200" maxValue="21200" step="0.0001" unit="MHz"/>
+			<field pid="105" GroupId="setting3" id="SEmissPolar" desc="发射极化" dataType="uint8" displayFormat="enum|SPolar" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="106" GroupId="setting3" id="SReceivPolar" desc="接收极化" dataType="uint8" displayFormat="enum|SRecPolar" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="107" GroupId="setting3" id="STrackPolar" desc="跟踪极化" dataType="uint8" displayFormat="enum|SPolar" initValue="" minValue="" maxValue="" step="" unit=""/>
+		</unit>
+		<unit groupName="天伺馈分系统" deviceID="4401_1/4402_1/1011_1/1012_1/AAAA_1" enumGroup="3">
+			<field pid="2" id="KaXPolarHorn" desc="极化角" desc2="" dataType="int" displayFormat="double" initValue="0" minValue="-180" maxValue="180" step="0.1" unit="°" isShow="0"/>
+			<field pid="111" id="AngularSamplRate" desc="测角采样率" dataType="uint8" displayFormat="enum|AngularSamplRate" initValue="" minValue="" maxValue="" step="" unit=""/>
+		</unit>
+		<unit groupName="Ka数传中频接收机单元" deviceID="4401_2/4402_2" enumGroup="4">
+			<field pid="101" id="CarrierModulation" desc="调制体制" dataType="uint8" displayFormat="enum|CarrierModulation" initValue="3" minValue="" maxValue="" step="" unit=""/>
+			<field pid="102" id="AGUTime" desc="AGC时间常数" dataType="uint8" displayFormat="enum|AGUTime" initValue="2" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="111" id="DataOutWay" desc="数据输出方式" dataType="uint8" displayFormat="enum|DataOutWay" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="104" id="SignalModelChoose" desc="解调数据输出选择" dataType="uint8" displayFormat="enum|SignalModelChoose" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="106" id="GrayCode" desc="Gray编码" dataType="uint8" displayFormat="enum|GrayCode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="107" id="IOPowerDB" desc="I/Q功率比" dataType="int" displayFormat="double" initValue="1" minValue="-10" maxValue="10" step="0.1" unit="dB"/>
+			<field pid="110" id="BlockCodeCheck" desc="分组码校验输出选择" dataType="uint8" displayFormat="enum|BlockCodeCheck" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="105" id="ParallelSCMode" desc="并串转换方式" dataType="uint8" displayFormat="enum|ParallelSCMode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="108" id="PolarizationMode" desc="极化方式" dataType="uint8" displayFormat="enum|PolarizationMode" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="109" id="PhaseMapping" desc="相位映射" dataType="uint8" displayFormat="enum|PhaseMapping" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		</unit>
+		<unit groupName="Ka数传I路解调单元" deviceID="4401_4/4402_4" enumGroup="5">
+			<field pid="101" GroupId="1" id="CodeType" desc="码型" dataType="uint8" displayFormat="enum|CodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="102" GroupId="1" id="CodeRateSett" desc="码速率设置方式" dataType="uint8" displayFormat="enum|CodeRateSett" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="104" GroupId="1" id="DataOutWay" desc="数据输出方式" dataType="uint8" displayFormat="enum|DataOutWay" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="105" GroupId="8" id="CodeWay" desc="译码方式" dataType="uint8" displayFormat="enum|CodeWay" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="106" GroupId="2" id="ViterbiDecoding" desc="卷积码类型" dataType="uint8" displayFormat="enum|ViterbiDecoding" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="107" GroupId="2" id="G2PhaseReversal" desc="G2相位反转" dataType="uint8" displayFormat="enum|G2PhaseReversal" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="108" GroupId="3" id="RSDecoding" desc="R-S译码类型" dataType="uint8" displayFormat="enum|RSDecoding" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="109" GroupId="3" id="InterlaceDeep" desc="RS译码交织深度" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="5" step="" unit=""/>
+			<field pid="110" GroupId="3" id="DoubleBaseChange" desc="R-S译码坐标基" dataType="uint8" displayFormat="enum|DoubleBaseChange" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="111" GroupId="4" id="Descramble" desc="译码前解扰开关" dataType="uint8" displayFormat="enum|Descramble" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="112" GroupId="4" id="DescPolynomial" desc="译码前解扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="113" GroupId="4" id="DescPolyLenght" desc="译码前解扰多项式长度" dataType="uint8" displayFormat="enum|PolynomialLength" initValue="8" minValue="" maxValue="" step="" unit=""/>
+			<field pid="114" GroupId="4" id="DescInitPhase" desc="译码前解扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="115" GroupId="4" id="DescSequeChoose" desc="译码前解扰输出位置" dataType="uint8" displayFormat="enum|DescSequeChoose" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="116" GroupId="5" id="Descramble2" desc="译码后解扰开关" dataType="uint8" displayFormat="enum|Descramble" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="117" GroupId="5" id="DescPolynomial2" desc="译码后解扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="118" GroupId="5" id="DescPolyLenght2" desc="译码后解扰多项式长度" dataType="uint8" displayFormat="enum|PolynomialLength" initValue="8" minValue="" maxValue="" step="" unit=""/>
+			<field pid="119" GroupId="5" id="DescInitPhase2" desc="译码后解扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="120" GroupId="5" id="DescSequeChoose2" desc="译码后解扰输出位置" dataType="uint8" displayFormat="enum|DescSequeChoose" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="121" GroupId="1" id="FrameLenght" desc="帧长" dataType="ushort" displayFormat="UInt16" initValue="4" minValue="4" maxValue="2048" step="" unit="字"/>
+			<field pid="122" GroupId="1" id="IWayGroupLen" desc="帧同步码组长度" dataType="uint8" displayFormat="UInt8" initValue="16" minValue="16" maxValue="64" step="" unit=""/>
+			<field pid="123" GroupId="1" id="IWayBlockPatt" desc="帧同步码组图样" dataType="char|24" displayFormat="HexString" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="124" GroupId="1" id="ICodeGroupPos" desc="帧码组位置" dataType="uint8" displayFormat="enum|FraCodGroPos" initValue="2" minValue="" maxValue="" step="" unit=""/>
+			<field pid="130" GroupId="8" id="LDPCCodeRate" desc="LDPC译码方式" dataType="uint8" displayFormat="enum|LDPCCodeRate" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="131" GroupId="8" id="TurboCodeRate" desc="Turbo译码方式" dataType="uint8" displayFormat="enum|TurboCodeRate" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		</unit>
+		<unit groupName="Ka数传Q路解调单元" deviceID="4401_5/4402_5" enumGroup="6">
+			<field pid="101" GroupId="1" id="CodeType" desc="码型" dataType="uint8" displayFormat="enum|CodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="102" GroupId="1" id="CodeRateSett" desc="码速率设置方式" dataType="uint8" displayFormat="enum|CodeRateSett" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="104" GroupId="1" id="DataOutWay" desc="数据输出方式" dataType="uint8" displayFormat="enum|DataOutWay" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="105" GroupId="8" id="CodeWay" desc="译码方式" dataType="uint8" displayFormat="enum|CodeWay" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="106" GroupId="2" id="ViterbiDecoding" desc="卷积码类型" dataType="uint8" displayFormat="enum|ViterbiDecoding" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="107" GroupId="2" id="G2PhaseReversal" desc="G2相位反转" dataType="uint8" displayFormat="enum|G2PhaseReversal" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="108" GroupId="3" id="RSDecoding" desc="R-S译码类型" dataType="uint8" displayFormat="enum|RSDecoding" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="109" GroupId="3" id="InterlaceDeep" desc="RS译码交织深度" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="5" step="" unit=""/>
+			<field pid="110" GroupId="3" id="DoubleBaseChange" desc="R-S译码坐标基" dataType="uint8" displayFormat="enum|DoubleBaseChange" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="111" GroupId="4" id="Descramble" desc="译码前解扰开关" dataType="uint8" displayFormat="enum|Descramble" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="112" GroupId="4" id="DescPolynomial" desc="译码前解扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="113" GroupId="4" id="DescPolyLenght" desc="译码前解扰多项式长度" dataType="uint8" displayFormat="enum|PolynomialLength" initValue="8" minValue="" maxValue="" step="" unit=""/>
+			<field pid="114" GroupId="4" id="DescInitPhase" desc="译码前解扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="115" GroupId="4" id="DescSequeChoose" desc="译码前解扰输出位置" dataType="uint8" displayFormat="enum|DescSequeChoose" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="116" GroupId="5" id="Descramble2" desc="译码后解扰开关" dataType="uint8" displayFormat="enum|Descramble" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="117" GroupId="5" id="DescPolynomial2" desc="译码后解扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="118" GroupId="5" id="DescPolyLenght2" desc="译码后解扰多项式长度" dataType="uint8" displayFormat="enum|PolynomialLength" initValue="8" minValue="" maxValue="" step="" unit=""/>
+			<field pid="119" GroupId="5" id="DescInitPhase2" desc="译码后解扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="120" GroupId="5" id="DescSequeChoose2" desc="译码后解扰输出位置" dataType="uint8" displayFormat="enum|DescSequeChoose" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="121" GroupId="1" id="FrameLenght" desc="帧长" dataType="ushort" displayFormat="UInt16" initValue="4" minValue="4" maxValue="2048" step="" unit="字"/>
+			<field pid="122" GroupId="1" id="IWayGroupLen" desc="帧同步码组长度" dataType="uint8" displayFormat="UInt8" initValue="16" minValue="16" maxValue="64" step="" unit=""/>
+			<field pid="123" GroupId="1" id="IWayBlockPatt" desc="帧同步码组图样" dataType="char|24" displayFormat="HexString" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="124" GroupId="1" id="ICodeGroupPos" desc="帧码组位置" dataType="uint8" displayFormat="enum|FraCodGroPos" initValue="2" minValue="" maxValue="" step="" unit=""/>
+			<field pid="130" GroupId="8" id="LDPCCodeRate" desc="LDPC译码方式" dataType="uint8" displayFormat="enum|LDPCCodeRate" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="131" GroupId="8" id="TurboCodeRate" desc="Turbo译码方式" dataType="uint8" displayFormat="enum|TurboCodeRate" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		</unit>
+		<unit groupName="上行调制器单元" deviceID="4401_10/4402_10" enumGroup="7">
+			<field pid="101" id="CarrierModulation" desc="调制体制" dataType="uint8" displayFormat="enum|ModulationSystem" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="102" id="ScanPresetChoose" desc="扫描预置选择" dataType="uint8" displayFormat="enum|ScanPresetChoose" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="103" id="DplPresetFreq" desc="多普勒预置频率" dataType="int" displayFormat="double" initValue="1" minValue="-900" maxValue="900" step="0.001" unit="kHz"/>
+			<field pid="104" id="ScanControl" desc="扫描控制" dataType="uint8" displayFormat="enum|ScanControl" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="105" id="ScanRange" desc="扫描范围" dataType="uint" displayFormat="UInt32" initValue="1" minValue="-900" maxValue="900" step="0.0002" unit="kHz" isShow="0"/>
+			<field pid="106" id="ScanRate" desc="扫描速率" dataType="int" displayFormat="Int32" initValue="1" minValue="-15000" maxValue="15000" step="0.002" unit="Hz/s" isShow="0"/>
+			<field pid="107" id="CarrierOutSwitch" desc="载波输出开关" dataType="uint8" displayFormat="enum|CarrierOutSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="108" id="ModulationSwitch" desc="调制开关" dataType="uint8" displayFormat="enum|ModulationSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="109" id="NoiseOutSwicth" desc="噪声输出开关" dataType="uint8" displayFormat="enum|NoiseOutSwicth" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="110" id="OutCarrierNoise" desc="输出载噪比" dataType="ushort" displayFormat="double" initValue="1" minValue="0" maxValue="100" step="0.1" unit="dBHz"/>
+			<field pid="111" id="SiganlLevel" desc="信号电平" dataType="int" displayFormat="double" initValue="0" minValue="-80" maxValue="0" step="0.1" unit="dBm"/>
+			<field pid="112" id="DataOutWay" desc="I/Q分路合路" dataType="uint8" displayFormat="enum|IQShuntAndMerging" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="113" id="GrayCode" desc="Gray编码选择" dataType="uint8" displayFormat="enum|GrayCodeChoose" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="114" id="IOPowerDB" desc="I/Q功率比" dataType="int" displayFormat="Int32" initValue="1" minValue="-20" maxValue="20" step="" unit="dB" isShow="0"/>
+			<field pid="115" id="PhaseMapping" desc="相位旋转" dataType="int8" displayFormat="enum|PhaseRotation" initValue="" minValue="" maxValue="" step="" unit="" />
+		</unit>
+		<unit groupName="上行数传单元" deviceID="4401_11/4402_11" enumGroup="8">
+			<field pid="102" id="CodeType" desc="码型" dataType="uint8" displayFormat="enum|CodeType" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="103" id="FrameLength" desc="帧长" dataType="uint" displayFormat="UInt32" initValue="128" minValue="4" maxValue="2048" step="" unit="字"/>
+			<field pid="104" id="FraSynchLength" desc="帧同步码组长度" dataType="uint8" displayFormat="enum|FraSynchLength" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="105" id="FramSynchPatt" desc="帧同步码组图样" dataType="char|24" displayFormat="HexString" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="106" id="ConvolCodeType" desc="卷积编码码率" dataType="uint8" displayFormat="enum|ConvolCodeType" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="107" id="RSCodeType" desc="R-S编码方式" dataType="uint8" displayFormat="enum|RSCodeType" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="108" id="RSDecodBase" desc="R-S编码坐标基" dataType="uint8" displayFormat="enum|RSDecodBase" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="109" id="RSInterDecod" desc="交织深度" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="5" step="" unit="" isShow="0"/>
+			<field pid="110" id="LDPCFraSynchLength" desc="LDPC编码同步码长度" dataType="uint" displayFormat="enum|LDPCFraSynchLength" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="111" id="LDPCFramSynchPatt" desc="LDPC编码帧同步码组" dataType="ulong" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="112" id="ILDPCCodeRate" desc="LPDC码率" dataType="uint8" displayFormat="enum|LDPCCodeWay" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="113" id="CRCCheckArea" desc="CRC校验区" dataType="uint8" displayFormat="enum|Checkout" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="114" id="CRCPolynomial" desc="CRC校验多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit="" isShow="0"/>
+			<field pid="115" id="CRCFraSynchLength" desc="CRC校验多项式长度" dataType="uint8" displayFormat="enum|CRCFraSynchLength" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="116" id="DecodMode" desc="编码方式" dataType="uint8" displayFormat="enum|DecodMode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="117" id="BCHInitSeqCtrl" desc="起始序列控制" dataType="uint8" displayFormat="enum|BCHInitSeqCtrl" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="118" id="BCHInitSeqPatt" desc="起始序列图样" dataType="ulong" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFFFFFFFFFF" step="" unit="" isShow="0"/>
+			<field pid="119" id="BCHInitSeqLength" desc="起始序列长度" dataType="uint" displayFormat="enum|BCHInitSeqLength" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="120" id="BCHEndSeqCtrl" desc="结尾序列控制" dataType="uint8" displayFormat="enum|BCHEndSeqCtrl" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="121" id="BCHEndSeqPatt" desc="结尾序列图样" dataType="ulong" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFFFFFFFFFF" step="" unit="" isShow="0"/>
+			<field pid="122" id="BCHEndSeqLength" desc="结尾序列长度" dataType="uint" displayFormat="enum|BCHEndSeqLength" initValue="1" minValue="" maxValue="" step="" unit="字" isShow="0"/>
+			<field pid="123" id="BCHNumbEndPatt" desc="结尾序列个数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="20" step="" unit="个" isShow="0"/>
+			<field pid="124" id="ScramblingCtrl" desc="加扰控制" dataType="uint8" displayFormat="enum|ScrambCtrl" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="125" id="FillingPostition" desc="填充位置" dataType="uint8" displayFormat="enum|FillingPostition" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="126" id="ScrambPolyLength" desc="加扰多项式长度" dataType="uint8" displayFormat="enum|ScraPolyLength" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="127" id="ScrambPolynomial" desc="加扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="128" id="ScrambInitPhase" desc="加扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="129" id="ViterDecodPhase" desc="卷积输出相位" dataType="uint8" displayFormat="enum|ViterDecodPhase" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="130" id="CodeRateChoose" desc="编码速率选择" dataType="uint8" displayFormat="enum|CodeRateChoose" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="131" id="DataType" desc="数据类型" dataType="uint8" displayFormat="enum|DataType" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="132" id="DataSet" desc="固定数设置" dataType="uint8" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		</unit>
+		<change groupName="I路码速率" deviceID="4401_4/4402_4" dynamicGroupId="Channel1_CodeRate">
+			<field pid="103" GroupId="1" id="CodeSpeed" desc="码速率" dataType="uint" displayFormat="double" initValue="8192" minValue="" maxValue="" step="" unit="bps"/>
+		</change>
+		<change groupName="Q路码速率" deviceID="4401_5/4402_5" dynamicGroupId="Channel2_CodeRate">
+			<field pid="103" GroupId="1" id="CodeSpeed" desc="码速率" dataType="uint" displayFormat="double" initValue="8192" minValue="" maxValue="" step="" unit="bps"/>
+		</change>
+		<change groupName="上行数传码速率" deviceID="4401_11/4402_11" dynamicGroupId="Up_CodeRate">
+			<field pid="101" id="IChannRate" desc="码速率" dataType="uint" displayFormat="double" initValue="1000" minValue="1000" maxValue="10000000" step="" unit="bps"/>
+		</change>
+	</frequency>
+	<devices>
+		<device name="Ka低速数传及跟踪高频箱" station="0x264226" deviceID="0x3102" xmlPath="Ka低速/Ka低速数传及跟踪高频箱/DSKSDC.xml"/>
+		<device name="测控数字化前端" station="0x264226" deviceID="0x7001/0x7002/0x7003/0x7004/0xAAAA" xmlPath="Ka低速/测控数字化前端/DFOMAC.xml"/>
+		<device name="跟踪数字化前端" station="0x264226" deviceID="0x7101/0x7102/0x7103/0x7104/0xAAAA" xmlPath="Ka低速/跟踪数字化前端/TDFE.xml"/>
+		<device name="Ka数传高功放300W" station="0x264226" deviceID="0x2005" xmlPath="Ka低速/Ka数传高功放/KaDTHPA_Master.xml"/>
+		<device name="Ka数传高功放30W" station="0x264226" deviceID="0x2006" xmlPath="Ka低速/Ka数传高功放/KaDTHPA_Slave.xml"/>
+		<device name="Ka低速数传发射高频箱" station="0x264226" deviceID="0x2401" xmlPath="Ka低速/Ka低速数传发射高频箱/KXHBPQS.xml"/>
+		<device name="低速数传基带" station="0x264226" deviceID="0x4401/0x4402" xmlPath="Ka低速/低速数传基带/MACB.xml"/>
+		<device name="测角分系统" station="0x264226" deviceID="0x1011/0x1012" xmlPath="Ka低速/测角分系统/TFS.xml"/>
+	</devices>
+</Mode>

@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+id  枚举ID  -与设备类型关联
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums ExtenType="MACB" ModeType="0x04" edition="1.1.1.1">
+	<enum name="StartUpCtrl" desc="启动控制">
+		<entry svalue="1" uvalue="1" desc="启动"/>
+		<entry svalue="2" uvalue="2" desc="停止"/>
+	</enum>
+	<enum name="ChannelSel" desc="通道选择">
+		<entry svalue="1" uvalue="1" desc="通道一"/>
+		<entry svalue="2" uvalue="2" desc="通道二"/>
+		<entry svalue="3" uvalue="3" desc="通道三"/>
+		<entry svalue="4" uvalue="4" desc="通道四"/>
+	</enum>
+	<enum name="TaskNo" desc="目标号">
+		<entry svalue="1" uvalue="1" desc="通道一"/>
+		<entry svalue="2" uvalue="2" desc="通道二"/>
+		<entry svalue="3" uvalue="3" desc="通道三"/>
+		<entry svalue="4" uvalue="4" desc="通道四"/>
+	</enum>
+	<enum name="SignalRot" desc="信号旋向">
+		<entry svalue="1" uvalue="1" desc="左旋"/>
+		<entry svalue="2" uvalue="2" desc="右旋"/>
+	</enum>
+	<enum name="CarrOutput" desc="载波输出">
+		<entry svalue="1" uvalue="1" desc="输出"/>
+		<entry svalue="2" uvalue="2" desc="停止输出"/>
+	</enum>
+	<enum name="ChanSelect" desc="通道选择">
+		<entry svalue="1" uvalue="1" desc="遥控通道1"/>
+		<entry svalue="2" uvalue="2" desc="遥控通道2"/>
+		<entry svalue="3" uvalue="3" desc="遥控通道3"/>
+		<entry svalue="4" uvalue="4" desc="遥控通道4"/>
+		<entry svalue="5" uvalue="5" desc="测量通道1"/>
+		<entry svalue="6" uvalue="6" desc="测量通道2"/>
+		<entry svalue="7" uvalue="7" desc="测量通道3"/>
+		<entry svalue="8" uvalue="8" desc="测量通道4"/>
+		<entry svalue="9" uvalue="9" desc="全部通道"/>
+		<entry svalue="10" uvalue="10" desc="全部遥控通道"/>
+		<entry svalue="11" uvalue="11" desc="全部测量通道"/>
+	</enum>
+	<enum name="ChanSelect1" desc="通道选择">
+		<entry svalue="1" uvalue="1" desc="遥测通道1"/>
+		<entry svalue="2" uvalue="2" desc="遥测通道2"/>
+		<entry svalue="3" uvalue="3" desc="遥测通道3"/>
+		<entry svalue="4" uvalue="4" desc="遥测通道4"/>
+		<entry svalue="5" uvalue="5" desc="测量通道1"/>
+		<entry svalue="6" uvalue="6" desc="测量通道2"/>
+		<entry svalue="7" uvalue="7" desc="测量通道3"/>
+		<entry svalue="8" uvalue="8" desc="测量通道4"/>
+		<entry svalue="9" uvalue="9" desc="全部通道"/>
+		<entry svalue="10" uvalue="10" desc="全部遥测通道"/>
+		<entry svalue="11" uvalue="11" desc="全部测量通道"/>
+	</enum>
+	<enum name="ModulCtrl" desc="加调控制">
+		<entry svalue="1" uvalue="1" desc="加调"/>
+		<entry svalue="2" uvalue="2" desc="去调"/>
+	</enum>
+	<enum name="PNCodeAdd" desc="伪码加调">
+		<entry svalue="1" uvalue="1" desc="加调"/>
+		<entry svalue="2" uvalue="2" desc="去调"/>
+	</enum>
+	<enum name="DataCodeAdd" desc="数据加调">
+		<entry svalue="1" uvalue="1" desc="加调"/>
+		<entry svalue="2" uvalue="2" desc="去调"/>
+	</enum>
+	<enum name="ChanCategory" desc="通道类别">
+		<entry svalue="1" uvalue="1" desc="遥测"/>
+		<entry svalue="2" uvalue="2" desc="测距"/>
+	</enum>
+	<enum name="ChannelNumb" desc="通道号">
+		<entry svalue="1" uvalue="1" desc="通道1"/>
+		<entry svalue="2" uvalue="2" desc="通道2"/>
+		<entry svalue="3" uvalue="3" desc="通道3"/>
+		<entry svalue="4" uvalue="4" desc="通道4"/>
+		<entry svalue="5" uvalue="5" desc="全部"/>
+	</enum>
+	<enum name="Channel" desc="通道">
+		<entry svalue="1" uvalue="1" desc="通道1"/>
+		<entry svalue="2" uvalue="2" desc="通道2"/>
+		<entry svalue="3" uvalue="3" desc="通道3"/>
+		<entry svalue="4" uvalue="4" desc="通道4"/>
+	</enum>
+	<enum name="TestCtrl" desc="测试控制">
+		<entry svalue="1" uvalue="1" desc="开始测试"/>
+		<entry svalue="2" uvalue="2" desc="终止测试"/>
+	</enum>
+	<enum name="TestCtrlStatus" desc="测试状态">
+		<entry svalue="0" uvalue="0" desc="未启动"/>
+		<entry svalue="1" uvalue="1" desc="正在测试"/>
+		<entry svalue="2" uvalue="2" desc="测试完成"/>
+		<entry svalue="3" uvalue="3" desc="终止测试"/>
+	</enum>
+	<enum name="TestCtrlStatuss" desc="测试状态">
+		<entry svalue="1" uvalue="1" desc="开始测试"/>
+		<entry svalue="2" uvalue="2" desc="正在测试"/>
+		<entry svalue="3" uvalue="3" desc="测试完成"/>
+		<entry svalue="4" uvalue="4" desc="终止测试"/>
+	</enum>
+	<enum name="RotatDirect" desc="旋向">
+		<entry svalue="1" uvalue="1" desc="左旋"/>
+		<entry svalue="2" uvalue="2" desc="右旋"/>
+	</enum>
+	<enum name="TestStatus" desc="测试状态">
+		<entry svalue="0" uvalue="0" desc="未启动"/>
+		<entry svalue="1" uvalue="1" desc="正在测试"/>
+		<entry svalue="2" uvalue="2" desc="测试完成"/>
+		<entry svalue="3" uvalue="3" desc="终止测试"/>
+	</enum>
+	<enum name="ChannelCate" desc="通道类别">
+		<entry svalue="1" uvalue="1" desc="遥测"/>
+		<entry svalue="2" uvalue="2" desc="测距"/>
+	</enum>
+	<enum name="StatisCtrl" desc="统计控制">
+		<entry svalue="1" uvalue="1" desc="开始"/>
+		<entry svalue="2" uvalue="2" desc="终止"/>
+	</enum>
+	<enum name="WaveSelect" desc="波道选择">
+		<entry svalue="1" uvalue="1" desc="自动"/>
+		<entry svalue="2" uvalue="2" desc="人工"/>
+	</enum>
+	<enum name="StatStatus" desc="统计状态">
+		<entry svalue="1" uvalue="1" desc="开始统计"/>
+		<entry svalue="2" uvalue="2" desc="正在统计"/>
+		<entry svalue="3" uvalue="3" desc="终止统计"/>
+	</enum>
+	<enum name="TestStausStatus" desc="测试状态">
+		<entry svalue="1" uvalue="1" desc="开始测试"/>
+		<entry svalue="2" uvalue="2" desc="正在测试"/>
+		<entry svalue="3" uvalue="3" desc="终止测试"/>
+	</enum>
+	<enum name="AnalogDop" desc="模拟多普勒开关">
+		<entry svalue="1" uvalue="1" desc="开"/>
+		<entry svalue="2" uvalue="2" desc="关"/>
+	</enum>
+	<enum name="RangAndAdjus" desc="测距加调">
+		<entry svalue="1" uvalue="1" desc="加调"/>
+		<entry svalue="2" uvalue="2" desc="去调"/>
+	</enum>
+	<enum name="RemCtrlPlus" desc="遥控加调">
+		<entry svalue="1" uvalue="1" desc="加调"/>
+		<entry svalue="2" uvalue="2" desc="去调"/>
+	</enum>
+	<enum name="PseudCode" desc="伪码多普勒">
+		<entry svalue="1" uvalue="1" desc="有"/>
+		<entry svalue="2" uvalue="2" desc="无"/>
+	</enum>
+	<enum name="VoicePlus" desc="话音加调">
+		<entry svalue="1" uvalue="1" desc="加调"/>
+		<entry svalue="2" uvalue="2" desc="去调"/>
+	</enum>
+	<enum name="SideSelect" desc="侧音选择">
+		<entry svalue="1" uvalue="1" desc="100"/>
+		<entry svalue="2" uvalue="2" desc="20"/>
+		<entry svalue="3" uvalue="3" desc="16"/>
+		<entry svalue="4" uvalue="4" desc="16.8"/>
+		<entry svalue="5" uvalue="5" desc="16.16"/>
+		<entry svalue="6" uvalue="6" desc="16.04"/>
+		<entry svalue="7" uvalue="7" desc="16.032"/>
+		<entry svalue="8" uvalue="8" desc="16.010"/>
+		<entry svalue="9" uvalue="9" desc="16.008"/>
+		<entry svalue="10" uvalue="10" desc="16.002"/>
+		<entry svalue="11" uvalue="11" desc="16.0005"/>
+	</enum>
+	<enum name="SendCtrl" desc="发送控制">
+		<entry svalue="1" uvalue="1" desc="发送"/>
+		<entry svalue="2" uvalue="2" desc="停发"/>
+	</enum>
+	<enum name="SendStatus" desc="发送状态">
+		<entry svalue="1" uvalue="1" desc="发送"/>
+		<entry svalue="2" uvalue="2" desc="停发"/>
+	</enum>
+	<enum name="Category" desc="类别">
+		<entry svalue="1" uvalue="1" desc="遥测"/>
+		<!--
+<entry svalue="2" uvalue="2" desc="数传I(I+Q)路(低速)" />
+<entry svalue="3" uvalue="3" desc="数传Q路(低速)" />
+-->
+	</enum>
+	<enum name="OutputCtrl" desc="输出控制">
+		<entry svalue="1" uvalue="1" desc="载波输出"/>
+		<entry svalue="2" uvalue="2" desc="停止输出"/>
+	</enum>
+	<enum name="ModulCtrl" desc="加调控制">
+		<entry svalue="1" uvalue="1" desc="加调"/>
+		<entry svalue="2" uvalue="2" desc="去调"/>
+	</enum>
+	<enum name="SignalSelect" desc="信号选择">
+		<entry svalue="1" uvalue="1" desc="B000码秒脉冲"/>
+		<entry svalue="2" uvalue="2" desc="遥测模拟源位流"/>
+		<entry svalue="3" uvalue="3" desc="帧脉冲(左旋)"/>
+		<entry svalue="4" uvalue="4" desc="帧脉冲(右旋)"/>
+		<entry svalue="5" uvalue="5" desc="遥控位流"/>
+	</enum>
+	<enum name="SignalOutput" desc="信号输出">
+		<entry svalue="1" uvalue="1" desc="B000码秒脉冲"/>
+		<entry svalue="2" uvalue="2" desc="遥测模拟源位流"/>
+		<entry svalue="3" uvalue="3" desc="帧脉冲(左旋)"/>
+		<entry svalue="4" uvalue="4" desc="帧脉冲(右旋)"/>
+		<entry svalue="5" uvalue="5" desc="遥控位流"/>
+	</enum>
+	<enum name="SignSelect" desc="信号选择">
+		<entry svalue="1" uvalue="1" desc="模拟源副载波"/>
+		<entry svalue="2" uvalue="2" desc="遥控副载波"/>
+		<entry svalue="3" uvalue="3" desc="侧距音"/>
+		<entry svalue="4" uvalue="4" desc="话音副载波"/>
+	</enum>
+	<enum name="SignOutput" desc="信号输出">
+		<entry svalue="1" uvalue="1" desc="模拟源副载波"/>
+		<entry svalue="2" uvalue="2" desc="遥控副载波"/>
+		<entry svalue="3" uvalue="3" desc="侧距音"/>
+		<entry svalue="4" uvalue="4" desc="话音副载波"/>
+	</enum>
+	<enum name="DelCategory" desc="送数控制_类别">
+		<entry svalue="1" uvalue="1" desc="遥测"/>
+		<entry svalue="2" uvalue="2" desc="测距"/>
+		<entry svalue="4" uvalue="4" desc="测速"/>
+		<!-- 枚举改为4 颜总  6-15 -->
+		<!--<entry svalue="4" uvalue="4" desc="数传I(I+Q)路(低速)" />
+<entry svalue="5" uvalue="5" desc="数传Q路(低速)" />
+<entry svalue="6" uvalue="6" desc="话音小环" />  协议无这三个-->
+		<entry svalue="7" uvalue="7" desc="全部"/>
+	</enum>
+	<enum name="DelivMode" desc="送数方式">
+		<entry svalue="1" uvalue="1" desc="常送"/>
+		<entry svalue="2" uvalue="2" desc="人工"/>
+	</enum>
+	<enum name="DelivCtrl" desc="送数控制">
+		<entry svalue="1" uvalue="1" desc="送数"/>
+		<entry svalue="2" uvalue="2" desc="停送"/>
+	</enum>
+	<enum name="RepDelivCtrl" desc="数据上报_送数控制">
+		<entry svalue="1" uvalue="1" desc="开始上报"/>
+		<entry svalue="2" uvalue="2" desc="停止上报"/>
+	</enum>
+	<enum name="ChannelNumber" desc="通道号">
+		<entry svalue="1" uvalue="1" desc="通道1"/>
+		<entry svalue="2" uvalue="2" desc="通道2"/>
+		<entry svalue="3" uvalue="3" desc="通道3"/>
+		<entry svalue="4" uvalue="4" desc="通道4"/>
+		<entry svalue="5" uvalue="5" desc="全部通道"/>
+	</enum>
+	<enum name="ChannelNumber2" desc="通道号">
+		<entry svalue="1" uvalue="1" desc="通道1"/>
+		<entry svalue="2" uvalue="2" desc="通道2"/>
+		<entry svalue="3" uvalue="3" desc="通道3"/>
+		<entry svalue="4" uvalue="4" desc="通道4"/>
+	</enum>
+	<enum name="DistEffect" desc="距离有效">
+		<entry svalue="1" uvalue="1" desc="有效"/>
+		<entry svalue="2" uvalue="2" desc="无效"/>
+	</enum>
+	<enum name="SpeedDffect" desc="速度有效">
+		<entry svalue="1" uvalue="1" desc="有效"/>
+		<entry svalue="2" uvalue="2" desc="无效"/>
+	</enum>
+	<enum name="OperatCate" desc="操作类别">
+		<entry svalue="1" uvalue="1" desc="开始"/>
+		<entry svalue="2" uvalue="2" desc="停止"/>
+	</enum>
+	<enum name="Deduction" desc="是否扣除">
+		<entry svalue="1" uvalue="1" desc="基带扣"/>
+		<entry svalue="2" uvalue="2" desc="中心扣"/>
+	</enum>
+	<enum name="DeduStatus" desc="扣除状态">
+		<entry svalue="1" uvalue="1" desc="基带扣"/>
+		<entry svalue="2" uvalue="2" desc="中心扣"/>
+	</enum>
+	<enum name="TeleworkPer" desc="遥控工作期">
+		<entry svalue="1" uvalue="1" desc="开始"/>
+		<entry svalue="2" uvalue="2" desc="结束"/>
+	</enum>
+	<enum name="ReceUnit" desc="接收单元">
+		<entry svalue="1" uvalue="1" desc="TTC主接收机"/>
+		<entry svalue="2" uvalue="2" desc="TTC引导接收机"/>
+		<!--entry svalue="3" uvalue="3" desc="保留"/>-->
+		<entry svalue="4" uvalue="4" desc="全部接收机"/>
+	</enum>
+	<enum name="ReceSelect" desc="接收机选择">
+		<entry svalue="1" uvalue="1" desc="TTC主接收机(L)"/>
+		<entry svalue="2" uvalue="2" desc="TTC主接收机(R)"/>
+		<!--<entry svalue="3" uvalue="3" desc="引导接收机" />
+<entry svalue="4" uvalue="4" desc="其他接收机待定" />-->
+	</enum>
+	<enum name="ChannelS" desc="通道">
+		<entry svalue="1" uvalue="1" desc="遥测"/>
+		<entry svalue="2" uvalue="2" desc="测量"/>
+	</enum>
+	<enum name="ChannelN" desc="通道号">
+		<entry svalue="1" uvalue="1" desc="通道1"/>
+		<entry svalue="2" uvalue="2" desc="通道2"/>
+		<entry svalue="3" uvalue="3" desc="通道3"/>
+	</enum>
+	<enum name="CompCtrl" desc="补偿控制">
+		<entry svalue="1" uvalue="1" desc="开始"/>
+		<entry svalue="2" uvalue="2" desc="停止"/>
+	</enum>
+	<enum name="CompMode" desc="补偿方式">
+		<!--<entry svalue="1" uvalue="1" desc="手动" />-->
+		<entry svalue="2" uvalue="2" desc="轨道根数"/>
+		<entry svalue="3" uvalue="3" desc="下行多普勒"/>
+		<entry svalue="4" uvalue="4" desc="理论弹道"/>
+	</enum>
+	<enum name="CompStatus" desc="补偿状态">
+		<entry svalue="1" uvalue="1" desc="开始"/>
+		<entry svalue="2" uvalue="2" desc="停止补偿"/>
+		<entry svalue="3" uvalue="3" desc="回零到位"/>
+	</enum>
+	<enum name="PhaseCtrl" desc="校相控制">
+		<entry svalue="1" uvalue="1" desc="开始"/>
+		<entry svalue="2" uvalue="2" desc="停止"/>
+	</enum>
+	<enum name="PhaseCtrl" desc="校相控制">
+		<entry svalue="1" uvalue="1" desc="开始"/>
+		<entry svalue="2" uvalue="2" desc="停止"/>
+	</enum>
+	<enum name="PhaseStatus" desc="校相状态">
+		<entry svalue="1" uvalue="1" desc="开始校相"/>
+		<entry svalue="2" uvalue="2" desc="终止校相"/>
+		<entry svalue="3" uvalue="3" desc="校相完成"/>
+		<entry svalue="4" uvalue="4" desc="异常退出"/>
+	</enum>
+	<enum name="SelectCtrl" desc="查询控制">
+		<entry svalue="1" uvalue="1" desc="开始查询"/>
+		<entry svalue="2" uvalue="2" desc="停止查询"/>
+	</enum>
+	<enum name="PseudographSwitch" desc="伪码开关">
+		<entry svalue="1" uvalue="1" desc="开(解扩)"/>
+		<entry svalue="2" uvalue="2" desc="关(不解扩)"/>
+	</enum>
+	<enum name="ChannelSwitch" desc="通道开关">
+		<entry svalue="1" uvalue="1" desc="开"/>
+		<entry svalue="2" uvalue="2" desc="关"/>
+	</enum>
+	<enum name="WorkMode" desc="工作模式">
+		<entry svalue="1" uvalue="1" desc="标准TTC"/>
+		<entry svalue="4" uvalue="4" desc="扩频模式二"/>
+    	<entry svalue="9" uvalue="16" desc="一体化上面级" />
+    	<entry svalue="10" uvalue="17" desc="一体化卫星" />
+    	<entry svalue="11" uvalue="18" desc="一体化上行高码率" />
+    	<entry svalue="12" uvalue="19" desc="一体化上面级+扩二不共载波" />
+    	<entry svalue="14" uvalue="21" desc="一体化上面级+扩二共载波" />
+    	<entry svalue="16" uvalue="23" desc="一体化卫星+扩二" />
+    	<entry svalue="18" uvalue="25" desc="一体化上行高码率+扩二" />
+		<entry svalue="20" uvalue="33" desc="扩跳频模式"/>
+	</enum>
+	<enum name="WorkWay" desc="工作方式">
+		<entry svalue="1" uvalue="1" desc="任务方式"/>
+		<entry svalue="2" uvalue="2" desc="联试应答机闭环"/>
+		<!--<entry svalue="3" uvalue="3" desc="联试应答机有线"/>-->
+		<!--<entry svalue="4" uvalue="4" desc="校零变频器无线"/>
+		<entry svalue="5" uvalue="5" desc="校零变频器有线"/>-->
+		<entry svalue="6" uvalue="6" desc="偏馈校零变频器"/>
+		<entry svalue="7" uvalue="7" desc="射频模拟源闭环"/>
+		<entry svalue="8" uvalue="8" desc="信标方式"/>
+		<entry svalue="9" uvalue="9" desc="数字化闭环"/>
+		<!--<entry svalue="10" uvalue="10" desc="记录回放"/>
+		<entry svalue="11" uvalue="11" desc="其它"/>-->
+		<entry svalue="12" uvalue="12" desc="中频闭环"/>
+	</enum>
+	<enum name="OnlineSelect" desc="在线选择">
+		<entry svalue="1" uvalue="1" desc="主机"/>
+		<entry svalue="2" uvalue="2" desc="备机"/>
+	</enum>
+	<enum name="TimeSelect" desc="时统选择">
+		<entry svalue="1" uvalue="1" desc="外时统"/>
+		<entry svalue="2" uvalue="2" desc="内时统"/>
+	</enum>
+	<enum name="RefeCoorSys" desc="参考坐标系">
+		<entry svalue="1" uvalue="1" desc="DX1"/>
+		<entry svalue="2" uvalue="2" desc="DX2"/>
+		<entry svalue="3" uvalue="3" desc="C2000"/>
+		<entry svalue="4" uvalue="4" desc="WGS-84"/>
+		<entry svalue="5" uvalue="5" desc="未知"/>
+	</enum>
+	<enum name="CurrPowStatus" desc="当前功率发射状态">
+		<entry svalue="0" uvalue="0" desc="不发射"/>
+		<entry svalue="1" uvalue="1" desc="发射"/>
+	</enum>
+	<enum name="TaskTarget" desc="任务目标">
+		<entry svalue="1" uvalue="1" desc="目标1"/>
+		<entry svalue="2" uvalue="2" desc="目标2"/>
+		<entry svalue="3" uvalue="3" desc="目标3"/>
+		<entry svalue="4" uvalue="4" desc="目标4"/>
+	</enum>
+</enums>

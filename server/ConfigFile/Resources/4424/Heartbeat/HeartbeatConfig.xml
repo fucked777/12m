@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+isManualControl: 值为1，表示该项只有在主界面任务流程中的手动控制中从显示，在参数宏界面不显示
+ -->
+<root>
+    <!-- 虚拟IP -->
+    <VIP>192.20.1.200</VIP>
+    <!-- 主机IP -->
+    <MasterIP>192.20.1.19</MasterIP>
+    <!-- 备机IP -->
+    <SlaveIP>192.20.1.20</SlaveIP>
+    <!-- 是否使用当前配置-->
+    <IsUsed>true</IsUsed>
+</root>

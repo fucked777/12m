@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="LMODPU" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="ControlMode" desc="监控方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="DevStatus" desc="设备状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="OnLineMachine" desc="本机在线状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="主机"/>
+		<entry svalue="2" uvalue="2" desc="备机"/>
+		<entry svalue="3" uvalue="3" desc="空闲"/>
+	</enum>
+	<enum name="ExternalState" desc="外时码状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="ExterFreqState" desc="外频标状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="WorkingMode" desc="工作模式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="X频段低速"/>
+		<entry svalue="2" uvalue="2" desc="Ka频低速+上行数传"/>
+		<entry svalue="3" uvalue="3" desc="X频段+Ka频低速+上行数传"/>
+	</enum>
+	<enum name="WorkWay" desc="工作方式">
+		<entry svalue="1" uvalue="1" desc="任务方式"/>
+		<entry svalue="9" uvalue="9" desc="Ka数字化闭环"/>
+		<entry svalue="10" uvalue="10" desc="X数字化闭环"/>
+	</enum>
+	<enum name="SignalState" desc="信号加调状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="上行数传"/>
+		<entry svalue="2" uvalue="2" desc="X频段数传模拟源"/>
+		<entry svalue="3" uvalue="3" desc="Ka数传模拟源"/>
+	</enum>
+	<enum name="SendNumSwitch" desc="送数状态">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="送数:G"/>
+		<entry svalue="2" uvalue="2" desc="未送数:R"/>
+	</enum>
+	<enum name="DiskState" desc="存盘状态">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="存:G"/>
+		<entry svalue="2" uvalue="2" desc="不存:R"/>
+	</enum>
+</enums>

@@ -1,0 +1,472 @@
+<GridLayout>
+	<GroupBox row="0" col="0" rowSpan="1" columnSpan="4" text="中频接收">
+		<GridLayout>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="目标1"/>
+			<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="目标2"/>
+			<Widget row="3" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="目标3"/>
+			<Widget row="4" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="目标4"/>
+			<Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="载波测量"/>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="载波测量" unitId="1" targetId="1" paramId="K2_MeaCarrLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="载波测量" unitId="1" targetId="2" paramId="K2_MeaCarrLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="3" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="载波测量" unitId="1" targetId="3" paramId="K2_MeaCarrLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="4" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="载波测量" unitId="1" targetId="4" paramId="K2_MeaCarrLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="载波遥测"/>
+			<Widget row="1" col="2" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="载波遥测" unitId="1" targetId="1" paramId="K2_TelemCarrLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="2" col="2" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="载波遥测" unitId="1" targetId="2" paramId="K2_TelemCarrLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="3" col="2" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="载波遥测" unitId="1" targetId="3" paramId="K2_TelemCarrLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="4" col="2" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="载波遥测" unitId="1" targetId="4" paramId="K2_TelemCarrLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="0" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="伪码测量"/>
+			<Widget row="1" col="3" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="伪码测量" unitId="1" targetId="1" paramId="K2_MeaPseLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="2" col="3" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="伪码测量" unitId="1" targetId="2" paramId="K2_MeaPseLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="3" col="3" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="伪码测量" unitId="1" targetId="3" paramId="K2_MeaPseLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="4" col="3" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="伪码测量" unitId="1" targetId="4" paramId="K2_MeaPseLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="0" col="4" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="伪码遥测"/>
+			<Widget row="1" col="4" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="伪码遥测" unitId="1" targetId="1" paramId="K2_TelemPNLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="2" col="4" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="伪码遥测" unitId="1" targetId="2" paramId="K2_TelemPNLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="3" col="4" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="伪码遥测" unitId="1" targetId="3" paramId="K2_TelemPNLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="4" col="4" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="伪码遥测" unitId="1" targetId="4" paramId="K2_TelemPNLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="0" col="5" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="星锁"/>
+			<Widget row="1" col="5" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="星锁" unitId="1" targetId="1" paramId="K2_LockIndMeas">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="2" col="5" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="星锁" unitId="1" targetId="2" paramId="K2_LockIndMeas">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="3" col="5" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="星锁" unitId="1" targetId="3" paramId="K2_LockIndMeas">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="4" col="5" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="星锁" unitId="1" targetId="4" paramId="K2_LockIndMeas">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="2" col="0" rowSpan="1" columnSpan="4" text="测距测速">
+		<GridLayout>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="目标1"/>
+			<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="目标2"/>
+			<Widget row="3" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="目标3"/>
+			<Widget row="4" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="目标4"/>
+			<Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="AGC(V)"/>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="AGC" unitId="2" targetId="1" paramId="CL_TeleAGCVol"/>
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="AGC" unitId="2" targetId="2" paramId="CL_TeleAGCVol"/>
+			<Widget row="3" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="AGC" unitId="2" targetId="3" paramId="CL_TeleAGCVol"/>
+			<Widget row="4" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="AGC" unitId="2" targetId="4" paramId="CL_TeleAGCVol"/>
+			<Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="S/Φ(dBHz)"/>
+			<Widget row="1" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="S/Φ" unitId="2" targetId="1" paramId="CL_TeleCN0"/>
+			<Widget row="2" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="S/Φ" unitId="2" targetId="2" paramId="CL_TeleCN0"/>
+			<Widget row="3" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="S/Φ" unitId="2" targetId="3" paramId="CL_TeleCN0"/>
+			<Widget row="4" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="S/Φ" unitId="2" targetId="4" paramId="CL_TeleCN0"/>
+			<Widget row="0" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="多普勒(kHz)"/>
+			<Widget row="1" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="多普勒" unitId="2" targetId="1" paramId="CL_MeasDopFreq" minWidth="80"/>
+			<Widget row="2" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="多普勒" unitId="2" targetId="2" paramId="CL_MeasDopFreq" minWidth="80"/>
+			<Widget row="3" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="多普勒" unitId="2" targetId="3" paramId="CL_MeasDopFreq" minWidth="80"/>
+			<Widget row="4" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="多普勒" unitId="2" targetId="4" paramId="CL_MeasDopFreq" minWidth="80"/>
+			<Widget row="0" col="4" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="距离(m)"/>
+			<Widget row="1" col="4" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="距离" unitId="4" targetId="1" paramId="K2_MeasuredDistValue"/>
+			<Widget row="2" col="4" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="距离" unitId="4" targetId="2" paramId="K2_MeasuredDistValue"/>
+			<Widget row="3" col="4" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="距离" unitId="4" targetId="3" paramId="K2_MeasuredDistValue"/>
+			<Widget row="4" col="4" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="距离" unitId="4" targetId="4" paramId="K2_MeasuredDistValue"/>
+			<Widget row="0" col="5" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="速度(m/s)"/>
+			<Widget row="1" col="5" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="速度" unitId="2" targetId="1" paramId="CL_MeasFreqDiff"/>
+			<Widget row="2" col="5" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="速度" unitId="2" targetId="2" paramId="CL_MeasFreqDiff"/>
+			<Widget row="3" col="5" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="速度" unitId="2" targetId="3" paramId="CL_MeasFreqDiff"/>
+			<Widget row="4" col="5" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="速度" unitId="2" targetId="4" paramId="CL_MeasFreqDiff"/>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="1" col="0" rowSpan="1" columnSpan="1" text="遥测">
+		<GridLayout>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="目标1"/>
+			<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="目标2"/>
+			<Widget row="3" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="目标3"/>
+			<Widget row="4" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="目标4"/>
+			<Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="位"/>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="位" unitId="6" targetId="1" paramId="TeleStatPositLockIns">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="位" unitId="6" targetId="2" paramId="TeleStatPositLockIns">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="3" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="位" unitId="6" targetId="3" paramId="TeleStatPositLockIns">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="4" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="位" unitId="6" targetId="4" paramId="TeleStatPositLockIns">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="帧"/>
+			<Widget row="1" col="2" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="帧" unitId="6" targetId="1" paramId="TeleFramPositLockIns">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="2" col="2" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="帧" unitId="6" targetId="2" paramId="TeleFramPositLockIns">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="3" col="2" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="帧" unitId="6" targetId="3" paramId="TeleFramPositLockIns">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="4" col="2" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="帧" unitId="6" targetId="4" paramId="TeleFramPositLockIns">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="0" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="副帧"/>
+			<Widget row="1" col="3" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="副帧" unitId="6" targetId="1" paramId="TeleSubPositLockIns">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="2" col="3" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="副帧" unitId="6" targetId="2" paramId="TeleSubPositLockIns">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="3" col="3" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="副帧" unitId="6" targetId="3" paramId="TeleSubPositLockIns">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="4" col="3" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="副帧" unitId="6" targetId="4" paramId="TeleSubPositLockIns">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="1" col="1" rowSpan="1" columnSpan="3" text="遥控">
+		<GridLayout>
+			<Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="工作期"/>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="工作期" unitId="5" targetId="1" paramId="K2_TeleWorkPeriod">
+				<Item value="1" desc="开始" ledColor="green" toolTip="开始"/>
+				<Item value="2" desc="结束" ledColor="yellow" toolTip="结束"/>
+			</Widget>
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="工作期" unitId="5" targetId="2" paramId="K2_TeleWorkPeriod">
+				<Item value="1" desc="开始" ledColor="green" toolTip="开始"/>
+				<Item value="2" desc="结束" ledColor="yellow" toolTip="结束"/>
+			</Widget>
+			<Widget row="3" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="工作期" unitId="5" targetId="3" paramId="K2_TeleWorkPeriod">
+				<Item value="1" desc="开始" ledColor="green" toolTip="开始"/>
+				<Item value="2" desc="结束" ledColor="yellow" toolTip="结束"/>
+			</Widget>
+			<Widget row="4" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="工作期" unitId="5" targetId="4" paramId="K2_TeleWorkPeriod">
+				<Item value="1" desc="开始" ledColor="green" toolTip="开始"/>
+				<Item value="2" desc="结束" ledColor="yellow" toolTip="结束"/>
+			</Widget>
+			<Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="比对"/>
+			<Widget row="1" col="2" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="比对" unitId="5" targetId="1" paramId="K2_SmallResult">
+				<Item value="1" desc="正常" ledColor="green" toolTip="正常"/>
+				<Item value="2" desc="异常" ledColor="red" toolTip="异常"/>
+			</Widget>
+			<Widget row="2" col="2" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="比对" unitId="5" targetId="2" paramId="K2_SmallResult">
+				<Item value="1" desc="正常" ledColor="green" toolTip="正常"/>
+				<Item value="2" desc="异常" ledColor="red" toolTip="异常"/>
+			</Widget>
+			<Widget row="3" col="2" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="比对" unitId="5" targetId="3" paramId="K2_SmallResult">
+				<Item value="1" desc="正常" ledColor="green" toolTip="正常"/>
+				<Item value="2" desc="异常" ledColor="red" toolTip="异常"/>
+			</Widget>
+			<Widget row="4" col="2" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="比对" unitId="5" targetId="4" paramId="K2_SmallResult">
+				<Item value="1" desc="正常" ledColor="green" toolTip="正常"/>
+				<Item value="2" desc="异常" ledColor="red" toolTip="异常"/>
+			</Widget>
+			<Widget row="0" col="3" rowSpan="1" columnSpan="2" Align="Center" type="NameLabel" text="发令计数"/>
+			<Widget row="1" col="3" rowSpan="1" columnSpan="2" type="MultiNumberStatusLabel" defaultText="-/-/-/-" desc="发令计数" unitId="1" targetId="1" minWidth="100">
+				<Status targetId="1" unitId="1" paramId="K2_PackNumb"/>
+				<Status targetId="1" unitId="1" paramId="K2_RemoteNumb"/>
+				<Status targetId="1" unitId="1" paramId="K2_SmallNumb"/>
+				<Status targetId="1" unitId="1" paramId="K2_BarsNumb"/>
+			</Widget>
+			<Widget row="2" col="3" rowSpan="1" columnSpan="2" type="MultiNumberStatusLabel" defaultText="-/-/-/-" desc="发令计数" unitId="1" targetId="2" minWidth="100">
+				<Status targetId="2" unitId="1" paramId="K2_PackNumb"/>
+				<Status targetId="2" unitId="1" paramId="K2_RemoteNumb"/>
+				<Status targetId="2" unitId="1" paramId="K2_SmallNumb"/>
+				<Status targetId="2" unitId="1" paramId="K2_BarsNumb"/>
+			</Widget>
+			<Widget row="3" col="3" rowSpan="1" columnSpan="2" type="MultiNumberStatusLabel" defaultText="-/-/-/-" desc="发令计数" unitId="1" targetId="3" minWidth="100">
+				<Status targetId="3" unitId="1" paramId="K2_PackNumb"/>
+				<Status targetId="3" unitId="1" paramId="K2_RemoteNumb"/>
+				<Status targetId="3" unitId="1" paramId="K2_SmallNumb"/>
+				<Status targetId="3" unitId="1" paramId="K2_BarsNumb"/>
+			</Widget>
+			<Widget row="4" col="3" rowSpan="1" columnSpan="2" type="MultiNumberStatusLabel" defaultText="-/-/-/-" desc="发令计数" unitId="1" targetId="4" minWidth="100">
+				<Status targetId="4" unitId="1" paramId="K2_PackNumb"/>
+				<Status targetId="4" unitId="1" paramId="K2_RemoteNumb"/>
+				<Status targetId="4" unitId="1" paramId="K2_SmallNumb"/>
+				<Status targetId="4" unitId="1" paramId="K2_BarsNumb"/>
+			</Widget>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="3" col="0" rowSpan="1" columnSpan="1" text="送数控制">
+		<GridLayout Alignment="Center">
+			<Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="测速"/>
+			<Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="测距"/>
+			<Widget row="0" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="遥测"/>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="测速" unitId="1" targetId="1" paramId="K2_VelMeaTran" id="1" isKP="true">
+				<ProcessControl cmdId="24" param="TaskIdent|1 DelCategory|4 DelivMode|2">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="DelivCtrl"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="1" col="2" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="测距" unitId="1" targetId="1" paramId="K2_DataTranStat" id="2" isKP="true">
+				<ProcessControl cmdId="24" param="TaskIdent|1 DelCategory|2 DelivMode|2">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="DelivCtrl"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="1" col="3" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="遥测" unitId="1" targetId="1" paramId="K2_TeleDataStat" id="3" isKP="true">
+				<ProcessControl cmdId="24" param="TaskIdent|1 DelCategory|1 DelivMode|2">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="DelivCtrl"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="测速" unitId="1" targetId="2" paramId="K2_VelMeaTran" id="4" isKP="true">
+				<ProcessControl cmdId="24" param="TaskIdent|2 DelCategory|4 DelivMode|2">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="DelivCtrl"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="2" col="2" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="测距" unitId="1" targetId="2" paramId="K2_DataTranStat" id="5" isKP="true">
+				<ProcessControl cmdId="24" param="TaskIdent|2 DelCategory|2 DelivMode|2">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="DelivCtrl"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="2" col="3" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="遥测" unitId="1" targetId="2" paramId="K2_TeleDataStat" id="6" isKP="true">
+				<ProcessControl cmdId="24" param="TaskIdent|2 DelCategory|1 DelivMode|2">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="DelivCtrl"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="3" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="测速" unitId="1" targetId="3" paramId="K2_VelMeaTran" id="7" isKP="true">
+				<ProcessControl cmdId="24" param="TaskIdent|3 DelCategory|4 DelivMode|2">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="DelivCtrl"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="3" col="2" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="测距" unitId="1" targetId="3" paramId="K2_DataTranStat" id="8" isKP="true">
+				<ProcessControl cmdId="24" param="TaskIdent|3 DelCategory|2 DelivMode|2">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="DelivCtrl"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="3" col="3" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="遥测" unitId="1" targetId="3" paramId="K2_TeleDataStat" id="9" isKP="true">
+				<ProcessControl cmdId="24" param="TaskIdent|3 DelCategory|1 DelivMode|2">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="DelivCtrl"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="4" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="测速" unitId="1" targetId="4" paramId="K2_VelMeaTran" id="10" isKP="true">
+				<ProcessControl cmdId="24" param="TaskIdent|4 DelCategory|4 DelivMode|2">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="DelivCtrl"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="4" col="2" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="测距" unitId="1" targetId="4" paramId="K2_DataTranStat" id="11" isKP="true">
+				<ProcessControl cmdId="24" param="TaskIdent|4 DelCategory|2 DelivMode|2">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="DelivCtrl"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="4" col="3" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="遥测" unitId="1" targetId="4" paramId="K2_TeleDataStat" id="12" isKP="true">
+				<ProcessControl cmdId="24" param="TaskIdent|4 DelCategory|1 DelivMode|2">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="DelivCtrl"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="5" col="3" rowSpan="1" columnSpan="1" type="ComplexCheckBox" text="控制" desc="控制" id="13" childId="1|2|3|4|5|6|7|8|9|10|11|12" isControl="true"/>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="3" col="1" rowSpan="1" columnSpan="1" text="加调控制">
+		<GridLayout Alignment="Center">
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="目标1"/>
+			<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="目标2"/>
+			<Widget row="3" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="目标3"/>
+			<Widget row="4" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="目标4"/>
+			<Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="遥伪"/>
+			<Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="遥数"/>
+			<Widget row="0" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="测伪"/>
+			<Widget row="0" col="4" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="测数"/>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="遥伪" unitId="3" targetId="1" paramId="YC_PNCodeAdd" msgType="UnitParam" id="1" isKP="true">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="5" targetId="1">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="YC_PNCodeAdd" targetId="1"/>
+				</UnitParam>
+			</Widget>
+			<Widget row="1" col="2" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="遥数" unitId="3" targetId="1" paramId="YC_DataTuning" msgType="UnitParam" id="2" isKP="true">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="5" targetId="1">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="YC_DataTuning" targetId="1"/>
+				</UnitParam>
+			</Widget>
+			<Widget row="1" col="3" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="测伪" unitId="3" targetId="1" paramId="CL_PNCodeAdd" id="3" isKP="true">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="5" targetId="1">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="CL_PNCodeAdd" targetId="1"/>
+				</UnitParam>
+			</Widget>
+			<Widget row="1" col="4" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="测数" unitId="3" targetId="1" paramId="CL_DataTuning" id="4" isKP="true">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="5" targetId="1">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="CL_DataTuning" targetId="1"/>
+				</UnitParam>
+			</Widget>
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="遥伪" unitId="3" targetId="2" paramId="YC_PNCodeAdd" id="5" isKP="true">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="5" targetId="2">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="YC_PNCodeAdd" targetId="2"/>
+				</UnitParam>
+			</Widget>
+			<Widget row="2" col="2" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="遥数" unitId="3" targetId="2" paramId="YC_DataTuning" id="6" isKP="true">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="5" targetId="2">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="YC_DataTuning" targetId="2"/>
+				</UnitParam>
+			</Widget>
+			<Widget row="2" col="3" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="测伪" unitId="3" targetId="2" paramId="CL_PNCodeAdd" id="7" isKP="true">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="5" targetId="2">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="CL_PNCodeAdd" targetId="2"/>
+				</UnitParam>
+			</Widget>
+			<Widget row="2" col="4" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="测数" unitId="3" targetId="2" paramId="CL_DataTuning" id="8" isKP="true">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="5" targetId="2">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="CL_DataTuning" targetId="2"/>
+				</UnitParam>
+			</Widget>
+			<Widget row="3" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="遥伪" unitId="3" targetId="3" paramId="YC_PNCodeAdd" id="9" isKP="true">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="5" targetId="3">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="YC_PNCodeAdd" targetId="3"/>
+				</UnitParam>
+			</Widget>
+			<Widget row="3" col="2" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="遥数" unitId="3" targetId="3" paramId="YC_DataTuning" id="10" isKP="true">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="5" targetId="3">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="YC_DataTuning" targetId="3"/>
+				</UnitParam>
+			</Widget>
+			<Widget row="3" col="3" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="测伪" unitId="3" targetId="3" paramId="CL_PNCodeAdd" id="11" isKP="true">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="5" targetId="3">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="CL_PNCodeAdd" targetId="3"/>
+				</UnitParam>
+			</Widget>
+			<Widget row="3" col="4" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="测数" unitId="3" targetId="3" paramId="CL_DataTuning" id="12" isKP="true">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="5" targetId="3">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="CL_DataTuning" targetId="3"/>
+				</UnitParam>
+			</Widget>
+			<Widget row="4" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="遥伪" unitId="3" targetId="4" paramId="YC_PNCodeAdd" id="13" isKP="true">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="5" targetId="4">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="YC_PNCodeAdd" targetId="4"/>
+				</UnitParam>
+			</Widget>
+			<Widget row="4" col="2" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="遥数" unitId="3" targetId="4" paramId="YC_DataTuning" id="14" isKP="true">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="5" targetId="4">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="YC_DataTuning" targetId="4"/>
+				</UnitParam>
+			</Widget>
+			<Widget row="4" col="3" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="测伪" unitId="3" targetId="4" paramId="CL_PNCodeAdd" id="15" isKP="true">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="5" targetId="4">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="CL_PNCodeAdd" targetId="4"/>
+				</UnitParam>
+			</Widget>
+			<Widget row="4" col="4" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="测数" unitId="3" targetId="4" paramId="CL_DataTuning" id="16" isKP="true">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="5" targetId="4">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="CL_DataTuning" targetId="4"/>
+				</UnitParam>
+			</Widget>
+			<Widget row="5" col="4" rowSpan="1" columnSpan="1" type="ComplexCheckBox" text="控制" desc="控制" id="17" childId="1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16" isControl="true"/>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="3" col="2" rowSpan="1" columnSpan="1" text="存盘控制">
+		<GridLayout Alignment="Center">
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="通道1"/>
+			<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="通道2"/>
+			<Widget row="3" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="通道3"/>
+			<Widget row="4" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="通道4"/>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="" unitId="1" targetId="1" paramId="K2_SaveState" msgType="ProcessControl" id="1" isKP="true">
+				<ProcessControl cmdId="27" param="TaskIdent|1">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="OperatCate"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="" unitId="1" targetId="2" paramId="K2_SaveState" msgType="ProcessControl" id="2" isKP="true">
+				<ProcessControl cmdId="27" param="TaskIdent|1">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="OperatCate"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="3" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="" unitId="1" targetId="3" paramId="K2_SaveState" msgType="ProcessControl" id="3" isKP="true">
+				<ProcessControl cmdId="27" param="TaskIdent|1">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="OperatCate"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="4" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" desc="" unitId="1" targetId="4" paramId="K2_SaveState" msgType="ProcessControl" id="4" isKP="true">
+				<ProcessControl cmdId="27" param="TaskIdent|1">
+					<TargetInfo unitId="1" targetId="0" paramId="TargetNum"/>
+					<ControlInfo paramId="OperatCate"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="5" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" text="控制" desc="控制" id="5" childId="1|2|3|4" isControl="true"/>
+		</GridLayout>
+	</GroupBox>
+</GridLayout>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x08" deviceID="0x01" modeID="0x0" cmdID="1" desc="数据传输计划命令">
+	<Triggers>
+		<Trigger id="OperatMode" desc="工作方式">
+			<TriggerValue value="1" desc="实时接收加传输">
+				<Receiver id="StartTime" desc="任务开始时间" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="TEndTime" desc="任务结束时间" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="PostTime" desc="事后传输时间" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="事后传输">
+				<Receiver id="StartTime" desc="任务开始时间" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="TEndTime" desc="任务结束时间" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="PostTime" desc="事后传输时间" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="只接收">
+				<Receiver id="StartTime" desc="任务开始时间" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="TEndTime" desc="任务结束时间" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="PostTime" desc="事后传输时间" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

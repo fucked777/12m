@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device>
+	<unit unitID="2" unitName="通道一解调单元">
+		<field pid="103" GroupId="setting1" id="CarrLoopBand" desc="载波环路带宽" dataType="uint" displayFormat="enum|CarrLoopBand" initValue="1" minValue="" maxValue="" step=""/>
+		<field pid="105" GroupId="setting1" id="CodeRateSett" desc="码速率设置方式" dataType="uint8" displayFormat="enum|CodeRateSett" initValue="1" minValue="" maxValue="" step="" unit=""/>
+	</unit>
+	<unit unitID="3" unitName="通道一I路译码单元">
+		<field pid="114" GroupId="setting5" id="FrameSynchSearch" desc="帧同步搜索容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="15" step="" unit="位"/>
+		<field pid="115" GroupId="setting5" id="FrameSynchFault" desc="帧同步锁定容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="15" step="" unit="位"/>
+		<field pid="116" GroupId="setting5" id="FrameSynchTolBIt" desc="帧同步校核容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="15" step="" unit="位"/>
+		<field pid="117" GroupId="setting5" id="FrameSynDeteNumb" desc="帧同步锁定检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="16" step="" unit="帧"/>
+		<field pid="118" GroupId="setting5" id="FrameSynCheckNumb" desc="帧同步校核检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="16" step="" unit="帧"/>
+	</unit>
+	<unit unitID="4" unitName="通道一Q路译码单元">
+		<field pid="114" GroupId="setting5" id="FrameSynchSearch" desc="帧同步搜索容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="15" step="" unit="位"/>
+		<field pid="115" GroupId="setting5" id="FrameSynchFault" desc="帧同步锁定容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="15" step="" unit="位"/>
+		<field pid="116" GroupId="setting5" id="FrameSynchTolBIt" desc="帧同步校核容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="15" step="" unit="位"/>
+		<field pid="117" GroupId="setting5" id="FrameSynDeteNumb" desc="帧同步锁定检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="16" step="" unit="帧"/>
+		<field pid="118" GroupId="setting5" id="FrameSynCheckNumb" desc="帧同步校核检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="16" step="" unit="帧"/>
+	</unit>
+	<unit unitID="6" unitName="通道二解调单元">
+		<field pid="103" GroupId="setting1" id="CarrLoopBand" desc="载波环路带宽" dataType="uint" displayFormat="enum|CarrLoopBand" initValue="1" minValue="" maxValue="" step=""/>
+		<field pid="105" GroupId="setting1" id="CodeRateSett" desc="码速率设置方式" dataType="uint8" displayFormat="enum|CodeRateSett" initValue="1" minValue="" maxValue="" step="" unit=""/>
+	</unit>
+	<unit unitID="7" unitName="通道二I路译码单元">
+		<field pid="114" GroupId="setting5" id="FrameSynchSearch" desc="帧同步搜索容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="15" step="" unit="位"/>
+		<field pid="115" GroupId="setting5" id="FrameSynchFault" desc="帧同步锁定容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="15" step="" unit="位"/>
+		<field pid="116" GroupId="setting5" id="FrameSynchTolBIt" desc="帧同步校核容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="15" step="" unit="位"/>
+		<field pid="117" GroupId="setting5" id="FrameSynDeteNumb" desc="帧同步锁定检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="16" step="" unit="帧"/>
+		<field pid="118" GroupId="setting5" id="FrameSynCheckNumb" desc="帧同步校核检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="16" step="" unit="帧"/>
+	</unit>
+	<unit unitID="8" unitName="通道二Q路译码单元">
+		<field pid="114" GroupId="setting5" id="FrameSynchSearch" desc="帧同步搜索容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="15" step="" unit="位"/>
+		<field pid="115" GroupId="setting5" id="FrameSynchFault" desc="帧同步锁定容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="15" step="" unit="位"/>
+		<field pid="116" GroupId="setting5" id="FrameSynchTolBIt" desc="帧同步校核容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="15" step="" unit="位"/>
+		<field pid="117" GroupId="setting5" id="FrameSynDeteNumb" desc="帧同步锁定检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="16" step="" unit="帧"/>
+		<field pid="118" GroupId="setting5" id="FrameSynCheckNumb" desc="帧同步校核检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="16" step="" unit="帧"/>
+	</unit>
+</device>

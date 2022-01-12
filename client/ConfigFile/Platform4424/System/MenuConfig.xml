@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MenuConfig defaultLoad="">
+	<config1>
+		<!--<Menu name="微服务管理" moduleName="MicroServiceManager" type="dialog"/>-->
+		<Menu name="主界面" moduleName="">
+			<Menu name="主界面" moduleName="SystemMainScreen4424Module" icon="监控.png" type="dock" defaultTriggered="1"/>
+		</Menu>
+		<Menu name="任务管理" moduleName="">
+			<Menu name="任务计划" moduleName="TaskPlanManagerModule" icon="计划任务管理-1.png" type="dialog"/>
+			<Menu name="基带配置" moduleName="ResourceRestructuringModule" icon="资源重组-1.png" type="dialog"/>
+			<Menu name="设备管理" moduleName="DeviceManagementModule" icon="设备管理-1.png" type="dialog"/>
+			<Menu name="卫星管理" moduleName="SatelliteModule" icon="卫星管理-1.png" type="dialog"/>
+			<Menu name="星历数据" moduleName="EphemerisDataModule" icon="星历数据管理-1.png" type="dialog"/>
+			<Menu name="站资源"   moduleName="StationResManagementModule" icon="站资源管理-1.png" type="dialog"/>
+			<Menu name="自动运行策略" moduleName="AutorunPolicyModule" icon="自动运行策略-1.png" type="dialog"/>
+			<Menu name="数传中心" moduleName="DataTransmissionCenterModule" icon="数传中心管理-1.png" type="dialog"/>
+			<Menu name="任务中心" moduleName="TaskCenterModule" icon="任务.png" type="dialog"/>
+			<!--<Menu name="轨道预报" moduleName="OrbitProdictionModule" type="dialog"/>-->
+		</Menu>
+		<Menu name="宏管理" moduleName="">
+			<Menu name="参数宏" moduleName="ParamMacroManagerModule" icon="参数宏-1.png" type="dialog"/>
+			<Menu name="配置宏" moduleName="ConfigMacroModule" icon="配置宏-1.png" type="dialog"/>
+		</Menu>
+		<Menu name="设备监控" moduleName="">
+			<Menu name="天伺馈" moduleName="DeviceMonitorModule" subWidgetName="TCK" icon="天伺馈-1.png" type="dialog"/>
+			<Menu name="发射" moduleName="DeviceMonitorModule" subWidgetName="FS" icon="发射-1.png" type="dialog"/>
+			<Menu name="高频接收" moduleName="DeviceMonitorModule" subWidgetName="GPJS" icon="高频接收-1.png" type="dialog"/>
+			<Menu name="基带" moduleName="DeviceMonitorModule" subWidgetName="JD" icon="基带-1.png" type="dialog"/>
+			<Menu name="时频" moduleName="DeviceMonitorModule" subWidgetName="SP" icon="时频-1.png" type="dialog"/>
+			<Menu name="测试标校" moduleName="DeviceMonitorModule" subWidgetName="CSBX" icon="测试标校-1.png" type="dialog"/>
+			<Menu name="数字化前端" moduleName="DeviceMonitorModule" subWidgetName="QD" icon="数字化前端-1.png" type="dialog"/>
+			<Menu name="数据存储与交互" moduleName="DeviceMonitorModule" subWidgetName="SJJH" icon="数据存储与交互-1.png" type="dialog"/>
+		</Menu>
+		<Menu name="标校测试" moduleName="">
+			<Menu name="测距校零" moduleName="DistanceCalibration4424Module" icon="测距校零-1.png" type="dialog"/>
+			<Menu name="校相" moduleName="PhaseCalibration4424Module" icon="校相-1.png" type="dialog"/>
+			<Menu name="自动化测试" moduleName="AutomateTestModule" icon="自动化测试-1.png" type="dialog"/>
+			<Menu name="AGC曲线标定" moduleName="AGCCurveCalibrationModule" icon="AGC曲线标定-1.png" type="dialog"/>
+		</Menu>
+		<Menu name="日志管理" moduleName="">
+			<Menu name="系统日志" moduleName="SystemLogModule" icon="系统日志-1.png" type="dialog"/>
+			<Menu name="设备状态日志" moduleName="DeviceStatusLogModule" icon="设备状态日志-1.png" type="dialog"/>
+			<Menu name="任务执行日志" moduleName="TaskExecuteLogModule" icon="任务执行日志-1.png" type="dialog"/>
+			<!-- <Menu name="任务报表管理" moduleName="TaskReportTableModule" icon="任务.png" type="dialog"/> -->
+		</Menu>
+		<Menu name="用户管理" moduleName="">
+			<Menu name="用户登录" moduleName="UserManagerModule" subWidgetName="UserLogin" icon="用户登录-1.png" type="dialog" size="400, 200"/>
+			<Menu name="用户注册" moduleName="UserManagerModule" subWidgetName="UserRegister" icon="用户注册-1.png" type="dialog" size="400, 200"/>
+			<Menu name="用户列表" moduleName="UserManagerModule" subWidgetName="UserList" icon="用户列表-1.png" type="dialog" size="600, 800"/>
+		</Menu>
+		<Menu name="帮助" moduleName="">
+			<Menu name="帮助文档" moduleName="" icon="帮助文档-1.png" type="dialog"/>
+		</Menu>
+	</config1>
+	<config2>
+		<Menu name="一级菜单" moduleName="">
+			<Menu name="二级菜单" moduleName="">
+				<Menu name="微服务管理" moduleName="MicroServiceManager" type="dialog"/>
+				<Menu name="测试界面" moduleName="TestWidget" type="dialog"/>
+			</Menu>
+		</Menu>
+	</config2>
+</MenuConfig>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="setting2setting3setting45";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="setting2setting3setting45",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="TU" ModeType="0x19" desc="数传/遥测单元" flag="1001" isModifySetBtn="0">
+    <result MessageType="0x0000F104">
+        <recycle id="1" recycleNum="1" desc="一体化">
+            <!--目标1(一体化)下行数传单元数据元素-->
+            <field pid="1" GroupId="1" id="TeleStatPositLockIns" desc="位同步锁定指示" dataType="uint8" displayFormat="LED|PositLockIns" initValue="" minValue="" maxValue="" step="" unit=""  />
+            <field pid="2" GroupId="1" id="TeleFramPositLockIns" desc="帧同步锁定指示" dataType="uint8" displayFormat="LED|PositLockIns" initValue="" minValue="" maxValue="" step="" unit=""  />
+            <field pid="3" GroupId="1" id="EbNo" desc="Eb/N0" dataType="short" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="dB"  />
+            <field pid="101" GroupId="2" id="GML_CodeType" desc="码型" dataType="uint" displayFormat="enum|CodeType" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="102" GroupId="2" id="GML_MessageSpeedChoose" desc="信息速率与帧频" dataType="uint" displayFormat="enum|MessageSpeedChoose" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="103" GroupId="2" id="GML_DecodeType" desc="译码方式" dataType="uint8" displayFormat="enum|DecodeType" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="104" GroupId="2" id="GML_DescrambCtrl" desc="解扰控制" dataType="uint8" displayFormat="enum|DescrambCtrl1" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="105" GroupId="2" id="GML_DistPolyLength" desc="解扰多项式长度" dataType="uint8" displayFormat="enum|DistPolyLength" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="106" GroupId="2" id="GML_ScramPolg" desc="解扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="107" GroupId="2" id="GML_DescramPrim" desc="解扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="108" GroupId="3" id="GML_FramSynFaultBit" desc="帧搜索容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="63" step="" unit="位"  />
+            <field pid="109" GroupId="3" id="GML_FramSynLockBit" desc="帧锁定容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="63" step="" unit="位"  />
+            <field pid="110" GroupId="3" id="GML_FramSynCheckBit" desc="帧校核容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="63" step="" unit="位"  />
+            <field pid="111" GroupId="3" id="GML_FramSynCheckNum" desc="帧校核检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="64" step="" unit="帧"  />
+            <field pid="112" GroupId="3" id="GML_FramSynLockNum" desc="帧锁定检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="64" step="" unit="帧"  />
+            <field pid="113" GroupId="3" id="GML_DataFrameCode" desc="数据帧发送格式" dataType="uint8" displayFormat="enum|DataFrameCode" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="114" GroupId="3" id="GML_PerFramePacket" desc="每包发送数据帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="60" step="" unit=""  />
+        </recycle>
+        <recycle id="2" recycleNum="1" desc="扩频">
+            <!--目标2(扩频)遥测单元数据元素-->
+            <field pid="1" GroupId="4" id="TeleStatPositLockIns2" desc="遥测位同步" dataType="uint8" displayFormat="LED|PositLockIns" initValue="" minValue="" maxValue="" step="" unit=""  />
+            <field pid="2" GroupId="4" id="TeleFramPositLockIns2" desc="遥测帧同步" dataType="uint8" displayFormat="LED|PositLockIns" initValue="" minValue="" maxValue="" step="" unit=""  />
+            <field pid="3" GroupId="4" id="TeleSubPositLockIns2" desc="遥测副帧同步" dataType="uint8" displayFormat="LED|PositLockIns" initValue="" minValue="" maxValue="" step="" unit=""  />
+            <field pid="4" GroupId="4" id="EbNo2" desc="Eb/N0" dataType="short" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="dB"  />
+            <field pid="5" GroupId="4" id="VirtualFill" desc="虚拟填充" dataType="uint8" displayFormat="enum|VirtualFill" initValue="" minValue="" maxValue="" step="" unit=""  />
+            <field pid="101" GroupId="5" id="K2_CodeType" desc="码型" dataType="uint" displayFormat="enum|CodeType2" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="102" GroupId="5" id="K2_CodeRate" desc="码速率" dataType="uint" displayFormat="UInt32" initValue="100" minValue="100" maxValue="64000" step="" unit="bps"  />
+            <field pid="103" GroupId="5" id="K2_TeleDataType" desc="遥测数据类型" dataType="uint8" displayFormat="enum|TeleDataType" initValue="1" minValue="" maxValue="" step="" unit=""  isShow="0"/>
+            <field pid="104" GroupId="5" id="K2_DecodMode" desc="译码方式" dataType="uint8" displayFormat="enum|DecodMode" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="105" GroupId="5" id="K2_ConCodeType" desc="Viterbi译码" dataType="uint8" displayFormat="enum|ConCodeType" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="106" GroupId="5" id="K2_ViterbiDecodG2Phase" desc="Viterbi-G2相位" dataType="uint8" displayFormat="enum|ViterbiDecodG2Phase" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="107" GroupId="5" id="K2_RSCodeType" desc="R-S码类型" dataType="uint8" displayFormat="enum|RSCodeType" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="108" GroupId="5" id="K2_InterlDepth" desc="交错深度" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="5" step="" unit=""  />
+            <field pid="109" GroupId="5" id="K2_RSDecodCoorBase" desc="R-S译码坐标基" dataType="uint8" displayFormat="enum|RSDecodCoorBase" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="110" GroupId="5" id="K2_TurboBit" desc="Turbo码率(保留)" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="" maxValue="" step="" unit=""  isShow="0"/>
+            <field pid="111" GroupId="5" id="K2_LDPCBit" desc="LDPC码率(保留)" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0" />
+            <field pid="112" GroupId="6" id="K2_DescrambCtrl" desc="解扰控制" dataType="uint8" displayFormat="enum|DescrambCtrl2" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="113" GroupId="6" id="K2_DistPolyLength" desc="解扰多项式长度" dataType="uint8" displayFormat="enum|DistPolyLength" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="114" GroupId="6" id="K2_ScramPolg" desc="解扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="115" GroupId="6" id="K2_DescramPrim" desc="解扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="116" GroupId="6" id="K2_CRCCheck" desc="CRC校验" dataType="uint8" displayFormat="enum|CRCCheck" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0" />
+            <field pid="117" GroupId="6" id="K2_WordLength" desc="字长" dataType="uint8" displayFormat="UInt8" initValue="8" minValue="4" maxValue="16" step="" unit="位" fixValue="8" />
+            <field pid="118" GroupId="6" id="K2_FrameLength" desc="帧长" dataType="ushort" displayFormat="UInt16" initValue="4" minValue="4" maxValue="2048" step="" unit="字"  />
+            <field pid="119" GroupId="6" id="K2_FormatLength" desc="格式(副帧)长" dataType="ushort" displayFormat="UInt16" initValue="4" minValue="4" maxValue="256" step="" unit="帧"  />
+            <field pid="120" GroupId="6" id="K2_FrameSynCodeLength" desc="帧同步码长度" dataType="uint8" displayFormat="enum|FrameSynCodeLength" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="121" GroupId="6" id="K2_FrameSynchPatter" desc="帧同步码组" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="122" GroupId="5" id="K2_FrameCodeLocat" desc="帧码组位置" dataType="uint8" displayFormat="enum|FrameCodeLocat" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="123" GroupId="7" id="K2_SubframeSynch" desc="副帧同步方式" dataType="uint8" displayFormat="enum|SubframeSynch" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="124" GroupId="7" id="K2_IDCountPosit" desc="ID计数位置" dataType="ushort" displayFormat="UInt16" initValue="1" minValue="1" maxValue="1024" step="" unit="字"  />
+            <field pid="125" GroupId="7" id="K2_IDCountValue" desc="ID计数基值" dataType="uint8" displayFormat="enum|IDCountValue" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="126" GroupId="7" id="K2_IDCountDirect" desc="ID计数方向" dataType="uint8" displayFormat="enum|IDCountDirect" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="127" GroupId="7" id="K2_SubfraCodeLocat" desc="副帧码组位置" dataType="ushort" displayFormat="UInt16" initValue="1" minValue="1" maxValue="2048" step="" unit="字"  />
+            <field pid="128" GroupId="7" id="K2_SubCodeLength" desc="副帧码组长度" dataType="uint8" displayFormat="enum|SubCodeLength" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="129" GroupId="7" id="K2_SubSynGroup" desc="副帧同步码组" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="130" GroupId="8" id="K2_FramSynFaultBit" desc="帧搜索容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="7" step="" unit="位"  />
+            <field pid="131" GroupId="8" id="K2_FramSynLockBit" desc="帧锁定容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="7" step="" unit="位"  />
+            <field pid="132" GroupId="8" id="K2_FramSynCheckBit" desc="帧校核容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="7" step="" unit="位"  />
+            <field pid="133" GroupId="8" id="K2_FramSynCheckNum" desc="帧校核检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="" unit="帧"  />
+            <field pid="134" GroupId="8" id="K2_FramSynLockNum" desc="帧锁定检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="" unit="帧"  />
+            <field pid="135" GroupId="9" id="K2_SubDigitSubFrame" desc="副帧搜索容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="7" step="" unit="位"  />
+            <field pid="136" GroupId="9" id="K2_SubSynFaultTolBit" desc="副帧校核容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="7" step="" unit="位"  />
+            <field pid="137" GroupId="9" id="K2_SubSynLockTolBit" desc="副帧锁定容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="7" step="" unit="位"  />
+            <field pid="138" GroupId="9" id="K2_SubCheckNum" desc="副帧校核帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="" unit="副帧"  />
+            <field pid="139" GroupId="9" id="K2_NumSubLock" desc="副帧锁定帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="" unit="副帧"  />
+            <field pid="140" GroupId="5" id="K2_DataFrameCode" desc="数据帧标志码" dataType="uint8" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""  />
+        </recycle>
+    </result>
+    <layout>
+        <item id="1" desc="" row="0" col = "0" rowspan = "1" colspan = "1"/>
+        <item id="2" desc="" row="1" col = "0" rowspan = "1" colspan = "2"/>
+        <item id="3" desc="" row="2" col = "0" rowspan = "1" colspan = "2"/>
+        <item id="4" desc="" row="0" col = "0" rowspan = "1" colspan = "2"/>
+        <item id="5" desc="" row="0" col = "0" rowspan = "1" colspan = "2"/>
+        <item id="6" desc="" row="1" col = "0" rowspan = "1" colspan = "2"/>
+        <item id="7" desc="" row="2" col = "0" rowspan = "1" colspan = "2"/>
+        <item id="8" desc="" row="3" col = "0" rowspan = "1" colspan = "1"/>
+        <item id="9" desc="" row="3" col = "1" rowspan = "1" colspan = "1"/>
+    </layout>
+</cmd>

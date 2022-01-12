@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="BNTSN" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="DevStatus" desc="设备状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="PowerStatus" desc="设备开关电">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="关电:Y"/>
+		<entry svalue="2" uvalue="2" desc="开电:G"/>
+	</enum>
+	<enum name="ControlMode" desc="监控方式">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="InputSelect" desc="70M中频12选一开关">
+		<entry svalue="1" uvalue="1" desc="70MHz入1"/>
+		<entry svalue="2" uvalue="2" desc="70MHz入2"/>
+		<entry svalue="3" uvalue="3" desc="70MHz入3"/>
+		<entry svalue="4" uvalue="4" desc="70MHz入4"/>
+		<entry svalue="5" uvalue="5" desc="70MHz入5"/>
+		<entry svalue="6" uvalue="6" desc="70MHz入6"/>
+		<entry svalue="7" uvalue="7" desc="70MHz入7"/>
+		<entry svalue="8" uvalue="8" desc="70MHz入8"/>
+		<entry svalue="9" uvalue="9" desc="70MHz入9"/>
+		<entry svalue="10" uvalue="10" desc="70MHz入10"/>
+		<entry svalue="11" uvalue="11" desc="70MHz入11"/>
+		<entry svalue="12" uvalue="12" desc="70MHz入12"/>
+	</enum>
+	<enum name="Select70MInput" desc="300MHz6选1开关">
+		<entry svalue="1" uvalue="1" desc="300MHz入1"/>
+		<entry svalue="2" uvalue="2" desc="300MHz入2"/>
+		<entry svalue="3" uvalue="3" desc="300MHz入3"/>
+		<entry svalue="4" uvalue="4" desc="300MHz入4"/>
+		<entry svalue="5" uvalue="5" desc="300MHz入5"/>
+		<entry svalue="6" uvalue="6" desc="300MHz入6"/>
+	</enum>
+	<enum name="OscillChannSel1" desc="宽带选择开关">
+		<entry svalue="1" uvalue="1" desc="S下行"/>
+		<entry svalue="2" uvalue="2" desc="S上行"/>
+		<entry svalue="3" uvalue="3" desc="1.2GHz入"/>
+		<entry svalue="4" uvalue="4" desc="10MHz入"/>
+		<entry svalue="5" uvalue="5" desc="300MHz入"/>
+		<entry svalue="6" uvalue="6" desc="70MHz入"/>
+	</enum>
+	<enum name="OscillChannSel2" desc="基带数字测试信号选择开关">
+		<entry svalue="1" uvalue="1" desc="基带数字测试1"/>
+		<entry svalue="2" uvalue="2" desc="基带数字测试2"/>
+		<!--<entry svalue="3" uvalue="3" desc="保留通道(视频入4)" />这个选项按协议保留-->
+	</enum>
+</enums>

@@ -1,0 +1,4 @@
+INCLUDEPATH += $$PWD
+DEPENDPATH += $$PWD
+INCLUDEPATH += $$PWD/rapidjson
+DEPENDPATH += $$PWD/rapidjson

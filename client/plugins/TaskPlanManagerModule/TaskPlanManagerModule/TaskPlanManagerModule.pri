@@ -1,0 +1,35 @@
+INCLUDEPATH += $$PWD
+DEPENDPATH += $$PWD
+INCLUDEPATH += $$PWD/Model
+DEPENDPATH += $$PWD/Model
+
+
+
+RESOURCES += \
+    $$PWD/res.qrc
+
+FORMS += \
+    $$PWD/DeviceWorkTaskWidget.ui \
+    $$PWD/LocalPlanDialog.ui \
+    $$PWD/PlanListWidget.ui \
+    $$PWD/SystemLogFastPhotoWidget.ui
+
+HEADERS += \
+    $$PWD/DataTransferTaskModel.h \
+    $$PWD/DeviceWorkTaskModel.h \
+    $$PWD/DeviceWorkTaskWidget.h \
+    $$PWD/LocalPlanDialog.h \
+    $$PWD/PlanListWidget.h \
+    $$PWD/RealTimeLogModel.h \
+    $$PWD/TaskPlanManagerService.h \
+    $$PWD/SystemLogFastPhotoWidget.h
+
+SOURCES += \
+    $$PWD/DataTransferTaskModel.cpp \
+    $$PWD/DeviceWorkTaskModel.cpp \
+    $$PWD/DeviceWorkTaskWidget.cpp \
+    $$PWD/LocalPlanDialog.cpp \
+    $$PWD/PlanListWidget.cpp \
+    $$PWD/RealTimeLogModel.cpp \
+    $$PWD/TaskPlanManagerService.cpp \
+    $$PWD/SystemLogFastPhotoWidget.cpp

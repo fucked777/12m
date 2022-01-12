@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<configuration>
+	<!-- 当一个模块同时存在于核心模块和普通模块时此模块会被认为是普通模块 -->
+	<!-- 核心模块不能依赖任何模块 加载顺序未定义 并且一定先于普通模块加载 -->
+	<core>
+		<module name="ZMQRouterServer"/>
+		<module name="MicroServiceManager"/>
+	</core>
+	<!-- 普通的模块 -->
+	<general>
+		<module name="ResourceRestructuringModule"/>
+		<module name="DeviceManagementModule"/>
+		<module name="SatelliteModule"/>
+		<module name="EphemerisDataModule"/>
+		<module name="StationResManagementModule"/>
+		<module name="AutorunPolicyModule"/>
+		<module name="DataTransmissionCenterModule"/>
+		<module name="TaskCenterModule"/>
+		<module name="OrbitProdictionModule"/>
+		<module name="ParamMacroManagerModule"/>
+		<module name="ConfigMacroModule"/>
+		<module name="DistanceCalibration4424Module"/> <!-- 26客户端代码 没有写 暂时使用24的 -->
+		<module name="PhaseCalibration4426Module"/>
+		<module name="AutomateTestModule"/>
+		<module name="AGCCurveCalibrationModule"/>
+		<module name="SystemLogModule"/>
+		<module name="DeviceStatusLogModule"/>
+		<module name="AudioModule"/>
+		<module name="TaskExecuteLogModule"/>
+		<module name="TaskReportTableModule"/>
+		<module name="DeviceXmlLoadServiceModule"/>
+		<module name="DeviceMonitorModule"/>
+		<module name="CenterAirConditionerModule"/>
+		<module name="AddAndRemovePowerModule"/>
+		<module name="SystemMainScreen4426Module"/>
+		<module name="TaskPlanManagerModule"/>
+		<module name="SystemBlockDiagramUI4426Module"/>
+		<module name="UserManagerModule"/>
+		<module name="TimeModule"/>
+	</general>
+	<!-- 模块之间的依赖关系 此处如果包含核心模块会直接忽略核心模块的依赖 -->
+	<relationship>
+		<item depend="SystemMainScreen4426Module" on="DeviceXmlLoadServiceModule"/>
+		<item depend="DeviceMonitorModule" on="DeviceXmlLoadServiceModule"/>
+	</relationship>
+</configuration>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="IFCM" ModeType="0x01" edition="1.1.1.1">
+	<enum name="CarrierReturnToZero" desc="载波回零">
+		<entry svalue="1" uvalue="1" desc="未回零:Y"/>
+		<entry svalue="2" uvalue="2" desc="回零:G"/>
+	</enum>
+	<enum name="CarrierOutput" desc="载波输出">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="允许输出"/>
+		<entry svalue="2" uvalue="2" desc="禁止输出"/>
+	</enum>
+	<enum name="RemotePlusCtrl" desc="遥控加调">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="加调"/>
+		<entry svalue="2" uvalue="2" desc="去调"/>
+	</enum>
+	<enum name="RangPlusCtrl" desc="测距加调">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="加调"/>
+		<entry svalue="2" uvalue="2" desc="去调"/>
+	</enum>
+	<enum name="RanPlusCtrl" desc="遥测模拟加调">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="加调"/>
+		<entry svalue="2" uvalue="2" desc="去调"/>
+	</enum>
+	<enum name="BlindSwitch" desc="盲发开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="开"/>
+		<entry svalue="2" uvalue="2" desc="关"/>
+	</enum>
+	<enum name="NoiseSourceOupput" desc="噪声源输出">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="开"/>
+		<entry svalue="2" uvalue="2" desc="关"/>
+	</enum>
+</enums>

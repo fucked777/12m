@@ -1,0 +1,52 @@
+<Links>
+	<Link id="1" name="任务方式">
+		<Mode id="1" name="标准TTC" path="./任务方式/标准TTC.xml"/>
+		<Mode id="2" name="S扩二" path="./任务方式/标准TTC.xml"/>
+		<Mode id="6" name="Ka高速" path="./任务方式/Ka高速.xml"/>
+		<Mode id="7" name="一体化上面级" path="./任务方式/标准TTC.xml"/>
+		<Mode id="8" name="一体化卫星" path="./任务方式/标准TTC.xml"/>
+		<Mode id="9" name="一体化高码率" path="./任务方式/标准TTC.xml"/>
+		<Mode id="10" name="一体化上面级+扩二共载波" path="./任务方式/一体化XX+扩频.xml"/>
+		<Mode id="11" name="一体化上面级+扩二不共载波" path="./任务方式/一体化XX+扩频.xml"/>
+		<Mode id="12" name="一体化卫星+扩二" path="./任务方式/一体化XX+扩频.xml"/>
+		<Mode id="13" name="一体化高码率+扩二" path="./任务方式/一体化XX+扩频.xml"/>
+		<Mode id="14" name="扩跳" path="./任务方式/扩跳.xml"/>
+		<Mode id="15" name="X高速" path="./任务方式/X高速.xml"/>
+	</Link>
+	<Link id="2" name="联试应答机有线闭环">
+		<Mode id="1" name="标准TTC" path="./联试应答机有线闭环/标准TTC.xml"/>
+		<Mode id="2" name="S扩二" path="./联试应答机有线闭环/标准TTC.xml"/>
+		<Mode id="7" name="一体化上面级" path="./联试应答机有线闭环/标准TTC.xml"/>
+		<Mode id="8" name="一体化卫星" path="./联试应答机有线闭环/标准TTC.xml"/>
+		<Mode id="9" name="一体化高码率" path="./联试应答机有线闭环/标准TTC.xml"/>
+		<Mode id="10" name="一体化上面级+扩二共载波" path="./联试应答机有线闭环/标准TTC.xml"/>
+		<Mode id="11" name="一体化上面级+扩二不共载波" path="./联试应答机有线闭环/标准TTC.xml"/>
+		<Mode id="12" name="一体化卫星+扩二" path="./联试应答机有线闭环/标准TTC.xml"/>
+		<Mode id="13" name="一体化高码率+扩二" path="./联试应答机有线闭环/标准TTC.xml"/>
+	</Link>
+	<!--
+	<Link id="3" name="偏馈校零变频器闭环">
+		<Mode id="1" name="标准TTC" path="./偏馈校零变频器闭环/标准TTC.xml"/>
+		<Mode id="2" name="S扩二" path="./偏馈校零变频器闭环/标准TTC.xml"/>
+		<Mode id="3" name="Ka扩二" path="./偏馈校零变频器闭环/Ka扩二.xml"/>
+		<Mode id="14" name="扩跳" path="./偏馈校零变频器闭环/标准TTC.xml"/>
+	</Link>-->
+	<Link id="5" name="射频模拟源有线闭环">
+		<Mode id="1" name="标准TTC" path="./射频模拟源有线闭环/标准TTC.xml"/>
+		<Mode id="2" name="S扩二" path="./射频模拟源有线闭环/标准TTC.xml"/>
+		<Mode id="6" name="Ka高速" path="./射频模拟源有线闭环/Ka高速.xml"/>
+		<Mode id="7" name="一体化上面级" path="./射频模拟源有线闭环/标准TTC.xml"/>
+		<Mode id="8" name="一体化卫星" path="./射频模拟源有线闭环/标准TTC.xml"/>
+		<Mode id="9" name="一体化高码率" path="./射频模拟源有线闭环/标准TTC.xml"/>
+		<Mode id="10" name="一体化上面级+扩二共载波" path="./射频模拟源有线闭环/标准TTC.xml"/>
+		<Mode id="11" name="一体化上面级+扩二不共载波" path="./射频模拟源有线闭环/标准TTC.xml"/>
+		<Mode id="12" name="一体化卫星+扩二" path="./射频模拟源有线闭环/标准TTC.xml"/>
+		<Mode id="13" name="一体化高码率+扩二" path="./射频模拟源有线闭环/标准TTC.xml"/>
+		<Mode id="14" name="扩跳" path="./射频模拟源有线闭环/标准TTC.xml"/>
+		<Mode id="15" name="X高速" path="./射频模拟源有线闭环/X高速.xml"/>
+	</Link>
+	<Link id="6" name="中频闭环链路">
+		<Mode id="6" name="Ka高速" path="./中频闭环/Ka高速.xml"/>
+		<Mode id="15" name="X高速" path="./中频闭环/Ka高速.xml"/>
+	</Link>
+</Links>

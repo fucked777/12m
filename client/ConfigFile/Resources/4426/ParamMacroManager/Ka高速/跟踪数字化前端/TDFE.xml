@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device>
+	<unit unitID="1" unitName="公共单元">
+		<field pid="101" id="ReceiveSink" desc="接收通道信宿" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="103" id="YBRate" desc="样本速率" dataType="uint8" displayFormat="enum|YBRate" fixValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="104" id="MainSubSwitch" desc="主备网络切换" dataType="uint8" displayFormat="enum|MainSubSwitch" fixValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+	</unit>
+	<unit unitID="2" unitName="接收单元">
+		<field pid="104" GroupId="status2" id="TimeConstant_2" desc="AGC时间常数(S2数传接收)" dataType="uint8" displayFormat="enum|TimeConstant" initValue="3" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="105" GroupId="status2" id="AGCSwitch_2" desc="AGC开关(S2数传接收)" dataType="uint8" displayFormat="enum|AGCSwitch" fixValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="106" GroupId="status2" id="ReceiveFreq_2" desc="接收频率(S2数传接收)" dataType="uint" displayFormat="double" initValue="2250" minValue="2250" maxValue="2250" step="0.000001" unit="MHz" isShow="0"/>
+		<field pid="107" GroupId="status2" id="TimeConstant_3" desc="AGC时间常数(S2数传接收)" dataType="uint8" displayFormat="enum|TimeConstant" initValue="3" minValue="" maxValue="" step="" unit=""/>
+		<field pid="108" GroupId="status2" id="AGCSwitch_3" desc="AGC开关(S2数传接收)" dataType="uint8" displayFormat="enum|AGCSwitch" fixValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="109" GroupId="status2" id="ReceiveFreq_3" desc="接收频率(S2数传接收)" dataType="uint" displayFormat="double" fixValue="2250" minValue="2250" maxValue="2250" step="0.000001" unit="MHz" isShow="0"/>
+	</unit>
+</device>

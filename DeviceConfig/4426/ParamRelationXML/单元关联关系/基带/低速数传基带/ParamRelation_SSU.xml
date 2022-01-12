@@ -1,0 +1,1576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x04" modeID="0x0" unitType="SSU" desc="模拟源">
+	<Triggers>
+		<Trigger id="IViterbiDecoding" desc="卷积码类型">
+			<TriggerValue value="1" desc="（7，1/2）">
+				<Receiver id="IConvoOutPhase" desc="G2相位反转" isEnable="" values="1:正相;2:反相" minValue="" maxValue="" />
+				<Association id="ICodeWay">
+					<AssociationItem id="1 1" desc="关 （7，1/2）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2" desc="Viterbi译码 （7，1/2）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="1" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3" desc="R-S译码 （7，1/2）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4" desc="R-S译码和Viterbi级联译码 （7，5/6）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="1" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5" desc="Turbo （7，1/2）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 6" desc="LDPC （7，1/2）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="2" desc="（7，2/3）">
+				<Receiver id="IConvoOutPhase" desc="G2相位反转" isEnable="" values="1:正相" minValue="" maxValue="" />
+				<Association id="ICodeWay">
+					<AssociationItem id="2 1" desc="关 （7，2/3）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2" desc="Viterbi译码 （7，2/3）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3" desc="R-S译码 （7，2/3）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4" desc="R-S译码和Viterbi级联译码 （7，2/3）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5" desc="Turbo （7，2/3）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 6" desc="LDPC （7，2/3）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="3" desc="（7，3/4）">
+				<Receiver id="IConvoOutPhase" desc="G2相位反转" isEnable="" values="1:正相" minValue="" maxValue="" />
+				<Association id="ICodeWay">
+					<AssociationItem id="3 1" desc="关 （7，3/4）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 2" desc="Viterbi译码 （7，3/4）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 3" desc="R-S译码 （7，3/4）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 4" desc="R-S译码和Viterbi级联译码 （7，3/4）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 5" desc="Turbo （7，3/4）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 6" desc="LDPC （7，3/4）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="4" desc="（7，5/6）">
+				<Receiver id="IConvoOutPhase" desc="G2相位反转" isEnable="" values="1:正相" minValue="" maxValue="" />
+				<Association id="ICodeWay">
+					<AssociationItem id="4 1" desc="关 （7，5/6）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 2" desc="Viterbi译码 （7，5/6）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 3" desc="R-S译码 （7，5/6）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 4" desc="R-S译码和Viterbi级联译码 （7，5/6）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 5" desc="Turbo （7，5/6）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 6" desc="LDPC （7，5/6）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="5" desc="（7，7/8）">
+				<Receiver id="IConvoOutPhase" desc="G2相位反转" isEnable="" values="1:正相" minValue="" maxValue="" />
+				<Association id="ICodeWay">
+					<AssociationItem id="5 1" desc="关 （7，7/8）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 2" desc="Viterbi译码 （7，7/8）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 3" desc="R-S译码  （7，7/8）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 4" desc="R-S译码和Viterbi级联译码 （7，7/8）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 5" desc="Turbo （7，7/8）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 6" desc="LDPC （7，7/8）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+		</Trigger>
+		<Trigger id="ICodeWay" desc="译码方式">
+			<TriggerValue value="1" desc="关">
+				<Receiver id="IRSDecoding" desc="R-S译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IViterbiDecoding" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ITurboCodeRate" desc="Turbo译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ILDPCCodeRate" desc="LDPC译码" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="IDoubleBaseChange" desc="R-S译码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IInterlaceDeep" desc="交错深度" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="IFrameLenght" desc="帧长" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="16" maxValue="64" />
+				
+				<Association id="IViterbiDecoding">
+					<AssociationItem id="1 1" desc="关 （7，1/2）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2" desc="关 （7，2/3）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3" desc="关 （7，3/4）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4" desc="关 （7，5/6）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5" desc="关 （7，7/8）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="2" desc="Viterbi译码">
+				<Receiver id="IRSDecoding" desc="R-S译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IViterbiDecoding" desc="卷积码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="ITurboCodeRate" desc="Turbo译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ILDPCCodeRate" desc="LDPC译码" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="IDoubleBaseChange" desc="R-S译码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IInterlaceDeep" desc="交错深度" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="IFrameLenght" desc="帧长" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="16" maxValue="64" />
+				
+				<Association id="IViterbiDecoding">
+					<AssociationItem id="2 1" desc="Viterbi译码 （7，1/2）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="1" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2" desc="Viterbi译码 （7，2/3）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3" desc="Viterbi译码 （7，3/4）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4" desc="Viterbi译码 （7，5/6）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5" desc="Viterbi译码 （7，7/8）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="3" desc="R-S译码">
+				<Receiver id="IRSDecoding" desc="R-S译码" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="IViterbiDecoding" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ITurboCodeRate" desc="Turbo译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ILDPCCodeRate" desc="LDPC译码" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="IDoubleBaseChange" desc="R-S译码坐标基" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="IInterlaceDeep" desc="交错深度" isEnable="1" values="" minValue="" maxValue="" />
+				
+				<Receiver id="IFrameLenght" desc="帧长" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="16" maxValue="64" />
+				
+				<Association id="IViterbiDecoding">
+					<AssociationItem id="3 1" desc="R-S译码 （7，1/2）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 2" desc="R-S译码 （7，2/3）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 3" desc="R-S译码 （7，3/4）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 4" desc="R-S译码 （7，5/6）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 5" desc="R-S译码 （7，7/8）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="4" desc="R-S译码和Viterbi级联译码">
+				<Receiver id="IRSDecoding" desc="R-S译码" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="IViterbiDecoding" desc="卷积码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="ITurboCodeRate" desc="Turbo译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ILDPCCodeRate" desc="LDPC译码" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="IDoubleBaseChange" desc="R-S译码坐标基" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="IInterlaceDeep" desc="交错深度" isEnable="1" values="" minValue="" maxValue="" />
+				
+				<Receiver id="IFrameLenght" desc="帧长" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="16" maxValue="64" />
+				
+				<Association id="IViterbiDecoding">
+					<AssociationItem id="4 1" desc="R-S译码和Viterbi级联译码 （7，1/2）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="1" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 2" desc="R-S译码和Viterbi级联译码 （7，2/3）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 3" desc="R-S译码和Viterbi级联译码 （7，3/4）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 4" desc="R-S译码和Viterbi级联译码 （7，5/6）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 5" desc="R-S译码和Viterbi级联译码 （7，7/8）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="5" desc="Turbo">
+				<Receiver id="IRSDecoding" desc="R-S译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IViterbiDecoding" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ITurboCodeRate" desc="Turbo译码" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="ILDPCCodeRate" desc="LDPC译码" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="1:正相;2:反相" minValue="" maxValue="" />
+				<Receiver id="IDoubleBaseChange" desc="R-S译码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IInterlaceDeep" desc="交错深度" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="IFrameLenght" desc="帧长" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="" minValue="16" maxValue="192" />
+				
+				<Association id="ITurboCodeRate">
+					<AssociationItem id="5 1" desc="Turbo译码有 1/2(3576,1784)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="231" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 2" desc="Turbo译码有 1/2(7144,3568)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="454" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 3" desc="Turbo译码有 1/2(14280,7136)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="900" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 4" desc="Turbo译码有 1/2(17848,8920)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="1123" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 5" desc="Turbo译码有 1/3(5364,1784)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="235" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="96" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79C" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 6" desc="Turbo译码有 1/3(10716,3568)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="458" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="96" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79C" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 7" desc="Turbo译码有 1/3(21420,7136)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="904" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="96" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79C" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 8" desc="Turbo译码有 1/3(26772,8920)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="1127" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="96" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79C" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 9" desc="Turbo译码有 1/4(7152,1784)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="239" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="128" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0FCB88938D8D76A4F" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 10" desc="Turbo译码有 1/4(14288,3568)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="462" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="128" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0FCB88938D8D76A4F" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 11" desc="Turbo译码有 1/4(28560,7136)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="908" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="128" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0FCB88938D8D76A4F" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 12" desc="Turbo译码有 1/4(35696,8920)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="1131" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="128" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0FCB88938D8D76A4F" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 13" desc="Turbo译码有 1/6(10728,1784)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="247" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="192" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79CDA2A3F31766F0936B9E40863" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 14" desc="Turbo译码有 1/6(21432,3568)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="470" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="192" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79CDA2A3F31766F0936B9E40863" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 15" desc="Turbo译码有 1/6(42840,7136)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="916" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="192" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79CDA2A3F31766F0936B9E40863" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 16" desc="Turbo译码有 1/6(53544,8920)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="1139" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="192" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79CDA2A3F31766F0936B9E40863" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="6" desc="LDPC">
+				<Receiver id="IRSDecoding" desc="R-S译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IViterbiDecoding" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ITurboCodeRate" desc="Turbo译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ILDPCCodeRate" desc="LDPC译码" isEnable="1" values="" minValue="" maxValue="" />
+				
+				<Receiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="1:正相;2:反相" minValue="" maxValue="" />
+				<Receiver id="IDoubleBaseChange" desc="R-S译码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IInterlaceDeep" desc="交错深度" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="IFrameLenght" desc="帧长" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="32" minValue="16" maxValue="64" />
+				
+				<Association id="ILDPCCodeRate">
+					<AssociationItem id="6 1" desc="LDPC译码 1/2(2048,1024)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="264" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 2" desc="LDPC译码 1/2(8192,4096)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="1032" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 3" desc="LDPC译码 2/3(1536,1024)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="200" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 4" desc="LDPC译码 2/3(6144,4096)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="776" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 5" desc="LDPC译码 4/5(1280,1024)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="168" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 6" desc="LDPC译码 4/5(5120,4096)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="648" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 7" desc="LDPC译码 7/8(8160,7136)">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="1024" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="32" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="1ACFFC1D" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="ILDPCCodeRate" desc="LDPC译码">
+			<TriggerValue value="1" desc="1/2(2048,1024)">
+				<Association id="ICodeWay">
+					<AssociationItem id="1 6" desc="1/2(2048,1024) LDPC译码">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="264" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="2" desc="1/2(8192,4096)">
+				<Association id="ICodeWay">
+					<AssociationItem id="2 6" desc="1/2(8192,4096) LDPC译码">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="1032" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="3" desc="2/3(1536,1024)">
+				<Association id="ICodeWay">
+					<AssociationItem id="3 6" desc="2/3(1536,1024) LDPC译码">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="200" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="4" desc="2/3(6144,4096)">
+				<Association id="ICodeWay">
+					<AssociationItem id="4 6" desc="2/3(6144,4096) LDPC译码">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="776" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="5" desc="4/5(1280,1024)">
+				<Association id="ICodeWay">
+					<AssociationItem id="5 6" desc="4/5(1280,1024) LDPC译码">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="168" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="6" desc="4/5(5120,4096)">
+				<Association id="ICodeWay">
+					<AssociationItem id="6 6" desc="4/5(5120,4096) LDPC译码">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="648" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="7" desc="7/8(8160,7136)">
+				<Association id="ICodeWay">
+					<AssociationItem id="7 6" desc="7/8(8160,7136) LDPC译码">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="1024" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="32" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="1ACFFC1D" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="ITurboCodeRate" desc="Turbo译码方式">
+			<TriggerValue value="1" desc="1/2(3576,1784)">
+				<Association id="ICodeWay">
+					<AssociationItem id="1 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="231" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="2" desc="1/2(7144,3568)">
+				<Association id="ICodeWay">
+					<AssociationItem id="2 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="454" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="3" desc="1/2(14280,7136)">
+				<Association id="ICodeWay">
+					<AssociationItem id="3 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="900" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="4" desc="1/2(17848,8920)">
+				<Association id="ICodeWay">
+					<AssociationItem id="4 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="1123" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="5" desc="1/3(5364,1784)">
+				<Association id="ICodeWay">
+					<AssociationItem id="5 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="235" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="96" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79C" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="6" desc="1/3(10716,3568)">
+				<Association id="ICodeWay">
+					<AssociationItem id="6 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="458" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="96" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79C" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="7" desc="1/3(21420,7136)">
+				<Association id="ICodeWay">
+					<AssociationItem id="7 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="904" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="96" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79C" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="8" desc="1/3(26772,8920)">
+				<Association id="ICodeWay">
+					<AssociationItem id="8 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="1127" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="96" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79C" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="9" desc="1/4(7152,1784)">
+				<Association id="ICodeWay">
+					<AssociationItem id="9 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="239" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="128" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0FCB88938D8D76A4F" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="10" desc="1/4(14288,3568)">
+				<Association id="ICodeWay">
+					<AssociationItem id="10 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="462" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="128" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0FCB88938D8D76A4F" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="11" desc="1/4(28560,7136)">
+				<Association id="ICodeWay">
+					<AssociationItem id="11 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="908" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="128" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0FCB88938D8D76A4F" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="12" desc="1/4(35696,8920)">
+				<Association id="ICodeWay">
+					<AssociationItem id="12 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="1131" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="128" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0FCB88938D8D76A4F" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="13" desc="1/6(10728,1784)">
+				<Association id="ICodeWay">
+					<AssociationItem id="13 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="247" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="192" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79CDA2A3F31766F0936B9E40863" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="14" desc="1/6(21432,3568)">
+				<Association id="ICodeWay">
+					<AssociationItem id="14 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="470" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="192" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79CDA2A3F31766F0936B9E40863" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="15" desc="1/6(42840,7136)">
+				<Association id="ICodeWay">
+					<AssociationItem id="15 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="916" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="192" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79CDA2A3F31766F0936B9E40863" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="16" desc="1/6(53544,8920)">
+				<Association id="ICodeWay">
+					<AssociationItem id="16 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="IFrameLenght" desc="帧长" isEnable="" values="1139" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="192" minValue="" maxValue="" />
+						<AssociationReceiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79CDA2A3F31766F0936B9E40863" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="IDescramble2" desc="I路编码前加扰开关">
+			<TriggerValue value="1" desc="不加扰">
+				<Receiver id="IDescPolyLenght2" desc="I路编码前加扰多项式长度" isEnable="0" values="8:8位;16:16位;24:24位;32:32位" minValue="" maxValue="" />
+				<Receiver id="IDescSequeChoose2" desc="I路编码前加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IDescPolynomial2" desc="I路编码前加扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IDescInitPhase2" desc="I路编码前加扰初相" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="自动加扰">
+				<Receiver id="IDescPolyLenght2" desc="I路编码前加扰多项式长度" isEnable="0" values="8:8位" minValue="" maxValue="" />
+				<Receiver id="IDescSequeChoose2" desc="I路编码前加扰输出位置" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="IDescPolynomial2" desc="I路编码前加扰多项式" isEnable="0" values="A9" minValue="" maxValue="" />
+				<Receiver id="IDescInitPhase2" desc="I路编码前加扰初相" isEnable="0" values="FF" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="人工设置">
+				<Receiver id="IDescPolyLenght2" desc="I路编码前加扰多项式长度" isEnable="1" values="8:8位;16:16位;24:24位;32:32位" minValue="" maxValue="" />
+				<Receiver id="IDescSequeChoose2" desc="I路编码前加扰输出位置" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="IDescPolynomial2" desc="I路编码前加扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="IDescInitPhase2" desc="I路编码前加扰初相" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="IDescPolyLenght2" desc="I路编码前加扰多项式长度">
+			<TriggerValue value="8" desc="8位">
+				<Receiver id="IDescPolynomial2" desc="I路编码前加扰多项式" isEnable="" values="" minValue="0" maxValue="FF" />
+				<Receiver id="IDescInitPhase2" desc="I路编码前加扰初相" isEnable="" values="" minValue="0" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="16" desc="16位">
+				<Receiver id="IDescPolynomial2" desc="I路编码前加扰多项式" isEnable="" values="" minValue="0" maxValue="FFFF" />
+				<Receiver id="IDescInitPhase2" desc="I路编码前加扰初相" isEnable="" values="" minValue="0" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="24位">
+				<Receiver id="IDescPolynomial2" desc="I路编码前加扰多项式" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+				<Receiver id="IDescInitPhase2" desc="I路编码前加扰初相" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="32位">
+				<Receiver id="IDescPolynomial2" desc="I路编码前加扰多项式" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+				<Receiver id="IDescInitPhase2" desc="I路编码前加扰初相" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="IDescramble" desc="I路编码后加扰开关">
+			<TriggerValue value="1" desc="不加扰">
+				<Receiver id="IDescPolyLenght" desc="I路编码后加扰多项式长度" isEnable="0" values="8:8位;16:16位;24:24位;32:32位" minValue="" maxValue="" />
+				<Receiver id="IDescSequeChoose" desc="I路编码后加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IDescPolynomial" desc="I路编码后加扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IDescInitPhase" desc="I路编码后加扰初相" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="自动加扰">
+				<Receiver id="IDescPolyLenght" desc="I路编码后加扰多项式长度" isEnable="0" values="8:8位" minValue="" maxValue="" />
+				<Receiver id="IDescSequeChoose" desc="I路编码后加扰输出位置" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="IDescPolynomial" desc="I路编码后加扰多项式" isEnable="0" values="A9" minValue="" maxValue="" />
+				<Receiver id="IDescInitPhase" desc="I路编码后加扰初相" isEnable="0" values="FF" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="人工设置">
+				<Receiver id="IDescPolyLenght" desc="I路编码后加扰多项式长度" isEnable="1" values="8:8位;16:16位;24:24位;32:32位" minValue="" maxValue="" />
+				<Receiver id="IDescSequeChoose" desc="I路编码后加扰输出位置" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="IDescPolynomial" desc="I路编码后加扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="IDescInitPhase" desc="I路编码后加扰初相" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="IDescPolyLenght" desc="I路编码后加扰多项式长度">
+			<TriggerValue value="8" desc="8位">
+				<Receiver id="IDescPolynomial" desc="I路编码后加扰多项式" isEnable="" values="" minValue="0" maxValue="FF" />
+				<Receiver id="IDescInitPhase" desc="I路编码后加扰初相" isEnable="" values="" minValue="0" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="16" desc="16位">
+				<Receiver id="IDescPolynomial" desc="I路编码后加扰多项式" isEnable="" values="" minValue="0" maxValue="FFFF" />
+				<Receiver id="IDescInitPhase" desc="I路编码后加扰初相" isEnable="" values="" minValue="0" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="24位">
+				<Receiver id="IDescPolynomial" desc="I路编码后加扰多项式" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+				<Receiver id="IDescInitPhase" desc="I路编码后加扰初相" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="32位">
+				<Receiver id="IDescPolynomial" desc="I路编码后加扰多项式" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+				<Receiver id="IDescInitPhase" desc="I路编码后加扰初相" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="QViterbiDecoding" desc="卷积码类型">
+			<TriggerValue value="1" desc="（7，1/2）">
+				<Receiver id="QConvoOutPhase" desc="G2相位反转" isEnable="" values="1:正相;2:反相" minValue="" maxValue="" />
+				<Association id="QCodeWay">
+					<AssociationItem id="1 1" desc="关 （7，1/2）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2" desc="Viterbi译码 （7，1/2）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="1" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3" desc="R-S译码 （7，1/2）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4" desc="R-S译码和Viterbi级联译码 （7，5/6）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="1" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5" desc="Turbo （7，1/2）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 6" desc="LDPC （7，1/2）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="2" desc="（7，2/3）">
+				<Receiver id="QConvoOutPhase" desc="G2相位反转" isEnable="" values="1:正相" minValue="" maxValue="" />
+				<Association id="QCodeWay">
+					<AssociationItem id="2 1" desc="关 （7，2/3）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2" desc="Viterbi译码 （7，2/3）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3" desc="R-S译码 （7，2/3）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4" desc="R-S译码和Viterbi级联译码 （7，2/3）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5" desc="Turbo （7，2/3）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 6" desc="LDPC （7，2/3）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="3" desc="（7，3/4）">
+				<Receiver id="QConvoOutPhase" desc="G2相位反转" isEnable="" values="1:正相" minValue="" maxValue="" />
+				<Association id="QCodeWay">
+					<AssociationItem id="3 1" desc="关 （7，3/4）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 2" desc="Viterbi译码 （7，3/4）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 3" desc="R-S译码 （7，3/4）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 4" desc="R-S译码和Viterbi级联译码 （7，3/4）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 5" desc="Turbo （7，3/4）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 6" desc="LDPC （7，3/4）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="4" desc="（7，5/6）">
+				<Receiver id="QConvoOutPhase" desc="G2相位反转" isEnable="" values="1:正相" minValue="" maxValue="" />
+				<Association id="QCodeWay">
+					<AssociationItem id="4 1" desc="关 （7，5/6）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 2" desc="Viterbi译码 （7，5/6）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 3" desc="R-S译码 （7，5/6）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 4" desc="R-S译码和Viterbi级联译码 （7，5/6）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 5" desc="Turbo （7，5/6）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 6" desc="LDPC （7，5/6）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="5" desc="（7，7/8）">
+				<Receiver id="QConvoOutPhase" desc="G2相位反转" isEnable="" values="1:正相" minValue="" maxValue="" />
+				<Association id="QCodeWay">
+					<AssociationItem id="5 1" desc="关 （7，7/8）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 2" desc="Viterbi译码 （7，7/8）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 3" desc="R-S译码  （7，7/8）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 4" desc="R-S译码和Viterbi级联译码 （7，7/8）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 5" desc="Turbo （7，7/8）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 6" desc="LDPC （7，7/8）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+		</Trigger>
+		<Trigger id="QCodeWay" desc="译码方式">
+			<TriggerValue value="1" desc="关">
+				<Receiver id="QRSDecoding" desc="R-S译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QViterbiDecoding" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QTurboCodeRate" desc="Turbo译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QLDPCCodeRate" desc="LDPC译码" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="QRSCodeCoordinateBase" desc="R-S译码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QDoubleBaseChange" desc="交错深度" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="QFrameLenght" desc="帧长" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="16" maxValue="64" />
+				
+				<Association id="QViterbiDecoding">
+					<AssociationItem id="1 1" desc="关 （7，1/2）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 2" desc="关 （7，2/3）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 3" desc="关 （7，3/4）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 4" desc="关 （7，5/6）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="1 5" desc="关 （7，7/8）">
+						<AssociationReceiver id="IConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="2" desc="Viterbi译码">
+				<Receiver id="QRSDecoding" desc="R-S译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QViterbiDecoding" desc="卷积码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QTurboCodeRate" desc="Turbo译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QLDPCCodeRate" desc="LDPC译码" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="QRSCodeCoordinateBase" desc="R-S译码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QDoubleBaseChange" desc="交错深度" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="QFrameLenght" desc="帧长" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="16" maxValue="64" />
+				
+				<Association id="QViterbiDecoding">
+					<AssociationItem id="2 1" desc="Viterbi译码 （7，1/2）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="1" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 2" desc="Viterbi译码 （7，2/3）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 3" desc="Viterbi译码 （7，3/4）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 4" desc="Viterbi译码 （7，5/6）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="2 5" desc="Viterbi译码 （7，7/8）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="3" desc="R-S译码">
+				<Receiver id="QRSDecoding" desc="R-S译码" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QViterbiDecoding" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QTurboCodeRate" desc="Turbo译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QLDPCCodeRate" desc="LDPC译码" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="QRSCodeCoordinateBase" desc="R-S译码坐标基" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QDoubleBaseChange" desc="交错深度" isEnable="1" values="" minValue="" maxValue="" />
+				
+				<Receiver id="QFrameLenght" desc="帧长" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="16" maxValue="64" />
+				
+				<Association id="IViterbiDecoding">
+					<AssociationItem id="3 1" desc="R-S译码 （7，1/2）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 2" desc="R-S译码 （7，2/3）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 3" desc="R-S译码 （7，3/4）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 4" desc="R-S译码 （7，5/6）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="3 5" desc="R-S译码 （7，7/8）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="4" desc="R-S译码和Viterbi级联译码">
+				<Receiver id="QRSDecoding" desc="R-S译码" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QViterbiDecoding" desc="卷积码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QTurboCodeRate" desc="Turbo译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QLDPCCodeRate" desc="LDPC译码" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="QRSCodeCoordinateBase" desc="R-S译码坐标基" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QDoubleBaseChange" desc="交错深度" isEnable="1" values="" minValue="" maxValue="" />
+				
+				<Receiver id="QFrameLenght" desc="帧长" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="16" maxValue="64" />
+				
+				<Association id="IViterbiDecoding">
+					<AssociationItem id="4 1" desc="R-S译码和Viterbi级联译码 （7，1/2）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="1" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 2" desc="R-S译码和Viterbi级联译码 （7，2/3）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 3" desc="R-S译码和Viterbi级联译码 （7，3/4）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 4" desc="R-S译码和Viterbi级联译码 （7，5/6）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="4 5" desc="R-S译码和Viterbi级联译码 （7，7/8）">
+						<AssociationReceiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="5" desc="Turbo">
+				<Receiver id="QRSDecoding" desc="R-S译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QViterbiDecoding" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QTurboCodeRate" desc="Turbo译码" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QLDPCCodeRate" desc="LDPC译码" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="1:正相;2:反相" minValue="" maxValue="" />
+				<Receiver id="QRSCodeCoordinateBase" desc="R-S译码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QDoubleBaseChange" desc="交错深度" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="QFrameLenght" desc="帧长" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="" minValue="16" maxValue="192" />
+				
+				<Association id="QTurboCodeRate">
+					<AssociationItem id="5 1" desc="Turbo译码有 1/2(3576,1784)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="231" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 2" desc="Turbo译码有 1/2(7144,3568)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="454" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 3" desc="Turbo译码有 1/2(14280,7136)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="900" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 4" desc="Turbo译码有 1/2(17848,8920)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="1123" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 5" desc="Turbo译码有 1/3(5364,1784)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="235" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="96" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79C" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 6" desc="Turbo译码有 1/3(10716,3568)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="458" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="96" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79C" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 7" desc="Turbo译码有 1/3(21420,7136)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="904" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="96" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79C" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 8" desc="Turbo译码有 1/3(26772,8920)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="1127" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="96" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79C" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 9" desc="Turbo译码有 1/4(7152,1784)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="239" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="128" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0FCB88938D8D76A4F" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 10" desc="Turbo译码有 1/4(14288,3568)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="462" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="128" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0FCB88938D8D76A4F" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 11" desc="Turbo译码有 1/4(28560,7136)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="908" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="128" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0FCB88938D8D76A4F" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 12" desc="Turbo译码有 1/4(35696,8920)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="1131" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="128" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0FCB88938D8D76A4F" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 13" desc="Turbo译码有 1/6(10728,1784)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="247" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="192" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79CDA2A3F31766F0936B9E40863" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 14" desc="Turbo译码有 1/6(21432,3568)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="470" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="192" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79CDA2A3F31766F0936B9E40863" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 15" desc="Turbo译码有 1/6(42840,7136)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="916" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="192" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79CDA2A3F31766F0936B9E40863" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="5 16" desc="Turbo译码有 1/6(53544,8920)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="1139" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="192" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79CDA2A3F31766F0936B9E40863" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="6" desc="LDPC">
+				<Receiver id="QRSDecoding" desc="R-S译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QViterbiDecoding" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QTurboCodeRate" desc="Turbo译码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QLDPCCodeRate" desc="LDPC译码" isEnable="1" values="" minValue="" maxValue="" />
+				
+				<Receiver id="QConvoOutPhase" desc="G2相位反转" isEnable="0" values="1:正相;2:反相" minValue="" maxValue="" />
+				<Receiver id="QRSCodeCoordinateBase" desc="R-S译码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QDoubleBaseChange" desc="交错深度" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="QFrameLenght" desc="帧长" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="32" minValue="16" maxValue="64" />
+				<Association id="QLDPCCodeRate">
+					<AssociationItem id="6 1" desc="LDPC译码 1/2(2048,1024)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="264" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 2" desc="LDPC译码 1/2(8192,4096)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="1032" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 3" desc="LDPC译码 2/3(1536,1024)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="200" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 4" desc="LDPC译码 2/3(6144,4096)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="776" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 5" desc="LDPC译码 4/5(1280,1024)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="168" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 6" desc="LDPC译码 4/5(5120,4096)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="648" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+					<AssociationItem id="6 7" desc="LDPC译码 7/8(8160,7136)">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="1024" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="32" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="1ACFFC1D" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="QLDPCCodeRate" desc="LDPC译码">
+			<TriggerValue value="1" desc="1/2(2048,1024)">
+				<Association id="QCodeWay">
+					<AssociationItem id="1 6" desc="1/2(2048,1024) LDPC译码">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="264" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="2" desc="1/2(8192,4096)">
+				<Association id="QCodeWay">
+					<AssociationItem id="2 6" desc="1/2(8192,4096) LDPC译码">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="1032" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="3" desc="2/3(1536,1024)">
+				<Association id="QCodeWay">
+					<AssociationItem id="3 6" desc="2/3(1536,1024) LDPC译码">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="200" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="4" desc="2/3(6144,4096)">
+				<Association id="QCodeWay">
+					<AssociationItem id="4 6" desc="2/3(6144,4096) LDPC译码">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="776" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="5" desc="4/5(1280,1024)">
+				<Association id="QCodeWay">
+					<AssociationItem id="5 6" desc="4/5(1280,1024) LDPC译码">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="168" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="6" desc="4/5(5120,4096)">
+				<Association id="QCodeWay">
+					<AssociationItem id="6 6" desc="4/5(5120,4096) LDPC译码">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="648" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="7" desc="7/8(8160,7136)">
+				<Association id="QCodeWay">
+					<AssociationItem id="7 6" desc="7/8(8160,7136) LDPC译码">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="1024" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="1" values="32" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="1" values="1ACFFC1D" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="QTurboCodeRate" desc="Turbo译码方式">
+			<TriggerValue value="1" desc="1/2(3576,1784)">
+				<Association id="QCodeWay">
+					<AssociationItem id="1 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="231" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="2" desc="1/2(7144,3568)">
+				<Association id="QCodeWay">
+					<AssociationItem id="2 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="454" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="3" desc="1/2(14280,7136)">
+				<Association id="QCodeWay">
+					<AssociationItem id="3 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="900" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="4" desc="1/2(17848,8920)">
+				<Association id="QCodeWay">
+					<AssociationItem id="4 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="1123" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="64" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="5" desc="1/3(5364,1784)">
+				<Association id="QCodeWay">
+					<AssociationItem id="5 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="235" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="96" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79C" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="6" desc="1/3(10716,3568)">
+				<Association id="QCodeWay">
+					<AssociationItem id="6 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="458" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="96" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79C" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="7" desc="1/3(21420,7136)">
+				<Association id="QCodeWay">
+					<AssociationItem id="7 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="904" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="96" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79C" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="8" desc="1/3(26772,8920)">
+				<Association id="QCodeWay">
+					<AssociationItem id="8 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="1127" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="96" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79C" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="9" desc="1/4(7152,1784)">
+				<Association id="QCodeWay">
+					<AssociationItem id="9 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="239" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="128" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0FCB88938D8D76A4F" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="10" desc="1/4(14288,3568)">
+				<Association id="QCodeWay">
+					<AssociationItem id="10 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="462" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="128" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0FCB88938D8D76A4F" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="11" desc="1/4(28560,7136)">
+				<Association id="QCodeWay">
+					<AssociationItem id="11 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="908" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="128" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0FCB88938D8D76A4F" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="12" desc="1/4(35696,8920)">
+				<Association id="QCodeWay">
+					<AssociationItem id="12 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="1131" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="128" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="034776C7272895B0FCB88938D8D76A4F" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="13" desc="1/6(10728,1784)">
+				<Association id="QCodeWay">
+					<AssociationItem id="13 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="247" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="192" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79CDA2A3F31766F0936B9E40863" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="14" desc="1/6(21432,3568)">
+				<Association id="QCodeWay">
+					<AssociationItem id="14 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="470" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="192" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79CDA2A3F31766F0936B9E40863" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="15" desc="1/6(42840,7136)">
+				<Association id="QCodeWay">
+					<AssociationItem id="15 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="916" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="192" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79CDA2A3F31766F0936B9E40863" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+			<TriggerValue value="16" desc="1/6(53544,8920)">
+				<Association id="QCodeWay">
+					<AssociationItem id="16 5" desc="译码方式 Turbo">
+						<AssociationReceiver id="QFrameLenght" desc="帧长" isEnable="" values="1139" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayGroupLen" desc="帧同步码组长度" isEnable="2" values="192" minValue="" maxValue="" />
+						<AssociationReceiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="2" values="25D5C0CE8990F6C9461BF79CDA2A3F31766F0936B9E40863" minValue="" maxValue="" />
+					</AssociationItem>
+				</Association>
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="QDescramble2" desc="I路编码前加扰开关">
+			<TriggerValue value="1" desc="不加扰">
+				<Receiver id="QDescPolyLenght2" desc="Q路编码前加扰多项式长度" isEnable="0" values="8:8位;16:16位;24:24位;32:32位" minValue="" maxValue="" />
+				<Receiver id="QDescSequeChoose2" desc="Q路编码前加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QDescPolynomial2" desc="Q路编码前加扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QDescInitPhase2" desc="Q路编码前加扰初相" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="自动加扰">
+				<Receiver id="QDescPolyLenght2" desc="Q路编码前加扰多项式长度" isEnable="0" values="8:8位" minValue="" maxValue="" />
+				<Receiver id="QDescSequeChoose2" desc="Q路编码前加扰输出位置" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QDescPolynomial2" desc="Q路编码前加扰多项式" isEnable="0" values="A9" minValue="" maxValue="" />
+				<Receiver id="QDescInitPhase2" desc="Q路编码前加扰初相" isEnable="0" values="FF" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="人工设置">
+				<Receiver id="QDescPolyLenght2" desc="Q路编码前加扰多项式长度" isEnable="1" values="8:8位;16:16位;24:24位;32:32位" minValue="" maxValue="" />
+				<Receiver id="QDescSequeChoose2" desc="Q路编码前加扰输出位置" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QDescPolynomial2" desc="Q路编码前加扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QDescInitPhase2" desc="Q路编码前加扰初相" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="QDescPolyLenght2" desc="Q路编码前加扰多项式长度">
+			<TriggerValue value="8" desc="8位">
+				<Receiver id="QDescPolynomial2" desc="Q路编码前加扰多项式" isEnable="" values="" minValue="0" maxValue="FF" />
+				<Receiver id="QDescInitPhase2" desc="Q路编码前加扰初相" isEnable="" values="" minValue="0" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="16" desc="16位">
+				<Receiver id="QDescPolynomial2" desc="Q路编码前加扰多项式" isEnable="" values="" minValue="0" maxValue="FFFF" />
+				<Receiver id="QDescInitPhase2" desc="Q路编码前加扰初相" isEnable="" values="" minValue="0" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="24位">
+				<Receiver id="QDescPolynomial2" desc="Q路编码前加扰多项式" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+				<Receiver id="QDescInitPhase2" desc="Q路编码前加扰初相" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="32位">
+				<Receiver id="QDescPolynomial2" desc="Q路编码前加扰多项式" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+				<Receiver id="QDescInitPhase2" desc="Q路编码前加扰初相" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="QDescramble" desc="I路编码后加扰开关">
+			<TriggerValue value="1" desc="不加扰">
+				<Receiver id="QDescPolyLenght" desc="Q路编码后加扰多项式长度" isEnable="0" values="8:8位;16:16位;24:24位;32:32位" minValue="" maxValue="" />
+				<Receiver id="QDescSequeChoose" desc="Q路编码后加扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QDescPolynomial" desc="Q路编码后加扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="QDescInitPhase" desc="Q路编码后加扰初相" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="自动加扰">
+				<Receiver id="QDescPolyLenght" desc="Q路编码后加扰多项式长度" isEnable="0" values="8:8位" minValue="" maxValue="" />
+				<Receiver id="QDescSequeChoose" desc="Q路编码后加扰输出位置" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QDescPolynomial" desc="Q路编码后加扰多项式" isEnable="0" values="A9" minValue="" maxValue="" />
+				<Receiver id="QDescInitPhase" desc="Q路编码后加扰初相" isEnable="0" values="FF" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="人工设置">
+				<Receiver id="QDescPolyLenght" desc="Q路编码后加扰多项式长度" isEnable="1" values="8:8位;16:16位;24:24位;32:32位" minValue="" maxValue="" />
+				<Receiver id="QDescSequeChoose" desc="Q路编码后加扰输出位置" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QDescPolynomial" desc="Q路编码后加扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QDescInitPhase" desc="Q路编码后加扰初相" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="QDescPolyLenght" desc="Q路编码后加扰多项式长度">
+			<TriggerValue value="8" desc="8位">
+				<Receiver id="QDescPolynomial" desc="Q路编码后加扰多项式" isEnable="" values="" minValue="0" maxValue="FF" />
+				<Receiver id="QDescInitPhase" desc="Q路编码后加扰初相" isEnable="" values="" minValue="0" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="16" desc="16位">
+				<Receiver id="QDescPolynomial" desc="Q路编码后加扰多项式" isEnable="" values="" minValue="0" maxValue="FFFF" />
+				<Receiver id="QDescInitPhase" desc="Q路编码后加扰初相" isEnable="" values="" minValue="0" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="24位">
+				<Receiver id="QDescPolynomial" desc="Q路编码后加扰多项式" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+				<Receiver id="QDescInitPhase" desc="Q路编码后加扰初相" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="32位">
+				<Receiver id="QDescPolynomial" desc="Q路编码后加扰多项式" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+				<Receiver id="QDescInitPhase" desc="Q路编码后加扰初相" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="CarrierModulation" desc="载波调制方式">
+			<TriggerValue value="1" desc="BPSK">
+				<Receiver id="DataOutWay" desc="I/Q分路合路" isEnable="0" values="3:I独立" minValue="" maxValue="" />
+				<Receiver id="GrayCode" desc="Gray编码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="PhaseMapping" desc="相位映射" isEnable="0" values="2:I-Q" minValue="" maxValue="" />
+				<Receiver id="ICodeSpeed" desc="I路码速率" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QCodeSpeed" desc="Q路码速率" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IOPowerDB" desc="I/Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="QPSK">
+				<Receiver id="DataOutWay" desc="I/Q分路合路" isEnable="1" values="1:I/Q合路;2:I/Q分路" minValue="" maxValue="" />
+				<Receiver id="GrayCode" desc="Gray编码" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="PhaseMapping" desc="相位映射" isEnable="1" values="1:I+Q;2:I-Q" minValue="" maxValue="" />
+				<Receiver id="ICodeSpeed" desc="I路码速率" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QCodeSpeed" desc="Q路码速率" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IOPowerDB" desc="I/Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="UQPSK">
+				<Receiver id="DataOutWay" desc="I/Q分路合路" isEnable="0" values="2:I/Q分路" minValue="" maxValue="" />
+				<Receiver id="GrayCode" desc="Gray编码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="PhaseMapping" desc="相位映射" isEnable="0" values="2:I-Q" minValue="" maxValue="" />
+				<Receiver id="ICodeSpeed" desc="I路码速率" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QCodeSpeed" desc="Q路码速率" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="IOPowerDB" desc="I/Q功率分贝比" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="5" desc="OQPSK">
+				<Receiver id="DataOutWay" desc="I/Q分路合路" isEnable="1" values="1:I/Q合路;2:I/Q分路" minValue="" maxValue="" />
+				<Receiver id="GrayCode" desc="Gray编码" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="PhaseMapping" desc="相位映射" isEnable="1" values="1:I+Q;2:I-Q" minValue="" maxValue="" />
+				<Receiver id="ICodeSpeed" desc="I路码速率" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="QCodeSpeed" desc="Q路码速率" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="IOPowerDB" desc="I/Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="NoiseOutSwicth" desc="噪声输出开关">
+			<TriggerValue value="1" desc="开">
+				<Receiver id="OutCarrierNoise" desc="输出载噪比" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="关">
+				<Receiver id="OutCarrierNoise" desc="输出载噪比" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="IDataType" desc="数据类型">
+			<TriggerValue value="1" desc="随机数">
+				<Receiver id="IFixNumSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="固定数">
+				<Receiver id="IFixNumSet" desc="固定数设置" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="顺序数">
+				<Receiver id="IFixNumSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="QDataType" desc="数据类型">
+			<TriggerValue value="1" desc="随机数">
+				<Receiver id="QFixNumSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="固定数">
+				<Receiver id="QFixNumSet" desc="固定数设置" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="顺序数">
+				<Receiver id="QFixNumSet" desc="固定数设置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="IIWayGroupLen" desc="帧同步码组长度">
+			<TriggerValue value="16" desc="2字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="3字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="40" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="48" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="56" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="64" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="72" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="80" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="88" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="96" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="104" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="112" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="120" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="128" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="136" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="144" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="152" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="160" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="168" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="176" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="184" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="192" desc="4字节">
+				<Receiver id="IIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="QIWayGroupLen" desc="帧同步码组长度">
+			<TriggerValue value="16" desc="2字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="3字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="40" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="48" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="56" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="64" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="72" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="80" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="88" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="96" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="104" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="112" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="120" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="128" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="136" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="144" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="152" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="160" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="168" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="176" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="184" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="192" desc="4字节">
+				<Receiver id="QIWayBlockPatt" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

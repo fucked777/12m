@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="BTSN" ModeType="0xFFFF" desc="宽带测试开关网络" flag="1001">
+	<result MessageType="0x0000F104">
+		<field pid="1" id="ControlMode" desc="监控方式" dataType="uint8" displayFormat="enum|ControlMode" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="2" id="DevicePower" desc="设备开关电" dataType="uint8" displayFormat="LED|2" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="3" id="SChannelElectricStatus" desc="S通道电流状态" dataType="uint8" displayFormat="LED|3" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="4" id="XChannelElectricStatus" desc="X通道电流状态" dataType="uint8" displayFormat="LED|3" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="5" id="KaChannelElectricStatus" desc="Ka通道电流状态	" dataType="uint8" displayFormat="LED|3" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="6" id="TwoChooseOneElectric" desc="二选一开关电流" dataType="uint8" displayFormat="LED|3" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="7" id="QSCOHLStatus" desc="去S差耦合L状态" dataType="uint8" displayFormat="LED|3" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="8" id="QSCOHRStatus" desc="去S差耦合R状态" dataType="uint8" displayFormat="LED|3" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="9" id="QSHSwitchLStatus" desc="去S和开关L状态" dataType="uint8" displayFormat="LED|3" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="10" id="QSHSwitchRStatus" desc="去S和开关R状态" dataType="uint8" displayFormat="LED|3" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="11" id="QXCOHLStatus" desc="去X差耦合L状态" dataType="uint8" displayFormat="LED|3" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="12" id="QXCOHRStatus" desc="去X差耦合R状态" dataType="uint8" displayFormat="LED|3" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="13" id="QXHSwitchLStatus" desc="去X和开关L状态" dataType="uint8" displayFormat="LED|3" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="14" id="QXHSwitchRStatus" desc="去X和开关R状态" dataType="uint8" displayFormat="LED|3" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="15" id="QKACOHLStatus" desc="去Ka差耦合L状态" dataType="uint8" displayFormat="LED|3" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="16" id="QKACOHRStatus" desc="去Ka差耦合R状态" dataType="uint8" displayFormat="LED|3" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="17" id="QKAHSwitchLStatus" desc="去Ka和开关L状态" dataType="uint8" displayFormat="LED|3" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="18" id="QKAHSwitchRStatus" desc="去Ka和开关R状态" dataType="uint8" displayFormat="LED|3" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="19" id="PowerStatus" desc="电源状态" dataType="uint8" displayFormat="LED|3" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="20" id="DeviceStatus" desc="设备状态" dataType="uint8" displayFormat="LED|3" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="21" id="DeviceWD" desc="设备温度" dataType="short" displayFormat="Int16" initValue="" minValue="-40" maxValue="85" step="0.1" unit="℃"/>
+		<field pid="101" id="S_DIFF_L" desc="去S差耦合L" dataType="uint8" displayFormat="enum|101" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="102" id="S_DIFF_R" desc="去S差耦合R" dataType="uint8" displayFormat="enum|101" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="103" id="S_SUM_L" desc="去S和开关L" dataType="uint8" displayFormat="enum|101" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="104" id="S_SUM_R" desc="去S和开关R" dataType="uint8" displayFormat="enum|101" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="105" id="X_DIFF_L" desc="去X差耦合L" dataType="uint8" displayFormat="enum|101" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="106" id="X_DIFF_R" desc="去X差耦合R" dataType="uint8" displayFormat="enum|101" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="107" id="X_SUM_L" desc="去X和开关L" dataType="uint8" displayFormat="enum|101" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="108" id="X_SUM_R" desc="去X和开关R" dataType="uint8" displayFormat="enum|101" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="109" id="KA_DIFF_L" desc="去Ka差耦合L" dataType="uint8" displayFormat="enum|101" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="110" id="KA_DIFF_R" desc="去Ka差耦合R" dataType="uint8" displayFormat="enum|101" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="111" id="KA_SUM_L" desc="去Ka和开关L" dataType="uint8" displayFormat="enum|101" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="112" id="KA_SUM_R" desc="去Ka和开关R" dataType="uint8" displayFormat="enum|101" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="113" id="S_SJ_NUM" desc="S频段衰减控制" dataType="uint8" displayFormat="UInt8" initValue="" minValue="0" maxValue="60" step="" unit="dB"/>
+		<field pid="114" id="X_SJ_NUM" desc="X频段衰减控制" dataType="uint8" displayFormat="UInt8" initValue="" minValue="0" maxValue="60" step="" unit="dB"/>
+		<field pid="115" id="KA_SJ_NUM" desc="Ka频段衰减控制" dataType="uint8" displayFormat="UInt8" initValue="" minValue="0" maxValue="60" step="" unit="dB"/>
+		<field pid="116" id="KA_SIGNAL_SWITCH" desc="X/Ka输入选择开关" dataType="uint8" displayFormat="enum|102" initValue="" minValue="" maxValue="" step="" unit=""/>
+	</result>
+</cmd>

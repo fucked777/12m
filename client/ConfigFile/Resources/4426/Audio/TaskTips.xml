@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configure>
+    <AudioPath>resources/audio</AudioPath>
+    <Title>任务流程</Title>
+    <Interval>30</Interval>
+    <Column>4</Column>
+    <Audio>
+        <Item enable="true" map="收到中心计划|TK4426 收到中心计划" desc="收到中心计划"/>
+        <Item enable="true" map="中心计划解析错误|TK4426 中心计划解析错误" desc="中心计划解析错误"/>
+        <Item enable="true" map="中心计划解析成功|TK4426 中心计划解析成功" desc="中心计划解析成功"/>
+        <Item enable="true" map="收到中心数据传输计划|TK4426 收到中心数据传输计划" desc="收到中心数据传输计划"/>
+        <Item enable="true" map="中心数据传输计划解析错误|TK4426 中心数据传输计划解析错误" desc="中心数据传输计划解析错误"/>
+        <Item enable="true" map="中心数据传输计划解析成功|TK4426 中心数据传输计划解析成功" desc="中心数据传输计划解析成功"/>
+        <Item enable="true" map="创建计划失败|TK4426 创建计划失败" desc="创建计划失败"/>
+        <Item enable="true" map="一分钟准备|TK4426 一分钟准备" desc="一分钟准备"/>
+        <Item enable="true" map="自动化运行开始|TK4426 自动化运行开始" desc="自动化运行开始"/>
+        <Item enable="true" map="自动运行开始配置设备参数|TK4426 自动运行开始配置设备参数" desc="自动运行开始配置设备参数"/>
+        <Item enable="true" map="配置宏执行成功|TK4426 配置宏执行成功" desc="配置宏执行成功"/>
+        <Item enable="true" map="配置宏执行失败|TK4426 配置宏执行失败" desc="配置宏执行失败"/>
+        <Item enable="true" map="参数宏执行成功|TK4426 参数宏执行成功" desc="参数宏执行成功"/>
+        <Item enable="true" map="参数宏执行失败|TK4426 参数宏执行失败" desc="参数宏执行失败"/>
+        <Item enable="true" map="计划执行错误|TK4426 计划执行错误" desc="计划执行错误"/>
+        <Item enable="true" map="校零开始|TK4426 校零开始" desc="校零开始"/>
+        <Item enable="true" map="校零失败|TK4426 校零失败" desc="校零失败"/>
+        <Item enable="true" map="校零成功|TK4426 校零成功" desc="校零成功"/>
+        <Item enable="true" map="转等待点|TK4426 转等待点" desc="转等待点"/>
+        <Item enable="true" map="转等待点成功|TK4426 转等待点成功" desc="转等待点成功"/>
+        <Item enable="true" map="任务开始|TK4426 任务开始" desc="任务开始"/>
+        <Item enable="true" map="校相开始|TK4426 校相开始" desc="校相开始"/>
+        <Item enable="true" map="校相成功|TK4426 校相成功" desc="校相成功"/>
+        <Item enable="true" map="校相失败|TK4426 校相失败" desc="校相失败"/>
+        <Item enable="true" map="跟踪开始|TK4426 跟踪开始" desc="跟踪开始"/>
+        <Item enable="true" map="跟踪异常|TK4426 跟踪异常" desc="跟踪异常"/>
+        <Item enable="true" map="发上行|TK4426 发上行" desc="发上行"/>
+        <Item enable="true" map="发上行结束|TK4426 发上行结束" desc="发上行结束"/>
+        <Item enable="true" map="发遥控|TK4426 发遥控" desc="发遥控"/>
+        <Item enable="true" map="发遥控结束|TK4426 发遥控结束" desc="发遥控结束"/>
+        <Item enable="true" map="跟踪结束|TK4426 跟踪结束" desc="跟踪结束"/>
+        <Item enable="true" map="任务结束|TK4426 任务结束" desc="任务结束"/>
+        <Item enable="true" map="中心命令解析错误|TK4426 中心命令解析错误" desc="中心命令解析错误"/>
+        <Item enable="true" map="存储转发A转发单元1转发错误|存储转发A转发单元1转发错误" desc="存转A转发1转发错误"/>
+        <Item enable="true" map="存储转发A转发单元2转发错误|存储转发A转发单元2转发错误" desc="存转A转发2转发错误"/>
+        <Item enable="true" map="存储转发A转发单元3转发错误|存储转发A转发单元3转发错误" desc="存转A转发3转发错误"/>
+        <Item enable="true" map="存储转发A转发单元4转发错误|存储转发A转发单元4转发错误" desc="存转A转发4转发错误"/>
+        <Item enable="true" map="存储转发A转发单元1时延过大|存储转发A转发单元1时延过大" desc="存转A转发1时延过大"/>
+        <Item enable="true" map="存储转发A转发单元2时延过大|存储转发A转发单元2时延过大" desc="存转A转发2时延过大"/>
+        <Item enable="true" map="存储转发A转发单元3时延过大|存储转发A转发单元3时延过大" desc="存转A转发3时延过大"/>
+        <Item enable="true" map="存储转发A转发单元4时延过大|存储转发A转发单元4时延过大" desc="存转A转发4时延过大"/>
+        <Item enable="true" map="存储转发B转发单元1转发错误|存储转发B转发单元1转发错误" desc="存转B转发1转发错误"/>
+        <Item enable="true" map="存储转发B转发单元2转发错误|存储转发B转发单元2转发错误" desc="存转B转发2转发错误"/>
+        <Item enable="true" map="存储转发B转发单元3转发错误|存储转发B转发单元3转发错误" desc="存转B转发3转发错误"/>
+        <Item enable="true" map="存储转发B转发单元4转发错误|存储转发B转发单元4转发错误" desc="存转B转发4转发错误"/>
+        <Item enable="true" map="存储转发B转发单元1时延过大|存储转发B转发单元1时延过大" desc="存转B转发1时延过大"/>
+        <Item enable="true" map="存储转发B转发单元2时延过大|存储转发B转发单元2时延过大" desc="存转B转发2时延过大"/>
+        <Item enable="true" map="存储转发B转发单元3时延过大|存储转发B转发单元3时延过大" desc="存转B转发3时延过大"/>
+        <Item enable="true" map="存储转发B转发单元4时延过大|存储转发B转发单元4时延过大" desc="存转B转发4时延过大"/>
+
+    </Audio>
+</Configure>

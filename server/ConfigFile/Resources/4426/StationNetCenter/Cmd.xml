@@ -1,0 +1,41 @@
+<Cmds>
+	<Cmd id="0x0101" name="测控上行载波开关(S频段)" mode="STTC|SKUO2" path="./测控上行载波开关/S载波开.xml"/>
+	<Cmd id="0x0102" name="测控上行载波开关(S频段)" mode="STTC|SKUO2" path="./测控上行载波开关/S载波关.xml"/>
+	<Cmd id="0x0201" name="测控上行遥控开关(S频段)" mode="STTC|SKUO2" path="./测控上行载波开关/S遥控开.xml"/>
+	<Cmd id="0x0202" name="测控上行遥控开关(S频段)" mode="STTC|SKUO2" path="./测控上行载波开关/S遥控关.xml"/>
+	<Cmd id="0x0401" name="Ka测控上行通道开关" mode="KAKUO2" path="./测控上行载波开关/Ka测控上行通道开.xml"/>
+	<Cmd id="0x0402" name="Ka测控上行通道开关" mode="KAKUO2" path="./测控上行载波开关/Ka测控上行通道关.xml"/>
+	<Cmd id="0x0403" name="Ka测控上行通道开关" mode="KAUO2" path="./测控上行载波开关/Ka测控上行通道关.xml"/>
+	<Cmd id="0x1301" name="Ka数传上行通道开关" mode="KADS" path="./数传上行通道开关/Ka数传上行通道开.xml"/>
+	<Cmd id="0x1302" name="Ka数传上行通道开关" mode="KADS" path="./数传上行通道开关/Ka数传上行通道关.xml"/>
+	<Cmd id="0x2211" name="X下行数传开关" path="./数传下行通道开关/X下行数传11.xml"/>
+	<Cmd id="0x2212" name="X下行数传开关" path="./数传下行通道开关/X下行数传12.xml"/>
+	<Cmd id="0x2213" name="X下行数传开关" path="./数传下行通道开关/X下行数传13.xml"/>
+	<Cmd id="0x2214" name="X下行数传开关" path="./数传下行通道开关/X下行数传14.xml"/>
+	<Cmd id="0x2215" name="X下行数传开关" path="./数传下行通道开关/X下行数传15.xml"/>
+	<Cmd id="0x2216" name="X下行数传开关" path="./数传下行通道开关/X下行数传16.xml"/>
+	<Cmd id="0x2301" name="Ka下行数传开关" path="./数传下行通道开关/Ka高速下行数传01.xml"/>
+	<Cmd id="0x2302" name="Ka下行数传开关" path="./数传下行通道开关/Ka高速下行数传02.xml"/>
+	<Cmd id="0x2303" name="Ka下行数传开关" path="./数传下行通道开关/Ka高速下行数传03.xml"/>
+	<Cmd id="0x2304" name="Ka下行数传开关" path="./数传下行通道开关/Ka高速下行数传04.xml"/>
+	<Cmd id="0x2305" name="Ka下行数传开关" path="./数传下行通道开关/Ka高速下行数传05.xml"/>
+	<Cmd id="0x2306" name="Ka下行数传开关" path="./数传下行通道开关/Ka高速下行数传06.xml"/>
+	<Cmd id="0x2307" name="Ka下行数传开关" path="./数传下行通道开关/Ka高速下行数传07.xml"/>
+	<Cmd id="0x2308" name="Ka下行数传开关" path="./数传下行通道开关/Ka高速下行数传08.xml"/>
+	<Cmd id="0x2309" name="Ka下行数传开关" path="./数传下行通道开关/Ka高速下行数传09.xml"/>
+	<Cmd id="0x2310" name="Ka下行数传开关" path="./数传下行通道开关/Ka高速下行数传10.xml"/>
+	<Cmd id="0x2311" name="Ka下行数传开关" path="./数传下行通道开关/Ka低速下行数传11.xml"/>
+	<Cmd id="0x2312" name="Ka下行数传开关" path="./数传下行通道开关/Ka低速下行数传12.xml"/>
+	<Cmd id="0x2313" name="Ka下行数传开关" path="./数传下行通道开关/Ka低速下行数传13.xml"/>
+	<Cmd id="0x2314" name="Ka下行数传开关" path="./数传下行通道开关/Ka低速下行数传14.xml"/>
+	<Cmd id="0x2315" name="Ka下行数传开关" path="./数传下行通道开关/Ka低速下行数传15.xml"/>
+	<Cmd id="0x2316" name="Ka下行数传开关" path="./数传下行通道开关/Ka低速下行数传16.xml"/>
+	<Cmd id="0xAA01" name="测控通道中心" path="./测控通道中心/中心01.xml"/>
+	<Cmd id="0xAA02" name="测控通道中心" path="./测控通道中心/中心02.xml"/>
+	<Cmd id="0xAA03" name="测控通道中心" path="./测控通道中心/中心03.xml"/>
+	<Cmd id="0xAA04" name="测控通道中心" path="./测控通道中心/中心04.xml"/>
+	<Cmd id="0x5501" name="数传通道中心" path="./数传通道中心/中心01.xml"/>
+	<Cmd id="0x5502" name="数传通道中心" path="./数传通道中心/中心02.xml"/>
+	<Cmd id="0x5503" name="数传通道中心" path="./数传通道中心/中心03.xml"/>
+	<Cmd id="0x5504" name="数传通道中心" path="./数传通道中心/中心04.xml"/>
+</Cmds>

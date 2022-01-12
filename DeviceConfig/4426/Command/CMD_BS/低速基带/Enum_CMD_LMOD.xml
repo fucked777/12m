@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+id  枚举ID  -与设备类型关联
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums ExtenType="LMOD" ModeType="0xFFFF" edition="1.1.1.1">
+    <enum name="Channel" desc="通道">
+        <entry svalue="1" uvalue="1" desc="通道1"/>
+        <entry svalue="2" uvalue="2" desc="通道2"/>
+    </enum>
+    <enum name="Switch" desc="开关">
+        <entry svalue="1" uvalue="1" desc="开始"/>
+        <entry svalue="2" uvalue="2" desc="停止"/>
+    </enum>
+    <enum name="ShuntedSelect" desc="分路选择">
+        <entry svalue="1" uvalue="1" desc="I路"/>
+        <entry svalue="2" uvalue="2" desc="Q路"/>
+    </enum>
+    <enum name="Classes" desc="类别">
+        <entry svalue="1" uvalue="1" desc="Ka数传I(I+Q)路"/>
+        <entry svalue="2" uvalue="2" desc="Ka数传Q路"/>
+        <entry svalue="3" uvalue="3" desc="X数传I(I+Q)路"/>
+        <entry svalue="4" uvalue="4" desc="X数传Q路"/>
+    </enum>
+    <enum name="Handedness" desc="旋向">
+        <entry svalue="1" uvalue="1" desc="左旋"/>
+        <entry svalue="2" uvalue="2" desc="右旋"/>
+    </enum>
+    <enum name="StatisticsControl" desc="统计控制">
+        <entry svalue="1" uvalue="1" desc="开始"/>
+        <entry svalue="2" uvalue="2" desc="终止"/>
+    </enum>
+    <enum name="WavecanalSelect" desc="波道选择">
+        <entry svalue="1" uvalue="1" desc="自动"/>
+        <entry svalue="2" uvalue="2" desc="人工"/>
+    </enum>
+    <enum name="StatisticsStatus" desc="统计状态">
+        <entry svalue="1" uvalue="1" desc="开始统计"/>
+        <entry svalue="2" uvalue="2" desc="正在统计"/>
+        <entry svalue="3" uvalue="3" desc="终止统计"/>
+    </enum>
+    <enum name="TestControl" desc="测试控制">
+        <entry svalue="1" uvalue="1" desc="开始测试"/>
+        <entry svalue="2" uvalue="2" desc="终止测试"/>
+    </enum>
+    <enum name="TestStatus" desc="测试状态">
+        <entry svalue="1" uvalue="1" desc="开始测试"/>
+        <entry svalue="2" uvalue="2" desc="正在测试"/>
+        <entry svalue="3" uvalue="3" desc="终止测试"/>
+    </enum>
+    <enum name="WorkWay" desc="工作方式">
+        <entry svalue="1" uvalue="1" desc="任务方式"/>
+        <entry svalue="9" uvalue="9" desc="Ka数字化闭环"/>
+        <entry svalue="10" uvalue="10" desc="X数字化闭环"/>
+    </enum>
+    <enum name="DelCategory" desc="送数控制_类别">
+        <entry svalue="1" uvalue="1" desc="Ka"/>
+        <entry svalue="2" uvalue="2" desc="X"/>
+        <entry svalue="100" uvalue="100" desc="全部"/>
+    </enum>
+    <enum name="DelivMode" desc="送数方式">
+        <entry svalue="1" uvalue="1" desc="常送"/>
+        <entry svalue="2" uvalue="2" desc="人工"/>
+    </enum>
+    <enum name="DelivCtrl" desc="送数控制">
+        <entry svalue="1" uvalue="1" desc="送数"/>
+        <entry svalue="2" uvalue="2" desc="停送"/>
+    </enum>
+    <enum name="OnlineSelect" desc="在线选择">
+        <entry svalue="1" uvalue="1" desc="主机"/>
+        <entry svalue="2" uvalue="2" desc="备机"/>
+    </enum>
+    <enum name="CPChannel" desc="存盘命令的通道">
+        <entry svalue="1" uvalue="1" desc="Ka频段数传"/>
+        <entry svalue="2" uvalue="2" desc="X频段数传"/>
+    </enum>
+</enums>

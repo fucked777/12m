@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Configuration>
+    <!-- 此配置是配置平台的界面 -->
+    <UI>
+        <!-- 向导界面/模式选择界面/功能选择界面 -->
+        <Wizards>WizardModule</Wizards>
+        <!-- 平台的启动界面 -->
+        <Start></Start>
+        <!-- 平台的退出界面 -->
+        <End></End>
+        <!-- 平台的主界面 -->
+        <MainWindow></MainWindow>
+    </UI>
+    <Main>
+        <!-- 名字可作为标题或者其他显示信息-->
+        <Name>15米口径S/X/Ka频段测控数传天线系统(TK-4426)监控客户端</Name>
+        <!-- 此配置是平台的实例ID,相同ID的程序在同一操作系统中不能启动两个 -->
+        <InstanceID>Client</InstanceID>
+        <!-- 此配置是平台的配置目录 -->
+        <PlatformConfigDir>Platform4424</PlatformConfigDir>
+        <!-- 此配置是业务的配置目录,与当前的业务相关的配置 -->
+        <BusinessConfigDir>Resources/4424</BusinessConfigDir>
+        <!-- 此配置是共享配置,也属于业务配置的范围,目的是多个平台共享同一份配置 20210226 wp?? -->
+        <ShareConfigDir>../../DeviceConfig/4424</ShareConfigDir>
+    </Main>
+    <Extended>
+        <!-- 20210502 我们的平台因为Routing服务在服务器上,所以其实客户端不是直接连接的服务器是链接的Routing服务
+            然后由Routing服务把数据往客户端或者服务端推送
+            所以其实在代码上其实客户端和服务器的通讯地址都是RoutingCommunicationIP地址
+            额 所以ServerCommunicationIP和ClientCommunicationIP没什么用处 至少暂时没什么用处
+            只是现有版本恰好ServerCommunicationIP和RoutingCommunicationIP是一样的而已
+         -->
+        <ServerCommunicationIP>localhost</ServerCommunicationIP> <!--必填 直接影响通讯 -->
+        <ServerCommunicationPort>9999</ServerCommunicationPort>  <!--必填 且不能和ClientCommunicationPort相同 -->
+        <ClientCommunicationIP>localhost</ClientCommunicationIP> <!--必填 直接影响通讯 -->
+        <ClientCommunicationPort>9998</ClientCommunicationPort>  <!--必填 且不能和ClientCommunicationPort相同 -->
+        <!--这个东东是为了解决多客户端的情况,因为每个客户端的id都不一样,再加上instanceID就可以区分多个客户端了 这个是对于接收
+            发送的话因为多了一个instanceID所以就得知道对方的instanceID
+            简单说这个就是客户端填服务端的instanceID 服务端填客户端的instanceID
+
+            因此服务端无法主动向客户端推送数据
+            因此服务端无法主动向客户端推送数据
+            因此服务端无法主动向客户端推送数据
+        -->
+        <CommunicationInstanceID>Server</CommunicationInstanceID>
+        <CurProjectID>4424</CurProjectID>
+    </Extended>
+</Configuration>

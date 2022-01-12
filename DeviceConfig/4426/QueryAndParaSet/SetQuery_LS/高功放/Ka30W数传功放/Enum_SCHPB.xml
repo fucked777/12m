@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="SCHPB" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="ControlMode" desc="监控方式">
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="SumMode" desc="功放综合状态">
+		<entry svalue="1" uvalue="1" desc="正常:G"/>
+		<entry svalue="2" uvalue="2" desc="告警:R"/>
+		<entry svalue="3" uvalue="3" desc="故障:R"/>
+	</enum>
+	<enum name="LeadAlert" desc="过温告警">
+		<entry svalue="1" uvalue="1" desc="正常:G"/>
+		<entry svalue="2" uvalue="2" desc="告警:R"/>
+	</enum>
+	<enum name="OverflowingAlert" desc="过流告警">
+		<entry svalue="1" uvalue="1" desc="正常:G"/>
+		<entry svalue="2" uvalue="2" desc="告警:R"/>
+	</enum>
+	<enum name="WindAlert" desc="风机告警">
+		<entry svalue="1" uvalue="1" desc="正常:G"/>
+		<entry svalue="2" uvalue="2" desc="告警:R"/>
+	</enum>
+	<enum name="ExceptionStatus" desc="参数状态">
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="AlarmStatus" desc="告警状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="正常:G"/>
+		<entry svalue="2" uvalue="2" desc="告警:R"/>
+	</enum>
+	<enum name="ALControlMode" desc="ALC控制模式">
+		<entry svalue="1" uvalue="1" desc="开环"/>
+		<entry svalue="2" uvalue="2" desc="闭环"/>
+	</enum>
+	<enum name="RFOutputMode" desc="射频输出">
+		<entry svalue="1" uvalue="1" desc="允许"/>
+		<entry svalue="2" uvalue="2" desc="禁止"/>
+	</enum>
+	<enum name="HPAWorkMode" desc="高功放工作模式">
+		<entry svalue="1" uvalue="1" desc="标准"/>
+		<entry svalue="2" uvalue="2" desc="扩频"/>
+		<entry svalue="3" uvalue="3" desc="测控数传一体化"/>
+	</enum>
+	<enum name="ElectricControlor" desc="加去电控制">
+		<entry svalue="1" uvalue="1" desc="加电"/>
+		<entry svalue="2" uvalue="2" desc="去电"/>
+	</enum>
+	<enum name="EForwardStatus" desc="功放去向状态">
+		<entry svalue="1" uvalue="1" desc="天线"/>
+		<entry svalue="2" uvalue="2" desc="负载"/>
+	</enum>
+	<enum name="EPrevenStatus" desc="在线设备">
+		<entry svalue="1" uvalue="1" desc="A主B备"/>
+		<entry svalue="2" uvalue="2" desc="B主A备"/>
+	</enum>
+</enums>

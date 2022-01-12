@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x06" deviceID="0x02" modeID="0x0" cmdID="9" desc="射频前端杂散测试">
+	<Triggers>
+		<Trigger id="SpectSelect" desc="频谱仪选择">
+			<TriggerValue value="1" desc="后端">
+				<Receiver id="SpectCenter" desc="频谱仪Center" isEnable="" values="" minValue="0.003" maxValue="9000000" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="前端">
+				<Receiver id="SpectCenter" desc="频谱仪Center" isEnable="" values="" minValue="0.003" maxValue="40000000" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="TTCRCH" ModeType="0x08" edition="1.1.1.1">
+	<enum name="LockIndicat" desc="载波锁定指示">
+		<entry svalue="1" uvalue="1" desc="锁定:R"/>
+		<entry svalue="2" uvalue="2" desc="失锁:G"/>
+	</enum>
+	<enum name="LockIndication" desc="接收通道合成方式">
+		<entry svalue="1" uvalue="1" desc="单收左旋"/>
+		<entry svalue="2" uvalue="2" desc="单收右旋"/>
+		<entry svalue="3" uvalue="3" desc="左右旋同时"/>
+		<entry svalue="4" uvalue="4" desc="最大比合成"/>
+		<!-- <entry svalue="1" uvalue="1" desc="5:全频谱合成(保留不用)"/> -->
+
+
+		
+
+
+
+
+
+	</enum>
+	<enum name="AGCTimeConstant" desc="AGC时间常数">
+		<entry svalue="1" uvalue="1" desc="1 ms"/>
+		<entry svalue="2" uvalue="2" desc="10 ms"/>
+		<entry svalue="3" uvalue="3" desc="100 ms"/>
+		<entry svalue="4" uvalue="4" desc="1000 ms"/>
+	</enum>
+	<enum name="CarrierLoopBandWidth" desc="载波环环路带宽">
+		<entry svalue="1" uvalue="1" desc="100 Hz"/>
+		<entry svalue="2" uvalue="2" desc="300 Hz"/>
+		<!--<entry svalue="3" uvalue="3" desc="500 Hz"/>-->
+		<entry svalue="4" uvalue="4" desc="1000 Hz"/>
+		<entry svalue="5" uvalue="5" desc="3000 Hz"/>
+		<!--<entry svalue="6" uvalue="6" desc="自适应"/>-->
+	</enum>
+</enums>

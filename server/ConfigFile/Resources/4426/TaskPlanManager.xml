@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configure>
+	<!-- 设备工作计划和数传工作计划是通过相同的FEP接口收到的数据，因此这里修改设计，将计划统一通过一个目录来接收-->
+
+	<!-- 通过Fep收到的计划文件，通过文件名称进行区分 -->
+	<DevPlanFileRecvDir>PlanFileCache/RecvPlan</DevPlanFileRecvDir>
+	<!-- 正常接收的计划文件，能进行解析 -->
+	<DevPlanFileBakDir>PlanFileCache/BakPlan</DevPlanFileBakDir>
+	<!-- 正常接收的计划文件，不能进行解析 -->
+	<DevPlanFileErrorDir>PlanFileCache/ErrorPlan</DevPlanFileErrorDir>
+	
+	
+</configure>

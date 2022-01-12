@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<Relation sysID="0x04" deviceID="0x01" modeID="0x0" unitType="DU" desc="解调单元">
+	<Triggers>
+		
+		<Trigger id="FrameSynch" desc="帧同步方式">
+			<TriggerValue value="1" desc="合路帧同步">
+				<Receiver id="DemodOutputSelect" desc="解调数据输出" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="分路帧同步">
+				<Receiver id="DemodOutputSelect" desc="解调数据输出" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="DemodOutputSelect" desc="解调数据输出">
+			<TriggerValue value="1" desc="I/Q合路输出">
+				<Receiver id="ParaSerConv" desc="并串转换方式" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="I/Q分路输出">
+				<Receiver id="ParaSerConv" desc="并串转换方式" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="ModulatSystem" desc="调制体制">
+			<TriggerValue value="1" desc="BPSK">
+				<Receiver id="IQPowerRatio" desc="IQ路功率比" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="PhaseMapp" desc="相位映射" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ConstMapp" desc="星座映射" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="CodeRate" desc="码速率" isEnable="1" values="" minValue="10" maxValue="500" />
+				<Receiver id="ICodeRate" desc="I路码速率" isEnable="0" values="" minValue="10" maxValue="500" />
+				<Receiver id="QCodeRate" desc="Q路码速率" isEnable="0" values="" minValue="10" maxValue="500" />
+				<Receiver id="GrayCodSelect" desc="Gray编码选择" isEnable="0" values="9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="FrameSynch" desc="帧同步方式" isEnable="0" values="1:合路帧同步" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="QPSK">
+				<Receiver id="IQPowerRatio" desc="IQ路功率比" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="PhaseMapp" desc="相位映射" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="ConstMapp" desc="星座映射" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="CodeRate" desc="码速率" isEnable="1" values="" minValue="20" maxValue="1000" />
+				<Receiver id="ICodeRate" desc="I路码速率" isEnable="0" values="" minValue="20" maxValue="1000" />
+				<Receiver id="QCodeRate" desc="Q路码速率" isEnable="0" values="" minValue="20" maxValue="1000" />
+				<Receiver id="GrayCodSelect" desc="Gray编码选择" isEnable="1" values="1:Gray0;2:Gray1;3:Gray2;4:Gray3;5:Gray4;6:Gray5;7:Gray6;8:Gray7;9:无格雷编码;10:自适应" minValue="" maxValue="" />
+				<Receiver id="FrameSynch" desc="帧同步方式" isEnable="1" values="1:合路帧同步;2:分路帧同步" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="UQPSK">
+				<Receiver id="IQPowerRatio" desc="IQ路功率比" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="PhaseMapp" desc="相位映射" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="ConstMapp" desc="星座映射" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="CodeRate" desc="码速率" isEnable="0" values="" minValue="5" maxValue="2000" />
+				<Receiver id="ICodeRate" desc="I路码速率" isEnable="1" values="" minValue="5" maxValue="1000" />
+				<Receiver id="QCodeRate" desc="Q路码速率" isEnable="1" values="" minValue="5" maxValue="1000" />
+				<Receiver id="GrayCodSelect" desc="Gray编码选择" isEnable="0" values="9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="FrameSynch" desc="帧同步方式" isEnable="0" values="2:分路帧同步" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="SQPSK">
+				<Receiver id="IQPowerRatio" desc="IQ路功率比" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="PhaseMapp" desc="相位映射" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="ConstMapp" desc="星座映射" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="CodeRate" desc="码速率" isEnable="1" values="" minValue="20" maxValue="1000" />
+				<Receiver id="ICodeRate" desc="I路码速率" isEnable="0" values="" minValue="20" maxValue="1000" />
+				<Receiver id="QCodeRate" desc="Q路码速率" isEnable="0" values="" minValue="20" maxValue="1000" />
+				<Receiver id="GrayCodSelect" desc="Gray编码选择" isEnable="0" values="9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="FrameSynch" desc="帧同步方式" isEnable="1" values="1:合路帧同步;2:分路帧同步" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="5" desc="8PSK">
+				<Receiver id="IQPowerRatio" desc="IQ路功率比" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="PhaseMapp" desc="相位映射" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="ConstMapp" desc="星座映射" isEnable="1" values="1:Gray1;2:Gray2;3:Gray3;4:Gray4;5:Gray5;6:Gray6;7:Natural;8:Natura2" minValue="" maxValue="" />
+				<Receiver id="CodeRate" desc="码速率" isEnable="1" values="" minValue="20" maxValue="1500" />
+				<Receiver id="ICodeRate" desc="I路码速率" isEnable="0" values="" minValue="20" maxValue="1500" />
+				<Receiver id="QCodeRate" desc="Q路码速率" isEnable="0" values="" minValue="20" maxValue="1500" />
+				<Receiver id="GrayCodSelect" desc="Gray编码选择" isEnable="0" values="9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="FrameSynch" desc="帧同步方式" isEnable="1" values="1:合路帧同步;2:分路帧同步" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="6" desc="16QAM">
+				<Receiver id="IQPowerRatio" desc="IQ路功率比" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="PhaseMapp" desc="相位映射" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ConstMapp" desc="星座映射" isEnable="1" values="9:Map1;10:Map2;11:Map3" minValue="" maxValue="" />
+				<Receiver id="CodeRate" desc="码速率" isEnable="1" values="" minValue="20" maxValue="2000" />
+				<Receiver id="ICodeRate" desc="I路码速率" isEnable="0" values="" minValue="20" maxValue="2000" />
+				<Receiver id="QCodeRate" desc="Q路码速率" isEnable="0" values="" minValue="20" maxValue="2000" />
+				<Receiver id="GrayCodSelect" desc="Gray编码选择" isEnable="0" values="9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="FrameSynch" desc="帧同步方式" isEnable="0" values="1:合路帧同步" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="7" desc="16APSK">
+				<Receiver id="FrameSynch" desc="帧同步方式" isEnable="0" values="1:合路帧同步" minValue="" maxValue="" />
+				<Receiver id="ConstMapp" desc="星座映射" isEnable="1" values="9:Map1;10:Map2" minValue="" maxValue="" />
+				<Receiver id="CodeRate" desc="码速率" isEnable="1" values="" minValue="20" maxValue="2000" />
+				<Receiver id="ICodeRate" desc="I路码速率" isEnable="0" values="" minValue="20" maxValue="2000" />
+				<Receiver id="QCodeRate" desc="Q路码速率" isEnable="0" values="" minValue="20" maxValue="2000" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

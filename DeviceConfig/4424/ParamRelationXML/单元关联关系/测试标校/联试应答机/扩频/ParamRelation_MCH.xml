@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x06" deviceID="0x00" modeID="0x2" unitType="MCH" desc="调制通道单元">
+	<Triggers>
+		<Trigger id="ChannelWork2" desc="通道工作方式">
+			<TriggerValue value="1" desc="1通道方式">
+				<Receiver id="MeasSelect2" desc="插入位置选择" isEnable="1" values="1:第一道" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="2通道方式">
+				<Receiver id="MeasSelect2" desc="插入位置选择" isEnable="1" values="1:第一道;2:第二道" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="3通道方式">
+				<Receiver id="MeasSelect2" desc="插入位置选择" isEnable="1" values="1:第一道;2:第二道;3:第三道" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="4通道方式">
+				<Receiver id="MeasSelect2" desc="插入位置选择" isEnable="1" values="1:第一道;2:第二道;3:第三道;4:第四道" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>
+

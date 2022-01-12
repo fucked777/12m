@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configure name="自动化运行策略配置">
+    <!-- <item id="TS"       name="故障处理" type="Enum" enumValue="人工=1|自动=2"/> -->
+    <!-- <item id="SCM"      name="系统捕获方式" type="Enum" enumValue="传统=1|同时=2"/> -->
+    <!-- <item id="PST"      name="参数命令超时时间(秒)" type="Integer" min="0" max="30" /> -->
+    <item  name="校相配置">
+        <!-- <item id="TCM"      name="目标捕获方式" type="Enum" enumValue="引导捕获=1|等待捕获=2"/> -->
+        <item id="PCaBind"     name="校相装订" type="Enum" enumValue="默认值下发=1|使用基带当前值=2|历史值下发=3" />
+        <item id="PCaM"     name="校相模式" type="Enum" enumValue="对塔=1|对当前位置=2|对星快速校相=3" />
+        <!-- <item id="CaM"      name="标校模式" type="Enum" enumValue="顺序标校=1|集中标校=2"/> -->
+        <item  name="自动化配置">
+            <item id="PCaT"     name="校相超时时间(秒)" type="Integer" min="0" max="300" />
+        </item>
+        <item  name="S测控校相修正">
+            <item id="S_CrossLowLimit" name="交叉耦合下限值(分母)" type="Integer" min="1" max="255" />
+            <item id="S_StandSensit" name="定向灵敏度标准值(mv)" type="Integer" min="1" max="6000" />
+            <item id="S_DirectToler" name="定向灵敏度允差(mv)" type="Integer" min="1" max="1000" />
+            <item id="S_FollowCheck" name="自跟踪检查" type="Enum" enumValue="检查=1|不检查=2" />
+        </item>
+        <item  name="Ka测控校相修正">
+            <item id="KA_CrossLowLimit" name="交叉耦合下限值(分母)" type="Integer" min="1" max="255" />
+            <item id="KA_StandSensit" name="定向灵敏度标准值(mv)" type="Integer" min="1" max="6000" />
+            <item id="KA_DirectToler" name="定向灵敏度允差(mv)" type="Integer" min="1" max="65535" />
+            <item id="KA_FollowCheck" name="自跟踪检查" type="Enum" enumValue="检查=1|不检查=2" />
+        </item>
+    	<item  name="Ka数传校相修正">
+            <item id="KADT_CrossLowLimit" name="交叉耦合下限值(分母)" type="Integer" min="1" max="255" />
+            <item id="KADT_StandSensit" name="定向灵敏度标准值(mv)" type="Integer" min="1" max="6000" />
+            <item id="KADT_DirectToler" name="定向灵敏度允差(mv)" type="Integer" min="1" max="1000" />
+            <item id="KADT_FollowCheck" name="自跟踪检查" type="Enum" enumValue="检查=1|不检查=2" />
+        </item>
+    </item>
+    <item  name="校零配置"> 
+        <item id="ZCaM"         name="校零模式" type="Enum" enumValue="偏馈校零=2" />
+        <item id="ZCaOffsetX"   name="校零水平拉偏角度" type="Integer" min="1" max="10" />
+        <item id="ZCaOffsetY"   name="校零俯仰拉偏角度" type="Integer" min="1" max="10" />
+        <!-- <item  name="自动化配置">
+            <item id="ZCaT"     name="校零超时时间(秒)" type="Integer" min="0" max="255" />
+      </item> -->
+        <item  name="修正值配置">
+            <item id="STTCXZ"   name="TTC修正值(米)" type="Integer" min="0" max="1000" />
+            <item id="SKUO2XZ"  name="S扩频修正值(米)" type="Integer" min="0" max="1000" />
+            <item id="KAKUO2XZ"  name="Ka扩频修正值(米)" type="Integer" min="0" max="1000" />
+            <item id="KTXZ" name="扩跳修正值(米)" type="Integer" min="0" max="1000" />
+        </item>
+   
+    </item>
+    <item name="任务结束策略">
+        <item id="TaskEndACUCollection" name="任务结束ACU收藏" type="Enum" enumValue="不收藏=0|收藏=1" />
+    </item>
+    <item name="设备状态策略">
+        <item id="DeviceStatusInsertDB" name="设备状态入库" type="Enum" enumValue="不入库=0|入库=1" />
+    </item>
+</Configure>

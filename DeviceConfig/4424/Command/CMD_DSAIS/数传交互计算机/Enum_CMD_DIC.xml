@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+id  枚举ID  -与设备类型关联
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums ExtenType="DIC" ModeType = "0xFFFF" edition="1.1.1.1">
+	<enum name="Command" desc="控制类型">
+		<entry svalue="10043" uvalue="10043" desc="任务开始" />
+		<entry svalue="10044" uvalue="10044" desc="结束任务" />
+		<entry svalue="10045" uvalue="10045" desc="删除任务" />
+	</enum>
+		<enum name="Segment" desc="任务弧段">
+		<entry svalue="1" uvalue="1" desc="上升段" />
+		<entry svalue="2" uvalue="2" desc="运行段" />
+		<entry svalue="3" uvalue="3" desc="返回段" />
+	</enum>
+	<enum name="IsModifyTime" desc="添加">
+		<entry svalue="0" uvalue="0" desc="添加" />
+		<entry svalue="1" uvalue="1" desc="修改" />
+	</enum>
+	<enum name="Route1" desc="表示流1的火箭遥测全帧原始数据发送路由选择情况">
+		<entry svalue="0" uvalue="0" desc="不选" />
+		<entry svalue="1" uvalue="1" desc="路由1" />
+		<entry svalue="2" uvalue="2" desc="路由2" />
+		<entry svalue="3" uvalue="3" desc="都选" />
+	</enum>
+
+	<enum name="CtrlMode" desc="控制模式">
+		<entry svalue="1" uvalue="1" desc="分控" />
+		<entry svalue="2" uvalue="2" desc="本控" />
+	</enum>
+	<enum name="Router" desc="路由选择">
+		<entry svalue="0" uvalue="0" desc="全部路由" />
+		<entry svalue="1" uvalue="1" desc="路由1" />
+		<entry svalue="2" uvalue="2" desc="路由2" />
+		<!--
+		<entry svalue="3" uvalue="3" desc="不选择" />
+		-->
+	</enum>
+	<enum name="IsSendTtc" desc="是否发送测控数据">
+		<entry svalue="1" uvalue="1" desc="不发送" />
+		<entry svalue="2" uvalue="2" desc="发送" />
+	</enum>
+	<enum name="IsSendLink" desc="是否发送链监">
+		<entry svalue="1" uvalue="1" desc="不发送" />
+		<entry svalue="2" uvalue="2" desc="发送" />
+	</enum>
+	<enum name="Type" desc="数据控制类型">
+		<entry svalue="1" uvalue="1" desc="测控数据" />
+		<entry svalue="2" uvalue="2" desc="引导数据" />
+	</enum>
+	<enum name="IsSend" desc="数据发送控制">
+		<entry svalue="1" uvalue="1" desc="不发送" />
+		<entry svalue="2" uvalue="2" desc="发送" />
+	</enum>
+	<enum name="GuideMode" desc="引导模式">
+		<entry svalue="1" uvalue="1" desc="理论引导" />
+		<entry svalue="2" uvalue="2" desc="瞬根引导" />
+		<entry svalue="3" uvalue="3" desc="本站实测数据" />
+		<entry svalue="4" uvalue="4" desc="中心弹道数据" />
+		<entry svalue="5" uvalue="5" desc="复合引导" />
+		<!--<entry svalue="6" uvalue="6" desc="自动" />-->
+	</enum>
+	
+</enums>

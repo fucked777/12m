@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称：有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值（抽象值）
+desc   描述
+-->
+<enums UnitType="XFD" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="ControlMode" desc="监控方式">
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="DeviceSwitch" desc="设备开关电">
+		<entry svalue="1" uvalue="1" desc="关电:R"/>
+		<entry svalue="2" uvalue="2" desc="开电:G"/>
+	</enum>
+	<enum name="ElectricStatus" desc="电流状态">
+		<entry svalue="1" uvalue="1" desc="正常:G"/>
+		<entry svalue="2" uvalue="2" desc="异常:R"/>
+	</enum>
+	<enum name="PowerStatus" desc="电源状态">
+		<entry svalue="1" uvalue="1" desc="正常:G"/>
+		<entry svalue="2" uvalue="2" desc="异常:R"/>
+	</enum>
+	<enum name="DeviceStatus" desc="设备状态">
+		<entry svalue="1" uvalue="1" desc="正常:G"/>
+		<entry svalue="2" uvalue="2" desc="异常:R"/>
+	</enum>
+	<enum name="Bad1AndBad2" desc="差路出1/差路出2">
+		<entry svalue="1" uvalue="1" desc="Ka-LNA1"/>
+		<entry svalue="2" uvalue="2" desc="Ka-LNA2"/>
+	</enum>
+	<enum name="He1AndHe2" desc="和路出1/和路出2">
+		<entry svalue="1" uvalue="1" desc="Ka-LNA5"/>
+		<entry svalue="2" uvalue="2" desc="Ka-LNA6"/>
+	</enum>
+	<enum name="LeftHe" desc="左旋和路出">
+		<entry svalue="1" uvalue="1" desc="Ka-LNA3"/>
+		<entry svalue="2" uvalue="2" desc="Ka-LNA4"/>
+	</enum>
+	<enum name="RightHe" desc="右旋和路出">
+		<entry svalue="1" uvalue="1" desc="Ka-LNA5"/>
+		<entry svalue="2" uvalue="2" desc="Ka-LNA6"/>
+	</enum>
+	<enum name="BackupInput" desc="备份输出">
+		<entry svalue="1" uvalue="1" desc="Ka和路入L1"/>
+		<entry svalue="2" uvalue="2" desc="Ka和路入L2"/>
+		<entry svalue="3" uvalue="3" desc="Ka和路入R1"/>
+		<entry svalue="4" uvalue="4" desc="Ka和路入R2"/>
+	</enum>
+	<enum name="OutHe" desc="右旋和路出">
+		<entry svalue="1" uvalue="1" desc="Ka和路选择左和"/>
+		<entry svalue="2" uvalue="2" desc="Ka和路选择右和"/>
+	</enum>
+	<enum name="BackupInputHe" desc="备份输出">
+		<entry svalue="1" uvalue="1" desc="备份选择左和"/>
+		<entry svalue="2" uvalue="2" desc="备份选择右和"/>
+	</enum>
+	<enum name="Control" desc="控制">
+		<entry svalue="1" uvalue="1" desc="断"/>
+		<entry svalue="2" uvalue="2" desc="通"/>
+	</enum>
+	<enum name="BoDaoControl" desc="控制">
+		<!--<entry svalue="1" uvalue="1" desc="接点1->+28V,接点2->0V"/>
+		<entry svalue="2" uvalue="2" desc="接点1->0V,接点2->+28V"/>-->
+		<entry svalue="1" uvalue="1" desc="左旋"/>
+		<entry svalue="2" uvalue="2" desc="右旋"/>
+	</enum>
+</enums>

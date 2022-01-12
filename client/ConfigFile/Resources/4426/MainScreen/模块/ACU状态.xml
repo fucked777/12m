@@ -1,0 +1,32 @@
+<GridLayout>
+	<Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="S频段"/>
+	<Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="载波" modeId="0xFFFF" unitId="2" targetId="0" paramId="STrackLockInst">
+		<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+		<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+	</Widget>
+	<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="Ka遥测"/>
+	<Widget row="1" col="1" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Ka遥测" modeId="0xFFFF" unitId="2" targetId="0" paramId="XKaTrackLockInst">
+		<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+		<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+	</Widget>
+	<GroupBox row="0" col="2" rowSpan="7" columnSpan="3" text="跟踪误差">
+		<Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="VoltageRadar4426" text="ACU图片">
+			<S unitId="2" x_point="STrackAzinVol" y_point="STrackPithVol" />
+			<KaR unitId="2" x_point="XKaTrackAZVol" y_point="XKaTrackPitchVol" />
+			<KaD unitId="2" x_point="XKaSCTrackAZVol" y_point="XKaSCTrackPitchVol" />
+		</Widget>
+	</GroupBox>
+	<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="Ka数传"/>
+	<Widget row="2" col="1" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Ka数传" modeId="0xFFFF" unitId="2" targetId="0" paramId="XKaSCTrackLockInst">
+		<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+		<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+	</Widget>
+	<Widget row="3" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="主备状态"/>
+	<Widget row="3" col="1" rowSpan="1" columnSpan="1" Align="Center" type="EnumStatusLabel" desc="主备状态" modeId="0xFFFF" unitId="1" targetId="0" paramId="OnLineMachine"/>
+	<Widget row="4" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="工作方式"/>
+	<Widget row="4" col="1" rowSpan="1" columnSpan="1" Align="Center" type="EnumStatusLabel" desc="工作方式" modeId="0xFFFF" unitId="2" targetId="0" paramId="AnteWorkMode"/>
+	<Widget row="5" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="方位角"/>
+	<Widget row="5" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="方位角" modeId="0xFFFF" unitId="1" targetId="0" paramId="CurrentAZ"/>
+	<Widget row="6" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="俯仰角"/>
+	<Widget row="6" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="俯仰角" modeId="0xFFFF" unitId="1" targetId="0" paramId="CurrentPA"/>
+</GridLayout>

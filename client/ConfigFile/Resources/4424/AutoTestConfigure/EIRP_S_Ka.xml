@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+ComboBox = 0,
+LineEdit = 1,
+SpinBox = 2,
+DoubleSpinBox = 3,
+HexNum = 4,
+HexStr = 5,
+
+item.id = element.attribute("id");
+item.desc = element.attribute("desc");
+item.contentType = ContentType(element.attribute("contentType").toUInt());
+item.initValue = QVariant(element.attribute("initValue"));
+item.minValue = element.attribute("minValue");
+item.maxValue = element.attribute("maxValue");
+item.precision = element.attribute("precision").toInt();
+item.unit = element.attribute("unit");
+item.enumValuesRaw = element.attribute("enumValuesRaw");
+
+-->
+
+<params>
+	<group name="测试计算机">
+		<!-- <field id="SpectCenter" precision="3" initValue="70000" minValue="100" maxValue="44000000" unit="kHz" contentType="3" enumValuesRaw="" name="频谱仪Center" desc="" displayFormat="double" /> -->
+		<field id="SpectSpan" precision="3" initValue="20000" minValue="1" maxValue="2500000" unit="kHz" contentType="3" enumValuesRaw="" name="频谱仪Span" desc="" displayFormat="double" />
+		<field id="SpectRLVL" precision="0" initValue="" minValue="-135" maxValue="30" unit="dBm" contentType="3" enumValuesRaw="" name="频谱仪RLVL" desc="" displayFormat="Int16" />
+		<!-- <field id="OutputFrequence" precision="3" initValue="" minValue="100" maxValue="40000000" unit="kHz" contentType="3" enumValuesRaw="" name="信号源输出频率" desc="" displayFormat="double" /> -->
+		<field id="OutputLevecon" precision="0" initValue="" minValue="-135" maxValue="30" unit="dBm" contentType="3" enumValuesRaw="" name="信号源输出电平" desc="" displayFormat="Int16" />
+		<field id="OutputSwitch" precision="" initValue="" minValue="" maxValue="" unit="" contentType="0" enumValuesRaw="on=0|off=1" name="信号源输出切换" desc="" displayFormat="enum|OutputSwitch" />
+	</group>
+</params>

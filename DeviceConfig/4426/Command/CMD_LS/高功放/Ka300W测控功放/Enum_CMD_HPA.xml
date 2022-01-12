@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+id  枚举ID  -与设备类型关联
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums ExtenType="HPA" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="PowerOutput" desc="功率射频输出_功率输出">
+		<entry svalue="1" uvalue="1" desc="允许"/>
+		<entry svalue="2" uvalue="2" desc="禁止"/>
+	</enum>
+	<enum name="ALCSwitchMode" desc="ALC开关模式">
+		<entry svalue="1" uvalue="1" desc="开环"/>
+		<entry svalue="2" uvalue="2" desc="闭环"/>
+	</enum>
+	<enum name="RateOutput" desc="功率输出">
+		<entry svalue="1" uvalue="1" desc="天线"/>
+		<entry svalue="2" uvalue="2" desc="负载"/>
+	</enum>
+	<enum name="TelegramControl" desc="加去电控制">
+		<entry svalue="1" uvalue="1" desc="加电"/>
+		<entry svalue="2" uvalue="2" desc="去电"/>
+	</enum>
+	<enum name="IsOnline" desc="在线设备">
+		<entry svalue="1" uvalue="1" desc="A主B备"/>
+		<entry svalue="2" uvalue="2" desc="B主A备"/>
+	</enum>
+	<enum name="CtrlMode" desc="控制模式">
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+</enums>

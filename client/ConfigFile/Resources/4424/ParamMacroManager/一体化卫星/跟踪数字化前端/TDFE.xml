@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device>
+	<unit unitID="1" unitName="公共单元">
+		<field pid="101" id="ReceiveSink" desc="接收通道信宿" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="103" id="YBRate" desc="样本速率" dataType="uint8" displayFormat="enum|YBRate" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="104" id="MainSubSwitch" desc="主备网络切换" dataType="uint8" displayFormat="enum|MainSubSwitch" initValue="" minValue="" maxValue="" step="" unit=""/>
+	</unit>
+	<unit unitID="2" unitName="接收单元">
+		<field pid="101" GroupId="status1" id="TimeConstant_2" desc="AGC时间常数(S1接收)" dataType="uint8" displayFormat="enum|TimeConstant" initValue="3" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="102" GroupId="status1" id="AGCSwitch_2" desc="AGC开关(S1接收)" dataType="uint8" displayFormat="enum|AGCSwitch" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="104" GroupId="status1" id="TimeConstant_2" desc="AGC时间常数(S1接收)" dataType="uint8" displayFormat="enum|TimeConstant" initValue="3" minValue="" maxValue="" step="" unit=""/>
+		<field pid="105" GroupId="status1" id="AGCSwitch_2" desc="AGC开关(S1接收)" dataType="uint8" displayFormat="enum|AGCSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="107" GroupId="status2" id="TimeConstant_4" desc="AGC时间常数(S2接收)" dataType="uint8" displayFormat="enum|TimeConstant" initValue="3" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="108" GroupId="status2" id="AGCSwitch_4" desc="AGC开关(S2接收)" dataType="uint8" displayFormat="enum|AGCSwitch" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="110" GroupId="status2" id="TimeConstant_4" desc="AGC时间常数(S2接收)" dataType="uint8" displayFormat="enum|TimeConstant" initValue="3" minValue="" maxValue="" step="" unit=""/>
+		<field pid="111" GroupId="status2" id="AGCSwitch_4" desc="AGC开关(S2接收)" dataType="uint8" displayFormat="enum|AGCSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="113" GroupId="status3" id="TimeConstant_6" desc="AGC时间常数(L接收)" dataType="uint8" displayFormat="enum|TimeConstant" initValue="3" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="114" GroupId="status3" id="AGCSwitch_6" desc="AGC开关(L接收)" dataType="uint8" displayFormat="enum|AGCSwitch" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="116" GroupId="status3" id="TimeConstant_6" desc="AGC时间常数(L接收)" dataType="uint8" displayFormat="enum|TimeConstant" initValue="3" minValue="" maxValue="" step="" unit=""/>
+		<field pid="117" GroupId="status3" id="AGCSwitch_6" desc="AGC开关(L接收)" dataType="uint8" displayFormat="enum|AGCSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+	</unit>
+</device>

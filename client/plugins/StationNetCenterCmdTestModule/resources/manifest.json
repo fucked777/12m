@@ -1,0 +1,8 @@
+{
+    "bundle.symbolic_name" : "StationNetCenterCmdTestModule",
+    "bundle.activator" : true,
+    "authors" : [ "wp" ],
+    "bundle.version" : "1.0.0",
+    "bundle.description" : "中心命令测试模块",
+    "update_log" :""
+}

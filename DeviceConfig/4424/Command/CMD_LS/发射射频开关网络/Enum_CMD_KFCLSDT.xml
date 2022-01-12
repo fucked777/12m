@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+id  枚举ID  -与设备类型关联
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+
+
+<enums ExtenType="KFCLSDT" ModeType = "0xFFFF" edition="1.1.1.1">
+	<enum name="WorkNum" desc="工作机号">
+		<entry svalue="0" uvalue="0" desc="无此参数" />
+		<entry svalue="1" uvalue="1" desc="A主B备" />
+		<entry svalue="2" uvalue="2" desc="B主A备" />
+	</enum>
+	<enum name="TestSignal" desc="测试信号">
+		<entry svalue="1" uvalue="1" desc="功放小环" />
+		<entry svalue="2" uvalue="2" desc="数字化前端小环" />
+	</enum>
+	<enum name="Power" desc="电源管理">
+		<entry svalue="1" uvalue="1" desc="关电" />
+		<entry svalue="2" uvalue="2" desc="开电" />
+	</enum>
+</enums>

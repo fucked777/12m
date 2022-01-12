@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mode>
+	<frequency>
+		<unit groupName="发射与接收分系统" deviceID="4101_1/4102_1/AAAA_1" enumGroup="2">
+			<field pid="110" GroupId="setting2" id="SBandDownFreq" desc="下行工作频率" dataType="ulong" displayFormat="double" minValue="7700" maxValue="9000" step="0.001" unit="MHz"/>
+			<field pid="105" GroupId="setting3" id="SEmissPolar" desc="发射极化" dataType="uint8" displayFormat="enum|SPolar" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="106" GroupId="setting3" id="SReceivPolar" desc="接收极化" dataType="uint8" displayFormat="enum|SRecPolar" initValue="" minValue="" maxValue="" step="" unit=""/>
+		</unit>
+		<unit groupName="天伺馈分系统" deviceID="4001_1/4002_1" enumGroup="3">
+			<field pid="107" GroupId="setting3" id="STrackPolar" desc="跟踪极化" dataType="uint8" displayFormat="enum|SPolar" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="2" id="KaXPolarHorn" desc="极化角" desc2="" dataType="int" displayFormat="double" initValue="0" minValue="-180" maxValue="180" step="0.1" unit="°" isShow="0"/>
+			<field pid="111" id="AngularSamplRate" desc="测角采样率" dataType="uint8" displayFormat="enum|AngularSamplRate" initValue="" minValue="" maxValue="" step="" unit=""/>
+		</unit>
+		<unit groupName="解调单元1" deviceID="4101_2/4102_2/4103_2" enumGroup="4">
+			<field pid="101" GroupId="setting1" id="IntermFreq" desc="中频频率" dataType="uint" displayFormat="double" initValue="1200" minValue="100" maxValue="2000" step="0.000001" unit="MHz"/>
+			<field pid="102" GroupId="setting1" id="ModulatSystem" desc="调制体制" dataType="uint8" displayFormat="enum|ModulatSystem" initValue="1" minValue="" maxValue="" step=""/>
+			<field pid="104" GroupId="setting1" id="IQPowerRatio" desc="IQ路功率比" dataType="int8" displayFormat="Int8" initValue="1" minValue="1" maxValue="10" step="" unit="dB"/>
+			<field pid="105" GroupId="setting1" id="CodeRateSett" desc="码速率设置方式" dataType="uint8" displayFormat="enum|CodeRateSett" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="107" GroupId="setting4" id="ICodeRate" desc="I路码速率" dataType="uint" displayFormat="double" initValue="5" minValue="5" maxValue="2000" step="0.000001" unit="Mbps"/>
+			<field pid="108" GroupId="setting4" id="QCodeRate" desc="Q路码速率" dataType="uint" displayFormat="double" initValue="5" minValue="5" maxValue="2000" step="0.000001" unit="Mbps"/>
+			<field pid="109" GroupId="setting2" id="FrameSynch" desc="帧同步方式" dataType="uint8" displayFormat="enum|FrameSynch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="110" GroupId="setting2" id="ViterbiDecod" desc="Viterbi译码方式" dataType="uint8" displayFormat="enum|ViterbiDecod" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="111" GroupId="setting2" id="DemodOutputSelect" desc="解调数据输出" dataType="uint8" displayFormat="enum|DemodOutputSelect" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="112" GroupId="setting2" id="ParaSerConv" desc="并串转换方式" dataType="uint8" displayFormat="enum|ParaSerConv" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="113" GroupId="setting2" id="GrayCodSelect" desc="Gray编码选择" dataType="uint8" displayFormat="enum|GrayCodSelect" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="114" GroupId="setting1" id="PhaseMapp" desc="相位映射" dataType="uint8" displayFormat="enum|PhaseMapp" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="115" GroupId="setting1" id="ConstMapp" desc="星座映射" dataType="uint8" displayFormat="enum|ConstMapp" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="116" GroupId="setting4" id="RadOuterCircle" desc="外圈内圈半径比" dataType="ushort" displayFormat="double" initValue="1" minValue="" maxValue="" step="0.01" unit="" isShow="0"/>
+			<field pid="117" GroupId="setting1" id="MatchFiltSwitch" desc="匹配滤波开关" dataType="uint8" displayFormat="enum|MatchFiltSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="118" GroupId="setting1" id="MatchfiltCoeff" desc="匹配滤波系数" dataType="uint8" displayFormat="enum|ShapFiltCoeff" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="119" GroupId="setting4" id="PolarCance" desc="极化对消" dataType="uint8" displayFormat="enum|PolarCance" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="120" GroupId="setting2" id="SpectInvers" desc="频谱倒置" dataType="uint8" displayFormat="enum|SpectInvers" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="121" GroupId="setting2" id="VersionNumb" desc="版本号" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="3" step="" unit=""/>
+			<field pid="122" GroupId="setting2" id="SpaceIdent" desc="航天器标识符" dataType="uint8" displayFormat="Hex" initValue="1" minValue="0" maxValue="FF" step="" unit=""/>
+			<field pid="123" GroupId="setting4" id="BlockCodeSelect" desc="分组码校验输出" dataType="uint8" displayFormat="enum|BlockCodeSelect" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		</unit>
+		<unit groupName="I路译码单元1" deviceID="4101_3/4102_3/4103_3" enumGroup="5">
+			<field pid="101" GroupId="setting0" id="CodeType" desc="码型" dataType="uint8" displayFormat="enum|CodeType" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="102" GroupId="setting9" id="DecodMode" desc="译码方式" dataType="uint8" displayFormat="enum|DecodMode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="103" GroupId="setting1" id="ConvolCodeType" desc="卷积码类型" dataType="uint8" displayFormat="enum|ConvolCodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="104" GroupId="setting1" id="ViterDecodPhase" desc="输出相位" dataType="uint8" displayFormat="enum|ViterDecodPhase" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="105" GroupId="setting2" id="RSCodeType" desc="R-S码类型" dataType="uint8" displayFormat="enum|RSCodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="106" GroupId="setting2" id="RSInterDecod" desc="交织深度" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="16" step="" unit=""/>
+			<field pid="107" GroupId="setting2" id="RSDecodBase" desc="坐标基" dataType="uint8" displayFormat="enum|RSDecodBase" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="108" GroupId="setting3" id="TurboCodeType" desc="Turbo码类型" dataType="uint8" displayFormat="enum|TurboCodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="109" GroupId="setting4" id="LDPCType" desc="LDPC类型" dataType="uint8" displayFormat="enum|LDPCType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="110" GroupId="setting5" id="FrameLength" desc="帧长" dataType="ushort" displayFormat="UInt16" initValue="128" minValue="128" maxValue="16360" step="" unit="字"/>
+			<field pid="111" GroupId="setting5" id="FramSynchPatt" desc="码组图样" dataType="ulong" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="112" GroupId="setting5" id="FraSynchLength" desc="码组长度" dataType="uint8" displayFormat="enum|CodeGroupLength" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="113" GroupId="setting5" id="FrameSynchLocat" desc="码组位置" dataType="uint8" displayFormat="enum|FrameSynchLocat" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="119" GroupId="setting6" id="PreDecodDesSwitch" desc="译码前解扰开关" dataType="uint8" displayFormat="enum|DescramSwitch" initValue="1" minValue="" maxValue="" step="" unit="mV"/>
+            <field pid="120" GroupId="setting6" id="PreDecodScraPoly" desc="译码前解扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+            <field pid="121" GroupId="setting6" id="PreDecodInitTerm" desc="译码前解扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+            <field pid="122" GroupId="setting6" id="DecodOutPosit" desc="译码前解扰输出位置" dataType="uint8" displayFormat="enum|OutputPosit" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="123" GroupId="setting7" id="DecodPostSwitch" desc="译码后解扰开关" dataType="uint8" displayFormat="enum|DescramSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="124" GroupId="setting7" id="DecodPostPolyn" desc="译码后解扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+            <field pid="125" GroupId="setting7" id="DecodInitTerm" desc="译码后解扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+            <field pid="126" GroupId="setting7" id="DecodOutputPosit" desc="译码后解扰输出位置" dataType="uint8" displayFormat="enum|OutputPosit" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="127" GroupId="setting8" id="AntiSwitch" desc="抗位滑开关" dataType="uint8" displayFormat="enum|AntiSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="128" GroupId="setting8" id="CRCCheckSWitch" desc="CRC校验开关" dataType="uint8" displayFormat="enum|CRCSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="129" GroupId="setting8" id="CRCPolynomial" desc="CRC多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+			<field pid="130" GroupId="setting8" id="CRCInitPhase" desc="CRC初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+			<field pid="131" GroupId="setting8" id="CRCCheckArea" desc="CRC校验区" dataType="uint" displayFormat="enum|Checkout" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="132" GroupId="setting8" id="IOLinkIdentification" desc="I/Q路链路标识" dataType="ushort" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFF" step="" unit=""/>
+		</unit>
+		<unit groupName="Q路译码单元1" deviceID="4101_4/4102_4/4103_4" enumGroup="5">
+			<field pid="101" GroupId="setting0" id="CodeType" desc="码型" dataType="uint8" displayFormat="enum|CodeType" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="102" GroupId="setting9" id="DecodMode" desc="译码方式" dataType="uint8" displayFormat="enum|DecodMode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="103" GroupId="setting1" id="ConvolCodeType" desc="卷积码类型" dataType="uint8" displayFormat="enum|ConvolCodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="104" GroupId="setting1" id="ViterDecodPhase" desc="输出相位" dataType="uint8" displayFormat="enum|ViterDecodPhase" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="105" GroupId="setting2" id="RSCodeType" desc="R-S码类型" dataType="uint8" displayFormat="enum|RSCodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="106" GroupId="setting2" id="RSInterDecod" desc="交织深度" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="16" step="" unit=""/>
+			<field pid="107" GroupId="setting2" id="RSDecodBase" desc="坐标基" dataType="uint8" displayFormat="enum|RSDecodBase" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="108" GroupId="setting3" id="TurboCodeType" desc="Turbo码类型" dataType="uint8" displayFormat="enum|TurboCodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="109" GroupId="setting4" id="LDPCType" desc="LDPC类型" dataType="uint8" displayFormat="enum|LDPCType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="110" GroupId="setting5" id="FrameLength" desc="帧长" dataType="ushort" displayFormat="UInt16" initValue="128" minValue="128" maxValue="16360" step="" unit="字"/>
+			<field pid="111" GroupId="setting5" id="FramSynchPatt" desc="码组图样" dataType="ulong" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="112" GroupId="setting5" id="FraSynchLength" desc="码组长度" dataType="uint8" displayFormat="enum|CodeGroupLength" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="113" GroupId="setting5" id="FrameSynchLocat" desc="码组位置" dataType="uint8" displayFormat="enum|FrameSynchLocat" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="119" GroupId="setting6" id="PreDecodDesSwitch" desc="译码前解扰开关" dataType="uint8" displayFormat="enum|DescramSwitch" initValue="1" minValue="" maxValue="" step="" unit="mV"/>
+            <field pid="120" GroupId="setting6" id="PreDecodScraPoly" desc="译码前解扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+            <field pid="121" GroupId="setting6" id="PreDecodInitTerm" desc="译码前解扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+            <field pid="122" GroupId="setting6" id="DecodOutPosit" desc="译码前解扰输出位置" dataType="uint8" displayFormat="enum|OutputPosit" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="123" GroupId="setting7" id="DecodPostSwitch" desc="译码后解扰开关" dataType="uint8" displayFormat="enum|DescramSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="124" GroupId="setting7" id="DecodPostPolyn" desc="译码后解扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+            <field pid="125" GroupId="setting7" id="DecodInitTerm" desc="译码后解扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+            <field pid="126" GroupId="setting7" id="DecodOutputPosit" desc="译码后解扰输出位置" dataType="uint8" displayFormat="enum|OutputPosit" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="127" GroupId="setting8" id="AntiSwitch" desc="抗位滑开关" dataType="uint8" displayFormat="enum|AntiSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="128" GroupId="setting8" id="CRCCheckSWitch" desc="CRC校验开关" dataType="uint8" displayFormat="enum|CRCSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="129" GroupId="setting8" id="CRCPolynomial" desc="CRC多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+			<field pid="130" GroupId="setting8" id="CRCInitPhase" desc="CRC初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+			<field pid="131" GroupId="setting8" id="CRCCheckArea" desc="CRC校验区" dataType="uint" displayFormat="enum|Checkout" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="132" GroupId="setting8" id="IOLinkIdentification" desc="I/Q路链路标识" dataType="ushort" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFF" step="" unit=""/>
+		</unit>
+		<unit groupName="解调单元2" deviceID="4101_6/4102_6/4103_6" enumGroup="4">
+			<field pid="101" GroupId="setting1" id="IntermFreq" desc="中频频率" dataType="uint" displayFormat="double" initValue="1200" minValue="100" maxValue="2000" step="0.000001" unit="MHz"/>
+			<field pid="102" GroupId="setting1" id="ModulatSystem" desc="调制体制" dataType="uint8" displayFormat="enum|ModulatSystem" initValue="1" minValue="" maxValue="" step=""/>
+			<field pid="104" GroupId="setting1" id="IQPowerRatio" desc="IQ路功率比" dataType="int8" displayFormat="Int8" initValue="1" minValue="1" maxValue="10" step="" unit="dB"/>
+			<field pid="105" GroupId="setting1" id="CodeRateSett" desc="码速率设置方式" dataType="uint8" displayFormat="enum|CodeRateSett" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="107" GroupId="setting4" id="ICodeRate" desc="I路码速率" dataType="uint" displayFormat="double" initValue="5" minValue="5" maxValue="2000" step="0.000001" unit="Mbps"/>
+			<field pid="108" GroupId="setting4" id="QCodeRate" desc="Q路码速率" dataType="uint" displayFormat="double" initValue="5" minValue="5" maxValue="2000" step="0.000001" unit="Mbps"/>
+			<field pid="109" GroupId="setting2" id="FrameSynch" desc="帧同步方式" dataType="uint8" displayFormat="enum|FrameSynch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="110" GroupId="setting2" id="ViterbiDecod" desc="Viterbi译码方式" dataType="uint8" displayFormat="enum|ViterbiDecod" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="111" GroupId="setting2" id="DemodOutputSelect" desc="解调数据输出" dataType="uint8" displayFormat="enum|DemodOutputSelect" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="112" GroupId="setting2" id="ParaSerConv" desc="并串转换方式" dataType="uint8" displayFormat="enum|ParaSerConv" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="113" GroupId="setting2" id="GrayCodSelect" desc="Gray编码选择" dataType="uint8" displayFormat="enum|GrayCodSelect" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="114" GroupId="setting1" id="PhaseMapp" desc="相位映射" dataType="uint8" displayFormat="enum|PhaseMapp" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="115" GroupId="setting1" id="ConstMapp" desc="星座映射" dataType="uint8" displayFormat="enum|ConstMapp" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="116" GroupId="setting4" id="RadOuterCircle" desc="外圈内圈半径比" dataType="ushort" displayFormat="double" initValue="1" minValue="" maxValue="" step="0.01" unit="" isShow="0"/>
+			<field pid="117" GroupId="setting1" id="MatchFiltSwitch" desc="匹配滤波开关" dataType="uint8" displayFormat="enum|MatchFiltSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="118" GroupId="setting1" id="MatchfiltCoeff" desc="匹配滤波系数" dataType="uint8" displayFormat="enum|ShapFiltCoeff" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="119" GroupId="setting4" id="PolarCance" desc="极化对消" dataType="uint8" displayFormat="enum|PolarCance" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="120" GroupId="setting2" id="SpectInvers" desc="频谱倒置" dataType="uint8" displayFormat="enum|SpectInvers" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="121" GroupId="setting2" id="VersionNumb" desc="版本号" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="3" step="" unit=""/>
+			<field pid="122" GroupId="setting2" id="SpaceIdent" desc="航天器标识符" dataType="uint8" displayFormat="Hex" initValue="1" minValue="0" maxValue="FF" step="" unit=""/>
+			<field pid="123" GroupId="setting4" id="BlockCodeSelect" desc="分组码校验输出" dataType="uint8" displayFormat="enum|BlockCodeSelect" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		</unit>
+		<unit groupName="I路译码单元2" deviceID="4101_7/4102_7/4103_7" enumGroup="5">
+			<field pid="101" GroupId="setting0" id="CodeType" desc="码型" dataType="uint8" displayFormat="enum|CodeType" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="102" GroupId="setting9" id="DecodMode" desc="译码方式" dataType="uint8" displayFormat="enum|DecodMode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="103" GroupId="setting1" id="ConvolCodeType" desc="卷积码类型" dataType="uint8" displayFormat="enum|ConvolCodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="104" GroupId="setting1" id="ViterDecodPhase" desc="输出相位" dataType="uint8" displayFormat="enum|ViterDecodPhase" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="105" GroupId="setting2" id="RSCodeType" desc="R-S码类型" dataType="uint8" displayFormat="enum|RSCodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="106" GroupId="setting2" id="RSInterDecod" desc="交织深度" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="16" step="" unit=""/>
+			<field pid="107" GroupId="setting2" id="RSDecodBase" desc="坐标基" dataType="uint8" displayFormat="enum|RSDecodBase" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="108" GroupId="setting3" id="TurboCodeType" desc="Turbo码类型" dataType="uint8" displayFormat="enum|TurboCodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="109" GroupId="setting4" id="LDPCType" desc="LDPC类型" dataType="uint8" displayFormat="enum|LDPCType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="110" GroupId="setting5" id="FrameLength" desc="帧长" dataType="ushort" displayFormat="UInt16" initValue="128" minValue="128" maxValue="16360" step="" unit="字"/>
+			<field pid="111" GroupId="setting5" id="FramSynchPatt" desc="码组图样" dataType="ulong" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="112" GroupId="setting5" id="FraSynchLength" desc="码组长度" dataType="uint8" displayFormat="enum|CodeGroupLength" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="113" GroupId="setting5" id="FrameSynchLocat" desc="码组位置" dataType="uint8" displayFormat="enum|FrameSynchLocat" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="119" GroupId="setting6" id="PreDecodDesSwitch" desc="译码前解扰开关" dataType="uint8" displayFormat="enum|DescramSwitch" initValue="1" minValue="" maxValue="" step="" unit="mV"/>
+			<field pid="120" GroupId="setting6" id="PreDecodScraPoly" desc="译码前解扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+			<field pid="121" GroupId="setting6" id="PreDecodInitTerm" desc="译码前解扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+			<field pid="122" GroupId="setting6" id="DecodOutPosit" desc="译码前解扰输出位置" dataType="uint8" displayFormat="enum|OutputPosit" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="123" GroupId="setting7" id="DecodPostSwitch" desc="译码后解扰开关" dataType="uint8" displayFormat="enum|DescramSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="124" GroupId="setting7" id="DecodPostPolyn" desc="译码后解扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+			<field pid="125" GroupId="setting7" id="DecodInitTerm" desc="译码后解扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+			<field pid="126" GroupId="setting7" id="DecodOutputPosit" desc="译码后解扰输出位置" dataType="uint8" displayFormat="enum|OutputPosit" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="127" GroupId="setting8" id="AntiSwitch" desc="抗位滑开关" dataType="uint8" displayFormat="enum|AntiSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="128" GroupId="setting8" id="CRCCheckSWitch" desc="CRC校验开关" dataType="uint8" displayFormat="enum|CRCSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="129" GroupId="setting8" id="CRCPolynomial" desc="CRC多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+			<field pid="130" GroupId="setting8" id="CRCInitPhase" desc="CRC初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+			<field pid="131" GroupId="setting8" id="CRCCheckArea" desc="CRC校验区" dataType="uint" displayFormat="enum|Checkout" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="132" GroupId="setting8" id="IOLinkIdentification" desc="I/Q路链路标识" dataType="ushort" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFF" step="" unit=""/>
+		</unit>
+		<unit groupName="Q路译码单元2" deviceID="4101_8/4102_8/4103_8" enumGroup="5">
+			<field pid="101" GroupId="setting0" id="CodeType" desc="码型" dataType="uint8" displayFormat="enum|CodeType" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="102" GroupId="setting9" id="DecodMode" desc="译码方式" dataType="uint8" displayFormat="enum|DecodMode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="103" GroupId="setting1" id="ConvolCodeType" desc="卷积码类型" dataType="uint8" displayFormat="enum|ConvolCodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="104" GroupId="setting1" id="ViterDecodPhase" desc="输出相位" dataType="uint8" displayFormat="enum|ViterDecodPhase" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="105" GroupId="setting2" id="RSCodeType" desc="R-S码类型" dataType="uint8" displayFormat="enum|RSCodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="106" GroupId="setting2" id="RSInterDecod" desc="交织深度" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="16" step="" unit=""/>
+			<field pid="107" GroupId="setting2" id="RSDecodBase" desc="坐标基" dataType="uint8" displayFormat="enum|RSDecodBase" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="108" GroupId="setting3" id="TurboCodeType" desc="Turbo码类型" dataType="uint8" displayFormat="enum|TurboCodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="109" GroupId="setting4" id="LDPCType" desc="LDPC类型" dataType="uint8" displayFormat="enum|LDPCType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="110" GroupId="setting5" id="FrameLength" desc="帧长" dataType="ushort" displayFormat="UInt16" initValue="128" minValue="128" maxValue="16360" step="" unit="字"/>
+			<field pid="111" GroupId="setting5" id="FramSynchPatt" desc="码组图样" dataType="ulong" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="112" GroupId="setting5" id="FraSynchLength" desc="码组长度" dataType="uint8" displayFormat="enum|CodeGroupLength" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="113" GroupId="setting5" id="FrameSynchLocat" desc="码组位置" dataType="uint8" displayFormat="enum|FrameSynchLocat" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="119" GroupId="setting6" id="PreDecodDesSwitch" desc="译码前解扰开关" dataType="uint8" displayFormat="enum|DescramSwitch" initValue="1" minValue="" maxValue="" step="" unit="mV"/>
+            <field pid="120" GroupId="setting6" id="PreDecodScraPoly" desc="译码前解扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+            <field pid="121" GroupId="setting6" id="PreDecodInitTerm" desc="译码前解扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+            <field pid="122" GroupId="setting6" id="DecodOutPosit" desc="译码前解扰输出位置" dataType="uint8" displayFormat="enum|OutputPosit" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="123" GroupId="setting7" id="DecodPostSwitch" desc="译码后解扰开关" dataType="uint8" displayFormat="enum|DescramSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="124" GroupId="setting7" id="DecodPostPolyn" desc="译码后解扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+            <field pid="125" GroupId="setting7" id="DecodInitTerm" desc="译码后解扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+            <field pid="126" GroupId="setting7" id="DecodOutputPosit" desc="译码后解扰输出位置" dataType="uint8" displayFormat="enum|OutputPosit" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="127" GroupId="setting8" id="AntiSwitch" desc="抗位滑开关" dataType="uint8" displayFormat="enum|AntiSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="128" GroupId="setting8" id="CRCCheckSWitch" desc="CRC校验开关" dataType="uint8" displayFormat="enum|CRCSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="129" GroupId="setting8" id="CRCPolynomial" desc="CRC多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+			<field pid="130" GroupId="setting8" id="CRCInitPhase" desc="CRC初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+			<field pid="131" GroupId="setting8" id="CRCCheckArea" desc="CRC校验区" dataType="uint" displayFormat="enum|Checkout" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="132" GroupId="setting8" id="IOLinkIdentification" desc="I/Q路链路标识" dataType="ushort" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFF" step="" unit=""/>
+		</unit>
+		<change groupName="通道一码速率" deviceID="4101_02/4102_02/4103_02" dynamicGroupId="Channel1_CodeRate">
+			<field pid="106" GroupId="setting3" id="CodeRate" desc="码速率" dataType="uint" displayFormat="double" initValue="400" minValue="5" maxValue="2000" step="0.000001" unit="Mbps"/>
+		</change>
+		<change groupName="通道二码速率" deviceID="4101_06/4102_06/4103_06" dynamicGroupId="Channel2_CodeRate">
+			<field pid="106" GroupId="setting3" id="CodeRate" desc="码速率" dataType="uint" displayFormat="double" initValue="400" minValue="5" maxValue="2000" step="0.000001" unit="Mbps"/>
+		</change>
+	</frequency>
+	<devices>
+		<device name="X频段射频开关网络" station="0x264224" deviceID="0x3201" xmlPath="X高速/X频段射频开关网络/XRFSN.xml"/>
+		<device name="X跟踪下变频器" station="0x264224" deviceID="0x3301/0x3302" xmlPath="X高速/X跟踪下变频器/XTDC.xml"/>
+		<device name="X1.2GHz下变频器" station="0x264224" deviceID="0x3401/0x3402/0x3403" xmlPath="X高速/X1.2GHz下变频器/XDC12.xml"/>
+		<device name="跟踪数字化前端" station="0x264224" deviceID="0x7101/0x7102" xmlPath="X高速/跟踪数字化前端/TDFE.xml"/>
+		<device name="高速数传基带" station="0x264224" deviceID="0x4101/0x4102/0x4103" xmlPath="X高速/数传基带/MACB.xml"/>
+		<device name="测角分系统" station="0x264224" deviceID="0x1001" xmlPath="X高速/测角分系统/TFS.xml"/>
+	</devices>
+</Mode>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="WMMACPU" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="NetworkMonitoringMode" desc="监控方式">
+		<entry svalue="0" uvalue="0" desc="无此参数" />
+		<entry svalue="1" uvalue="1" desc="分控" />
+		<entry svalue="2" uvalue="2" desc="本控" />
+	</enum>
+	<enum name="NetworkCommunicationStatus" desc="监控方式">
+		<entry svalue="0" uvalue="0" desc="无此参数" />
+		<entry svalue="1" uvalue="1" desc="通信正常" />
+		<entry svalue="2" uvalue="2" desc="通信中断" />
+	</enum>
+
+	<enum name="OtherStatus" desc="监控方式">
+		<entry svalue="0" uvalue="0" desc="无此参数" />
+		<entry svalue="1" uvalue="1" desc="健康" />
+		<entry svalue="2" uvalue="2" desc="故障" />
+	</enum>
+
+
+	<enum name="MonitorMode" desc="监控方式">
+		<entry svalue="0" uvalue="0" desc="无此参数" />
+		<entry svalue="85" uvalue="85" desc="分控" />
+		<entry svalue="170" uvalue="170" desc="本控" />
+	</enum>
+
+	<enum name="WorkMode" desc="工作方式">
+		<entry svalue="0" uvalue="0" desc="无此参数" />
+		<entry svalue="85" uvalue="85" desc="任务方式" />
+		<entry svalue="170" uvalue="170" desc="测试方式" />
+	</enum>
+
+	<enum name="ExternalTimeCodeStatus" desc="外时码状态">
+		<entry svalue="0" uvalue="0" desc="无此参数" />
+		<entry svalue="85" uvalue="85" desc="故障:R" />
+		<entry svalue="170" uvalue="170" desc="正常:G" />
+	</enum>
+
+	<enum name="ExternalReferenceClockState" desc="外参考时钟状态">
+		<entry svalue="0" uvalue="0" desc="无此参数" />
+		<entry svalue="85" uvalue="85" desc="未锁定:R" />
+		<entry svalue="170" uvalue="170" desc="锁定:G" />
+	</enum>
+
+	<enum name="InstructionResolution" desc="外参考时钟状态">
+		<entry svalue="0" uvalue="0" desc="无此参数" />
+		<entry svalue="15" uvalue="15" desc="解析正确" />
+		<entry svalue="240" uvalue="240" desc="解析错误" />
+	</enum>
+
+	<enum name="PseudoCodeType" desc="伪码类型">
+		<entry svalue="0" uvalue="0" desc="无指令" />
+		<entry svalue="1" uvalue="15" desc="复位指令" />
+		<entry svalue="2" uvalue="85" desc="伪码编号设置" />
+		<entry svalue="3" uvalue="102" desc="时间设置" />
+	</enum>
+
+
+</enums>

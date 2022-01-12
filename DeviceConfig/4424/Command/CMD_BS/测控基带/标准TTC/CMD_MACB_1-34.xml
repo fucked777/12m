@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+require:查询数据包 ,response:响应数据包,result:上报数据包
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+initValue为初始化值,
+length为标识长度
+ExtenType:分机类型
+SelfLoopNumb:自身循环N次
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+cmdID:命令ID  与命令序号关联
+isShow:0表示界面不显示  1表示界面显示
+-->
+
+
+<cmd cmdID="34" ExtenType="MACB" ModeType = "0x01" desc="实时误码误帧统计" flag="1001">
+	<request MessageType="0x0000F001">
+		<field pid="101" id="Category" desc="类别" dataType="uint8" displayFormat="enum|Category" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="102" id="RotatDirect" desc="旋向" dataType="uint8" displayFormat="enum|RotatDirect" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="103" id="StatisCtrl" desc="统计控制" dataType="uint8" displayFormat="enum|StatisCtrl" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="104" id="ChanSelect" desc="波道选择" dataType="uint8" displayFormat="enum|ChanSelect" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="105" id="StatChanNum" desc="统计波道数" dataType="ushort" displayFormat="UInt16" initValue="0" minValue="0" maxValue="2048" step="" unit="" isShow="0"/>
+		<recycle id="StatChanNum">
+			<field pid="106" id="ChannelN" desc="波道号" dataType="ushort" displayFormat="UInt16" initValue="0" minValue="0" maxValue="255" step="" unit=""/>
+		</recycle>
+	</request>
+
+	<result MessageType="0x0000F101">
+		<field pid="1" id="TestStatus" desc="类别" dataType="uint8" displayFormat="enum|Category" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="2" id="RotatDirect" desc="旋向" dataType="uint8" displayFormat="enum|RotatDirect" initValue="" minValue="" maxValue="" step="" unit=""/>		
+		<field pid="3" id="StatStatus" desc="统计状态" dataType="uint8" displayFormat="enum|StatStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="4" id="TotalSymNum" desc="总码元数" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="5" id="ErrorCodeNum" desc="误码数" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="6" id="TotalFram" desc="总帧数" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="7" id="WrongFram" desc="误帧数" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+	</result>
+</cmd>

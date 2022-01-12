@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+require:查询数据包 ,response:响应数据包,result:上报数据包
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+initValue为初始化值,
+length为标识长度
+ExtenType:分机类型
+SelfLoopNumb:自身循环N次
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+cmdID:命令ID  与命令序号关联
+isShow:0表示界面不显示  1表示界面显示
+-->
+<cmd cmdID="16" ExtenType="TC" ModeType="0xFFFF" desc="扫描特性测试" flag="1001" isShow="0">
+	<request MessageType="0x0000F001">
+		<field pid="101" id="TestCtrl" desc="测试控制" dataType="uint8" displayFormat="enum|TestCtrl" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="102" id="ScanRange" desc="扫描范围" dataType="short" displayFormat="Int16" initValue="" minValue="-150" maxValue="150" step="5" unit="kHz"/>
+		<field pid="103" id="ScanSpeed" desc="扫描速率" dataType="short" displayFormat="Int16" initValue="" minValue="-180000" maxValue="180000" step="500" unit="Hz/s"/>
+		<field pid="104" id="SpectCenter" desc="频谱仪Center" dataType="ulong" displayFormat="UInt64" initValue="" minValue="" maxValue="" step="" unit="Hz"/>
+		<field pid="105" id="SpectSpan" desc="频谱仪Span" dataType="ulong" displayFormat="UInt64" initValue="" minValue="" maxValue="" step="" unit="Hz"/>
+		<field pid="106" id="SpectRLVL" desc="频谱仪RLVL" dataType="short" displayFormat="Int16" initValue="" minValue="" maxValue="" step="" unit="dBm"/>
+		<field pid="107" id="SpectRBW" desc="频谱仪RBW" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="Hz"/>
+		<field pid="108" id="SpectVBW" desc="频谱仪VBW" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="Hz"/>
+	</request>
+	<result MessageType="0x0000F101">
+		<field pid="1" id="SpectCenter" desc="频谱仪Center" dataType="ulong" displayFormat="UInt64" initValue="" minValue="" maxValue="" step="" unit="Hz"/>
+		<field pid="2" id="SpectSpan" desc="频谱仪Span" dataType="ulong" displayFormat="UInt64" initValue="" minValue="" maxValue="" step="" unit="Hz"/>
+		<field pid="3" id="SpectRLVL" desc="频谱仪RLVL" dataType="short" displayFormat="Int16" initValue="" minValue="" maxValue="" step="" unit="dBm"/>
+		<field pid="4" id="SpectRBW" desc="频谱仪RBW" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="Hz"/>
+		<field pid="5" id="SpectVBW" desc="频谱仪VBW" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="Hz"/>
+		<field pid="6" id="ScanRange" desc="扫描范围" dataType="short" displayFormat="Int16" initValue="" minValue="-150000" maxValue="150000" step="" unit="Hz"/>
+		<field pid="7" id="ScanSpeed" desc="扫描速率" dataType="short" displayFormat="Int16" initValue="" minValue="-180000" maxValue="180000" step="500" unit="Hz/s"/>
+	</result>
+</cmd>

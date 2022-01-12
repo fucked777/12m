@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n,bit:uint8|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP,Hex)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="ASU" ModeType="0xFFFF" desc="模拟源单元" flag="1001">
+    <set MessageType="0x0000F003">
+        <field pid="101" id="InterFreq" desc="中频频率" dataType="uint" displayFormat="UInt32" initValue="1200000" minValue="" maxValue="" step="" unit="Hz"/>
+        <field pid="102" id="CarrierSwitch" desc="载波输出开关" dataType="uint8" displayFormat="enum|CarrierSwitch" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="103" id="OutputLevel" desc="输出电平" dataType="int" displayFormat="Int32" initValue="" minValue="-60" maxValue="0" step="" unit="dBm"/>
+        <field pid="104" id="LevelCtrlMode" desc="输出电平控制方式" dataType="uint8" displayFormat="enum|LevelCtrlMode" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="105" id="LevelScannRate" desc="电平扫描速率" dataType="uint8" displayFormat="UInt8" initValue="0" minValue="0" maxValue="10" step="" unit="dB/s"/>
+        <field pid="106" id="LevelScannRange" desc="电平扫描范围" dataType="uint8" displayFormat="enum|LevelScannRange" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <recycle id="TargetNum">
+            <field pid="101" id="TaskIdent" desc="任务标识" dataType="uint" displayFormat="Hex" initValue="" minValue="" maxValue="" step="" unit=""/>
+            <field pid="102" id="TaskCode" desc="任务代号" dataType="char|6" displayFormat="String" initValue="" minValue="" maxValue="" step="" unit=""/>
+            <field pid="103" id="UplinkFreq" desc="上行工作频率" dataType="ulong" displayFormat="UInt64" initValue="" minValue="" maxValue="" step="" unit="Hz"/>
+            <field pid="104" id="DownFreq" desc="下行工作频率" dataType="ulong" displayFormat="UInt64" initValue="" minValue="" maxValue="" step="" unit="Hz"/>
+        </recycle>
+    </set>
+    <result MessageType="0x0000F104">
+        <field pid="1" id="EbN0" desc="Eb/N0" dataType="uint8" displayFormat="UInt8" initValue="" minValue="" maxValue="" step="1|1" unit="dB"  />
+        <field pid="101" id="InterFreq" desc="中频频率" dataType="uint" displayFormat="UInt32" initValue="1200000" minValue="" maxValue="" step="" unit="Hz"  />
+        <field pid="102" id="CarrierSwitch" desc="载波输出开关" dataType="uint8" displayFormat="enum|CarrierSwitch" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="103" id="OutputLevel" desc="输出电平" dataType="int" displayFormat="Int32" initValue="" minValue="-60" maxValue="0" step="" unit="dBm"  />
+        <field pid="104" id="LevelCtrlMode" desc="输出电平控制方式" dataType="uint8" displayFormat="enum|LevelCtrlMode" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="105" id="LevelScannRate" desc="电平扫描速率" dataType="uint8" displayFormat="UInt8" initValue="0" minValue="0" maxValue="10" step="" unit="dB/s"  />
+        <field pid="106" id="LevelScannRange" desc="电平扫描范围" dataType="uint8" displayFormat="enum|LevelScannRange" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="107" id="AnalDopSwitch" desc="模拟多普勒开关" dataType="uint8" displayFormat="enum|AnalDopSwitch" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="108" id="AnalDoppRange" desc="模拟多普勒范围" dataType="int" displayFormat="Int32" initValue="" minValue="" maxValue="" step="" unit="kHz"  />
+        <field pid="109" id="AnalVarRate" desc="模拟多普勒变化率" dataType="int" displayFormat="Int32" initValue="" minValue="" maxValue="" step="1Hz/s" unit="kHz/s"  />
+        <field pid="110" id="ShapFiltSwitch" desc="成型滤波开关" dataType="uint8" displayFormat="enum|ShapFiltSwitch" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="111" id="ShapFiltCoeff" desc="成型滤波系数" dataType="uint8" displayFormat="double" initValue="0.1" minValue="0.1" maxValue="1" step="0.05|0.05" unit=""  />
+        <field pid="112" id="ModulatSwitch" desc="调制开关" dataType="uint8" displayFormat="enum|ModulatSwitch" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="113" id="ModulSystem" desc="调制体制" dataType="uint8" displayFormat="enum|ModulSystem" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="114" id="NoiseSwitch" desc="噪声输出开关" dataType="uint8" displayFormat="enum|NoiseSwitch" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="115" id="NoiseDensAtten" desc="噪声功率谱密度衰减" dataType="uint" displayFormat="UInt32" initValue="0" minValue="0" maxValue="30" step="" unit="dB"  />
+        <field pid="116" id="ConvolMethod" desc="卷积方式" dataType="uint8" displayFormat="enum|ConvolMethod" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="117" id="FrameSynch" desc="帧同步方式" dataType="uint8" displayFormat="enum|FrameSynch" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="118" id="IAnalogDataType" desc="I路模拟数据类型" dataType="uint8" displayFormat="enum|AnalogDataType" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="119" id="QAnalogDataType" desc="Q路模拟数据类型" dataType="uint8" displayFormat="enum|AnalogDataType" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="120" id="IPNCodeSelect" desc="I路PN码选择" dataType="uint8" displayFormat="enum|PNCodeSelect" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="121" id="IFixedSet" desc="I路固定数设置" dataType="uint8" displayFormat="UInt8" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="122" id="QPNCodeSelect" desc="Q路PN码选择" dataType="uint8" displayFormat="enum|PNCodeSelect" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="123" id="QFixedSet" desc="Q路固定数设置" dataType="uint8" displayFormat="UInt8" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="124" id="IFileNumbt" desc="I路文件编号" dataType="uint8" displayFormat="UInt8" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="125" id="QFileNumb" desc="Q路文件编号" dataType="uint8" displayFormat="UInt8" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="126" id="SimulBitSlip" desc="模拟位滑" dataType="uint8" displayFormat="enum|SimulBitSlip" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="127" id="IQPowerRatio" desc="IQ路功率比" dataType="uint8" displayFormat="Int8" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="128" id="GrayCodSelect" desc="Gray编码选择" dataType="uint8" displayFormat="enum|GrayCodSelect" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="129" id="PhaseRotation" desc="相位旋转" dataType="uint8" displayFormat="enum|PhaseRotation" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="130" id="ConstMapp" desc="星座映射" dataType="uint8" displayFormat="enum|ConstMapp" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="131" id="RadCircleInner" desc="外圈内圈半径比" dataType="uint8" displayFormat="UInt8" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="132" id="IWayCodeRate" desc="I路码型" dataType="uint8" displayFormat="enum|CodeType" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="133" id="CodeRateSett" desc="码速率设置方式" dataType="uint8" displayFormat="enum|CodeRateSett" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="134" id="IChannRate" desc="I路码速率" dataType="int" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="b/s"  />
+        <field pid="135" id="QChanRate" desc="Q路码速率" dataType="int" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="b/s"  />
+        <field pid="136" id="ICodingMode" desc="I路编码方式" dataType="uint8" displayFormat="enum|CodingMode" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="137" id="IConvolCode" desc="I路卷积码类型" dataType="uint8" displayFormat="enum|ConvolCode" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="138" id="IRSCodeType" desc="I路RS码类型" dataType="uint8" displayFormat="enum|RSCodeType" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="139" id="IRSCodeBase" desc="I路RS码坐标基" dataType="uint8" displayFormat="enum|RSCodeBase" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="140" id="IRSInterDepth" desc="I路RS交织深度" dataType="uint8" displayFormat="UInt8" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="141" id="ITurboCodetype" desc="I路Turbo码类型" dataType="uint8" displayFormat="enum|TurboCodetype" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="142" id="ILDPCType" desc="I路LDPC类型" dataType="uint8" displayFormat="enum|LDPCType" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="143" id="IScrambSwitch" desc="I路编码前加扰开关" dataType="uint8" displayFormat="enum|ScrambSwitch" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="144" id="IScramPolyCode" desc="I路编码前加扰多项式" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="145" id="IInitTermCode" desc="I路编码前加扰初项" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="146" id="IScrambOutputPosit" desc="I路编码前加扰输出位置" dataType="uint8" displayFormat="enum|ScrambOutputPosit" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="147" id="IScrambSwitch" desc="I路编码后加扰开关" dataType="uint8" displayFormat="enum|ScrambSwitch" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="148" id="IScramAfterCode" desc="I路编码后加扰多项式" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="149" id="IInitAfterCode" desc="I路编码后加扰初项" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="150" id="IAfterOutputPosit" desc="I路编码后加扰输出位置" dataType="uint8" displayFormat="enum|ScrambOutputPosit" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="151" id="IWayLength" desc="I路帧长(编码后)" dataType="ushort" displayFormat="UInt16" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="152" id="IWayGroupLen" desc="I路帧同步码组长度" dataType="uint8" displayFormat="UInt8" initValue="8" minValue="8" maxValue="64" step="" unit="bit"  />
+        <field pid="153" id="IWayBlockPatt" desc="I路帧同步码组图样" dataType="ulong" displayFormat="Hex" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="154" id="QCodeType" desc="Q路码型" dataType="uint8" displayFormat="enum|CodeType" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="155" id="QCodingMode" desc="Q路编码方式" dataType="uint8" displayFormat="enum|CodingMode" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="156" id="QConvolCode" desc="Q路卷积码类型" dataType="uint8" displayFormat="enum|ConvolCode" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="157" id="QRSCodeType" desc="Q路RS码类型" dataType="uint8" displayFormat="enum|RSCodeType" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="158" id="QRSCodeBase" desc="Q路RS码坐标基" dataType="uint8" displayFormat="enum|RSCodeBase" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="159" id="QRSInterlDepth" desc="Q路RS交织深度" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="16" step="" unit=""  />
+        <field pid="160" id="QTurboCodetype" desc="Q路Turbo码类型" dataType="uint8" displayFormat="enum|TurboCodetype" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="161" id="QLDPCType" desc="Q路LDPC类型" dataType="uint8" displayFormat="enum|LDPCType" initValue="" minValue="" maxValue="" step="" unit="mV"  />
+        <field pid="162" id="QFrontbSwitch" desc="Q路编码前加扰开关" dataType="uint8" displayFormat="enum|ScrambSwitch" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="163" id="QScranChanCode" desc="Q路编码前加扰多项式" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="164" id="QPreChanCode" desc="Q路编码前加扰初项" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="mV"  />
+        <field pid="165" id="QFrontOutputPosit" desc="Q路编码前加扰输出位置" dataType="uint8" displayFormat="enum|ScrambOutputPosit" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="166" id="QAfterSwitch" desc="Q路编码后加扰开关" dataType="uint8" displayFormat="enum|ScrambSwitch" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="167" id="QAfterChanCode" desc="Q路编码后加扰多项式" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="mV"  />
+        <field pid="168" id="QAfterInitCode" desc="Q路编码后加扰初项" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="169" id="QAfterOutPosit" desc="Q路编码后加扰输出位置" dataType="uint8" displayFormat="enum|ScrambOutputPosit" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="170" id="QFrameLength" desc="Q路帧长" dataType="ushort" displayFormat="UInt16" initValue="" minValue="" maxValue="" step="" unit="mV"  />
+        <field pid="171" id="QChanGroupLen" desc="Q路帧同步码组长度" dataType="uint8" displayFormat="UInt8" initValue="8" minValue="8" maxValue="64" step="" unit="bit"  />
+        <field pid="172" id="QBlockPatt" desc="Q路帧同步码组图样" dataType="ulong" displayFormat="Hex" initValue="" minValue="" maxValue="" step="" unit=""  />
+    </result>
+</cmd>

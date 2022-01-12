@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="IISSU" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="DevStatus" desc="设备状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="ControlMode" desc="监控方式">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="InputSelect" desc="频谱仪输入选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="射频测试1"/>
+		<entry svalue="2" uvalue="2" desc="射频测试2"/>
+		<entry svalue="3" uvalue="3" desc="射频测试3"/>
+		<entry svalue="4" uvalue="4" desc="射频测试4"/>
+	</enum>
+	<enum name="OscillChannSel1" desc="示波器通道1输入选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="I视频测试信号1"/>
+		<entry svalue="2" uvalue="2" desc="I视频测试信号2"/>
+		<entry svalue="3" uvalue="3" desc="I视频测试信号3"/>
+		<entry svalue="4" uvalue="4" desc="I视频测试信号4"/>
+	</enum>
+	<enum name="OscillChannSel2" desc="示波器通道2输入选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="II视频测试信号1"/>
+		<entry svalue="2" uvalue="2" desc="II视频测试信号2"/>
+		<entry svalue="3" uvalue="3" desc="II视频测试信号3"/>
+		<entry svalue="4" uvalue="4" desc="II视频测试信号4"/>
+	</enum>
+</enums>

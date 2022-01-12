@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="ACU" ModeType="0xFFFF" edition="1.1.1.1">
+        <enum name="ControlMode" desc="监控方式">
+                <entry svalue="1" uvalue="1" desc="分控" />
+                <entry svalue="2" uvalue="2" desc="本控" />
+        </enum>
+        <enum name="OnlineMode" desc="主备状态">
+                <entry svalue="1" uvalue="1" desc="主机" />
+                <entry svalue="2" uvalue="2" desc="备机" />
+        </enum>
+        <enum name="AnteWorkMode" desc="天线工作方式">
+				<entry svalue="1" uvalue="1" desc="待机" />
+                <entry svalue="2" uvalue="2" desc="手控" />
+                <entry svalue="3" uvalue="3" desc="指向" />
+                <entry svalue="4" uvalue="4" desc="数字引导" />
+                <entry svalue="5" uvalue="5" desc="程序引导" />
+                <entry svalue="6" uvalue="6" desc="X/Ka自动跟踪" />
+                <entry svalue="7" uvalue="7" desc="S自动跟踪" />
+                <entry svalue="8" uvalue="8" desc="记忆跟踪" />
+                <entry svalue="9" uvalue="9" desc="自动校相" />
+                <entry svalue="10" uvalue="10" desc="快速校相" />
+                <entry svalue="11" uvalue="11" desc="光电失配检查" />
+                <entry svalue="12" uvalue="12" desc="角度无塔标校" />
+                <entry svalue="13" uvalue="13" desc="交叉耦合" />
+                <entry svalue="14" uvalue="14" desc="伺服测试" />
+                <entry svalue="15" uvalue="15" desc="光学跟踪" />
+                <entry svalue="16" uvalue="16" desc="收藏" />
+                <entry svalue="17" uvalue="17" desc="扫描" />
+                <!--<entry svalue="18" uvalue="18" desc="Ka数传天线自动跟踪" />-->
+        </enum>
+        <enum name="TrackLockInst" desc="跟踪载波锁定指示">
+                <entry svalue="1" uvalue="1" desc="锁定:G" />
+                <entry svalue="2" uvalue="2" desc="失锁:R" />
+        </enum>
+        <enum name="CommOnOff" desc="通信通断">
+                <entry svalue="0" uvalue="0" desc="断:Y" />
+                <entry svalue="1" uvalue="1" desc="通:G" />
+        </enum>
+        <enum name="BoardState" desc="板状态">
+                <entry svalue="1" uvalue="1" desc="正常:G" />
+                <entry svalue="2" uvalue="2" desc="故障:R" />
+        </enum>
+        <enum name="WorkStateofComm" desc="串口通信板工作状态">
+                <entry svalue="1" uvalue="1" desc="正常:G" />
+                <entry svalue="2" uvalue="2" desc="故障:R" />
+        </enum>
+        <enum name="TimeInputState" desc="时统输入状态">
+                <entry svalue="1" uvalue="1" desc="正常:G" />
+                <entry svalue="2" uvalue="2" desc="故障:R" />
+        </enum>
+        <enum name="PDUCodeHopp" desc="PDU跳码状态">
+                <entry svalue="1" uvalue="1" desc="正常:G" />
+                <entry svalue="2" uvalue="2" desc="故障:R" />
+        </enum>
+        <enum name="PDUSynchSignal" desc="PDU同步信号状">
+               <entry svalue="1" uvalue="1" desc="正常:G" />
+               <entry svalue="2" uvalue="2" desc="故障:R" />
+        </enum>
+        <enum name="MainSideRecog" desc="主副瓣识别">
+                <entry svalue="1" uvalue="1" desc="主瓣" />
+                <entry svalue="2" uvalue="2" desc="副瓣" />
+                <entry svalue="3" uvalue="3" desc="目标未进入" />
+        </enum>
+        <enum name="AngleTrack" desc="角跟踪状态">
+                <entry svalue="1" uvalue="1" desc="跟踪:G" />
+                <entry svalue="2" uvalue="2" desc="未跟踪:Y" />
+        </enum>
+        <enum name="ValidArgumData" desc="数引数据有效">
+                <entry svalue="1" uvalue="1" desc="数引数据有效:G" />
+                <entry svalue="2" uvalue="2" desc="数引数据无效:R" />
+        </enum>
+        <enum name="ValidLeadData" desc="程引数据有效">
+                <entry svalue="1" uvalue="1" desc="程引数据有效:G" />
+                <entry svalue="2" uvalue="2" desc="程引数据无效:R" />
+        </enum>
+        <enum name="AngleTranStatus" desc="测角数据发送状态">
+                <entry svalue="1" uvalue="1" desc="发送:G" />
+                <entry svalue="2" uvalue="2" desc="未发送:Y" />
+        </enum>
+        <enum name="ACUSimulMode" desc="ACU仿真方式">          
+                <entry svalue="1" uvalue="1" desc="实际工作" />
+                <entry svalue="2" uvalue="2" desc="仿真" />
+        </enum>
+        <enum name="ACUOperMode" desc="ACU运行方式">            
+                <entry svalue="1" uvalue="1" desc="人工" />
+                <entry svalue="2" uvalue="2" desc="自动" />
+        </enum>
+        <enum name="ScannMode" desc="扫描方式">
+                <entry svalue="0" uvalue="0" desc="无效" />
+                <entry svalue="1" uvalue="1" desc="方位" />
+                <entry svalue="2" uvalue="2" desc="俯仰" />
+                <entry svalue="3" uvalue="3" desc="联合扫描" />
+        </enum>
+        <enum name="ScanRange" desc="扫描范围">
+                <entry svalue="0" uvalue="0" desc="无效" />
+                <entry svalue="1" uvalue="1" desc="0.3125°" />
+                <entry svalue="2" uvalue="2" desc="0.625°" />
+                <entry svalue="3" uvalue="3" desc="1.25°" />
+                <entry svalue="4" uvalue="4" desc="2.5°" />
+                <entry svalue="5" uvalue="5" desc="5°" />
+                <entry svalue="6" uvalue="6" desc="10°" />
+        </enum>
+        <enum name="ScanningRate" desc="扫描速率">
+                <entry svalue="0" uvalue="0" desc="无效" />
+                <entry svalue="1" uvalue="1" desc="0.125°/s" />
+                <entry svalue="2" uvalue="2" desc="0.25°/s" />
+                <entry svalue="3" uvalue="3" desc="0.5°/s" />
+                <entry svalue="4" uvalue="4" desc="1°/s" />
+                <entry svalue="5" uvalue="5" desc="2°/s" />
+        </enum>
+        <enum name="PhaseCorrMeth" desc="校相方式">
+                <entry svalue="1" uvalue="1" desc="对塔" />
+                <entry svalue="2" uvalue="2" desc="对星" />
+                <entry svalue="3" uvalue="3" desc="对当前位置" />
+        </enum>
+        <enum name="TargetAcqbyante" desc="天线捕获目标方式">
+                <entry svalue="1" uvalue="1" desc="等待自动捕获" />
+                <entry svalue="2" uvalue="2" desc="引导捕获" />
+        </enum>
+        <enum name="DeliveryMode" desc="送数方式">
+                <entry svalue="1" uvalue="1" desc="常送" />
+                <entry svalue="2" uvalue="2" desc="人工" />
+                <entry svalue="3" uvalue="3" desc="选送" />
+        </enum>
+        <enum name="ServoBandwidth" desc="伺服带宽">
+                <entry svalue="1" uvalue="1" desc="高带" />
+                <entry svalue="2" uvalue="2" desc="低带" />
+        </enum>
+        <enum name="ShaftErrorCalMeth" desc="轴系误差标校方式">
+                <entry svalue="1" uvalue="1" desc="无塔" />
+                <entry svalue="2" uvalue="2" desc="有塔" />
+        </enum>
+</enums>
+
+

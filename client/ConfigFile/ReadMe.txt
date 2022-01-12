@@ -1,0 +1,3 @@
+resources文件夹存放的是各类xml
+
+将resources文件夹拷贝到Framework\bin下面去

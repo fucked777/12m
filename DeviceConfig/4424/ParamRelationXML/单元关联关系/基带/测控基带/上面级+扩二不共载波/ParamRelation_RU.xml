@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x00" modeID="0x13" unitType="RU" desc="测距单元">
+	<Triggers>
+		<Trigger id="SMJ_TargetType" desc="目标类型">
+			<TriggerValue value="1" desc="非JB-8卫星">
+				<Receiver id="SMJ_TargetCode" desc="目标代号" isEnable="" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="JB-8主星">
+				<Receiver id="SMJ_TargetCode" desc="目标代号" isEnable="" values="1A" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="JB-8副星1">
+				<Receiver id="SMJ_TargetCode" desc="目标代号" isEnable="" values="2B" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="JB-8副星2">
+				<Receiver id="SMJ_TargetCode" desc="目标代号" isEnable="" values="3C" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>	
+		<Trigger id="SMJ_SideToneWaitDel" desc="解模糊">
+			<TriggerValue value="1" desc="基带解">
+				<Receiver id="SMJ_TDistPredMethod" desc="距离预报" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="基带不解">
+				<Receiver id="SMJ_TDistPredMethod" desc="距离预报" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="SMJ_TUpMainMod" desc="距离预报值" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		<Trigger id="SMJ_TDistPredMethod" desc="距离预报">
+			<TriggerValue value="1" desc="手动">
+				<Receiver id="SMJ_TUpMainMod" desc="预报距离值" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="轨道根数">
+				<Receiver id="SMJ_TUpMainMod" desc="预报距离值" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="DTE弹道数据">
+				<Receiver id="SMJ_TUpMainMod" desc="预报距离值" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="K2_TargetType" desc="目标类型">
+			<TriggerValue value="1" desc="非JB-8卫星">
+				<Receiver id="K2_TargetCode" desc="目标代号" isEnable="" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="JB-8主星">
+				<Receiver id="K2_TargetCode" desc="目标代号" isEnable="" values="1A" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="JB-8副星1">
+				<Receiver id="K2_TargetCode" desc="目标代号" isEnable="" values="2B" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="JB-8副星2">
+				<Receiver id="K2_TargetCode" desc="目标代号" isEnable="" values="3C" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>	
+		<Trigger id="K2_SideToneWaitDel" desc="解模糊">
+			<TriggerValue value="1" desc="基带解">
+				<Receiver id="K2_TDistPredMethod" desc="距离预报" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_StationCode" desc="测站代号" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="基带不解">
+				<Receiver id="K2_TDistPredMethod" desc="距离预报" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_TUpMainMod" desc="距离预报值" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_StationCode" desc="测站代号" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		<Trigger id="K2_TDistPredMethod" desc="距离预报">
+			<TriggerValue value="1" desc="手动">
+				<Receiver id="K2_TUpMainMod" desc="预报距离值" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="轨道根数">
+				<Receiver id="K2_TUpMainMod" desc="预报距离值" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="DTE弹道数据">
+				<Receiver id="K2_TUpMainMod" desc="预报距离值" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		<Trigger id="K2_WorkStation" desc="工作站数目">
+			<TriggerValue value="1" desc="数目1">
+				<Receiver id="K2_TNumbSingleOper" desc="下行通道号" isEnable="1" values="" minValue="1" maxValue="1" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="数目2">
+				<Receiver id="K2_TNumbSingleOper" desc="下行通道号" isEnable="1" values="" minValue="1" maxValue="2" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="数目3">
+				<Receiver id="K2_TNumbSingleOper" desc="下行通道号" isEnable="1" values="" minValue="1" maxValue="3" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="数目4">
+				<Receiver id="K2_TNumbSingleOper" desc="下行通道号" isEnable="1" values="" minValue="1" maxValue="4" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

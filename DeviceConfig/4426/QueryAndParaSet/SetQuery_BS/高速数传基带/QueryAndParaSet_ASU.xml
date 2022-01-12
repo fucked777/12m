@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="ASU" ModeType="0xFFFF" desc="模拟源单元" flag="1001">
+	<result MessageType="0x0000F104">
+		<field pid="1" id="EbN0" desc="Eb/N0" dataType="ushort" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="dB"/>
+		<field pid="101" GroupId="setting1" id="IntermFreq" desc="中频频率" dataType="uint" displayFormat="double" initValue="1200" minValue="100" maxValue="2000" step="0.000001" unit="MHz"/>
+		<field pid="102" GroupId="setting1" id="CarrierSwitch" desc="载波输出开关" dataType="uint8" displayFormat="enum|CarrierSwitch" initValue="2" minValue="" maxValue="" step="" unit=""/>
+		<field pid="103" GroupId="setting2" id="OutputLevel" desc="输出电平" dataType="int" displayFormat="Int32" initValue="-1" minValue="-60" maxValue="0" step="" unit="dBm"/>
+		<field pid="104" GroupId="setting2" id="LevelCtrlMode" desc="输出电平控制" dataType="uint8" displayFormat="enum|LevelCtrlMode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="105" GroupId="setting2" id="LevelScannRate" desc="电平扫描速率" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="10" step="" unit="dB/s"/>
+		<field pid="106" GroupId="setting2" id="LevelScannRange" desc="电平扫描范围" dataType="int" displayFormat="enum|LevelScannRange" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="107" GroupId="setting4" id="AnalDopSwitch" desc="多普勒开关" dataType="uint8" displayFormat="enum|AnalDopSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="108" GroupId="setting4" id="AnalDoppRange" desc="多普勒范围" dataType="int" displayFormat="double" initValue="1" minValue="-1" maxValue="1" step="0.000001" unit="MHz"/>
+		<field pid="109" GroupId="setting4" id="AnalVarRate" desc="多普勒变化率" dataType="int" displayFormat="Int32" initValue="1" minValue="0" maxValue="25000" step="" unit="Hz/s"/>
+		<field pid="110" GroupId="setting1" id="MatchFiltSwitch" desc="成型滤波开关" dataType="uint8" displayFormat="enum|ShapFiltSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="111" GroupId="setting1" id="MatchfiltCoeff" desc="成型滤波系数" dataType="uint8" displayFormat="enum|ShapFiltCoeff" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="112" GroupId="setting1" id="ModulatSwitch" desc="调制开关" dataType="uint8" displayFormat="enum|ModulatSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="113" GroupId="setting1" id="ModulatSystem" desc="调制体制" dataType="uint8" displayFormat="enum|ModulSystem" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="114" GroupId="setting3" id="NoiseSwitch" desc="噪声输出开关" dataType="uint8" displayFormat="enum|NoiseSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="115" GroupId="setting3" id="NoiseDensAtten" desc="噪声衰减" dataType="uint" displayFormat="UInt32" initValue="1" minValue="0" maxValue="30" step="0.1" unit="dB"/>
+		<field pid="116" GroupId="setting1" id="ViterbiDecod" desc="卷积方式" dataType="uint8" displayFormat="enum|ConvolMethod" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="117" GroupId="setting1" id="FrameSynch" desc="帧同步方式" dataType="uint8" displayFormat="enum|FrameSynch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		
+		
+		<field pid="118" GroupId="setting19" id="I_AnalogDataType" desc="模拟数据类型" dataType="uint8" displayFormat="enum|AnalogDataType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="119" GroupId="setting20" id="Q_AnalogDataType" desc="模拟数据类型" dataType="uint8" displayFormat="enum|AnalogDataType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="120" GroupId="setting19" id="I_PNCodeSelect" desc="PN码选择" dataType="uint8" displayFormat="enum|PNCodeSelect" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="121" GroupId="setting19" id="I_FixedSet" desc="固定数设置" dataType="uint8" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="122" GroupId="setting20" id="Q_PNCodeSelect" desc="PN码选择" dataType="uint8" displayFormat="enum|PNCodeSelect" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="123" GroupId="setting20" id="Q_FixedSet" desc="固定数设置" dataType="uint8" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="124" GroupId="setting19" id="IFileNumbt" desc="文件编号" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="125" GroupId="setting20" id="QFileNumb" desc="文件编号" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="126" GroupId="setting1" id="SimulBitSlip" desc="模拟位滑" dataType="uint8" displayFormat="enum|SimulBitSlip" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="127" GroupId="setting1" id="IQPowerRatio" desc="IQ路功率比" dataType="uint8" displayFormat="Int8" initValue="1" minValue="1" maxValue="10" step="" unit="dB"/>
+		<field pid="128" GroupId="setting1" id="GrayCodSelect" desc="Gray编码选择" dataType="uint8" displayFormat="enum|GrayCodSelect" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="129" GroupId="setting1" id="PhaseMapp" desc="相位旋转" dataType="uint8" displayFormat="enum|PhaseRotation" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="130" GroupId="setting1" id="ConstMapp" desc="星座映射" dataType="uint8" displayFormat="enum|ConstMapp" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="131" GroupId="setting1" id="RadCircleInner" desc="外圈内圈半径比" dataType="ushort" displayFormat="double" initValue="1" minValue="0" maxValue="10" step="0.01" unit=""/>
+		
+		
+		<field pid="132" GroupId="setting19" id="I_CodeType" desc="码型" dataType="uint8" displayFormat="enum|CodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="133" GroupId="setting1" id="CodeRateSett" desc="码速率设置方式" dataType="uint8" displayFormat="enum|CodeRateSett" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="134" GroupId="setting19" id="ICodeRate" desc="码速率" dataType="uint" displayFormat="double" initValue="10" minValue="5" maxValue="2000" step="0.000001" unit="Mbps"/>
+		<field pid="158" GroupId="setting20" id="Q_CodeType" desc="码型" dataType="uint8" displayFormat="enum|CodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="136" GroupId="setting20" id="QCodeRate" desc="码速率" dataType="uint" displayFormat="double" initValue="10" minValue="5" maxValue="2000" step="0.000001" unit="Mbps"/>
+		<field pid="137" GroupId="setting5" id="I_DecodMode" desc="编码方式" dataType="uint8" displayFormat="enum|CodingMode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="138" GroupId="setting5" id="I_ConvolCodeType" desc="卷积码类型" dataType="uint8" displayFormat="enum|ConvolCode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="139" GroupId="setting9" id="I_RSCodeType" desc="RS码类型" dataType="uint8" displayFormat="enum|RSCodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="140" GroupId="setting9" id="I_RSDecodBase" desc="RS码坐标基" dataType="uint8" displayFormat="enum|RSCodeBase" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="141" GroupId="setting9" id="I_RSInterDecod" desc="RS交织深度" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="16" step="" unit=""/>
+		<field pid="142" GroupId="setting11" id="I_TurboCodeType" desc="Turbo码类型" dataType="uint8" displayFormat="enum|TurboCodetype" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="143" GroupId="setting7" id="I_LDPCType" desc="LDPC类型" dataType="uint8" displayFormat="enum|LDPCType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		
+		<field pid="144" GroupId="setting15" id="I_PreDecodDesSwitch" desc="加扰开关" dataType="uint8" displayFormat="enum|ScrambSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="145" GroupId="setting15" id="I_PreDecodScraPoly" desc="加扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+		<field pid="146" GroupId="setting15" id="I_PreScrambPolyLength" desc="加扰多项式长度" dataType="uint8" displayFormat="UInt8" initValue="8" minValue="8" maxValue="32" step="" unit="位"/>
+		<field pid="147" GroupId="setting15" id="I_PreDecodInitTerm" desc="加扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+		<field pid="148" GroupId="setting15" id="I_DecodOutPosit" desc="加扰输出位置" dataType="uint8" displayFormat="enum|ScrambOutputPosit" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		
+		<field pid="149" GroupId="setting17" id="I_DecodPostSwitch" desc="加扰开关" dataType="uint8" displayFormat="enum|ScrambSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="150" GroupId="setting17" id="I_DecodPostPolyn" desc="加扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+		<field pid="151" GroupId="setting17" id="I_DecodScrambPolyLength" desc="加扰多项式长度" dataType="uint8" displayFormat="UInt8" initValue="8" minValue="8" maxValue="32" step="" unit="位"/>
+		<field pid="152" GroupId="setting17" id="I_DecodInitTerm" desc="加扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+		<field pid="153" GroupId="setting17" id="I_DecodOutputPosit" desc="加扰输出位置" dataType="uint8" displayFormat="enum|ScrambOutputPosit" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		
+		<field pid="154" GroupId="setting19" id="I_FrameLength" desc="帧长" dataType="ushort" displayFormat="UInt16" initValue="128" minValue="128" maxValue="16360" step="" unit="字"/>
+		<field pid="155" GroupId="setting19" id="I_FraSynchLength" desc="帧同步码组长度" dataType="uint8" displayFormat="enum|CodeGroupLength" initValue="8" minValue="" maxValue="" step="" unit=""/>
+		<field pid="156" GroupId="setting19" id="I_FramSynchPatt" desc="帧同步码组图样" dataType="ulong" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="157" GroupId="setting19" id="I_FrameSynchLocat" desc="帧码组位置" dataType="uint8" displayFormat="UInt8" initValue="2" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		
+		<field pid="159" GroupId="setting6" id="Q_DecodMode" desc="编码方式" dataType="uint8" displayFormat="enum|CodingMode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="160" GroupId="setting6" id="Q_ConvolCodeType" desc="卷积码类型" dataType="uint8" displayFormat="enum|ConvolCode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="161" GroupId="setting10" id="Q_RSCodeType" desc="RS码类型" dataType="uint8" displayFormat="enum|RSCodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="162" GroupId="setting10" id="Q_RSDecodBase" desc="RS码坐标基" dataType="uint8" displayFormat="enum|RSCodeBase" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="163" GroupId="setting10" id="Q_RSInterDecod" desc="RS交织深度" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="16" step="" unit=""/>
+		<field pid="164" GroupId="setting12" id="Q_TurboCodeType" desc="Turbo码类型" dataType="uint8" displayFormat="enum|TurboCodetype" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="165" GroupId="setting8" id="Q_LDPCType" desc="LDPC类型" dataType="uint8" displayFormat="enum|LDPCType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		
+		<field pid="166" GroupId="setting16" id="Q_PreDecodDesSwitch" desc="加扰开关" dataType="uint8" displayFormat="enum|ScrambSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="167" GroupId="setting16" id="Q_PreDecodScraPoly" desc="加扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+		<field pid="168" GroupId="setting16" id="Q_PreScrambPolyLength" desc="加扰多项式长度" dataType="uint8" displayFormat="UInt8" initValue="8" minValue="8" maxValue="32" step="" unit="位"/>
+		<field pid="169" GroupId="setting16" id="Q_PreDecodInitTerm" desc="加扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+		<field pid="170" GroupId="setting16" id="Q_DecodOutPosit" desc="加扰输出位置" dataType="uint8" displayFormat="enum|ScrambOutputPosit" initValue="1" minValue="" maxValue="" step="" unit=""/>
+	
+		<field pid="171" GroupId="setting18" id="Q_DecodPostSwitch" desc="加扰开关" dataType="uint8" displayFormat="enum|ScrambSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="172" GroupId="setting18" id="Q_DecodPostPolyn" desc="加扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+		<field pid="173" GroupId="setting18" id="Q_DecodScrambPolyLength" desc="加扰多项式长度" dataType="uint8" displayFormat="UInt8" initValue="8" minValue="8" maxValue="32" step="" unit="位"/>
+		<field pid="174" GroupId="setting18" id="Q_DecodInitTerm" desc="加扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+		<field pid="175" GroupId="setting18" id="Q_DecodOutputPosit" desc="加扰输出位置" dataType="uint8" displayFormat="enum|ScrambOutputPosit" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		
+		<field pid="176" GroupId="setting20" id="Q_FrameLength" desc="帧长" dataType="ushort" displayFormat="UInt16" initValue="128" minValue="128" maxValue="16360" step="" unit="字"/>
+		<field pid="177" GroupId="setting20" id="Q_FraSynchLength" desc="帧同步码组长度" dataType="uint8" displayFormat="enum|CodeGroupLength" initValue="8" minValue="" maxValue="" step="" unit=""/>
+		<field pid="178" GroupId="setting20" id="Q_FramSynchPatt" desc="帧同步码组图样" dataType="ulong" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="179" GroupId="setting20" id="Q_FrameSynchLocat" desc="帧码组位置" dataType="uint8" displayFormat="UInt8" initValue="2" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="180" GroupId="setting19" id="I_ViterDecodPhase" desc="卷积输出相位" dataType="uint8" displayFormat="enum|ViterDecodPhase" initValue="1" minValue="1" maxValue="4" step="" unit=""/>
+		<field pid="181" GroupId="setting20" id="Q_ViterDecodPhase" desc="卷积输出相位" dataType="uint8" displayFormat="enum|ViterDecodPhase" initValue="1" minValue="1" maxValue="4" step="" unit=""/>
+		
+		<field pid="182" GroupId="setting13" id="I_CRCCheckSWitch" desc="CRC校验开关" dataType="uint8" displayFormat="enum|CRCSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="183" GroupId="setting13" id="I_CRCPolynomial" desc="CRC多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+		<field pid="184" GroupId="setting13" id="I_CRCInitPhase" desc="CRC初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+		<field pid="185" GroupId="setting13" id="I_CRCCheckArea" desc="CRC校验区" dataType="uint" displayFormat="enum|Checkout" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		
+		<field pid="186" GroupId="setting14" id="Q_CRCCheckSWitch" desc="CRC校验开关" dataType="uint8" displayFormat="enum|CRCSwitch" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="187" GroupId="setting14" id="Q_CRCPolynomial" desc="CRC多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+		<field pid="188" GroupId="setting14" id="Q_CRCInitPhase" desc="CRC初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+		<field pid="189" GroupId="setting14" id="Q_CRCCheckArea" desc="CRC校验区" dataType="uint" displayFormat="enum|Checkout" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="190" GroupId="setting1" id="Signal" desc="信号衰减" dataType="uint" displayFormat="UInt32" initValue="0" minValue="0" maxValue="30" step="0.1" unit="" isShow="0"/>
+	</result>
+	<layout>
+		<item id="setting1" desc="公共参数" row="0" col="0" rowspan="1" colspan="2"/>
+		<item id="setting2" desc="中频控制" row="1" col="0" rowspan="2" colspan="1"/>
+		<item id="setting3" desc="噪声" row="1" col="1" rowspan="1" colspan="1"/>
+		<item id="setting4" desc="多普勒动态模拟" row="2" col="1" rowspan="1" colspan="1"/>
+		<item id="setting5" desc="I路卷积" row="3" col="0" rowspan="1" colspan="1"/>
+		<item id="setting6" desc="Q路卷积" row="3" col="1" rowspan="1" colspan="1"/>
+		<item id="setting7" desc="I路LDPC" row="4" col="0" rowspan="1" colspan="1"/>
+		<item id="setting8" desc="Q路LDPC" row="4" col="1" rowspan="1" colspan="1"/>
+		<item id="setting9" desc="I路RS" row="5" col="0" rowspan="1" colspan="1"/>
+		<item id="setting10" desc="Q路RS" row="5" col="1" rowspan="1" colspan="1"/>
+		<item id="setting11" desc="I路Turbo" row="6" col="0" rowspan="1" colspan="1"/>
+		<item id="setting12" desc="Q路Turbo" row="6" col="1" rowspan="1" colspan="1"/>
+		<item id="setting13" desc="I路CRC" row="7" col="0" rowspan="1" colspan="1"/>
+		<item id="setting14" desc="Q路CRC" row="7" col="1" rowspan="1" colspan="1"/>
+		<item id="setting15" desc="I路编码前加扰" row="8" col="0" rowspan="1" colspan="1"/>
+		<item id="setting16" desc="Q路编码前加扰" row="8" col="1" rowspan="1" colspan="1"/>
+		<item id="setting17" desc="I路编码后加扰" row="9" col="0" rowspan="1" colspan="1"/>
+		<item id="setting18" desc="Q路编码后加扰" row="9" col="1" rowspan="1" colspan="1"/>
+		<item id="setting19" desc="I路" row="10" col="0" rowspan="1" colspan="1"/>
+		<item id="setting20" desc="Q路" row="10" col="1" rowspan="1" colspan="1"/>
+	</layout>
+</cmd>

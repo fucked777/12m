@@ -1,0 +1,22 @@
+<!-- 
+注意:此xml只负责对界面的元素种类进行控制,元素的布局根据界面不同是是写死的
+type:
+	Enum				下拉列表
+	TextLine			单行文本
+	TextMultiple		多行文本
+	Integer  			整数
+	Double				浮点
+	Hex					16进制
+	IP 					IP地址
+-->
+<bind relation="WorkMode" allValue="标准TTC|S扩二|一体化上面级|一体化卫星|一体化高码率|扩跳">
+	<parameter >
+		<item id="ProjectCode" name="项目代号" type="Enum" enumValue="TK-4424=TK-4424" onlyOne="true" />
+		<item id="WorkMode" name="工作体制" type="Enum" enumValue="标准TTC=1|S扩二=2|一体化上面级=7|一体化卫星=8|一体化高码率=9|扩跳=14"  onlyOne="true" />
+		<item id="XLAttenuation" name="衰减(db)" type="Integer" min="0" max="60" />
+		<item id="SBF" name="S/φ0(dBm)" type="Double" decimals="3" min="0" max="65535" />
+		<item id="GT0" name="G/T0(db)" type="Double" decimals="3" min="0" max="65535" />
+	</parameter>
+	<relation value="标准TTC|S扩二|一体化上面级|一体化卫星|一体化高码率|扩跳" id="F0" name="频率F0(MHz)" type="Double" decimals="6" min="2200" max="2300" />
+	<head value="ProjectCode=项目代号|WorkMode=工作体制|Attenuation=衰减|SBF=S/φ0(dBm)|GT0=G/T0(db)" />
+</bind>

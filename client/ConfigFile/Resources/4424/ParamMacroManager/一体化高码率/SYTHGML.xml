@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mode>
+    <frequency>
+        <unit groupName="发射与接收分系统" deviceID="4001_1/4002_1/4001_2/4002_2/AAAA_1" enumGroup="2" desc="配置文件需要配置 AAAA_1 表示该组内的参数是通用的">
+            <field pid="103" id="GML_WorkRate" desc="上行频率" dataType="ulong" displayFormat="double" initValue="2025" minValue="2025" maxValue="2120" step="0.000001" unit="MHz"/>
+            <field pid="104" id="GML_SBandDownFreq" desc="下行频率" dataType="ulong" displayFormat="double" initValue="2200" minValue="2200" maxValue="2300" step="0.000001" unit="MHz"/>
+            <field pid="105" GroupId="setting3" id="SEmissPolar" desc="发射极化" dataType="uint8" displayFormat="enum|SPolar" initValue="" minValue="" maxValue="" step="" unit=""/>
+            <field pid="106" GroupId="setting3" id="GML_SReceivPolar" desc="接收极化" dataType="uint8" displayFormat="enum|SRecPolar" initValue="" minValue="" maxValue="" step="" unit=""/>
+        </unit>
+        <unit groupName="天伺馈分系统" deviceID="4001_1/4002_1" enumGroup="3">
+            <field pid="107" GroupId="setting3" id="STrackPolar" desc="跟踪极化" dataType="uint8" displayFormat="enum|SPolar" initValue="" minValue="" maxValue="" step="" unit=""/>
+            <field pid="2" id="KaXPolarHorn" desc="极化角" desc2="" dataType="int" displayFormat="double" initValue="0" minValue="-180" maxValue="180" step="0.1" unit="°" isShow="0"/>
+            <field pid="111" id="AngularSamplRate" desc="测角采样率" dataType="uint8" displayFormat="enum|AngularSamplRate" initValue="" minValue="" maxValue="" step="" unit=""/>
+        </unit>
+        <unit groupName="调制器单元" deviceID="4001_3/4002_3" enumGroup="5">
+            <field pid="112" id="GML_Retain" desc="载波回零速率" dataType="ushort" displayFormat="UInt16" initValue="1" minValue="0" maxValue="15000" step="" unit="Hz/s"/>
+            <field pid="113" id="GML_MFreqDown" desc="星下行载波频差" dataType="short" displayFormat="Int16" initValue="-180" minValue="-180" maxValue="180" step="" unit="kHz"/>
+            <field pid="114" id="GML_DoppPresFreq" desc="多普勒预置" dataType="short" displayFormat="Int16" initValue="-180" minValue="-180" maxValue="180" step="1" unit="kHz"/>
+            <field pid="110" id="GML_OutputAtten" desc="输出功率调节" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="10" step="" unit="dB"/>
+            <!--<field pid="101" GroupId="1" id="TotalCarrCtrl" desc="载波输出控制" dataType="uint8" displayFormat="enum|TotalCarrCtrl" initValue="2" minValue="" maxValue="" step="" unit=""/>-->
+            <!--<field pid="103" GroupId="1" id="CarrierModu" desc="载波调制方式" dataType="uint8" displayFormat="enum|CarrierModu" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="104" GroupId="1" id="NoiseOutput" desc="噪声源输出" dataType="uint8" displayFormat="enum|NoiseOupput" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="105" GroupId="1" id="RangPlusControl" desc="输出载噪比" dataType="uint8" displayFormat="UInt8" initValue="30" minValue="30" maxValue="100" step="" unit="dBHz"/>
+			<field pid="106" GroupId="1" id="ChanCarrCtrl" desc="通道载波总输出控制（保留）" dataType="uint8" displayFormat="enum|ChanCarrCtrl" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="107" GroupId="1" id="ChanCarrLev" desc="通道载波总输出电平（保留）" dataType="int8" displayFormat="Int8" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field pid="109" id="GML_TotalCarrCtrl" desc="载波输出控制" dataType="uint8" displayFormat="enum|TotalCarrCtrl" initValue="2" minValue="" maxValue="" step="" unit=""/>-->
+            <!--<field pid="111" id="GML_DataTuning" desc="数据加调" dataType="uint8" displayFormat="enum|DataTuning" initValue="1" minValue="" maxValue="" step="" unit=""/>-->
+        </unit>
+        <unit groupName="测距单元" deviceID="4001_1/4002_1/4001_4/4002_4" enumGroup="6">
+            <field pid="105" id="GML_RangSampRate" desc="测距采样率" dataType="uint8" displayFormat="enum|RangSampRate" initValue="1" minValue="" maxValue="" step="" unit="" />
+            <field pid="106" id="GML_SpeedSampRate" desc="测速采样率" dataType="uint8" displayFormat="enum|SpeedSampRate" initValue="1" minValue="" maxValue="" step="" unit="" />
+            <field pid="108" id="GML_SideToneWaitDel" desc="解模糊" dataType="uint8" displayFormat="enum|SoftAmbResol" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="106" id="GML_DownFreame" desc="下行帧RP" dataType="uint8" displayFormat="enum|DownFreame" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="107" id="GML_DownCRCFrame" desc="下行帧CRC校验" dataType="uint8" displayFormat="enum|CRCFrame" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="113" id="GML_TUseDownNumb" desc="应答机零值" dataType="uint" displayFormat="double" initValue="1" minValue="0" maxValue="1000000" step="0.001" unit="m" />
+            <!-- 以下参数是可变参数 -->
+            <!-- <field pid="112" id="GML_TNumbSingleOper" desc="下行通道号" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="4" step="" unit=""/> -->
+            <!-- 以下参数被隐藏 -->
+            <!-- <field pid="111" id="GML_WorkStation" desc="工作站数目（保留）" dataType="uint8" displayFormat="UInt8" initValue="4" minValue="1" maxValue="4" step="" unit="" isShow="0"/> -->
+            <!--  -->
+        </unit>
+        <unit groupName="下行数传单元" deviceID="4001_6/4002_6" enumGroup="8">
+            <field pid="101" GroupId="1" id="GML_CodeType" desc="码型" dataType="uint" displayFormat="enum|CodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <!-- 以下参数是可变参数 -->
+            <!-- <field pid="102" GroupId="1" id="GML_MessageSpeedChoose" desc="信息速率与帧频" dataType="uint" displayFormat="enum|MessageSpeedChoose" initValue="1" minValue="" maxValue="" step="" unit=""/> -->
+            <!--  -->
+            <field pid="103" GroupId="1" id="GML_DecodeType" desc="译码方式" dataType="uint8" displayFormat="enum|DecodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="104" GroupId="1" id="GML_DescrambCtrl" desc="解扰控制" dataType="uint8" displayFormat="enum|DescrambCtrl" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <!-- 以下参数不是作为星地接口参数 -->
+            <!-- 
+			<field pid="105" GroupId="1" id="GML_DistPolyLength" desc="解扰多项式长度" dataType="uint8" displayFormat="enum|DistPolyLength" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="106" GroupId="1" id="GML_ScramPolg" desc="解扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="107" GroupId="1" id="GML_DescramPrim" desc="解扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/> 
+			-->
+            <field pid="113" GroupId="2" id="GML_DataFrameCode" desc="数据帧发送格式" dataType="uint8" displayFormat="enum|DataFrameCode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="114" GroupId="2" id="GML_PerFramePacket" desc="每包发送数据帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="60" step="" unit=""/>
+        </unit>
+        <unit groupName="上行数传/遥控单元" deviceID="4001_5/4002_5" enumGroup="7">
+            <!-- 以下参数是可变参数 -->
+            <!-- <field pid="101" id="GML_MessageSpeedChoose" desc="信息速率与帧频" dataType="uint" displayFormat="enum|MessageSpeedChoose" initValue="1" minValue="" maxValue="" step="" unit=""/> -->
+            <!--  -->
+            <field pid="102" id="GML_DecodeType" desc="编码方式" dataType="uint8" displayFormat="enum|DecodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="103" id="GML_ScramblingCtrl" desc="加扰控制" dataType="uint8" displayFormat="enum|ScrambCtrl" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <!-- 以下参数不是作为星地接口参数 -->
+            <!-- 
+			<field pid="104" id="GML_ScrambPolyLength" desc="加扰多项式长度" dataType="uint8" displayFormat="enum|ScraPolyLength" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="105" id="GML_ScrambPolynomial" desc="加扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="106" id="GML_ScrambInitPhase" desc="加扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/> 
+		 	-->
+            <!-- 以下参数被隐藏 -->
+            <field pid="107" id="GML_SpaceSymbol" desc="航天器标识符" dataType="uint8" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <!--  -->
+        </unit>
+        <change groupName="下行通道号" deviceID="4001_4/4002_4" dynamicGroupId="TNumbSingleOper" enumGroup="6">
+            <field pid="112" id="GML_TNumbSingleOper" desc="下行通道号" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="4" step="" unit=""/>
+        </change>
+        <change groupName="信息速率与帧频(上行)" deviceID="4001_5/4002_5" dynamicGroupId="UP_MessageSpeedChoose" enumGroup="8">
+            <field pid="101" id="GML_MessageSpeedChoose" desc="信息速率与帧频" dataType="uint" displayFormat="enum|MessageSpeedChoose" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        </change>
+        <change groupName="信息速率与帧频(下行)" deviceID="4001_6/4002_6/4001_8/4002_8" dynamicGroupId="DOWN_MessageSpeedChoose" enumGroup="8">
+            <field pid="101" id="GML_MessageSpeedChoose" desc="信息速率与帧频" dataType="uint" displayFormat="enum|MessageSpeedChoose" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        </change>
+    </frequency>
+    
+    <devices>
+        <device name="S高功放" station="0x264224" deviceID="0x2001/0x2002" xmlPath="一体化高码率/高功放/SHPA.xml"/>
+        <device name="S频段射频开关网络" station="0x264224" deviceID="0x3001" xmlPath="一体化高码率/S频段射频开关网络/SBRFSN.xml"/>
+        <device name="测控数字化前端" station="0x264224" deviceID="0x7001/0x7002" xmlPath="一体化高码率/测控数字化前端/DFOMAC.xml"/>
+        <device name="跟踪数字化前端" station="0x264224" deviceID="0x7101/0x7102" xmlPath="一体化高码率/跟踪数字化前端/TDFE.xml"/>
+        <device name="测控基带" station="0x264224" deviceID="0x4001/0x4002/0xAAAA" xmlPath="一体化高码率/测控基带/MACB.xml"/>
+		<device name="测角分系统" station="0x264224" deviceID="0x1001" xmlPath="一体化高码率/测角分系统/TFS.xml"/>
+    </devices>
+</Mode>

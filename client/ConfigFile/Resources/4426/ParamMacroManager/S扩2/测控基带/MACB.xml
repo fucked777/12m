@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device>
+    <unit unitID="1" unitName="公共单元">
+        <field pid="104" GroupId="1" id="SendDataWay" desc="送数方式" dataType="uint8" displayFormat="enum|BaseBandDelMode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+    </unit>
+    <unit unitID="2" unitName="接收单元">
+        <field pid="103" GroupId="3" id="YC_AGCTimeConst" desc="AGC时间常数(遥测)" dataType="uint8" displayFormat="enum|AGCTimeConst" initValue="3" minValue="" maxValue="" step="" unit="" isShow="0"/>
+        <field pid="104" GroupId="3" id="YC_CarrLoopBand" desc="载波环路带宽(遥测)" dataType="uint8" displayFormat="enum|CarrLoopBand" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="105" GroupId="3" id="YC_PseCodeBand" desc="伪码环路带宽(遥测)" dataType="ushort" displayFormat="double" initValue="10" minValue="1" maxValue="100" step="0.1" unit="Hz"/>
+        <field pid="106" GroupId="3" id="YC_CaptureThres" desc="捕获门限(遥测)" dataType="uint8" displayFormat="UInt8" initValue="40" minValue="30" maxValue="100" step="1" unit="dBHz"/>
+        <field pid="108" GroupId="5" id="CL_AGCTimeConst" desc="AGC时间常数(测量)" dataType="uint8" displayFormat="enum|AGCTimeConst" initValue="3" minValue="" maxValue="" step="" unit="" isShow="0"/>
+        <field pid="109" GroupId="5" id="CL_CarrLoopBand" desc="载波环路带宽(测量)" dataType="uint8" displayFormat="enum|CarrLoopBand" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="110" GroupId="5" id="CL_PseCodeBand" desc="伪码环路带宽(测量)" dataType="ushort" displayFormat="double" initValue="10" minValue="1" maxValue="100" step="0.1" unit="Hz"/>
+        <field pid="111" GroupId="5" id="CL_CaptureThres" desc="捕获门限(测量)" dataType="uint8" displayFormat="UInt8" initValue="40" minValue="30" maxValue="100" step="1" unit="dBHz"/>
+    </unit>
+	<unit unitID="3" unitName="中频调制">
+		<field pid="101" GroupId="1" id="TotalCarrCtrl" desc="载波输出控制" dataType="uint8" displayFormat="enum|TotalCarrCtrl" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="102" GroupId="1" id="CarrierLevel" desc="输出电平" dataType="int8" displayFormat="Int8" initValue="-30" minValue="-70" maxValue="-10" step="" unit="dBm"/>
+		<field pid="103" GroupId="1" id="CarrierModu" desc="载波调制方式" dataType="uint8" displayFormat="enum|CarrierModu" initValue="2" minValue="" maxValue="" step="" unit=""/>
+		<field pid="104" GroupId="1" id="NoiseOutput" desc="噪声源" dataType="uint8" displayFormat="enum|NoiseOupput" fixValue="2" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="105" GroupId="1" id="RangPlusControl" desc="输出载噪比" dataType="uint8" displayFormat="UInt8" initValue="30" minValue="30" maxValue="100" step="" unit="dBHz" isShow="0"/>
+        <field pid="106" GroupId="1" id="ChanCarrCtrl" desc="通道载波输出" dataType="uint8" displayFormat="enum|ChanCarrCtrl" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+        <field pid="104" GroupId="3" id="YC_ChannelCtrl" desc="通道输出控制(遥控)" dataType="uint8" displayFormat="enum|ChannelCtrl" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="106" GroupId="3" id="YC_PNCodeAdd" desc="伪码加调(遥控)" dataType="uint8" displayFormat="enum|PNCodeAdd" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="107" GroupId="3" id="YC_DataTuning" desc="数据加调(遥控)" dataType="uint8" displayFormat="enum|DataTuning" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="115" GroupId="5" id="CL_ChannelCtrl" desc="通道输出控制(测量)" dataType="uint8" displayFormat="enum|ChannelCtrl" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="117" GroupId="5" id="CL_PNCodeAdd" desc="伪码加调(测量)" dataType="uint8" displayFormat="enum|PNCodeAdd" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="118" GroupId="5" id="CL_DataTuning" desc="数据加调(测量)" dataType="uint8" displayFormat="enum|DataTuning" initValue="1" minValue="" maxValue="" step="" unit=""/>
+    </unit>
+    <unit unitID="4" unitName="测距单元">
+        <field pid="103" id="K2_StationCode" desc="测站代号" dataType="ushort" displayFormat="Hex" initValue="1" minValue="0" maxValue="3FF" step="" unit="" />
+        <field pid="104" id="K2_WhetCodeUsed" desc="测站号使用" dataType="uint8" displayFormat="enum|WhetCodeUsed" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="109" id="K2_TDistPredMethod" desc="距离预报" dataType="uint8" displayFormat="enum|TDistPredMethod" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="110" id="K2_TUpMainMod" desc="预报距离值" dataType="uint" displayFormat="double" initValue="1" minValue="0" maxValue="450000" step="0.001" unit="km"/>
+		<field pid="115" id="K2_DPLLHUnit" desc="多普勒量化单位" dataType="uint8" displayFormat="enum|DPLLHUnit" initValue="0" minValue="" maxValue="" step="" unit="" fixValue="0" isEnable="0"/>
+	</unit>
+	<unit unitID="6" unitName="遥测单元">
+        <field pid="103" GroupId="1" id="K2_TeleDataType" desc="遥测数据类型" dataType="uint8" displayFormat="enum|TeleDataType" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+        <field pid="122" GroupId="1" id="K2_FrameCodeLocat" desc="帧码组位置" dataType="uint8" displayFormat="enum|FrameCodeLocat" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="130" GroupId="4" id="K2_FramSynFaultBit" desc="帧搜索容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="7" step="" unit="位"/>
+		<field pid="132" GroupId="4" id="K2_FramSynCheckBit" desc="帧校核容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="7" step="" unit="位"/>
+		<field pid="131" GroupId="4" id="K2_FramSynLockBit" desc="帧锁定容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="7" step="" unit="位"/>
+		<field pid="133" GroupId="4" id="K2_FramSynCheckNum" desc="帧校核检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="" unit="帧"/>
+		<field pid="134" GroupId="4" id="K2_FramSynLockNum" desc="帧锁定检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="" unit="帧"/>
+		<field pid="140" GroupId="1" id="K2_DataFrameCode" desc="数据帧标志码" dataType="uint8" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+        <field pid="110" GroupId="2" id="K2_TurboBit" desc="Turbo码率" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+        <field pid="111" GroupId="2" id="K2_LDPCBit" desc="LDPC码率" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+        <field pid="116" GroupId="2" id="K2_CRCCheck" desc="CRC校验" dataType="uint8" displayFormat="enum|CRCCheck" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+	</unit>
+</device>

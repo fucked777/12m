@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="SAFU" ModeType="0xFFFF" desc="存储转发单元" flag="1001" isShow="0">
+	<result MessageType="0x0000F104">
+		<field pid="1" id="AllCapacity" desc="总容量" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="MB"/>
+		<field pid="2" id="UseCapacity" desc="已用记录盘容量" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="MB"/>
+		<field pid="3" id="NullCapacity" desc="空余盘记录盘容量" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="MB"/>
+		<field pid="4" id="FirstSDDate" desc="I第一个SD块日期" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="5" id="FirstSDTime" desc="I第一个SD块时间" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="6" id="LastSDDate" desc="I最后一个SD块日期" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="7" id="LastSDTime" desc="I最后一个SD块时间" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="8" id="DiskRecord_SD" desc="I记录SD数据量" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="9" id="DiskBlock_SD" desc="I记录SD块数据总量" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="10" id="RecordStatus" desc="I工作状态" dataType="uint8" displayFormat="enum|SDWorkState" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="11" id="FirstSDDate" desc="Q第一个SD块日期" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="12" id="FirstSDTime" desc="Q第一个SD块时间" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="13" id="LastSDDate" desc="Q最后一个SD块日期" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="14" id="LastSDTime" desc="Q最后一个SD块时间" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="15" id="DiskRecord_SD" desc="Q记录SD数据量" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="16" id="DiskBlock_SD" desc="Q记录SD块数据总量" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="17" id="RecordStatus" desc="Q工作状态" dataType="uint8" displayFormat="enum|SDWorkState" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="18" id="SendDataSwitch" desc="I路送数开关" dataType="uint8" displayFormat="enum|SendDataSwitch" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="19" id="ISendNum" desc="I路发送帧计数" dataType="ulong" displayFormat="UInt64" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="20" id="IRealTimeSend" desc="I路实时传输效率" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="21" id="IAverageSend" desc="I路平均传输效率" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="22" id="SendDataSwitch" desc="Q路送数开关" dataType="uint8" displayFormat="enum|SendDataSwitch" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="23" id="QSendNum" desc="Q路发送帧计数" dataType="ulong" displayFormat="UInt64" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="24" id="QRealTimeSend" desc="Q路实时传输效率" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="25" id="QAverageSend" desc="Q路平均传输效率" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="101" id="TransProc" desc="数据传输协议" dataType="uint8" displayFormat="enum|DataTransProt" initValue="0" minValue="0" maxValue="1" step="" unit=""/>
+		<field pid="102" id="FrmNum1" desc="对外传输帧数I路" dataType="uint" displayFormat="UInt32" initValue="" minValue="1" maxValue="1000000" step="" unit="" isShow="0"/>
+		<field pid="103" id="FrmNum2" desc="对外传输帧数Q路" dataType="uint" displayFormat="UInt32" initValue="" minValue="1" maxValue="1000000" step="" unit="" isShow="0"/>
+	</result>
+</cmd>

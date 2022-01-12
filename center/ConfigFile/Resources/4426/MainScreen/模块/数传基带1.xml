@@ -1,0 +1,234 @@
+<GridLayout>
+	<GroupBox row="0" col="0" rowSpan="1" columnSpan="1" text="Ka低速解调单元">
+		<GridLayout verticalSpacing="1">
+			<Widget row="0" col="0" rowSpan="2" columnSpan="1" Align="Center" type="NameLabel" text="I路EB/N0(dB)"/>
+			<Widget row="0" col="1" rowSpan="2" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="I路EB/N0" deviceId="0x4401" modeId="0xFFFF" unitId="4" targetId="0" paramId="EbN0"/>
+			<Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="载波"/>
+			<Widget row="0" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="译码"/>
+			<Widget row="1" col="2" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="载波" deviceId="0x4401" modeId="0xFFFF" unitId="2" targetId="0" paramId="CarrierLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="1" col="3" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusDecodeLabel" desc="译码" devids="0x4401" deviceId="0x4401" modeId="0xFFFF" unitId="4" targetId="0">
+				<Item paramId="ViterbiStatus" desc="Viterbi译码状态" green="1" toolTip="Viterbi译码状态"/>
+				<Item paramId="RSStatus" desc="RS译码状态" green="1" toolTip="RS译码状态"/>
+				<Item paramId="LDPCStatus" desc="LDPC译码状态" green="1" toolTip="LDPC译码状态"/>
+				<Item paramId="TurboStatus" desc="Turbo译码状态" green="1" toolTip="Turbo译码状态"/>
+			</Widget>
+			<Widget row="2" col="0" rowSpan="2" columnSpan="1" Align="Center" type="NameLabel" text="Q路EB/N0(dB)"/>
+			<Widget row="2" col="1" rowSpan="2" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="Q路EB/N0" deviceId="0x4401" modeId="0xFFFF" unitId="5" targetId="0" paramId="EbN0"/>
+			<Widget row="2" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="I位"/>
+			<Widget row="2" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="I帧"/>
+			<Widget row="3" col="2" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="I位" deviceId="0x4401" modeId="0xFFFF" unitId="4" targetId="0" paramId="BitSynLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="3" col="3" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="I帧" deviceId="0x4401" modeId="0xFFFF" unitId="4" targetId="0" paramId="FrameSynLockStatus">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="4" col="0" rowSpan="2" columnSpan="1" Align="Center" type="NameLabel" text="AGC(V)"/>
+			<Widget row="4" col="1" rowSpan="2" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="AGC" deviceId="0x4401" modeId="0xFFFF" unitId="2" targetId="0" paramId="AGCVoltage"/>
+			<Widget row="4" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="Q位"/>
+			<Widget row="4" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="Q帧"/>
+			<Widget row="5" col="2" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Q位" deviceId="0x4401" modeId="0xFFFF" unitId="5" targetId="0" paramId="BitSynLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="5" col="3" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Q帧" deviceId="0x4401" modeId="0xFFFF" unitId="5" targetId="0" paramId="FrameSynLockStatus">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="0" col="1" rowSpan="1" columnSpan="1" text="星座图1">
+		<GridLayout verticalSpacing="1">
+			<Widget row="0" col="0" rowSpan="1" columnSpan="2" type="StarMap" desc="星座图" deviceId="0x4401" channel="1"/>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="I数"/>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="Q数"/>
+
+			<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="I数" deviceId="0x4401" modeId="0xFFFF" unitId="1" targetId="0" paramId="KaSendNumSwitchI">
+				<Item value="1" desc="开送" ledColor="green" toolTip="开送"/>
+				<Item value="2" desc="停送" ledColor="red" toolTip="停送"/>
+			</Widget>
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Q数" deviceId="0x4401" modeId="0xFFFF" unitId="1" targetId="0" paramId="KaSendNumSwitchQ">
+				<Item value="1" desc="开送" ledColor="green" toolTip="开送"/>
+				<Item value="2" desc="停送" ledColor="red" toolTip="停送"/>
+			</Widget>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="1" col="0" rowSpan="1" columnSpan="1" text="X低速解调单元">
+		<GridLayout verticalSpacing="1">
+			<Widget row="0" col="0" rowSpan="2" columnSpan="1" Align="Center" type="NameLabel" text="I路EB/N0(dB)"/>
+			<Widget row="0" col="1" rowSpan="2" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="I路EB/N0" deviceId="0x4401" modeId="0xFFFF" unitId="6" targetId="0" paramId="EbN0"/>
+			<Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="载波"/>
+			<Widget row="0" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="译码"/>
+			<Widget row="1" col="2" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="载波" deviceId="0x4401" modeId="0xFFFF" unitId="3" targetId="0" paramId="CarrierLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="1" col="3" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusDecodeLabel" desc="译码" devids="0x4401" deviceId="0x4401" modeId="0xFFFF" unitId="6" targetId="0">
+				<Item paramId="ViterbiStatus" desc="Viterbi译码状态" green="1" toolTip="Viterbi译码状态"/>
+				<Item paramId="RSStatus" desc="RS译码状态" green="1" toolTip="RS译码状态"/>
+				<Item paramId="LDPCStatus" desc="LDPC译码状态" green="1" toolTip="LDPC译码状态"/>
+				<Item paramId="TurboStatus" desc="Turbo译码状态" green="1" toolTip="Turbo译码状态"/>
+			</Widget>
+			<Widget row="2" col="0" rowSpan="2" columnSpan="1" Align="Center" type="NameLabel" text="Q路EB/N0(dB)"/>
+			<Widget row="2" col="1" rowSpan="2" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="Q路EB/N0" deviceId="0x4401" modeId="0xFFFF" unitId="7" targetId="0" paramId="EbN0"/>
+			<Widget row="2" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="I位"/>
+			<Widget row="2" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="I帧"/>
+			<Widget row="3" col="2" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="I位" deviceId="0x4401" modeId="0xFFFF" unitId="6" targetId="0" paramId="BitSynLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="3" col="3" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="I帧" deviceId="0x4401" modeId="0xFFFF" unitId="6" targetId="0" paramId="FrameSynLockStatus">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="4" col="0" rowSpan="2" columnSpan="1" Align="Center" type="NameLabel" text="AGC(V)"/>
+			<Widget row="4" col="1" rowSpan="2" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="AGC" deviceId="0x4401" modeId="0xFFFF" unitId="3" targetId="0" paramId="AGCVoltage"/>
+			<Widget row="4" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="Q位"/>
+			<Widget row="4" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="Q帧"/>
+			<Widget row="5" col="2" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Q位" deviceId="0x4401" modeId="0xFFFF" unitId="7" targetId="0" paramId="BitSynLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="5" col="3" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Q帧" deviceId="0x4401" modeId="0xFFFF" unitId="7" targetId="0" paramId="FrameSynLockStatus">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="1" col="1" rowSpan="1" columnSpan="1" text="星座图2">
+		<GridLayout verticalSpacing="1">
+			<Widget row="0" col="0" rowSpan="1" columnSpan="2" type="StarMap" desc="星座图" deviceId="0x4401" channel="2"/>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="I数"/>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="Q数"/>
+
+			<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="I数" deviceId="0x4401" modeId="0xFFFF" unitId="1" targetId="0" paramId="XSendNumSwitchI">
+				<Item value="1" desc="开送" ledColor="green" toolTip="开送"/>
+				<Item value="2" desc="停送" ledColor="red" toolTip="停送"/>
+			</Widget>
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Q数" deviceId="0x4401" modeId="0xFFFF" unitId="1" targetId="0" paramId="XSendNumSwitchQ">
+				<Item value="1" desc="开送" ledColor="green" toolTip="开送"/>
+				<Item value="2" desc="停送" ledColor="red" toolTip="停送"/>
+			</Widget>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="2" col="0" rowSpan="1" columnSpan="1" text="高速解调单元1">
+		<GridLayout verticalSpacing="1">
+			<Widget row="0" col="0" rowSpan="2" columnSpan="1" Align="Center" type="NameLabel" text="电平(dBm)"/>
+			<Widget row="0" col="1" rowSpan="2" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="电平" deviceId="0x4101" modeId="0xFFFF" unitId="2" targetId="0" paramId="SignalLevel"/>
+			<Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="载波"/>
+			<Widget row="0" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="译码"/>
+			<Widget row="1" col="2" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="载波" deviceId="0x4101" modeId="0xFFFF" unitId="2" targetId="0" paramId="CarrierLockInd">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="1" col="3" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusDecodeLabel" desc="译码" devids="0x4101" deviceId="0x4101" modeId="0xFFFF" unitId="3" targetId="0">
+				<Item paramId="ViterbiDecod" desc="Viterbi译码状态" green="1" toolTip="Viterbi译码状态"/>
+				<Item paramId="RSDecodState" desc="RS译码状态" green="1" toolTip="RS译码状态"/>
+				<Item paramId="LDPCDecodState" desc="LDPC译码状态" green="1" toolTip="LDPC译码状态"/>
+				<Item paramId="TurboDecodState" desc="Turbo译码状态" green="1" toolTip="Turbo译码状态"/>
+			</Widget>
+			<Widget row="2" col="0" rowSpan="2" columnSpan="1" Align="Center" type="NameLabel" text="EB/N0(dB)"/>
+			<Widget row="2" col="1" rowSpan="2" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="EB/N0" deviceId="0x4101" modeId="0xFFFF" unitId="2" targetId="0" paramId="EbNo"/>
+			<Widget row="2" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="I位"/>
+			<Widget row="2" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="I帧"/>
+			<Widget row="3" col="2" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="I位" deviceId="0x4101" modeId="0xFFFF" unitId="2" targetId="0" paramId="ISynchLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="3" col="3" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="I帧" deviceId="0x4101" modeId="0xFFFF" unitId="3" targetId="0" paramId="FrameSynchLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="4" col="0" rowSpan="2" columnSpan="1" Align="Center" type="NameLabel" text="AGC(V)"/>
+			<Widget row="4" col="1" rowSpan="2" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="AGC" deviceId="0x4101" modeId="0xFFFF" unitId="2" targetId="0" paramId="AGCVoltage"/>
+			<Widget row="4" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="Q位"/>
+			<Widget row="4" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="Q帧"/>
+			<Widget row="5" col="2" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Q位" deviceId="0x4101" modeId="0xFFFF" unitId="2" targetId="0" paramId="QSynchLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="5" col="3" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Q帧" deviceId="0x4101" modeId="0xFFFF" unitId="4" targetId="0" paramId="FrameSynchLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="2" col="1" rowSpan="1" columnSpan="1" text="星座图1">
+		<GridLayout verticalSpacing="1">
+			<Widget row="0" col="0" rowSpan="1" columnSpan="2" type="StarMap" desc="星座图" deviceId="0x4101" channel="1"/>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="I数"/>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="Q数"/>
+
+			<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="I数" deviceId="0x4101" modeId="0xFFFF" unitId="5" targetId="0" paramId="SendDataSwitchI">
+				<Item value="1" desc="开送" ledColor="green" toolTip="开送"/>
+				<Item value="0" desc="停送" ledColor="red" toolTip="停送"/>
+			</Widget>
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Q数" deviceId="0x4101" modeId="0xFFFF" unitId="5" targetId="0" paramId="SendDataSwitchQ">
+				<Item value="1" desc="开送" ledColor="green" toolTip="开送"/>
+				<Item value="0" desc="停送" ledColor="red" toolTip="停送"/>
+			</Widget>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="3" col="0" rowSpan="1" columnSpan="1" text="高速解调单元2">
+		<GridLayout>
+			<Widget row="0" col="0" rowSpan="2" columnSpan="1" Align="Center" type="NameLabel" text="电平(dBm)"/>
+			<Widget row="0" col="1" rowSpan="2" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="电平" deviceId="0x4101" modeId="0xFFFF" unitId="6" targetId="0" paramId="SignalLevel"/>/>
+			<Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="载波"/>
+			<Widget row="0" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="译码"/>
+			<Widget row="1" col="2" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="载波" deviceId="0x4101" modeId="0xFFFF" unitId="6" targetId="0" paramId="CarrierLockInd">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="1" col="3" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusDecodeLabel" devids="0x4101" desc="译码" deviceId="0x4101" modeId="0xFFFF" unitId="7" targetId="0">
+				<Item paramId="ViterbiDecod" desc="Viterbi译码状态" green="1" toolTip="Viterbi译码状态"/>
+				<Item paramId="RSDecodState" desc="RS译码状态" green="1" toolTip="RS译码状态"/>
+				<Item paramId="LDPCDecodState" desc="LDPC译码状态" green="1" toolTip="LDPC译码状态"/>
+				<Item paramId="TurboDecodState" desc="Turbo译码状态" green="1" toolTip="Turbo译码状态"/>
+			</Widget>
+			<Widget row="2" col="0" rowSpan="2" columnSpan="1" Align="Center" type="NameLabel" text="EB/N0(dB)"/>
+			<Widget row="2" col="1" rowSpan="2" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="EB/N0" deviceId="0x4101" modeId="0xFFFF" unitId="6" targetId="0" paramId="EbNo"/>
+			<Widget row="2" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="I位"/>
+			<Widget row="2" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="I帧"/>
+			<Widget row="3" col="2" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="I位" deviceId="0x4101" modeId="0xFFFF" unitId="6" targetId="0" paramId="ISynchLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="3" col="3" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="I帧" deviceId="0x4101" modeId="0xFFFF" unitId="7" targetId="0" paramId="FrameSynchLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="4" col="0" rowSpan="2" columnSpan="1" Align="Center" type="NameLabel" text="AGC(V)"/>
+			<Widget row="4" col="1" rowSpan="2" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="AGC" deviceId="0x4101" modeId="0xFFFF" unitId="6" targetId="0" paramId="AGCVoltage"/>
+			<Widget row="4" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="Q位"/>
+			<Widget row="4" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="Q帧"/>
+			<Widget row="5" col="2" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Q位" deviceId="0x4101" modeId="0xFFFF" unitId="6" targetId="0" paramId="QSynchLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="5" col="3" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Q帧" deviceId="0x4101" modeId="0xFFFF" unitId="8" targetId="0" paramId="FrameSynchLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="3" col="1" rowSpan="1" columnSpan="1" text="星座图2">
+		<GridLayout verticalSpacing="1">
+			<Widget row="0" col="0" rowSpan="1" columnSpan="2" type="StarMap" desc="星座图" deviceId="0x4101" channel="2"/>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="I数"/>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="Q数"/>
+
+			<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="I数" deviceId="0x4101" modeId="0xFFFF" unitId="9" targetId="0" paramId="SendDataSwitchI">
+				<Item value="1" desc="开送" ledColor="green" toolTip="开送"/>
+				<Item value="0" desc="停送" ledColor="red" toolTip="停送"/>
+			</Widget>
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" desc="Q数" deviceId="0x4101" modeId="0xFFFF" unitId="9" targetId="0" paramId="SendDataSwitchQ">
+				<Item value="1" desc="开送" ledColor="green" toolTip="开送"/>
+				<Item value="0" desc="停送" ledColor="red" toolTip="停送"/>
+			</Widget>
+		</GridLayout>
+	</GroupBox>
+</GridLayout>

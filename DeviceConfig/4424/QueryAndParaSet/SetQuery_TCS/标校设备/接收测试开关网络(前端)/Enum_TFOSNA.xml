@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="TFOSNA" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="ControlMode" desc="监控方式">
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="2" desc="设备开关电">
+		<entry svalue="1" uvalue="1" desc="关电:R"/>
+		<entry svalue="2" uvalue="2" desc="开电:G"/>
+	</enum>
+
+	<enum name="3" desc="状态">
+		<entry svalue="1" uvalue="1" desc="正常:G"/>
+		<entry svalue="2" uvalue="2" desc="异常:R"/>
+	</enum>
+	
+	<enum name="24Choose1Switch" desc="24选1开关">
+		<entry svalue="0" uvalue="0" desc="0(表示关断)"/>
+		<entry svalue="1" uvalue="1" desc="跟踪前端1S和路1"/>
+		<entry svalue="2" uvalue="2" desc="跟踪前端1S差路1"/>
+		<entry svalue="3" uvalue="3" desc="跟踪前端1S和路2"/>
+		<entry svalue="4" uvalue="4" desc="跟踪前端1S差路2"/>
+		<entry svalue="5" uvalue="5" desc="跟踪前端1L和路"/>
+		<entry svalue="6" uvalue="6" desc="跟踪前端1L差路"/>
+		<entry svalue="7" uvalue="7" desc="跟踪前端2S和路1"/>
+		<entry svalue="8" uvalue="8" desc="跟踪前端2S差路1"/>
+		<entry svalue="9" uvalue="9" desc="跟踪前端2S和路2"/>
+		<entry svalue="10" uvalue="10" desc="跟踪前端2S差路2"/>
+		<entry svalue="11" uvalue="11" desc="跟踪前端2L和路"/>
+		<entry svalue="12" uvalue="12" desc="跟踪前端2L差路"/>
+		<entry svalue="13" uvalue="13" desc="测控前端1左旋"/>
+		<entry svalue="14" uvalue="14" desc="测控前端1右旋"/>
+		<entry svalue="15" uvalue="15" desc="测控前端1点频2"/>
+		<entry svalue="16" uvalue="16" desc="测控前端2左旋"/>
+		<entry svalue="17" uvalue="17" desc="测控前端2右旋"/>
+		<entry svalue="18" uvalue="18" desc="测控前端2点频2"/>
+		<entry svalue="19" uvalue="19" desc="备用"/>
+		<entry svalue="20" uvalue="20" desc="备用"/>
+		<entry svalue="21" uvalue="21" desc="备用"/>
+		<entry svalue="22" uvalue="22" desc="备用"/>
+		<entry svalue="23" uvalue="23" desc="备用"/>
+		<entry svalue="24" uvalue="24" desc="备用"/>
+	</enum>
+</enums>

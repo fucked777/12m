@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--加去电控制-->
+<PowerControl>
+    <PowerStrip name="机柜1(未配置)" host="192.20.1.100" port="80">
+        <Devices>
+        </Devices>
+        <Interface>
+            <Plug no="5" name="输出位1" isEnable="1" />
+            <Plug no="6" name="输出位2" isEnable="1" />
+            <Plug no="7" name="输出位3" isEnable="1" />
+            <Plug no="8" name="输出位4" isEnable="1" />
+            <Plug no="9" name="输出位5" isEnable="1" />
+            <Plug no="10" name="输出位6" isEnable="1" />
+            <Plug no="11" name="输出位7" isEnable="1" />
+            <Plug no="12" name="输出位8" isEnable="1" />
+            <Plug no="13" name="输出位9" isEnable="1" />
+            <Plug no="14" name="输出位10" isEnable="1" />
+            <Plug no="15" name="输出位11" isEnable="1" />
+            <Plug no="16" name="输出位12" isEnable="1" />
+            <Plug no="17" name="输出位13" isEnable="1" />
+            <Plug no="18" name="输出位14" isEnable="1" />
+            <Plug no="19" name="输出位15" isEnable="1" />
+            <Plug no="20" name="输出位16" isEnable="1" />
+        </Interface>
+    </PowerStrip>
+    <PowerStrip name="机柜2(未配置)" host="192.20.1.101" port="80">
+        <Devices>
+        </Devices>
+        <Interface>
+            <Plug no="5" name="输出位1" isEnable="1" />
+            <Plug no="6" name="输出位2" isEnable="1" />
+            <Plug no="7" name="输出位3" isEnable="1" />
+            <Plug no="8" name="输出位4" isEnable="1" />
+            <Plug no="9" name="输出位5" isEnable="1" />
+            <Plug no="10" name="输出位6" isEnable="1" />
+            <Plug no="11" name="输出位7" isEnable="1" />
+            <Plug no="12" name="输出位8" isEnable="1" />
+            <Plug no="13" name="输出位9" isEnable="1" />
+            <Plug no="14" name="输出位10" isEnable="1" />
+            <Plug no="15" name="输出位11" isEnable="1" />
+            <Plug no="16" name="输出位12" isEnable="1" />
+            <Plug no="17" name="输出位13" isEnable="1" />
+            <Plug no="18" name="输出位14" isEnable="1" />
+            <Plug no="19" name="输出位15" isEnable="1" />
+            <Plug no="20" name="输出位16" isEnable="1" />
+        </Interface>
+    </PowerStrip>
+    <PowerStrip name="机柜3(未配置)" host="192.20.1.102" port="80">
+        <Devices>
+        </Devices>
+        <Interface>
+            <Plug no="5" name="输出位1" isEnable="1" />
+            <Plug no="6" name="输出位2" isEnable="1" />
+            <Plug no="7" name="输出位3" isEnable="1" />
+            <Plug no="8" name="输出位4" isEnable="1" />
+            <Plug no="9" name="输出位5" isEnable="1" />
+            <Plug no="10" name="输出位6" isEnable="1" />
+            <Plug no="11" name="输出位7" isEnable="1" />
+            <Plug no="12" name="输出位8" isEnable="1" />
+            <Plug no="13" name="输出位9" isEnable="1" />
+            <Plug no="14" name="输出位10" isEnable="1" />
+            <Plug no="15" name="输出位11" isEnable="1" />
+            <Plug no="16" name="输出位12" isEnable="1" />
+            <Plug no="17" name="输出位13" isEnable="1" />
+            <Plug no="18" name="输出位14" isEnable="1" />
+            <Plug no="19" name="输出位15" isEnable="1" />
+            <Plug no="20" name="输出位16" isEnable="1" />
+        </Interface>
+    </PowerStrip>
+    <PowerStrip name="机柜4(未配置)" host="192.20.1.103" port="80">
+        <Devices>
+        </Devices>
+        <Interface>
+            <Plug no="5" name="输出位1" isEnable="1" />
+            <Plug no="6" name="输出位2" isEnable="1" />
+            <Plug no="7" name="输出位3" isEnable="1" />
+            <Plug no="8" name="输出位4" isEnable="1" />
+            <Plug no="9" name="输出位5" isEnable="1" />
+            <Plug no="10" name="输出位6" isEnable="1" />
+            <Plug no="11" name="输出位7" isEnable="1" />
+            <Plug no="12" name="输出位8" isEnable="1" />
+            <Plug no="13" name="输出位9" isEnable="1" />
+            <Plug no="14" name="输出位10" isEnable="1" />
+            <Plug no="15" name="输出位11" isEnable="1" />
+            <Plug no="16" name="输出位12" isEnable="1" />
+            <Plug no="17" name="输出位13" isEnable="1" />
+            <Plug no="18" name="输出位14" isEnable="1" />
+            <Plug no="19" name="输出位15" isEnable="1" />
+            <Plug no="20" name="输出位16" isEnable="1" />
+        </Interface>
+    </PowerStrip>
+    <PowerStrip name="机柜5(未配置)" host="192.20.1.104" port="80">
+        <Devices>
+        </Devices>
+        <Interface>
+            <Plug no="5" name="输出位1" isEnable="1" />
+            <Plug no="6" name="输出位2" isEnable="1" />
+            <Plug no="7" name="输出位3" isEnable="1" />
+            <Plug no="8" name="输出位4" isEnable="1" />
+            <Plug no="9" name="输出位5" isEnable="1" />
+            <Plug no="10" name="输出位6" isEnable="1" />
+            <Plug no="11" name="输出位7" isEnable="1" />
+            <Plug no="12" name="输出位8" isEnable="1" />
+            <Plug no="13" name="输出位9" isEnable="1" />
+            <Plug no="14" name="输出位10" isEnable="1" />
+            <Plug no="15" name="输出位11" isEnable="1" />
+            <Plug no="16" name="输出位12" isEnable="1" />
+            <Plug no="17" name="输出位13" isEnable="1" />
+            <Plug no="18" name="输出位14" isEnable="1" />
+            <Plug no="19" name="输出位15" isEnable="1" />
+            <Plug no="20" name="输出位16" isEnable="1" />
+        </Interface>
+    </PowerStrip>
+    <PowerStrip name="机柜6(未配置)" host="192.20.1.105" port="80">
+        <Devices>
+        </Devices>
+        <Interface>
+            <Plug no="5" name="输出位1" isEnable="1" />
+            <Plug no="6" name="输出位2" isEnable="1" />
+            <Plug no="7" name="输出位3" isEnable="1" />
+            <Plug no="8" name="输出位4" isEnable="1" />
+            <Plug no="9" name="输出位5" isEnable="1" />
+            <Plug no="10" name="输出位6" isEnable="1" />
+            <Plug no="11" name="输出位7" isEnable="1" />
+            <Plug no="12" name="输出位8" isEnable="1" />
+            <Plug no="13" name="输出位9" isEnable="1" />
+            <Plug no="14" name="输出位10" isEnable="1" />
+            <Plug no="15" name="输出位11" isEnable="1" />
+            <Plug no="16" name="输出位12" isEnable="1" />
+            <Plug no="17" name="输出位13" isEnable="1" />
+            <Plug no="18" name="输出位14" isEnable="1" />
+            <Plug no="19" name="输出位15" isEnable="1" />
+            <Plug no="20" name="输出位16" isEnable="1" />
+        </Interface>
+    </PowerStrip>
+    <PowerStrip name="机柜7(未配置)" host="192.20.1.106" port="80">
+        <Devices>
+        </Devices>
+        <Interface>
+            <Plug no="5" name="输出位1" isEnable="1" />
+            <Plug no="6" name="输出位2" isEnable="1" />
+            <Plug no="7" name="输出位3" isEnable="1" />
+            <Plug no="8" name="输出位4" isEnable="1" />
+            <Plug no="9" name="输出位5" isEnable="1" />
+            <Plug no="10" name="输出位6" isEnable="1" />
+            <Plug no="11" name="输出位7" isEnable="1" />
+            <Plug no="12" name="输出位8" isEnable="1" />
+            <Plug no="13" name="输出位9" isEnable="1" />
+            <Plug no="14" name="输出位10" isEnable="1" />
+            <Plug no="15" name="输出位11" isEnable="1" />
+            <Plug no="16" name="输出位12" isEnable="1" />
+            <Plug no="17" name="输出位13" isEnable="1" />
+            <Plug no="18" name="输出位14" isEnable="1" />
+            <Plug no="19" name="输出位15" isEnable="1" />
+            <Plug no="20" name="输出位16" isEnable="1" />
+        </Interface>
+    </PowerStrip>
+    <PowerStrip name="塔基机柜" host="192.20.1.107" port="80">
+        <Devices>
+            <Device name="测控前端1" deviceIP="192.20.1.240" devicePort="60000" />
+            <Device name="测控前端2" deviceIP="192.20.1.241" devicePort="60000" />
+            <Device name="测控前端3" deviceIP="192.20.1.242" devicePort="60000" />
+            <Device name="测控前端4" deviceIP="192.20.1.243" devicePort="60000" />
+            <Device name="跟踪前端1" deviceIP="192.20.1.244" devicePort="60000" />
+            <Device name="跟踪前端2" deviceIP="192.20.1.245" devicePort="60000" />
+            <Device name="跟踪前端3" deviceIP="192.20.1.246" devicePort="60000" />
+            <Device name="跟踪前端4" deviceIP="192.20.1.247" devicePort="60000" />
+        </Devices>
+        <Interface>
+            <Plug no="5" name="输出位1" isEnable="1" />
+            <Plug no="6" name="输出位2" isEnable="1" />
+            <Plug no="7" name="输出位3" isEnable="1" />
+            <Plug no="8" name="输出位4" isEnable="1" />
+            <Plug no="9" name="输出位5" isEnable="1" />
+            <Plug no="10" name="输出位6" isEnable="1" />
+            <Plug no="11" name="输出位7" isEnable="1" />
+            <Plug no="12" name="输出位8" isEnable="1" />
+            <Plug no="13" name="输出位9" isEnable="1" />
+            <Plug no="14" name="输出位10" isEnable="1" />
+            <Plug no="15" name="输出位11" isEnable="1" />
+            <Plug no="16" name="交换机" isEnable="0" />
+            <Plug no="17" name="输出位13" isEnable="1" />
+            <Plug no="18" name="输出位14" isEnable="1" />
+            <Plug no="19" name="输出位15" isEnable="1" />
+            <Plug no="20" name="输出位16" isEnable="1" />
+        </Interface>
+    </PowerStrip>
+    <CenterBody  type="unit" devID="0x2003" cmdID="0x01" key="RFOutput"       on="0x01" off="0x02"   name="Ka300W测控功放"   />
+    <CenterBody  type="unit" devID="0x2004" cmdID="0x01" key="RFOutput"       on="0x01" off="0x02"   name="Ka30W测控功放"   />
+    <CenterBody  type="unit" devID="0x2005" cmdID="0x01" key="RFOutput"       on="0x01" off="0x02"   name="Ka300W数传功放"      />
+    <CenterBody  type="unit" devID="0x2006" cmdID="0x01" key="RFOutput"       on="0x01" off="0x02"   name="Ka30W数传功放"      />
+    <CenterBody  type="unit"    devID="0x2001" cmdID="0x01" key="ElectricControlor"     on="0x02" off="0x01"   name="S功放A"        />
+    <CenterBody  type="unit"    devID="0x2002" cmdID="0x01" key="ElectricControlor"     on="0x02" off="0x01"   name="S功放B"        />
+    <CenterBody  type="unit"    devID="0x6901" cmdID="0x01" key="AddRemElecCon"         on="0x02" off="0x01"   name="S校零变频器" />
+    <CenterBody  type="unit"    devID="0x6902" cmdID="0x01" key="AddRemElecCon"         on="0x02" off="0x01"   name="Ka校零变频器" />
+    <CenterBody  type="process" devID="0x6303" cmdID="0x1F" key="PowerControl"          on="0x02" off="0x01"   name="前端测试开关网络" />
+    <CenterBody  type="unit"    devID="0x6301" cmdID="0x01" key="EquipPlusCtrl"         on="0x02" off="0x01"   name="测试高频箱" />
+    <CenterBody  type="process" devID="0x3001" cmdID="0x6E" key="PowerControl"          on="0x02" off="0x01"   name="驱动控制:Ka和路LNA" />
+    <CenterBody  type="process" devID="0x3001" cmdID="0x6F" key="PowerControl"          on="0x02" off="0x01"   name="驱动控制:Ka差路LNA" />
+    <CenterBody  type="process" devID="0x3001" cmdID="0x70" key="PowerControl"          on="0x02" off="0x01"   name="驱动控制:X和路LNA" />
+    <CenterBody  type="process" devID="0x3001" cmdID="0x71" key="PowerControl"          on="0x02" off="0x01"   name="驱动控制:S和路LNA" />
+    <CenterBody  type="process" devID="0x3001" cmdID="0x72" key="PowerControl"          on="0x02" off="0x01"   name="驱动控制:S差路LNA" />
+    <CenterBody  type="process" devID="0x3201" cmdID="0x3D" key="PowerControl"          on="0x02" off="0x01"   name="S频段射频开关网络" />
+    <CenterBody  type="process" devID="0x3104" cmdID="0x3C" key="PowerControl"          on="0x02" off="0x01"   name="X频段高频箱" />
+    <CenterBody  type="process" devID="0x3202" cmdID="0x42" key="PowerControl"          on="0x02" off="0x01"   name="Ka射频开关网络" />
+    <CenterBody  type="process" devID="0x3101" cmdID="0x3B" key="PowerControl"          on="0x02" off="0x01"   name="Ka测控及跟踪高频箱" />
+    <CenterBody  type="process" devID="0x3102" cmdID="0x3B" key="PowerControl"          on="0x01" off="0x02"   name="Ka低速数传及跟踪高频箱" />
+    <CenterBody  type="process" devID="0x3103" cmdID="0x3A" key="PowerControl"          on="0x02" off="0x01"   name="Ka高速数传高频箱" />
+    <CenterBody  type="process" devID="0x3601" cmdID="0x3F" key="PowerControl"          on="0x02" off="0x01"   name="S频段接收开关矩阵" />
+    <CenterBody  type="process" devID="0x2501" cmdID="0x0E" key="PowerCtrl"             on="0x01" off="0x02"   name="S频段发射开关矩阵" />
+    <CenterBody  type="process" devID="0x3301" cmdID="0x3E" key="PowerControl"          on="0x02" off="0x01"   name="L频段数传中频矩阵" />
+    <CenterBody  type="process" devID="0x2401" cmdID="0x11" key="PowerControl"          on="0x01" off="0x02"   name="Ka低速数传发射高频箱" />
+    <CenterBody  type="process" devID="0x2402" cmdID="0x12" key="PowerControl"          on="0x01" off="0x02"   name="Ka测控发射高频箱" />
+    <CenterBody  type="process" devID="0x6302" cmdID="0x1E" key="PowerControl"          on="0x02" off="0x01"   name="后端测试信号选择开关" />
+
+    <!-- 功放机柜这个是单独的设备 -->
+    <SHP ip="192.20.1.140" sendPort="4023"   name="S功放机柜" />
+</PowerControl>

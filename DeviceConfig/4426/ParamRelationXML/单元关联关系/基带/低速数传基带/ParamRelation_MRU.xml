@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x04" modeID="0x0" unitType="MRU" desc="中频接收单元">
+	<Triggers>
+		<Trigger id="CarrierModulation" desc="载波调制方式">
+			<TriggerValue value="1" desc="BPSK">
+				<Receiver id="DataOutWay" desc="数据输出方式" isEnable="0" values="2:I路独立" minValue="" maxValue="" />
+				<Receiver id="SignalModelChoose" desc="解调数据输出选择" isEnable="0" values="1:I路独立或I/Q合路2:I/Q分路" minValue="" maxValue="" />
+				<Receiver id="ParallelSCMode" desc="并串转换方式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="BlockCodeCheck" desc="分组码校验输出选择" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="GrayCode" desc="Gray编码" isEnable="0" values="9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="PhaseMapping" desc="相位映射" isEnable="0" values="2:I-Q" minValue="" maxValue="" />
+				<Receiver id="IOPowerDB" desc="I/Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="QPSK">
+				<Receiver id="DataOutWay" desc="数据输出方式" isEnable="1" values="0:I/Q合路;1:I/Q分路" minValue="" maxValue="" />
+				<Receiver id="SignalModelChoose" desc="解调数据输出选择" isEnable="0" values="1:I路独立或I/Q合路;2:I/Q分路" minValue="" maxValue="" />
+				<Receiver id="ParallelSCMode" desc="并串转换方式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="BlockCodeCheck" desc="分组码校验输出选择" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="GrayCode" desc="Gray编码" isEnable="1" values="1:Gray0编码;2:Gray1编码;3:Gray2编码;4:Gray3编码;5:Gray4编码;6:Gray5编码;7:Gray6编码;8:Gray7编码;9:无格雷编码;10:自适应" minValue="" maxValue="" />
+				<Receiver id="PhaseMapping" desc="相位映射" isEnable="1" values="1:I+Q;2:I-Q;3:自适应" minValue="" maxValue="" />
+				<Receiver id="IOPowerDB" desc="I/Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="UQPSK">
+				<Receiver id="DataOutWay" desc="数据输出方式" isEnable="0" values="1:I/Q分路" minValue="" maxValue="" />
+				<Receiver id="SignalModelChoose" desc="解调数据输出选择" isEnable="0" values="2:I/Q分路" minValue="" maxValue="" />
+				<Receiver id="ParallelSCMode" desc="并串转换方式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="BlockCodeCheck" desc="分组码校验输出选择" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="GrayCode" desc="Gray编码" isEnable="0" values="9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="PhaseMapping" desc="相位映射" isEnable="0" values="2:I-Q" minValue="" maxValue="" />
+				<Receiver id="IOPowerDB" desc="I/Q功率分贝比" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="5" desc="OQPSK">
+				<Receiver id="DataOutWay" desc="数据输出方式" isEnable="1" values="0:I/Q合路;1:I/Q分路" minValue="" maxValue="" />
+				<Receiver id="SignalModelChoose" desc="解调数据输出选择" isEnable="1" values="1:I路独立或I/Q合路;2:I/Q分路" minValue="" maxValue="" />
+				<Receiver id="ParallelSCMode" desc="并串转换方式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="BlockCodeCheck" desc="分组码校验输出选择" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="GrayCode" desc="Gray编码" isEnable="0" values="9:无格雷编码" minValue="" maxValue="" />
+				<Receiver id="PhaseMapping" desc="相位映射" isEnable="0" values="2:I-Q" minValue="" maxValue="" />
+				<Receiver id="IOPowerDB" desc="I/Q功率分贝比" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		<Trigger id="DataOutWay" desc="数据输出方式">
+			<TriggerValue value="0" desc="1:I/Q合路">
+				<Receiver id="SignalModelChoose" desc="解调数据输出选择" isEnable="0" values="1:I路独立或I/Q合路" minValue="" maxValue="" />
+				<Receiver id="ParallelSCMode" desc="并串转换方式" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="1" desc="1:I/Q分路">
+				<Receiver id="SignalModelChoose" desc="解调数据输出选择" isEnable="1" values="1:I路独立或I/Q合路;2:I/Q分路" minValue="" maxValue="" />
+				<Receiver id="ParallelSCMode" desc="并串转换方式" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+	</Triggers>
+</Relation>

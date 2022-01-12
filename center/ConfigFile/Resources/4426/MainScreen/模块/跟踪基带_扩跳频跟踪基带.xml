@@ -1,0 +1,32 @@
+<GridLayout>
+	<GroupBox row="0" col="0" rowSpan="1" columnSpan="1" text="长码">
+		<GridLayout>
+			<Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="载波锁定" />
+			<Widget row="0" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="载波锁定" unitId="2" targetId="0" paramId="CCarrierLockInd">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="AGC电压(V)"/>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="AGC电压" unitId="2" targetId="0" paramId="CMeaAGCVoltage"/>
+			<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="方位电压(V)"/>
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="方位电压" unitId="2" targetId="0" paramId="AzimuthVoltage1"/>
+			<Widget row="3" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="俯仰电压(V)"/>
+			<Widget row="3" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="俯仰电压" unitId="2" targetId="0" paramId="PitchVoltage1"/>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="1" col="0" rowSpan="1" columnSpan="1" text="短码">
+		<GridLayout>
+			<Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="载波锁定" />
+			<Widget row="0" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="载波锁定" unitId="2" targetId="0" paramId="DCarrierLockInd">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="AGC电压(V)"/>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="AGC电压" unitId="2" targetId="0" paramId="DMeaAGCVoltage"/>
+			<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="方位电压(V)"/>
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="方位电压" unitId="2" targetId="0" paramId="AzimuthVoltage2"/>
+			<Widget row="3" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="俯仰电压(V)"/>
+			<Widget row="3" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="俯仰电压" unitId="2" targetId="0" paramId="PitchVoltage2"/>
+		</GridLayout>
+	</GroupBox>
+</GridLayout>

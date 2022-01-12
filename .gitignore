@@ -1,0 +1,24 @@
+error.txt
+
+/**/bin/**
+/**/Framework.pro.user
+/**/Framework.pro.user.*
+/**/res.zip
+
+# 忽略编译中间文件
+**build-**Debug
+**build-**Release
+**build-**
+
+
+# 忽略vs的工程
+**vs
+**VS
+
+# 忽略bak
+*.bak
+**bak**
+
+#此目录的头文件编译后会自动填充所以不提交
+client/public/PlatformInterface/*.h
+server/public/PlatformInterface/*.h

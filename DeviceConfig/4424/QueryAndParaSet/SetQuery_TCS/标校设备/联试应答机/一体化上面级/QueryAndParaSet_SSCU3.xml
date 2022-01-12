@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="SSCU" ModeType="0x03" desc="扩频码单元" flag="1001">
+	<result MessageType="0x0000F104">
+	
+	
+			<field GroupId="1" pid="101" id="PNCodeSource" desc="伪码来源" dataType="uint8" displayFormat="enum|PNCodeSource" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field GroupId="2" pid="102" id="CodeNumbMea" desc="上行测量伪码码号" dataType="ulong" displayFormat="UInt64" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+			<field GroupId="2" pid="103" id="SprUpLinkPhase1" desc="伪码初相1" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit=""/>
+			<field GroupId="2" pid="104" id="SprUpLinkPhase2" desc="伪码初相2" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit=""/>
+			<field GroupId="2" pid="105" id="SprCodeUpstMea1" desc="本原多项式1" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit=""/>
+			<field GroupId="2" pid="106" id="SprCodeUpstMea2" desc="本原多项式2" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit=""/>
+		
+
+	
+			<field GroupId="3" pid="121" id="SprPNCodeSource2" desc="伪码来源" dataType="uint8" displayFormat="enum|PNCodeSource" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+
+		    <field GroupId="3" pid="122" id="SprTestCodeNumbMea" desc="上行测量伪码码号" dataType="ulong" displayFormat="Hex" initValue="1" minValue="1" maxValue="" step="" unit="" isShow="0"/>
+			<field GroupId="3" pid="123" id="SprRemoteCodeNumbMea" desc="上行遥测伪码码号" dataType="ulong" displayFormat="Hex" initValue="1" minValue="1" maxValue="" step="" unit="" isShow="0"/>
+			<field GroupId="3" pid="124" id="SprDownTestCodeNumbMea" desc="下行测量伪码码号" dataType="ulong" displayFormat="Hex" initValue="1" minValue="1" maxValue="" step="" unit="" isShow="0"/>
+			<field GroupId="3" pid="125" id="SprDownRemoteCodeNumbMea" desc="下行遥测伪码码号" dataType="ulong" displayFormat="Hex" initValue="1" minValue="1" maxValue="" step="" unit="" isShow="0"/>
+
+			<field GroupId="4" pid="126" id="SprUpRemoteRemPhase1" desc="伪码初相1" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit="" isShow="0"/>
+			<field GroupId="4" pid="127" id="SprUpRemoteRemPhase2" desc="伪码初相2" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit="" isShow="0"/>
+			<field GroupId="4" pid="128" id="SprUpRemoteCodeRemMea1" desc="伪码本原多项式1" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit="" isShow="0"/>
+		    <field GroupId="4" pid="129" id="SprUpRemoteCodeRemMea2" desc="伪码本原多项式2" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit="" isShow="0"/>
+
+			<field GroupId="5" pid="130" id="SprUpTestRemPhase1" desc="伪码初相1" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit="" isShow="0"/>
+			<field GroupId="5" pid="131" id="SprUpTestRemPhase2" desc="伪码初相2" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit="" isShow="0"/>
+			<field GroupId="5" pid="132" id="SprUpTestCodeRemMea1" desc="伪码本原多项式1" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit="" isShow="0"/>
+		    <field GroupId="5" pid="133" id="SprUpTestCodeRemMea2" desc="伪码本原多项式2" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit="" isShow="0"/>
+
+			<field GroupId="6" pid="134" id="SprDownRemoteRemPhase1" desc="伪码初相1" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit="" isShow="0"/>
+			<field GroupId="6" pid="135" id="SprDownRemoteRemPhase2" desc="伪码初相2" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit="" isShow="0"/>
+			<field GroupId="6" pid="136" id="SprDownRemoteCodeRemMea1" desc="伪码本原多项式1" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit="" isShow="0"/>
+		    <field GroupId="6" pid="137" id="SprDownRemoteCodeRemMea2" desc="伪码本原多项式2" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit="" isShow="0"/>
+
+			<field GroupId="7" pid="138" id="SprDownTestRemPhase1" desc="伪码初相1" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit="" isShow="0"/>
+			<field GroupId="7" pid="139" id="SprDownTestRemPhase2" desc="伪码初相2" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit="" isShow="0"/>
+			<field GroupId="7" pid="140" id="SprDownTestCodeRemMea1" desc="伪码本原多项式1" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit="" isShow="0"/>
+		    <field GroupId="7" pid="141" id="SprDownTestCodeRemMea2" desc="伪码本原多项式2" dataType="ushort" displayFormat="Hex" initValue="1" minValue="1" maxValue="3FF" step="" unit="" isShow="0"/>
+	
+		<layout>
+			<item id="1" desc="一体化伪码" row="0" col = "0" rowspan = "1" colspan = "1"/>
+			<item id="2" desc="一体化上行测量" row="0" col = "1" rowspan = "1" colspan = "1"/>
+			<item id="3" desc="扩频伪码" row="1" col = "0" rowspan = "1" colspan = "1"/>
+			<item id="4" desc="扩频上行遥控" row="1" col = "1" rowspan = "1" colspan = "1"/>
+			<item id="5" desc="扩频上行测量" row="2" col = "0" rowspan = "1" colspan = "1"/>
+			<item id="6" desc="扩频下行遥测" row="2" col = "1" rowspan = "1" colspan = "1"/>
+			<item id="7" desc="扩频下行测量" row="3" col = "0" rowspan = "1" colspan = "2"/>
+		</layout>
+				
+		<order info="1,2,3,4,5,6,7"/>
+	</result>
+</cmd>

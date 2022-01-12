@@ -1,0 +1,48 @@
+<MainWindow>
+	<DeviceWidget row="0" col="0" rowSpan="1" columnSpan="2" text="ACU状态">
+		<Include path="./模块/ACU状态.xml"/>
+	</DeviceWidget>
+	<DeviceWidget row="0" col="2" rowSpan="1" columnSpan="1" text="测控信道">
+		<Include path="./模块/测控信道.xml"/>
+	</DeviceWidget>
+	<DeviceWidget row="0" col="3" rowSpan="1" columnSpan="1" text="高低速数传信道">
+		<Include path="./模块/高低速数传信道.xml"/>
+	</DeviceWidget>
+	<DeviceWidget row="0" col="4" rowSpan="1" columnSpan="2" text="跟踪基带_标准TTC+高数数传跟踪">
+		<Include path="./模块/跟踪基带_标准TTC+高速数传跟踪.xml"/>
+	</DeviceWidget>
+	<DeviceWidget row="0" col="6" rowSpan="2" columnSpan="2" text="数传基带">
+		<Include path="./模块/数传基带.xml"/>
+	</DeviceWidget>
+	<StackedWidget row="1" col="0" rowSpan="1" columnSpan="3" deviceId="0x4001" >
+		<Include path="./模块/测控基带_标准.xml" index="0"/>
+		<Include path="./模块/测控基带_扩二.xml" index="1"/>
+	</StackedWidget>
+	<StackedWidget row="1" col="3" rowSpan="1" columnSpan="3" deviceId="0x4001" >
+		<Include path="./模块/测控基带_标准.xml" index="0"/>
+		<Include path="./模块/测控基带_扩二.xml" index="1"/>
+	</StackedWidget>
+</MainWindow>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

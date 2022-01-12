@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd ModeType="0xFFFF" UnitType="LSFBRFSMJ" desc="L频段数传中频矩阵" flag="1001">
+	<result MessageType="0x0000F104">
+		<field pid="1" id="ControlMode" desc="监控方式" dataType="uint8" displayFormat="enum|ControlMode" minValue="" maxValue="" step="" unit=""/>
+		<field pid="2" id="DevStatus" desc="设备状态" dataType="uint8" displayFormat="LED|DevStatus" minValue="" maxValue="" step="" unit=""/>
+		<field pid="101" GroupId="status1" id="ChooseConnect_1" desc="通道1" dataType="uint8" displayFormat="enum|HSDR" minValue="" maxValue="" step="" unit=""/>
+		<field pid="102" GroupId="status1" id="ChooseConnect_2" desc="通道2" dataType="uint8" displayFormat="enum|HSDR" minValue="" maxValue="" step="" unit=""/>
+		<field pid="103" GroupId="status2" id="ChooseConnect_3" desc="通道1" dataType="uint8" displayFormat="enum|HSDR" minValue="" maxValue="" step="" unit=""/>
+		<field pid="104" GroupId="status2" id="ChooseConnect_4" desc="通道2" dataType="uint8" displayFormat="enum|HSDR" minValue="" maxValue="" step="" unit=""/>
+		<field pid="105" GroupId="status3" id="ChooseConnect_5" desc="模拟源-L网络" dataType="uint8" displayFormat="enum|HSDL" minValue="" maxValue="" step="" unit=""/>
+		<field pid="106" GroupId="status3" id="ChooseConnect_6" desc="去后端测试网络" dataType="uint8" displayFormat="enum|HSDL2" minValue="" maxValue="" step="" unit=""/>
+		<field pid="107" GroupId="status3" id="ChooseConnect_7" desc="备份1" dataType="uint8" displayFormat="enum|HSDLBACK" minValue="" maxValue="" step="" unit="" />
+		<field pid="108" GroupId="status3" id="ChooseConnect_8" desc="备份2" dataType="uint8" displayFormat="enum|HSDLBACK" minValue="" maxValue="" step="" unit="" />
+		<field pid="109" GroupId="status1" id="ChooseConnect_9" desc="射频输出9选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="110" GroupId="status1" id="ChooseConnect_10" desc="射频输出10选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="111" GroupId="status1" id="ChooseConnect_11" desc="射频输出11选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="112" GroupId="status1" id="ChooseConnect_12" desc="射频输出12选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="113" GroupId="status1" id="ChooseConnect_13" desc="射频输出13选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="114" GroupId="status1" id="ChooseConnect_14" desc="射频输出14选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="115" GroupId="status1" id="ChooseConnect_15" desc="射频输出15选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="116" GroupId="status1" id="ChooseConnect_16" desc="射频输出16选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="117" GroupId="status1" id="ChooseConnect_17" desc="射频输出17选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="118" GroupId="status1" id="ChooseConnect_18" desc="射频输出18选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="119" GroupId="status1" id="ChooseConnect_19" desc="射频输出19选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="120" GroupId="status1" id="ChooseConnect_20" desc="射频输出20选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="121" GroupId="status1" id="ChooseConnect_21" desc="射频输出21选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="122" GroupId="status1" id="ChooseConnect_22" desc="射频输出22选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="123" GroupId="status1" id="ChooseConnect_23" desc="射频输出23选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="124" GroupId="status1" id="ChooseConnect_24" desc="射频输出24选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="125" GroupId="status1" id="ChooseConnect_25" desc="射频输出25选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="126" GroupId="status1" id="ChooseConnect_26" desc="射频输出26选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="127" GroupId="status1" id="ChooseConnect_27" desc="射频输出27选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="128" GroupId="status1" id="ChooseConnect_28" desc="射频输出28选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="129" GroupId="status1" id="ChooseConnect_29" desc="射频输出29选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="130" GroupId="status1" id="ChooseConnect_30" desc="射频输出30选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="131" GroupId="status1" id="ChooseConnect_31" desc="射频输出31选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+		<field pid="132" GroupId="status1" id="ChooseConnect_32" desc="射频输出32选通状态" dataType="uint8" displayFormat="enum|ChooseConnect" minValue="" maxValue="" step="" unit="" fixValue="1" isShow="0"/>
+	</result>
+	<layout>
+		<item id="status1" desc="高速基带1" row="0" col="0" rowspan="1" colspan="1"/>
+		<item id="status2" desc="高速基带2" row="1" col="0" rowspan="1" colspan="1"/>
+		<item id="status3" desc="测试相关" row="0" col="1" rowspan="2" colspan="1"/>
+	</layout>
+</cmd>

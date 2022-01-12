@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="SCU" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="MonitMode" desc="监控方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="WorkStatus" desc="工作状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="ReceNumb" desc="接收存储路数">
+		<entry svalue="0" uvalue="0" desc="未接收存储"/>
+		<entry svalue="1" uvalue="1" desc="单路接收存储"/>
+		<entry svalue="2" uvalue="2" desc="2路接收存储"/>
+		<entry svalue="3" uvalue="3" desc="3路接收存储"/>
+		<entry svalue="4" uvalue="4" desc="4路接收存储"/>
+	</enum>
+	<enum name="RouteNumb" desc="发送路数">
+		<entry svalue="0" uvalue="0" desc="未发送"/>
+		<entry svalue="1" uvalue="1" desc="单路发送"/>
+		<entry svalue="2" uvalue="2" desc="2路发送"/>
+		<entry svalue="3" uvalue="3" desc="3路发送"/>
+		<entry svalue="4" uvalue="4" desc="4路发送"/>
+	</enum>
+	<enum name="DiskSpace" desc="磁盘存储空间状态">
+		<entry svalue="1" uvalue="1" desc="正常"/>
+		<entry svalue="2" uvalue="2" desc="预警(剩余10％空间)"/>
+		<entry svalue="3" uvalue="3" desc="告警(剩余8％空间)"/>
+	</enum>
+	<enum name="StorSpace" desc="正在使用存储空间">
+		<entry svalue="1" uvalue="1" desc="网络"/>
+		<entry svalue="2" uvalue="2" desc="本地"/>
+	</enum>
+	<enum name="AndNetwork" desc="和网络存储链路状态">
+		<entry svalue="1" uvalue="1" desc="正常:G"/>
+		<entry svalue="2" uvalue="2" desc="异常:R"/>
+	</enum>
+</enums>

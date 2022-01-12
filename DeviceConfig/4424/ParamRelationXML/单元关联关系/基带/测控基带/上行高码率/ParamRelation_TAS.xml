@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x00" modeID="0x12" unitType="TAS" desc="遥测模拟源">
+	<Triggers>
+		<Trigger id="GML_DataType" desc="数据类型">
+			<TriggerValue value="1" desc="固定数">
+				<Receiver id="GML_FixNumSet" desc="固定码数据" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="随机数">
+				<Receiver id="GML_FixNumSet" desc="固定码数据" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>		
+		<Trigger id="GML_DescrambCtrl" desc="解扰控制">
+			<TriggerValue value="1" desc="不加扰">
+				<Receiver id="GML_DistPolyLength" desc="加扰多项式长度" isEnable="0" values="1:1字节;2:2字节;3:3字节;4:4字节" minValue="" maxValue="" />
+				<Receiver id="GML_ScramPolg" desc="加扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+			    <Receiver id="GML_DescramPrim" desc="加扰初相" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="自动加扰">
+				<Receiver id="GML_DistPolyLength" desc="加扰多项式长度" isEnable="0" values="1:1字节" minValue="" maxValue="" />
+				<Receiver id="GML_ScramPolg" desc="加扰多项式" isEnable="0" values="A9" minValue="" maxValue="" />
+			    <Receiver id="GML_DescramPrim" desc="加扰初相" isEnable="0" values="FF" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="人工设置">
+				<Receiver id="GML_DistPolyLength" desc="加扰多项式长度" isEnable="1" values="1:1字节;2:2字节;3:3字节;4:4字节" minValue="" maxValue="" />
+				<Receiver id="GML_ScramPolg" desc="加扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+			    <Receiver id="GML_DescramPrim" desc="加扰初相" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>	
+		<Trigger id="GML_DistPolyLength" desc="加扰多项式长度">
+			<TriggerValue value="1" desc="1字节">
+				<Receiver id="GML_ScramPolg" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FF" />
+			    <Receiver id="GML_DescramPrim" desc="加扰初相" isEnable="" values="" minValue="" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="2字节">
+				<Receiver id="GML_ScramPolg" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			    <Receiver id="GML_DescramPrim" desc="加扰初相" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="3字节">
+				<Receiver id="GML_ScramPolg" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			    <Receiver id="GML_DescramPrim" desc="加扰初相" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="4字节">
+				<Receiver id="GML_ScramPolg" desc="加扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			    <Receiver id="GML_DescramPrim" desc="加扰初相" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="GML_MessageSpeedChoose" desc="信息速率与帧频">
+			<TriggerValue value="1" desc="6.294528Mbps，768帧/s">
+				<Receiver id="GML_DecodeType" desc="编码方式" isEnable="" values="1:关;2:Turbo（1/2）" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="4.196352Mbps，512帧/s">
+				<Receiver id="GML_DecodeType" desc="编码方式" isEnable="" values="1:关;2:Turbo（1/2）;3:Turbo（1/3）" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="2.098176Mbps，256帧/s">
+				<Receiver id="GML_DecodeType" desc="编码方式" isEnable="" values="1:关;2:Turbo（1/2）;3:Turbo（1/3）;4:Turbo（1/4）;5:Turbo（1/6）" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="1.049088Mbps，128帧/s">
+				<Receiver id="GML_DecodeType" desc="编码方式" isEnable="" values="1:关;2:Turbo（1/2）;3:Turbo（1/3）;4:Turbo（1/4）;5:Turbo（1/6）" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="5" desc="524.544kbps，64帧/s">
+				<Receiver id="GML_DecodeType" desc="编码方式" isEnable="" values="1:关;2:Turbo（1/2）;3:Turbo（1/3）;4:Turbo（1/4）;5:Turbo（1/6）" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="6" desc="262.272kbps，32帧/s">
+				<Receiver id="GML_DecodeType" desc="编码方式" isEnable="" values="1:关;2:Turbo（1/2）;3:Turbo（1/3）;4:Turbo（1/4）;5:Turbo（1/6）" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="7" desc="10.960896Mbps，1536帧/s">
+				<Receiver id="GML_DecodeType" desc="编码方式" isEnable="" values="1:关;6:LDPC（8160，7136）" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="8" desc="8.220672Mbps，1152帧/s">
+				<Receiver id="GML_DecodeType" desc="编码方式" isEnable="" values="1:关;6:LDPC（8160，7136）" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

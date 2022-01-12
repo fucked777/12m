@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DBInfo>
+    <IP>192.20.1.151</IP>
+    <Port>3306</Port>
+    <DBName>db</DBName>
+    <UserName>root</UserName>
+    <Password>123456</Password>
+    <Options>SQL_ATTR_LOGIN_TIMEOUT=3;SQL_ATTR_CONNECTION_TIMEOUT=1</Options>
+</DBInfo>

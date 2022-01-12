@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x02" modeID="0x06" unitType="SK2TBPU" desc="公共单元">
+	<Triggers>
+		<Trigger id="NumbSpreadTarget" desc="扩频目标数">
+			<TriggerValue value="1" desc="1">
+				<Receiver id="SpreadMastTarget" desc="扩频主跟目标" isEnable="1" values="" minValue="1" maxValue="1" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="2">
+				<Receiver id="SpreadMastTarget" desc="扩频主跟目标" isEnable="1" values="" minValue="1" maxValue="2" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="3">
+				<Receiver id="SpreadMastTarget" desc="扩频主跟目标" isEnable="1" values="" minValue="1" maxValue="3" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="4">
+				<Receiver id="SpreadMastTarget" desc="扩频主跟目标" isEnable="1" values="" minValue="1" maxValue="4" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>
+

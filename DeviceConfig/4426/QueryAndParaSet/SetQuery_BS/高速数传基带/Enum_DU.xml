@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="DU" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="CarrierLockInd" desc="载波锁定指示">
+		<entry svalue="0" uvalue="0" desc="无效:Y"/>
+		<entry svalue="1" uvalue="1" desc="锁定:G"/>
+		<entry svalue="2" uvalue="2" desc="失锁:R"/>
+	</enum>
+	<enum name="SynchLock" desc="同步锁定">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="锁定:G"/>
+		<entry svalue="2" uvalue="2" desc="失锁:R"/>
+	</enum>
+	<enum name="ModulatSystem" desc="调制体制">
+		<entry svalue="1" uvalue="1" desc="BPSK"/>
+		<entry svalue="2" uvalue="2" desc="QPSK"/>
+		<entry svalue="3" uvalue="3" desc="UQPSK"/>
+		<entry svalue="4" uvalue="4" desc="SQPSK"/>
+		<entry svalue="5" uvalue="5" desc="8PSK"/>
+		<entry svalue="6" uvalue="6" desc="16QAM"/>
+		<entry svalue="7" uvalue="7" desc="16APSK"/>
+	</enum>
+	<enum name="CarrLoopBand" desc="载波环路带宽">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="5000Hz"/>
+		<entry svalue="2" uvalue="2" desc="10000Hz"/>
+		<entry svalue="3" uvalue="3" desc="20000Hz"/>
+		<entry svalue="4" uvalue="4" desc="50000Hz"/>
+		<entry svalue="100" uvalue="100" desc="自适应"/>
+	</enum>
+	<enum name="CodeRateSett" desc="码速率设置方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="编码前"/>
+		<entry svalue="2" uvalue="2" desc="编码后"/>
+	</enum>
+	<enum name="FrameSynch" desc="帧同步方式">
+		<entry svalue="1" uvalue="1" desc="合路帧同步"/>
+		<entry svalue="2" uvalue="2" desc="分路帧同步"/>
+	</enum>
+	<enum name="ViterbiDecod" desc="Viterbi译码方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="分路译码"/>
+		<entry svalue="2" uvalue="2" desc="合路译码"/>
+	</enum>
+	<enum name="DemodOutputSelect" desc="解调数据输出选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="I/Q合路输出"/>
+		<entry svalue="2" uvalue="2" desc="I/Q分路输出"/>
+	</enum>
+	<enum name="ParaSerConv" desc="并串转换方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="按比特"/>
+		<entry svalue="2" uvalue="2" desc="按帧"/>
+	</enum>
+	<enum name="GrayCodSelect" desc="Gray编码选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="Gray0"/>
+		<entry svalue="2" uvalue="2" desc="Gray1"/>
+		<entry svalue="3" uvalue="3" desc="Gray2"/>
+		<entry svalue="4" uvalue="4" desc="Gray3"/>
+		<entry svalue="5" uvalue="5" desc="Gray4"/>
+		<entry svalue="6" uvalue="6" desc="Gray5"/>
+		<entry svalue="7" uvalue="7" desc="Gray6"/>
+		<entry svalue="8" uvalue="8" desc="Gray7"/>
+		<entry svalue="9" uvalue="9" desc="无格雷编码"/>
+		<entry svalue="10" uvalue="10" desc="自适应"/>
+	</enum>
+	<enum name="PhaseMapp" desc="相位映射">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="CCSDS(逆时针)"/>
+		<entry svalue="2" uvalue="2" desc="Inverted(顺时针)"/>
+	</enum>
+	<enum name="ConstMapp" desc="星座映射">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="Gray1"/>
+		<entry svalue="2" uvalue="2" desc="Gray2"/>
+		<entry svalue="3" uvalue="3" desc="Gray3"/>
+		<entry svalue="4" uvalue="4" desc="Gray4"/>
+		<entry svalue="5" uvalue="5" desc="Gray5"/>
+		<entry svalue="6" uvalue="6" desc="Gray6"/>
+		<entry svalue="7" uvalue="7" desc="Natural"/>
+		<entry svalue="8" uvalue="8" desc="Natura2"/>
+		<entry svalue="9" uvalue="9" desc="Map1"/>
+		<entry svalue="10" uvalue="10" desc="Map2"/>
+		<entry svalue="11" uvalue="11" desc="Map3"/>
+		<!--<entry svalue="12" uvalue="12" desc="Map1" />
+		<entry svalue="13" uvalue="13" desc="Map2" />16APSK有效,但无这个参数值了-->
+	</enum>
+	<enum name="MatchFiltSwitch" desc="匹配滤波开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="升余弦"/>
+		<entry svalue="2" uvalue="2" desc="平方根升余弦"/>
+		<entry svalue="3" uvalue="3" desc="不成型"/>
+	</enum>
+	<enum name="PolarCance" desc="极化对消">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="打开"/>
+		<entry svalue="2" uvalue="2" desc="关闭"/>
+	</enum>
+	<enum name="SpectInvers" desc="频谱倒置">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="不倒置"/>
+		<entry svalue="2" uvalue="2" desc="倒置"/>
+		<entry svalue="3" uvalue="3" desc="自适应"/>
+	</enum>
+	<enum name="BlockCodeSelect" desc="分组码校验输出选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="不输出"/>
+		<entry svalue="2" uvalue="2" desc="输出"/>
+	</enum>
+	<enum name="OutputGroupLocat" desc="输出数据帧码组位置">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="帧头"/>
+		<entry svalue="2" uvalue="2" desc="帧尾"/>
+	</enum>
+	<enum name="ShapFiltCoeff" desc="成型滤波系数">
+		<entry svalue="1" uvalue="10" desc="0.10"/>
+		<entry svalue="2" uvalue="15" desc="0.15"/>
+		<entry svalue="3" uvalue="20" desc="0.20"/>
+		<entry svalue="4" uvalue="25" desc="0.25"/>
+		<entry svalue="5" uvalue="30" desc="0.30"/>
+		<entry svalue="6" uvalue="35" desc="0.35"/>
+		<entry svalue="7" uvalue="40" desc="0.40"/>
+		<entry svalue="8" uvalue="45" desc="0.45"/>
+		<entry svalue="9" uvalue="50" desc="0.50"/>
+		<entry svalue="10" uvalue="55" desc="0.55"/>
+		<entry svalue="11" uvalue="60" desc="0.60"/>
+		<entry svalue="12" uvalue="65" desc="0.65"/>
+		<entry svalue="13" uvalue="70" desc="0.70"/>
+		<entry svalue="14" uvalue="75" desc="0.75"/>
+		<entry svalue="15" uvalue="80" desc="0.80"/>
+		<entry svalue="16" uvalue="85" desc="0.85"/>
+		<entry svalue="17" uvalue="90" desc="0.90"/>
+		<entry svalue="18" uvalue="95" desc="0.95"/>
+		<entry svalue="19" uvalue="100" desc="1.00"/>
+	</enum>
+</enums>

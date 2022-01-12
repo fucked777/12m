@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WorkSystems station="4426">
+	<CK>
+		<WorkSystem id="1" desc="S标准TTC" maxdp="2"/>
+		<WorkSystem id="2" desc="S扩二" maxdp="4"/>
+		<WorkSystem id="3" desc="Ka扩二" maxdp="4"/>
+		<WorkSystem id="14" desc="扩跳" maxdp="2"/>
+	</CK>
+	<DT>
+		<WorkSystem id="4" desc="X低速" maxdp="2"/>
+		<WorkSystem id="5" desc="Ka低速" maxdp="2"/>
+		<WorkSystem id="6" desc="Ka高速" maxdp="2"/>
+	</DT>
+</WorkSystems>

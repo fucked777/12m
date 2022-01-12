@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="TSCS" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="DevStatus" desc="设备状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="PowerStatus" desc="设备电源状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="关电:Y"/>
+		<entry svalue="2" uvalue="2" desc="开电:G"/>
+	</enum>
+	<enum name="ControlMode" desc="监控方式">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="LanchFreqChanState" desc="射频输出1通道状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="Ka测控上行"/>
+		<entry svalue="2" uvalue="2" desc="Ka低速数传上行"/>
+		<entry svalue="3" uvalue="3" desc="S下行"/>
+		<entry svalue="4" uvalue="4" desc="X下行"/>
+		<entry svalue="5" uvalue="5" desc="Ka下行"/>
+		<entry svalue="6" uvalue="6" desc="Ka测控上行本振"/>
+		<entry svalue="7" uvalue="7" desc="Ka低速数传上行本振"/>
+		<entry svalue="8" uvalue="8" desc="X下行本振"/>
+		<entry svalue="9" uvalue="9" desc="Ka测控及跟踪下行本振"/>
+		<entry svalue="10" uvalue="10" desc="Ka低速及跟踪下行本振"/>
+		<entry svalue="11" uvalue="11" desc="Ka高速下行本振"/>
+		<entry svalue="12" uvalue="12" desc="10MHz频率源"/>
+	</enum>
+	<enum name="TSig" desc="测试信号">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="Ka测控上行"/>
+		<entry svalue="2" uvalue="2" desc="Ka低速数传上行"/>
+		<entry svalue="3" uvalue="3" desc="S下行"/>
+		<entry svalue="4" uvalue="4" desc="X下行"/>
+		<entry svalue="5" uvalue="5" desc="Ka下行"/>
+		<entry svalue="6" uvalue="6" desc="Ka测控上行本振"/>
+		<entry svalue="7" uvalue="7" desc="Ka低速数传上行本振"/>
+		<entry svalue="8" uvalue="8" desc="X下行本振"/>
+		<entry svalue="9" uvalue="9" desc="Ka测控及跟踪下行本振"/>
+		<entry svalue="10" uvalue="10" desc="Ka低速及跟踪下行本振"/>
+		<entry svalue="11" uvalue="11" desc="Ka高速下行本振"/>
+		<entry svalue="12" uvalue="12" desc="10MHz频率源"/>
+	</enum>
+</enums>

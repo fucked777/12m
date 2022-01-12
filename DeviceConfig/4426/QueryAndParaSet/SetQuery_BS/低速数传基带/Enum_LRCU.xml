@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="LRCU" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="SendDataSymbol" desc="送数标识">
+		<entry svalue="1" uvalue="1" desc="送数:G"/>
+		<entry svalue="2" uvalue="2" desc="停送:Y"/>
+	</enum>
+	<enum name="PickFrameType" desc="挑帧类型">
+		<entry svalue="1" uvalue="1" desc="虚拟信道"/>
+		<entry svalue="2" uvalue="2" desc="实时/回放标志"/>
+		<entry svalue="3" uvalue="3" desc="虚拟信道且实时/回放标志"/>
+	</enum>
+</enums>

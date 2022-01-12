@@ -1,0 +1,109 @@
+QTabBar::tab {
+height: 30px;
+color: #303133;
+background-color: white;
+border: 1px solid #e4e7ed;
+border-bottom: none;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+QTabBar::tab:disabled {
+background-color: rgb(204,204,204);
+border-bottom: 2px solid rgb(204,204,204);
+}
+
+QTabBar::tab:hover {
+color: #409eff;
+}
+
+QTabBar::tab:selected {
+color: #409eff;
+border-bottom: 2px solid #409eff;
+}
+
+.QGroupBox,.MyGroupBox{
+	font: 12pt;
+	font-weight:bold;
+	border:2px solid #C0DCF2;
+	border-radius:5px;
+	margin-top:10px;
+	margin-left:5px;
+}
+.QGroupBox::title,.MyGroupBox::title{
+	subcontrol-origin:margin;
+	subcontrol-position :top left;
+	position:-6 10px;
+	font-size:18pt;
+	left:10px;
+}
+
+QPushButton {
+color:white;
+border-radius: 6px;
+min-width: 80px;
+min-height: 30px;
+}
+                        
+QPushButton:enabled {
+background-color: #409eff;
+}
+
+QPushButton:disabled {
+background-color: #909399;
+}
+
+QPushButton:hover {
+background-color: #66b1ff;
+}
+
+QPushButton:pressed {
+background-color: #409eff;
+}
+
+QToolTip {
+background-color: white;
+border: 2px solid white;
+color: black;
+}
+
+/*
+QScrollBar:vertical {
+width: 6px;
+background-color: transparent;
+margin: 16px 0 16px 0;
+}*/
+
+QScrollBar::handle:vertical {
+background: #dddee0;
+min-height: 16px;
+border-radius: 2px;
+}
+						
+QScrollBar::handle:vertical:hover {
+background: #c7c9cc;
+}
+						
+QScrollBar::add-line:vertical {
+background-color: red;
+height: 0px;
+}
+						
+QScrollBar::sub-line:vertical {
+background-color: red;
+height: 0px;
+}
+
+QLabel,QLineEdit,QTextEdit,QComboBox,QRadioButton,QSpinBox,QDoubleSpinBox ,QDateTimeEdit,QCheckBox{
+    font: 11pt;
+    padding: 2px;
+}
+
+/*TextColor:#386487*/
+/*PanelColor:#EAF7FF*/
+/*BorderColor:#C0DCF2*/
+/*NormalColorStart:#DEF0FE */
+/*NormalColorEnd:#C0DEF6*/
+/*DarkColorStart:#F2F9FF */
+/*DarkColorEnd:#DAEFFF*/
+/*HighColor:#00BB9E*/

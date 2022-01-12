@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="RU" ModeType="0x04" edition="1.1.1.1">
+    <enum name="LockIndicat" desc="锁定指示">
+        <entry svalue="0" uvalue="0" desc="无此参数"/>
+        <entry svalue="1" uvalue="1" desc="锁定:G"/>
+        <entry svalue="2" uvalue="2" desc="失锁:R"/>
+    </enum>
+    <enum name="TargetType" desc="目标类型">
+        <entry svalue="0" uvalue="0" desc="无此参数"/>
+        <entry svalue="1" uvalue="1" desc="非JB-8卫星"/>
+        <entry svalue="2" uvalue="2" desc="JB-8主星"/>
+        <entry svalue="3" uvalue="3" desc="JB-8副星1"/>
+        <entry svalue="4" uvalue="4" desc="JB-8副星2"/>
+    </enum>
+    <enum name="WhetCodeUsed" desc="测站号使用">
+        <entry svalue="0" uvalue="0" desc="无此参数"/>
+        <entry svalue="1" uvalue="1" desc="使用"/>
+        <entry svalue="2" uvalue="2" desc="不使用"/>
+    </enum>
+    <enum name="CRCFrame" desc="CRC校验">
+        <entry svalue="0" uvalue="0" desc="无此参数"/>
+        <entry svalue="1" uvalue="1" desc="有"/>
+        <entry svalue="2" uvalue="2" desc="无"/>
+    </enum>
+    <enum name="DownFreame" desc="下行幀RP">
+        <entry svalue="0" uvalue="0" desc="无此参数"/>
+        <entry svalue="1" uvalue="1" desc="有"/>
+        <entry svalue="2" uvalue="2" desc="无"/>
+    </enum>
+    <enum name="SoftAmbResol" desc="解模糊">
+        <entry svalue="0" uvalue="0" desc="无此参数"/>
+        <entry svalue="1" uvalue="1" desc="基带解"/>
+        <entry svalue="2" uvalue="2" desc="基带不解"/>
+    </enum>
+    <enum name="TDistPredMethod" desc="距离预报">
+        <entry svalue="0" uvalue="0" desc="无此参数"/>
+        <entry svalue="1" uvalue="1" desc="手动"/>
+        <entry svalue="2" uvalue="2" desc="轨道根数"/>
+        <entry svalue="3" uvalue="3" desc="DTE弹道数据"/>
+    </enum>
+    <enum name="WorkStation" desc="工作站数目">
+        <entry svalue="1" uvalue="1" desc="1"/>
+        <entry svalue="2" uvalue="2" desc="2"/>
+        <entry svalue="3" uvalue="3" desc="3"/>
+        <entry svalue="4" uvalue="4" desc="4"/>
+    </enum>
+</enums>

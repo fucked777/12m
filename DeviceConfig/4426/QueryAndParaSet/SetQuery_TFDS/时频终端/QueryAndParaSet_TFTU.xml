@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="TFTU" ModeType="0xFFFF" desc="时频终端单元" flag="1001">
+	<result MessageType="0x0000F104">
+		<field pid="1" id="ControlMode" desc="监控方式" dataType="uint8" displayFormat="enum|ControlMode" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="2" id="SyncStatus" desc="时间同步状态" dataType="uint" displayFormat="enum|TimeStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="3" id="Year" desc="时间:年" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="4" id="Month" desc="时间:月" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="5" id="Day" desc="时间:日" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="6" id="Hour" desc="时间:时" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="7" id="Minute" desc="时间:分" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="8" id="Second" desc="时间:秒" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="9" id="Msec" desc="时间:毫秒" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="10" id="SignChoose" desc="频标选择" dataType="uint" displayFormat="enum|SignChoose" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="11" id="TimeZone" desc="时区" dataType="uint" displayFormat="enum|TimeZone" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="12" id="BCodeStandard" desc="B码标准" dataType="uint" displayFormat="enum|BCodeStandard" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="13" id="UseGPSSateNum" desc="GPS卫星数" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="14" id="UseBDSateNum" desc="北斗卫星数" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="15" id="UseCountNum" desc="卫星总数" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="16" id="TimeDeviation" desc="时间偏差" dataType="int" displayFormat="double" initValue="" minValue="-999999.9" maxValue="999999.9" step="0.1" unit="us"/>
+		
+		<field pid="101" id="TimeMethods" desc="时间同步方式" dataType="uint" displayFormat="enum|TimeSyncMethods" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="102" id="YearR" desc="时间:年" dataType="uint" displayFormat="UInt32" initValue="" minValue="2010" maxValue="2099" step="" unit=""/>
+		<field pid="103" id="MonthR" desc="时间:月" dataType="uint" displayFormat="UInt32" initValue="" minValue="1" maxValue="12" step="" unit=""/>
+		<field pid="104" id="DayR" desc="时间:日" dataType="uint" displayFormat="UInt32" initValue="" minValue="1" maxValue="31" step="" unit=""/>
+		<field pid="105" id="HourR" desc="时间:时" dataType="uint" displayFormat="UInt32" initValue="" minValue="0" maxValue="23" step="" unit=""/>
+		<field pid="106" id="MinuteR" desc="时间:分" dataType="uint" displayFormat="UInt32" initValue="" minValue="0" maxValue="59" step="" unit=""/>
+		<field pid="107" id="SecondR" desc="时间:秒" dataType="uint" displayFormat="UInt32" initValue="" minValue="0" maxValue="59" step="" unit=""/>
+		<field pid="108" id="MsecR" desc="时间:毫秒" dataType="uint" displayFormat="UInt32" initValue="" minValue="0" maxValue="999" step="" unit=""/>
+		<field pid="109" id="SignChooseR" desc="频标选择" dataType="uint" displayFormat="enum|FreqSignChoose" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="110" id="TimeZoneR" desc="时区选择" dataType="uint" displayFormat="enum|TimeZone" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="111" id="BCodeStandardR" desc="B码标准" dataType="uint" displayFormat="enum|BCodeStandard" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="112" id="TimeDeviationR" desc="时间偏差" dataType="int" displayFormat="double" initValue="0" minValue="-999999" maxValue="999999" step="0.1" unit="us"/>
+	</result>
+</cmd>

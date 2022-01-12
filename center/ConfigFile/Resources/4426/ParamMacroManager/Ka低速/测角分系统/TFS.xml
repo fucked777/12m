@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device>
+	<unit unitID="2" unitName="天线控制">
+		<field pid="105" id="ServoBandwidth" desc="伺服带宽" dataType="uint8" displayFormat="enum|ServoBandwidth" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="101" id="TargetAcqbyante" desc="天线捕获目标方式" dataType="uint8" displayFormat="enum|TargetAcqbyante" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="102" id="DeliveryMode" desc="送数方式" dataType="uint8" displayFormat="enum|DeliveryMode" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="103" id="CombNumb" desc="选送数开始俯仰角" dataType="int" displayFormat="double" initValue="" minValue="0" maxValue="90" step="0.001" unit="°"/>
+		<field pid="104" id="SystemWorkMode" desc="选送数停止俯仰角" dataType="int" displayFormat="double" initValue="" minValue="0" maxValue="90" step="0.001" unit="°"/>
+		<field pid="106" id="ShaftErrorCalMeth" desc="轴系误差标校" dataType="uint8" displayFormat="enum|ShaftErrorCalMeth" initValue="" minValue="" maxValue="" step="" unit=""/>
+	</unit>
+</device>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 串口设备都使用点对点通信方式 moxa设置组播不会-->
+<CommunicationInfo>
+	<Group IP="192.20.1.14" RecvDataDesModule="ServerDeviceProcessService">
+		<DevItem ID="0x1001" DesAddress="224.20.2.3" RecvPort="12346" SendPort="12345" Type="UDPGB" Desc="ACU"/>
+
+		<DevItem ID="0x4001" DesAddress="225.20.1.131" RecvPort="11131" SendPort="1131" Type="UDPGB" Desc="测控基带A"/>
+		<DevItem ID="0x4002" DesAddress="225.20.1.133" RecvPort="11133" SendPort="1133" Type="UDPGB" Desc="测控基带B"/>
+		<DevItem ID="0x4401" DesAddress="225.20.1.136" RecvPort="11136" SendPort="1136" Type="UDPGB" Desc="伪码服务器A"/>
+		<DevItem ID="0x4402" DesAddress="225.20.1.138" RecvPort="11138" SendPort="1138" Type="UDPGB" Desc="伪码服务器B"/>
+		<DevItem ID="0x4101" DesAddress="225.20.1.141" RecvPort="11141" SendPort="1141" Type="UDPGB" Desc="高速数传基带A"/>
+		<DevItem ID="0x4102" DesAddress="225.20.1.143" RecvPort="11143" SendPort="1143" Type="UDPGB" Desc="高速数传基带B"/>
+		<DevItem ID="0x4103" DesAddress="225.20.1.145" RecvPort="11145" SendPort="1145" Type="UDPGB" Desc="高速数传基带C"/>
+		
+		<DevItem ID="0x5001" DesAddress="225.20.1.21" RecvPort="11021" SendPort="1021" Type="UDPGB" Desc="时频终端-A"/>
+		
+		<DevItem ID="0x5002" DesAddress="225.20.1.22" RecvPort="11022" SendPort="1022" Type="UDPGB" Desc="时频终端-B"/>
+		<DevItem ID="0x6501" DesAddress="225.20.1.86" RecvPort="11086" SendPort="1086" Type="UDPGB" Desc="接收测试开关网络（前端）"/>
+		<DevItem ID="0x6502" DesAddress="225.20.1.93" RecvPort="11093" SendPort="1093" Type="UDPGB" Desc="接收测试开关网络（后端）"/>
+		<DevItem ID="0x6001" DesAddress="225.20.1.81" RecvPort="11081" SendPort="1081" Type="UDPGB" Desc="联试应答机终端"/>
+		<DevItem ID="0x6002" DesAddress="225.20.1.80" RecvPort="11080" SendPort="1080" Type="UDPGB" Desc="联试应答机终端(Kt)"/>
+		<DevItem ID="0x6101" DesAddress="225.20.1.82" RecvPort="11082" SendPort="1082" Type="UDPGB" Desc="X频段射频模拟源"/>
+		<DevItem ID="0x6201" DesAddress="225.20.1.83" RecvPort="11083" SendPort="1083" Type="UDPGB" Desc="Ka频段射频模拟源"/>
+		<DevItem ID="0x6601" DesAddress="225.20.1.87" RecvPort="11087" SendPort="1087" Type="UDPGB" Desc="后端测试开关网络"/>
+		<DevItem ID="0x6701" DesAddress="225.20.1.88" RecvPort="11088" SendPort="1088" Type="UDPGB" Desc="测试计算机"/>
+		<DevItem ID="0x8001" DesAddress="225.20.1.51" RecvPort="11051" SendPort="1051" Type="UDPGB" Desc="DTE-A"/>
+		<DevItem ID="0x8101" DesAddress="225.20.1.41" RecvPort="11041" SendPort="1041" Type="UDPGB" Desc="存储转发A"/>
+		<DevItem ID="0x8102" DesAddress="225.20.1.43" RecvPort="11043" SendPort="1043" Type="UDPGB" Desc="存储转发B"/>
+		<DevItem ID="0x8103" DesAddress="225.20.1.45" RecvPort="11045" SendPort="1045" Type="UDPGB" Desc="存储转发C"/>
+	</Group>
+	<Group IP="192.20.3.14" RecvDataDesModule="ServerDeviceProcessService">
+		<DevItem ID="0x2001" DesAddress="192.20.3.71" RecvPort="13071" SendPort="3071" Type="UDPP2P" Desc="高功放A"/>
+		<DevItem ID="0x2002" DesAddress="192.20.3.72" RecvPort="13072" SendPort="3072" Type="UDPP2P" Desc="高功放B"/>
+		<DevItem ID="0x2301" DesAddress="192.20.3.73" RecvPort="13073" SendPort="3073" Type="UDPP2P" Desc="功放切换开关"/>
+		<!--S射频开关网络  NPort 第7个口-->
+		<DevItem ID="0x3001" DesAddress="192.20.3.81" RecvPort="3081" SendPort="3081" Type="UDPP2P" Desc="S射频开关网络"/>
+		<DevItem ID="0x4201" DesAddress="225.20.3.131" RecvPort="13131" SendPort="3131" Type="UDPGB" Desc="跟踪基带A"   />
+        <DevItem ID="0x4202" DesAddress="225.20.3.133" RecvPort="13133" SendPort="3133" Type="UDPGB" Desc="跟踪基带B"   />
+		<DevItem ID="0x2101" DesAddress="225.20.3.74" RecvPort="13074" SendPort="3074" Type="UDPGB" Desc="发射射频开关网络"/>
+		<!--8选1开关网络  NPort 第10个口-->
+		<DevItem ID="0x6301" DesAddress="192.20.3.81" RecvPort="1084" SendPort="1084" Type="UDPP2P" Desc="8选1开关网络"/>
+		<!--宽带测试开关网络  NPort 第11个口-->
+		<DevItem ID="0x6401" DesAddress="192.20.3.81" RecvPort="1085" SendPort="1085" Type="UDPP2P" Desc="宽带测试开关网络(中心体)"/>
+		<DevItem ID="0x3101" DesAddress="225.20.3.82" RecvPort="13082" SendPort="3082" Type="UDPGB" Desc="S射频开关矩阵(中心体)"/>
+		<!--X射频开关网络  NPort 第8个口-->
+		<DevItem ID="0x3201" DesAddress="192.20.3.81" RecvPort="3083" SendPort="3083" Type="UDPP2P" Desc="X频段射频开关网络"/>
+		<!--moxa X跟踪下变频器A 使用的第6个口 联试 波特率 9600 可行，115200不行 -->
+		<DevItem ID="0x3301" DesAddress="192.20.3.81" RecvPort="3084" SendPort="3084" Type="UDPP2P" Desc=" X频段跟踪下变频器A(中心体)）"/>
+		<!--moxa X跟踪下变频器B 使用的第14个口 联试 波特率 9600 可行，115200不行 -->
+		<DevItem ID="0x3302" DesAddress="192.20.3.81" RecvPort="3085" SendPort="3085" Type="UDPP2P" Desc=" X频段跟踪下变频器B(中心体)）"/>
+		<DevItem ID="0x3401" DesAddress="225.20.3.101" RecvPort="13101" SendPort="3101" Type="UDPGB" Desc="X频段和路1.2G下变频器A"/>
+		<DevItem ID="0x3402" DesAddress="225.20.3.102" RecvPort="13102" SendPort="3102" Type="UDPGB" Desc="X频段和路1.2G下变频器B"/>
+		<DevItem ID="0x3403" DesAddress="225.20.3.103" RecvPort="13103" SendPort="3103" Type="UDPGB" Desc="X频段和路1.2G下变频器C"/>
+		<DevItem ID="0x3501" DesAddress="225.20.3.100" RecvPort="13100" SendPort="3100" Type="UDPGB" Desc="X频段8×8射频开关矩阵"/>
+		<!--KA射频开关网络  NPort 第5个口-->
+		<DevItem ID="0x3601" DesAddress="192.20.3.81" RecvPort="3086" SendPort="3086" Type="UDPP2P" Desc="Ka频段射频开关网络"/>
+		<!-- 9600 L频段切换开关网络串口速率可行 NPort 第9个口-->
+		<DevItem ID="0x3A01" DesAddress="192.20.3.81" RecvPort="3089" SendPort="3089" Type="UDPP2P" Desc="L频段切换开关网络"/>
+		<!-- 串口速率，Ka跟踪下变频器A 固定是115200 使用的第12个口-->
+		<DevItem ID="0x3701" DesAddress="192.20.3.81" RecvPort="3087" SendPort="3087" Type="UDPP2P" Desc="Ka跟踪下变频器A"/>
+		<!-- 串口速率，Ka跟踪下变频器B 固定是115200 使用的第13个口-->
+		<DevItem ID="0x3702" DesAddress="192.20.3.81" RecvPort="3088" SendPort="3088" Type="UDPP2P" Desc="Ka跟踪下变频器B"/>
+		<DevItem ID="0x3801" DesAddress="225.20.3.107" RecvPort="13107" SendPort="3107" Type="UDPGB" Desc="Ka频段和路1.2G下变频器A"/>
+		<DevItem ID="0x3802" DesAddress="225.20.3.108" RecvPort="13108" SendPort="3108" Type="UDPGB" Desc="Ka频段和路1.2G下变频器B"/>
+		<DevItem ID="0x3803" DesAddress="225.20.3.109" RecvPort="13109" SendPort="3109" Type="UDPGB" Desc="Ka频段和路1.2G下变频器C"/>
+		
+		<DevItem ID="0x4301" DesAddress="225.20.3.138" RecvPort="13138" SendPort="3138" Type="UDPGB" Desc="角跟踪切换"/>
+		<!--
+        <DevItem ID="0x3802" DesAddress="225.20.3.105" RecvPort="13105" SendPort="3105" Type="UDPGB" Desc="Ka频段和路1.2G下变频器D(备用)"   />
+		-->
+		<DevItem ID="0x3901" DesAddress="225.20.3.106" RecvPort="13106" SendPort="3106" Type="UDPGB" Desc="Ka射频分路组合"/>
+		<DevItem ID="0x3B01" DesAddress="225.20.3.110" RecvPort="13110" SendPort="3110" Type="UDPGB" Desc="1.2G中频均衡放大器（X）"/>
+		<DevItem ID="0x3B02" DesAddress="225.20.3.112" RecvPort="13112" SendPort="3112" Type="UDPGB" Desc="1.2G中频均衡放大器（Ka）"/>
+		<DevItem ID="0x3C01" DesAddress="225.20.3.111" RecvPort="13111" SendPort="3111" Type="UDPGB" Desc="数传中频开关矩阵"/>
+		<!--moxa 使用的第1个口 -->
+		<DevItem ID="0x3D01" DesAddress="192.20.3.81" RecvPort="3026" SendPort="3026" Type="UDPP2P" Desc="前端光端机1-X（中心体）"/>
+		<!--moxa 使用的第2个口 -->
+		<DevItem ID="0x3D02" DesAddress="192.20.3.81" RecvPort="3027" SendPort="3027" Type="UDPP2P" Desc="前端光端机2-Ka（中心体）"/>
+		<!--moxa 使用的第3个口 -->
+		<DevItem ID="0x3D03" DesAddress="192.20.3.81" RecvPort="3028" SendPort="3028" Type="UDPP2P" Desc="前端测试光端机3（中心体）"/>
+		<!-- 自带的NPort -->
+		<DevItem ID="0x3D04" DesAddress="192.20.3.29" RecvPort="3029" SendPort="3029" Type="UDPP2P" Desc="后端光端机1-X（机房）"/>
+		<!-- 自带的NPort-->
+		<DevItem ID="0x3D05" DesAddress="192.20.3.30" RecvPort="3030" SendPort="3030" Type="UDPP2P" Desc="后端光端机2-Ka（机房）"/>
+		<!-- 自带的NPort-->
+		<DevItem ID="0x3D06" DesAddress="192.20.3.31" RecvPort="3031" SendPort="3031" Type="UDPP2P" Desc="后端测试光端机3（机房）"/>
+		<!-- 自带的NPort-->
+		<DevItem ID="0x3D07" DesAddress="192.20.3.32" RecvPort="3032" SendPort="3032" Type="UDPP2P" Desc="前端光端机4-10M（塔基）"/>
+		<!-- 自带的NPort-->
+		<DevItem ID="0x3D08" DesAddress="192.20.3.33" RecvPort="3033" SendPort="3033" Type="UDPP2P" Desc="前端光端机5-时码（塔基）"/>
+		<!-- 自带的NPort-->
+		<DevItem ID="0x3D09" DesAddress="192.20.3.34" RecvPort="3034" SendPort="3034" Type="UDPP2P" Desc="后端光端机4-10M（机房）"/>
+		<!-- 自带的NPort-->
+		<DevItem ID="0x3D0A" DesAddress="192.20.3.35" RecvPort="13035" SendPort="3035" Type="UDPP2P" Desc="后端光端机5-时码（机房）"/>
+
+		<DevItem ID="0x5101" DesAddress="225.20.3.21" RecvPort="13021" SendPort="3021" Type="UDPGB" Desc="频标分配器-A"/>
+		<DevItem ID="0x5102" DesAddress="225.20.3.22" RecvPort="13022" SendPort="3022" Type="UDPGB" Desc="频标分配器-B"/>
+		<DevItem ID="0x5201" DesAddress="225.20.3.23" RecvPort="13023" SendPort="3023" Type="UDPGB" Desc="时码分配器-A"/>
+		<DevItem ID="0x5202" DesAddress="225.20.3.24" RecvPort="13024" SendPort="3024" Type="UDPGB" Desc="时码分配器-B"/>
+		<!--moxa 使用的第5个口 -->
+		<DevItem ID="0x5301" DesAddress="192.20.3.81" RecvPort="3025" SendPort="3025" Type="UDPP2P" Desc="中心体频标分配器"/>
+		<DevItem ID="0x7001" DesAddress="225.20.3.121" RecvPort="13121" SendPort="3121" Type="UDPGB" Desc="测控数字化前端A"/>
+		<DevItem ID="0x7002" DesAddress="225.20.3.122" RecvPort="13122" SendPort="3122" Type="UDPGB" Desc="测控数字化前端B"/>
+		<DevItem ID="0x7101" DesAddress="225.20.3.123" RecvPort="13123" SendPort="3123" Type="UDPGB" Desc="跟踪数字化前端A"/>
+		<DevItem ID="0x7102" DesAddress="225.20.3.124" RecvPort="13124" SendPort="3124" Type="UDPGB" Desc="跟踪数字化前端B"/>
+	</Group>
+	<Group IP="192.20.1.14" RecvDataDesModule="ServerAutoRunTask4424Service" desc="高轨的通讯参数">
+		<DevItem ID="0xFE01" DesAddress="225.0.1.27" RecvPort="33128" SendPort="33127" Type="UDPGB" DevProtocolCheck="false" Desc="服务器发送数据模块(中心)"/>
+	</Group>
+	<!-- 本机的通讯ID -->
+	<LocalCommunicationAddr>
+		<BaseID>0x26</BaseID>
+		<StationID>0x42</StationID>
+		<DeviceID>0x24</DeviceID>
+		<ExtenName>0x00</ExtenName>
+		<ExtenNumb>0x01</ExtenNumb>
+	</LocalCommunicationAddr>
+</CommunicationInfo>

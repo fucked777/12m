@@ -1,0 +1,159 @@
+<GridLayout>
+	<GroupBox row="0" col="0" rowSpan="1" columnSpan="10" text="中频接收">
+		<GridLayout>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="左旋"/>
+			<Widget row="3" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="右旋"/>
+			<Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="载波"/>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="载波" unitId="2" targetId="1" paramId="WX_TeleCarrLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="3" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="载波" unitId="2" targetId="1" paramId="WX_TelePNCode">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="位同步"/>
+			<Widget row="2" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="帧同步"/>
+			<Widget row="1" col="2" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" text="位同步" unitId="6" targetId="1" paramId="TeleStatPositLockIns">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="3" col="2" rowSpan="1" columnSpan="1" Align="Center" type="LEDStatusLabel" text="帧同步" unitId="6" targetId="1" paramId="TeleFramPositLockIns">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="0" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="AGC电压(V)"/>
+			<Widget row="1" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="AGC电压" unitId="2" targetId="1" paramId="WX_TeleAGCVolLeft"/>
+			<Widget row="3" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="AGC电压" unitId="2" targetId="1" paramId="WX_TeleAGCVolRight"/>
+			<Widget row="0" col="4" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="接收C/N0(dBHz)"/>
+			<Widget row="1" col="4" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="接收C/N0" unitId="2" targetId="1" paramId="WX_TeleCN0Left"/>
+			<Widget row="3" col="4" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="接收C/N0" unitId="2" targetId="1" paramId="WX_TeleCN0Right"/>			
+			<Widget row="0" col="5" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="星锁"/>
+			<Widget row="1" col="5" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="星锁" unitId="1" targetId="1" paramId="WX_MeaCarrLock">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="1" col="0" rowSpan="2" columnSpan="2" text="测距测速">
+		<GridLayout>
+			<Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="距离值(m)"/>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="速度(m/s)"/>
+			<Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="距离值" unitId="4" targetId="1" paramId="WX_MeasuredDistValue"/>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="速度" unitId="2" targetId="1" paramId="WX_SpeedTest"/>
+			<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="左旋多普勒频率(kHz)"/>
+			<Widget row="3" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="右旋多普勒频率(kHz)"/>
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="左旋多普勒频率" unitId="2" targetId="1" paramId="WX_MeasDopFreqLeft" minWidth="80"/>
+			<Widget row="3" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" text="右旋多普勒频率" unitId="2" targetId="1" paramId="WX_MeasDopFreqRight" minWidth="80"/>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="1" col="2" rowSpan="2" columnSpan="4" text="扩频遥控">
+		<GridLayout>
+			<Widget row="4" col="0" rowSpan="1" columnSpan="2" Align="Center" type="NameLabel" text="发令计数"/>
+			<Widget row="5" col="0" rowSpan="1" columnSpan="2" Align="Center" type="MultiNumberStatusLabel" targetId="1" unitId="1" defaultText="-/-/-/-" minWidth="100">
+				<Status targetId="1" unitId="1" paramId="WX_PackNumb"/>
+				<Status targetId="1" unitId="1" paramId="WX_RemoteNumb"/>
+				<Status targetId="1" unitId="1" paramId="WX_SmallNumb"/>
+				<Status targetId="1" unitId="1" paramId="WX_BarsNumb"/>
+			</Widget>
+			<Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="小环锁定"/>
+			<Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="工作期"/>
+			<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="小环比对"/>
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="自环比对"/>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="小环锁定" unitId="5" targetId="2" paramId="WX_LockingReceIver">
+				<Item value="1" desc="锁定" ledColor="green" toolTip="锁定"/>
+				<Item value="2" desc="失锁" ledColor="red" toolTip="失锁"/>
+			</Widget>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="工作期" unitId="5" targetId="2" paramId="WX_TeleWorkPeriod">
+				<Item value="1" desc="正常" ledColor="green" toolTip="正常"/>
+				<Item value="2" desc="结束" ledColor="yellow" toolTip="结束"/>
+			</Widget>
+			<Widget row="3" col="0" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="小环比对" unitId="5" targetId="2" paramId="WX_SmallResult">
+				<Item value="1" desc="正常" ledColor="green" toolTip="正常"/>
+				<Item value="2" desc="异常" ledColor="red" toolTip="异常"/>
+			</Widget>
+			<Widget row="3" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="自环比对" unitId="5" targetId="2" paramId="WX_SelfCompResult">
+				<Item value="1" desc="正常" ledColor="green" toolTip="正常"/>
+				<Item value="2" desc="异常" ledColor="red" toolTip="异常"/>
+			</Widget>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="1" col="6" rowSpan="2" columnSpan="4" text="上行调制">
+		<GridLayout>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="测量"/>
+			<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="遥控"/>
+			<Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="回零"/>
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="回零" unitId="3" targetId="1" paramId="WX_CL_CarrierToZero">
+				<Item value="1" desc="未回零" ledColor="yellow" toolTip="未回零"/>
+				<Item value="2" desc="回零" ledColor="green" toolTip="回零"/>
+			</Widget>
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="回零" unitId="3" targetId="2" paramId="WX_YK_CarrierToZero">
+				<Item value="1" desc="未回零" ledColor="yellow" toolTip="未回零"/>
+				<Item value="2" desc="回零" ledColor="green" toolTip="回零"/>
+			</Widget>
+			<Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="多普勒频偏(kHz)"/>
+			<Widget row="1" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="多普勒频偏" unitId="3" targetId="1" paramId="WX_CL_DoppPresFreq" minWidth="80"/>
+			<Widget row="2" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" desc="多普勒频偏" unitId="3" targetId="2" paramId="WX_YK_DoppPresFreq" minWidth="80"/>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="3" col="0" rowSpan="1" columnSpan="3" text="送数控制">
+		<GridLayout>
+			<Widget row="0" col="0" rowSpan="1" columnSpan="1" type="ComplexCheckBox" text="测速" desc="测速" unitId="1" targetId="1" paramId="WX_VelMeaTran" msgType="ProcessControl" id="1">
+				<ProcessControl cmdId="24" param="TaskIdent|1 DelCategory|4 DelivMode|2">
+					<ControlInfo paramId="DelivCtrl"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" type="ComplexCheckBox" text="测距" desc="测距" unitId="1" targetId="1" paramId="WX_DataTranStat" msgType="ProcessControl" id="2">
+				<ProcessControl cmdId="24" param="TaskIdent|1 DelCategory|2 DelivMode|2">
+					<ControlInfo paramId="DelivCtrl"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="2" col="0" rowSpan="1" columnSpan="1" type="ComplexCheckBox" text="遥测" desc="遥测" unitId="1" targetId="1" paramId="WX_DataFrameTranStat" msgType="ProcessControl" id="3">
+				<ProcessControl cmdId="24" param="TaskIdent|1 DelCategory|1 DelivMode|2">
+					<ControlInfo paramId="DelivCtrl"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="0" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" text="控制" id="4" childId="1" isControl="true" />
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" text="控制" id="5" childId="2" isControl="true" />
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" text="控制" id="6" childId="3" isControl="true" />
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="3" col="3" rowSpan="1" columnSpan="3" text="加调控制">
+		<GridLayout>			
+			<Widget row="0" col="0" rowSpan="1" columnSpan="1" type="ComplexCheckBox" text="遥伪" desc="遥伪" unitId="3" targetId="2" paramId="WX_YK_PNCodeAdd" msgType="UnitParam" id="1">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="2" targetId="2" >
+					<ControlInfo paramId="WX_YK_PNCodeAdd" targetId="2" />
+				</UnitParam>
+			</Widget>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="1" type="ComplexCheckBox" text="遥数" desc="遥数" unitId="3" targetId="2" paramId="WX_YK_DataTuning" msgType="UnitParam" id="2">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="2" targetId="2" >
+					<ControlInfo paramId="WX_YK_DataTuning" targetId="2" />
+				</UnitParam>
+			</Widget>			
+			<Widget row="2" col="0" rowSpan="1" columnSpan="1" type="ComplexCheckBox" text="测伪" desc="测伪" unitId="3" targetId="1" paramId="WX_CL_PNCodeAdd" msgType="UnitParam" id="3">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="1" targetId="1" >
+					<ControlInfo paramId="WX_CL_PNCodeAdd" targetId="1" />
+				</UnitParam>
+			</Widget>
+			<Widget row="3" col="0" rowSpan="1" columnSpan="1" type="ComplexCheckBox" text="测数" desc="测数" unitId="3" targetId="1" paramId="WX_CL_DataTuning" msgType="UnitParam" id="4">
+				<UnitParam unitId="3" position="MultiDataMap" validIdent="1" targetId="1" >
+					<ControlInfo paramId="WX_CL_DataTuning" targetId="1" />
+				</UnitParam>
+			</Widget>
+			<Widget row="0" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" text="控制" id="5" childId="1" isControl="true" />
+			<Widget row="1" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" text="控制" id="6" childId="2" isControl="true" />
+			<Widget row="2" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" text="控制" id="7" childId="3" isControl="true" />
+			<Widget row="3" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" text="控制" id="8" childId="4" isControl="true" />
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="3" col="6" rowSpan="1" columnSpan="4" text="存盘控制">
+		<GridLayout>
+			<Widget row="0" col="0" rowSpan="1" columnSpan="2" type="ComplexCheckBox" text="数据" desc="" unitId="1" targetId="1" paramId="WX_SaveState" msgType="ProcessControl" id="1" isKP="false">
+				<ProcessControl cmdId="27" param="TaskIdent|1">
+					<ControlInfo paramId="OperatCate"/>
+				</ProcessControl>
+			</Widget>
+			<Widget row="0" col="1" rowSpan="1" columnSpan="1" type="ComplexCheckBox" text="控制" id="2" childId="1" isControl="true" />
+		</GridLayout>
+	</GroupBox>
+</GridLayout>

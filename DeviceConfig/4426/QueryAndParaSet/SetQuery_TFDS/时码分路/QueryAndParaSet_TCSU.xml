@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="TCSU" ModeType="0xFFFF" desc="时码分路单元" flag="1001">
+	<result MessageType="0x0000F104">
+		<field pid="1" GroupId="status1" id="ControlMode" desc="监控方式" dataType="uint8" displayFormat="enum|ControlMode" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="2" GroupId="status1" id="ChooseStatus" desc="时码选择状态" dataType="uint" displayFormat="enum|CodeChoose" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<!--
+		<field pid="3" GroupId="status2" id="InputStatus1" desc="状态1" dataType="uint" displayFormat="LED|InputStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="4" GroupId="status3" id="InputStatus2" desc="状态2" dataType="uint" displayFormat="LED|InputStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+		-->
+		<field pid="3" GroupId="status2" id="InputStatus1" desc="状态1" dataType="bit:uint|1" displayFormat="LED|InputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="4" GroupId="status2" id="InputStatus2" desc="状态2" dataType="bit:uint|31" displayFormat="LED|InputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+
+        <field pid="5" GroupId="status3" id="OutputStatus1" desc="状态1" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="6" GroupId="status3" id="OutputStatus2" desc="状态2" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="7" GroupId="status3" id="OutputStatus3" desc="状态3" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="8" GroupId="status3" id="OutputStatus4" desc="状态4" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="9" GroupId="status3" id="OutputStatus5" desc="状态5" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="10" GroupId="status3" id="OutputStatus6" desc="状态6" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="11" GroupId="status3" id="OutputStatus7" desc="状态7" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="12" GroupId="status3" id="OutputStatus8" desc="状态8" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="13" GroupId="status3" id="OutputStatus9" desc="状态9" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="14" GroupId="status3" id="OutputStatus10" desc="状态10" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="15" GroupId="status3" id="OutputStatus11" desc="状态11" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="16" GroupId="status3" id="OutputStatus12" desc="状态12" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="17" GroupId="status3" id="OutputStatus13" desc="状态13" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="18" GroupId="status3" id="OutputStatus14" desc="状态14" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="19" GroupId="status3" id="OutputStatus15" desc="状态15" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="20" GroupId="status3" id="OutputStatus16" desc="状态16" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="21" GroupId="status3" id="OutputStatus17" desc="状态17" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="22" GroupId="status3" id="OutputStatus18" desc="状态18" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="23" GroupId="status3" id="OutputStatus19" desc="状态19" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="24" GroupId="status3" id="OutputStatus20" desc="状态20" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="25" GroupId="status3" id="OutputStatus21" desc="状态21" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="26" GroupId="status3" id="OutputStatus22" desc="状态22" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="27" GroupId="status3" id="OutputStatus23" desc="状态23" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="28" GroupId="status3" id="OutputStatus24" desc="状态24" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="29" GroupId="status3" id="OutputStatus25" desc="状态25" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="30" GroupId="status3" id="OutputStatus26" desc="状态26" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="31" GroupId="status3" id="OutputStatus27" desc="状态27" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="32" GroupId="status3" id="OutputStatus28" desc="状态28" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="33" GroupId="status3" id="OutputStatus29" desc="状态29" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="34" GroupId="status3" id="OutputStatus30" desc="状态30" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="35" GroupId="status3" id="OutputStatus31" desc="状态31" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="36" GroupId="status3" id="OutputStatus32" desc="状态32" dataType="bit:uint|1" displayFormat="LED|OutputStatus" initValue="" minValue="" maxValue="" step="" unit=""   />
+		
+		<field pid="101" id="InputChoose" desc="外时码输入选择" dataType="uint8" displayFormat="enum|CodeChoose" initValue="" minValue="" maxValue="" step="" unit=""/>
+	</result>
+	<layout>
+		<item id="status1" desc="公共参数" row="0" col="0" rowspan="1" colspan="1"/>
+		<item id="status2" desc="时码输入状态" row="0" col="1" rowspan="1" colspan="1"/>
+		<item id="status3" desc="时码输出状态" row="1" col="0" rowspan="1" colspan="2"/>
+	</layout>
+</cmd>

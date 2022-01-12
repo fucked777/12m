@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+require:查询数据包 ,response:响应数据包，result：上报数据包
+name:为字段名，对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码，data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度，如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+initValue为初始化值，
+length为标识长度
+ExtenType:分机类型
+SelfLoopNumb:自身循环N次
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时，在名称前面加数字进行排序，如1TargetNum
+cmdID:命令ID  与命令序号关联
+isShow:0表示界面不显示  1表示界面显示
+-->
+
+
+<cmd cmdID="109" ExtenType="TB" ModeType = "0x01" desc="角误差切换" flag="1001">
+	<request MessageType="0x0000F001">
+		<field pid="101" GroupId="set1" id="SF_BANDCHECK" desc="角误差A基带选择" dataType="uint8" displayFormat="enum|DeviceChoose" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="102" GroupId="set2" id="KAF_BANDCHECK" desc="角误差B基带选择" dataType="uint8" displayFormat="enum|DeviceChoose" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="103" GroupId="set3" id="KADTF_BANDCHECK" desc="角误差C基带选择" dataType="uint8" displayFormat="enum|DeviceChoose" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="104" GroupId="set1" id="baoliu" desc="保留" dataType="char|5" displayFormat="String" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		
+		<field pid="105" GroupId="set1" id="SF_FRAGCHECK" desc="角误差A频段切换" dataType="uint8" displayFormat="enum|ModeBAND" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="106" GroupId="set2" id="KAF_FRAGCHECK" desc="角误差B频段切换" dataType="uint8" displayFormat="enum|ModeBAND" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="107" GroupId="set3" id="KADTF_FRAGCHECK" desc="角误差C频段切换" dataType="uint8" displayFormat="enum|ModeBAND" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="108" GroupId="set2" id="baoliu" desc="保留" dataType="char|5" displayFormat="String" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>		
+
+		<field pid="109" GroupId="set1" id="JWC_BANDSIGNAL1" desc="角误差A模式选择" dataType="uint8" displayFormat="enum|ModeChoose" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="110" GroupId="set2" id="JWC_BANDSIGNAL2" desc="角误差B模式选择" dataType="uint8" displayFormat="enum|ModeChoose" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="111" GroupId="set3" id="JWC_BANDSIGNAL3" desc="角误差C模式选择" dataType="uint8" displayFormat="enum|ModeChoose" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="112" GroupId="set3" id="baoliu" desc="保留" dataType="char|5" displayFormat="String" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>		
+
+		<field pid="113" GroupId="set3" id="baoliu" desc="保留" dataType="char|64" displayFormat="String" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+	</request>
+
+    <layout>
+		<item id="set1" desc="S测控" row="0" col="0" rowspan="1" colspan="2"/>
+		<item id="set2" desc="Ka遥测" row="1" col="0" rowspan="1" colspan="2"/>
+		<item id="set3" desc="Ka数传" row="2" col="0" rowspan="1" colspan="2"/>
+	</layout>
+</cmd>

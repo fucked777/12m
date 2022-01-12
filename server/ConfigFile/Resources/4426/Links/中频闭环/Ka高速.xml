@@ -1,0 +1,20 @@
+<Mode name="Ka高速">
+	<if condition="GSJD1:1">
+		<Command deviceId="0x3301" modeId="0xFFFF" unitId="1" deviceName="L数传中频矩阵 L数传中频矩阵">
+			<Param id="ChooseConnect_1" value="5" name="高速基带1通道一 高速基带1模拟源"/>
+			<Param id="ChooseConnect_2" value="5" name="高速基带1通道二 高速基带1模拟源"/>
+		</Command>
+		<Command deviceId="0x4101" modeId="0xFFFF" cmdId="102" deviceName="高速基带 工作方式设置">
+			<Param id="WorkWay" value="9" name="工作方式 中频闭环"/>
+		</Command>
+	</if>
+	<if condition="GSJD1:2">
+		<Command deviceId="0x3301" modeId="0xFFFF" unitId="1" deviceName="L数传中频矩阵 L数传中频矩阵">
+			<Param id="ChooseConnect_3" value="6" name="高速基带2通道一 高速基带2模拟源"/>
+			<Param id="ChooseConnect_4" value="6" name="高速基带2通道二 高速基带2模拟源"/>
+		</Command>
+		<Command deviceId="0x4102" modeId="0xFFFF" cmdId="102" deviceName="高速基带 工作方式设置">
+			<Param id="WorkWay" value="9" name="工作方式 中频闭环"/>
+		</Command>
+	</if>
+</Mode>

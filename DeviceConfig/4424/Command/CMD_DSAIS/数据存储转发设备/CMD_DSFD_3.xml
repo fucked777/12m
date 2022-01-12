@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+require:查询数据包 ,response:响应数据包,result:上报数据包
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+initValue为初始化值,
+length为标识长度
+ExtenType:分机类型
+SelfLoopNumb:自身循环N次
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+cmdID:命令ID  与命令序号关联
+isShow:0表示界面不显示  1表示界面显示
+-->
+<cmd cmdID="3" ExtenType="DSFD" ModeType="0xFFFF" desc="数据发送控制命令" flag="1001" isShow="0">
+	<request MessageType="0x0000F001">
+		<field pid="101" id="SendCtrl" desc="发送控制" dataType="uint8" displayFormat="enum|SendCtrl" initValue="" minValue="" maxValue="" step="" unit="" isShow="1"/>
+		<field pid="102" id="CenterName" desc="中心名称" dataType="char|128" displayFormat="String" initValue="0" minValue="" maxValue="" step="" unit="" isShow="1"/>
+		<field pid="103" id="TaskCycle" desc="任务圈次" dataType="uint" displayFormat="UInt32" initValue="" minValue="" maxValue="" step="" unit="" isShow="1"/>
+		<field pid="104" id="TaskCode" desc="任务代号" dataType="char|6" displayFormat="String" initValue="0" minValue="" maxValue="" step="" unit="" isShow="1"/>
+		<field pid="105" id="StartTime" desc="任务开始时间" dataType="char|30" displayFormat="StrDateTime" initValue="" minValue="" maxValue="" step="" unit="" isShow="1"/>
+		<field pid="106" id="TEndTime" desc="任务结束时间" dataType="char|30" displayFormat="StrDateTime" initValue="" minValue="" maxValue="" step="" unit="" isShow="1"/>
+	</request>
+	<result MessageType="0x0000F101">
+		<field pid="1" id="SendStatus" desc="发送状态" dataType="uint8" displayFormat="enum|SendCtrl" initValue="" minValue="" maxValue="" step="" unit="" isShow="1"/>
+	</result>
+</cmd>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x02" modeID="0x9" cmdID="4" desc="基带校相结果人工修正">
+	<Triggers>
+		<Trigger id="XXType" desc="校相类型">
+			<TriggerValue value="1" desc="扫频校相">
+				<Receiver id="PointFreqNum" desc="点频总数" isEnable="1" values="1:1;5:5;9:9;17:17" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="单载波校相">
+				<Receiver id="PointFreqNum" desc="点频总数" isEnable="0" values="1:1" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

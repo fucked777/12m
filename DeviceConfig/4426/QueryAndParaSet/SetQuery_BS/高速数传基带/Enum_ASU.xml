@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="ASU" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="CarrierSwitch" desc="载波输出开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="加载"/>
+		<entry svalue="2" uvalue="2" desc="去载"/>
+	</enum>
+	<enum name="LevelCtrlMode" desc="输出电平控制方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="固定值"/>
+		<entry svalue="2" uvalue="2" desc="扫描(三角)"/>
+	</enum>
+	<enum name="LevelScannRange" desc="电平扫描范围">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="-5dBm~0dBm"/>
+		<entry svalue="2" uvalue="2" desc="-10dBm~0dBm"/>
+		<entry svalue="3" uvalue="3" desc="-15dBm~0dBm"/>
+		<entry svalue="4" uvalue="4" desc="-20dBm~0dBm"/>
+		<entry svalue="5" uvalue="5" desc="-25dBm~0dBm"/>
+		<entry svalue="6" uvalue="6" desc="-30dBm~0dBm"/>
+		<entry svalue="7" uvalue="7" desc="-35dBm~0dBm"/>
+		<entry svalue="8" uvalue="8" desc="-40dBm~0dBm"/>
+		<entry svalue="9" uvalue="9" desc="-45dBm~0dBm"/>
+		<entry svalue="10" uvalue="10" desc="-50dBm~0dBm"/>
+		<entry svalue="11" uvalue="11" desc="-55dBm~0dBm"/>
+		<entry svalue="12" uvalue="12" desc="-60dBm~0dBm"/>
+	</enum>
+	<enum name="AnalDopSwitch" desc="模拟多普勒开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="开"/>
+		<entry svalue="2" uvalue="2" desc="关"/>
+	</enum>
+	<enum name="ShapFiltSwitch" desc="成型滤波开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="升余弦"/>
+		<entry svalue="2" uvalue="2" desc="平方根升余弦"/>
+		<entry svalue="3" uvalue="3" desc="不成型"/>
+	</enum>
+	<enum name="ShapFiltCoeff" desc="成型滤波系数">
+		<entry svalue="1" uvalue="10" desc="0.10"/>
+		<entry svalue="2" uvalue="15" desc="0.15"/>
+		<entry svalue="3" uvalue="20" desc="0.20"/>
+		<entry svalue="4" uvalue="25" desc="0.25"/>
+		<entry svalue="5" uvalue="30" desc="0.30"/>
+		<entry svalue="6" uvalue="35" desc="0.35"/>
+		<entry svalue="7" uvalue="40" desc="0.40"/>
+		<entry svalue="8" uvalue="45" desc="0.45"/>
+		<entry svalue="9" uvalue="50" desc="0.50"/>
+		<entry svalue="10" uvalue="55" desc="0.55"/>
+		<entry svalue="11" uvalue="60" desc="0.60"/>
+		<entry svalue="12" uvalue="65" desc="0.65"/>
+		<entry svalue="13" uvalue="70" desc="0.70"/>
+		<entry svalue="14" uvalue="75" desc="0.75"/>
+		<entry svalue="15" uvalue="80" desc="0.80"/>
+		<entry svalue="16" uvalue="85" desc="0.85"/>
+		<entry svalue="17" uvalue="90" desc="0.90"/>
+		<entry svalue="18" uvalue="95" desc="0.95"/>
+		<entry svalue="19" uvalue="100" desc="1.00"/>
+	</enum>
+	<enum name="ModulatSwitch" desc="调制开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="加调"/>
+		<entry svalue="2" uvalue="2" desc="去调"/>
+	</enum>
+	<enum name="ModulSystem" desc="调制体制">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="BPSK"/>
+		<entry svalue="2" uvalue="2" desc="QPSK"/>
+		<entry svalue="3" uvalue="3" desc="UQPSK"/>
+		<entry svalue="4" uvalue="4" desc="SQPSK"/>
+		<entry svalue="5" uvalue="5" desc="8PSK"/>
+		<entry svalue="6" uvalue="6" desc="16QAM"/>
+		<entry svalue="7" uvalue="7" desc="16APSK"/>
+		<!--
+		<entry svalue="8" uvalue="8" desc="32APSK(保留)" />
+		-->
+	</enum>
+	<enum name="NoiseSwitch" desc="噪声输出开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="开"/>
+		<entry svalue="2" uvalue="2" desc="关"/>
+	</enum>
+	<enum name="ConvolMethod" desc="卷积方式">
+		<entry svalue="1" uvalue="1" desc="合路卷积"/>
+		<entry svalue="2" uvalue="2" desc="分路卷积"/>
+		<entry svalue="3" uvalue="3" desc="关"/>
+	</enum>
+	<enum name="FrameSynch" desc="帧同步方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="合路"/>
+		<entry svalue="2" uvalue="2" desc="分路"/>
+	</enum>
+	<enum name="AnalogDataType" desc="模拟数据类型">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="PN码"/>
+		<entry svalue="2" uvalue="2" desc="可编辑固定数"/>
+		<entry svalue="3" uvalue="3" desc="顺序数(由0~255循环)"/>
+		<entry svalue="4" uvalue="4" desc="本地文件回放"/>
+		<entry svalue="5" uvalue="5" desc="随机数"/>
+	</enum>
+	<enum name="PNCodeSelect" desc="PN码选择">
+		<entry svalue="1" uvalue="1" desc="PN7"/>
+		<entry svalue="2" uvalue="2" desc="PN10"/>
+		<entry svalue="3" uvalue="3" desc="PN11"/>
+		<entry svalue="4" uvalue="4" desc="PN15"/>
+		<entry svalue="5" uvalue="5" desc="PN23"/>
+		<entry svalue="6" uvalue="6" desc="PN31"/>
+		<!--entry svalue="7" uvalue="7" desc="PN8" />-->
+	</enum>
+	<enum name="SimulBitSlip" desc="模拟位滑">
+		<entry svalue="0" uvalue="0" desc="0位"/>
+		<entry svalue="1" uvalue="1" desc="1位"/>
+		<entry svalue="2" uvalue="2" desc="2位"/>
+		<entry svalue="3" uvalue="3" desc="3位"/>
+		<entry svalue="4" uvalue="4" desc="-1位"/>
+		<entry svalue="5" uvalue="5" desc="-2位"/>
+		<entry svalue="6" uvalue="6" desc="-3位"/>
+	</enum>
+	<enum name="GrayCodSelect" desc="Gray编码选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="Gray0"/>
+		<entry svalue="2" uvalue="2" desc="Gray1"/>
+		<entry svalue="3" uvalue="3" desc="Gray2"/>
+		<entry svalue="4" uvalue="4" desc="Gray3"/>
+		<entry svalue="5" uvalue="5" desc="Gray4"/>
+		<entry svalue="6" uvalue="6" desc="Gray5"/>
+		<entry svalue="7" uvalue="7" desc="Gray6"/>
+		<entry svalue="8" uvalue="8" desc="Gray7"/>
+		<entry svalue="9" uvalue="9" desc="无格雷编码"/>
+		<!-- <entry svalue="10" uvalue="10" desc="自适应" /> -->
+	</enum>
+	<enum name="PhaseRotation" desc="相位旋转">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="CCSDS(逆时针)"/>
+		<entry svalue="2" uvalue="2" desc="Inverted(顺时针)"/>
+	</enum>
+	<enum name="ConstMapp" desc="星座映射">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="Gray1"/>
+		<entry svalue="2" uvalue="2" desc="Gray2"/>
+		<entry svalue="3" uvalue="3" desc="Gray3"/>
+		<entry svalue="4" uvalue="4" desc="Gray4"/>
+		<entry svalue="5" uvalue="5" desc="Gray5"/>
+		<entry svalue="6" uvalue="6" desc="Gray6"/>
+		<entry svalue="7" uvalue="7" desc="Natural"/>
+		<entry svalue="8" uvalue="8" desc="Natura2"/>
+		<entry svalue="9" uvalue="9" desc="Map1"/>
+		<entry svalue="10" uvalue="10" desc="Map2"/>
+		<entry svalue="11" uvalue="11" desc="Map3"/>
+		<!--
+		<entry svalue="12" uvalue="12" desc="Map1" />
+		<entry svalue="13" uvalue="13" desc="Map2" />
+		-->
+	</enum>
+	<enum name="CodeType" desc="码型">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="NRZ-L"/>
+		<entry svalue="2" uvalue="2" desc="NRZ-M"/>
+		<entry svalue="3" uvalue="3" desc="NRZ-S"/>
+	</enum>
+	<enum name="CodeRateSett" desc="码速率设置方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="编码前"/>
+		<entry svalue="2" uvalue="2" desc="编码后"/>
+	</enum>
+	<enum name="CodingMode" desc="编码方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="关"/>
+		<entry svalue="2" uvalue="2" desc="Viterbi" />
+		<entry svalue="3" uvalue="3" desc="R-S"/>
+		<entry svalue="4" uvalue="4" desc="R-S+Viterbi" />
+		<entry svalue="5" uvalue="5" desc="Turbo"/>
+		<entry svalue="6" uvalue="6" desc="LDPC"/>
+	</enum>
+	<enum name="ConvolCode" desc="卷积码类型">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="(7,1/2)"/>
+		<entry svalue="2" uvalue="2" desc="(7,2/3)"/>
+		<entry svalue="3" uvalue="3" desc="(7,3/4)"/>
+		<entry svalue="4" uvalue="4" desc="(7,5/6)"/>
+		<entry svalue="5" uvalue="5" desc="(7,7/8)"/>
+	</enum>
+	<enum name="RSCodeType" desc="RS码类型">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="(255,223)"/>
+		<entry svalue="2" uvalue="2" desc="(255,239)"/>
+	</enum>
+	<enum name="RSCodeBase" desc="RS码坐标基">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="对偶基"/>
+		<entry svalue="2" uvalue="2" desc="常规基"/>
+	</enum>
+	<enum name="TurboCodetype" desc="Turbo码类型">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc=" Turbo(1/2)"/>
+		<entry svalue="2" uvalue="2" desc=" Turbo(1/3)"/>
+		<entry svalue="3" uvalue="3" desc=" Turbo(1/4)"/>
+		<entry svalue="4" uvalue="4" desc=" Turbo(1/6)"/>
+	</enum>
+	<enum name="LDPCType" desc="LDPC类型">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="T1,1/2,码长15360位"/>
+		<entry svalue="2" uvalue="2" desc="T1,2/3,码长15360位"/>
+		<entry svalue="3" uvalue="3" desc="T1,5/6,码长15360位"/>
+		<entry svalue="4" uvalue="4" desc="T2,7/8,码长8160位"/>
+		<entry svalue="5" uvalue="5" desc="T3,1/2,码长2048位"/>
+		<entry svalue="6" uvalue="6" desc="T3,1/2,码长8192位"/>
+		<entry svalue="7" uvalue="7" desc="T3,2/3,码长1536位"/>
+		<entry svalue="8" uvalue="8" desc="T3,2/3,码长6144位"/>
+		<entry svalue="9" uvalue="9" desc="T2,7/8,码长8176位"/>
+		<entry svalue="10" uvalue="10" desc="T3,4/5,码长5088位"/>
+	</enum>
+	<enum name="ScrambSwitch" desc="加扰开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="不加扰"/>
+		<entry svalue="2" uvalue="2" desc="自动加扰"/>
+		<entry svalue="3" uvalue="3" desc="人工设置"/>
+	</enum>
+	<enum name="ScrambOutputPosit" desc="加扰输出位置">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="移位器输出"/>
+		<entry svalue="2" uvalue="2" desc="反馈输出"/>
+	</enum>
+	<enum name="Checkout" desc="CRC校验区">
+		<entry svalue="1" uvalue="1" desc="不含帧头"/>
+		<entry svalue="2" uvalue="2" desc="含帧头"/>
+	</enum>
+	<enum name="CRCSwitch" desc="CRC校验开关">
+		<entry svalue="1" uvalue="1" desc="关"/>
+		<entry svalue="2" uvalue="2" desc="CCITT"/>
+		<entry svalue="3" uvalue="3" desc="CRC16"/>
+	</enum>
+	<enum name="CodeGroupLength" desc="帧同步码组长度">
+		<entry svalue="1" uvalue="8" desc="8位"/>
+		<entry svalue="2" uvalue="16" desc="16位"/>
+		<entry svalue="3" uvalue="24" desc="24位"/>
+		<entry svalue="4" uvalue="32" desc="32位"/>
+		<entry svalue="5" uvalue="40" desc="40位"/>
+		<entry svalue="6" uvalue="48" desc="48位"/>
+		<entry svalue="7" uvalue="56" desc="56位"/>
+		<entry svalue="8" uvalue="64" desc="64位"/>
+	</enum>
+	<enum name="ViterDecodPhase" desc="Viterbi译码输出相位">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="(G1,-G2)"/>
+		<entry svalue="2" uvalue="2" desc="(G1,G2)"/>
+		<entry svalue="3" uvalue="3" desc="(-G2,G1)"/>
+		<entry svalue="4" uvalue="4" desc="(G2,G1)"/>
+	</enum>
+</enums>

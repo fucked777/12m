@@ -1,0 +1,32 @@
+<Cmd name="Ka数传上行通道关">
+	<!--
+    功放加电
+    基带遥测,测量加调
+    上行载波输出
+    -->
+	<!-- Ka测控 功放关 -->
+	<if condition="KADS_KADTHPA:1">
+		<Command deviceId="0x2005" modeId="0xFFFF" unitId="1" deviceName="Ka数传功放A 功放">
+			<Param id="RFOutput" value="2" name="Ka数传功放A 射频输出允许"/>
+		</Command>
+	</if>
+	<if condition="KADS_KADTHPA:2">
+		<Command deviceId="0x2006" modeId="0xFFFF" unitId="1" deviceName="Ka数传功放B 功放">
+			<Param id="RFOutput" value="2" name="Ka数传功放B 射频输出允许"/>
+		</Command>
+	</if>
+
+	<!-- Ka低速 基带遥测 测量加调 -->
+	<if condition="DSJD:1">
+		<Command deviceId="0x4401" modeId="0xFFFF" unitId="10" deviceName="低速基带A">
+			<Param id="CarrierOutSwitch" value="2" name="载波输出开关"/>
+			<Param id="ModulationSwitch" value="2" name="调制开关"/>
+		</Command>
+	</if>
+	<if condition="DSJD:2">
+		<Command deviceId="0x4402" modeId="0xFFFF" unitId="10" deviceName="低速基带B">
+			<Param id="CarrierOutSwitch" value="2" name="载波输出开关"/>
+			<Param id="ModulationSwitch" value="2" name="调制开关"/>
+		</Command>
+	</if>
+</Cmd>

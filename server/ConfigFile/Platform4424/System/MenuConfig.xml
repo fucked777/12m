@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<MenuConfig defaultLoad="">
+    <config1>
+		<Menu name="主界面" moduleName="">
+			<Menu name="主界面" moduleName="SystemMainScreenModule" icon="监控.png" type="dock" defaultTriggered="1"/>
+			<Menu name="主备设置" moduleName="HeartbeatModule" icon="系统日志-1.png" type="dock"/>
+		</Menu>
+		<Menu name="日志管理" moduleName="">
+			<Menu name="系统日志" moduleName="SystemLogModule" icon="系统日志-1.png" type="dialog"/>
+			<Menu name="设备状态日志" moduleName="StatusPersistenceModule" icon="设备状态日志-1.png" type="dialog"/>
+			<Menu name="任务执行日志" moduleName="TaskPlanManagerModule" icon="任务执行日志-1.png" type="dialog"/>
+			<!-- <Menu name="任务报表管理" moduleName="TaskReportTableModule" icon="任务.png" type="dialog"/> -->
+		</Menu>
+		<Menu name="网络监控" moduleName="">
+			<Menu name="网络监控" moduleName="NetWorkManagerModule" icon="监控.png" type="dock"/>
+		</Menu>
+    </config1>
+    <config2>
+
+    </config2>
+</MenuConfig>

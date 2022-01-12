@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="RU" ModeType="0x15" desc="测距单元" flag="1001" isModifySetBtn="0">
+    <result MessageType="0x0000F104">
+        <!--目标1(一体化+扩频共用)测距单元数据元素-->
+        <recycle id="1" recycleNum="1" desc="一体化">
+            <field pid="1" GroupId="1" id="SMJ_TSynchLockRan" desc="测距位同步" dataType="uint8" displayFormat="LED|LockIndicat" initValue="" minValue="" maxValue="" step="" unit=""  />
+            <field pid="2" GroupId="1" id="SMJ_TRangFrameInd" desc="测距帧同步" dataType="uint8" displayFormat="LED|LockIndicat" initValue="" minValue="" maxValue="" step="" unit=""  />
+            <field pid="3" GroupId="1" id="SMJ_MeasuredDistValue" desc="实测距离值" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="m"  />
+            <field pid="4" GroupId="1" id="SMJ_ObserTimeSate" desc="星地时差" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="ns"  />
+            <field pid="101" GroupId="2" id="SMJ_TargetType" desc="目标类型" dataType="uint8" displayFormat="enum|TargetType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="102" GroupId="2" id="SMJ_TargetCode" desc="目标代号" dataType="uint8" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="103" GroupId="2" id="SMJ_StationCode" desc="测站代号" dataType="ushort" displayFormat="Hex" initValue="1" minValue="0" maxValue="3FF" step="" unit="" />
+            <field pid="104" GroupId="2" id="SMJ_WhetCodeUsed" desc="测站号使用" dataType="uint8" displayFormat="enum|WhetCodeUsed" initValue="1" minValue="" maxValue="" step="" unit="" />
+            <field pid="105" GroupId="2" id="SMJ_UpCRCFrame" desc="上行帧CRC校验" dataType="uint8" displayFormat="enum|CRCFrame" initValue="1" minValue="" maxValue="" step="" unit="" />
+            <field pid="106" GroupId="2" id="SMJ_DownFreame" desc="下行帧RP" dataType="uint8" displayFormat="enum|DownFreame" initValue="1" minValue="" maxValue="" step="" unit="" />
+            <field pid="107" GroupId="2" id="SMJ_DownCRCFrame" desc="下行帧CRC校验" dataType="uint8" displayFormat="enum|CRCFrame" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="108" GroupId="2" id="SMJ_SideToneWaitDel" desc="解模糊" dataType="uint8" displayFormat="enum|SoftAmbResol" initValue="1" minValue="" maxValue="" step="" unit="" />
+            <field pid="109" GroupId="2" id="SMJ_TDistPredMethod" desc="距离预报" dataType="uint8" displayFormat="enum|TDistPredMethod" initValue="1" minValue="" maxValue="" step="" unit="" />
+            <field pid="110" GroupId="2" id="SMJ_TUpMainMod" desc="预报距离值" dataType="uint" displayFormat="double" initValue="1" minValue="0" maxValue="450000" step="0.001" unit="km" />
+            <field pid="111" GroupId="2" id="SMJ_WorkStation" desc="工作站数目(保留)" dataType="uint8" displayFormat="UInt8" initValue="4" minValue="4" maxValue="4" step="" unit="" isShow="0"/>
+            <field pid="112" GroupId="2" id="SMJ_TNumbSingleOper" desc="下行通道号" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="4" step="" unit="" />
+            <field pid="113" GroupId="2" id="SMJ_TUseDownNumb" desc="应答机零值" dataType="uint" displayFormat="double" initValue="1" minValue="0" maxValue="1000000" step="0.001" unit="m" />
+            <field pid="114" GroupId="2" id="SMJ_TZeroDistTrans" desc="应答机时延差" dataType="uint" displayFormat="double" initValue="1" minValue="0" maxValue="42949672.95" step="0.01" unit="ns" />
+        </recycle>
+        <recycle id="2" recycleNum="1" desc="扩频">
+            <!--目标2(一体化+扩频共用)测距单元数据元素-->
+            <field pid="11" GroupId="3" id="K2_TSynchLockRan" desc="位同步锁定" dataType="uint8" displayFormat="LED|LockIndicat" initValue="" minValue="" maxValue="" step="" unit=""  />
+            <field pid="12" GroupId="3" id="K2_TRangFrameInd" desc="帧同步锁定" dataType="uint8" displayFormat="LED|LockIndicat" initValue="" minValue="" maxValue="" step="" unit=""  />
+            <field pid="13" GroupId="3" id="K2_MeasuredDistValue" desc="实测距离值" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="m"  />
+            <field pid="14" GroupId="3" id="K2_ObserTimeSate" desc="星地时差" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="ns"  />
+            <field pid="121" GroupId="4" id="K2_TargetType" desc="目标类型" dataType="uint8" displayFormat="enum|TargetType2" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="122" GroupId="4" id="K2_TargetCode" desc="目标代号" dataType="uint8" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="123" GroupId="4" id="K2_StationCode" desc="测站代号" dataType="ushort" displayFormat="Hex" initValue="1" minValue="0" maxValue="3FF" step="" unit="" />
+            <field pid="124" GroupId="4" id="K2_WhetCodeUsed" desc="测站号使用" dataType="uint8" displayFormat="enum|WhetCodeUsed" initValue="1" minValue="" maxValue="" step="" unit="" />
+            <field pid="125" GroupId="4" id="K2_UpCRCFrame" desc="上行帧CRC校验" dataType="uint8" displayFormat="enum|CRCFrame" initValue="1" minValue="" maxValue="" step="" unit="" />
+            <field pid="126" GroupId="4" id="K2_DownFreame" desc="下行帧RP" dataType="uint8" displayFormat="enum|DownFreame" initValue="1" minValue="" maxValue="" step="" unit="" />
+            <field pid="127" GroupId="4" id="K2_DownCRCFrame" desc="下行帧CRC校验" dataType="uint8" displayFormat="enum|CRCFrame" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="128" GroupId="4" id="K2_SideToneWaitDel" desc="解模糊" dataType="uint8" displayFormat="enum|SoftAmbResol" initValue="1" minValue="" maxValue="" step="" unit="" />
+            <field pid="129" GroupId="4" id="K2_TDistPredMethod" desc="距离预报" dataType="uint8" displayFormat="enum|TDistPredMethod" initValue="1" minValue="" maxValue="" step="" unit="" />
+            <field pid="130" GroupId="4" id="K2_TUpMainMod" desc="预报距离值" dataType="uint" displayFormat="double" initValue="1" minValue="0" maxValue="450000" step="0.001" unit="km" />
+            <field pid="131" GroupId="4" id="K2_WorkStation" desc="工作站数目" dataType="uint8" displayFormat="enum|WorkStation" initValue="1" minValue="1" maxValue="4" step="" unit="" />
+            <field pid="132" GroupId="4" id="K2_TNumbSingleOper" desc="下行通道号" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="4" step="" unit="" />
+            <field pid="133" GroupId="4" id="K2_TUseDownNumb" desc="应答机零值" dataType="uint" displayFormat="double" initValue="1" minValue="0" maxValue="1000000" step="0.001" unit="m" />
+            <field pid="134" GroupId="4" id="K2_TZeroDistTrans" desc="应答机时延差" dataType="uint" displayFormat="double" initValue="1" minValue="0" maxValue="42949672.95" step="0.01" unit="ns" />
+        </recycle>
+    </result>
+    <layout>
+        <item id="1" desc="" row="0" col = "0" rowspan = "1" colspan = "1"/>
+        <item id="2" desc="" row="0" col = "0" rowspan = "1" colspan = "1"/>
+        <item id="3" desc="" row="0" col = "1" rowspan = "1" colspan = "1"/>
+        <item id="4" desc="" row="0" col = "1" rowspan = "1" colspan = "1"/>
+    </layout>
+    <order info="1,2,3,4"/>
+</cmd>

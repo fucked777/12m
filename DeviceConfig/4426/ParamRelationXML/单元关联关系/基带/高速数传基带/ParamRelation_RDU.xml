@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x01" modeID="0x0" unitType="RDU" desc="I路译码单元1">
+	<Triggers>
+		<Trigger id="DecodMode" desc="译码方式">
+			<TriggerValue value="1" desc="关">
+				<Receiver id="RSCodeType" desc="R-S码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="RSInterDecod" desc="交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="RSDecodBase" desc="坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="TurboCodeType" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="LDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ConvolCodeType" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ViterDecodPhase" desc="输出相位" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="Viterbi">
+				<Receiver id="RSCodeType" desc="R-S码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="RSInterDecod" desc="交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="RSDecodBase" desc="坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="TurboCodeType" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="LDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ConvolCodeType" desc="卷积码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="ViterDecodPhase" desc="输出相位" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="R-S">
+				<Receiver id="RSCodeType" desc="R-S码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="RSInterDecod" desc="交织深度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="RSDecodBase" desc="坐标基" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="TurboCodeType" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="LDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ConvolCodeType" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ViterDecodPhase" desc="输出相位" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="R-S+Viterbi">
+				<Receiver id="RSCodeType" desc="R-S码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="RSInterDecod" desc="交织深度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="RSDecodBase" desc="坐标基" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="TurboCodeType" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="LDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ConvolCodeType" desc="卷积码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="ViterDecodPhase" desc="输出相位" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="5" desc="Turbo">
+				<Receiver id="RSCodeType" desc="R-S码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="RSInterDecod" desc="交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="RSDecodBase" desc="坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="TurboCodeType" desc="Turbo码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="LDPCType" desc="LDPC类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ConvolCodeType" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ViterDecodPhase" desc="输出相位" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="6" desc="LDPC">
+				<Receiver id="RSCodeType" desc="R-S码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="RSInterDecod" desc="交织深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="RSDecodBase" desc="坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="TurboCodeType" desc="Turbo码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="LDPCType" desc="LDPC类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="ConvolCodeType" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="ViterDecodPhase" desc="输出相位" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="PreDecodDesSwitch" desc="前解扰开关">
+			<TriggerValue value="1" desc="不解扰">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="PreScrambPolyLength" desc="解扰多项式长度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="PreDecodInitTerm" desc="解扰初项" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="DecodOutPosit" desc="解扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="自动解扰">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="0" values="A9" minValue="" maxValue="" />
+				<Receiver id="PreScrambPolyLength" desc="解扰多项式长度" isEnable="0" values="16" minValue="" maxValue="" />
+				<Receiver id="PreDecodInitTerm" desc="解扰初项" isEnable="0" values="FF" minValue="" maxValue="" />
+				<Receiver id="DecodOutPosit" desc="解扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="人工解扰">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="PreScrambPolyLength" desc="解扰多项式长度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="PreDecodInitTerm" desc="解扰初项" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="DecodOutPosit" desc="解扰输出位置" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="PreScrambPolyLength" desc="解扰多项式长度">
+			<TriggerValue value="8" desc="8位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="9" desc="9位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="10" desc="10位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="11" desc="11位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="12" desc="12位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="13" desc="13位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="14" desc="14位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="15" desc="15位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="16" desc="16位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="17" desc="17位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="18" desc="18位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="19" desc="19位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="20" desc="20位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="21" desc="21位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="22" desc="22位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="23" desc="23位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="24位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="25" desc="25位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="26" desc="26位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="27" desc="27位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="28" desc="28位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="29" desc="29位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="30" desc="30位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="31" desc="31位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="32位">
+				<Receiver id="PreDecodScraPoly" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+		</Trigger>	
+
+		<Trigger id="DecodPostSwitch" desc="后解扰开关">
+			<TriggerValue value="1" desc="不解扰">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="DecodScrambPolyLength" desc="解扰多项式长度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="DecodInitTerm" desc="解扰初项" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="DecodOutputPosit" desc="解扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="自动解扰">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="0" values="A9" minValue="" maxValue="" />
+				<Receiver id="DecodScrambPolyLength" desc="解扰多项式长度" isEnable="0" values="16" minValue="" maxValue="" />
+				<Receiver id="DecodInitTerm" desc="解扰初项" isEnable="0" values="FF" minValue="" maxValue="" />
+				<Receiver id="DecodOutputPosit" desc="解扰输出位置" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="人工解扰">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="DecodScrambPolyLength" desc="解扰多项式长度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="DecodInitTerm" desc="解扰初项" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="DecodOutputPosit" desc="解扰输出位置" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="DecodScrambPolyLength" desc="解扰多项式长度">
+			<TriggerValue value="8" desc="8位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="9" desc="9位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="10" desc="10位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="11" desc="11位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="12" desc="12位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="13" desc="13位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="14" desc="14位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="15" desc="15位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="16" desc="16位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="17" desc="17位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="18" desc="18位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="19" desc="19位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="20" desc="20位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="21" desc="21位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="22" desc="22位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="23" desc="23位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="24位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="25" desc="25位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="26" desc="26位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="27" desc="27位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="28" desc="28位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="29" desc="29位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="30" desc="30位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="31" desc="31位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="32位">
+				<Receiver id="DecodPostPolyn" desc="解扰多项式" isEnable="" values="" minValue="" maxValue="FFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="CRCCheckSWitch" desc="CRC校验开关">
+			<TriggerValue value="1" desc="关">
+				<Receiver id="CRCPolynomial" desc="CRC多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="CRCInitPhase" desc="CRC初相" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="CCITT">
+				<Receiver id="CRCPolynomial" desc="CRC多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="CRCInitPhase" desc="CRC初相" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="CRC16">
+				<Receiver id="CRCPolynomial" desc="CRC多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="CRCInitPhase" desc="CRC初相" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="FraSynchLength" desc="码组长度">
+			<TriggerValue value="8" desc="8位">
+				<Receiver id="FramSynchPatt" desc="码组图样" isEnable="" values="" minValue="0" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="16" desc="16位">
+				<Receiver id="FramSynchPatt" desc="码组图样" isEnable="" values="" minValue="0" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="24" desc="24位">
+				<Receiver id="FramSynchPatt" desc="码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="32" desc="32位">
+				<Receiver id="FramSynchPatt" desc="码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="40" desc="40位">
+				<Receiver id="FramSynchPatt" desc="码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="48" desc="48位">
+				<Receiver id="FramSynchPatt" desc="码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="56" desc="56位">
+				<Receiver id="FramSynchPatt" desc="码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="64" desc="64位">
+				<Receiver id="FramSynchPatt" desc="码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFFFFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

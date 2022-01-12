@@ -1,0 +1,144 @@
+<Mode name="Ka高速">
+	<if condition="CommonCommand" desc="如果命令组id为：CommonCommand，表示该组下的命令无论配置宏配置什么都需要下发">
+		<Command deviceId="0x3A01" modeId="0xFFFF" cmdId="1" deviceName="L频段切换开关网络 L频段切换选择">
+			<Param id="qhkg" value="2" name="切换开关 Ka频段"/>
+		</Command>
+	</if>
+	<!-- 差路场放选中 -->
+	<if condition="KaGS_LAN_DIFF:1">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="Ka频段射频开关网络 Ka频段射频开关网络">
+			<Param id="Bad1AndBad2" value="1" name="差路输入选择开关 Ka差路入Ka1"/>
+			<Param id="WaveSwitchXBadControl" value="1" name="波导开关Ka差控制 左旋"/>
+		</Command>
+	</if>
+	<if condition="KaGS_LAN_DIFF:2">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="Ka频段射频开关网络 Ka频段射频开关网络">
+			<Param id="Bad1AndBad2" value="2" name="差路输入选择开关 Ka差路入Ka2"/>
+			<Param id="WaveSwitchXBadControl" value="2" name="波导开关Ka差控制 右旋"/>
+		</Command>
+	</if>
+	<!-- 和路左旋场放选中 -->
+	<if condition="KaGS_LAN_L_SUM:1">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="Ka频段射频开关网络 Ka频段射频开关网络">
+			<Param id="LeftHe" value="1" name="左和输入选择开关"/>
+			<Param id="WaveSwitchXLBadControl" value="1" name="波导开关Ka-L控制"/>
+		</Command>
+	</if>
+	<if condition="KaGS_LAN_L_SUM:2">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="Ka频段射频开关网络 Ka频段射频开关网络">
+			<Param id="LeftHe" value="2" name="左和输入选择开关 Ka和路入L2"/>
+			<Param id="WaveSwitchXLBadControl" value="2" name="波导开关Ka-L控制 "/>
+		</Command>
+	</if>
+	<!-- 和路右旋场放选中 -->
+	<if condition="KaGS_LAN_R_SUM:1">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="Ka频段射频开关网络 Ka频段射频开关网络">
+			<Param id="RightHe" value="1" name="右和输入选择开关 Ka和路入L1"/>
+			<Param id="WaveSwitchXRBadControl" value="1" name="波导开关Ka-L控制"/>
+		</Command>
+	</if>
+	<if condition="KaGS_LAN_R_SUM:2">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="Ka频段射频开关网络 Ka频段射频开关网络">
+			<Param id="RightHe" value="2" name="右和输入选择开关 Ka和路入L2"/>
+			<Param id="WaveSwitchXRBadControl" value="2" name="波导开关Ka-R控制"/>
+		</Command>
+	</if>
+	<!-- 和路左旋场放选中 和路右旋场放未选中 -->
+	<if condition="(KaGS_LAN_L_SUM:1|KaGS_LAN_R_SUM:0)
+					OR(KaGS_LAN_L_SUM:2|KaGS_LAN_R_SUM:0)">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="Ka频段射频开关网络 Ka频段射频开关网络">
+			<Param id="HeOutSwitch" value="1" name="和路输出选择开关 Ka和路选择左和"/>
+			<Param id="BackupInput" value="1" name="备份输出 备份选择左和"/>
+		</Command>
+	</if>
+	<!-- 和路左旋场放未选中 和路右旋场放选中 -->
+	<if condition="(KaGS_LAN_L_SUM:0|KaGS_LAN_R_SUM:1)
+					OR(KaGS_LAN_L_SUM:0|KaGS_LAN_R_SUM:2)">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="Ka频段射频开关网络 Ka频段射频开关网络">
+			<Param id="HeOutSwitch" value="2" name="和路输出选择开关 Ka和路选择右和"/>
+			<Param id="BackupInput" value="2" name="备份输出 备份选择右和"/>
+		</Command>
+	</if>
+	<!-- 和路左旋场放选中 和路右旋场放选中 左右都有默认用左和 -->
+	<if condition="(KaGS_LAN_L_SUM:1|KaGS_LAN_R_SUM:1)
+					OR(KaGS_LAN_L_SUM:1|KaGS_LAN_R_SUM:2)
+					OR(KaGS_LAN_L_SUM:2|KaGS_LAN_R_SUM:1)
+					OR(KaGS_LAN_L_SUM:2|KaGS_LAN_R_SUM:2)">
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="Ka频段射频开关网络 Ka频段射频开关网络">
+			<Param id="HeOutSwitch" value="1" name="和路输出选择开关 Ka和路选择左和"/>
+			<Param id="BackupInput" value="1" name="备份输出 备份选择左和"/>
+		</Command>
+	</if>
+	<!-- X和路下变频器 只选和路左旋场放-->
+	<!-- <if condition="(KaGS_LAN_L_SUM:1|KaGS_LAN_R_SUM:0|XGS_DC:1)
+					OR(KaGS_LAN_L_SUM:2|KaGS_LAN_R_SUM:0|XGS_DC:1)">
+		<Command deviceId="0x3501" modeId="0xFFFF" unitId="1" deviceName="X频段8×8射频开关矩阵 X频段8×8射频开关矩阵">
+			<Param id="OutputPort1" value="1" name="X/1.2G DC5 X左和"/>
+			<Param id="OutputPort2" value="2" name="X/1.2G DC6 X备份"/>
+		</Command>
+	</if>
+	<if condition="(KaGS_LAN_L_SUM:1|KaGS_LAN_R_SUM:0|XGS_DC:2)
+					OR(KaGS_LAN_L_SUM:2|KaGS_LAN_R_SUM:0|XGS_DC:2)">
+		<Command deviceId="0x3501" modeId="0xFFFF" unitId="1" deviceName="X频段8×8射频开关矩阵 X频段8×8射频开关矩阵">
+			<Param id="OutputPort3" value="1" name="X/1.2G DC7 X左和"/>
+			<Param id="OutputPort4" value="2" name="X/1.2G DC8 X备份"/>
+		</Command>
+	</if>
+	<if condition="(KaGS_LAN_L_SUM:1|KaGS_LAN_R_SUM:0|XGS_DC:3)
+					OR(KaGS_LAN_L_SUM:2|KaGS_LAN_R_SUM:0|XGS_DC:3)">
+		<Command deviceId="0x3501" modeId="0xFFFF" unitId="1" deviceName="X频段8×8射频开关矩阵 X频段8×8射频开关矩阵">
+			<Param id="OutputPort5" value="1" name="X/1.2G DC9 X左和"/>
+			<Param id="OutputPort6" value="2" name="X/1.2G DC10 X备份"/>
+		</Command>
+	</if> -->
+	<!-- X和路下变频器 只选和路右旋场放-->
+	<!-- <if condition="(KaGS_LAN_L_SUM:0|KaGS_LAN_R_SUM:1|XGS_DC:1)
+					OR(KaGS_LAN_L_SUM:0|KaGS_LAN_R_SUM:2|XGS_DC:1)">
+		<Command deviceId="0x3501" modeId="0xFFFF" unitId="1" deviceName="X频段8×8射频开关矩阵 X频段8×8射频开关矩阵">
+			<Param id="OutputPort1" value="3" name="X/1.2G DC5 X右和"/>
+			<Param id="OutputPort2" value="2" name="X/1.2G DC6 X备份"/>
+		</Command>
+	</if>
+	<if condition="(KaGS_LAN_L_SUM:0|KaGS_LAN_R_SUM:1|XGS_DC:2)
+					OR(KaGS_LAN_L_SUM:0|KaGS_LAN_R_SUM:2|XGS_DC:2)">
+		<Command deviceId="0x3501" modeId="0xFFFF" unitId="1" deviceName="X频段8×8射频开关矩阵 X频段8×8射频开关矩阵">
+			<Param id="OutputPort3" value="3" name="X/1.2G DC7 X右和"/>
+			<Param id="OutputPort4" value="2" name="X/1.2G DC8 X备份"/>
+		</Command>
+	</if>
+	<if condition="(KaGS_LAN_L_SUM:0|KaGS_LAN_R_SUM:1|XGS_DC:3)
+					OR(KaGS_LAN_L_SUM:0|KaGS_LAN_R_SUM:2|XGS_DC:3)">
+		<Command deviceId="0x3501" modeId="0xFFFF" unitId="1" deviceName="X频段8×8射频开关矩阵 X频段8×8射频开关矩阵">
+			<Param id="OutputPort5" value="3" name="X/1.2G DC9 X右和"/>
+			<Param id="OutputPort6" value="2" name="X/1.2G DC10 X备份"/>
+		</Command>
+	</if> -->
+	<!-- X和路下变频器 左右和路场放都选择-->
+	<!-- 	<if condition="(KaGS_LAN_L_SUM:1|KaGS_LAN_R_SUM:1|XGS_DC:1)
+					OR(KaGS_LAN_L_SUM:1|KaGS_LAN_R_SUM:2|XGS_DC:1)
+					OR(KaGS_LAN_L_SUM:2|KaGS_LAN_R_SUM:1|XGS_DC:1)
+					OR(KaGS_LAN_L_SUM:2|KaGS_LAN_R_SUM:2|XGS_DC:1)">
+		<Command deviceId="0x3501" modeId="0xFFFF" unitId="1" deviceName="X频段8×8射频开关矩阵 X频段8×8射频开关矩阵">
+			<Param id="OutputPort1" value="1" name="X/1.2G DC5 X左和"/>
+			<Param id="OutputPort2" value="3" name="X/1.2G DC6 X右和"/>
+		</Command>
+	</if>
+	<if condition="(KaGS_LAN_L_SUM:1|KaGS_LAN_R_SUM:1|XGS_DC:2)
+					OR(KaGS_LAN_L_SUM:1|KaGS_LAN_R_SUM:2|XGS_DC:2)
+					OR(KaGS_LAN_L_SUM:2|KaGS_LAN_R_SUM:1|XGS_DC:2)
+					OR(KaGS_LAN_L_SUM:2|KaGS_LAN_R_SUM:2|XGS_DC:2)">
+		<Command deviceId="0x3501" modeId="0xFFFF" unitId="1" deviceName="X频段8×8射频开关矩阵 X频段8×8射频开关矩阵">
+			<Param id="OutputPort3" value="1" name="X/1.2G DC7 X左和"/>
+			<Param id="OutputPort4" value="3" name="X/1.2G DC8 X右和"/>
+		</Command>
+	</if>
+	<if condition="(KaGS_LAN_L_SUM:1|KaGS_LAN_R_SUM:1|XGS_DC:3)
+					OR(KaGS_LAN_L_SUM:1|KaGS_LAN_R_SUM:2|XGS_DC:3)
+					OR(KaGS_LAN_L_SUM:2|KaGS_LAN_R_SUM:1|XGS_DC:3)
+					OR(KaGS_LAN_L_SUM:2|KaGS_LAN_R_SUM:2|XGS_DC:3)">
+		<Command deviceId="0x3501" modeId="0xFFFF" unitId="1" deviceName="X频段8×8射频开关矩阵 X频段8×8射频开关矩阵">
+			<Param id="OutputPort5" value="1" name="X/1.2G DC9 X左和"/>
+			<Param id="OutputPort6" value="3" name="X/1.2G DC10 X右和"/>
+		</Command>
+	</if>  -->
+</Mode>

@@ -1,0 +1,9 @@
+{
+    "bundle.symbolic_name":"ZMQRouterServer",
+    "servicename":"数据转发模块",
+    "bundle.activator" : true,
+    "authors" : [ "wp" ],
+    "bundle.version" : "1.0.0",
+    "bundle.description" : "ZMQ Router",
+    "update_log" :""
+}

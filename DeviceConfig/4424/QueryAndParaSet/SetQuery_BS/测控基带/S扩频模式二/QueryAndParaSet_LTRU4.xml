@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="LTRU" ModeType="0x04" desc="左旋测距单元" flag="1001" kpValid="TargetNum">
+    <result MessageType="0x0000F104">
+        <recycle id="1" recycleNum="4" desc="">
+            <field pid="1" id="SynchLockRan" desc="测距位同步" dataType="uint8" displayFormat="LED|LockIndicat" initValue="" minValue="" maxValue="" step="" unit=""  />
+            <field pid="2" id="RangFrameInd" desc="测距帧同步" dataType="uint8" displayFormat="LED|LockIndicat" initValue="" minValue="" maxValue="" step="" unit=""  />
+            <field pid="3" id="MeasuredDistValue" desc="距离值" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="m"  />
+            <field pid="4" id="ObserTimeSate" desc="星地时差" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="ns"  />
+            <field pid="101" id="TargetType" desc="目标类型" dataType="uint8" displayFormat="enum|TargetType" initValue="1" minValue="" maxValue="" step="" unit="" />
+            <field pid="102" id="TargetCode" desc="目标代号" dataType="uint8" displayFormat="Hex" initValue="" minValue="1" maxValue="" step="" unit=""  />
+            <field pid="103" id="StationCode" desc="测站代号" dataType="ushort" displayFormat="Hex" initValue="" minValue="1" maxValue="" step="" unit=""  />
+            <field pid="104" id="WhetCodeUsed" desc="测站号使用" dataType="uint8" displayFormat="enum|WhetCodeUsed" initValue="1" minValue="" maxValue="" step="" unit="" />
+            <field pid="105" id="UpCRCFrame" desc="上行帧CRC校验" dataType="uint8" displayFormat="enum|CRCFrame" initValue="1" minValue="" maxValue="" step="" unit="m" />
+            <field pid="106" id="DownFreame" desc="下行帧RP" dataType="uint8" displayFormat="enum|DownFreame" initValue="1" minValue="" maxValue="" step="" unit=""  />
+            <field pid="107" id="DowCRCFrame" desc="下行帧CRC校验" dataType="uint8" displayFormat="enum|CRCFrame" initValue="1" minValue="" maxValue="" step="" unit="" />
+            <field pid="108" id="SideToneWaitDel" desc="软件解模糊" dataType="uint8" displayFormat="enum|SoftAmbResol" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="109" id="DistPredMethod" desc="距离预报" dataType="uint8" displayFormat="enum|DistPredMethod" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="110" id="UpMainMod" desc="预报距离值" dataType="uint" displayFormat="double" initValue="" minValue="1" maxValue="" step="0.001" unit="km"/>
+            <field pid="111" id="NumbSingleOper" desc="工作站数目" dataType="uint8" displayFormat="enum|WorkNumber" initValue="1" minValue="" maxValue="" step="" unit=""/>
+            <field pid="112" id="UseDownNumb" desc="使用下行通道序号" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="" maxValue="" step="" unit="" />
+            <field pid="113" id="ZeroDistTrans" desc="应答机零值" dataType="uint" displayFormat="double" initValue="1" minValue="" maxValue="" step="0.001" unit="m"  />
+            <field pid="114" id="RelatDelTran" desc="应答机相对时延差" dataType="uint" displayFormat="double" initValue="1" minValue="" maxValue="" step="0.01" unit="ns"  />
+        </recycle>
+    </result>
+</cmd>

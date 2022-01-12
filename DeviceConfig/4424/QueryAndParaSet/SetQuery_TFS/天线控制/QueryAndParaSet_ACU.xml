@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmd UnitType="ACU" ModeType="0xFFFF" desc="天线控制单元" flag="1001">
+	<result MessageType="0x0000F104">
+		<field pid="1" GroupId="status2" id="ControlMode" desc="监控方式" dataType="uint8" displayFormat="enum|ControlMode" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="2" GroupId="status2" id="AnteWorkMode" desc="天线工作方式" dataType="uint8" displayFormat="enum|AnteWorkMode" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="3" GroupId="status2" id="XKaTrackAZVol" desc="X/Ka方位误差电压" dataType="short" displayFormat="double" initValue="" minValue="" maxValue="" step="0.01" unit="V"/>
+		<field pid="4" GroupId="status2" id="XKaTrackPitchVol" desc="X/Ka俯仰误差电压" dataType="short" displayFormat="double" initValue="" minValue="" maxValue="" step="0.01" unit="V"/>
+		<field pid="5" GroupId="status2" id="XKaTrackAGCVol" desc="X/Ka跟踪AGC电压" dataType="ushort" displayFormat="double" initValue="" minValue="" maxValue="" step="0.01" unit="V"/>
+		<field pid="6" GroupId="status1" id="XKaTrackLockInst" desc="X/Ka跟踪载波锁定" dataType="uint8" displayFormat="LED|TrackLockInst" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="7" GroupId="status2" id="STrackAzinVol" desc="S方位误差电压" dataType="short" displayFormat="double" initValue="" minValue="" maxValue="" step="0.01" unit="V"/>
+		<field pid="8" GroupId="status2" id="STrackPithVol" desc="S俯仰误差电压" dataType="short" displayFormat="double" initValue="" minValue="" maxValue="" step="0.01" unit="V"/>
+		<field pid="9" GroupId="status2" id="STrackAGCVol" desc="S跟踪AGC电压" dataType="ushort" displayFormat="double" initValue="" minValue="" maxValue="" step="0.01" unit="V"/>
+		<field pid="10" GroupId="status1" id="STrackLockInst" desc="S跟踪载波锁定" dataType="uint8" displayFormat="LED|TrackLockInst" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="11" GroupId="status1" id="CommOnOffDTE" desc="与DTE通信" dataType="bit:ushort|1" displayFormat="LED|CommOnOff" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="12" GroupId="status1" id="CommOnOffADU" desc="与ADU通信" dataType="bit:ushort|1" displayFormat="LED|CommOnOff" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="13" GroupId="status1" id="CommOnOffPDU" desc="与PDU通信" dataType="bit:ushort|1" displayFormat="LED|CommOnOff" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="14" GroupId="status1" id="CommOnOffJHDY" desc="与极化单元通信" dataType="bit:ushort|1" displayFormat="LED|CommOnOff" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="15" GroupId="status1" id="CommOnOffBL" desc="保留" dataType="bit:ushort|1" displayFormat="LED|CommOnOff" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="16" GroupId="status1" id="CommOnOffBL" desc="保留" dataType="bit:ushort|1" displayFormat="LED|CommOnOff" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="17" GroupId="status1" id="CommOnOffBL" desc="保留" dataType="bit:ushort|1" displayFormat="LED|CommOnOff" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="18" GroupId="status1" id="CommOnOffBL" desc="保留" dataType="bit:ushort|1" displayFormat="LED|CommOnOff" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="19" GroupId="status1" id="CommOnOffBL" desc="保留" dataType="bit:ushort|1" displayFormat="LED|CommOnOff" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<!--
+		<field pid="16" GroupId="status1" id="CommOnOffWGDS" desc="与微光电视通讯" dataType="bit:ushort|1" displayFormat="LED|CommOnOff" initValue="" minValue="" maxValue="" step="" unit=""  isShow="0" />
+        <field pid="17" GroupId="status1" id="CommOnOffGPS" desc="与GPS通讯" dataType="bit:ushort|1" displayFormat="LED|CommOnOff" initValue="" minValue="" maxValue="" step="" unit=""  isShow="0" />
+        <field pid="18" GroupId="status1" id="CommOnOffSPY" desc="与水平仪通讯" dataType="bit:ushort|1" displayFormat="LED|CommOnOff" initValue="" minValue="" maxValue="" step="" unit=""  isShow="0"/>
+        <field pid="19" GroupId="status1" id="CommOnOffXBY" desc="与寻北仪通讯" dataType="bit:ushort|1" displayFormat="LED|CommOnOff" initValue="" minValue="" maxValue="" step="" unit=""  isShow="0"/>
+        <field pid="20" GroupId="status1" id="CommOnOffXXY" desc="与星校仪通讯" dataType="bit:ushort|1" displayFormat="LED|CommOnOff" initValue="" minValue="" maxValue="" step="" unit=""  isShow="0"/>
+		-->
+		<field pid="20" GroupId="status1" id="CommOnOffJD" desc="与跟踪基带通讯" dataType="bit:ushort|1" displayFormat="LED|CommOnOff" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="21" GroupId="status1" id="CommOnOffBL" desc="保留" dataType="bit:ushort|6" displayFormat="LED|CommOnOff" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="22" GroupId="status1" id="ADBoardState" desc="A/D板状态" dataType="uint8" displayFormat="LED|BoardState" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="23" GroupId="status1" id="DABoardState" desc="D/A板状态" dataType="uint8" displayFormat="LED|BoardState" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="24" GroupId="status1" id="WorkStateofComm" desc="串口通信板状态" dataType="uint8" displayFormat="LED|WorkStateofComm" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="25" GroupId="status1" id="TimeInputState" desc="时统输入状态" dataType="uint8" displayFormat="LED|TimeInputState" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="26" GroupId="status1" id="PDUCodeHopp" desc="PDU跳码状态" dataType="uint8" displayFormat="LED|PDUCodeHopp" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="27" GroupId="status1" id="PDUSynchSignal" desc="PDU同步信号状态" dataType="uint8" displayFormat="LED|PDUSynchSignal" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="28" GroupId="status2" id="MainSideRecog" desc="主副瓣识别" dataType="uint8" displayFormat="enum|MainSideRecog" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="29" GroupId="status1" id="KaXAngleTrack" desc="Ka/X角跟踪状态" dataType="uint8" displayFormat="LED|AngleTrack" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<!--
+		<field pid="31" GroupId="status1" id="KaXSCAngleTrack" desc="Ka数传角跟踪状态" dataType="uint8" displayFormat="LED|AngleTrack" initValue="" minValue="" maxValue="" step="" unit=""  isShow="0"/>
+        -->
+		<field pid="30" GroupId="status1" id="SAngleTrack" desc="S角跟踪状态" dataType="uint8" displayFormat="LED|AngleTrack" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="31" GroupId="status1" id="ValidArgumData" desc="数引数据有效" dataType="uint8" displayFormat="LED|ValidArgumData" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="32" GroupId="status1" id="ValidLeadData" desc="程引数据有效" dataType="uint8" displayFormat="LED|ValidLeadData" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="33" GroupId="status1" id="AngleTranStatus" desc="测角数据发送" dataType="uint8" displayFormat="LED|AngleTranStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="34" GroupId="status2" id="ACUSimulMode" desc="ACU仿真方式" dataType="uint8" displayFormat="enum|ACUSimulMode" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="35" GroupId="status2" id="ACUOperMode" desc="ACU运行方式" dataType="uint8" displayFormat="enum|ACUOperMode" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="36" GroupId="status2" id="ScannMode" desc="扫描方式" dataType="uint8" displayFormat="enum|ScannMode" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="37" GroupId="status2" id="ScanRange" desc="扫描范围" dataType="uint8" displayFormat="enum|ScanRange" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="38" GroupId="status2" id="ScanningRate" desc="扫描速率" dataType="uint8" displayFormat="enum|ScanningRate" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="39" GroupId="status3" id="ErrorTowShafC1" desc="误差修正系数C1" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+		<field pid="40" GroupId="status3" id="ErrorTowShafC2" desc="误差修正系数C2" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+		<field pid="41" GroupId="status3" id="ErrorTowShafC3" desc="误差修正系数C3" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+		<field pid="42" GroupId="status3" id="ErrorTowShafC4" desc="误差修正系数C4" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+		<field pid="43" GroupId="status3" id="ErrorTowShafC5" desc="误差修正系数C5" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+		<field pid="44" GroupId="status3" id="ErrorTowShafC6" desc="误差修正系数C6" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+		<field pid="45" GroupId="status3" id="ErrorTowShafC7" desc="误差修正系数C7" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+		<field pid="46" GroupId="status3" id="ErrorTowShafC8" desc="误差修正系数C8" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+		<field pid="47" GroupId="status3" id="ErrorTowShafC9" desc="大气折射修正残差C9" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+		<field pid="48" GroupId="status3" id="ErrorTowShafC10" desc="第三轴倾斜误差C10" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+		<field pid="49" GroupId="status4" id="ErrorCoeffShafA0" desc="误差修正系数A0" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°" isShow="0"/>
+		<field pid="50" GroupId="status4" id="ErrorCoeffShafE0" desc="误差修正系数E0" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+		<field pid="51" GroupId="status4" id="ErrorCoeffShafΘm" desc="误差修正系数Θm" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+		<field pid="52" GroupId="status4" id="ErrorCoeffShafAm" desc="误差修正系数Am" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+		<field pid="53" GroupId="status4" id="ErrorCoeffShafδ" desc="误差修正系数δ" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+		<field pid="54" GroupId="status4" id="ErrorCoeffShafKz" desc="误差修正系数Kz" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+		<field pid="55" GroupId="status4" id="ErrorCoeffShafKg" desc="误差修正系数Kg" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+		<field pid="56" GroupId="status4" id="ErrorCoeffShafKe" desc="误差修正系数Ke" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+		<field pid="57" GroupId="status4" id="ErrorCoeffShafEmg" desc="误差修正系数Emg" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+		<field pid="58" GroupId="status4" id="ErrorCoeffShafΔEd" desc="误差修正系数ΔEd" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="°"/>
+		<field pid="59" GroupId="status2" id="PhaseCorrMeth" desc="校相方式" dataType="uint8" displayFormat="enum|PhaseCorrMeth" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="101" id="TargetAcqbyante" desc="捕获目标方式" dataType="uint8" displayFormat="enum|TargetAcqbyante" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="102" id="DeliveryMode" desc="送数方式" dataType="uint8" displayFormat="enum|DeliveryMode" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="103" id="StartPitchAngle" desc="开始俯仰角" dataType="int" displayFormat="double" initValue="" minValue="0" maxValue="90" step="0.001" unit="°"/>
+		<field pid="104" id="StopPitchAngle" desc="停止俯仰角" dataType="int" displayFormat="double" initValue="" minValue="0" maxValue="90" step="0.001" unit="°"/>
+		<field pid="105" id="ServoBandwidth" desc="伺服带宽" dataType="uint8" displayFormat="enum|ServoBandwidth" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="106" id="AzimuthSpeedLimit" desc="校标方位限速" dataType="int" displayFormat="double" initValue="" minValue="-360" maxValue="360" step="0.001" unit="°"/>
+		<field pid="107" id="PitchSpeedLimit" desc="标校俯仰限速" dataType="int" displayFormat="double" initValue="" minValue="-360" maxValue="360" step="0.001" unit="°"/>
+		<field pid="108" id="ShaftErrorCalMeth" desc="轴系误差标校" dataType="uint8" displayFormat="enum|ShaftErrorCalMeth" initValue="" minValue="" maxValue="" step="" unit=""/>
+	</result>
+	<layout>
+		<item id="status1" desc="综合状态" row="0" col="0" rowspan="1" colspan="1"/>
+		<item id="status2" desc="公共参数" row="0" col="1" rowspan="1" colspan="1"/>
+		<item id="status3" desc="无塔轴系" row="1" col="0" rowspan="1" colspan="1"/>
+		<item id="status4" desc="有塔轴系" row="1" col="1" rowspan="1" colspan="1"/>
+	</layout>
+</cmd>

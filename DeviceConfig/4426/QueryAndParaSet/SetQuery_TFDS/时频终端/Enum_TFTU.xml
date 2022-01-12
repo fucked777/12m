@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="TFTU" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="ControlMode" desc="监控方式">
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="TimeStatus" desc="时间同步状态">
+		<entry svalue="1" uvalue="1" desc="未同步"/>
+		<entry svalue="2" uvalue="2" desc="GPS/北斗同步"/>
+		<entry svalue="3" uvalue="3" desc="IRIG-B码同步"/>
+	</enum>
+	<enum name="SignChoose" desc="频标选择">
+		<entry svalue="1" uvalue="1" desc="内标"/>
+		<entry svalue="2" uvalue="2" desc="外标"/>
+	</enum>
+	<enum name="TimeZone" desc="时区">
+		<entry svalue="1" uvalue="1" desc="BTC(北京时间)"/>
+		<entry svalue="2" uvalue="2" desc="UTC"/>
+		<entry svalue="3" uvalue="3" desc="其他"/>
+	</enum>
+	<enum name="BCodeStandard" desc="B 码标准">
+		<entry svalue="1" uvalue="1" desc="国军标"/>
+		<entry svalue="2" uvalue="2" desc="美军标"/>
+	</enum>
+	<enum name="TimeSyncMethods" desc="时间同步方式">
+		<entry svalue="1" uvalue="1" desc="内时统"/>
+		<entry svalue="2" uvalue="2" desc="GPS/北斗"/>
+		<entry svalue="3" uvalue="3" desc="IRIG-B码(DC)"/>
+		<entry svalue="4" uvalue="4" desc="IRIG-B码(AC)"/>
+		<entry svalue="5" uvalue="5" desc="卫星同步GPS"/>
+		<entry svalue="6" uvalue="6" desc="卫星同步北斗"/>
+	</enum>
+	<enum name="PowerCtrl" desc="加去电控制">
+		<entry svalue="1" uvalue="1" desc="关电"/>
+		<entry svalue="2" uvalue="2" desc="开电"/>
+	</enum>
+	<enum name="FreqSignChoose" desc="频标">
+		<entry svalue="1" uvalue="1" desc="内标"/>
+		<entry svalue="2" uvalue="2" desc="外标"/>
+	</enum>
+</enums>

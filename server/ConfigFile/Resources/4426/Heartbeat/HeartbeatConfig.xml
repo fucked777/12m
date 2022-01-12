@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+isManualControl: 值为1，表示该项只有在主界面任务流程中的手动控制中从显示，在参数宏界面不显示
+ -->
+<root>
+    <AIP>132.29.1.3</AIP>
+    <BIP>132.29.1.4</BIP>
+    <VIP>132.29.1.121</VIP>
+    <IsUsed>true</IsUsed>
+	<MasterToSlave>Heartbeat/masterToSlave.sh</MasterToSlave>
+	<SlaveToMaster>Heartbeat/slaveToMaster.sh</SlaveToMaster>
+</root>

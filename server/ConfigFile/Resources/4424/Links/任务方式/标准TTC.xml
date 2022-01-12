@@ -1,0 +1,165 @@
+<!--
+
+
+
+-->
+<Mode name="标准TTC">
+	<!-- 和路左旋场放选中 -->
+	<if condition="STTC_LAN_L_SUM:1">
+		<Command deviceId="0x3001" modeId="0xFFFF" unitId="3" deviceName="S频段射频开关网络 S馈电单元">
+			<Param id="SHeLSwitch" value="1" name="S和路左旋开关 LNA-1"/>
+		</Command>
+		<Command deviceId="0x3001" modeId="0xFFFF" unitId="1" deviceName="S频段射频开关网络 S射频开关网络">
+			<Param id="HeLSelect" value="1" name="S频段左旋和路 S-LNA1(左旋)"/>
+		</Command>
+	</if>
+	<if condition="STTC_LAN_L_SUM:2">
+		<Command deviceId="0x3001" modeId="0xFFFF" unitId="3" deviceName="S频段射频开关网络 S馈电单元">
+			<Param id="SHeLSwitch" value="2" name="S和路左旋开关 LNA-2"/>
+		</Command>
+		<Command deviceId="0x3001" modeId="0xFFFF" unitId="1" deviceName="S频段射频开关网络 S射频开关网络">
+			<Param id="HeLSelect" value="2" name="S频段左旋和路 S-LNA2(左旋)"/>
+		</Command>
+	</if>
+	<!-- 和路右旋场放选中 -->
+	<if condition="STTC_LAN_R_SUM:1">
+		<Command deviceId="0x3001" modeId="0xFFFF" unitId="3" deviceName="S频段射频开关网络 S馈电单元">
+			<Param id="SHeRSwitch" value="1" name="S和路右旋开关 LNA-3"/>
+		</Command>
+		<Command deviceId="0x3001" modeId="0xFFFF" unitId="1" deviceName="S频段射频开关网络 S射频开关网络">
+			<Param id="HeRSelect" value="1" name="S频段右旋和路 S-LNA3(右旋)"/>
+		</Command>
+	</if>
+	<if condition="STTC_LAN_R_SUM:2">
+		<Command deviceId="0x3001" modeId="0xFFFF" unitId="3" deviceName="S频段射频开关网络 S馈电单元">
+			<Param id="SHeRSwitch" value="2" name="S和路右旋开关 LNA-4"/>
+		</Command>
+		<Command deviceId="0x3001" modeId="0xFFFF" unitId="1" deviceName="S频段射频开关网络 S射频开关网络">
+			<Param id="HeRSelect" value="2" name="S频段右旋和路 S-LNA4(右旋)"/>
+		</Command>
+	</if>
+	<!-- 差路场放选中 -->
+	<if condition="STTC_LAN_DIFF:1">
+		<Command deviceId="0x3001" modeId="0xFFFF" unitId="3" deviceName="S频段射频开关网络 S馈电单元">
+			<Param id="SBadSwitch" value="1" name="S差路开关 LNA-5"/>
+		</Command>
+	</if>
+	<if condition="STTC_LAN_DIFF:2">
+		<Command deviceId="0x3001" modeId="0xFFFF" unitId="3" deviceName="S频段射频开关网络 S馈电单元">
+			<Param id="SBadSwitch" value="2" name="S差路开关 LNA-6"/>
+		</Command>
+	</if>
+	<!-- 射频数字化前端选中 根据选择的测控前端，切换到不同的前端， 都选功放小环入-->
+	<if condition="STTC_CKQD:1">
+		<Command deviceId="0x2101" modeId="0xFFFF" unitId="1" deviceName="发射射频开关网络 发射射频开关网络">
+			<Param id="NumBeforeChoose" value="1" name="S上行出选择（X3） 数字化前端A（上行X1）"/>
+			<Param id="DownChangeFreqSwitchNet" value="2" name="遥控小环选择(出) 功放小环入"/>
+		</Command>
+	</if>
+	<if condition="STTC_CKQD:2">
+		<Command deviceId="0x2101" modeId="0xFFFF" unitId="1" deviceName="发射射频开关网络 发射射频开关网络">
+			<Param id="NumBeforeChoose" value="2" name="S上行出选择（X3） 数字化前端B（上行X1）"/>
+			<Param id="DownChangeFreqSwitchNet" value="2" name="遥控小环选择(出) 功放小环入"/>
+		</Command>
+	</if>
+	<!-- 主跟目标接收极化无论是什么，测控前端1、2都固定为左接左、右接右、F2默认接左 -->
+	<if condition="(MasterReceivePolar:1)
+					OR(MasterReceivePolar:2)
+					OR(MasterReceivePolar:3)">
+		<Command deviceId="0x3101" modeId="0xFFFF" unitId="1" deviceName="S频段射频开关矩阵 S频段射频开关矩阵">
+			<Param id="OutputPort1" value="1" name="左旋和路 左旋和路"/>
+			<Param id="OutputPort2" value="2" name="右旋和路 右旋和路"/>
+			<Param id="OutputPort3" value="1" name="F2和路 左旋和路"/>
+			<Param id="OutputPort4" value="1" name="左旋和路 左旋和路"/>
+			<Param id="OutputPort5" value="2" name="右旋和路 右旋和路"/>
+			<Param id="OutputPort6" value="1" name="F2和路 左旋和路"/>
+		</Command>
+	</if>
+	<!-- 主跟目标跟踪极化为左旋 -->
+	<if condition="MasterTrackPolar:1">
+		<!-- 差路场放为LNA5 -->
+		<if condition="STTC_LAN_DIFF:1">
+			<Command deviceId="0x3101" modeId="0xFFFF" unitId="1" deviceName="S频段射频开关矩阵 S频段射频开关矩阵">
+				<Param id="OutputPort7" value="1" name="S跟踪和路1 左旋和路"/>
+				<Param id="OutputPort8" value="3" name="S跟踪差路1 跟踪左旋差路"/>
+				<Param id="OutputPort9" value="1" name="S跟踪和路2 左旋和路"/>
+				<Param id="OutputPort10" value="3" name="S跟踪差路2 跟踪左旋差路"/>
+				<Param id="OutputPort11" value="1" name="S跟踪和路1 左旋和路"/>
+				<Param id="OutputPort12" value="3" name="S跟踪差路1 跟踪左旋差路"/>
+				<Param id="OutputPort13" value="1" name="S跟踪和路2 左旋和路"/>
+				<Param id="OutputPort14" value="3" name="S跟踪差路2 跟踪左旋差路"/>
+			</Command>
+		</if>
+		<!-- 差路场放为LNA6(交叉输入) -->
+		<if condition="STTC_LAN_DIFF:2">
+			<Command deviceId="0x3101" modeId="0xFFFF" unitId="1" deviceName="S频段射频开关矩阵 S频段射频开关矩阵">
+				<Param id="OutputPort7" value="1" name="S跟踪和路1 左旋和路"/>
+				<Param id="OutputPort8" value="4" name="S跟踪差路1 跟踪右旋差路"/>
+				<Param id="OutputPort9" value="1" name="S跟踪和路2 左旋和路"/>
+				<Param id="OutputPort10" value="4" name="S跟踪差路2 跟踪右旋差路"/>
+				<Param id="OutputPort11" value="1" name="S跟踪和路1 左旋和路"/>
+				<Param id="OutputPort12" value="4" name="S跟踪差路1 跟踪右旋差路"/>
+				<Param id="OutputPort13" value="1" name="S跟踪和路2 左旋和路"/>
+				<Param id="OutputPort14" value="4" name="S跟踪差路2 跟踪右旋差路"/>
+			</Command>
+		</if>
+	</if>
+	<!-- 主跟目标跟踪极化为右旋 -->
+	<if condition="MasterTrackPolar:2">
+		<!-- 差路场放为LNA5 -->
+		<if condition="STTC_LAN_DIFF:1">
+			<Command deviceId="0x3101" modeId="0xFFFF" unitId="1" deviceName="S频段射频开关矩阵 S频段射频开关矩阵">
+				<Param id="OutputPort7" value="2" name="S跟踪和路1 右旋和路"/>
+				<Param id="OutputPort8" value="4" name="S跟踪差路1 跟踪右旋差路"/>
+				<Param id="OutputPort9" value="2" name="S跟踪和路2 右旋和路"/>
+				<Param id="OutputPort10" value="4" name="S跟踪差路2 跟踪右旋差路"/>
+				<Param id="OutputPort11" value="2" name="S跟踪和路1 右旋和路"/>
+				<Param id="OutputPort12" value="4" name="S跟踪差路1 跟踪右旋差路"/>
+				<Param id="OutputPort13" value="2" name="S跟踪和路2 右旋和路"/>
+				<Param id="OutputPort14" value="4" name="S跟踪差路2 跟踪右旋差路"/>
+			</Command>
+		</if>
+		<!-- 差路场放为LNA6(交叉输入) -->
+		<if condition="STTC_LAN_DIFF:2">
+			<Command deviceId="0x3101" modeId="0xFFFF" unitId="1" deviceName="S频段射频开关矩阵 S频段射频开关矩阵">
+				<Param id="OutputPort7" value="2" name="S跟踪和路1 右旋和路"/>
+				<Param id="OutputPort8" value="3" name="S跟踪差路1 跟踪左旋差路"/>
+				<Param id="OutputPort9" value="2" name="S跟踪和路2 右旋和路"/>
+				<Param id="OutputPort10" value="3" name="S跟踪差路2 跟踪左旋差路"/>
+				<Param id="OutputPort11" value="2" name="S跟踪和路1 右旋和路"/>
+				<Param id="OutputPort12" value="3" name="S跟踪差路1 跟踪左旋差路"/>
+				<Param id="OutputPort13" value="2" name="S跟踪和路2 右旋和路"/>
+				<Param id="OutputPort14" value="3" name="S跟踪差路2 跟踪左旋差路"/>
+			</Command>
+		</if>
+	</if>
+	<!-- 功放选择 根据选择的S功放，切换到对应的上天线，其他参数一样 -->
+	<if condition="STTC_SHPA:1">
+		<Command deviceId="0x2301" modeId="0xFFFF" unitId="1" deviceName="功放切换开关 功放切换开关">
+			<Param id="SwitcherSet" value="1"/>
+			<Param id="SwitchMode" value="2"/>
+			<Param id="AmplifSwitcher" value="1"/>
+			<Param id="RFSwitcher" value="1"/>
+		</Command>
+		<Command deviceId="0x2001" modeId="0xFFFF" cmdId="1" deviceName="S高功放A 加电">
+			<Param id="TelegramControl" value="2"/>
+		</Command>
+		<Command deviceId="0x2002" modeId="0xFFFF" cmdId="1" deviceName="S高功放B 去电">
+			<Param id="TelegramControl" value="1"/>
+		</Command>
+	</if>
+	<if condition="STTC_SHPA:2">
+		<Command deviceId="0x2301" modeId="0xFFFF" unitId="1" deviceName="功放切换开关 功放切换开关">
+			<Param id="SwitcherSet" value="2"/>
+			<Param id="SwitchMode" value="2"/>
+			<Param id="AmplifSwitcher" value="1"/>
+			<Param id="RFSwitcher" value="1"/>
+		</Command>
+		<Command deviceId="0x2001" modeId="0xFFFF" cmdId="1" deviceName="S高功放A 去电">
+			<Param id="TelegramControl" value="1"/>
+		</Command>
+		<Command deviceId="0x2002" modeId="0xFFFF" cmdId="1" deviceName="S高功放B 加电">
+			<Param id="TelegramControl" value="2"/>
+		</Command>
+	</if>
+</Mode>

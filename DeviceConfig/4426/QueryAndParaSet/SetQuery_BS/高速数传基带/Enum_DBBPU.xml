@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="DBBPU" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="ControlMode" desc="监控方式">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="EquipInteStatus" desc="设备状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="UsageState" desc="使用状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="占用"/>
+		<entry svalue="2" uvalue="2" desc="空闲"/>
+	</enum>
+	<enum name="OnLineMachine" desc="本机在线状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="主机"/>
+		<entry svalue="2" uvalue="2" desc="备机"/>
+	</enum>
+	<enum name="ExternalState" desc="外时码状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="ExternalFreqState" desc="外频标状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="WorkMode" desc="工作模式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="标准TTC"/>
+		<entry svalue="2" uvalue="2" desc="扩频TTC模式一"/>
+		<entry svalue="3" uvalue="4" desc="扩频TTC模式二"/>
+		<entry svalue="4" uvalue="9" desc="标准TTC双点频"/>
+		<entry svalue="5" uvalue="10" desc="扩频模式一+标准"/>
+		<entry svalue="6" uvalue="11" desc="扩频模式二+标准"/>
+		<entry svalue="7" uvalue="12" desc="标准+扩频模式一"/>
+		<entry svalue="8" uvalue="13" desc="标准+扩频模式二"/>
+		<entry svalue="9" uvalue="16" desc="测控数传一体化(上面级)"/>
+		<entry svalue="10" uvalue="17" desc="测控数传一体化(卫星)"/>
+		<entry svalue="11" uvalue="18" desc="测控数传一体化(上行高码率)"/>
+		<entry svalue="12" uvalue="19" desc="一体化(上面级)+扩二(不共载波),主跟数传"/>
+		<entry svalue="13" uvalue="20" desc="一体化(上面级)+扩二(不共载波),主跟扩二"/>
+		<entry svalue="14" uvalue="21" desc="一体化(上面级)+扩二(共载波),主跟数传"/>
+		<entry svalue="15" uvalue="22" desc=">一体化(上面级)+扩二(共载波),主跟扩二"/>
+		<entry svalue="16" uvalue="23" desc="一体化(卫星)+扩二,主跟数传"/>
+		<entry svalue="17" uvalue="24" desc="一体化(卫星)+扩二,主跟扩二"/>
+		<entry svalue="18" uvalue="25" desc="一体化(上行高码率)+扩二"/>
+		<entry svalue="19" uvalue="26" desc="数传跟踪模式"/>
+	</enum>
+	<enum name="WorkWay" desc="工作方式">
+		<!--<entry svalue="0" uvalue="0" desc="无此参数" /> -->
+		<entry svalue="1" uvalue="1" desc="任务方式"/>
+		<!--
+		<entry svalue="2" uvalue="2" desc="联试应答机无线闭环" />
+        <entry svalue="3" uvalue="3" desc="联试应答机有线闭环" />
+        <entry svalue="4" uvalue="4" desc="校零变频器无线闭环" />
+        <entry svalue="5" uvalue="5" desc="校零变频器有线闭环" />
+        <entry svalue="6" uvalue="6" desc="偏馈校零变频器闭环" />
+        <entry svalue="7" uvalue="7" desc="射频模拟源有线闭环" />
+        <entry svalue="8" uvalue="8" desc="信标方式" />
+		-->
+		<entry svalue="9" uvalue="9" desc="中频闭环"/>
+		<!--
+		<entry svalue="10" uvalue="10" desc="记录回放" />
+        <entry svalue="11" uvalue="11" desc="其他方式" />
+        <entry svalue="12" uvalue="12" desc="扩跳中频动态模拟" />
+        <entry svalue="13" uvalue="13" desc="扩跳射频(联试应答机闭环)动态模拟" />
+        <entry svalue="14" uvalue="14" desc="扩跳射频(校零变频器闭环)动态模拟" />
+		-->
+	</enum>
+	<enum name="MonSoftStatus" desc="监控软件状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="告警:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+</enums>

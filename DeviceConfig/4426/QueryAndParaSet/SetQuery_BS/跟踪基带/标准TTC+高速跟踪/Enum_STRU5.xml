@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="STRU" ModeType="0x05" edition="1.1.1.1">
+	<enum name="CarrierLockInd" desc="载波锁定指示">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="锁定:G"/>
+		<entry svalue="2" uvalue="2" desc="失锁:R"/>
+	</enum>
+	<enum name="CarrLoopBand" desc="载波环路带宽">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="100Hz"/>
+		<entry svalue="2" uvalue="2" desc="500Hz"/>
+		<entry svalue="3" uvalue="3" desc="1kHz"/>
+		<entry svalue="4" uvalue="4" desc="2kHz"/>
+	</enum>
+	<enum name="AGCTimeConstant" desc="AGC时间常数">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="1 ms"/>
+		<entry svalue="2" uvalue="2" desc="10 ms"/>
+		<entry svalue="3" uvalue="3" desc="100 ms"/>
+		<entry svalue="4" uvalue="4" desc="1000 ms"/>
+	</enum>
+	<enum name="AngErrOutputSel" desc="角误差输出选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="指定输出"/>
+		<entry svalue="2" uvalue="2" desc="择优输出"/>
+	</enum>
+	<enum name="SpecDirecOutput" desc="指定输出旋向">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="左旋"/>
+		<entry svalue="2" uvalue="2" desc="右旋"/>
+	</enum>
+</enums>

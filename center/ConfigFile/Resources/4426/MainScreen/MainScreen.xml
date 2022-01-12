@@ -1,0 +1,211 @@
+<GridLayout contentsMargins="0,0,0,0">
+	<DeviceWidget row="0" col="0" rowSpan="1" columnSpan="2" >
+		<ExtensionWidget deviceId="0x1011" name="ACU状态1" icon="天伺馈-1.png" extensionSymbol="TCK" triggerModule="DeviceMonitorModule">
+			<Include path="./模块/ACU状态.xml"/>
+		</ExtensionWidget>
+		<ExtensionWidget deviceId="0x1012" name="ACU状态2" icon="天伺馈-1.png" extensionSymbol="TCK" triggerModule="DeviceMonitorModule">
+			<Include path="./模块/ACU状态.xml"/>
+		</ExtensionWidget>
+	</DeviceWidget>
+	<DeviceWidget row="0" col="4" rowSpan="1" columnSpan="1">
+		<ExtensionWidget deviceId="0x2001" name="测控信道" icon="发射-1.png" multiDeviceId="0x2001;0x2002;0x2003;0x2004;0x2005;0x2006;0x2101;0x4001;0x4002" extensionSymbol="FS" triggerModule="DeviceMonitorModule">
+			<Include path="./模块/测控信道.xml"/>
+		</ExtensionWidget>
+	</DeviceWidget>
+	<DeviceWidget row="0" col="3" rowSpan="1" columnSpan="1">
+		<ExtensionWidget deviceId="0x3001" name="高速数传信道" icon="高频接收-1.png" multiDeviceId="0x3102;0x3103;0x3202" extensionSymbol="GPJS" triggerModule="DeviceMonitorModule">
+			<Include path="./模块/高速数传信道.xml"/>
+		</ExtensionWidget>
+
+		<ExtensionWidget deviceId="0x3104" name="低速数传信道" icon="高频接收-1.png" multiDeviceId="0x3102;0x3103;0x3202" extensionSymbol="GPJS" triggerModule="DeviceMonitorModule">
+			<Include path="./模块/X低速数传信道.xml"/>
+		</ExtensionWidget>
+
+	</DeviceWidget>
+	<DeviceWidget row="0" col="2" rowSpan="1" columnSpan="1" >
+		<ExtensionWidget deviceId="0x4201" name="跟踪基带A" icon="基带-1.png" extensionSymbol="JD" triggerModule="DeviceMonitorModule">	
+			<ModeWidget modeId="0x1" name=" 标准TTC模式">
+				<Include path="./模块/跟踪基带_标准TTC.xml"/>
+			</ModeWidget>				
+			<ModeWidget modeId="0x2" name=" 扩频TTC模式">
+				<Include path="./模块/跟踪基带_扩频TTC.xml"/>
+			</ModeWidget>					
+			<ModeWidget modeId="0x4" name=" 高速数传跟踪基带模式">
+				<Include path="./模块/跟踪基带_高速数传跟踪.xml"/>
+			</ModeWidget>	
+			<ModeWidget modeId="0x5" name=" 标准TTC+高速跟踪模式">
+				<Include path="./模块/跟踪基带_标准TTC+高速数传跟踪.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x6" name=" 扩频TTC+高速跟踪模式">
+				<Include path="./模块/跟踪基带_扩频TTC+高速数传跟踪.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x9" name=" 扩跳频跟踪模式">
+				<Include path="./模块/跟踪基带_扩跳频跟踪基带.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0xA" name=" 标准TTC+低速跟踪模式">
+				<Include path="./模块/跟踪基带_标准TTC+低速数传跟踪.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0xB" name=" 扩频TTC+低速跟踪模式">
+				<Include path="./模块/跟踪基带_扩频TTC+低速数传跟踪.xml"/>
+			</ModeWidget>				
+			<ModeWidget modeId="0xC" name=" 低速数传跟踪基带模式">
+				<Include path="./模块/跟踪基带_低速数传跟踪.xml"/>
+			</ModeWidget>
+		</ExtensionWidget>
+		<ExtensionWidget deviceId="0x4202" name="跟踪基带B" icon="基带-1.png" extensionSymbol="JD" triggerModule="DeviceMonitorModule">	
+			<ModeWidget modeId="0x1" name=" 标准TTC模式">
+				<Include path="./模块/跟踪基带_标准TTC.xml"/>
+			</ModeWidget>				
+			<ModeWidget modeId="0x2" name=" 扩频TTC模式">
+				<Include path="./模块/跟踪基带_扩频TTC.xml"/>
+			</ModeWidget>					
+			<ModeWidget modeId="0x4" name=" 高速数传跟踪基带模式">
+				<Include path="./模块/跟踪基带_高速数传跟踪.xml"/>
+			</ModeWidget>	
+			<ModeWidget modeId="0x5" name=" 标准TTC+高速跟踪模式">
+				<Include path="./模块/跟踪基带_标准TTC+高速数传跟踪.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x6" name=" 扩频TTC+高速跟踪模式">
+				<Include path="./模块/跟踪基带_扩频TTC+高速数传跟踪.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x9" name=" 扩跳频跟踪模式">
+				<Include path="./模块/跟踪基带_扩跳频跟踪基带.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0xA" name=" 标准TTC+低速跟踪模式">
+				<Include path="./模块/跟踪基带_标准TTC+低速数传跟踪.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0xB" name=" 扩频TTC+低速跟踪模式">
+				<Include path="./模块/跟踪基带_扩频TTC+低速数传跟踪.xml"/>
+			</ModeWidget>				
+			<ModeWidget modeId="0xC" name=" 低速数传跟踪基带模式">
+				<Include path="./模块/跟踪基带_低速数传跟踪.xml"/>
+			</ModeWidget>
+		</ExtensionWidget>
+		<ExtensionWidget deviceId="0x4203" name="跟踪基带C" icon="基带-1.png" extensionSymbol="JD" triggerModule="DeviceMonitorModule">		
+			<ModeWidget modeId="0x1" name=" 标准TTC模式">
+				<Include path="./模块/跟踪基带_标准TTC.xml"/>
+			</ModeWidget>				
+			<ModeWidget modeId="0x2" name=" 扩频TTC模式">
+				<Include path="./模块/跟踪基带_扩频TTC.xml"/>
+			</ModeWidget>					
+			<ModeWidget modeId="0x4" name=" 高速数传跟踪基带模式">
+				<Include path="./模块/跟踪基带_高速数传跟踪.xml"/>
+			</ModeWidget>	
+			<ModeWidget modeId="0x5" name=" 标准TTC+高速跟踪模式">
+				<Include path="./模块/跟踪基带_标准TTC+高速数传跟踪.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x6" name=" 扩频TTC+高速跟踪模式">
+				<Include path="./模块/跟踪基带_扩频TTC+高速数传跟踪.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x9" name=" 扩跳频跟踪模式">
+				<Include path="./模块/跟踪基带_扩跳频跟踪基带.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0xA" name=" 标准TTC+低速跟踪模式">
+				<Include path="./模块/跟踪基带_标准TTC+低速数传跟踪.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0xB" name=" 扩频TTC+低速跟踪模式">
+				<Include path="./模块/跟踪基带_扩频TTC+低速数传跟踪.xml"/>
+			</ModeWidget>				
+			<ModeWidget modeId="0xC" name=" 低速数传跟踪基带模式">
+				<Include path="./模块/跟踪基带_低速数传跟踪.xml"/>
+			</ModeWidget>	
+		</ExtensionWidget>
+		<ExtensionWidget deviceId="0x4204" name="跟踪基带D" icon="基带-1.png" extensionSymbol="JD" triggerModule="DeviceMonitorModule">		
+			<ModeWidget modeId="0x1" name=" 标准TTC模式">
+				<Include path="./模块/跟踪基带_标准TTC.xml"/>
+			</ModeWidget>				
+			<ModeWidget modeId="0x2" name=" 扩频TTC模式">
+				<Include path="./模块/跟踪基带_扩频TTC.xml"/>
+			</ModeWidget>					
+			<ModeWidget modeId="0x4" name=" 高速数传跟踪基带模式">
+				<Include path="./模块/跟踪基带_高速数传跟踪.xml"/>
+			</ModeWidget>	
+			<ModeWidget modeId="0x5" name=" 标准TTC+高速跟踪模式">
+				<Include path="./模块/跟踪基带_标准TTC+高速数传跟踪.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x6" name=" 扩频TTC+高速跟踪模式">
+				<Include path="./模块/跟踪基带_扩频TTC+高速数传跟踪.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x9" name=" 扩跳频跟踪模式">
+				<Include path="./模块/跟踪基带_扩跳频跟踪基带.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0xA" name=" 标准TTC+低速跟踪模式">
+				<Include path="./模块/跟踪基带_标准TTC+低速数传跟踪.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0xB" name=" 扩频TTC+低速跟踪模式">
+				<Include path="./模块/跟踪基带_扩频TTC+低速数传跟踪.xml"/>
+			</ModeWidget>				
+			<ModeWidget modeId="0xC" name=" 低速数传跟踪基带模式">
+				<Include path="./模块/跟踪基带_低速数传跟踪.xml"/>
+			</ModeWidget>		
+		</ExtensionWidget>
+	</DeviceWidget>
+	<DeviceWidget row="1" col="0" rowSpan="1" columnSpan="3">
+		<ExtensionWidget deviceId="0x4001" name="测控基带A-1" icon="基带-1.png" extensionSymbol="JD" triggerModule="DeviceMonitorModule">
+			<ModeWidget modeId="0x1" name=" 标准TTC模式">
+				<Include path="./模块/测控基带_标准.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x4" name=" S扩频模式">
+				<Include path="./模块/测控基带_扩二.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x5" name=" Ka扩频模式">
+				<Include path="./模块/测控基带_扩二.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x21" name=" 扩跳频模式">
+				<Include path="./模块/测控基带_扩跳频.xml"/>
+			</ModeWidget>
+		</ExtensionWidget>
+		<ExtensionWidget deviceId="0x4002" name="测控基带A-2" icon="基带-1.png" extensionSymbol="JD" triggerModule="DeviceMonitorModule">
+			<ModeWidget modeId="0x1" name=" 标准TTC模式">
+				<Include path="./模块/测控基带_标准.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x4" name=" S扩频模式">
+				<Include path="./模块/测控基带_扩二.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x5" name=" Ka扩频模式">
+				<Include path="./模块/测控基带_扩二.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x21" name=" 扩跳频模式">
+				<Include path="./模块/测控基带_扩跳频.xml"/>
+			</ModeWidget>
+		</ExtensionWidget>
+	</DeviceWidget>
+	<DeviceWidget row="1" col="3" rowSpan="1" columnSpan="3">
+		<ExtensionWidget deviceId="0x4003" name="测控基带B-1" icon="基带-1.png" extensionSymbol="JD" triggerModule="DeviceMonitorModule">
+			<ModeWidget modeId="0x1" name=" 标准TTC模式">
+				<Include path="./模块/测控基带_标准.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x4" name=" S扩频模式">
+				<Include path="./模块/测控基带_扩二.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x5" name=" Ka扩频模式">
+				<Include path="./模块/测控基带_扩二.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x21" name=" 扩跳频模式">
+				<Include path="./模块/测控基带_扩跳频.xml"/>
+			</ModeWidget>
+		</ExtensionWidget>
+		<ExtensionWidget deviceId="0x4004" name="测控基带B-2" icon="基带-1.png" extensionSymbol="JD" triggerModule="DeviceMonitorModule">
+			<ModeWidget modeId="0x1" name=" 标准TTC模式">
+				<Include path="./模块/测控基带_标准.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x4" name=" S扩频模式">
+				<Include path="./模块/测控基带_扩二.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x5" name=" Ka扩频模式">
+				<Include path="./模块/测控基带_扩二.xml"/>
+			</ModeWidget>
+			<ModeWidget modeId="0x21" name=" 扩跳频模式">
+				<Include path="./模块/测控基带_扩跳频.xml"/>
+			</ModeWidget>
+		</ExtensionWidget>
+	</DeviceWidget>
+	<DeviceWidget row="0" col="6" rowSpan="2" columnSpan="3" >
+		<ExtensionWidget deviceId="0x4101" name="数传基带A" icon="基带-1.png" multiDeviceId="0x4101;0x4401" extensionSymbol="JD" triggerModule="DeviceMonitorModule">
+			<Include path="./模块/数传基带1.xml"/>
+		</ExtensionWidget>
+		<ExtensionWidget deviceId="0x4102" name="数传基带B" icon="基带-1.png" multiDeviceId="0x4102;0x4402" extensionSymbol="JD" triggerModule="DeviceMonitorModule">
+			<Include path="./模块/数传基带2.xml"/>
+		</ExtensionWidget>
+	</DeviceWidget>
+</GridLayout>

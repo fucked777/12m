@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+id  枚举ID  -与设备类型关联
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums ExtenType="TFT" ModeType = "0xFFFF" edition="1.1.1.1">
+	<enum name="TimeSynCh" desc="时间同步">
+		<entry svalue="1" uvalue="1" desc="内时统" />
+		<entry svalue="2" uvalue="2" desc="GPS授时" />
+		<entry svalue="3" uvalue="3" desc="北斗授时" />
+		<entry svalue="4" uvalue="4" desc="BDC1授时" />
+		<entry svalue="5" uvalue="5" desc="BDC2授时" />
+		<entry svalue="6" uvalue="6" desc="BAC授时" />
+	</enum>
+	<enum name="InterStand" desc="内外频标">
+		<entry svalue="1" uvalue="1" desc="内频标" />
+		<entry svalue="2" uvalue="2" desc="外频标" />
+	</enum>
+	<enum name="TimeSelect" desc="时区选择">
+		<entry svalue="1" uvalue="1" desc="UTC" />
+		<entry svalue="2" uvalue="2" desc="北京时" />
+	</enum>
+
+</enums>

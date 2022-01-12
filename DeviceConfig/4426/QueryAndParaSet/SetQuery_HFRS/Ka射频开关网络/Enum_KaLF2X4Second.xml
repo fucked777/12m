@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="KaLF2X4Second" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="ControlMode" desc="监控方式">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="InOutReference" desc="内外参考">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="内参考"/>
+		<entry svalue="2" uvalue="2" desc="外参考"/>
+	</enum>
+	<enum name="PowerStatus" desc="锁定状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="加电:G"/>
+		<entry svalue="2" uvalue="2" desc="去电:Y"/>
+	</enum>
+	<enum name="DeviceStatus" desc="锁定状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="失锁:R"/>
+		<entry svalue="2" uvalue="2" desc="锁定:G"/>
+	</enum>
+	<enum name="DifferWaySwitch" desc="Ka频段左旋差路接收信号">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="Ka-LNA5(左差1)"/>
+		<entry svalue="2" uvalue="2" desc="Ka-LNA6(左差2)"/>
+	</enum>
+	<enum name="DifferWaySwitchR" desc="Ka频段右旋差路接收信号">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="Ka-LNA7(右差1)"/>
+		<entry svalue="2" uvalue="2" desc="Ka-LNA8(右差2)"/>
+	</enum>
+	<enum name="SumLeftPolSwitch" desc="Ka频段左旋和路接收信号">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="Ka-LNA1(左和1)"/>
+		<entry svalue="2" uvalue="2" desc="Ka-LNA2(左和2)"/>
+	</enum>
+	<enum name="SumLeftPolSwitchR" desc="Ka频段右旋和路接收信号">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="Ka-LNA3(右和1)"/>
+		<entry svalue="2" uvalue="2" desc="Ka-LNA4(右和2)"/>
+	</enum>
+	<enum name="SignalSum_Left" desc="">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="Ka-LNA1(左和1)"/>
+		<entry svalue="2" uvalue="2" desc="Ka-LNA2(左和2)"/>
+	</enum>
+	<enum name="SignalSum_Right" desc="">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="Ka-LNA3(右和1)"/>
+		<entry svalue="2" uvalue="2" desc="Ka-LNA4(右和2)"/>
+	</enum>
+	<enum name="SignalDiff_Left" desc="">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="Ka-LNA5(左差1)"/>
+		<entry svalue="2" uvalue="2" desc="Ka-LNA6(左差2)"/>
+	</enum>
+	<enum name="SignalDiff_Right" desc="">
+		<entry svalue="1" uvalue="1" desc="Ka-LNA7(右差1)"/>
+		<entry svalue="2" uvalue="2" desc="Ka-LNA8(右差2)"/>
+	</enum>
+	<enum name="NewSum" desc="New">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="左旋和路"/>
+		<entry svalue="2" uvalue="2" desc="右旋和路"/>
+	</enum>
+	<enum name="NewDIFF" desc="New">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="Ka左旋和路"/>
+		<entry svalue="2" uvalue="2" desc="Ka右旋和路"/>
+		<entry svalue="3" uvalue="3" desc="Ka左旋差路"/>
+		<entry svalue="4" uvalue="4" desc="Ka右旋差路"/>
+	</enum>
+	<enum name="SumWaySwitch" desc="和路右旋开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="和路右旋低噪放A"/>
+		<entry svalue="2" uvalue="2" desc="和路右旋低噪放B"/>
+	</enum>
+	<enum name="FreqSegChoose" desc="频段监测信号选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="差路监测"/>
+		<entry svalue="2" uvalue="2" desc="左和监测"/>
+		<entry svalue="3" uvalue="3" desc="右和监测"/>
+		<entry svalue="4" uvalue="4" desc="跟踪变频A组本振"/>
+		<entry svalue="5" uvalue="5" desc="跟踪变频B组本振"/>
+		<entry svalue="6" uvalue="6" desc="和路数传变频器A本振"/>
+		<entry svalue="7" uvalue="7" desc="和路数传变频器B本振"/>
+		<entry svalue="8" uvalue="8" desc="和路数传变频器C本振"/>
+		<entry svalue="9" uvalue="9" desc="和路数传变频器D本振"/>
+		<entry svalue="10" uvalue="10" desc="和路数传变频器E本振"/>
+		<entry svalue="11" uvalue="11" desc="和路数传变频器F本振"/>
+	</enum>
+	<enum name="SumWayTraceChoose" desc="和路跟踪选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="和路左旋低噪放"/>
+		<entry svalue="2" uvalue="2" desc="和路右旋低噪放"/>
+	</enum>
+	<enum name="TestSignalIntChoose" desc="测试信号">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="左旋和路"/>
+		<entry svalue="2" uvalue="2" desc="右旋和路"/>
+		<entry svalue="3" uvalue="3" desc="左旋差路"/>
+		<entry svalue="4" uvalue="4" desc="右旋差路"/>
+	</enum>
+	<enum name="ModifiedPowerCtrl" desc="加去电控制">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="关电"/>
+		<entry svalue="2" uvalue="2" desc="开电"/>
+	</enum>
+	<enum name="KaTestOut" desc="Ka自测试出">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="Ka左和入"/>
+		<entry svalue="2" uvalue="2" desc="Ka右和入"/>
+		<entry svalue="3" uvalue="3" desc="Ka左差入"/>
+		<entry svalue="4" uvalue="4" desc="Ka右差入"/>
+	</enum>
+</enums>

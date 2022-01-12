@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="DUIQ" ModeType="0xFFFF" desc="数传I路解调单元" flag="1001">
+	<result MessageType="0x0000F104">
+		<field pid="1" id="BitSynLock" desc="位同步锁定" dataType="uint8" displayFormat="LED|Lock" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="2" id="FrameSynLockStatus" desc="帧同步锁定" dataType="uint8" displayFormat="LED|Lock" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="3" id="EbN0" desc="Eb/N0" dataType="short" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="dB"/>
+		<field pid="4" id="DPLFreqP" desc="多普勒频偏" dataType="int" displayFormat="double" initValue="" minValue="" maxValue="" step="0.01" unit="bps"/>
+		<field pid="5" id="ViterbiStatus" desc="Viterbi译码状态" dataType="uint8" displayFormat="LED|Status" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="6" id="RSStatus" desc="RS译码状态" dataType="uint8" displayFormat="LED|Status" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="7" id="LDPCStatus" desc="LDPC译码状态" dataType="uint8" displayFormat="LED|Status" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="8" id="TurboStatus" desc="Turbo译码状态" dataType="uint8" displayFormat="LED|Status" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="101" GroupId="1" id="CodeType" desc="码型" dataType="uint8" displayFormat="enum|CodeType" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="102" GroupId="1" id="CodeRateSett" desc="码速率设置方式" dataType="uint8" displayFormat="enum|CodeRateSett" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="103" GroupId="1" id="CodeSpeed" desc="码速率" dataType="uint" displayFormat="double" initValue="8192" minValue="" maxValue="" step="" unit="bps"/>
+		<field pid="104" GroupId="1" id="DataOutWayNotUsed" desc="数据输出方式" dataType="uint8" displayFormat="enum|DataOutWay" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+		<field pid="105" GroupId="8" id="CodeWay" desc="译码方式" dataType="uint8" displayFormat="enum|CodeWay" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="106" GroupId="2" id="ViterbiDecoding" desc="卷积码类型" dataType="uint8" displayFormat="enum|ViterbiDecoding" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="107" GroupId="2" id="G2PhaseReversal" desc="G2相位反转" dataType="uint8" displayFormat="enum|G2PhaseReversal" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="108" GroupId="3" id="RSDecoding" desc="R-S译码类型" dataType="uint8" displayFormat="enum|RSDecoding" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="109" GroupId="3" id="InterlaceDeep" desc="RS译码交织深度" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="5" step="" unit=""/>
+		<field pid="110" GroupId="3" id="DoubleBaseChange" desc="R-S译码坐标基" dataType="uint8" displayFormat="enum|DoubleBaseChange" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="111" GroupId="4" id="Descramble" desc="解扰开关" dataType="uint8" displayFormat="enum|Descramble" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="112" GroupId="4" id="DescPolynomial" desc="解扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="113" GroupId="4" id="DescPolyLenght" desc="解扰多项式长度" dataType="uint8" displayFormat="enum|PolynomialLength" initValue="8" minValue="" maxValue="" step="" unit=""/>
+		<field pid="114" GroupId="4" id="DescInitPhase" desc="解扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+		<field pid="115" GroupId="4" id="DescSequeChoose" desc="解扰输出位置" dataType="uint8" displayFormat="enum|DescSequeChoose" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="116" GroupId="5" id="Descramble2" desc="解扰开关" dataType="uint8" displayFormat="enum|Descramble" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="117" GroupId="5" id="DescPolynomial2" desc="解扰多项式" dataType="uint" displayFormat="Hex" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="118" GroupId="5" id="DescPolyLenght2" desc="解扰多项式长度" dataType="uint8" displayFormat="enum|PolynomialLength" initValue="8" minValue="" maxValue="" step="" unit=""/>
+		<field pid="119" GroupId="5" id="DescInitPhase2" desc="解扰初相" dataType="uint" displayFormat="Hex" initValue="1" minValue="0" maxValue="FFFFFFFF" step="" unit=""/>
+		<field pid="120" GroupId="5" id="DescSequeChoose2" desc="解扰输出位置" dataType="uint8" displayFormat="enum|DescSequeChoose" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="121" GroupId="1" id="FrameLenght" desc="帧长" dataType="ushort" displayFormat="UInt16" initValue="4" minValue="4" maxValue="2048" step="" unit="字"/>
+		<field pid="122" GroupId="1" id="IWayGroupLen" desc="帧同步码组长度" dataType="uint8" displayFormat="UInt8" initValue="16" minValue="16" maxValue="64" step="" unit=""/>
+		<field pid="123" GroupId="1" id="IWayBlockPatt" desc="帧同步码组图样" dataType="char|24" displayFormat="HexString" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="124" GroupId="1" id="ICodeGroupPos" desc="帧码组位置" dataType="uint8" displayFormat="enum|FraCodGroPos" initValue="2" minValue="" maxValue="" step="" unit=""/>
+		<field pid="125" GroupId="6" id="FrameSyncSearch" desc="搜索位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="192" step="" unit="位"/>
+		<field pid="126" GroupId="6" id="FrameSynLock" desc="锁定位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="192" step="" unit="位"/>
+		<field pid="127" GroupId="6" id="FrameSynCheckErr" desc="校核位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="192" step="" unit="位"/>
+		<field pid="128" GroupId="7" id="FrameSynLockTest" desc="锁定帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="1" unit="帧"/>
+		<field pid="129" GroupId="7" id="FrameSynCheckTest" desc="校核帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="1" unit="帧"/>
+		<field pid="130" GroupId="8" id="LDPCCodeRate" desc="LDPC译码方式" dataType="uint8" displayFormat="enum|LDPCCodeRate" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="131" GroupId="8" id="TurboCodeRate" desc="Turbo译码方式" dataType="uint8" displayFormat="enum|TurboCodeRate" initValue="1" minValue="" maxValue="" step="" unit=""/>
+	</result>
+	<layout>
+		<item id="1" desc="" row="0" col="0" rowspan="1" colspan="2"/>
+		<item id="2" desc="信道译码" row="1" col="0" rowspan="1" colspan="1"/>
+		<item id="3" desc="R-S译码" row="1" col="1" rowspan="1" colspan="1"/>
+		<item id="4" desc="译码前" row="2" col="0" rowspan="1" colspan="1"/>
+		<item id="5" desc="译码后" row="2" col="1" rowspan="1" colspan="1"/>
+		<item id="6" desc="容错位数" row="3" col="0" rowspan="1" colspan="1"/>
+		<item id="7" desc="三态逻辑" row="3" col="1" rowspan="1" colspan="1"/>
+		<item id="8" desc="译码方式" row="4" col="0" rowspan="1" colspan="2"/>
+	</layout>
+</cmd>

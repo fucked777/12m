@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 分系统名和分系统号的映射 -->
+<configuration>
+	<currentProjectID ID="4424">
+		<map name="TCK" sysID="1" />
+		<map name="FS" sysID="2" />
+		<map name="GPJS" sysID="3" />
+		<map name="JD" sysID="4" />
+		<map name="SP" sysID="5" />
+		<map name="CSBX" sysID="6" />
+		<map name="QD" sysID="7" />
+		<map name="SJJH" sysID="8" />
+	</currentProjectID>
+</configuration>

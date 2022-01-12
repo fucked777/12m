@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<configuration>
+	<!-- 当一个模块同时存在于核心模块和普通模块时此模块会被认为是普通模块 -->
+	<!-- 核心模块不能依赖任何模块 加载顺序未定义 并且一定先于普通模块加载 -->
+	<core>
+		<module name="ZMQRouterServer"/>
+		<module name="MicroServiceManager"/>
+	</core>
+	<!-- 普通的模块 -->
+	<general>
+		<module name="DeviceXmlLoadServiceModule"/>
+		<module name="DeviceMonitorModule"/>
+		<module name="CenterAirConditionerModule"/>
+		<module name="UserManagerModule"/>
+	</general>
+	<!-- 模块之间的依赖关系 此处如果包含核心模块会直接忽略核心模块的依赖 -->
+	<relationship>
+		<!-- <item depend="NetWorkManagerModule" on="DeviceCommunicationConfigModule"/> -->
+	</relationship>
+</configuration>

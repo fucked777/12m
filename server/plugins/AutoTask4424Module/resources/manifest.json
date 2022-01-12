@@ -1,0 +1,9 @@
+{
+    "bundle.symbolic_name":"AutoTask4424Module",
+    "servicename":"自动任务模块",
+    "bundle.activator" : true,
+    "authors" : [ "null" ],
+    "bundle.version" : "1.0.0",
+    "bundle.description" : "null",
+    "update_log" :""
+}

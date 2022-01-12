@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="XRFSN" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="ControlMode" desc="监控方式">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="InOutReference" desc="内外参考">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="内参考"/>
+		<entry svalue="2" uvalue="2" desc="外参考"/>
+	</enum>
+	<enum name="LockStatus" desc="电源状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="加电:G"/>
+		<entry svalue="2" uvalue="2" desc="去电:Y"/>
+	</enum>
+	<enum name="LDifferSwitch" desc="X左旋和路开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="左和"/>
+		<entry svalue="2" uvalue="2" desc="右和"/>
+	</enum>
+	<enum name="RDifferSwitch" desc="X右旋和路开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="左和"/>
+		<entry svalue="2" uvalue="2" desc="右和"/>
+	</enum>
+	<enum name="BenZhen" desc="本振信号监测">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="X左旋和"/>
+		<entry svalue="2" uvalue="2" desc="X右旋和"/>
+		<entry svalue="3" uvalue="3" desc="X/S DC1本振"/>
+		<entry svalue="4" uvalue="4" desc="X/S DC2本振"/>
+	</enum>
+	<enum name="LeftSwitch" desc="和路左旋开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="和路左旋低噪放A"/>
+		<entry svalue="2" uvalue="2" desc="和路左旋低噪放B"/>
+	</enum>
+	<enum name="RightSwitch" desc="和路右旋开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="和路右旋低噪放A"/>
+		<entry svalue="2" uvalue="2" desc="和路右旋低噪放B"/>
+	</enum>
+	<enum name="SignalChoose" desc="频段监测信号选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="差路监测"/>
+		<entry svalue="2" uvalue="2" desc="左和监测"/>
+		<entry svalue="3" uvalue="3" desc="右和监测"/>
+		<entry svalue="4" uvalue="4" desc="跟踪变频A组本振"/>
+		<entry svalue="5" uvalue="5" desc="跟踪变频B组本振"/>
+		<entry svalue="6" uvalue="6" desc="和路数传变频器A本振"/>
+		<entry svalue="7" uvalue="7" desc="和路数传变频器B本振"/>
+		<entry svalue="8" uvalue="8" desc="和路数传变频器C本振"/>
+		<entry svalue="9" uvalue="9" desc="和路数传变频器D本振"/>
+		<entry svalue="10" uvalue="10" desc="和路数传变频器E本振"/>
+		<entry svalue="11" uvalue="11" desc="和路数传变频器F本振"/>
+	</enum>
+	<enum name="TraceChoose" desc="和路跟踪选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="和路左旋低噪放"/>
+		<entry svalue="2" uvalue="2" desc="和路右旋低噪放"/>
+	</enum>
+	<enum name="SumWayTraceChoose" desc="和路跟踪选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="和路左旋低噪放"/>
+		<entry svalue="2" uvalue="2" desc="和路右旋低噪放"/>
+	</enum>
+	<enum name="PowerCtrl" desc="加去电控制">
+		<entry svalue="0" uvalue="0" desc="未连接"/>
+		<entry svalue="1" uvalue="1" desc="关电"/>
+		<entry svalue="2" uvalue="2" desc="开电"/>
+	</enum>
+	<enum name="XRecvSig1" desc="X/S DC1">
+		<entry svalue="1" uvalue="1" desc="X左旋和"/>
+		<entry svalue="2" uvalue="2" desc="X右旋和"/>
+	</enum>
+	<enum name="XRecvSig2" desc="X/S DC2">
+		<entry svalue="1" uvalue="1" desc="X左旋和"/>
+		<entry svalue="2" uvalue="2" desc="X右旋和"/>
+	</enum>
+	<enum name="MSignalChoose" desc="监测信号输出">
+		<entry svalue="0" uvalue="0" desc="未连接"/>
+		<entry svalue="1" uvalue="1" desc="X左和"/>
+		<entry svalue="2" uvalue="2" desc="X右和"/>
+		<entry svalue="3" uvalue="3" desc="本振检测"/>
+	</enum>
+	<enum name="TSigChoose" desc="测试信号">
+		<entry svalue="1" uvalue="1" desc="X左和"/>
+		<entry svalue="2" uvalue="2" desc="X右和"/>
+	</enum>
+</enums>

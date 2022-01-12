@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x06" deviceID="0x00" modeID="0x1" unitType="TTCM" desc="中频调制">
+	<Triggers>
+		<Trigger id="NoiseOutput" desc="噪声源输出">
+			<TriggerValue value="1" desc="关">
+				<Receiver id="OutPutRatio" desc="输出载噪比" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="开">
+				<Receiver id="OutPutRatio" desc="输出载噪比" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="RangPlusCtrl" desc="侧音调制控制">
+			<TriggerValue value="1" desc="加调">
+				<Receiver id="UpLinkInfMod" desc="侧音调制度" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="去调">
+				<Receiver id="UpLinkInfMod" desc="侧音调制度" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="RanPlusCtrl" desc="编遥调制控制">
+			<TriggerValue value="1" desc="加调">
+				<Receiver id="ModDegAna" desc="编遥调制度" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="去调">
+				<Receiver id="ModDegAna" desc="编遥调制度" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>
+

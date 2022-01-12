@@ -1,0 +1,39 @@
+<Mode name="X低速">
+	<!-- 测控数字化前端 -->
+	<if condition="CKQD1:3">
+		<Command deviceId="0x2501" modeId="0xFFFF" unitId="1" deviceName="S射频发射矩阵 S射频发射矩阵">
+			<Param id="ChooseConnect_11" value="6" name="应答机/模拟源 测控前端3"/>
+		</Command>
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_5" value="18" name="测控前端3:测控(数传)左旋 联试应答/射频源"/>
+			<Param id="ChooseConnect_6" value="18" name="测控前端3:测控(数传)右旋 联试应答/射频源"/>
+		</Command>
+	</if>
+	<if condition="CKQD1:4">
+		<Command deviceId="0x2501" modeId="0xFFFF" unitId="1" deviceName="S射频发射矩阵 S射频发射矩阵">
+			<Param id="ChooseConnect_11" value="8" name="应答机/模拟源 测控前端4"/>
+		</Command>
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_7" value="18" name="测控前端4:测控(数传)左旋 联试应答/射频源"/>
+			<Param id="ChooseConnect_8" value="18" name="测控前端4:测控(数传)右旋 联试应答/射频源"/>
+		</Command>
+	</if>
+	<if condition="CKQD2:3">
+		<Command deviceId="0x2501" modeId="0xFFFF" unitId="1" deviceName="S射频发射矩阵 S射频发射矩阵">
+			<Param id="ChooseConnect_11" value="6" name="应答机/模拟源 测控前端3"/>
+		</Command>
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_5" value="18" name="测控前端3:测控(数传)左旋 联试应答/射频源"/>
+			<Param id="ChooseConnect_6" value="18" name="测控前端3:测控(数传)右旋 联试应答/射频源"/>
+		</Command>
+	</if>
+	<if condition="CKQD2:4">
+		<Command deviceId="0x2501" modeId="0xFFFF" unitId="1" deviceName="S射频发射矩阵 S射频发射矩阵">
+			<Param id="ChooseConnect_11" value="8" name="应答机/模拟源 测控前端4"/>
+		</Command>
+		<Command deviceId="0x3601" modeId="0xFFFF" unitId="1" deviceName="S频段接收开关矩阵 S频段接收开关矩阵">
+			<Param id="ChooseConnect_7" value="18" name="测控前端4:测控(数传)左旋 联试应答/射频源"/>
+			<Param id="ChooseConnect_8" value="18" name="测控前端4:测控(数传)右旋 联试应答/射频源"/>
+		</Command>
+	</if>
+</Mode>

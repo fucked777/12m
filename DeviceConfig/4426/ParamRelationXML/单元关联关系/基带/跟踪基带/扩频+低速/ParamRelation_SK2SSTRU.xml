@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x04" deviceID="0x02" modeID="0xB" unitType="SK2SSTRU" desc="扩频跟踪接收单元">
+	<Triggers>
+		<Trigger id="ViterbiDecod" desc="Viterbi译码">
+			<TriggerValue value="1" desc="关">
+				<Receiver id="DecodType" desc="译码类型" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="开">
+				<Receiver id="DecodType" desc="译码类型" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

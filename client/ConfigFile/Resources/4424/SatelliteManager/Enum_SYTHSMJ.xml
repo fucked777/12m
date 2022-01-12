@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<enums >
+    <enum name="taskType" desc="任务类型">
+        <entry svalue="2" uvalue="2" desc="关" />
+        <entry svalue="1" uvalue="1" desc="开" />
+    </enum>
+    <enum name="ReceiveXuanxiang" desc="工作旋向">
+        <entry svalue="1" uvalue="1" desc="左旋"/>
+        <entry svalue="2" uvalue="2" desc="右旋"/>
+        <entry svalue="3" uvalue="3" desc="左右旋同时"/>
+    </enum>
+    <enum name="Xuanxiang" desc="工作旋向">
+        <entry svalue="1" uvalue="1" desc="左旋" />
+        <entry svalue="2" uvalue="2" desc="右旋" />
+    </enum>
+    <enum name="CodeRateType" desc="码速率">
+        <entry svalue="1" uvalue="1" desc="1" />
+        <entry svalue="2" uvalue="2" desc="2" />
+        <entry svalue="3" uvalue="3" desc="3" />
+        <entry svalue="4" uvalue="4" desc="4" />
+        <entry svalue="5" uvalue="5" desc="5" />
+        <entry svalue="6" uvalue="6" desc="6" />
+        <entry svalue="7" uvalue="7" desc="7" />
+        <entry svalue="8" uvalue="8" desc="8" />
+    </enum>
+    <enum name="MaZu" desc="码组">
+        <entry svalue="1" uvalue="1" desc="1" />
+        <entry svalue="2" uvalue="2" desc="2" />
+        <entry svalue="3" uvalue="3" desc="3" />
+        <entry svalue="4" uvalue="4" desc="4" />
+        <entry svalue="5" uvalue="5" desc="5" />
+        <entry svalue="6" uvalue="6" desc="6" />
+        <entry svalue="7" uvalue="7" desc="7" />
+        <entry svalue="8" uvalue="8" desc="8" />
+    </enum>
+    <enum name="MessageSpeedChoose" desc="信息速率与帧频">
+        <entry svalue="1" uvalue="1" desc="(1) 6.294528Mbps，768帧/s"/>
+        <entry svalue="2" uvalue="2" desc="(2) 4.196352Mbps，512帧/s"/>
+        <entry svalue="3" uvalue="3" desc="(3) 2.098176Mbps，256帧/s"/>
+        <entry svalue="4" uvalue="4" desc="(4) 1.049088Mbps，128帧/s"/>
+        <entry svalue="5" uvalue="5" desc="(5) 524.544kbps，64帧/s"/>
+        <entry svalue="6" uvalue="6" desc="(6) 262.272kbps，32帧/s"/>
+        <entry svalue="7" uvalue="7" desc="(7) 10.960896Mbps，1536帧/s"/>
+        <entry svalue="8" uvalue="8" desc="(8) 8.220672Mbps，1152帧/s"/>
+    </enum>
+</enums>

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+id  枚举ID  -与设备类型关联
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums ExtenType="DBB" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="Channel" desc="通道">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="通道1"/>
+		<entry svalue="2" uvalue="2" desc="通道2"/>
+	</enum>
+	<enum name="Switch" desc="开关">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="开始"/>
+		<entry svalue="2" uvalue="2" desc="停止"/>
+	</enum>
+	<enum name="BackSwitch" desc="回放开关">
+		<entry svalue="0" uvalue="0" desc="关闭"/>
+		<entry svalue="1" uvalue="1" desc="开始"/>
+	</enum>
+	<enum name="IQSelect" desc="I/Q路选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="I路"/>
+		<entry svalue="2" uvalue="2" desc="Q路"/>
+	</enum>
+	<enum name="Category" desc="类别">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="数传I路"/>
+		<entry svalue="2" uvalue="2" desc="数传Q路"/>
+		<entry svalue="3" uvalue="3" desc="数传I(I+Q)路"/>
+	</enum>
+	<enum name="StatisMethod" desc="统计方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="BER1统计误码率"/>
+		<!--
+		<entry svalue="2" uvalue="2" desc="BER2统计误码率" />
+		<entry svalue="3" uvalue="3" desc="BER3统计误码率" />
+		-->
+	</enum>
+	<enum name="DataSource" desc="数据源">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="PN7"/>
+		<entry svalue="2" uvalue="2" desc="PN10"/>
+		<entry svalue="3" uvalue="3" desc="PN11"/>
+		<entry svalue="4" uvalue="4" desc="PN15"/>
+		<entry svalue="5" uvalue="5" desc="PN23"/>
+		<entry svalue="6" uvalue="6" desc="PN31"/>
+		<entry svalue="7" uvalue="7" desc="固定数"/>
+	</enum>
+	<enum name="DataSources" desc="数据来源">
+		<!--<entry svalue="0" uvalue="0" desc="按时间选取本地记录文件(保留)" />-->
+		<entry svalue="1" uvalue="1" desc="按文件号"/>
+		<entry svalue="2" uvalue="2" desc="按文件号和数量"/>
+	</enum>
+	<enum name="TestStatus" desc="测试状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="开始测试"/>
+		<entry svalue="2" uvalue="2" desc="正在测试"/>
+		<entry svalue="3" uvalue="3" desc="终止测试"/>
+	</enum>
+	<enum name="ChannelNumb" desc="通道号">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="通道1"/>
+		<entry svalue="2" uvalue="2" desc="通道2"/>
+	</enum>
+	<enum name="BackChannelNumb" desc="待回放本地记录文件的通道号">
+		<entry svalue="0" uvalue="0" desc="通道1"/>
+		<entry svalue="1" uvalue="1" desc="通道2"/>
+		<entry svalue="2" uvalue="2" desc="通道3"/>
+		<entry svalue="3" uvalue="3" desc="通道4"/>
+	</enum>
+	<enum name="BroadMode" desc="播发方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="单次"/>
+		<entry svalue="2" uvalue="2" desc="循环"/>
+	</enum>
+	<enum name="MainChoose" desc="主机选择">
+		<entry svalue="1" uvalue="1" desc="主机"/>
+		<entry svalue="2" uvalue="2" desc="备机"/>
+	</enum>
+	<enum name="WorkWay" desc="工作方式">
+		<entry svalue="1" uvalue="1" desc="任务方式"/>
+		<!--<entry svalue="2" uvalue="2" desc="联试应答机无线"/>
+		<entry svalue="3" uvalue="3" desc="联试应答机有线"/>
+		<entry svalue="4" uvalue="4" desc="校零变频器无线"/>
+		<entry svalue="5" uvalue="5" desc="校零变频器有线"/>
+		<entry svalue="6" uvalue="6" desc="偏馈校零变频器"/>
+		<entry svalue="7" uvalue="7" desc="射频模拟源有线"/>
+		<entry svalue="8" uvalue="8" desc="信标方式"/>-->
+		<entry svalue="9" uvalue="9" desc="中频闭环"/>
+		<!--<entry svalue="10" uvalue="10" desc="记录回放"/>
+		<entry svalue="11" uvalue="11" desc="其它"/>-->
+	</enum>
+</enums>

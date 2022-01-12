@@ -1,0 +1,185 @@
+<GridLayout>
+	<Widget row="0" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="S测控"/>
+	<Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="Ka测控"/>
+	<Widget row="0" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="Ka数传"/>
+	<Widget row="1" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="发射极化"/>
+	<Widget row="1" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" deviceId="0x3001" modeId="0xFFFF" unitId="1" targetId="0" paramId="SpacialData_SEmissPolar"/>
+	<Widget row="1" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" deviceId="0x3001" modeId="0xFFFF" unitId="1" targetId="0" paramId="SpacialData_KaCKEmissPolar"/>
+	<Widget row="1" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" deviceId="0x3001" modeId="0xFFFF" unitId="1" targetId="0" paramId="SpacialData_KaSCEmissPolar"/>
+	<Widget row="2" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="接收极化"/>
+	<Widget row="2" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" deviceId="0x3001" modeId="0xFFFF" unitId="1" targetId="0" paramId="SpacialData_SReceivPolar"/>
+	<Widget row="2" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" deviceId="0x3001" modeId="0xFFFF" unitId="1" targetId="0" paramId="SpacialData_KaCKReceivPolar"/>
+	<Widget row="2" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" deviceId="0x3001" modeId="0xFFFF" unitId="1" targetId="0" paramId="SpacialData_KaSCReceivPolar"/>
+	<Widget row="3" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="接收频率(MHz)"/>
+	<Widget row="3" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusFreqLabel" devids="0x4001;0x4003" isMultiTarget="true">
+		<Mode modeId="0x01">
+			<Item>
+				<ParamInfo deviceId="0x4001" unitId="1" targetId="0" paramId="SBandDownFreq" desc="下行频率"/>
+				<MainInfo deviceId="0x4001" unitId="1" targetId="0" paramId="OnLineMachine" desc="本机在线" value="1"/>
+			</Item>
+			<Item>
+				<ParamInfo deviceId="0x4003" unitId="1" targetId="0" paramId="SBandDownFreq" desc="下行频率"/>
+				<MainInfo deviceId="0x4003" unitId="1" targetId="0" paramId="OnLineMachine" desc="本机在线" value="1"/>
+			</Item>
+		</Mode>
+		<Mode modeId="0x04">
+			<Item>
+				<ParamInfo deviceId="0x4001" unitId="1" targetId="0" paramId="K2_SBandDownFreq" desc="下行频率"/>
+				<TargetInfo deviceId="0x4001" unitId="1" targetId="0" paramId="CurrTrackTarget" desc="当前跟踪目标" type="K2"/>
+				<MainInfo deviceId="0x4001" unitId="1" targetId="0" paramId="OnLineMachine" desc="本机在线" value="1"/>
+			</Item>
+			<Item>
+				<ParamInfo deviceId="0x4003" unitId="1" targetId="0" paramId="K2_SBandDownFreq" desc="下行频率"/>
+				<TargetInfo deviceId="0x4003" unitId="1" targetId="0" paramId="CurrTrackTarget" desc="当前跟踪目标" type="K2"/>
+				<MainInfo deviceId="0x4003" unitId="1" targetId="0" paramId="OnLineMachine" desc="本机在线" value="1"/>
+			</Item>
+		</Mode>
+	</Widget>
+	<Widget row="3" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusFreqLabel" devids="0x4002;0x4004" isMultiTarget="true">
+		<Mode modeId="0x05">
+			<Item>
+				<ParamInfo deviceId="0x4002" unitId="1" targetId="0" paramId="K2_SBandDownFreq" desc="下行频率"/>
+				<TargetInfo deviceId="0x4002" unitId="1" targetId="0" paramId="CurrTrackTarget" desc="当前跟踪目标" type="K2"/>
+				<MainInfo deviceId="0x4002" unitId="1" targetId="0" paramId="OnLineMachine" desc="本机在线" value="1"/>
+			</Item>
+			<Item>
+				<ParamInfo deviceId="0x4004" unitId="1" targetId="0" paramId="K2_SBandDownFreq" desc="下行频率"/>
+				<TargetInfo deviceId="0x4004" unitId="1" targetId="0" paramId="CurrTrackTarget" desc="当前跟踪目标" type="K2"/>
+				<MainInfo deviceId="0x4004" unitId="1" targetId="0" paramId="OnLineMachine" desc="本机在线" value="1"/>
+			</Item>
+		</Mode>
+	</Widget>
+	<Widget row="3" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusLabel" deviceId="0x3102" modeId="0xFFFF" unitId="7" targetId="0" paramId="SBandDownFreq">
+		<Item>
+			<ParamInfo deviceId="0x3102" modeId="0xFFFF" unitId="5" targetId="0" paramId="SBandDownFreq" desc="工作频率"/>
+			<MainInfo deviceId="0x3102" modeId="0xFFFF" unitId="4" targetId="0" paramId="KaLanchSwitchNet" desc="Ka低速上行数传" value="1"/>
+		</Item>
+		<Item>
+			<ParamInfo deviceId="0x3102" modeId="0xFFFF" unitId="6" targetId="0" paramId="SBandDownFreq" desc="工作频率"/>
+			<MainInfo deviceId="0x3102" modeId="0xFFFF" unitId="4" targetId="0" paramId="KaLanchSwitchNet" desc="Ka低速上行数传" value="2"/>
+		</Item>
+	</Widget>
+	<Widget row="4" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="发射频率(MHz)"/>
+	<Widget row="4" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusFreqLabel" devids="0x4001;0x4003" isMultiTarget="true">
+		<Mode modeId="0x01">
+			<Item>
+				<ParamInfo deviceId="0x4001" unitId="1" targetId="0" paramId="WorkRate" desc="上行频率"/>
+				<MainInfo deviceId="0x4001" unitId="1" targetId="0" paramId="OnLineMachine" desc="本机在线" value="1"/>
+			</Item>
+			<Item>
+				<ParamInfo deviceId="0x4003" unitId="1" targetId="0" paramId="WorkRate" desc="上行频率"/>
+				<MainInfo deviceId="0x4003" unitId="1" targetId="0" paramId="OnLineMachine" desc="本机在线" value="1"/>
+			</Item>
+		</Mode>
+		<Mode modeId="0x04">
+			<Item>
+				<ParamInfo deviceId="0x4001" unitId="1" targetId="0" paramId="K2_WorkRate" desc="上行频率"/>
+				<TargetInfo deviceId="0x4001" unitId="1" targetId="0" paramId="CurrTrackTarget" desc="当前跟踪目标" type="K2"/>
+				<MainInfo deviceId="0x4001" unitId="1" targetId="0" paramId="OnLineMachine" desc="本机在线" value="1"/>
+			</Item>
+			<Item>
+				<ParamInfo deviceId="0x4003" unitId="1" targetId="0" paramId="K2_WorkRate" desc="上行频率"/>
+				<TargetInfo deviceId="0x4003" unitId="1" targetId="0" paramId="CurrTrackTarget" desc="当前跟踪目标" type="K2"/>
+				<MainInfo deviceId="0x4003" unitId="1" targetId="0" paramId="OnLineMachine" desc="本机在线" value="1"/>
+			</Item>
+		</Mode>
+	</Widget>
+	<Widget row="4" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusFreqLabel" devids="0x4002;0x4004" isMultiTarget="true">
+		<Mode modeId="0x05">
+			<Item>
+				<ParamInfo deviceId="0x4002" unitId="1" targetId="0" paramId="K2_WorkRate" desc="上行频率"/>
+				<TargetInfo deviceId="0x4002" unitId="1" targetId="0" paramId="CurrTrackTarget" desc="当前跟踪目标" type="K2"/>
+				<MainInfo deviceId="0x4002" unitId="1" targetId="0" paramId="OnLineMachine" desc="本机在线" value="1"/>
+			</Item>
+			<Item>
+				<ParamInfo deviceId="0x4004" unitId="1" targetId="0" paramId="K2_WorkRate" desc="上行频率"/>
+				<TargetInfo deviceId="0x4004" unitId="1" targetId="0" paramId="CurrTrackTarget" desc="当前跟踪目标" type="K2"/>
+				<MainInfo deviceId="0x4004" unitId="1" targetId="0" paramId="OnLineMachine" desc="本机在线" value="1"/>
+			</Item>
+		</Mode>
+	</Widget>
+	<Widget row="4" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusFreqLabel" devids="0x2401" isMultiTarget="false">
+		<Item>
+			<ParamInfo deviceId="0x2401" modeId="0xFFFF" unitId="2" targetId="0" paramId="WorkRate" desc="工作频率"/>
+			<MainInfo deviceId="0x2401" modeId="0xFFFF" unitId="1" targetId="0" paramId="KaLanchSwitchNet" desc="Ka低速上行数传" value="1"/>
+		</Item>
+		<Item>
+			<ParamInfo deviceId="0x2401" modeId="0xFFFF" unitId="3" targetId="0" paramId="WorkRate" desc="工作频率"/>
+			<MainInfo deviceId="0x2401" modeId="0xFFFF" unitId="1" targetId="0" paramId="KaLanchSwitchNet" desc="Ka低速上行数传" value="2"/>
+		</Item>
+	</Widget>
+	<Widget row="5" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="发射功率(W)"/>
+	<Widget row="5" col="1" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusPowerLabel" devids="0x2001;0x2002;0x2101">
+		<Item>
+			<ParamInfo deviceId="0x2001" modeId="0xFFFF" unitId="1" targetId="0" paramId="TransmPower" desc="发射功率"/>
+			<MainInfo deviceId="0x2001" modeId="0xFFFF" unitId="1" targetId="0" paramId="ForwardStatus" desc="功放去向状态" value="1"/>
+			<MainInfo deviceId="0x2101" modeId="0xFFFF" unitId="1" targetId="0" paramId="RFSwitch" desc="RF开关（激励）" value="1"/>
+		</Item>
+		<Item>
+			<ParamInfo deviceId="0x2002" modeId="0xFFFF" unitId="1" targetId="0" paramId="TransmPower" desc="发射功率"/>
+			<MainInfo deviceId="0x2002" modeId="0xFFFF" unitId="1" targetId="0" paramId="ForwardStatus" desc="功放去向状态" value="1"/>
+			<MainInfo deviceId="0x2101" modeId="0xFFFF" unitId="1" targetId="0" paramId="RFSwitch" desc="RF开关（激励）" value="1"/>
+		</Item>
+	</Widget>
+	<Widget row="5" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusPowerLabel" devids="0x2003;0x2004">
+		<Item>
+			<ParamInfo deviceId="0x2003" modeId="0xFFFF" unitId="1" targetId="0" paramId="TransmPower" desc="发射功率"/>
+			<MainInfo deviceId="0x2003" modeId="0xFFFF" unitId="1" targetId="0" paramId="PrevenStatus" desc="在线设备" value="1"/>
+			<MainInfo deviceId="0x2003" modeId="0xFFFF" unitId="1" targetId="0" paramId="RFOutput" desc="射频输出" value="1"/>
+		</Item>
+		<Item>
+			<ParamInfo deviceId="0x2004" modeId="0xFFFF" unitId="1" targetId="0" paramId="TransmPower" desc="发射功率"/>
+			<MainInfo deviceId="0x2004" modeId="0xFFFF" unitId="1" targetId="0" paramId="OnlineDevice" desc="在线设备" value="2"/>
+			<MainInfo deviceId="0x2004" modeId="0xFFFF" unitId="1" targetId="0" paramId="RFOutput" desc="射频输出" value="1"/>
+		</Item>
+	</Widget>
+	<Widget row="5" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusPowerLabel" devids="0x2005;0x2006">
+		<Item>
+			<ParamInfo deviceId="0x2005" modeId="0xFFFF" unitId="1" targetId="0" paramId="TransmPower" desc="发射功率"/>
+			<MainInfo deviceId="0x2005" modeId="0xFFFF" unitId="1" targetId="0" paramId="OnlineDevice" desc="在线设备" value="1"/>
+			<MainInfo deviceId="0x2005" modeId="0xFFFF" unitId="1" targetId="0" paramId="RFOutput" desc="射频输出" value="1"/>
+		</Item>
+		<Item>
+			<ParamInfo deviceId="0x2006" modeId="0xFFFF" unitId="1" targetId="0" paramId="TransmPower" desc="发射功率"/>
+			<MainInfo deviceId="0x2006" modeId="0xFFFF" unitId="1" targetId="0" paramId="PrevenStatus" desc="在线设备" value="2"/>
+			<MainInfo deviceId="0x2006" modeId="0xFFFF" unitId="1" targetId="0" paramId="RFOutput" desc="射频输出" value="1"/>
+		</Item>
+	</Widget>
+	<Widget row="6" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="激励通断"/>
+	<Widget row="6" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="RF开关" deviceId="0x2101" modeId="0xFFFF" unitId="1" targetId="0" paramId="RFSwitch">
+			<Item value="1" desc="开" ledColor="green" toolTip="加激励"/>
+			<Item value="2" desc="关" ledColor="red" toolTip="去激励"/>
+	</Widget>
+	<!--
+	<Widget row="6" col="1" rowSpan="1" columnSpan="1" type="LEDStatusStimuLabel" devids="0x2001;0x2002;0x2101">
+		<Item>
+			<ParamInfo deviceId="0x2001" modeId="0xFFFF" unitId="1" targetId="0" paramId="ElectricControlor" desc="加去电控制" green="2" red="1"/>
+			<MainInfo deviceId="0x2101" modeId="0xFFFF" unitId="1" targetId="0" paramId="SwitcherSet" desc="功放开关设置" value="1"/>
+		</Item>
+		<Item>
+			<ParamInfo deviceId="0x2002" modeId="0xFFFF" unitId="1" targetId="0" paramId="ElectricControlor" desc="加去电控制" green="2" red="1"/>
+			<MainInfo deviceId="0x2101" modeId="0xFFFF" unitId="1" targetId="0" paramId="SwitcherSet" desc="功放开关设置" value="2"/>
+		</Item>
+	</Widget>
+	-->
+	<Widget row="6" col="2" rowSpan="1" columnSpan="1" type="LEDStatusStimuLabel" devids="0x2003;0x2004">
+		<Item>
+			<ParamInfo deviceId="0x2003" modeId="0xFFFF" unitId="1" targetId="0" paramId="RFOutput" desc="射频输出" green="1" red="2"/>
+			<MainInfo deviceId="0x2003" modeId="0xFFFF" unitId="1" targetId="0" paramId="PrevenStatus" desc="在线设备" value="1"/>
+		</Item>
+		<Item>
+			<ParamInfo deviceId="0x2004" modeId="0xFFFF" unitId="1" targetId="0" paramId="RFOutput" desc="射频输出" green="1" red="2"/>
+			<MainInfo deviceId="0x2004" modeId="0xFFFF" unitId="1" targetId="0" paramId="OnlineDevice" desc="在线设备" value="2"/>
+		</Item>
+	</Widget>
+	<Widget row="6" col="3" rowSpan="1" columnSpan="1" type="LEDStatusStimuLabel" devids="0x2005;0x2006">
+		<Item>
+			<ParamInfo deviceId="0x2005" modeId="0xFFFF" unitId="1" targetId="0" paramId="RFOutput" desc="射频输出" green="1" red="2"/>
+			<MainInfo deviceId="0x2005" modeId="0xFFFF" unitId="1" targetId="0" paramId="OnlineDevice" desc="在线设备" value="1"/>
+		</Item>
+		<Item>
+			<ParamInfo deviceId="0x2006" modeId="0xFFFF" unitId="1" targetId="0" paramId="RFOutput" desc="射频输出" green="1" red="2"/>
+			<MainInfo deviceId="0x2006" modeId="0xFFFF" unitId="1" targetId="0" paramId="PrevenStatus" desc="在线设备" value="2"/>
+		</Item>
+	</Widget>
+</GridLayout>

@@ -1,0 +1,28 @@
+
+{
+    "dada":1,
+    "dada":1   
+}
+
+
+
+<xml mode = "1">
+    <CMD>
+        <attrs>
+            STTC_LAN_L_SUM_1 DC_XXXXXXX1, STTC_LAN_L_SUM_2 DC_XXXXXXX1
+        <attrs>
+        <cmdPath path="1.json">
+    <CMD>
+
+     <CMD>
+        <attrs>
+            STTC_LAN_L_SUM_1
+        <attrs>
+        <cmdPath type="cmd/unit" id="1" path="1.json">
+    <CMD>
+<xml>
+
+1个模式的配置
+
+配置宏数据读出来，全排列 1,2,3,1+2,1+3,1+2+3
+

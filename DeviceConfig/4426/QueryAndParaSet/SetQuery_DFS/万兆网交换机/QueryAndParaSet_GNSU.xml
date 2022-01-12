@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="GNSU" ModeType="0xFFFF" desc="万兆网交换机" flag="1001">
+	<set MessageType="0x0000F003">
+	</set>
+	<result MessageType="0x0000F104">
+		<!--端口数可配置 1-n -->
+		<field pid="1" id="PortWorkStatus_1" desc="端口1工作状态" dataType="uint8" displayFormat="enum|PortWorkStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="2" id="PortWorkStatus_2" desc="端口2工作状态" dataType="uint8" displayFormat="enum|PortWorkStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="3" id="PortWorkStatus_3" desc="端口3工作状态" dataType="uint8" displayFormat="enum|PortWorkStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="4" id="PortWorkStatus_4" desc="端口4工作状态" dataType="uint8" displayFormat="enum|PortWorkStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="5" id="PortWorkStatus_5" desc="端口5工作状态" dataType="uint8" displayFormat="enum|PortWorkStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="6" id="PortWorkStatus_6" desc="端口6工作状态" dataType="uint8" displayFormat="enum|PortWorkStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="7" id="PortWorkStatus_7" desc="端口7工作状态" dataType="uint8" displayFormat="enum|PortWorkStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="8" id="PortWorkStatus_8" desc="端口8工作状态" dataType="uint8" displayFormat="enum|PortWorkStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+		<field pid="n" id="PortWorkStatus_n" desc="端口n工作状态" dataType="uint8" displayFormat="enum|PortWorkStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+	</result>
+</cmd>

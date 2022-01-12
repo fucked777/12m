@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configure>
+    <工作单位>
+        <Item>26-TJ</Item>
+        <Item>27-JD</Item>
+        <Item>26-XA</Item>
+        <Item>26-BJ</Item>
+    </工作单位>
+    <设备代号>
+        <Item>TK-4424</Item>
+        <Item>TK-4413</Item>
+        <Item>TK-4426</Item>
+        <Item>TK-4403</Item>
+        <Item>TK-4407</Item>
+    </设备代号>
+    <调度模式>
+        <Item>SB</Item>
+    </调度模式>
+    <工作方式>
+        <Item>SZ</Item>
+        <Item>LT</Item>
+        <Item>HL</Item>
+        <Item>BJ</Item>
+        <Item>ZY</Item>
+    </工作方式>
+</configure>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmd UnitType="ICU" ModeType="0xFFFF" desc="综合调理单元" flag="1001" isModifySetBtn="0">
+	<result MessageType="0x0000F104">
+		<field pid="1" id="PowerOnCont" desc="加电控制器状态" dataType="uint8" displayFormat="LED|PowerOnCont" initValue="0" minValue="" maxValue="" step="" unit=""/>
+		<field pid="2" id="PowerOnCtrlMode" desc="加电控制方式" dataType="uint8" displayFormat="enum|PowerOnCtrlMode" initValue="2" minValue="" maxValue="" step="" unit=""/>
+		<field pid="3" id="ADUPowerOnCtrl" desc="ADU加电控制" dataType="uint8" displayFormat="LED|PowerOnCtrl" initValue="2" minValue="" maxValue="" step="" unit=""/>
+		<field pid="4" id="PDUPowerOnCtrl" desc="PDU加电控制" dataType="uint8" displayFormat="LED|PowerOnCtrl" initValue="2" minValue="" maxValue="" step="" unit=""/>
+		<field pid="5" id="PCUPowerOnCtrl" desc="PCU加电控制" dataType="uint8" displayFormat="LED|PowerOnCtrl" initValue="2" minValue="" maxValue="" step="" unit=""/>
+	</result>
+</cmd>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+id  枚举ID  -与设备类型关联
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums ExtenType="FNTSN" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="WorkModeS" desc="工作模式">
+		<entry svalue="1" uvalue="1" desc="自检"/>
+		<entry svalue="2" uvalue="2" desc="信号源"/>
+	</enum>
+	<enum name="WorkModeX" desc="工作模式">
+		<entry svalue="1" uvalue="1" desc="自检"/>
+		<entry svalue="2" uvalue="2" desc="信号源"/>
+	</enum>
+	<enum name="WorkModeKa" desc="工作模式">
+		<entry svalue="1" uvalue="1" desc="自检"/>
+		<entry svalue="2" uvalue="2" desc="信号源"/>
+	</enum>
+	<enum name="PowerControl" desc="供电开关控制">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="关电"/>
+		<entry svalue="2" uvalue="2" desc="开电"/>
+	</enum>
+</enums>

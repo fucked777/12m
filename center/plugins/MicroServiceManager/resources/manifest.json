@@ -1,0 +1,9 @@
+{
+    "bundle.symbolic_name" : "MicroServiceManager",
+    "servicename":"服务管理模块",
+    "bundle.activator" : true,
+    "authors" : [ "wjy" ],
+    "bundle.version" : "1.0.0",
+    "bundle.description" : "管理服务",
+    "update_log" :""
+}

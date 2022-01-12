@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configure>
+    <addr>192.20.1.156</addr>
+    <port>5556</port>
+    <!-- 此处可以填绝对路径但是必须是/ 例子:path = D:/Cache/aaaaaaaaaaaaaa
+        当file=true 此处是文件的路径 当file=false此处是目录 
+    -->
+    <path>FepSend</path>
+    <file>true</file>
+</configure>

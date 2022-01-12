@@ -1,0 +1,9 @@
+{
+    "bundle.symbolic_name" : "DeviceXmlLoadServiceModule",
+    "servicename":"协议xml加载模块",
+    "bundle.activator" : true,
+    "authors" : [ "htf" ],
+    "bundle.version" : "1.0.0",
+    "bundle.description" : "单元，命令，系统配置xml的加载",
+    "update_log" :""
+}

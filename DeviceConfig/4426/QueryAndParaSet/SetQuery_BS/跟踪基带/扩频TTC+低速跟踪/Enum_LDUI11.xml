@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="LDUI" ModeType="0x0B" edition="1.1.1.1">
+	<enum name="TeleCarrSysnLock" desc="遥测副载波同步锁定指示">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="锁定:G"/>
+		<entry svalue="2" uvalue="2" desc="失锁:R"/>
+	</enum>
+	<enum name="CarrStatusCapTimeI" desc="I路位同步锁定">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="锁定:G"/>
+		<entry svalue="2" uvalue="2" desc="失锁:R"/>
+	</enum>
+	<enum name="FrameSyncLockI" desc="I路帧同步锁定">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="锁定:G"/>
+		<entry svalue="2" uvalue="2" desc="失锁:R"/>
+	</enum>
+	<enum name="DepuFramSysncLockI" desc="I路副帧同步锁定">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="锁定:G"/>
+		<entry svalue="2" uvalue="2" desc="失锁:R"/>
+	</enum>
+	<enum name="CodeType" desc="码型">
+		<entry svalue="0" uvalue="0" desc="NRZ-L"/>
+		<entry svalue="1" uvalue="1" desc="NRZ-M"/>
+		<entry svalue="2" uvalue="2" desc="NRZ-S"/>
+		<entry svalue="3" uvalue="3" desc="Biφ-L"/>
+		<entry svalue="4" uvalue="4" desc="Biφ-M"/>
+		<entry svalue="5" uvalue="5" desc="Biφ-S"/>
+	</enum>
+	<enum name="CodeWay" desc="译码方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="关"/>
+		<entry svalue="2" uvalue="2" desc="Viterbi译码"/>
+		<entry svalue="3" uvalue="3" desc="R-S译码"/>
+		<entry svalue="4" uvalue="4" desc="R-S译码和Viterbi级联译码"/>
+		<entry svalue="5" uvalue="5" desc="LDPC"/>
+		<entry svalue="6" uvalue="6" desc="Turbo"/>
+	</enum>
+	<enum name="CodeElemLoopBand" desc="码元环路带宽">
+		<entry svalue="0" uvalue="0" desc="1%码率"/>
+		<entry svalue="1" uvalue="1" desc="0.5%码率"/>
+		<entry svalue="2" uvalue="2" desc="0.1%码率"/>
+		<entry svalue="3" uvalue="3" desc="自适应"/>
+	</enum>
+	<enum name="ViterbiDecoding" desc="Viterbi译码">
+		<entry svalue="0" uvalue="0" desc="否"/>
+		<entry svalue="1" uvalue="1" desc="(7,1/2)"/>
+		<entry svalue="2" uvalue="2" desc="(7,2/3)"/>
+		<entry svalue="3" uvalue="3" desc="(7,3/4)"/>
+		<entry svalue="4" uvalue="4" desc="(7,5/6)"/>
+		<entry svalue="5" uvalue="5" desc="(7,7/8)"/>
+		<entry svalue="6" uvalue="6" desc="(7,6/7)"/>
+	</enum>
+	<enum name="G2PhaseReversal" desc="Viterbi译码G2相位反转">
+		<entry svalue="0" uvalue="0" desc="正相"/>
+		<entry svalue="1" uvalue="1" desc="反相"/>
+	</enum>
+	<enum name="Descramble" desc="解扰">
+		<entry svalue="0" uvalue="0" desc="否"/>
+		<entry svalue="1" uvalue="1" desc="是"/>
+	</enum>
+	<enum name="DescSequeChoose" desc="解扰顺序选择">
+		<entry svalue="0" uvalue="0" desc="先译码再解扰"/>
+		<entry svalue="1" uvalue="1" desc="先解扰再译码"/>
+	</enum>
+	<enum name="RSDecoding" desc="R-S译码">
+		<entry svalue="0" uvalue="0" desc="否"/>
+		<entry svalue="1" uvalue="1" desc="(255,223)"/>
+		<entry svalue="2" uvalue="2" desc="(255,239)"/>
+	</enum>
+	<enum name="VirtualFill" desc="虚拟填充">
+		<entry svalue="0" uvalue="0" desc="无"/>
+		<entry svalue="1" uvalue="1" desc="有"/>
+	</enum>
+	<enum name="DoubleBaseChange" desc="双基变换">
+		<entry svalue="0" uvalue="0" desc="常规基"/>
+		<entry svalue="1" uvalue="1" desc="对偶基"/>
+	</enum>
+	<enum name="TurboDecoding" desc="Turbo译码">
+		<entry svalue="0" uvalue="0" desc="无"/>
+		<entry svalue="1" uvalue="1" desc="有"/>
+	</enum>
+	<enum name="TurboCodeLength" desc="Turbo码信息位长度">
+		<entry svalue="0" uvalue="0" desc="1784"/>
+		<entry svalue="1" uvalue="1" desc="3568"/>
+		<entry svalue="2" uvalue="2" desc="7136"/>
+		<entry svalue="3" uvalue="3" desc="8920"/>
+		<!--保留<entry svalue="5" uvalue="5" desc="16384" />-->
+	</enum>
+	<enum name="TurboCodeRate" desc="Turbo码率">
+		<entry svalue="0" uvalue="0" desc="1/2"/>
+		<entry svalue="1" uvalue="1" desc="1/3"/>
+		<entry svalue="2" uvalue="2" desc="1/4"/>
+		<entry svalue="3" uvalue="3" desc="1/6"/>
+	</enum>
+	<enum name="LDPCDecoding" desc="LDPC译码">
+		<entry svalue="0" uvalue="0" desc="无"/>
+		<entry svalue="1" uvalue="1" desc="有"/>
+	</enum>
+	<enum name="LDPCCodeRate" desc="LDPC码率">
+		<entry svalue="0" uvalue="0" desc="1/2"/>
+		<entry svalue="1" uvalue="1" desc="2/3"/>
+		<entry svalue="2" uvalue="2" desc="4/5"/>
+		<entry svalue="3" uvalue="3" desc="7/8"/>
+	</enum>
+	<enum name="LDPCCodeLength" desc="LDPC码信息位长度">
+		<entry svalue="0" uvalue="0" desc="1024"/>
+		<entry svalue="1" uvalue="1" desc="4096"/>
+		<entry svalue="2" uvalue="2" desc="7136"/>
+		<entry svalue="3" uvalue="3" desc="16384"/>
+	</enum>
+	<enum name="FraCodGroPos" desc="帧码组位置">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="帧头"/>
+		<entry svalue="2" uvalue="2" desc="帧尾"/>
+	</enum>
+	<enum name="SubFraSynWay" desc="副帧同步方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="无副帧"/>
+		<entry svalue="2" uvalue="2" desc="ID副帧"/>
+		<entry svalue="3" uvalue="3" desc="循环副帧"/>
+		<entry svalue="4" uvalue="4" desc="反码副帧"/>
+	</enum>
+	<enum name="IDCountBaseValue" desc="ID计数基值">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="无副帧"/>
+		<entry svalue="2" uvalue="2" desc="ID副帧"/>
+		<entry svalue="3" uvalue="3" desc="循环副帧"/>
+		<entry svalue="4" uvalue="4" desc="反码副帧"/>
+	</enum>
+	<enum name="IDCountBaseValue" desc="ID计数基值">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="1"/>
+		<entry svalue="2" uvalue="2" desc="0"/>
+	</enum>
+	<enum name="IDCountDirect" desc="ID计数方向">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="加计数"/>
+		<entry svalue="2" uvalue="2" desc="减计数"/>
+	</enum>
+	<enum name="SubFraSynCodGroLen" desc="副帧码组长度">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="8位"/>
+		<entry svalue="2" uvalue="2" desc="16位"/>
+		<entry svalue="3" uvalue="3" desc="24位"/>
+		<entry svalue="4" uvalue="4" desc="32位"/>
+	</enum>
+	<enum name="UnbindFormat" desc="解扰格式">
+		<entry svalue="0" uvalue="0" desc="CCSDS格式"/>
+		<entry svalue="1" uvalue="1" desc="天通格式"/>
+	</enum>
+	<enum name="DescPolyLenght" desc="解扰多项式长度">
+		<entry svalue="1" uvalue="8" desc="1字节"/>
+		<entry svalue="2" uvalue="16" desc="2字节"/>
+		<entry svalue="3" uvalue="24" desc="3字节"/>
+		<entry svalue="4" uvalue="32" desc="4字节"/>
+	</enum>
+</enums>

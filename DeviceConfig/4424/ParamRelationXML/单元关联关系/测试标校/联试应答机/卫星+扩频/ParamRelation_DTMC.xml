@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Relation sysID="0x06" deviceID="0x00" modeID="0x7" unitType="DTMC" desc="数传调制器">
+	<Triggers>
+		<Trigger id="NoiseOutput" desc="噪声源输出">
+			<TriggerValue value="1" desc="关">
+				<Receiver id="RangPlusControl" desc="载波输出载噪比" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="开">
+				<Receiver id="RangPlusControl" desc="载波输出载噪比" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="DoppSwitch" desc="多普勒动态模拟">
+			<TriggerValue value="1" desc="关">
+				<Receiver id="DoppRange" desc="多普勒变化范围" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="DoppChangeRate" desc="多普勒变化率" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="开">
+				<Receiver id="DoppRange" desc="多普勒变化范围" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="DoppChangeRate" desc="多普勒变化率" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

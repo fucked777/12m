@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mode>
+    <frequency>
+        <unit groupName="发射与接收分系统" deviceID="4001_1/4002_1/4003_1/4004_1/AAAA_1" enumGroup="2">
+            <field pid="106" GroupId="setting2" id="WorkRate" desc="上行工作频率" dataType="ulong" displayFormat="double" fixValue="2069.06" minValue="2018" maxValue="2120" step="0.000001" unit="MHz" isShow="0"/>
+            <field pid="110" GroupId="setting2" id="SBandDownFreq" desc="下行工作频率" dataType="ulong" displayFormat="double" fixValue="2250.94" minValue="2200" maxValue="2302" step="0.000001" unit="MHz" isShow="0"/>
+            <field pid="105" GroupId="setting3" id="SEmissPolar" desc="发射极化" dataType="uint8" displayFormat="enum|SPolar" initValue="" minValue="" maxValue="" step="" unit=""/>
+            <field pid="106" GroupId="setting3" id="SReceivPolar" desc="接收极化" dataType="uint8" displayFormat="enum|SRecPolar" initValue="" minValue="" maxValue="" step="" unit=""/>
+        </unit>
+        <unit groupName="天伺馈分系统" deviceID="4001_1/4002_1/4003_1/4004_1/1011_1/1012_1/AAAA_1" enumGroup="3">
+            <field pid="107" GroupId="setting3" id="STrackPolar" desc="跟踪极化" dataType="uint8" displayFormat="enum|SPolar" initValue="" minValue="" maxValue="" step="" unit=""/>
+            <field pid="2" id="KaXPolarHorn" desc="极化角" desc2="" dataType="int" displayFormat="double" initValue="0" minValue="-180" maxValue="180" step="0.1" unit="°" isShow="0"/>
+            <field pid="111" id="AngularSamplRate" desc="测角采样率" dataType="uint8" displayFormat="enum|AngularSamplRate" initValue="" minValue="" maxValue="" step="" unit=""/>
+        </unit>
+        <unit groupName="接收机及测量单元" deviceID="4001_2/4002_2/4003_2/4004_2" enumGroup="4">
+            <field pid="105" id="ShortCode" desc="短码码号" dataType="char|8" displayFormat="String" initValue="1100LG00" minValue="0" maxValue="" step="" unit=""/>
+            <field pid="106" id="LongCode" desc="长码码号" dataType="char|8" displayFormat="String" initValue="2200LT00" minValue="0" maxValue="" step="" unit=""/>
+            <field pid="103" id="ZeroDistTran" desc="应答机距离零值" dataType="uint" displayFormat="double" initValue="1" minValue="0" maxValue="1000000" step="0.001" unit="m"/>
+            <!--<field pid="104" id="TZeroDistTrans" desc="应答机相对时延差" dataType="uint" displayFormat="double" initValue="1" minValue="0" maxValue="42949672.95" step="0.01" unit="ns"/>-->
+			<field pid="104" id="TZeroDistTrans" desc="应答机相对时延差" dataType="uint" displayFormat="double" initValue="1" minValue="0" maxValue="30000000" step="0.01" unit="ns"/>
+        </unit>
+        <unit groupName="调制器单元" deviceID="4001_3/4002_3/4003_3/4004_3" enumGroup="5">
+            <field pid="107" id="ShortCode" desc="短码码号" dataType="char|8" displayFormat="String" initValue="1100LG00" minValue="" maxValue="" step="" unit=""/>
+            <field pid="108" id="LongCode" desc="长码码号" dataType="char|8" displayFormat="String" initValue="2200LT00" minValue="" maxValue="" step="" unit=""/>
+            <field pid="106" id="ExtendedJumpOutputMode" desc="扩跳输出方式" dataType="uint8" displayFormat="enum|ExtendedJumpOutputMode" initValue="" minValue="" maxValue="" step="" unit=""/>
+        </unit>
+        <unit groupName="遥控单元" deviceID="4001_4/4002_4/4003_4/4004_4" enumGroup="6">
+            <field pid="101" id="RemoteType" desc="指令格式" dataType="uint8" displayFormat="enum|RemoteType" initValue="" minValue="" maxValue="" step="" unit=""/>
+            <field pid="102" id="StartChoiceChoose" desc="每段有效数据位长M" dataType="uint" displayFormat="enum|StartChoiceChoose" initValue="" minValue="" maxValue="" step="" unit=""/>
+            <!--<field pid="103" id="StartChoiceChooseTY" desc="不足M时填充图样" dataType="uint8" displayFormat="UInt8" initValue="" minValue="" maxValue="" step="" unit=""/>
+            <field pid="104" id="StartChoiceChooseYXTY" desc="有效数据填充图样" dataType="uint8" displayFormat="UInt8" initValue="" minValue="" maxValue="" step="" unit=""/>-->
+			<field pid="103" id="StartChoiceChooseTY" desc="不足M时填充图样" dataType="uint8" displayFormat="Hex" initValue="" minValue="" maxValue="" step="" unit="" fixValue="55"/>
+		    <field pid="104" id="StartChoiceChooseYXTY" desc="有效数据填充图样" dataType="uint8" displayFormat="Hex" initValue="" minValue="" maxValue="" step="" unit="" fixValue="55"/>
+			
+        </unit>
+    </frequency>
+	<devices>
+		<device name="S高功放" station="0x264226" deviceID="0x2001/0x2002" xmlPath="扩跳/高功放/SHPA.xml"/>
+		<device name="S频段射频开关网络" station="0x264226" deviceID="0x3201" xmlPath="扩跳/S频段射频开关网络/SBRFSN.xml"/>
+		<device name="测控数字化前端" station="0x264226" deviceID="0x7001/0x7002/0x7003/0x7004/0xAAAA" xmlPath="扩跳/测控数字化前端/DFOMAC.xml"/>
+		<device name="跟踪数字化前端" station="0x264226" deviceID="0x7101/0x7102/0x7103/0x7104/0xAAAA" xmlPath="扩跳/跟踪数字化前端/TDFE.xml"/>
+		<device name="测控基带" station="0x264226" deviceID="0x4001/0x4002/0x4003/0x4004/0xAAAA" xmlPath="扩跳/测控基带/MACB.xml"/>
+		<device name="测角分系统" station="0x264226" deviceID="0x1011/0x1012" xmlPath="扩跳/测角分系统/TFS.xml"/>
+	</devices>
+</Mode>

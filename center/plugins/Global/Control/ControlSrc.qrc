@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>src/dev_disable.png</file>
+        <file>src/dev_locked.png</file>
+        <file>src/dev_unlock.png</file>
+    </qresource>
+</RCC>

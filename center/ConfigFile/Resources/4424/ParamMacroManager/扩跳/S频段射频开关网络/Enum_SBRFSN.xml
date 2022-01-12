@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称：有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值（抽象值）
+desc   描述
+-->
+<enums UnitType="SBRFSN" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="HeLSelect" desc="和路左旋输入选择(网络内部)">
+		<entry svalue="1" uvalue="1" desc="S-LNA1(左旋)"/>
+		<entry svalue="2" uvalue="2" desc="S-LNA2(左旋)"/>
+	</enum>
+	<enum name="HeRSelect" desc="和路右旋输入选择(网络内部)">
+		<entry svalue="1" uvalue="1" desc="S-LNA3(右旋)"/>
+		<entry svalue="2" uvalue="2" desc="S-LNA4(右旋)"/>
+	</enum>
+</enums>

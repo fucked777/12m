@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configure>
+	<!-- 接收数传工作计划文件夹路径 -->
+	<DTPlanFileRecvDir>PlanFileCache/DataTransWorkTask/RecvDTPlan</DTPlanFileRecvDir>
+	<!-- 接收数传工作计划文件夹路径 -->
+	<DTPlanFileBakDir>PlanFileCache/DataTransWorkTask/BakDTPlan</DTPlanFileBakDir>
+
+	<!-- 接收设备工作计划文件夹路径 -->
+	<DevPlanFileRecvDir>PlanFileCache/DeviceWorkTask/RecvDevPlan</DevPlanFileRecvDir>
+	<!-- 备份设备工作计划文件夹路径 -->
+	<DevPlanFileBakDir>PlanFileCache/DeviceWorkTask/BakDevPlan</DevPlanFileBakDir>
+	<!-- 存放错误的设备工作计划文件夹路径 -->
+	<DevPlanFileErrorDir>PlanFileCache/DeviceWorkTask/DevErrorPlan</DevPlanFileErrorDir>
+</configure>

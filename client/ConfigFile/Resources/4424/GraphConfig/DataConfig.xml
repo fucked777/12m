@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+deviceID:系统号+设备号+分机号
+modelID:工作模式
+graphicsId：系统框图中需要监控的设备id 
+statusID:状态ID  ||
+				||  这两个ID共同决定界面的显示状态 statusID必须不为空   单元号|命令Key
+controlID:控制ID ||
+showType:显示的类型 1：状态；2:开关 3:分系统
+colorType：配置方案0:无配色；1：GGR；2：GRG  3 GR 1绿 2灰 开关此值是无效的默认为0
+ttt：参数描述
+
+对于颜色显示
+控制类型:
+分控 ==>  黄色  255,255,0
+本控 |
+	 ==> 离线/为获取到数据 lightgray  211,211,211
+	 ==> 故障			   red		 255,0,0
+	 ==> 正常			   green	 0,255,0
+
+
+本分控
+无此参数,0;分控,1;本控,2 
+
+GGR 
+0 lightgray 1 green 2 red
+GRG
+0 lightgray 1 red 2 green
+-->
+
+<Group> 	
+	<DefaultScale scaleX="0.9" scaleY="0.75" />		 
+	<DefaultColorValue offLine="0xFFD3D3D3" shutdown="0xFFDFBA1D" fault="0xFFFF0000" subControl="0xFF1D92DF" normal="0xFF8CD659" notCurLink="0xFF000000" curLink="0xFFAA55FF"/>	
+	<DefaultIconValue TCK="天伺馈-1.png" FS="发射-1.png" GPJS="高频接收-1.png" JD="基带-1.png" SP="时频-1.png" CSBX="测试标校-1.png" QD="数字化前端-1.png" SJJH="数据存储与交互-1.png" />
+	<DeviceParam >
+		<!-- 开关 -->
+		<TwoValueSwitch  graphicsID="SHPTWOAC"	cmdInfo="0x3001 0xFFFF 1 SSendSwitch" statusInfo="0x3001 3 SSendSwitch" valueMap="1|0|是否控制S发射开关? 2|90|是否控制S发射开关?" showType="1" colorType="2" ttt="S发射开关"  />
+		<TwoValueSwitch  graphicsID="SLNA12Connector"	cmdInfo="0x3001 0xFFFF 3 SHeLSwitch" statusInfo="0x3001 3 SHeLSwitch" valueMap="1|0|是否控制S和路左旋开关? 2|90|是否控制S和路左旋开关?" showType="1" colorType="2" ttt="S和路左旋开关"  >
+			<Value value="1">
+				<UnitParam unitId="1" paramInfo="HeLSelect|1"/>
+			</Value>
+			<Value value="2">
+				<UnitParam unitId="1" paramInfo="HeLSelect|2"/>
+			</Value>
+		</TwoValueSwitch>
+		<TwoValueSwitch  graphicsID="SLNA34Connector"	cmdInfo="0x3001 0xFFFF 3 SHeRSwitch" statusInfo="0x3001 3 SHeRSwitch" valueMap="1|0|是否控制S和路右旋开关? 2|90|是否控制S和路右旋开关?" showType="1" colorType="2" ttt="S和路右旋开关"  >
+			<Value value="1">
+				<UnitParam unitId="1" paramInfo="HeRSelect|1"/>
+			</Value>
+			<Value value="2">
+				<UnitParam unitId="1" paramInfo="HeRSelect|2"/>
+			</Value>
+		</TwoValueSwitch>
+		<TwoValueCrossSwitch  graphicsID="SLNA56Connector"	cmdInfo="0x3001 0xFFFF 3 SBadSwitch" statusInfo="0x3001 3 SBadSwitch" valueMap="1|1|是否控制S差路开关? 2|2|是否控制S差路开关?" showType="1" colorType="2" ttt="S差路开关"  />
+		<TwoValueSwitch  graphicsID="SLNA12Connector2"	cmdInfo="0x3001 0xFFFF 1 HeLSelect" statusInfo="0x3001 1 HeLSelect" valueMap="1|90|是否控制S频段左旋和路? 2|0|是否控制S频段左旋和路?" showType="1" colorType="2" ttt="S频段左旋和路"  >
+			<Value value="1">
+				<UnitParam unitId="3" paramInfo="SHeLSwitch|1"/>
+			</Value>
+			<Value value="2">
+				<UnitParam unitId="3" paramInfo="SHeLSwitch|2"/>
+			</Value>
+		</TwoValueSwitch>
+		<TwoValueSwitch  graphicsID="SLNA34Connector2"	cmdInfo="0x3001 0xFFFF 1 HeRSelect" statusInfo="0x3001 1 HeRSelect" valueMap="1|90|是否控制S频段右旋和路? 2|0|是否控制S频段右旋和路?" showType="1" colorType="2" ttt="S频段右旋和路"  >
+			<Value value="1">
+				<UnitParam unitId="3" paramInfo="SHeRSwitch|1"/>
+			</Value>
+			<Value value="2">
+				<UnitParam unitId="3" paramInfo="SHeRSwitch|2"/>
+			</Value>
+		</TwoValueSwitch>
+		<TwoValueCrossSwitch  graphicsID="XLNA12Connector"	cmdInfo="0x3201 0xFFFF 1 Bad1AndBad2" statusInfo="0x3201 1 Bad1AndBad2" valueMap="1|1|是否控制X差路输入选择开关? 2|2|是否控制X差路输入选择开关?" showType="1" colorType="2" ttt="差路输入选择开关"  >
+			<Value value="1">
+				<UnitParam unitId="1" paramInfo="WaveSwitchXBadControl|1"/>
+			</Value>
+			<Value value="2">
+				<UnitParam unitId="1" paramInfo="WaveSwitchXBadControl|2"/>
+			</Value>
+		</TwoValueCrossSwitch>
+		<TwoValueSwitch  graphicsID="XLNA34Connector"	cmdInfo="0x3201 0xFFFF 1 LeftHe" statusInfo="0x3201 1 LeftHe" valueMap="1|0|是否控制X左和输入选择开关? 2|90|是否控制X左和输入选择开关?" showType="1" colorType="2" ttt="左和输入选择开关"  >
+			<Value value="1">
+				<UnitParam unitId="1" paramInfo="WaveSwitchXLBadControl|1"/>
+			</Value>
+			<Value value="2">
+				<UnitParam unitId="1" paramInfo="WaveSwitchXLBadControl|2"/>
+			</Value>
+		</TwoValueSwitch>
+		<TwoValueSwitch  graphicsID="XLNA56Connector"	cmdInfo="0x3201 0xFFFF 1 RightHe" statusInfo="0x3201 1 RightHe" valueMap="1|0|是否控制X右和输入选择开关? 2|90|是否控制X右和输入选择开关?" showType="1" colorType="2" ttt="右和输入选择开关"  >
+			<Value value="1">
+				<UnitParam unitId="1" paramInfo="WaveSwitchXRBadControl|1"/>
+			</Value>
+			<Value value="2">
+				<UnitParam unitId="1" paramInfo="WaveSwitchXRBadControl|2"/>
+			</Value>
+		</TwoValueSwitch>
+		<TwoValueSwitch  graphicsID="XLNA12Connector2"	cmdInfo="0x3201 0xFFFF 1 WaveSwitchXBadControl" statusInfo="0x3201 1 WaveSwitchXBadControl" valueMap="1|90|是否控制波导开关X差控制? 2|0|是否控制波导开关X差控制?" showType="1" colorType="2" ttt="波导开关X差控制"  >
+			<Value value="1">
+				<UnitParam unitId="1" paramInfo="Bad1AndBad2|1"/>
+			</Value>
+			<Value value="2">
+				<UnitParam unitId="1" paramInfo="Bad1AndBad2|2"/>
+			</Value>
+		</TwoValueSwitch>
+		<TwoValueSwitch  graphicsID="XLNA34Connector4"	cmdInfo="0x3201 0xFFFF 1 WaveSwitchXLBadControl" statusInfo="0x3201 1 WaveSwitchXLBadControl" valueMap="1|90|是否控制波导开关X-L控制? 2|0|是否控制波导开关X-L控制?" showType="1" colorType="2" ttt="波导开关X-L控制"  >
+			<Value value="1">
+				<UnitParam unitId="1" paramInfo="LeftHe|1"/>
+			</Value>
+			<Value value="2">
+				<UnitParam unitId="1" paramInfo="LeftHe|2"/>
+			</Value>
+		</TwoValueSwitch>
+		<TwoValueSwitch  graphicsID="XLNA56Connector2"	cmdInfo="0x3201 0xFFFF 1 WaveSwitchXRBadControl" statusInfo="0x3201 1 WaveSwitchXRBadControl" valueMap="1|90|是否控制波导开关X-R控制? 2|0|是否控制波导开关X-R控制?" showType="1" colorType="2" ttt="波导开关X-R控制"  >
+			<Value value="1">
+				<UnitParam unitId="1" paramInfo="RightHe|1"/>
+			</Value>
+			<Value value="2">
+				<UnitParam unitId="1" paramInfo="RightHe|2"/>
+			</Value>
+		</TwoValueSwitch>
+		<TwoValueSwitch  graphicsID="XLNA34Connector3"	cmdInfo="0x3201 0xFFFF 1 HeOutSwitch" statusInfo="0x3201 1 HeOutSwitch" valueMap="1|90|是否控制和路输出选择开关? 2|0|是否控制和路输出选择开关?" showType="1" colorType="2" ttt="和路输出选择开关"  />
+		<TwoValueSwitch  graphicsID="XLNA34Connector2"	cmdInfo="0x3201 0xFFFF 1 BackupInput" statusInfo="0x3201 1 BackupInput" valueMap="1|90|是否控制备份输出? 2|0|是否控制备份输出?" showType="1" colorType="2" ttt="备份输出"  />
+		
+		<TwoValueCrossSwitch  graphicsID="KaLNA12Connector"	cmdInfo="0x3601 0xFFFF 1 Bad1AndBad2" statusInfo="0x3601 1 Bad1AndBad2" valueMap="1|1|是否控制Ka差路输入选择开关? 2|2|是否控制Ka差路输入选择开关?" showType="1" colorType="2" ttt="差路输入选择开关"  >
+			<Value value="1">
+				<UnitParam unitId="1" paramInfo="WaveSwitchXBadControl|1"/>
+			</Value>
+			<Value value="2">
+				<UnitParam unitId="1" paramInfo="WaveSwitchXBadControl|2"/>
+			</Value>	
+		</TwoValueCrossSwitch>
+		<TwoValueSwitch  graphicsID="KaLNA34Connector"	cmdInfo="0x3601 0xFFFF 1 LeftHe" statusInfo="0x3601 1 LeftHe" valueMap="1|0|是否控制Ka左和输入选择开关? 2|90|是否控制Ka左和输入选择开关?" showType="1" colorType="2" ttt="左和输入选择开关"  >		
+			<Value value="1">
+				<UnitParam unitId="1" paramInfo="WaveSwitchXLBadControl|1"/>
+			</Value>
+			<Value value="2">
+				<UnitParam unitId="1" paramInfo="WaveSwitchXLBadControl|2"/>
+			</Value>	
+		</TwoValueSwitch>
+		<TwoValueSwitch  graphicsID="KaLNA56Connector"	cmdInfo="0x3601 0xFFFF 1 RightHe" statusInfo="0x3601 1 RightHe" valueMap="1|0|是否控制Ka右和输入选择开关? 2|90|是否控制Ka右和输入选择开关?" showType="1" colorType="2" ttt="右和输入选择开关"  >
+			<Value value="1">
+				<UnitParam unitId="1" paramInfo="WaveSwitchXRBadControl|1"/>
+			</Value>
+			<Value value="2">
+				<UnitParam unitId="1" paramInfo="WaveSwitchXRBadControl|2"/>
+			</Value>	
+		</TwoValueSwitch>
+		<TwoValueSwitch  graphicsID="KaLNA34Connector3"	cmdInfo="0x3601 0xFFFF 1 HeOutSwitch" statusInfo="0x3601 1 HeOutSwitch" valueMap="1|90|是否控制和路输出选择开关? 2|0|是否控制和路输出选择开关?" showType="1" colorType="2" ttt="和路输出选择开关"  />
+		<TwoValueSwitch  graphicsID="KaLNA34Connector2"	cmdInfo="0x3601 0xFFFF 1 BackupInput" statusInfo="0x3601 1 BackupInput" valueMap="1|90|是否控制备份输出? 2|0|是否控制备份输出?" showType="1" colorType="2" ttt="备份输出"  />
+		<TwoValueSwitch  graphicsID="KaLNA12Connector2"	cmdInfo="0x3601 0xFFFF 1 WaveSwitchXBadControl" statusInfo="0x3601 1 WaveSwitchXBadControl" valueMap="1|90|是否控制波导开关Ka差控制? 2|0|是否控制波导开关Ka差控制?" showType="1" colorType="2" ttt="波导开关Ka差控制"  >
+			<Value value="1">
+				<UnitParam unitId="1" paramInfo="Bad1AndBad2|1"/>
+			</Value>
+			<Value value="2">
+				<UnitParam unitId="1" paramInfo="Bad1AndBad2|2"/>
+			</Value>	
+		</TwoValueSwitch>
+		<TwoValueSwitch  graphicsID="KaLNA34Connector5"	cmdInfo="0x3601 0xFFFF 1 WaveSwitchXLBadControl" statusInfo="0x3601 1 WaveSwitchXLBadControl" valueMap="1|90|是否控制波导开关Ka-L控制? 2|0|是否控波导开关Ka-L控制?" showType="1" colorType="2" ttt="波导开关Ka-L控制"  >
+			<Value value="1">
+				<UnitParam unitId="1" paramInfo="LeftHe|1"/>
+			</Value>
+			<Value value="2">
+				<UnitParam unitId="1" paramInfo="LeftHe|2"/>
+			</Value>	
+		</TwoValueSwitch>
+		<TwoValueSwitch  graphicsID="KaLNA56Connector2"	cmdInfo="0x3601 0xFFFF 1 WaveSwitchXRBadControl" statusInfo="0x3601 1 WaveSwitchXRBadControl" valueMap="1|90|是否控制波导开关Ka-R控制? 2|0|是否控制波导开关Ka-R控制?" showType="1" colorType="2" ttt="波导开关Ka-R控制"  >
+			<Value value="1">
+				<UnitParam unitId="1" paramInfo="RightHe|1"/>
+			</Value>
+			<Value value="2">
+				<UnitParam unitId="1" paramInfo="RightHe|2"/>
+			</Value>	
+		</TwoValueSwitch>
+		
+		<!-- LNA -->
+		<Status deviceID="0x03|0x0|0x1" graphicsID="SLNA1"  systemID="3001" triggerModule="DeviceMonitorModule" statusRedisKey="3001" statusID="0x1 BeforeElectricStatus 1" controlID=""    shutdownID="3|SLNA1ElectricStatus|2"  	showType="1" colorType="2" desc="GPJS" ttt="SLNA1"  />
+		<Status deviceID="0x03|0x0|0x1" graphicsID="SLNA2"  systemID="3001" triggerModule="DeviceMonitorModule" statusRedisKey="3001" statusID="0x1 BeforeElectricStatus 1" controlID=""    shutdownID="3|SLNA1E2ectricStatus|2"  	showType="1" colorType="2" desc="GPJS" ttt="SLNA2"  />
+		<Status deviceID="0x03|0x0|0x1" graphicsID="SLNA3"  systemID="3001" triggerModule="DeviceMonitorModule" statusRedisKey="3001" statusID="0x1 BeforeElectricStatus 1" controlID=""    shutdownID="3|SLNA1E3ectricStatus|2"  	showType="1" colorType="2" desc="GPJS" ttt="SLNA3"  />
+		<Status deviceID="0x03|0x0|0x1" graphicsID="SLNA4"  systemID="3001" triggerModule="DeviceMonitorModule" statusRedisKey="3001" statusID="0x1 BeforeElectricStatus 1" controlID=""    shutdownID="3|SLNA1E4ectricStatus|2"  	showType="1" colorType="2" desc="GPJS" ttt="SLNA4"  />
+		<Status deviceID="0x03|0x0|0x1" graphicsID="SLNA5"  systemID="3001" triggerModule="DeviceMonitorModule" statusRedisKey="3001" statusID="0x1 BeforeElectricStatus 1" controlID=""    shutdownID="3|SLNA1E5ectricStatus|2"  	showType="1" colorType="2" desc="GPJS" ttt="SLNA5"  />
+		<Status deviceID="0x03|0x0|0x1" graphicsID="SLNA6"  systemID="3001" triggerModule="DeviceMonitorModule" statusRedisKey="3001" statusID="0x1 BeforeElectricStatus 1" controlID=""    shutdownID="3|SLNA1E6ectricStatus|2"  	showType="1" colorType="2" desc="GPJS" ttt="SLNA6"  />
+		<Status deviceID="0x03|0x2|0x1" graphicsID="XLNA1"  systemID="3201" triggerModule="DeviceMonitorModule" statusRedisKey="3201" statusID="0x1 DeviceStatus 1" controlID=""    shutdownID="1|XLNA1ElectricStatus|2"  	showType="1" colorType="2" desc="GPJS" ttt="XLNA1"  />
+		<Status deviceID="0x03|0x2|0x1" graphicsID="XLNA2"  systemID="3201" triggerModule="DeviceMonitorModule" statusRedisKey="3201" statusID="0x1 DeviceStatus 1" controlID=""    shutdownID="1|XLNA1E2ectricStatus|2"  	showType="1" colorType="2" desc="GPJS" ttt="XLNA2"  />
+		<Status deviceID="0x03|0x2|0x1" graphicsID="XLNA3"  systemID="3201" triggerModule="DeviceMonitorModule" statusRedisKey="3201" statusID="0x1 DeviceStatus 1" controlID=""    shutdownID="1|XLNA1E3ectricStatus|2"  	showType="1" colorType="2" desc="GPJS" ttt="XLNA3"  />
+		<Status deviceID="0x03|0x2|0x1" graphicsID="XLNA4"  systemID="3201" triggerModule="DeviceMonitorModule" statusRedisKey="3201" statusID="0x1 DeviceStatus 1" controlID=""    shutdownID="1|XLNA1E4ectricStatus|2"  	showType="1" colorType="2" desc="GPJS" ttt="XLNA4"  />
+		<Status deviceID="0x03|0x2|0x1" graphicsID="XLNA5"  systemID="3201" triggerModule="DeviceMonitorModule" statusRedisKey="3201" statusID="0x1 DeviceStatus 1" controlID=""    shutdownID="1|XLNA1E5ectricStatus|2"  	showType="1" colorType="2" desc="GPJS" ttt="XLNA5"  />
+		<Status deviceID="0x03|0x2|0x1" graphicsID="XLNA6"  systemID="3201" triggerModule="DeviceMonitorModule" statusRedisKey="3201" statusID="0x1 DeviceStatus 1" controlID=""    shutdownID="1|XLNA1E6ectricStatus|2"  	showType="1" colorType="2" desc="GPJS" ttt="XLNA6"  />
+		<Status deviceID="0x03|0x6|0x1" graphicsID="KaLNA1"  systemID="3601" triggerModule="DeviceMonitorModule" statusRedisKey="3601" statusID="0x1 DeviceStatus 1" controlID=""    shutdownID="1|KaLNA1ElectricStatus|2"  	showType="1" colorType="2" desc="GPJS" ttt="KaLNA1"  />
+		<Status deviceID="0x03|0x6|0x1" graphicsID="KaLNA2"  systemID="3601" triggerModule="DeviceMonitorModule" statusRedisKey="3601" statusID="0x1 DeviceStatus 1" controlID=""    shutdownID="1|KaLNA1E2ectricStatus|2"  	showType="1" colorType="2" desc="GPJS" ttt="KaLNA2"  />
+		<Status deviceID="0x03|0x6|0x1" graphicsID="KaLNA3"  systemID="3601" triggerModule="DeviceMonitorModule" statusRedisKey="3601" statusID="0x1 DeviceStatus 1" controlID=""    shutdownID="1|KaLNA1E3ectricStatus|2"  	showType="1" colorType="2" desc="GPJS" ttt="KaLNA3"  />
+		<Status deviceID="0x03|0x6|0x1" graphicsID="KaLNA4"  systemID="3601" triggerModule="DeviceMonitorModule" statusRedisKey="3601" statusID="0x1 DeviceStatus 1" controlID=""    shutdownID="1|KaLNA1E4ectricStatus|2"  	showType="1" colorType="2" desc="GPJS" ttt="KaLNA4"  />
+		<Status deviceID="0x03|0x6|0x1" graphicsID="KaLNA5"  systemID="3601" triggerModule="DeviceMonitorModule" statusRedisKey="3601" statusID="0x1 DeviceStatus 1" controlID=""    shutdownID="1|KaLNA1E5ectricStatus|2"  	showType="1" colorType="2" desc="GPJS" ttt="KaLNA5"  />
+		<Status deviceID="0x03|0x6|0x1" graphicsID="KaLNA6"  systemID="3601" triggerModule="DeviceMonitorModule" statusRedisKey="3601" statusID="0x1 DeviceStatus 1" controlID=""    shutdownID="1|KaLNA1E6ectricStatus|2"  	showType="1" colorType="2" desc="GPJS" ttt="KaLNA6"  />
+		<!-- 天线 -->
+		<Status deviceID="0x01|0x0|0x1" graphicsID="ACUA"  systemID="1001" triggerModule="DeviceMonitorModule" statusRedisKey="1001" statusID="0x1 BaseEquipInteStatus 2" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="TCK" ttt="ACUA"  />
+		<Status deviceID="0x01|0x0|0x2" graphicsID="ACUB"  systemID="1002" triggerModule="DeviceMonitorModule" statusRedisKey="1002" statusID="0x1 BaseEquipInteStatus 2" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="TCK" ttt="ACUB"  />
+		<!-- 高功放 -->
+		<Status deviceID="0x02|0x0|0x1" graphicsID="SHP"  systemID="2001" triggerModule="DeviceMonitorModule" statusRedisKey="2001" statusID="0x1 SumStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="FS" ttt="S-HPA 1:1"  />
+		<!-- 开关网络 -->
+		<Status deviceID="0x03|0x0|0x1" graphicsID="SPDGPX"  systemID="3001" triggerModule="DeviceMonitorModule" statusRedisKey="3001" statusID="0x1 BeforeElectricStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="S频段射频开关网络"  />
+		<Status deviceID="0x03|0x2|0x1" graphicsID="XPDGPX"  systemID="3201" triggerModule="DeviceMonitorModule" statusRedisKey="3201" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="X频段射频开关网络"  />
+		<Status deviceID="0x03|0x6|0x1" graphicsID="KaPBSPKGWL"  systemID="3601" triggerModule="DeviceMonitorModule" statusRedisKey="3601" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="Ka频段射频开关网络"  />
+		<!-- 开关矩阵 -->
+		<Status deviceID="0x02|0x1|0x1" graphicsID="SPDFSKGJZ"  systemID="2101" triggerModule="DeviceMonitorModule" statusRedisKey="2101" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="FS"  ttt="S频段发射开关矩阵"/>
+		<Status deviceID="0x03|0x1|0x1" graphicsID="SPDJSKGJZ"  systemID="3101" triggerModule="DeviceMonitorModule" statusRedisKey="3101" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="S频段接收开关矩阵"  />
+		<Status deviceID="0x03|0xA|0x1" graphicsID="LPBSPKGWL"  systemID="3A01" triggerModule="DeviceMonitorModule" statusRedisKey="3A01" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="L频段切换网络"  />
+		<Status deviceID="0x03|0x5|0x1" graphicsID="XGZHKGJZ"  systemID="3501" triggerModule="DeviceMonitorModule" statusRedisKey="3501" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="X频段 射频 开关 矩阵"  />
+		<Status deviceID="0x03|0x9|0x1" graphicsID="KAGZHKGJZ"  systemID="3901" triggerModule="DeviceMonitorModule" statusRedisKey="3901" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="Ka频段 射频 分路 组合"  />
+		<Status deviceID="0x03|0xC|0x1" graphicsID="1.2GZHKGJZ"  systemID="3C01" triggerModule="DeviceMonitorModule" statusRedisKey="3C01" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="1.2G 中频 开关 矩阵"  />
+		<!-- 下变频器 -->
+		<Status deviceID="0x03|0x3|0x1" graphicsID="XSDC1"  systemID="3301" triggerModule="DeviceMonitorModule" statusRedisKey="3301" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="X/1.2G DC1"  />
+		<Status deviceID="0x03|0x3|0x1" graphicsID="XSDC2"  systemID="3301" triggerModule="DeviceMonitorModule" statusRedisKey="3301" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="X/1.2G DC2"  />
+		<Status deviceID="0x03|0x3|0x2" graphicsID="XSDC3"  systemID="3302" triggerModule="DeviceMonitorModule" statusRedisKey="3302" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="X/1.2G DC3"  />
+		<Status deviceID="0x03|0x3|0x2" graphicsID="XSDC4"  systemID="3302" triggerModule="DeviceMonitorModule" statusRedisKey="3302" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="X/1.2G DC4"  />
+		<Status deviceID="0x03|0x4|0x1" graphicsID="XSDC5"  systemID="3401" triggerModule="DeviceMonitorModule" statusRedisKey="3401" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="X/1.2G DC5"  />
+		<Status deviceID="0x03|0x4|0x1" graphicsID="XSDC6"  systemID="3401" triggerModule="DeviceMonitorModule" statusRedisKey="3401" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="X/1.2G DC6"  />
+		<Status deviceID="0x03|0x4|0x2" graphicsID="XSDC7"  systemID="3402" triggerModule="DeviceMonitorModule" statusRedisKey="3402" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="X/1.2G DC7"  />
+		<Status deviceID="0x03|0x4|0x2" graphicsID="XSDC8"  systemID="3402" triggerModule="DeviceMonitorModule" statusRedisKey="3402" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="X/1.2G DC8"  />
+		<Status deviceID="0x03|0x4|0x3" graphicsID="XSDC9"  systemID="3403" triggerModule="DeviceMonitorModule" statusRedisKey="3403" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="X/1.2G DC9"  />
+		<Status deviceID="0x03|0x4|0x3" graphicsID="XSDC10"  systemID="3403" triggerModule="DeviceMonitorModule" statusRedisKey="3403" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="X/1.2G DC10"  />
+		<Status deviceID="0x03|0x7|0x1" graphicsID="KADC1"  systemID="3701" triggerModule="DeviceMonitorModule" statusRedisKey="3701" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="Ka/1.2G DC1"  />
+		<Status deviceID="0x03|0x7|0x1" graphicsID="KADC2"  systemID="3701" triggerModule="DeviceMonitorModule" statusRedisKey="3701" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="Ka/1.2G DC2"  />
+		<Status deviceID="0x03|0x7|0x2" graphicsID="KADC3"  systemID="3702" triggerModule="DeviceMonitorModule" statusRedisKey="3702" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="Ka/1.2G DC3"  />
+		<Status deviceID="0x03|0x7|0x2" graphicsID="KADC4"  systemID="3702" triggerModule="DeviceMonitorModule" statusRedisKey="3702" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="Ka/1.2G DC4"  />
+		<Status deviceID="0x03|0x8|0x1" graphicsID="KaSDC5"  systemID="3801" triggerModule="DeviceMonitorModule" statusRedisKey="3801" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="Ka/1.2G DC5"  />
+		<Status deviceID="0x03|0x8|0x1" graphicsID="KaSDC6"  systemID="3801" triggerModule="DeviceMonitorModule" statusRedisKey="3801" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="Ka/1.2G DC6"  />
+		<Status deviceID="0x03|0x8|0x2" graphicsID="KaSDC7"  systemID="3802" triggerModule="DeviceMonitorModule" statusRedisKey="3802" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="Ka/1.2G DC7"  />
+		<Status deviceID="0x03|0x8|0x2" graphicsID="KaSDC8"  systemID="3802" triggerModule="DeviceMonitorModule" statusRedisKey="3802" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="Ka/1.2G DC8"  />
+		<Status deviceID="0x03|0x8|0x3" graphicsID="KaSDC9"  systemID="3803" triggerModule="DeviceMonitorModule" statusRedisKey="3803" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="Ka/1.2G DC9"  />
+		<Status deviceID="0x03|0x8|0x3" graphicsID="KaSDC10"  systemID="3803" triggerModule="DeviceMonitorModule" statusRedisKey="3803" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="GPJS" ttt="Ka/1.2G DC10"  />
+		<!-- 数字化前端 -->
+		<Status deviceID="0x07|0x0|0x1" graphicsID="SSSZHQD1"  systemID="7001" triggerModule="DeviceMonitorModule" statusRedisKey="7001" statusID="0x1 DevSynStatus 2" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="QD" ttt="射频数字 化前端1"  />
+		<Status deviceID="0x07|0x0|0x2" graphicsID="SSSZHQD2"  systemID="7002" triggerModule="DeviceMonitorModule" statusRedisKey="7002" statusID="0x1 DevSynStatus 2" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="QD" ttt="射频数字 化前端2"  />
+		<Status deviceID="0x07|0x1|0x1" graphicsID="SSSZHQD3"  systemID="7101" triggerModule="DeviceMonitorModule" statusRedisKey="7101" statusID="0x1 DevSynStatus 2" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="QD" ttt="跟踪数字 化前端1"  />
+		<Status deviceID="0x07|0x1|0x2" graphicsID="SSSZHQD4"  systemID="7102" triggerModule="DeviceMonitorModule" statusRedisKey="7102" statusID="0x1 DevSynStatus 2" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="QD" ttt="跟踪数字 化前端2"  />
+		<!-- 基带 -->
+		<Status deviceID="0x04|0x0|0x1" graphicsID="CKJD1"  systemID="4001" triggerModule="DeviceMonitorModule" statusRedisKey="4001" statusID="0x1 BaseEquipInteStatus 2" controlID="0x1|ControlMode|1"    shutdownID="1||1" mainPreparation="0x4001|1|OnLineMachine|1|0x4001" showType="1" colorType="2" desc="JD" ttt="综合 测控基带 1"  />
+		<Status deviceID="0x04|0x0|0x2" graphicsID="CKJD2"  systemID="4002" triggerModule="DeviceMonitorModule" statusRedisKey="4002" statusID="0x1 BaseEquipInteStatus 2" controlID="0x1|ControlMode|1"    shutdownID="1||1" mainPreparation="0x4002|1|OnLineMachine|1|0x4002" showType="1" colorType="2" desc="JD" ttt="综合 测控基带 2"  />
+		<Status deviceID="0x04|0x2|0x1" graphicsID="DSJD1"  systemID="4201" triggerModule="DeviceMonitorModule" statusRedisKey="4201" statusID="0x1 BaseEquipInteStatus 2" controlID="0x1|ControlMode|1"    shutdownID="1||1" mainPreparation="0x4201|1|SbandOnline|1|0x4201" showType="1" colorType="2" desc="JD" ttt="跟踪基带1"  />
+		<Status deviceID="0x04|0x2|0x2" graphicsID="DSJD2"  systemID="4202" triggerModule="DeviceMonitorModule" statusRedisKey="4202" statusID="0x1 BaseEquipInteStatus 2" controlID="0x1|ControlMode|1"    shutdownID="1||1" mainPreparation="0x4202|1|SbandOnline|1|0x4202" showType="1" colorType="2" desc="JD" ttt="跟踪基带2"  />
+		<Status deviceID="0x04|0x1|0x1" graphicsID="GSSCJD1"  systemID="4101" triggerModule="DeviceMonitorModule" statusRedisKey="4101" statusID="0x1 EquipInteStatus 2" controlID="0x1|ControlMode|1"    shutdownID="1||1" mainPreparation="0x4101|1|OnLineMachine|1|0x4101" showType="1" colorType="2" desc="JD" ttt="高速基带1"  />
+		<Status deviceID="0x04|0x1|0x2" graphicsID="GSSCJD2"  systemID="4102" triggerModule="DeviceMonitorModule" statusRedisKey="4102" statusID="0x1 EquipInteStatus 2" controlID="0x1|ControlMode|1"    shutdownID="1||1" mainPreparation="0x4102|1|OnLineMachine|1|0x4102" showType="1" colorType="2" desc="JD" ttt="高速基带2"  />
+		<Status deviceID="0x04|0x1|0x3" graphicsID="GSSCJD3"  systemID="4103" triggerModule="DeviceMonitorModule" statusRedisKey="4103" statusID="0x1 EquipInteStatus 2" controlID="0x1|ControlMode|1"    shutdownID="1||1" mainPreparation="0x4103|1|OnLineMachine|1|0x4103" showType="1" colorType="2" desc="JD" ttt="高速基带3"  />
+		<Status deviceID="0x04|0x3|0x1" graphicsID="SPQHDY"  systemID="4301" triggerModule="DeviceMonitorModule" statusRedisKey="4301" statusID="0x1 DevStatus 2" controlID="0x1|ControlMode|1"    shutdownID="1||1" showType="1" colorType="2" desc="JD" ttt="视频切换单元"  />
+		<!-- 数据交互 -->
+		<Status deviceID="0x08|0x0|0x1" graphicsID="SJJHJSJA"  systemID="8001" triggerModule="DeviceMonitorModule" statusRedisKey="8001" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="SJJH" ttt="数据交互 计算机A"  />
+		<Status deviceID="0x08|0x0|0x2" graphicsID="SJJHJSJB"  systemID="8002" triggerModule="DeviceMonitorModule" statusRedisKey="8002" statusID="0x1 DeviceStatus 1" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="SJJH" ttt="数据交互 计算机B"  />
+		
+		<Status deviceID="0x08|0x1|0x1" graphicsID="SJCCYGLSB1"  systemID="8101" triggerModule="DeviceMonitorModule" statusRedisKey="8101" statusID="0x1 WorkStatus 2" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="SJJH" ttt="数据存储 与转发1"  />
+		<Status deviceID="0x08|0x1|0x2" graphicsID="SJCCYGLSB2"  systemID="8102" triggerModule="DeviceMonitorModule" statusRedisKey="8102" statusID="0x1 WorkStatus 2" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="SJJH" ttt="数据存储 与转发2"  />
+		<Status deviceID="0x08|0x1|0x3" graphicsID="SJCCYGLSB3"  systemID="8103" triggerModule="DeviceMonitorModule" statusRedisKey="8103" statusID="0x1 WorkStatus 2" controlID="0x1|ControlMode|1"    shutdownID="1||1"  	showType="1" colorType="2" desc="SJJH" ttt="数据存储 与转发3"  />
+	</DeviceParam>
+</Group>

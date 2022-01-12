@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="MACPU" ModeType="0x01" edition="1.1.1.1">
+	<enum name="ControlMode" desc="监控方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="BaseEquipInteStatus" desc="基带设备综合状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="OnLineMachine" desc="本机在线状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="主机"/>
+		<entry svalue="2" uvalue="2" desc="备机"/>
+	</enum>
+	<enum name="ExternalState" desc="外时码状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="ExternalFreqState" desc="外频标状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="WorkMode" desc="工作模式">
+		<entry svalue="1" uvalue="1" desc="标准TTC"/>
+		<entry svalue="4" uvalue="4" desc="扩频模式二"/>
+		<entry svalue="9" uvalue="16" desc="一体化上面级"/>
+		<entry svalue="10" uvalue="17" desc="一体化卫星"/>
+		<entry svalue="11" uvalue="18" desc="一体化上行高码率"/>
+		<entry svalue="12" uvalue="19" desc="一体化上面级+扩二不共载波"/>
+		<entry svalue="14" uvalue="21" desc="一体化上面级+扩二共载波"/>
+		<entry svalue="16" uvalue="23" desc="一体化卫星+扩二"/>
+		<entry svalue="18" uvalue="25" desc="一体化上行高码率+扩二"/>
+		<entry svalue="20" uvalue="33" desc="扩跳频模式"/>
+	</enum>
+	<enum name="WorkWay" desc="工作方式">
+		<entry svalue="1" uvalue="1" desc="任务方式"/>
+		<entry svalue="2" uvalue="2" desc="联试应答机闭环"/>
+		<entry svalue="6" uvalue="6" desc="偏馈校零闭环"/>
+		<entry svalue="7" uvalue="7" desc="射频模拟源闭环"/>
+		<entry svalue="8" uvalue="8" desc="信标方式"/>
+		<entry svalue="9" uvalue="9" desc="数字化闭环"/>
+		<entry svalue="12" uvalue="12" desc="中频闭环"/>
+	</enum>
+	<enum name="SystemCapMode" desc="系统捕获方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="自动"/>
+		<entry svalue="2" uvalue="2" desc="手动"/>
+	</enum>
+	<enum name="DoubleCapState" desc="双捕状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="未启动:Y"/>
+		<entry svalue="2" uvalue="2" desc="开始:G"/>
+		<entry svalue="3" uvalue="3" desc="完成:Y"/>
+	</enum>
+	<enum name="TrappingState" desc="距捕状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="未启动:Y"/>
+		<entry svalue="2" uvalue="2" desc="开始:G"/>
+		<entry svalue="3" uvalue="3" desc="完成:Y"/>
+	</enum>
+	<enum name="CurrentTarck" desc="当前跟踪通道">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="左旋"/>
+		<entry svalue="2" uvalue="2" desc="右旋"/>
+		<entry svalue="3" uvalue="3" desc="同时"/>
+	</enum>
+	<enum name="VelMeaDataTranStatus" desc="测速数据发送状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="发送:G"/>
+		<entry svalue="2" uvalue="2" desc="未发送:Y"/>
+	</enum>
+	<enum name="DataTranStatus" desc="测据数据发送状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="发送:G"/>
+		<entry svalue="2" uvalue="2" desc="未发送:Y"/>
+	</enum>
+	<enum name="TeleDataTranStatus" desc="遥测数据发送状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="发送:G"/>
+		<entry svalue="2" uvalue="2" desc="未发送:Y"/>
+	</enum>
+	<enum name="SpeedMeaSamPer" desc="测速采样率">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="20次/秒"/>
+		<entry svalue="2" uvalue="2" desc="10次/秒"/>
+		<entry svalue="3" uvalue="3" desc="1次/秒"/>
+		<entry svalue="4" uvalue="4" desc="(1/3次)/秒"/>
+		<entry svalue="5" uvalue="5" desc="(1/10次)/秒"/>
+	</enum>
+	<enum name="VelInteTime" desc="测速积分时间">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="0.04s"/>
+		<entry svalue="2" uvalue="2" desc="0.05s"/>
+		<entry svalue="3" uvalue="3" desc="0.08s"/>
+		<entry svalue="4" uvalue="4" desc="0.1s"/>
+		<entry svalue="5" uvalue="5" desc="0.4s"/>
+		<entry svalue="6" uvalue="6" desc="0.8s"/>
+		<entry svalue="7" uvalue="7" desc="1s"/>
+		<entry svalue="8" uvalue="8" desc="2s"/>
+		<entry svalue="9" uvalue="9" desc="3s"/>
+		<entry svalue="10" uvalue="10" desc="10s"/>
+	</enum>
+	<enum name="RangSamRate" desc="测距采样率">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="1次/秒"/>
+		<entry svalue="2" uvalue="2" desc="2次/秒"/>
+		<entry svalue="3" uvalue="3" desc="4次/秒"/>
+		<entry svalue="4" uvalue="4" desc="10次/秒"/>
+		<entry svalue="5" uvalue="5" desc="20次/秒"/>
+		<entry svalue="6" uvalue="6" desc="0.2次/秒"/>
+	</enum>
+	<enum name="BaseBandDelMode" desc="基带送数方式">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="常送"/>
+		<entry svalue="2" uvalue="2" desc="人工"/>
+	</enum>
+	<enum name="DataFormat" desc="数据传输格式">
+		<entry svalue="1" uvalue="1" desc="新格式"/>
+	</enum>
+	<enum name="TrackChanSel" desc="跟踪旋向选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="左旋"/>
+		<entry svalue="2" uvalue="2" desc="右旋"/>
+	</enum>
+	<enum name="TeleInveStat" desc="存盘">
+		<entry svalue="1" uvalue="1" desc="开始:G"/>
+		<entry svalue="2" uvalue="2" desc="停止:Y"/>
+	</enum>
+</enums>

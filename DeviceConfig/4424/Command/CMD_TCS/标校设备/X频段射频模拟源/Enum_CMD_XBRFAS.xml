@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+id  枚举ID  -与设备类型关联
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums ExtenType="XBRFAS" ModeType = "0xFFFF" edition="1.1.1.1">
+	<enum name="Power" desc="电源管理">
+		<entry svalue="1" uvalue="0" desc="无此参数" />
+		<entry svalue="2" uvalue="1" desc="关电" />
+		<entry svalue="3" uvalue="2" desc="开电" />
+	</enum>
+	<enum name="Switch" desc="开关选择">
+		<entry svalue="1" uvalue="0" desc="无此参数" />
+		<entry svalue="2" uvalue="1" desc="射频输出1" />
+		<entry svalue="3" uvalue="2" desc="射频输出2" />
+	</enum>
+</enums>

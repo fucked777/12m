@@ -1,0 +1,26 @@
+<GridLayout>
+	<GroupBox row="0" col="0" rowSpan="1" columnSpan="1" text="X高速">
+		<GridLayout verticalSpacing="1">
+			<Widget row="0" col="0" rowSpan="1" columnSpan="2" Align="Center" type="NameLabel" text="接收极化"/>
+			<Widget row="0" col="2" rowSpan="1" columnSpan="2" Align="Center" type="EnumStatusLabel" desc="接收极化" deviceId="0x3201" modeId="0xFFFF" unitId="1" targetId="0" paramId="WaveSwitchXBadControl" enumId="BoDaoControl" />
+			<Widget row="1" col="0" rowSpan="1" columnSpan="2" Align="Center" type="NameLabel" text="跟踪接收频率(MHz)"/>
+			<Widget row="1" col="2" rowSpan="1" columnSpan="2" Align="Center" type="NumberStatusLabel" desc="跟踪接收频率" deviceId="0x3301" modeId="0xFFFF" unitId="1" targetId="0" paramId="InputFreq"/>
+			<Widget row="2" col="0" rowSpan="1" columnSpan="2" Align="Center" type="NameLabel" text="通道1输入频率(MHz)"/>
+			<Widget row="2" col="2" rowSpan="1" columnSpan="2" Align="Center" type="NumberStatusLabel" desc="通道1输入频率" deviceId="0x3401" modeId="0xFFFF" unitId="1" targetId="0" paramId="InputFreq1"/>
+			<Widget row="3" col="0" rowSpan="1" columnSpan="2" Align="Center" type="NameLabel" text="通道2输入频率(MHz)"/>
+			<Widget row="3" col="2" rowSpan="1" columnSpan="2" Align="Center" type="NumberStatusLabel" desc="通道2输入频率" deviceId="0x3401" modeId="0xFFFF" unitId="1" targetId="0" paramId="InputFreq2"/>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="1" col="0" rowSpan="1" columnSpan="1" text="Ka高速">
+		<GridLayout verticalSpacing="0">
+			<Widget row="0" col="0" rowSpan="1" columnSpan="2" Align="Center" type="NameLabel" text="接收极化"/>
+			<Widget row="0" col="2" rowSpan="1" columnSpan="2" Align="Center" type="EnumStatusLabel" desc="接收极化" deviceId="0x3601" modeId="0xFFFF" unitId="1" targetId="0" paramId="WaveSwitchXBadControl" enumId="BoDaoControl"/>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="2" Align="Center" type="NameLabel" text="跟踪接收频率(MHz)"/>
+			<Widget row="1" col="2" rowSpan="1" columnSpan="2" Align="Center" type="NumberStatusLabel" desc="跟踪接收频率" deviceId="0x3701" modeId="0xFFFF" unitId="1" targetId="0" paramId="InputFreq"/>
+			<Widget row="2" col="0" rowSpan="1" columnSpan="2" Align="Center" type="NameLabel" text="通道1输入频率(MHz)"/>
+			<Widget row="2" col="2" rowSpan="1" columnSpan="2" Align="Center" type="NumberStatusLabel" desc="通道1输入频率" deviceId="0x3801" modeId="0xFFFF" unitId="1" targetId="0" paramId="InputFreq1"/>
+			<Widget row="3" col="0" rowSpan="1" columnSpan="2" Align="Center" type="NameLabel" text="通道2输入频率(MHz)"/>
+			<Widget row="3" col="2" rowSpan="1" columnSpan="2" Align="Center" type="NumberStatusLabel" desc="通道2输入频率" deviceId="0x3801" modeId="0xFFFF" unitId="1" targetId="0" paramId="InputFreq2"/>
+		</GridLayout>
+	</GroupBox>
+</GridLayout>

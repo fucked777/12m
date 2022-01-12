@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="LSFBRFSMSR" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="ControlMode" desc="监控方式">
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="DevStatus" desc="设备状态">
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="ChooseConnect" desc="信号连接状态">
+		<entry svalue="0" uvalue="0" desc="未连接"/>
+		<entry svalue="1" uvalue="1" desc="1"/>
+		<entry svalue="2" uvalue="2" desc="2"/>
+		<entry svalue="3" uvalue="3" desc="3"/>
+		<entry svalue="4" uvalue="4" desc="4"/>
+		<entry svalue="5" uvalue="5" desc="5"/>
+		<entry svalue="6" uvalue="6" desc="6"/>
+		<entry svalue="7" uvalue="7" desc="7"/>
+		<entry svalue="8" uvalue="8" desc="8"/>
+		<entry svalue="9" uvalue="9" desc="9"/>
+		<entry svalue="10" uvalue="10" desc="10"/>
+		<entry svalue="11" uvalue="11" desc="11"/>
+		<entry svalue="12" uvalue="12" desc="12"/>
+		<entry svalue="13" uvalue="13" desc="13"/>
+		<entry svalue="14" uvalue="14" desc="14"/>
+		<entry svalue="15" uvalue="15" desc="15"/>
+		<entry svalue="16" uvalue="16" desc="16"/>
+		<entry svalue="17" uvalue="17" desc="17"/>
+		<entry svalue="18" uvalue="18" desc="18"/>
+		<entry svalue="19" uvalue="19" desc="19"/>
+		<entry svalue="20" uvalue="20" desc="20"/>
+		<entry svalue="21" uvalue="21" desc="21"/>
+		<entry svalue="22" uvalue="22" desc="22"/>
+		<entry svalue="23" uvalue="23" desc="23"/>
+		<entry svalue="24" uvalue="24" desc="24"/>
+		<entry svalue="25" uvalue="25" desc="25"/>
+		<entry svalue="26" uvalue="26" desc="26"/>
+		<entry svalue="27" uvalue="27" desc="27"/>
+		<entry svalue="28" uvalue="28" desc="28"/>
+		<entry svalue="29" uvalue="29" desc="29"/>
+		<entry svalue="30" uvalue="30" desc="30"/>
+		<entry svalue="31" uvalue="31" desc="31"/>
+		<entry svalue="31" uvalue="32" desc="32"/>
+	</enum>
+	<enum name="EIn" desc="输入端">
+		<entry svalue="1" uvalue="1" desc="S左和"/>
+		<entry svalue="2" uvalue="2" desc="S右和"/>
+		<entry svalue="3" uvalue="3" desc="S差路"/>
+		<entry svalue="4" uvalue="4" desc="X左和"/>
+		<entry svalue="5" uvalue="5" desc="X右和"/>
+		<entry svalue="6" uvalue="6" desc="Ka测控左和"/>
+		<entry svalue="7" uvalue="7" desc="Ka测控右和"/>
+		<entry svalue="8" uvalue="8" desc="Ka测控跟踪左和"/>
+		<entry svalue="9" uvalue="9" desc="Ka测控跟踪右和"/>
+		<entry svalue="10" uvalue="10" desc="Ka测控跟踪左差"/>
+		<entry svalue="11" uvalue="11" desc="Ka测控跟踪右差"/>
+		<entry svalue="12" uvalue="12" desc="Ka低速左和"/>
+		<entry svalue="13" uvalue="13" desc="Ka低速右和"/>
+		<entry svalue="14" uvalue="14" desc="Ka数传跟踪左和"/>
+		<entry svalue="15" uvalue="15" desc="Ka数传跟踪右和"/>
+		<entry svalue="16" uvalue="16" desc="Ka数传跟踪左差"/>
+		<entry svalue="17" uvalue="17" desc="Ka数传跟踪右差"/>
+		<entry svalue="18" uvalue="18" desc="联试应答/射频源1"/>
+		<entry svalue="19" uvalue="19" desc="S应答机下行"/>
+		<entry svalue="20" uvalue="20" desc="S应答机下行(扩跳)"/>
+		<entry svalue="21" uvalue="21" desc="联试应答/射频源2"/>
+		<entry svalue="22" uvalue="22" desc="备用22"/>
+		<entry svalue="23" uvalue="23" desc="备用23"/>
+		<entry svalue="24" uvalue="24" desc="备用24"/>
+		<!--
+		<entry svalue="25" uvalue="25" desc="备用25"/>
+		<entry svalue="26" uvalue="26" desc="备用26"/>
+		<entry svalue="27" uvalue="27" desc="备用27"/>
+		<entry svalue="28" uvalue="28" desc="备用28"/>
+		<entry svalue="29" uvalue="29" desc="备用29"/>
+		<entry svalue="30" uvalue="30" desc="备用30"/>
+		<entry svalue="31" uvalue="31" desc="备用31"/>
+		<entry svalue="31" uvalue="32" desc="备用32"/>
+		-->
+	</enum>
+	<enum name="TestNum" desc="输入端">
+		<!--测控(数传)前端-->
+		<entry svalue="1" uvalue="1" desc="S左和"/>
+		<entry svalue="2" uvalue="2" desc="S右和"/>
+		<entry svalue="4" uvalue="4" desc="X左和"/>
+		<entry svalue="5" uvalue="5" desc="X右和"/>
+		<entry svalue="6" uvalue="6" desc="Ka测控左和"/>
+		<entry svalue="7" uvalue="7" desc="Ka测控右和"/>
+		<entry svalue="12" uvalue="12" desc="Ka低速左和"/>
+		<entry svalue="13" uvalue="13" desc="Ka低速右和"/>
+		<entry svalue="18" uvalue="18" desc="联试应答/射频源"/>
+		<entry svalue="19" uvalue="19" desc="S应答机下行"/>
+		<entry svalue="20" uvalue="20" desc="S应答机下行(扩跳)"/>
+		<entry svalue="21" uvalue="21" desc="备用21"/>
+		<entry svalue="22" uvalue="22" desc="备用22"/>
+		<entry svalue="23" uvalue="23" desc="备用23"/>
+		<entry svalue="24" uvalue="24" desc="备用24"/>
+	</enum>
+	<enum name="TestHe" desc="输入端">
+		<!--测控和路-->
+		<entry svalue="1" uvalue="1" desc="S左和"/>
+		<entry svalue="2" uvalue="2" desc="S右和"/>
+		<!-- <entry svalue="3" uvalue="3" desc="S差路" /> -->
+		<entry svalue="8" uvalue="8" desc="Ka测控跟踪左和"/>
+		<entry svalue="9" uvalue="9" desc="Ka测控跟踪右和"/>
+		<entry svalue="21" uvalue="21" desc="备用21"/>
+		<entry svalue="22" uvalue="22" desc="备用22"/>
+		<entry svalue="23" uvalue="23" desc="备用23"/>
+		<entry svalue="24" uvalue="24" desc="备用24"/>
+	</enum>
+	<enum name="TestCha" desc="输入端">
+		<!--测控差路-->
+		<!-- <entry svalue="1" uvalue="1" desc="S左和" />
+		<entry svalue="2" uvalue="2" desc="S右和" /> -->
+		<entry svalue="3" uvalue="3" desc="S差路"/>
+		<entry svalue="10" uvalue="10" desc="Ka测控跟踪左差"/>
+		<entry svalue="11" uvalue="11" desc="Ka测控跟踪右差"/>
+		<entry svalue="21" uvalue="21" desc="备用21"/>
+		<entry svalue="22" uvalue="22" desc="备用22"/>
+		<entry svalue="23" uvalue="23" desc="备用23"/>
+		<entry svalue="24" uvalue="24" desc="备用24"/>
+	</enum>
+	<enum name="ShuchuanHe" desc="输入端">
+		<!--数传和路-->
+		<!-- <entry svalue="1" uvalue="1" desc="S左和" />
+		<entry svalue="2" uvalue="2" desc="S右和" />
+		<entry svalue="3" uvalue="3" desc="S差路" /> -->
+		<entry svalue="14" uvalue="14" desc="Ka数传跟踪左和"/>
+		<entry svalue="15" uvalue="15" desc="Ka数传跟踪右和"/>
+		<entry svalue="21" uvalue="21" desc="备用21"/>
+		<entry svalue="22" uvalue="22" desc="备用22"/>
+		<entry svalue="23" uvalue="23" desc="备用23"/>
+		<entry svalue="24" uvalue="24" desc="备用24"/>
+	</enum>
+	<enum name="ShuchuanCha" desc="输入端">
+		<!--数传差路-->
+		<!-- <entry svalue="1" uvalue="1" desc="S左和" />
+		<entry svalue="2" uvalue="2" desc="S右和" />
+		<entry svalue="3" uvalue="3" desc="S差路" /> -->
+		<entry svalue="16" uvalue="16" desc="Ka数传跟踪左差"/>
+		<entry svalue="17" uvalue="17" desc="Ka数传跟踪右差"/>
+		<entry svalue="21" uvalue="21" desc="备用21"/>
+		<entry svalue="22" uvalue="22" desc="备用22"/>
+		<entry svalue="23" uvalue="23" desc="备用23"/>
+		<entry svalue="24" uvalue="24" desc="备用24"/>
+	</enum>
+</enums>

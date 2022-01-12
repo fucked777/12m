@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+id  枚举ID  -与设备类型关联
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums ExtenType="JTRT" ModeType="0x09" edition="1.1.1.1">
+	<enum name="WorkWay" desc="工作方式">
+		<entry svalue="1" uvalue="1" desc="动态仿真"/>
+		<entry svalue="2" uvalue="2" desc="文件仿真"/>
+	</enum>
+	<enum name="FileLoop" desc="文件循环">
+		<entry svalue="1" uvalue="1" desc="单次回放"/>
+		<entry svalue="2" uvalue="2" desc="循环回放"/>
+	</enum>
+	<enum name="ReceiveWay" desc="接收方式">
+		<entry svalue="1" uvalue="1" desc="表示短码接收"/>
+		<entry svalue="2" uvalue="2" desc="表示长码接收"/>
+		<entry svalue="3" uvalue="3" desc="表示程序控制"/>
+	</enum>
+	<enum name="CarrierOutput" desc="载波输出">
+		<entry svalue="1" uvalue="1" desc="去载"/>
+		<entry svalue="2" uvalue="2" desc="加载"/>
+	</enum>
+	<enum name="ModulCtrl" desc="加调控制">
+		<entry svalue="1" uvalue="1" desc="去调"/>
+		<entry svalue="2" uvalue="2" desc="加调"/>
+	</enum>
+	<enum name="ModulCtrls" desc="加调控制">
+		<entry svalue="1" uvalue="1" desc="去调"/>
+		<entry svalue="2" uvalue="2" desc="加调"/>
+	</enum>
+	<enum name="DataCtrl" desc="数据加调">
+		<entry svalue="1" uvalue="1" desc="去调"/>
+		<entry svalue="2" uvalue="2" desc="加调"/>
+	</enum>
+	<enum name="OutPutWay" desc="输出方式">
+		<entry svalue="1" uvalue="1" desc="短码"/>
+		<entry svalue="2" uvalue="2" desc="长码"/>
+		<entry svalue="3" uvalue="3" desc="交替输出"/>
+		<entry svalue="4" uvalue="4" desc="并行输出"/>
+	</enum>
+	<enum name="MNYChoose" desc="模拟源选择">
+		<entry svalue="1" uvalue="1" desc="遥测模拟源"/>
+		<entry svalue="2" uvalue="2" desc="遥控模拟源"/>
+	</enum>
+	<enum name="SimulCtrl" desc="仿真控制">
+		<entry svalue="1" uvalue="1" desc="开始"/>
+		<entry svalue="2" uvalue="2" desc="停止"/>
+	</enum>
+</enums>

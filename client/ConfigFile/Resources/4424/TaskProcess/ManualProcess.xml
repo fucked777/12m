@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WorkSystems station="4424">
+	<CK>
+		<WorkSystem id="1" desc="S标准TTC" maxdp="2"/>
+		<WorkSystem id="2" desc="S扩频" maxdp="4"/>
+		<WorkSystem id="7" desc="一体化上面级" maxdp="2"/>
+		<WorkSystem id="8" desc="一体化卫星" maxdp="2"/>
+		<WorkSystem id="9" desc="一体化高码率" maxdp="2"/>
+		<WorkSystem id="10" desc="一体化上面级+扩二共载波" maxdp="2"/>
+		<WorkSystem id="11" desc="一体化上面级+扩二不共载波" maxdp="2"/>
+		<WorkSystem id="12" desc="一体化卫星+扩二" maxdp="2"/>
+		<WorkSystem id="13" desc="一体化高码率+扩二" maxdp="2"/>
+		<WorkSystem id="14" desc="扩跳" maxdp="2"/>
+	</CK>
+	<DT>
+		<WorkSystem id="15" desc="X高速" maxdp="2"/>
+		<WorkSystem id="6" desc="Ka高速" maxdp="2"/>
+	</DT>
+</WorkSystems>

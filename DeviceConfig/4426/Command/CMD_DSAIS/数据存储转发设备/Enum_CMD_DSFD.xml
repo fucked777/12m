@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+id  枚举ID  -与设备类型关联
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums ExtenType="DSFD" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="CtrlSign" desc="控制标志">
+		<entry svalue="1" uvalue="1" desc="停止"/>
+		<entry svalue="2" uvalue="2" desc="启动"/>
+	</enum>
+	<enum name="OperatMode" desc="工作方式">
+		<entry svalue="1" uvalue="1" desc="实时接收加传输"/>
+		<entry svalue="2" uvalue="2" desc="事后传输"/>
+		<entry svalue="3" uvalue="3" desc="只接收"/>
+	</enum>
+	<enum name="Priority" desc="优先级">
+		<entry svalue="1" uvalue="1" desc="1"/>
+		<entry svalue="2" uvalue="2" desc="2"/>
+		<entry svalue="3" uvalue="3" desc="3"/>
+	</enum>
+	<enum name="Agrenment" desc="协议">
+		<entry svalue="1" uvalue="1" desc="TCP"/>
+		<entry svalue="2" uvalue="2" desc="UDP点播"/>
+		<entry svalue="3" uvalue="3" desc="UDP组播"/>
+	</enum>
+	<enum name="LocalNumb" desc="本机通道号">
+		<entry svalue="1" uvalue="1" desc="通道1"/>
+		<entry svalue="2" uvalue="2" desc="通道2"/>
+		<entry svalue="3" uvalue="3" desc="通道3"/>
+		<entry svalue="4" uvalue="4" desc="通道4"/>
+	</enum>
+	<enum name="ReceStatus" desc="接收状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="接收正常"/>
+		<entry svalue="2" uvalue="2" desc="接收异常"/>
+	</enum>
+	<enum name="TaskCtrl" desc="任务控制">
+		<entry svalue="1" uvalue="1" desc="停止"/>
+		<entry svalue="2" uvalue="2" desc="启动"/>
+	</enum>
+	<enum name="StorageCtrl" desc="存储控制">
+		<entry svalue="1" uvalue="1" desc="存储"/>
+		<entry svalue="2" uvalue="2" desc="不存储"/>
+	</enum>
+	<enum name="ChannSelect" desc="通道选择">
+		<entry svalue="1" uvalue="1" desc="通道1"/>
+		<entry svalue="2" uvalue="2" desc="通道2"/>
+		<entry svalue="3" uvalue="3" desc="通道3"/>
+		<entry svalue="4" uvalue="4" desc="通道4"/>
+	</enum>
+	<enum name="SendCtrl" desc="发送控制">
+		<entry svalue="1" uvalue="1" desc="停止"/>
+		<entry svalue="2" uvalue="2" desc="启动"/>
+	</enum>
+	<enum name="ChannelNum" desc="基带通道号">
+		<entry svalue="1" uvalue="1" desc="通道1"/>
+		<entry svalue="2" uvalue="2" desc="通道2"/>
+		<entry svalue="3" uvalue="3" desc="通道3"/>
+		<entry svalue="4" uvalue="4" desc="通道4"/>
+	</enum>
+	<enum name="QueryStatus" desc="查询状态">
+		<entry svalue="1" uvalue="1" desc="未找到文件"/>
+		<entry svalue="2" uvalue="2" desc="找到文件"/>
+	</enum>
+	<enum name="SynchroHeadLength" desc="同步头长度">
+		<entry svalue="1" uvalue="1" desc="1"/>
+		<entry svalue="2" uvalue="2" desc="2"/>
+		<entry svalue="3" uvalue="4" desc="4"/>
+		<entry svalue="4" uvalue="8" desc="8"/>
+	</enum>
+	<enum name="ChannelNumber" desc="通道号">
+		<entry svalue="1" uvalue="1" desc="通道1"/>
+		<entry svalue="2" uvalue="2" desc="通道2"/>
+		<entry svalue="3" uvalue="3" desc="通道3"/>
+		<entry svalue="4" uvalue="4" desc="通道4"/>
+	</enum>
+	<enum name="SynchronizationCodePosition" desc="同步码位置">
+		<entry svalue="1" uvalue="1" desc="帧前"/>
+		<entry svalue="2" uvalue="2" desc="帧后"/>
+	</enum>
+	<enum name="RunRealTimeDataResolution" desc="进行实时数据解析">
+		<entry svalue="1" uvalue="1" desc="解析"/>
+		<entry svalue="2" uvalue="2" desc="不解析"/>
+	</enum>
+	<enum name="DoubleAwayDataInterweaveSet" desc="双路数据交织设置">
+		<entry svalue="1" uvalue="1" desc="交织"/>
+		<entry svalue="2" uvalue="2" desc="不交织"/>
+	</enum>
+	<enum name="PlainTextCiphertext" desc="明文密文">
+		<entry svalue="1" uvalue="1" desc="明文"/>
+		<entry svalue="2" uvalue="2" desc="密文"/>
+	</enum>
+	<enum name="TCPProtocol" desc="传输层协议">
+		<entry svalue="1" uvalue="1" desc="TCP"/>
+		<entry svalue="2" uvalue="2" desc="UDP点播"/>
+	</enum>
+	<enum name="ForwardMode" desc="转发模式">
+		<entry svalue="1" uvalue="1" desc="实时转发"/>
+		<entry svalue="2" uvalue="2" desc="降速转发"/>
+	</enum>
+	<enum name="ForwardWay" desc="转发方式">
+		<entry svalue="1" uvalue="1" desc="全帧转发"/>
+		<entry svalue="2" uvalue="2" desc="挑帧转发"/>
+		<entry svalue="3" uvalue="3" desc="去空帧转发"/>
+	</enum>
+	<enum name="Protocal" desc="协议">
+		<entry svalue="1" uvalue="1" desc="PDXP"/>
+		<entry svalue="2" uvalue="2" desc="FEP"/>
+		<entry svalue="3" uvalue="3" desc="HDR"/>
+	</enum>
+	<enum name="ForwardingProtocol" desc="转发协议">
+		<entry svalue="0" uvalue="0" desc="TCP"/>
+		<entry svalue="1" uvalue="1" desc="UDP"/>
+		<entry svalue="2" uvalue="2" desc="UDP组播"/>
+	</enum>
+</enums>

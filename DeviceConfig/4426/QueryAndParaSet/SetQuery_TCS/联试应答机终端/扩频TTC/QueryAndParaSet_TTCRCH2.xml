@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="TTCRCH" ModeType="0x02" desc="接收通道单元" flag="1001" kpValid="TargetNum">
+	<result MessageType="0x0000F104">
+		<recycle id="1" recycleNum="4" desc="">
+			<field pid="1" GroupId="status1" id="TeleCarrLock" desc="遥控载波锁定" dataType="uint8" displayFormat="LED|LockIndicat" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="2" GroupId="status1" id="TelePNCode" desc="遥控伪码锁定" dataType="uint8" displayFormat="LED|LockIndicat" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="3" GroupId="status1" id="TeleAGCVol" desc="遥控AGC电压" dataType="ushort" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="V"/>
+			<field pid="4" GroupId="status1" id="TeleCN0" desc="遥控C/N0" dataType="ushort" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="dBHz"/>
+			<field pid="5" GroupId="status1" id="MeasDopFreq" desc="实测多普勒频率" dataType="long" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="Hz"/>
+			<field pid="6" GroupId="status1" id="MeaDopVar" desc="实测多普勒变化率" dataType="long" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="Hz/s"/>
+			<field pid="101" GroupId="status3" id="WorkSwitch" desc="工作开关" dataType="uint8" displayFormat="enum|WorkSwitch" initValue="2" minValue="" maxValue="" step="" unit=""/>
+			<field pid="102" GroupId="status3" id="InputSelect" desc="输入选择" dataType="uint8" displayFormat="enum|InputSelect" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="103" GroupId="status3" id="CodingMode" desc="伪码开关" dataType="uint8" displayFormat="enum|CodingMode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="104" GroupId="status3" id="SpreadCode_L" desc="扩频码速率" dataType="uint8" displayFormat="enum|CodeSpeed" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="105" GroupId="status3" id="PseCodeBand_L" desc="码环带宽(双边)" dataType="ushort" displayFormat="double" initValue="1" minValue="0.1" maxValue="32" step="0.1" unit="Hz"/>
+			<field pid="106" GroupId="status3" id="CarrPNCode" desc="载波辅助捕获" dataType="uint8" displayFormat="enum|CarrPNCode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="107" GroupId="status3" id="DownDopp" desc="下行多普勒预置" dataType="short" displayFormat="Int16" initValue="0" minValue="-180" maxValue="180" step="1" unit="kHz"/>
+			<field pid="108" GroupId="status3" id="CaptureThres_L" desc="捕获门限" dataType="uint8" displayFormat="UInt8" initValue="30" minValue="30" maxValue="100" step="1" unit="dBHz"/>
+			<field pid="109" GroupId="status3" id="CodeType" desc="遥控码型" dataType="uint8" displayFormat="enum|CodeType" initValue="1" minValue="1" maxValue="3" step="" unit=""/>
+			<field pid="110" GroupId="status3" id="CodeRateCodeRate" desc="遥控码率" dataType="ushort" displayFormat="UInt16" initValue="1000" minValue="100" maxValue="8000" step="1" unit="bps"/>
+			<field pid="7" GroupId="status2" id="TeleCarrLock_R" desc="测量载波锁定" dataType="uint8" displayFormat="LED|LockIndicat" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="8" GroupId="status2" id="TelePNCode_R" desc="测量伪码锁定" dataType="uint8" displayFormat="LED|LockIndicat" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="9" GroupId="status2" id="MeaSynchLock" desc="测量码同步锁定" dataType="uint8" displayFormat="LED|LockIndicat" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="10" GroupId="status2" id="MeaSynchInd" desc="测量帧同步锁定" dataType="uint8" displayFormat="LED|LockIndicat" initValue="" minValue="" maxValue="" step="" unit=""/>
+			<field pid="11" GroupId="status2" id="TeleAGCVol_R" desc="测量AGC电压" dataType="ushort" displayFormat="double" initValue="" minValue="" maxValue="" step="0.001" unit="V"/>
+			<field pid="12" GroupId="status2" id="TeleCN0_R" desc="测量C/N0" dataType="ushort" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="dBHz"/>
+			<field pid="13" GroupId="status2" id="MeasDopFreq_R" desc="实测多普勒频率" dataType="long" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="Hz"/>
+			<field pid="14" GroupId="status2" id="MeaDopVar2" desc="实测多普勒变化率" dataType="long" displayFormat="double" initValue="" minValue="" maxValue="" step="0.1" unit="Hz/s"/>
+			<field pid="111" GroupId="status4" id="WorkSwitch2" desc="工作开关" dataType="uint8" displayFormat="enum|WorkSwitch" initValue="2" minValue="" maxValue="" step="" unit=""/>
+			<field pid="112" GroupId="status4" id="InputSelect2" desc="输入选择" dataType="uint8" displayFormat="enum|InputSelect" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="113" GroupId="status4" id="CodingMode2" desc="伪码开关" dataType="uint8" displayFormat="enum|CodingMode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="114" GroupId="status4" id="SpreadCode_R" desc="扩频码速率" dataType="uint8" displayFormat="enum|CodeSpeed" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="115" GroupId="status4" id="PseCodeBand_R" desc="码环带宽(双边)" dataType="ushort" displayFormat="double" initValue="0.1" minValue="0.1" maxValue="32" step="0.1" unit="Hz"/>
+			<field pid="116" GroupId="status4" id="CarrPNCode2" desc="载波辅助伪码捕获" dataType="uint8" displayFormat="enum|CarrPNCode" initValue="1" minValue="" maxValue="" step="" unit=""/>
+			<field pid="117" GroupId="status4" id="DownDopp2" desc="下行多普勒预置" dataType="short" displayFormat="Int16" initValue="0" minValue="-180" maxValue="180" step="1" unit="kHz"/>
+			<field pid="118" GroupId="status4" id="CaptureThres_R" desc="捕获门限" dataType="uint8" displayFormat="UInt8" initValue="30" minValue="30" maxValue="100" step="1" unit="dBHz"/>
+		</recycle>
+	</result>
+	<layout>
+		<item id="status1" desc="遥控支路" row="0" col="0" rowspan="1" colspan="1"/>
+		<item id="status2" desc="测量支路" row="0" col="1" rowspan="1" colspan="1"/>
+		<item id="status3" desc="遥控支路" row="1" col="0" rowspan="1" colspan="1"/>
+		<item id="status4" desc="测量支路" row="1" col="1" rowspan="1" colspan="1"/>
+	</layout>
+	<order info="status1,status3,status2,status4"/>
+</cmd>

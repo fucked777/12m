@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+id  枚举ID  -与设备类型关联
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums ExtenType="XRFSN" ModeType = "0xFFFF" edition="1.1.1.1">
+
+
+	<enum name="OutChoose" desc="输出选择">
+		<entry svalue="1" uvalue="1" desc="左旋A,右旋B" />
+		<entry svalue="2" uvalue="2" desc="左旋B,右旋A" />
+	</enum>
+	<enum name="OutChoose2" desc="输出选择">
+		<entry svalue="1" uvalue="1" desc="左旋L1,测试L2" />
+		<entry svalue="2" uvalue="2" desc="左旋L2,测试L1" />
+	</enum>
+	<enum name="OutChoose3" desc="输出选择">
+		<entry svalue="1" uvalue="1" desc="右旋R1,测试R2" />
+		<entry svalue="2" uvalue="2" desc="左旋R2,测试R1" />
+	</enum>
+	<enum name="OutputChoose4" desc="输出选择">
+		<entry svalue="1" uvalue="1" desc="X左和" />
+		<entry svalue="2" uvalue="2" desc="X右和" />
+	</enum>
+	<enum name="BaseChoose4" desc="备份选择">
+		<entry svalue="1" uvalue="1" desc="备份选择左和" />
+		<entry svalue="2" uvalue="2" desc="备份选择右和" />
+	</enum>
+	<enum name="InputChoose" desc="输入选择">
+		<entry svalue="1" uvalue="1" desc="LNA-A" />
+		<entry svalue="2" uvalue="2" desc="LNA-B" />
+	</enum>
+	<enum name="Power" desc="电源管理">
+		<entry svalue="1" uvalue="0" desc="无此参数" />
+		<entry svalue="2" uvalue="1" desc="关电" />
+		<entry svalue="3" uvalue="2" desc="开电" />
+	</enum>
+</enums>

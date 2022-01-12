@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+ComboBox = 0,
+LineEdit = 1,
+SpinBox = 2,
+DoubleSpinBox = 3,
+HexNum = 4,
+HexStr = 5,
+
+item.id = element.attribute("id");
+item.desc = element.attribute("desc");
+item.contentType = ContentType(element.attribute("contentType").toUInt());
+item.initValue = QVariant(element.attribute("initValue"));
+item.minValue = element.attribute("minValue");
+item.maxValue = element.attribute("maxValue");
+item.precision = element.attribute("precision").toInt();
+item.unit = element.attribute("unit");
+item.enumValuesRaw = element.attribute("enumValuesRaw");
+
+-->
+<params>
+</params>

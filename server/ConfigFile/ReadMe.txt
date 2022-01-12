@@ -1,0 +1,4 @@
+Resources文件夹存放的是业务相关的配置数据
+Platform文件夹放得是平台相关的配置数据
+
+将当前所偶遇目录/文件拷拷贝到Framework\bin下面去

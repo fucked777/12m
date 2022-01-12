@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Relation sysID="0x04" deviceID="0x00" modeID="0x17" unitType="TU" extenNum="2" desc="遥测解调">
+	<Triggers>
+		<Trigger id="WX_DescrambCtrl" desc="解扰控制">
+			<TriggerValue value="1" desc="不解扰">
+				<Receiver id="WX_DistPolyLength" desc="解扰多项式长度" isEnable="0" values="1:1字节;2:2字节;3:3字节;4:4字节" minValue="" maxValue="" />
+				<Receiver id="WX_ScramPolg" desc="解扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="WX_DescramPrim" desc="解扰初相" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="自动解扰">
+				<Receiver id="WX_DistPolyLength" desc="解扰多项式长度" isEnable="0" values="1:1字节" minValue="" maxValue="" />
+				<Receiver id="WX_ScramPolg" desc="解扰多项式" isEnable="0" values="A9" minValue="" maxValue="" />
+				<Receiver id="WX_DescramPrim" desc="解扰初相" isEnable="0" values="FF" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="人工设置">
+				<Receiver id="WX_DistPolyLength" desc="解扰多项式长度" isEnable="1" values="1:1字节;2:2字节;3:3字节;4:4字节" minValue="" maxValue="" />
+				<Receiver id="WX_ScramPolg" desc="解扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="WX_DescramPrim" desc="解扰初相" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		<Trigger id="WX_DistPolyLength" desc="解扰多项式长度">
+			<TriggerValue value="1" desc="1字节">
+				<Receiver id="WX_ScramPolg" desc="解扰多项式" isEnable="" values="" minValue="0" maxValue="FF" />
+				<Receiver id="WX_DescramPrim" desc="解扰初相" isEnable="" values="" minValue="0" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="2字节">
+				<Receiver id="WX_ScramPolg" desc="解扰多项式" isEnable="" values="" minValue="0" maxValue="FFFF" />
+				<Receiver id="WX_DescramPrim" desc="解扰初相" isEnable="" values="" minValue="0" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="3字节">
+				<Receiver id="WX_ScramPolg" desc="解扰多项式" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+				<Receiver id="WX_DescramPrim" desc="解扰初相" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="4字节">
+				<Receiver id="WX_ScramPolg" desc="解扰多项式" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+				<Receiver id="WX_DescramPrim" desc="解扰初相" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="K2_DecodMode" desc="译码方式">
+			<TriggerValue value="1" desc="关">
+				<Receiver id="K2_ConCodeType" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_ViterbiDecodG2Phase" desc="Viterbi-G2相位" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_RSCodeType" desc="R-S码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_InterlDepth" desc="交错深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_RSDecodCoorBase" desc="R-S译码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubframeSynch" desc="副帧同步方式" isEnable="1" values="1:无副帧;2:ID副帧;3:循环副帧;4:反码副帧;" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="Viterbi译码">
+				<Receiver id="K2_ConCodeType" desc="卷积码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_ViterbiDecodG2Phase" desc="Viterbi-G2相位" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_RSCodeType" desc="R-S码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_InterlDepth" desc="交错深度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_RSDecodCoorBase" desc="R-S译码坐标基" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubframeSynch" desc="副帧同步方式" isEnable="1" values="1:无副帧;2:ID副帧;3:循环副帧;4:反码副帧;" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="R-S译码">
+				<Receiver id="K2_ConCodeType" desc="卷积码类型" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_ViterbiDecodG2Phase" desc="Viterbi-G2相位" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_RSCodeType" desc="R-S码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_InterlDepth" desc="交错深度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_RSDecodCoorBase" desc="R-S译码坐标基" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubframeSynch" desc="副帧同步方式" isEnable="0" values="1:无副帧" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="R-S和Viterbi级联译码">
+				<Receiver id="K2_ConCodeType" desc="卷积码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_ViterbiDecodG2Phase" desc="Viterbi-G2相位" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_RSCodeType" desc="R-S码类型" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_InterlDepth" desc="交错深度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_RSDecodCoorBase" desc="R-S译码坐标基" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubframeSynch" desc="副帧同步方式" isEnable="0" values="1:无副帧" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="K2_DescrambCtrl" desc="解扰控制">
+			<TriggerValue value="1" desc="不解扰">
+				<Receiver id="K2_DistPolyLength" desc="解扰多项式长度" isEnable="0" values="1:1字节;2:2字节;3:3字节;4:4字节" minValue="" maxValue="" />
+				<Receiver id="K2_ScramPolg" desc="解扰多项式" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_DescramPrim" desc="解扰初相" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="自动解扰">
+				<Receiver id="K2_DistPolyLength" desc="解扰多项式长度" isEnable="0" values="1:1字节" minValue="" maxValue="" />
+				<Receiver id="K2_ScramPolg" desc="解扰多项式" isEnable="0" values="A9" minValue="" maxValue="" />
+				<Receiver id="K2_DescramPrim" desc="解扰初相" isEnable="0" values="FF" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="人工设置">
+				<Receiver id="K2_DistPolyLength" desc="解扰多项式长度" isEnable="1" values="1:1字节;2:2字节;3:3字节;4:4字节" minValue="" maxValue="" />
+				<Receiver id="K2_ScramPolg" desc="解扰多项式" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_DescramPrim" desc="解扰初相" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+
+		<Trigger id="K2_DistPolyLength" desc="解扰多项式长度">
+			<TriggerValue value="1" desc="1字节">
+				<Receiver id="K2_ScramPolg" desc="解扰多项式" isEnable="" values="" minValue="0" maxValue="FF" />
+				<Receiver id="K2_DescramPrim" desc="解扰初相" isEnable="" values="" minValue="0" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="2字节">
+				<Receiver id="K2_ScramPolg" desc="解扰多项式" isEnable="" values="" minValue="0" maxValue="FFFF" />
+				<Receiver id="K2_DescramPrim" desc="解扰初相" isEnable="" values="" minValue="0" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="3字节">
+				<Receiver id="K2_ScramPolg" desc="解扰多项式" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+				<Receiver id="K2_DescramPrim" desc="解扰初相" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="4字节">
+				<Receiver id="K2_ScramPolg" desc="解扰多项式" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+				<Receiver id="K2_DescramPrim" desc="解扰初相" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+			
+		<Trigger id="K2_FrameSynCodeLength" desc="帧同步码组长度">
+			<TriggerValue value="1" desc="16bit">
+				<Receiver id="K2_FrameSynchPatter" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="24bit">
+				<Receiver id="K2_FrameSynchPatter" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="32bit">
+				<Receiver id="K2_FrameSynchPatter" desc="帧同步码组图样" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="K2_SubframeSynch" desc="副帧同步方式">
+			<TriggerValue value="1" desc="无副帧">
+				<Receiver id="K2_IDCountPosit" desc="ID计数位置" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_IDCountValue" desc="ID计数基值" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_IDCountDirect" desc="ID计数方向" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubfraCodeLocat" desc="副帧码组位置" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubCodeLength" desc="副帧码组长度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubSynGroup" desc="副帧同步码组" isEnable="0" values="" minValue="" maxValue="" />
+				
+				<Receiver id="K2_SubDigitSubFrame" desc="搜索容错位数" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubSynFaultTolBit" desc="锁定容错位数" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubSynLockTolBit" desc="锁定容错位数" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubCheckNum" desc="副帧校核帧数" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_NumSubLock" desc="副帧锁定帧数" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_FormatLength" desc="格式(副帧)长" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="ID副帧">
+				<Receiver id="K2_IDCountPosit" desc="ID计数位置" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_IDCountValue" desc="ID计数基值" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_IDCountDirect" desc="ID计数方向" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubfraCodeLocat" desc="副帧码组位置" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubCodeLength" desc="副帧码组长度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubSynGroup" desc="副帧同步码组" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_FormatLength" desc="格式(副帧)长" isEnable="1" values="" minValue="" maxValue="" />
+				
+				<Receiver id="K2_SubDigitSubFrame" desc="搜索容错位数" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubSynFaultTolBit" desc="锁定容错位数" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubSynLockTolBit" desc="锁定容错位数" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubCheckNum" desc="副帧校核帧数" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_NumSubLock" desc="副帧锁定帧数" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="循环副帧">
+				<Receiver id="K2_IDCountPosit" desc="ID计数位置" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_IDCountValue" desc="ID计数基值" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_IDCountDirect" desc="ID计数方向" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubfraCodeLocat" desc="副帧码组位置" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubCodeLength" desc="副帧码组长度" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubSynGroup" desc="副帧同步码组" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_FormatLength" desc="格式(副帧)长" isEnable="1" values="" minValue="" maxValue="" />
+				
+				<Receiver id="K2_SubDigitSubFrame" desc="搜索容错位数" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubSynFaultTolBit" desc="锁定容错位数" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubSynLockTolBit" desc="锁定容错位数" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubCheckNum" desc="副帧校核帧数" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_NumSubLock" desc="副帧锁定帧数" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="反码副帧">
+				<Receiver id="K2_IDCountPosit" desc="ID计数位置" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_IDCountValue" desc="ID计数基值" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_IDCountDirect" desc="ID计数方向" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubfraCodeLocat" desc="副帧码组位置" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubCodeLength" desc="副帧码组长度" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubSynGroup" desc="副帧同步码组" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="K2_FormatLength" desc="格式(副帧)长" isEnable="1" values="" minValue="" maxValue="" />
+				
+				<Receiver id="K2_SubDigitSubFrame" desc="搜索容错位数" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubSynFaultTolBit" desc="锁定容错位数" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubSynLockTolBit" desc="锁定容错位数" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_SubCheckNum" desc="副帧校核帧数" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="K2_NumSubLock" desc="副帧锁定帧数" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		<Trigger id="K2_SubCodeLength" desc="副帧码组长度">
+			<TriggerValue value="1" desc="8bit">
+				<Receiver id="K2_SubSynGroup" desc="副帧同步码组" isEnable="" values="" minValue="0" maxValue="FF" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="16bit">
+				<Receiver id="K2_SubSynGroup" desc="副帧同步码组" isEnable="" values="" minValue="0" maxValue="FFFF" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="24bit">
+				<Receiver id="K2_SubSynGroup" desc="副帧同步码组" isEnable="" values="" minValue="0" maxValue="FFFFFF" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="32bit">
+				<Receiver id="K2_SubSynGroup" desc="副帧同步码组" isEnable="" values="" minValue="0" maxValue="FFFFFFFF" />
+			</TriggerValue>
+		</Trigger>
+		<!-->
+		<Trigger id="K2_FrameCodeLocat" desc="帧码组位置">
+			<TriggerValue value="1" desc="帧头">
+				<Receiver id="K2_WordLength" desc="字长" isEnable="0" values="8" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="帧尾">
+				<Receiver id="K2_WordLength" desc="字长" isEnable="0" values="8" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		<!-->
+		<Trigger id="WX_MessageSpeedChoose" desc="信息速率与帧频">
+			<TriggerValue value="1" desc="6.294528Mbps，768帧/s">
+				<Receiver id="WX_DecodeType" desc="编码方式" isEnable="" values="1:关;2:Turbo（1/2）" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="4.196352Mbps，512帧/s">
+				<Receiver id="WX_DecodeType" desc="编码方式" isEnable="" values="1:关;2:Turbo（1/2）;3:Turbo（1/3）" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="3" desc="2.098176Mbps，256帧/s">
+				<Receiver id="WX_DecodeType" desc="编码方式" isEnable="" values="1:关;2:Turbo（1/2）;3:Turbo（1/3）;4:Turbo（1/4）;5:Turbo（1/6）" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="4" desc="1.049088Mbps，128帧/s">
+				<Receiver id="WX_DecodeType" desc="编码方式" isEnable="" values="1:关;2:Turbo（1/2）;3:Turbo（1/3）;4:Turbo（1/4）;5:Turbo（1/6）" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="5" desc="524.544kbps，64帧/s">
+				<Receiver id="WX_DecodeType" desc="编码方式" isEnable="" values="1:关;2:Turbo（1/2）;3:Turbo（1/3）;4:Turbo（1/4）;5:Turbo（1/6）" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="6" desc="262.272kbps，32帧/s">
+				<Receiver id="WX_DecodeType" desc="编码方式" isEnable="" values="1:关;2:Turbo（1/2）;3:Turbo（1/3）;4:Turbo（1/4）;5:Turbo（1/6）" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="7" desc="10.960896Mbps，1536帧/s">
+				<Receiver id="WX_DecodeType" desc="编码方式" isEnable="" values="1:关;6:LDPC（8160，7136）" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="8" desc="8.220672Mbps，1152帧/s">
+				<Receiver id="WX_DecodeType" desc="编码方式" isEnable="" values="1:关;6:LDPC（8160，7136）" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+		
+		<Trigger id="WX_DataFrameCode" desc="数据帧发送格式">
+			<TriggerValue value="1" desc="单帧格式">
+				<Receiver id="WX_PerFramePacket" desc="每包发送数据帧数" isEnable="0" values="1" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="多帧格式">
+				<Receiver id="WX_PerFramePacket" desc="每包发送数据帧数" isEnable="1" values="" minValue="1" maxValue="60" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

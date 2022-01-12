@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="SBRFSN" ModeType="0xFFFF" edition="1.1.1.1">
+	<enum name="ControlMode" desc="监控方式">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="分控"/>
+		<entry svalue="2" uvalue="2" desc="本控"/>
+	</enum>
+	<enum name="DevStatus" desc="设备状态">
+		<entry svalue="0" uvalue="0" desc="无效"/>
+		<entry svalue="1" uvalue="1" desc="故障:R"/>
+		<entry svalue="2" uvalue="2" desc="正常:G"/>
+	</enum>
+	<enum name="DifferSwitch" desc="S频段差路接收信号">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="S-LNA5(差1)"/>
+		<entry svalue="2" uvalue="2" desc="S-LNA6(差2)"/>
+	</enum>
+	<enum name="LeftSwitch" desc="S频段左旋接收信号">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="S-LNA1(左旋)"/>
+		<entry svalue="2" uvalue="2" desc="S-LNA2(左旋)"/>
+	</enum>
+	<enum name="RightSwitch" desc="S频段右旋接收信号">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="S-LNA3(右旋)"/>
+		<entry svalue="2" uvalue="2" desc="S-LNA4(右旋)"/>
+	</enum>
+	<enum name="SumDifferChoose" desc="测试信号">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="和路左旋信号"/>
+		<entry svalue="2" uvalue="2" desc="和路右旋信号"/>
+		<entry svalue="3" uvalue="3" desc="差路信号"/>
+	</enum>
+	<enum name="TraceChoose" desc="和路跟踪选择">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="和路左旋低噪放"/>
+		<entry svalue="2" uvalue="2" desc="和路右旋低噪放"/>
+	</enum>
+	<enum name="PowerCtrl" desc="加去电控制">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="关电:Y"/>
+		<entry svalue="2" uvalue="2" desc="开电:G"/>
+	</enum>
+	<enum name="PowerStatus" desc="电源状态">
+		<entry svalue="0" uvalue="0" desc="无此参数"/>
+		<entry svalue="1" uvalue="1" desc="电源开:G"/>
+		<entry svalue="2" uvalue="2" desc="电源关:Y"/>
+	</enum>
+</enums>

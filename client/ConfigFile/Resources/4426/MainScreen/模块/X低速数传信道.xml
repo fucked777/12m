@@ -1,0 +1,50 @@
+<GridLayout>
+	<GroupBox row="0" col="0" rowSpan="1" columnSpan="1" text="Ka低速">
+		<GridLayout verticalSpacing="1">
+			<Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="DC本振"/>
+			<Widget row="0" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="DC本振" deviceId="0x3102" modeId="0xFFFF" unitId="4" targetId="0" paramId="MachineStatus">
+				<Item value="1" desc="故障" ledColor="red" toolTip="故障"/>
+				<Item value="2" desc="正常" ledColor="green" toolTip="正常"/>
+			</Widget>
+			<Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="极化"/>
+			<Widget row="0" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusRotationLabel" desc="极化" devids="0x3202" connector=" - " defaultText="- / -" minWidth="160">
+				<ParamInfo deviceId="0x3202" modeId="0xFFFF" unitId="4" targetId="0" paramId="ChooseConnect_1" desc="低速数传1">
+					<Item value="1" desc="左" />
+					<Item value="2" desc="右" />
+				</ParamInfo>
+				<ParamInfo deviceId="0x3202" modeId="0xFFFF" unitId="4" targetId="0" paramId="ChooseConnect_2" desc="低速数传2">
+					<Item value="1" desc="左" />
+					<Item value="2" desc="右" />
+				</ParamInfo>
+			</Widget>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="2" Align="Center" type="NameLabel" text="接收1频率(MHz)"/>
+			<Widget row="1" col="2" rowSpan="1" columnSpan="2" Align="Center" type="NumberStatusLabel" desc="接收1频率" deviceId="0x3102" modeId="0xFFFF" unitId="5" targetId="0" paramId="SBandDownFreq"/>
+			<Widget row="2" col="0" rowSpan="1" columnSpan="2" Align="Center" type="NameLabel" text="接收2频率(MHz)"/>
+			<Widget row="2" col="2" rowSpan="1" columnSpan="2" Align="Center" type="NumberStatusLabel" desc="接收2频率" deviceId="0x3102" modeId="0xFFFF" unitId="6" targetId="0" paramId="SBandDownFreq"/>
+		</GridLayout>
+	</GroupBox>
+	<GroupBox row="1" col="0" rowSpan="1" columnSpan="1" text="X低速">
+		<GridLayout verticalSpacing="1">
+			<Widget row="0" col="0" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="DC本振"/>
+			<Widget row="0" col="1" rowSpan="1" columnSpan="1" type="LEDStatusLabel" desc="DC本振" deviceId="0x3104" modeId="0xFFFF" unitId="6" targetId="0" paramId="OneLocalOscillatorState">
+				<Item value="1" desc="故障" ledColor="red" toolTip="故障"/>
+				<Item value="2" desc="正常" ledColor="green" toolTip="正常"/>
+			</Widget>
+			<Widget row="0" col="2" rowSpan="1" columnSpan="1" Align="Center" type="NameLabel" text="极化"/>
+			<Widget row="0" col="3" rowSpan="1" columnSpan="1" Align="Center" type="NumberStatusRotationLabel" desc="极化" devids="0x3104" connector=" - " defaultText="- / -" minWidth="160">
+				<ParamInfo deviceId="0x3104" modeId="0xFFFF" unitId="2" targetId="0" paramId="LDifferSwitch_X" desc="低速数传1">
+					<Item value="1" desc="左" />
+					<Item value="2" desc="右" />
+				</ParamInfo>
+				<ParamInfo deviceId="0x3104" modeId="0xFFFF" unitId="2" targetId="0" paramId="RDifferSwitch_X" desc="低速数传2">
+					<Item value="1" desc="左" />
+					<Item value="2" desc="右" />
+				</ParamInfo>
+			</Widget>
+			<Widget row="1" col="0" rowSpan="1" columnSpan="2" Align="Center" type="NameLabel" text="接收1频率(MHz)"/>
+			<Widget row="1" col="2" rowSpan="1" columnSpan="2" Align="Center" type="NumberStatusLabel" desc="接收1频率" deviceId="0x3104" modeId="0xFFFF" unitId="6" targetId="0" paramId="SBandDownFreq"/>
+			<Widget row="2" col="0" rowSpan="1" columnSpan="2" Align="Center" type="NameLabel" text="接收2频率(MHz)"/>
+			<Widget row="2" col="2" rowSpan="1" columnSpan="2" Align="Center" type="NumberStatusLabel" desc="接收2频率" deviceId="0x3104" modeId="0xFFFF" unitId="7" targetId="0" paramId="SBandDownFreq"/>
+		</GridLayout>
+	</GroupBox>
+</GridLayout>

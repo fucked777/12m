@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmd UnitType="PDU" ModeType="0xFFFF" desc="位置显示单元" flag="1001" isModifySetBtn="0">
+    <set MessageType="0x0000F003"/>
+    <result MessageType="0x0000F104">
+        <field pid="1" id="ShaftEncodStatus" desc="轴角编码器状态" dataType="uint8" displayFormat="LED|ShaftEncodStatus" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="2" id="OperatMode" desc="轴角编码器模式" dataType="uint8" displayFormat="enum|OperatMode" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="3" id="TimeFreqState" desc="时频状态" dataType="uint8" displayFormat="enum|TimeFreqState" initValue="" minValue="" maxValue="" step="" unit=""   />
+        <field pid="4" id="CurrentAZ" desc="当前方位角" dataType="int" displayFormat="double" initValue="" minValue="-350" maxValue="350" step="0.001" unit="°"  />
+        <field pid="5" id="CurrentPA" desc="当前俯仰角" dataType="int" displayFormat="double" initValue="" minValue="-1" maxValue="181" step="0.001" unit="°" />
+        <field pid="6" id="CurrAxisAngle" desc="当前第三轴角" dataType="int" displayFormat="double" initValue="" minValue="-175" maxValue="175" step="0.001" unit="°"  />
+    </result>
+</cmd>

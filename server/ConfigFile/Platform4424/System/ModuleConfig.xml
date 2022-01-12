@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<configuration>
+	<!-- 当一个模块同时存在于核心模块和普通模块时此模块会被认为是普通模块 -->
+	<!-- 核心模块不能依赖任何模块 加载顺序未定义 并且一定先于普通模块加载 -->
+	<core>
+		<module name="ZMQRouterServer"/>
+	</core>
+	<!-- 普通的模块 -->
+	<general>
+		<module name="DeviceXmlLoadServiceModule"/>
+		<module name="DeviceCommunicationConfigModule"/>
+		<module name="NetWorkManagerModule"/>
+		<module name="DeviceProcessModule"/>
+		<module name="DeviceManagementModule"/>
+		<module name="ConfigMacroModule"/>
+		<module name="TaskCenterModule"/>
+		<module name="DataTransmissionCenterModule"/>
+		<module name="StationResManagementModule"/>
+		<module name="EphemerisDataModule"/>
+		<module name="TaskPlanManagerModule"/>
+		<module name="SatelliteModule"/>
+		<module name="ParamMacroModule"/>
+		<module name="AutoTask4424Module"/>
+		<module name="AutoRunTask4424Module"/>
+		<module name="ResourceRestructuringModule"/>
+		<module name="AutorunPolicyModule"/>
+		<module name="DistanceCalibration4424Module"/>
+		<module name="StatusPersistenceModule"/>
+		<module name="AutomateTest4424Module"/>
+		<module name="UserManagerModule"/>
+		<module name="SystemLogModule"/>
+		<module name="AGCCurveCalibration4424Module"/>
+		<module name="HeartbeatModule"/>		
+		<module name="PhaseCalibration4424Module"/>
+		<module name="SystemMainScreenModule"/>
+		<module name="TimeModule"/>
+		<module name="FepModule"/>
+	</general>
+	<!-- 模块之间的依赖关系 此处如果包含核心模块会直接忽略核心模块的依赖 
+    name="a"  on="b"
+    a 依赖 b
+  -->
+	<relational>
+		<item depend="NetWorkManagerModule" on="DeviceCommunicationConfigModule"/>
+		<item depend="DeviceProcessModule" on="DeviceCommunicationConfigModule"/>
+		<item depend="NetWorkManagerModule" on="DeviceXmlLoadServiceModule"/>
+		<item depend="DeviceProcessModule" on="DeviceXmlLoadServiceModule"/>
+	</relational>
+</configuration>

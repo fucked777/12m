@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Worksystems>
+	<Worksystem id="1" desc="S标准TTC" xmlPath="S标准TTC/STTC.xml"/>
+	<Worksystem id="2" desc="S扩2" xmlPath="S扩2/SK2.xml"/>
+	<Worksystem id="7" desc="一体化上面级" xmlPath="一体化上面级/SYTHSMJ.xml"/>
+	<Worksystem id="8" desc="一体化卫星" xmlPath="一体化卫星/SYTHWX.xml"/>
+	<Worksystem id="9" desc="一体化高码率" xmlPath="一体化高码率/SYTHGML.xml"/>
+	<Worksystem id="10" desc="一体化上面级+扩二共载波" xmlPath="一体化上面级+扩二共载波/SYTHSMJK2GZB.xml"/>
+	<Worksystem id="11" desc="一体化上面级+扩二不共载波" xmlPath="一体化上面级+扩二不共载波/SYTHSMJK2BGZB.xml"/>
+	<Worksystem id="12" desc="一体化卫星+扩二" xmlPath="一体化卫星+扩二/SYTHWXSK2.xml"/>
+	<Worksystem id="13" desc="一体化高码率+扩二" xmlPath="一体化高码率+扩二/SYTHGMLSK2.xml"/>
+	<Worksystem id="14" desc="扩跳" xmlPath="扩跳/SKT.xml"/>
+	<Worksystem id="15" desc="X高速" xmlPath="X高速/XGS.xml"/>
+	<Worksystem id="6" desc="Ka高速" xmlPath="Ka高速/KaGS.xml"/>
+</Worksystems>

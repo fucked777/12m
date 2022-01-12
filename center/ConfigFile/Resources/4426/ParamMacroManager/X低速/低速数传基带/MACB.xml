@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device>
+	<unit unitID="3" unitName="中频接收机单元">
+		<field pid="103" id="CarrLoopBand_L" desc="载波环路带宽" dataType="uint8" displayFormat="enum|CarrLoopBand" initValue="1" minValue="" maxValue="" step="" unit=""/>
+	</unit>
+	<unit unitID="6" unitName="I路解调单元">
+		<field pid="125" GroupId="6" id="FrameSyncSearch" desc="帧同步搜索容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="192" step="" unit="位"/>
+		<field pid="126" GroupId="6" id="FrameSynLock" desc="帧同步锁定容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="192" step="" unit="位"/>
+		<field pid="127" GroupId="6" id="FrameSynCheckErr" desc="帧同步校核容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="192" step="" unit="位"/>
+		<field pid="128" GroupId="7" id="FrameSynLockTest" desc="帧同步锁定检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="1" unit="帧"/>
+		<field pid="129" GroupId="7" id="FrameSynCheckTest" desc="帧同步校核检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="1" unit="帧"/>
+	</unit>
+	<unit unitID="7" unitName="Q路解调单元">
+		<field pid="125" GroupId="6" id="FrameSyncSearch" desc="帧同步搜索容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="192" step="" unit="位"/>
+		<field pid="126" GroupId="6" id="FrameSynLock" desc="帧同步锁定容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="192" step="" unit="位"/>
+		<field pid="127" GroupId="6" id="FrameSynCheckErr" desc="帧同步校核容错位数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="0" maxValue="192" step="" unit="位"/>
+		<field pid="128" GroupId="7" id="FrameSynLockTest" desc="帧同步锁定检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="1" unit="帧"/>
+		<field pid="129" GroupId="7" id="FrameSynCheckTest" desc="帧同步校核检测帧数" dataType="uint8" displayFormat="UInt8" initValue="1" minValue="1" maxValue="8" step="1" unit="帧"/>
+	</unit>
+</device>

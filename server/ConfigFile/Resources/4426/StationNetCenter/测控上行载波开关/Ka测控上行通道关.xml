@@ -1,0 +1,44 @@
+<Cmd name="Ka测控上行通道关">
+	<!--
+	功放去电          
+	基带遥测,测量去调     
+	上行载波输出禁止    
+    -->
+	<!-- Ka扩2 功放关 -->
+	<if condition="KAK2_KAHPA:1">
+		<Command deviceId="0x2003" modeId="0xFFFF" unitId="1" deviceName="Ka测控功放A 功放">
+			<Param id="RFOutput" value="2" name="Ka测控功放A 射频禁止允许"/>
+		</Command>
+	</if>
+	<if condition="KAK2_KAHPA:2">
+		<Command deviceId="0x2004" modeId="0xFFFF" unitId="1" deviceName="Ka测控功放B 功放">
+			<Param id="RFOutput" value="2" name="Ka测控功放B 射频禁止允许"/>
+		</Command>
+	</if>
+
+	<!-- Ka测控 基带遥测 测量加调 -->
+	<if condition="CKJD1:2">
+		<Command deviceId="0x4002" modeId="0x05" cmdId="6" deviceName="测控基带A">
+			<Param id="ChanSelect" value="9" name="全部通道"/>
+			<Param id="PNCodeAdd" value="2" name="伪码加调"/>
+			<Param id="DataCodeAdd" value="2" name="数据加调"/>
+		</Command>
+		<Command deviceId="0x4002" modeId="0x04" cmdId="5" deviceName="测控基带A">
+			<Param id="OutputLev" value="-10" name="测控基带输出电平"/>
+			<Param id="CarrOutput" value="2" name="测控基带上行载波输出"/>
+			<Param id="ChanSelect" value="9" name="测控基带全部通道载波输出"/>
+		</Command>
+	</if>
+	<if condition="CKJD1:4">
+		<Command deviceId="0x4004" modeId="0x05" cmdId="6" deviceName="测控基带B">
+			<Param id="ChanSelect" value="9" name="全部通道"/>
+			<Param id="PNCodeAdd" value="2" name="伪码加调"/>
+			<Param id="DataCodeAdd" value="2" name="数据加调"/>
+		</Command>
+		<Command deviceId="0x4004" modeId="0x04" cmdId="5" deviceName="测控基带B">
+			<Param id="OutputLev" value="-10" name="测控基带输出电平"/>
+			<Param id="CarrOutput" value="2" name="测控基带上行载波输出"/>
+			<Param id="ChanSelect" value="9" name="测控基带全部通道载波输出"/>
+		</Command>
+	</if>
+</Cmd>

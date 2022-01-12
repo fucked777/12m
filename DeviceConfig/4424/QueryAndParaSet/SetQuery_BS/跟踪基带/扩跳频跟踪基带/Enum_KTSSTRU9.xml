@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+UnitType:单元类型
+ModeType:模式类型
+svalue 表示原始值 -设备端发送的原始值
+uvalue 表示使用值 -服务端与客户端通用的值(抽象值)
+desc   描述
+-->
+<enums UnitType="KTSSTRU" ModeType="0x09" edition="1.1.1.1">
+    <enum name="CarrierLockInd" desc="锁定指示">
+        <entry svalue="0" uvalue="0" desc="无效"/>
+        <entry svalue="1" uvalue="1" desc="锁定:G"/>
+        <entry svalue="2" uvalue="2" desc="失锁:R"/>
+    </enum>
+    <enum name="XXType" desc="校相类型">
+        <entry svalue="1" uvalue="1" desc="扫频"/>
+        <!--<entry svalue="2" uvalue="2" desc="信标校相"/>-->
+    </enum>
+    <enum name="PointFreqNum" desc="点频总数">
+        <entry svalue="1" uvalue="1" desc="1"/>
+        <entry svalue="2" uvalue="5" desc="5"/>
+        <entry svalue="3" uvalue="9" desc="9"/>
+        <entry svalue="4" uvalue="17" desc="17"/>
+    </enum>
+</enums>

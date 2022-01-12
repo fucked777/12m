@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Param>
+	<unit groupName="分组1" deviceID="0x2642244002" unitID="1">
+		<field pid="101" id="SReceivPolar" desc="接收极化" dataType="uint" displayFormat="enum|ReceiveXuanxiang" initValue="1" minValue="" maxValue="" step="" unit=""/>
+		<field pid="102" id="STrackPolar" desc="跟踪极化" dataType="uint" displayFormat="enum|Xuanxiang" initValue="1" minValue="" maxValue="" step="" unit=""/>
+	</unit>
+	<unit groupName="分组2" deviceID="0x2642244002" unitID="2">
+		<field pid="105" id="TotalCodeRate" desc="总码率" dataType="uint" displayFormat="enum|CodeRateType" initValue="" minValue="" maxValue="" step="" unit=""/>
+	</unit>
+</Param>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device>
+	<unit unitID="1" unitName="公共单元">
+		<!--发射功率一开始上报为0是因为刚上电没有设置功率值，所以设备默认上报0，上电后，在设置射频允许的同时也要设置功率，这样才有功率上报上来-->
+		<field pid="102" id="TransmPower" desc="发射功率" dataType="short" displayFormat="ConverterWdBm" initValue="31" minValue="31" maxValue="56" step="0.5" unit="dBm"/>
+	</unit>
+</device>

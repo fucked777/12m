@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Relation sysID="0x04" deviceID="0x02" modeID="0x8" unitType="TBPU" desc="公共单元">
+	<Triggers>
+		<Trigger id="SpreadMastTarget" desc="主跟目标">
+			<TriggerValue value="1" desc="一体化目标">
+				<Receiver id="SpreadChannel" desc="扩频主跟通道" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="TrackRoatDirect" desc="跟踪旋向(一体化)" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="KPRoatDirect" desc="扩频跟踪旋向" isEnable="0" values="" minValue="" maxValue="" />
+			</TriggerValue>
+			<TriggerValue value="2" desc="扩频目标">
+				<Receiver id="SpreadChannel" desc="扩频主跟通道" isEnable="1" values="" minValue="" maxValue="" />
+				<Receiver id="TrackRoatDirect" desc="跟踪旋向(一体化)" isEnable="0" values="" minValue="" maxValue="" />
+				<Receiver id="KPRoatDirect" desc="扩频跟踪旋向" isEnable="1" values="" minValue="" maxValue="" />
+			</TriggerValue>
+		</Trigger>
+	</Triggers>
+</Relation>

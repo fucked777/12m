@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+文件名称:有模式时,单元类型+模式类型  无模式:0xFFFF
+set: 参数设置 ,result:状态结果上报
+name:为字段名,对应相应设备参数xml文件中的参数名
+fieldType:(code:命令码,data:数据,const:固定值)
+dataType:数据类型(char,int8,uint8,short,ushort,int,uint,float,double,long,ulong,char|n)
+displayFormat:界面显示类型(char,Int8,UInt8,Int16,UInt16,Int32,UInt32,float,double,Int64,UInt64,String,Bit,IP)
+dataType中char|n:字符数组长度,如char|6
+displayFormat中IP:按IP地址显示
+displayFormat中Bit:按位进行显示
+UnitType:单元类型
+ModeType:模式类型
+initValue:初始化值
+recycle:循环  id表示循环次数的字段名  <recycle id="TargetNum"></recycle>  出现多个时,在名称前面加数字进行排序,如1TargetNum
+isShow:0表示界面不显示  1表示界面显示
+isControl:0表示状态 1表示设置
+isAlarm:是否告警 0表示不告警 1表示告警
+BitDivision:位取值BitDivision="1|2|3|5";如uint32为例,每1位都表示一个内容BitDivision="1";每2位都表示一个内容BitDivision="2";
+每一个都不同时则用|分开,如BitDivision="1|2|3|5",1表示第一个为1位,2表示第二个紧跟着的2-3位的值,3表示第二个紧跟着的4-6位的值,5后面不写全表示5后面的字段保留;
+-->
+<cmd UnitType="HPA" ModeType="0xFFFF" desc="高功放" flag="1001">
+    <result MessageType="0x0000F104">
+        <field pid="1" GroupId="Common" id="ControlMode" desc="监控方式" dataType="uint8" displayFormat="enum|ControlMode" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="2" GroupId="Common" id="SumStatus" desc="功放综合状态" dataType="uint8" displayFormat="LED|SumMode" initValue="" minValue="" maxValue="" step="" unit=""  />
+		<!--输出功率是设备实际上报的功率,要功放接入输入源之后才会将你设置的发射功率值上报上来,但不一定相等,只是和你设置的功率相接近-->
+        <field pid="3" GroupId="Common" id="OutputPower" desc="输出功率" dataType="ushort" displayFormat="double" initValue="" minValue="30" maxValue="60" step="0.1" unit="dBm"  />
+        <field pid="4" GroupId="Common" id="Bl1" desc="保留1" dataType="ushort" displayFormat="UInt16" initValue="" minValue="" maxValue="" step="" unit="" isShow="0"/>
+        <field pid="5" GroupId="Common" id="InputCoparallel" desc="输入电平" dataType="short" displayFormat="double" initValue="" minValue="-5" maxValue="15" step="0.1" unit="dBm"   />
+        <field pid="6" GroupId="Common" id="ALCVoltage" desc="ALC电压" dataType="ushort" displayFormat="double" initValue="" minValue="0" maxValue="9.99" step="0.01" unit="V"   />
+        <field pid="7" GroupId="Common" id="LeadAlert" desc="过温告警" dataType="uint8" displayFormat="enum|LeadAlert" initValue="" minValue="" maxValue="" step="" unit="dBm"  isShow="0" />
+        <field pid="8" GroupId="Common" id="OverflowingAlert" desc="过流告警" dataType="uint8" displayFormat="enum|OverflowingAlert" initValue="" minValue="" maxValue="" step="" unit="dBm"  isShow="0" />
+        <field pid="9" GroupId="Common" id="OverrefAlarm" desc="过反射告警" dataType="uint8" displayFormat="LED|AlarmStatus" initValue="" minValue="" maxValue="" step="" unit=""  isShow="0"/>
+        <field pid="10" GroupId="Common" id="FanAlarm" desc="风机告警" dataType="uint8" displayFormat="LED|WindAlert" initValue="" minValue="" maxValue="" step="" unit="" isShow="0" />
+        <field pid="11" GroupId="Common" id="ForwardStatus" desc="前放状态" dataType="uint8" displayFormat="LED|EForwardStatus" initValue="" minValue="" maxValue="" step="" unit="" isShow="0" />
+        <field pid="12" GroupId="Common" id="PrevenStatus" desc="预放状态" dataType="uint8" displayFormat="LED|EForwardStatus" initValue="" minValue="" maxValue="" step="" unit=""  isShow="0"/>
+
+        <field pid="13" GroupId="EndStatus" id="LSPA1Status" desc="末级功放1状态" dataType="uint8" displayFormat="LED|ExceptionStatus" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="14" GroupId="EndStatus" id="LSPA2Status" desc="末级功放2状态" dataType="uint8" displayFormat="LED|ExceptionStatus" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="15" GroupId="EndStatus" id="LSPA3Status" desc="末级功放3状态" dataType="uint8" displayFormat="LED|ExceptionStatus" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="16" GroupId="EndStatus" id="LSPA4Status" desc="末级功放4状态" dataType="uint8" displayFormat="LED|ExceptionStatus" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="17" GroupId="EndStatus" id="LSPA5Status" desc="末级功放5状态" dataType="uint8" displayFormat="LED|ExceptionStatus" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="18" GroupId="EndStatus" id="LSPA6Status" desc="末级功放6状态" dataType="uint8" displayFormat="LED|ExceptionStatus" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="19" GroupId="EndStatus" id="LSPA7Status" desc="末级功放7状态" dataType="uint8" displayFormat="LED|ExceptionStatus" initValue="" minValue="" maxValue="" step="" unit=""  />
+        <field pid="20" GroupId="EndStatus" id="LSPA8Status" desc="末级功放8状态" dataType="uint8" displayFormat="LED|ExceptionStatus" initValue="" minValue="" maxValue="" step="" unit=""  />
+
+        <field pid="21" GroupId="EndTemperature" id="LSPA1Temperature" desc="末级功放1温度" dataType="short" displayFormat="Int16" initValue="" minValue="0" maxValue="80" step="" unit="℃"  />
+        <field pid="22" GroupId="EndTemperature" id="LSPA2Temperature" desc="末级功放2温度" dataType="short" displayFormat="Int16" initValue="" minValue="0" maxValue="80" step="" unit="℃"  />
+        <field pid="23" GroupId="EndTemperature" id="LSPA3Temperature" desc="末级功放3温度" dataType="short" displayFormat="Int16" initValue="" minValue="0" maxValue="80" step="" unit="℃"  />
+        <field pid="24" GroupId="EndTemperature" id="LSPA4Temperature" desc="末级功放4温度" dataType="short" displayFormat="Int16" initValue="" minValue="0" maxValue="80" step="" unit="℃"  />
+        <field pid="25" GroupId="EndTemperature" id="LSPA5Temperature" desc="末级功放5温度" dataType="short" displayFormat="Int16" initValue="" minValue="0" maxValue="80" step="" unit="℃"  />
+        <field pid="26" GroupId="EndTemperature" id="LSPA6Temperature" desc="末级功放6温度" dataType="short" displayFormat="Int16" initValue="" minValue="0" maxValue="80" step="" unit="℃"  />
+        <field pid="27" GroupId="EndTemperature" id="LSPA7Temperature" desc="末级功放7温度" dataType="short" displayFormat="Int16" initValue="" minValue="0" maxValue="80" step="" unit="℃"  />
+        <field pid="28" GroupId="EndTemperature" id="LSPA8Temperature" desc="末级功放8温度" dataType="short" displayFormat="Int16" initValue="" minValue="0" maxValue="80" step="" unit="℃"  />
+
+        <field pid="29" GroupId="EndElectric" id="LSPA1Electricity" desc="末级功放1电流" dataType="short" displayFormat="double" initValue="" minValue="0" maxValue="30" step="0.1" unit="A"  />
+        <field pid="30" GroupId="EndElectric" id="LSPA2Electricity" desc="末级功放2电流" dataType="short" displayFormat="double" initValue="" minValue="0" maxValue="30" step="0.1" unit="A"  />
+        <field pid="31" GroupId="EndElectric" id="LSPA3Electricity" desc="末级功放3电流" dataType="short" displayFormat="double" initValue="" minValue="0" maxValue="30" step="0.1" unit="A"  />
+        <field pid="32" GroupId="EndElectric" id="LSPA4Electricity" desc="末级功放4电流" dataType="short" displayFormat="double" initValue="" minValue="0" maxValue="30" step="0.1" unit="A"  />
+        <field pid="33" GroupId="EndElectric" id="LSPA5Electricity" desc="末级功放5电流" dataType="short" displayFormat="double" initValue="" minValue="0" maxValue="30" step="0.1" unit="A"  />
+        <field pid="34" GroupId="EndElectric" id="LSPA6Electricity" desc="末级功放6电流" dataType="short" displayFormat="double" initValue="" minValue="0" maxValue="30" step="0.1" unit="A"  />
+        <field pid="35" GroupId="EndElectric" id="LSPA7Electricity" desc="末级功放7电流" dataType="short" displayFormat="double" initValue="" minValue="0" maxValue="30" step="0.1" unit="A"  />
+        <field pid="36" GroupId="EndElectric" id="LSPA8Electricity" desc="末级功放8电流" dataType="short" displayFormat="double" initValue="" minValue="0" maxValue="30" step="0.1" unit="A"  />
+
+        <field pid="101" id="WorkRate" desc="工作频率(保留)" dataType="ulong" displayFormat="UInt64" initValue="29000" minValue="29000" maxValue="31000" step="" unit="" isShow="0"/>
+		<!--发射功率一开始上报为0是因为刚上电没有设置功率值,所以设备默认上报0,上电后,在设置射频允许的同时也要设置功率,这样才有功率上报上来-->
+        <field pid="102" id="TransmPower" desc="发射功率" dataType="short" displayFormat="ConverterWdBm" initValue="30" minValue="30" maxValue="59" step="0.5" unit="dBm"/>
+        <!--<field pid="102" id="TransmPower" desc="发射功率" dataType="short" displayFormat="ConverterWdBm" initValue="30" minValue="30" maxValue="59" step="0.1" unit="dBm"/>--><!-- 功率(W)和分贝毫瓦(dBm) 转换 -->
+		<field pid="103" id="Attenuation" desc="衰减设置(功放说没有)" dataType="short" displayFormat="double" initValue="1" minValue="0" maxValue="31.5" step="0.1" unit="dB" isShow="0"/>
+        <field pid="104" id="ALControl" desc="ALC控制" dataType="uint8" displayFormat="enum|ALControlMode" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="105" id="RFOutput" desc="加去电控制" dataType="uint8" displayFormat="enum|RFOutputMode" initValue="" minValue="" maxValue="" step="" unit=""/>
+        <field pid="106" id="ElectricControlor" desc="保留" dataType="uint8" displayFormat="UInt8" isControl="" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+        <field pid="107" id="WorkMode" desc="工作模式" dataType="uint8" displayFormat="enum|HPAWorkMode" initValue="1" minValue="" maxValue="" step="" unit="" isShow="0"/>
+    </result>
+
+	<layout>
+		<item id="Common" desc="公共参数" row="0" col="0" rowspan="1" colspan="2"/>
+		<item id="EndStatus" desc="末级状态" row="1" col="0" rowspan="1" colspan="1"/>
+		<item id="EndTemperature" desc="末级温度" row="1" col="1" rowspan="1" colspan="1"/>
+		<item id="EndElectric" desc="末级电流" row="2" col="0" rowspan="1" colspan="2"/>
+	</layout>
+</cmd>
